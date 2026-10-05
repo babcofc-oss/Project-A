@@ -1,0 +1,3 @@
+const assert=require('node:assert/strict');const fs=require('fs');const intelligence=require('./intelligence');const c=JSON.parse(fs.readFileSync('catalog.json'));
+for(const p of c.records){const scored=intelligence.score(p);const clone=structuredClone(p);delete clone.contacts;assert.deepEqual(intelligence.score(clone),scored,'Contact channels must not inflate financial prioritization');const b=intelligence.brief(p,scored);assert.match(b.contacts,/Direct person email \/ phone.*UNKNOWN/);assert.match(b.contacts,/source https:/);assert.match(b.contacts,/COMPANY_CHANNEL|ACQUIRER_CHANNEL/);assert(!b.contacts.includes('mailto:undefined'));}
+console.log('70 contact briefs contain provenance and direct-contact limits; scores unchanged');

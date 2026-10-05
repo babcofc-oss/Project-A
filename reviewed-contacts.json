@@ -1,0 +1,279 @@
+{
+  "version": "professional-contacts-v1",
+  "groups": [
+    {
+      "issuer_cik": "0001280058",
+      "company": "BLACKBAUD INC",
+      "organization": "Blackbaud",
+      "scope": "COMPANY_CHANNEL",
+      "person_ids": [],
+      "reviewed_at": "2026-10-05",
+      "company_anchor": "Blackbaud",
+      "source_url": "https://www.blackbaud.com/company/contact-us",
+      "raw_path": "contact-source-blackbaud.txt",
+      "sha256": "2f11b2e0aac4ef09a624af4a390e1c664e2b464159fcd5554bd326326b9767e9",
+      "routes": [
+        {
+          "kind": "WEBSITE",
+          "label": "Official company contact / research page",
+          "value": "https://www.blackbaud.com/company/contact-us",
+          "target": "https://www.blackbaud.com/company/contact-us",
+          "anchor": "World Headquarters",
+          "purpose": "Corporate headquarters; routing to the selected person is UNKNOWN."
+        },
+        {
+          "kind": "PHONE",
+          "label": "Headquarters phone",
+          "value": "+1 843 216 6200",
+          "target": "+18432166200",
+          "anchor": "001.843.216.6200",
+          "purpose": "Corporate headquarters; routing to the selected person is UNKNOWN."
+        }
+      ]
+    },
+    {
+      "issuer_cik": "0000918965",
+      "company": "SCANSOURCE, INC.",
+      "organization": "ScanSource",
+      "scope": "COMPANY_CHANNEL",
+      "person_ids": [],
+      "reviewed_at": "2026-10-05",
+      "company_anchor": "ScanSource",
+      "source_url": "https://www.scansource.com/",
+      "raw_path": "contact-source-scansource.txt",
+      "sha256": "b8a00c746ff5aac23a7cd9008316674f39408a1f836e011e3cc5380f0d4ca3e7",
+      "routes": [
+        {
+          "kind": "WEBSITE",
+          "label": "Official company contact / research page",
+          "value": "https://www.scansource.com/",
+          "target": "https://www.scansource.com/",
+          "anchor": "Headquarters",
+          "purpose": "Published headquarters number; routing to the selected person is UNKNOWN."
+        },
+        {
+          "kind": "PHONE",
+          "label": "Headquarters phone",
+          "value": "+1 800 944 2432",
+          "target": "+18009442432",
+          "anchor": "800.944.2432",
+          "purpose": "Published headquarters number; routing to the selected person is UNKNOWN."
+        }
+      ]
+    },
+    {
+      "issuer_cik": "0000857855",
+      "company": "UNITED COMMUNITY BANKS INC",
+      "organization": "United Community",
+      "scope": "COMPANY_CHANNEL",
+      "person_ids": [],
+      "reviewed_at": "2026-10-05",
+      "company_anchor": "United Community",
+      "source_url": "https://www.ucbi.com/support/contact-us",
+      "raw_path": "contact-source-ucbi.txt",
+      "sha256": "d939e72aa0228c37a500299998ea67005587264e0545146f8f998c6377a11e63",
+      "routes": [
+        {
+          "kind": "WEBSITE",
+          "label": "Official company contact / research page",
+          "value": "https://www.ucbi.com/support/contact-us",
+          "target": "https://www.ucbi.com/support/contact-us",
+          "anchor": "Contact Us",
+          "purpose": "Products and services support; not an executive line or a personal solicitation route."
+        },
+        {
+          "kind": "PHONE",
+          "label": "General support phone",
+          "value": "+1 800 822 2651",
+          "target": "+18008222651",
+          "anchor": "1-800-822-2651",
+          "purpose": "Products and services support; not an executive line or a personal solicitation route."
+        }
+      ]
+    },
+    {
+      "issuer_cik": "0001090009",
+      "company": "SOUTHERN FIRST BANCSHARES INC",
+      "organization": "Southern First Bancshares",
+      "scope": "COMPANY_CHANNEL",
+      "person_ids": [],
+      "reviewed_at": "2026-10-05",
+      "company_anchor": "Southern First Bancshares",
+      "source_url": "https://ir.southernfirst.com/overview/default.aspx",
+      "raw_path": "contact-source-southernfirst.txt",
+      "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86",
+      "routes": [
+        {
+          "kind": "WEBSITE",
+          "label": "Official company contact / research page",
+          "value": "https://ir.southernfirst.com/overview/default.aspx",
+          "target": "https://ir.southernfirst.com/overview/default.aspx",
+          "anchor": "Contact Us",
+          "purpose": "Published corporate number; routing to the selected person is UNKNOWN."
+        },
+        {
+          "kind": "PHONE",
+          "label": "Corporate phone",
+          "value": "+1 864 679 9000",
+          "target": "+18646799000",
+          "anchor": "(864) 679-9000",
+          "purpose": "Published corporate number; routing to the selected person is UNKNOWN."
+        }
+      ]
+    },
+    {
+      "issuer_cik": "0000932781",
+      "company": "FIRST COMMUNITY CORP /SC/",
+      "organization": "First Community Bankers",
+      "scope": "COMPANY_CHANNEL",
+      "person_ids": [],
+      "reviewed_at": "2026-10-05",
+      "company_anchor": "First Community Bank",
+      "source_url": "https://www.firstcommunitybankers.com/contact",
+      "raw_path": "contact-source-firstcommunity.txt",
+      "sha256": "e267e8da90ffbc53119eaf5501516f41e97bd9e8fa6b925dd17daa076296d3e2",
+      "routes": [
+        {
+          "kind": "WEBSITE",
+          "label": "Official company contact / research page",
+          "value": "https://www.firstcommunitybankers.com/contact",
+          "target": "https://www.firstcommunitybankers.com/contact",
+          "anchor": "Customer Service",
+          "purpose": "Bank customer service; not an executive line. Reconfirm current issuer / bank affiliation."
+        },
+        {
+          "kind": "PHONE",
+          "label": "Customer service phone",
+          "value": "+1 800 829 6372",
+          "target": "+18008296372",
+          "anchor": "(800) 829-6372",
+          "purpose": "Bank customer service; not an executive line. Reconfirm current issuer / bank affiliation."
+        }
+      ]
+    },
+    {
+      "issuer_cik": "0001653477",
+      "company": "Ingevity Corp",
+      "organization": "Ingevity",
+      "scope": "COMPANY_CHANNEL",
+      "person_ids": [],
+      "reviewed_at": "2026-10-05",
+      "company_anchor": "Ingevity",
+      "source_url": "https://www.ingevity.com/contact/",
+      "raw_path": "contact-source-ingevity.txt",
+      "sha256": "dc3ff681fa36b6d6affbeefefe95c98fb3272271f66d9ecf868aeb097c08d9ec",
+      "routes": [
+        {
+          "kind": "WEBSITE",
+          "label": "Official company contact / research page",
+          "value": "https://www.ingevity.com/contact/",
+          "target": "https://www.ingevity.com/contact/",
+          "anchor": "Contact Us",
+          "purpose": "Main phone as published in the official contact-page telephone link; routing to the selected person is UNKNOWN."
+        },
+        {
+          "kind": "PHONE",
+          "label": "Main company phone",
+          "value": "+1 844 643 8489",
+          "target": "+18446438489",
+          "anchor": "8446438489",
+          "purpose": "Main phone as published in the official contact-page telephone link; routing to the selected person is UNKNOWN."
+        }
+      ]
+    },
+    {
+      "issuer_cik": "0000910638",
+      "company": "3D SYSTEMS CORP",
+      "organization": "3D Systems",
+      "scope": "COMPANY_CHANNEL",
+      "person_ids": [],
+      "reviewed_at": "2026-10-05",
+      "company_anchor": "3D Systems",
+      "source_url": "https://www.3dsystems.com/press-releases/3d-systems-announces-date-first-quarter-2026-financial-results",
+      "raw_path": "contact-source-3dsystems.txt",
+      "sha256": "d5aa8917c4248479ff03bfa82229bbe2c0a1df2192a67566d1d742cd1da58bbe",
+      "routes": [
+        {
+          "kind": "WEBSITE",
+          "label": "Official company contact / research page",
+          "value": "https://www.3dsystems.com/press-releases/3d-systems-announces-date-first-quarter-2026-financial-results",
+          "target": "https://www.3dsystems.com/press-releases/3d-systems-announces-date-first-quarter-2026-financial-results",
+          "anchor": "Investor Contact",
+          "purpose": "For investor-relations research only; not the selected executive\u2019s email or a personal solicitation route."
+        },
+        {
+          "kind": "EMAIL",
+          "label": "Investor relations email",
+          "value": "investor.relations@3dsystems.com",
+          "target": "investor.relations@3dsystems.com",
+          "anchor": "investor.relations@3dsystems.com",
+          "purpose": "For investor-relations research only; not the selected executive\u2019s email or a personal solicitation route."
+        }
+      ]
+    },
+    {
+      "issuer_cik": null,
+      "company": "Charleston Grounds Management",
+      "organization": "Charleston Grounds Management / Bland",
+      "scope": "COMPANY_CHANNEL",
+      "person_ids": [
+        "reviewed-business-836366ba12448cff90bf1e69"
+      ],
+      "reviewed_at": "2026-10-05",
+      "company_anchor": "Charleston Grounds Management",
+      "source_url": "https://charlestongroundsmanagement.com/",
+      "raw_path": "contact-source-cgm.txt",
+      "sha256": "d0b07651060a612678f021bcd2b35f26ec20c4b9a42e851aff56d756347bf52b",
+      "routes": [
+        {
+          "kind": "WEBSITE",
+          "label": "Official company contact / research page",
+          "value": "https://charlestongroundsmanagement.com/",
+          "target": "https://charlestongroundsmanagement.com/",
+          "anchor": "Charleston Grounds Management",
+          "purpose": "Company channel after acquisition; the founder\u2019s current role and reachability through this channel are UNKNOWN."
+        },
+        {
+          "kind": "PHONE",
+          "label": "Company phone",
+          "value": "+1 843 779 0217",
+          "target": "+18437790217",
+          "anchor": "843.779.0217",
+          "purpose": "Company channel after acquisition; the founder\u2019s current role and reachability through this channel are UNKNOWN."
+        }
+      ]
+    },
+    {
+      "issuer_cik": null,
+      "company": "Clear Lakes and Wetland Services",
+      "organization": "Bland Landscaping (acquirer)",
+      "scope": "ACQUIRER_CHANNEL",
+      "person_ids": [
+        "reviewed-business-c1e19fb63e29b26221697dc7"
+      ],
+      "reviewed_at": "2026-10-05",
+      "company_anchor": "Bland Landscaping",
+      "source_url": "https://blandlandscaping.com/contact/?request_quote=Request+a+Quote",
+      "raw_path": "contact-source-bland.txt",
+      "sha256": "a76e15f42d89f00c085e93515692c0e56083f221eb2f95842aa25fc40ab336b9",
+      "routes": [
+        {
+          "kind": "WEBSITE",
+          "label": "Official company contact / research page",
+          "value": "https://blandlandscaping.com/contact/?request_quote=Request+a+Quote",
+          "target": "https://blandlandscaping.com/contact/?request_quote=Request+a+Quote",
+          "anchor": "Contact Us",
+          "purpose": "Acquiring company\u2019s Coastal Carolinas office, not a confirmed Clear Lakes or Ken Robinson direct line. Founder current affiliation and routing UNKNOWN."
+        },
+        {
+          "kind": "PHONE",
+          "label": "Coastal Carolinas office",
+          "value": "+1 910 442 4700",
+          "target": "+19104424700",
+          "anchor": "(910) 442-4700",
+          "purpose": "Acquiring company\u2019s Coastal Carolinas office, not a confirmed Clear Lakes or Ken Robinson direct line. Founder current affiliation and routing UNKNOWN."
+        }
+      ]
+    }
+  ]
+}

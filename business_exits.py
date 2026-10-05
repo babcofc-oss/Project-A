@@ -95,7 +95,9 @@ def merge(records,root=ROOT):
 if __name__=='__main__':
     catalog=json.loads((ROOT/'catalog.json').read_text())
     catalog['business_exits']=merge(catalog['records'])
-    catalog.update(version='project-a-13',scoring_version='money-in-motion-v5',validated_at=datetime.now(timezone.utc).isoformat())
+    from contacts import merge as merge_contacts
+    catalog['contact_enrichment']=merge_contacts(catalog['records'])
+    catalog.update(version='project-a-14',scoring_version='money-in-motion-v5',validated_at=datetime.now(timezone.utc).isoformat())
     if catalog['business_exits']['errors']: raise RuntimeError(catalog['business_exits']['errors'])
     (ROOT/'catalog.json').write_text(json.dumps(catalog,indent=2))
     print(json.dumps(catalog['business_exits']))

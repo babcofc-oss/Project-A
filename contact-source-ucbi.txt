@@ -1,0 +1,1302 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head id="head">
+    <title>Contact Us</title>
+<link rel="canonical" href="https://www.ucbi.com/support/contact-us">
+<meta name="url" content="https://www.ucbi.com/support/contact-us">
+    <meta name="Description" content="Need help with United Community products or services? Contact our support team at 1-800-UCBANK1. Get answers fast—Monday–Friday 8am–6pm ET, Saturday 9am–12pm ET.">
+<meta property="og:title" content="Contact Us">
+<meta property="og:description" content="Need help with United Community products or services? Contact our support team at 1-800-UCBANK1. Get answers fast—Monday–Friday 8am–6pm ET, Saturday 9am–12pm ET.">
+<meta property="og:url" content="https://www.ucbi.com/support/contact-us">
+<meta property="og:site_name" content="United Community Bank">
+<meta property="twitter:title" content="Contact Us">
+<meta property="twitter:description" content="Need help with United Community products or services? Contact our support team at 1-800-UCBANK1. Get answers fast—Monday–Friday 8am–6pm ET, Saturday 9am–12pm ET.">
+<meta property="twitter:creator" content="">
+<meta property="twitter:site" content="">
+<script type="application/ld&#x2B;json" nonce="kmh/KiunK/X3Ck7aXG3bJJW3gF/yUzx333LB826FFgE=">
+    {"@context":"https://schema.org","@type":"WebPage","name":"Contact Us","description":"Need help with United Community products or services? Contact our support team at 1-800-UCBANK1. Get answers fast\u2014Monday\u2013Friday 8am\u20136pm ET, Saturday 9am\u201312pm ET.","url":"https://www.ucbi.com/support/contact-us","sourceOrganization":{"@type":"Organization","telephone":"1-800-822-2651"}}
+</script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script nonce="kmh/KiunK/X3Ck7aXG3bJJW3gF/yUzx333LB826FFgE=">
+    (function () {
+        var nonce = document.currentScript && document.currentScript.nonce;
+        var installed = false;
+
+        /*
+         * Patches createElement so <style> elements are born with the nonce. Returns the
+         * corresponding uninstall.
+         */
+        function install() {
+            var create = Document.prototype.createElement;
+            var patched = function (tagName) {
+                var el = create.apply(this, arguments);
+                try {
+                    if (typeof tagName === 'string' && tagName.toLowerCase() === 'style') {
+                        el.nonce = nonce;
+                    }
+                } catch (e) { /* never let this break element creation */ }
+                return el;
+            };
+
+            Document.prototype.createElement = patched;
+
+            return function () {
+                // Only restore if nothing else has patched over us in the meantime.
+                if (Document.prototype.createElement === patched) {
+                    Document.prototype.createElement = create;
+                }
+            };
+        }
+
+        window.__bmCsp = {
+            /*
+             * Runs `load` (a function returning a promise, normally a dynamic import) with the
+             * nonce applied to any <style> element created while it is in flight. Preferred form:
+             * the patch is removed as soon as the module has evaluated.
+             */
+            withStyleNonce: function (load) {
+                if (!nonce) return Promise.resolve().then(load);
+
+                var uninstall = install();
+
+                return Promise.resolve().then(load).finally(uninstall);
+            },
+
+            /*
+             * Installs the same patch permanently, for a dependency whose style injection is
+             * open-ended and so cannot be bracketed by a load window (Google Maps). Costlier than
+             * withStyleNonce: for the remaining life of the page, anything that creates a <style>
+             * element gets the nonce, GTM tags included. Only call it on pages that need it, and
+             * prefer withStyleNonce wherever the injection has a defined end.
+             */
+            installStyleNoncePatch: function () {
+                if (!nonce || installed) return;
+                installed = true;
+                install();
+            }
+        };
+    })();
+</script>
+
+    <!-- Preload critical fonts and CSS for Web Vital optimization -->
+    <link href="https://fonts.googleapis.com/css?family=Material&#x2B;Icons%7CMaterial&#x2B;Icons&#x2B;Outlined" rel="preload" as="style">
+    <link href="https://fonts.googleapis.com/css?family=Material&#x2B;Icons%7CMaterial&#x2B;Icons&#x2B;Outlined" rel="stylesheet">
+    <link rel="preload" as="style" href="/index-4a9f762a0f7f93c6def2.css">
+    <link rel="stylesheet" href="/index-4a9f762a0f7f93c6def2.css">
+    <link rel="preload" href="/fonts/icons/icons.woff" as="font" crossorigin>
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/client-files/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+    
+    
+    <script nonce="kmh/KiunK/X3Ck7aXG3bJJW3gF/yUzx333LB826FFgE=">
+        // dataLayer and the gtm.start event, previously supplied by the inline GTM snippet.
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+
+        function gtag() { dataLayer.push(arguments); }
+
+        gtag('consent', 'default', {
+            'ad_storage': 'granted',
+            'analytics_storage': 'granted'
+        });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-PRBJMPX"></script>
+
+    <link rel="shortcut icon" type="image/jpg" href="/getContentAsset/8a6b5ddc-f00e-4e9d-97c7-9c35ae51b60c/dfc3d011-8f63-43f6-9ed8-4b444333a1d0/favicon-32x32_1.webp?language=en-US" />
+    <!-- Application Insights and other tracking scripts would go here -->
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRBJMPX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <div class="page">
+        <a class="nav-skip" href="#content" aria-label="Skip To Content"></a>
+        
+
+
+    <app-alert class="alert alert--info" data-dismiss-cookie="bm-alert-8912" data-dismiss-cookie-expiration-days="30" data-alert-hash="8912">
+        <aside class="alert__track">
+            <div class="alert__inner">
+                <i class="alert__icon glyph-information"></i>
+                <div class="alert__content">
+                    <span>
+                        
+<p><strong data-pasted="true">Holiday Hours:&nbsp;</strong>All branches and customer support will be closed on Monday<span data-redactor-style-cache="color: var(--color-egg_yolk);" data-pasted="true">, October 12<sup>th</sup></span> in observance of the bank holiday.&nbsp;</p><p>You can access your account anywhere and anytime through our secure <a href="https://secure.ucbi.com/UnitedCommunityBankOnline/UUX.aspx#/login" target="_blank" rel="noopener"><strong>Online and Mobile Banking</strong></a>.</p>                    </span>
+                </div>
+                    <button class="alert__close">
+                        <span class="hideVisually">Dismiss this alert</span>
+                        <i class="glyph-close"></i>
+                    </button>
+            </div>
+        </aside>
+    </app-alert>
+
+
+    
+    
+    <app-header class="header">
+        <div class="header__content">
+                <div class="header__compliance">
+                    <img class="header__compliance-img" src="/getContentAsset/b080aba8-ec70-4c86-bd49-34d9e786125a/dfc3d011-8f63-43f6-9ed8-4b444333a1d0/fdic-logo-navy-small.webp?language=en-US" alt="FDIC" loading="eager" />
+                        <span class="header__compliance-text"><em>FDIC-Insured - Backed by the full faith and credit of the U.S. Government</em></span>
+                </div>
+            <div class="header__utility">
+                <div class="utility__tabs">
+                    <button class="utility__tab is-locked" data-url="/" data-tab="Personal" data-login-option="online-banking">
+                        <div class="utility__tab-label">Personal</div>
+                    </button>
+                    <button class="utility__tab" data-url="/business" data-tab="Business" data-login-option="online-banking">
+                        <div class="utility__tab-label">Business</div>
+                    </button>
+                    <button class="utility__tab" data-url="/mortgage" data-tab="Mortgage" data-login-option="your-mortgage">
+                        <div class="utility__tab-label">Mortgage</div>
+                    </button>
+                    <button class="utility__tab" data-url="/wealth" data-tab="Wealth" data-login-option="wealth-mgmt-seaside">
+                        <div class="utility__tab-label">Wealth</div>
+                    </button>
+                </div>
+                <div class="utility__nav">
+                    
+            <div class="utility__nav-item">
+                <a class="utility__nav-item-link" href="/why-united" aria-label="Why United">Why United</a>
+            </div>
+            <div class="utility__nav-item">
+                <a class="utility__nav-item-link" href="/locations" aria-label="Locations">Locations</a>
+            </div>
+            <div class="utility__nav-item">
+                <a class="utility__nav-item-link" href="/team" aria-label="Find a Banker">Find a Banker</a>
+            </div>
+            <div class="utility__nav-item">
+                <a class="utility__nav-item-link" href="/support/contact-us" aria-label="Contact">Contact</a>
+            </div>
+
+                    
+            <div class="utility__nav-item">
+                <div class="utility__nav-item-dropdown">
+                    <button class="utility__nav-item-toggle" type="button" aria-expanded="false"></button>
+                    <div class="utility__nav-item-content" aria-hidden="true">
+                            <a class="utility__nav-item-link" href="https://oac.fmsiportal.com/AppointmentWidget/service?urlCode=G1C77CY88ICD2QTW45Q9" aria-label="Schedule Appointment" target="_blank" rel="noopener noreferrer">Schedule Appointment</a>
+                            <a class="utility__nav-item-link" href="/united-in-our-communities" aria-label="Our Communities">Our Communities</a>
+                            <a class="utility__nav-item-link" href="/careers" aria-label="Careers">Careers</a>
+                    </div>
+                </div>
+            </div>
+
+                </div>
+                <form class="header__search" action="/search" method="get">
+                    <input class="header__search-input" type="search" name="query" placeholder="How can we help?" aria-label="Search" />
+                    <button class="header__search-icon glyph-search" aria-label="Search button" type="submit"></button>
+                </form>
+            </div>
+            <div class="header__main">
+                <button class="main__login actions__btn--login login-toggle">Login</button>
+                <button class="main__back" type="button">Back</button>
+                <button class="main__mobile-toggle" type="button" aria-label="Toggle Mobile Menu"></button>
+                <div class="main__logo">
+                    <a class="main__logo-link" href="/" aria-label="Home">
+                        <img class="main__logo-img" src="/getContentAsset/e320ead0-1c60-4061-a844-0e3e24b347f0/dfc3d011-8f63-43f6-9ed8-4b444333a1d0/United-Community-Full-Color.svg?language=en-US" alt="Return to the home page " fetchpriority="high" />
+                    </a>
+                </div>
+                    
+    <nav class="main__nav" aria-label="Main navigation" data-header-main>
+            <div class="main__nav-tab is-locked" data-tab="Personal">
+                <div class="main__nav-trigger">
+                    <a class="main__nav-trigger-link" href="/" aria-label="Personal">Personal</a>
+                    <button class="main__nav-trigger-chevron glyph-chevron-right"></button>
+                </div>
+                <div class="main__nav-subnav">
+                    <label class="subnav__title">Personal</label>
+                    
+                            <div class="subnav__item">
+                                <button class="subnav__trigger">Banking</button>
+                                <div class="subnav__megamenu">
+                                    <a class="megamenu__explore" href="/Personal-banking" aria-label="explore">Learn more about personal banking</a>
+                                        <div class="megamenu__links">
+                                                <div class="megamenu__column">
+                                                    <p class="megamenu__column-title">Checking</p>
+                                                    <div class="megamenu__column-links">
+                                                            <a class="megamenu__column-link" href="/Personal-banking" aria-label="Checking account overview">Overview</a>
+                                                            <a class="megamenu__column-link" href="/Personal-banking/Checking" aria-label="checking accounts with United Community">Checking</a>
+                                                            <a class="megamenu__column-link" href="/Personal-banking/Checking/Debit-Cards" aria-label="Mastercard debit card">Mastercard&#xAE; Debit Card</a>
+                                                            <a class="megamenu__column-link" href="https://oac.fmsiportal.com/AppointmentWidget/service?urlCode=G1C77CY88ICD2QTW45Q9" aria-label="Schedule an Appointment">Schedule an Appointment</a>
+                                                    </div>
+                                                </div>
+                                                <div class="megamenu__column">
+                                                    <p class="megamenu__column-title">Savings &amp; CDs</p>
+                                                    <div class="megamenu__column-links">
+                                                            <a class="megamenu__column-link" href="/Personal-banking/Savings" aria-label="personal savings accounts">Savings</a>
+                                                            <a class="megamenu__column-link" href="/Personal-banking/Savings/Personal-Certificates-of-Deposit" aria-label="certificate of deposits CD rate page">Certificates of Deposit (CD)</a>
+                                                            <a class="megamenu__column-link" href="https://open.ucbi.com/sales?productCode=2101055" aria-label="personal money market accounts">Money Market</a>
+                                                            <a class="megamenu__column-link" href="/Greenlight" aria-label="Greenlight for Kids and Teens">Greenlight for Kids and Teens</a>
+                                                    </div>
+                                                </div>
+                                                <div class="megamenu__column">
+                                                    <p class="megamenu__column-title">Online &amp; Mobile Banking</p>
+                                                    <div class="megamenu__column-links">
+                                                            <a class="megamenu__column-link" href="/Personal-banking/Digital-Banking" aria-label="online and mobile banking overview">Overview</a>
+                                                            <a class="megamenu__column-link" href="/Personal-banking/Digital-Banking/enroll" aria-label="Link to Enroll in Business Banking Services">Enroll in Online Banking</a>
+                                                            <a class="megamenu__column-link" href="https://www.ucbi.com/personal-banking/digital-banking#app" aria-label="click here for download links for the mobile app">United Mobile App</a>
+                                                            <a class="megamenu__column-link" href="/support/demos" aria-label="digital demos and support page for online banking">Digital Support</a>
+                                                    </div>
+                                                </div>
+                                                <div class="megamenu__column">
+                                                    <p class="megamenu__column-title">Education &amp; Tools</p>
+                                                    <div class="megamenu__column-links">
+                                                            <a class="megamenu__column-link" href="https://www.ucbi.com/support/learning-center" aria-label="personal banking resource center">Resource Center</a>
+                                                            <a class="megamenu__column-link" href="/Fraud-Prevention" aria-label="fraud prevention guide and resources">Fraud Prevention</a>
+                                                            <a class="megamenu__column-link" href="/support/demos" aria-label="digital demo walk through guides">Digital Demos</a>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                        <div class="megamenu__card">
+                                                <img class="megamenu__card-img" loading="lazy" src="/getContentAsset/d3ec2a32-ad27-4d68-8ff4-2f3db8f1b3df/dfc3d011-8f63-43f6-9ed8-4b444333a1d0/Father_Baby_Finances_Laptop_GettyImages-1091345974.webp?language=en-US" alt="Bank with the best!" />
+                                            <p class="megamenu__card-title">Bank with the best!</p>
+                                            <div class="megamenu__card-copy">
+                                                <p>Open your new account&nbsp;online today! It's quick and easy.&nbsp;</p>
+
+                                            </div>
+                                                <a class="megamenu__card-cta btn" href="https://open.ucbi.com?utm_source=website&amp;utm_medium=menu&amp;utm_campaign=feature" aria-label="Open a personal banking account" target="_blank" rel="noopener noreferrer">Open an Account</a>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="subnav__item">
+                                <button class="subnav__trigger">Lending</button>
+                                <div class="subnav__megamenu">
+                                    <a class="megamenu__explore" href="/Personal-banking/Borrowing" aria-label="explore">Learn more about personal loans</a>
+                                        <div class="megamenu__links">
+                                                <div class="megamenu__column">
+                                                    <p class="megamenu__column-title">Loan Types</p>
+                                                    <div class="megamenu__column-links">
+                                                            <a class="megamenu__column-link" href="/Personal-banking/Borrowing" aria-label="Link to loans and lines of credit page">Loans and Lines of Credit</a>
+                                                            <a class="megamenu__column-link" href="/Personal-banking/Borrowing/Home-Equity" aria-label="Link to Home Equity Loans &amp; HELOCs page">Home Equity Loans &amp; HELOCs</a>
+                                                            <a class="megamenu__column-link" href="/Mortgages" aria-label="Link to Home Loans &amp; Mortgage page">Home Loans &amp; Mortgage</a>
+                                                    </div>
+                                                </div>
+                                                <div class="megamenu__column">
+                                                    <p class="megamenu__column-title">Credit Cards</p>
+                                                    <div class="megamenu__column-links">
+                                                            <a class="megamenu__column-link" href="https://www.ucbi.com/personal-banking/credit-cards" aria-label="Link to United Credit Cards page">United Credit Cards</a>
+                                                            <a class="megamenu__column-link" href="https://creditcardlearnmore.com/11t3/index?ecdma-lc=14286&amp;ecid=OTHE_25940&amp;utm_source=website&amp;utm_medium=menu&amp;utm_campaign=personal-lending" aria-label="Learn &amp; Apply" target="_blank" rel="noopener noreferrer">Learn &amp; Apply</a>
+                                                    </div>
+                                                </div>
+                                                <div class="megamenu__column">
+                                                    <p class="megamenu__column-title">Contact Us</p>
+                                                    <div class="megamenu__column-links">
+                                                            <a class="megamenu__column-link" href="https://oac.fmsiportal.com/AppointmentWidget/service?urlCode=G1C77CY88ICD2QTW45Q9" aria-label="Link to United Appointment Scheduling Page" target="_blank" rel="noopener noreferrer">Schedule an Appointment</a>
+                                                            <a class="megamenu__column-link" href="https://www.ucbi.com/personal-banking/borrowing#contact" aria-label="Link to Contact A Lender Page">Contact a Lender</a>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                        <div class="megamenu__card">
+                                                <img class="megamenu__card-img" loading="lazy" src="/getContentAsset/ba88fc69-8986-4a89-9f01-7d6d6f32e06c/dfc3d011-8f63-43f6-9ed8-4b444333a1d0/HELOC.webp?language=en-US" alt="Accomplish Your Goals with a HELOC" />
+                                            <p class="megamenu__card-title">Accomplish Your Goals with a HELOC</p>
+                                            <div class="megamenu__card-copy">
+                                                <p>Get the funds you need for home renovations or unexpected repairs or expenses with a home equity line of credit (HELOC).</p>
+                                            </div>
+                                                <a class="megamenu__card-cta btn" href="https://www.ucbi.com/personal-banking/borrowing/home-equity?utm_source=website&amp;utm_medium=menu&amp;utm_campaign=feature" aria-label="view heloc rates" target="_blank" rel="noopener noreferrer">View HELOC Rates</a>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="subnav__item">
+                                <button class="subnav__trigger">Online Banking</button>
+                                <div class="subnav__megamenu">
+                                    <a class="megamenu__explore" href="/Personal-banking/Digital-Banking" aria-label="explore">Learn more about online banking</a>
+                                        <div class="megamenu__links">
+                                                <div class="megamenu__column">
+                                                    <p class="megamenu__column-title">Get Started</p>
+                                                    <div class="megamenu__column-links">
+                                                            <a class="megamenu__column-link" href="/Personal-banking/Digital-Banking" aria-label="Link to Personal Online Banking Page ">Overview</a>
+                                                            <a class="megamenu__column-link" href="https://www.ucbi.com/personal-banking/digital-banking/enroll?utm_source=website&amp;utm_medium=menu&amp;utm_campaign=personal-online" aria-label="LInk to Personal Online Banking Service Agreement and Disclosure">Enroll in Online Banking</a>
+                                                            <a class="megamenu__column-link" href="https://www.ucbi.com/personal-banking/digital-banking?utm_source=website&amp;utm_medium=menu&amp;utm_campaign=personal-online#app" aria-label="Link to Download United Mobile Banking App">United Mobile App</a>
+                                                            <a class="megamenu__column-link" href="/support/demos" aria-label="Link to Digital Support Library">Digital Support</a>
+                                                            <a class="megamenu__column-link" href="/Greenlight" aria-label="Link to Greenlight for Kids and Teens Page">Greenlight for Kids and Teens</a>
+                                                            <a class="megamenu__column-link" href="https://www.ucbi.com/fraud-prevention?utm_source=website&amp;utm_medium=menu&amp;utm_campaign=personal-online" aria-label="Link to Fraud Prevention Page ">Fraud Prevention</a>
+                                                    </div>
+                                                </div>
+                                                <div class="megamenu__column">
+                                                    <p class="megamenu__column-title">Features</p>
+                                                    <div class="megamenu__column-links">
+                                                            <a class="megamenu__column-link" href="/Personal-banking/Digital-Banking/Alerts-and-Notifications" aria-label="Alerts and Notifications">Alerts and Notifications</a>
+                                                            <a class="megamenu__column-link" href="/Zelle" aria-label="Zelle">Zelle</a>
+                                                            <a class="megamenu__column-link" href="/Personal-banking/Digital-Banking/Bill-Pay" aria-label="Bill Pay">Bill Pay</a>
+                                                            <a class="megamenu__column-link" href="/Personal-banking/Digital-Banking/eStatements" aria-label="eStatements">eStatements</a>
+                                                            <a class="megamenu__column-link" href="/Personal-banking/Digital-Banking/My-Money-Manager" aria-label="My Money Manager">My Money Manager</a>
+                                                            <a class="megamenu__column-link" href="/Personal-banking/Digital-Banking/Card-Controls" aria-label="Card Controls">Card Controls</a>
+                                                            <a class="megamenu__column-link" href="/Support/Text-Banking-Support" aria-label="Text Banking Support">Text Banking Support</a>
+                                                            <a class="megamenu__column-link" href="/Personal-banking/Digital-Banking" aria-label="View All">View All</a>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                        <div class="megamenu__card">
+                                                <img class="megamenu__card-img" loading="lazy" src="/getContentAsset/8d74888e-525c-43bc-ae4f-f91090d138af/dfc3d011-8f63-43f6-9ed8-4b444333a1d0/white-female_mobile-deposit_GettyImages-636248010.webp?language=en-US" alt="Banking when and where you need it." />
+                                            <p class="megamenu__card-title">Banking when and where you need it.</p>
+                                            <div class="megamenu__card-copy">
+                                                Unlock simple, secure, round-the-clock financial access with Online and Mobile Banking!
+                                            </div>
+                                                <a class="megamenu__card-cta btn" href="/Personal-banking/Digital-Banking/enroll" aria-label="Enroll in Online Banking">Enroll Now</a>
+                                        </div>
+                                </div>
+                            </div>
+                </div>
+            </div>
+            <div class="main__nav-tab" data-tab="Business">
+                <div class="main__nav-trigger">
+                    <a class="main__nav-trigger-link" href="/business" aria-label="Business">Business</a>
+                    <button class="main__nav-trigger-chevron glyph-chevron-right"></button>
+                </div>
+                <div class="main__nav-subnav">
+                    <label class="subnav__title">Business</label>
+                    
+                            <div class="subnav__item">
+                                <button class="subnav__trigger">Banking</button>
+                                <div class="subnav__megamenu">
+                                    <a class="megamenu__explore" href="/Business-Banking" aria-label="explore">Banking solutions for your business</a>
+                                        <div class="megamenu__links">
+                                                <div class="megamenu__column">
+                                                    <p class="megamenu__column-title">Deposits</p>
+                                                    <div class="megamenu__column-links">
+                                                            <a class="megamenu__column-link" href="/Business-Banking" aria-label="Link to Business Banking page ">Overview</a>
+                                                            <a class="megamenu__column-link" href="/Business-Banking/Checking" aria-label="Link to Business Checking Page">Checking</a>
+                                                            <a class="megamenu__column-link" href="/Business-Banking/Savings" aria-label="Link to Business Savings Page">Savings</a>
+                                                            <a class="megamenu__column-link" href="https://open.ucbi.com/sales?productCode=2110307" aria-label="Link to Business CD Page ">Certificates of Deposit</a>
+                                                            <a class="megamenu__column-link" href="https://open.ucbi.com/sales?productCode=2101077" aria-label="Link to Business Money Market Page ">Money Market</a>
+                                                            <a class="megamenu__column-link" href="/Business-Banking/Checking/Debit-Cards" aria-label="Link to United Business Debit Card Page ">Mastercard&#xAE; Debit Card</a>
+                                                    </div>
+                                                </div>
+                                                <div class="megamenu__column">
+                                                    <p class="megamenu__column-title">Online &amp; Mobile Banking</p>
+                                                    <div class="megamenu__column-links">
+                                                            <a class="megamenu__column-link" href="/Business-Banking/Digital-Banking" aria-label="Link to Business Banking Page ">Overview</a>
+                                                            <a class="megamenu__column-link" href="/Business-Banking/Digital-Banking/enroll" aria-label="Link to Enroll in Business Banking Services">Enroll In Online Banking</a>
+                                                            <a class="megamenu__column-link" href="https://www.ucbi.com/business-banking/digital-banking#app" aria-label="Link to Download United Mobile Banking App">United Mobile App</a>
+                                                            <a class="megamenu__column-link" href="/support/demos" aria-label="Link to Digital Support Library">Digital Support</a>
+                                                    </div>
+                                                </div>
+                                                <div class="megamenu__column">
+                                                    <p class="megamenu__column-title">Education &amp; Tools</p>
+                                                    <div class="megamenu__column-links">
+                                                            <a class="megamenu__column-link" href="/Business-Learning-Center" aria-label="Link to Business Resource Center Library">Business Resources</a>
+                                                            <a class="megamenu__column-link" href="/Fraud-Prevention" aria-label="Link to Fraud Prevention Page ">Fraud Prevention</a>
+                                                            <a class="megamenu__column-link" href="https://demo.ucbi.com/channel/5?utm_source=Website&amp;utm_medium=Biz_Menu&amp;utm_campaign=Demos" aria-label="Link to Digital Demo Library" target="_blank" rel="noopener noreferrer">Digital Demos</a>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                        <div class="megamenu__card">
+                                                <img class="megamenu__card-img" loading="lazy" src="/getContentAsset/8a036c9e-faad-47cc-b975-917d13387df2/dfc3d011-8f63-43f6-9ed8-4b444333a1d0/CTA-make-banker-looking-at-laptop.webp?language=en-US" alt="Built for your business." />
+                                            <p class="megamenu__card-title">Built for your business.</p>
+                                            <div class="megamenu__card-copy">
+                                                Open your business bank account online today! The process is quick and easy.&nbsp;
+                                            </div>
+                                                <a class="megamenu__card-cta btn" href="https://open.ucbi.com?utm_source=website&amp;utm_medium=bizmenu&amp;utm_campaign=feature" aria-label="Open an Account" target="_blank" rel="noopener noreferrer">Open an Account</a>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="subnav__item">
+                                <button class="subnav__trigger">Lending</button>
+                                <div class="subnav__megamenu">
+                                    <a class="megamenu__explore" href="/Business-Banking/Lending" aria-label="explore">Learn about business lending with United</a>
+                                        <div class="megamenu__links">
+                                                <div class="megamenu__column">
+                                                    <p class="megamenu__column-title">Lending</p>
+                                                    <div class="megamenu__column-links">
+                                                            <a class="megamenu__column-link" href="/Business-Banking/Lending" aria-label="Link to Business Loans &amp; LOC Page">Loans and Lines of Credit</a>
+                                                            <a class="megamenu__column-link" href="/Business-Banking/Lending/Real-Estate-Lending" aria-label="Link to Commercial Real Estate Lending Page ">Real Estate Lending</a>
+                                                            <a class="megamenu__column-link" href="/Business-Banking/Lending/Business-Working-Capital-LOC" aria-label="Link to Working Capital Line of Credit Page ">Working Capital LOC</a>
+                                                            <a class="megamenu__column-link" href="https://www.ucbi.com/business-banking/lending#contact" aria-label="Link to Business Banking Contact Page">Contact a Banker</a>
+                                                    </div>
+                                                </div>
+                                                <div class="megamenu__column">
+                                                    <p class="megamenu__column-title">Specialized Lending</p>
+                                                    <div class="megamenu__column-links">
+                                                            <a class="megamenu__column-link" href="/Business-Banking/Industry-Specialized" aria-label="Link to Industry &amp; Specialized Loans Page ">Industry &amp; Specialized Loans</a>
+                                                            <a class="megamenu__column-link" href="/Business-Banking/Industry-Specialized/SBA-Lending" aria-label="Link to SBA Lending Page ">SBA Lending</a>
+                                                            <a class="megamenu__column-link" href="/Business-Banking/Industry-Specialized/USDA" aria-label="Link to USDA Lending Programs Page">USDA Lending Programs</a>
+                                                            <a class="megamenu__column-link" href="/Business-Banking/Community-Association-Banking" aria-label="Link to Community Association Banking Page">Community Association Banking</a>
+                                                            <a class="megamenu__column-link" href="/Business-Banking/Industry-Specialized/Equipment-Lending" aria-label="Link to Equipment Lending Page">Equipment Lending</a>
+                                                            <a class="megamenu__column-link" href="/Business-Banking/Industry-Specialized/Asset-Based-Lending" aria-label="Link to Asset Based Lending Page">Asset-Based Lending</a>
+                                                            <a class="megamenu__column-link" href="/Business-Banking/Industry-Specialized/Syndicated-Participated-Loans" aria-label="Link to Syndicated &amp; Participated Loans page">Syndicated &amp; Participated Loans</a>
+                                                            <a class="megamenu__column-link" href="https://www.ucbi.com/business-banking/lending#contact" aria-label="Link to Contact a Lender Form">Contact a Banker</a>
+                                                    </div>
+                                                </div>
+                                                <div class="megamenu__column">
+                                                    <p class="megamenu__column-title">Credit Cards</p>
+                                                    <div class="megamenu__column-links">
+                                                            <a class="megamenu__column-link" href="/Business-Banking/Credit-Cards" aria-label="Link to United Business Credit Card Page">United Credit Cards</a>
+                                                            <a class="megamenu__column-link" href="/Business-Banking/Commercial-Card" aria-label="Link to Commercial Cards page">Commercial Cards</a>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                        <div class="megamenu__card">
+                                                <img class="megamenu__card-img" loading="lazy" src="/getContentAsset/1d36c31d-4233-4113-af4a-caee2ec44086/dfc3d011-8f63-43f6-9ed8-4b444333a1d0/Restaurant_Business_Equipment_Lending.webp?language=en-US" alt="Find Your Local Business Banker" />
+                                            <p class="megamenu__card-title">Find Your Local Business Banker</p>
+                                            <div class="megamenu__card-copy">
+                                                <p>Whether you hear opportunity knocking or see an industry disruption in the making, we’re here to help get you on the right track.</p>
+                                            </div>
+                                                <a class="megamenu__card-cta btn" href="https://www.ucbi.com/business-banking/lending#contact" aria-label="Contact a Business Banker today">Contact Now</a>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="subnav__item">
+                                <button class="subnav__trigger">Treasury &amp; Payments</button>
+                                <div class="subnav__megamenu">
+                                    <a class="megamenu__explore" href="/Business-Banking/Treasury-Management" aria-label="explore">Learn more about payment services</a>
+                                        <div class="megamenu__links">
+                                                <div class="megamenu__column">
+                                                    <p class="megamenu__column-title">Treasury Management</p>
+                                                    <div class="megamenu__column-links">
+                                                            <a class="megamenu__column-link" href="/Business-Banking/Treasury-Management" aria-label="Link to Treasury Management Overview Page ">Overview</a>
+                                                            <a class="megamenu__column-link" href="/Business-Banking/Treasury-Management/Account-Management" aria-label="Link to TM Reporting &amp; Liquidity Page">Reporting &amp; Liquidity</a>
+                                                            <a class="megamenu__column-link" href="/Business-Banking/Treasury-Management/Accounts-Receivable-Services" aria-label="Link to TM Receivables Page">Receivables</a>
+                                                            <a class="megamenu__column-link" href="/Business-Banking/Treasury-Management/Accounts-Payable-Services" aria-label="Link to TM Payables Page">Payables</a>
+                                                            <a class="megamenu__column-link" href="/Business-Banking/Merchant-Services" aria-label="Link to TM Merchant Services Page">Merchant Services</a>
+                                                            <a class="megamenu__column-link" href="/Business-Banking/Treasury-Management/Fraud-Protection" aria-label="Link to TM Fraud Protection Page">Fraud Protection</a>
+                                                            <a class="megamenu__column-link" href="https://www.ucbi.com/business-banking/treasury-management#contact" aria-label="Link to Treasury Management Contact Form">Contact Treasury Management</a>
+                                                    </div>
+                                                </div>
+                                                <div class="megamenu__column">
+                                                    <p class="megamenu__column-title">Credit Cards</p>
+                                                    <div class="megamenu__column-links">
+                                                            <a class="megamenu__column-link" href="https://www.ucbi.com/business-banking/credit-cards?utm_source=website&amp;utm_medium=menu&amp;utm_campaign=tm" aria-label="Link to United Business Credit Cards Page">United Credit Cards</a>
+                                                            <a class="megamenu__column-link" href="/Business-Banking/Commercial-Card" aria-label="Link to Commercial Cards page">Commercial Cards</a>
+                                                    </div>
+                                                </div>
+                                                <div class="megamenu__column">
+                                                    <p class="megamenu__column-title">How-To Demos</p>
+                                                    <div class="megamenu__column-links">
+                                                            <a class="megamenu__column-link" href="https://www.ucbi.com/support/demos#business" aria-label="Link to Business Admin Features Demo Library">Business Admin Features </a>
+                                                            <a class="megamenu__column-link" href="https://www.ucbi.com/support/demos#recipients" aria-label="Link to Adding Recipients Demo Library">Adding Recipients</a>
+                                                            <a class="megamenu__column-link" href="https://www.ucbi.com/support/demos#payments" aria-label="Link to Sending Payments Demo Library">Sending Payments</a>
+                                                            <a class="megamenu__column-link" href="https://www.ucbi.com/support/demos#positivepay" aria-label="Link to Positive Pay Demo Library">Positive Pay</a>
+                                                            <a class="megamenu__column-link" href="https://scribehow.com/o/Ecppu6ZeReO6ZPSaltLgPA/viewer/Remote_Deposit__6nwMMKznQqGCreM_6YGDyg" aria-label="Link to Remote Deposit Capture Demo" target="_blank" rel="noopener noreferrer">Remote Deposit Capture</a>
+                                                            <a class="megamenu__column-link" href="https://www.ucbi.com/support/demos#intpay" aria-label="Link to Integrated Payables Demo Library">Integrated Payables</a>
+                                                            <a class="megamenu__column-link" href="https://www.ucbi.com/support/demos#commercial-card" aria-label="Link to Commercial Card Demo Library">Commercial Card</a>
+                                                            <a class="megamenu__column-link" href="https://www.ucbi.com/support/demos#business" aria-label="Link to Treasury Management Demo Library">View All Demos</a>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                        <div class="megamenu__card">
+                                                <img class="megamenu__card-img" loading="lazy" src="/getContentAsset/341db15a-11d6-43e4-b2ce-8412fb0eb02d/dfc3d011-8f63-43f6-9ed8-4b444333a1d0/scam-phone.webp?language=en-US" alt="Keep your accounts safe!" />
+                                            <p class="megamenu__card-title">Keep your accounts safe!</p>
+                                            <div class="megamenu__card-copy">
+                                                <p>We work hard behind-the-scenes to secure your business accounts. Learn how to do your part to fight fraud.&nbsp;</p>
+
+                                            </div>
+                                                <a class="megamenu__card-cta btn" href="/Business-Banking/Treasury-Management/Fraud-Protection" aria-label="Learn More about Business Fraud Prevention Solutions">Learn More</a>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="subnav__item">
+                                <a class="subnav__link" href="/Business-Banking/Industry-Specialized" aria-label="Industry Solutions">Industry Solutions</a>
+                            </div>
+                </div>
+            </div>
+            <div class="main__nav-tab" data-tab="Mortgage">
+                <div class="main__nav-trigger">
+                    <a class="main__nav-trigger-link" href="/mortgage" aria-label="Mortgage">Mortgage</a>
+                    <button class="main__nav-trigger-chevron glyph-chevron-right"></button>
+                </div>
+                <div class="main__nav-subnav">
+                    <label class="subnav__title">Mortgage</label>
+                    
+                            <div class="subnav__item">
+                                <button class="subnav__trigger">Home Loans</button>
+                                <div class="subnav__megamenu">
+                                    <a class="megamenu__explore" href="/Mortgages" aria-label="explore">Learn more about home loans</a>
+                                        <div class="megamenu__links">
+                                                <div class="megamenu__column">
+                                                    <p class="megamenu__column-title">Buying a Home</p>
+                                                    <div class="megamenu__column-links">
+                                                            <a class="megamenu__column-link" href="/Mortgages" aria-label="Link to Mortgages Page">Home Loan Options</a>
+                                                            <a class="megamenu__column-link" href="/Mortgages/Down-Payment-Assistance" aria-label="Link to Down Payment Assistance Page">Down Payment Assistance</a>
+                                                            <a class="megamenu__column-link" href="/Mortgages/Buying-a-Home" aria-label="Link to Buying a Home Page">Second/Vacation Home Options</a>
+                                                            <a class="megamenu__column-link" href="https://apply.unitedcommunitybanks.com/#/choose-loan-type?app_source=ucbinav" aria-label="Link to Home Loan Application " target="_blank" rel="noopener noreferrer">Apply Now</a>
+                                                            <a class="megamenu__column-link" href="https://www.ucbi.com/mortgages#contact" aria-label="Link to Contact a Lender Form">Connect with a Lender</a>
+                                                    </div>
+                                                </div>
+                                                <div class="megamenu__column">
+                                                    <p class="megamenu__column-title">First-Time Homebuyer</p>
+                                                    <div class="megamenu__column-links">
+                                                            <a class="megamenu__column-link" href="/Mortgages/First-Time-Homebuyer" aria-label="Link to First-Time Homebuying Page">Homebuying Guide</a>
+                                                            <a class="megamenu__column-link" href="https://apply.unitedcommunitybanks.com/#/choose-loan-type?app_source=fthbpage" aria-label="Link to Mortgage Application" target="_blank" rel="noopener noreferrer">Apply Now</a>
+                                                            <a class="megamenu__column-link" href="https://www.ucbi.com/mortgages/first-time-homebuyer#resources" aria-label="Link to First-Time Homebuying Learning Resources">Learning Resources</a>
+                                                            <a class="megamenu__column-link" href="https://www.ucbi.com/mortgages/first-time-homebuyer#contact" aria-label="Link to Contact a Lender Form">Connect with a Lender</a>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                        <div class="megamenu__card">
+                                                <img class="megamenu__card-img" loading="lazy" src="/getContentAsset/4c42beac-a5d5-4bc3-a544-c1da9f9a437d/dfc3d011-8f63-43f6-9ed8-4b444333a1d0/CTA-couple-and-baby-new-home-moving.webp?language=en-US" alt="The perfect loan for your perfect home. " />
+                                            <p class="megamenu__card-title">The perfect loan for your perfect home. </p>
+                                            <div class="megamenu__card-copy">
+                                                <p>Whether you&rsquo;re looking to buy your first home, a new home, or a vacation home, we can connect you with the right loan.</p>
+
+                                            </div>
+                                                <a class="megamenu__card-cta btn" href="https://apply.unitedcommunitybanks.com/#/choose-loan-type?app_source=ucbinav" aria-label="Apply for a Mortgage Today" target="_blank" rel="noopener noreferrer">Apply Today</a>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="subnav__item">
+                                <button class="subnav__trigger">Refinance</button>
+                                <div class="subnav__megamenu">
+                                    <a class="megamenu__explore" href="/Mortgages/Refinancing-Options" aria-label="explore">Learn more about refinancing</a>
+                                        <div class="megamenu__links">
+                                                <div class="megamenu__column">
+                                                    <p class="megamenu__column-title">Refinancing Options</p>
+                                                    <div class="megamenu__column-links">
+                                                            <a class="megamenu__column-link" href="/Mortgages/Refinancing-Options" aria-label="Link to Refinancing Options Page ">Refinance Options</a>
+                                                            <a class="megamenu__column-link" href="/Mortgages/Refinancing-Options/Cash-Out-Refinance" aria-label="Link to Cash-Out Refinance Page ">Cash-Out Refinance</a>
+                                                            <a class="megamenu__column-link" href="/Mortgages/Refinancing-Options/Rate-Term-Refinance" aria-label="Link to Rate Term Refinance Page ">Rate Term Refinance</a>
+                                                            <a class="megamenu__column-link" href="https://www.ucbi.com/mortgages/refinancing-options#contact" aria-label="Link to Contact a Lender Form">Connect with a Lender</a>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                        <div class="megamenu__card">
+                                                <img class="megamenu__card-img" loading="lazy" src="/getContentAsset/5724e949-d0e1-4c65-b9aa-b101eeeb83d2/dfc3d011-8f63-43f6-9ed8-4b444333a1d0/Mortgage-finances-CTA.webp?language=en-US" alt="Ready to refinance? " />
+                                            <p class="megamenu__card-title">Ready to refinance? </p>
+                                            <div class="megamenu__card-copy">
+                                                <p>Whether you&#39;re hoping to adjust your monthly payment, cash in on your equity, or change your payoff timeline, refinancing may be a great option for you.&nbsp;</p>
+
+                                            </div>
+                                                <a class="megamenu__card-cta btn" href="https://apply.unitedcommunitybanks.com/#/choose-loan-type?app_source=ucbinav" aria-label="Apply to Refinance Your Home today" target="_blank" rel="noopener noreferrer">Apply Now</a>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="subnav__item">
+                                <button class="subnav__trigger">Home Construction</button>
+                                <div class="subnav__megamenu">
+                                    <a class="megamenu__explore" href="/Mortgages/Home-Construction-Loans" aria-label="explore">Learn more about home renovation loans</a>
+                                        <div class="megamenu__links">
+                                                <div class="megamenu__column">
+                                                    <p class="megamenu__column-title">Home Construction Lending</p>
+                                                    <div class="megamenu__column-links">
+                                                            <a class="megamenu__column-link" href="/Mortgages/Home-Construction-Loans" aria-label="Link to Home Construction Loans Page">Construction and Renovation Loans</a>
+                                                            <a class="megamenu__column-link" href="/Mortgages/Home-Construction-Loans/Construction-to-Permanent" aria-label="Link to Construction-to-Permanent Lending Page">Construction-to-Permanent Lending</a>
+                                                            <a class="megamenu__column-link" href="/Personal-banking/Borrowing/Home-Equity" aria-label="Link to Home Equity Loans &amp; HELOCs Page">Home Equity Loans &amp; HELOCs</a>
+                                                            <a class="megamenu__column-link" href="/Support/Learning-Center/Should-you-consider-a-HELOC" aria-label="Link to Leverage your Home Equity Page">Leverage your Home Equity</a>
+                                                            <a class="megamenu__column-link" href="https://www.ucbi.com/mortgages/home-construction-loans#contact" aria-label="Link to Contact a Lender Form">Connect with a Lender</a>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                        <div class="megamenu__card">
+                                                <img class="megamenu__card-img" loading="lazy" src="/getContentAsset/ba88fc69-8986-4a89-9f01-7d6d6f32e06c/dfc3d011-8f63-43f6-9ed8-4b444333a1d0/HELOC.webp?language=en-US" alt="Leverage your home&#x27;s equity. " />
+                                            <p class="megamenu__card-title">Leverage your home&#x27;s equity. </p>
+                                            <div class="megamenu__card-copy">
+                                                <p>Which home equity lending solution is right for you? Learn about your options and put your equity to work!&nbsp;</p>
+
+                                            </div>
+                                                <a class="megamenu__card-cta btn" href="/Support/Learning-Center/Should-you-consider-a-HELOC" aria-label="Learn about HELOC or HELoan options">Learn More</a>
+                                        </div>
+                                </div>
+                            </div>
+                </div>
+            </div>
+            <div class="main__nav-tab" data-tab="Wealth">
+                <div class="main__nav-trigger">
+                    <a class="main__nav-trigger-link" href="/wealth" aria-label="Wealth">Wealth</a>
+                    <button class="main__nav-trigger-chevron glyph-chevron-right"></button>
+                </div>
+                <div class="main__nav-subnav">
+                    <label class="subnav__title">Wealth</label>
+                    
+                            <div class="subnav__item">
+                                <a class="subnav__link" href="/Wealth" aria-label="Overview">Overview</a>
+                            </div>
+                            <div class="subnav__item">
+                                <a class="subnav__link" href="/economic-outlook" aria-label="Advisors">Advisors</a>
+                            </div>
+                            <div class="subnav__item">
+                                <a class="subnav__link" href="/private-wealth" aria-label="Private Wealth">Private Wealth</a>
+                            </div>
+                            <div class="subnav__item">
+                                <a class="subnav__link" href="/Insurance" aria-label="Insurance">Insurance</a>
+                            </div>
+                </div>
+            </div>
+    </nav>
+
+                <div class="main__actions">
+                    <div class="header__open-account">
+                        <a class="actions__btn btn btn--primary btn--ghost" href="https://open.ucbi.com?utm_source=website&amp;utm_medium=main_nav&amp;utm_campaign=header" aria-label="open account">Open an Account</a>
+                    </div>
+                    <button class="actions__btn actions__btn--login login-toggle btn btn--primary" href="">
+                        <i class="glyph-lock"></i>
+                        <span>Login</span>
+                    </button>
+                    <div class="header__phone-number">
+                        <a href="tel:18008222651" aria-label="phone number">1-800-822-2651</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__drawer">
+            <div class="drawer__inner">
+                <div class="drawer__container"></div>
+                <div class="drawer__actions"></div>
+            </div>
+        </div>
+        <div class="header__login-modal">
+            <div class="login is-online-banking">
+                <button class="login__close glyph-close" type="button" aria-label="Close Login Modal"></button>
+                <div class="login__header">
+                    <i class="glyph-lock"></i>
+                    <span>Log In</span>
+                </div>
+                <div class="login__type">
+                    <p class="login__eyebrow">Choose Log In</p>
+                    <select aria-label="Login Type" class="login__select select-type" data-value="online-banking">
+                            <option value="online-banking">Online Banking</option>
+                            <option value="credit-cards">Credit Card</option>
+                            <option value="advisory-services">Advisors</option>
+                            <option value="your-mortgage">Your Mortgage</option>
+                            <option value="order-checks">Order Checks</option>
+                            <option value="wealth-mgmt-seaside">Private Wealth</option>
+                    </select>
+                </div>
+                <div class="login__content login__content--online-banking">
+                    <label for="loginUsername" class="login__eyebrow">Username</label>
+                    <input class="login__input" id="loginUsername" type="text" />
+                    <blue-form class="validation" id="loginUsernameValidation" component="">
+                        <div class="field-validation-error">Please enter a Login ID</div>
+                    </blue-form>
+                    <label for="loginPassword" class="login__eyebrow">Password</label>
+                    <div class="login__eye">
+                        <input class="login__input" id="loginPassword" type="password" />
+                        <button class="login__eye-button" type="button" aria-label="Toggle Password Visibility" aria-pressed="false" data-visibility="false"></button>
+                    </div>
+                    <blue-form class="validation" id="loginPasswordValidation" component="">
+                        <div class="field-validation-error">Please enter Password</div>
+                    </blue-form>
+                    <div class="login__buttons">
+                        <button class="btn" id="loginButton">Login</button>
+                    </div>
+                    <div class="login__links">
+                        <a href="https://secure.ucbi.com/unitedcommunitybankonline/sdk/AccountRecovery" target="_blank">Forgot Login/Unlock</a>
+                        <a href="https://secure.ucbi.com/unitedcommunitybankonline/Uux.aspx#/login/resetPasswordUsername" target="_blank">Forgot Password</a>
+                    </div>
+                    <div class="login__enroll-heading"><span>Or enroll in online banking</span></div>
+                    <select aria-label="Enrollment Type" class="login__select select-enroll">
+                        <option value="" disabled="" selected="">Select Online Enrollment</option>
+                        <option id="optionEnrollPersonal" value="/personal">Personal</option>
+                        <option id="optionEnrollBusiness" value="/business">Business</option>
+                    </select>
+                </div>
+                <div class="login__content login__content--mortgage">
+                    <div class="login__buttons">
+                        <a class="btn" id="loginMortgageGoButton" href="" aria-label="Go to Mortgage">Go</a>
+                    </div>
+                        <div class="login__enroll-heading">
+                            <span>or Apply for a Mortgage</span>
+                        </div>
+                        <div class="login__buttons login__buttons--flush">
+                            <a class="btn btn--ghost" id="loginMortgageApplyButton" href="https://apply.unitedcommunitybanks.com/?_gl=1*kp5xzg*_gcl_au*MTcxMzE5NjIwMi4xNzIxMjE4OTE3#/milestones?app_source=ucbiweb" aria-label="Mortgage Apply Now">Apply Now</a>
+                        </div>
+                </div>
+                <div class="login__content login__content--other">
+                    <div class="login__buttons">
+                        <a class="btn" id="loginGoButton" href="" aria-label="login go">Go</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </app-header>
+
+
+        <main class="tab-content" id="content">
+            
+
+
+    <section class="section--padded">
+        <div class="section__inner">
+            <div class="composition composition--padded composition--padded-flush-bottom">
+                <div class="article-title__breadcrumbs">
+                    
+
+<script type="application/ld&#x2B;json" nonce="kmh/KiunK/X3Ck7aXG3bJJW3gF/yUzx333LB826FFgE=">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.ucbi.com/"},{"@type":"ListItem","position":2,"name":"Support Center","item":"https://www.ucbi.com/support"},{"@type":"ListItem","position":3,"name":"Contact Us"}]}</script>
+
+<app-breadcrumbs class="breadcrumbs">
+    <nav class="page-breadcrumbs__nav horizontal-list">
+            <span>
+                    <a class="breadcrumbs__nav-item" href="/">
+                        <span>Home</span>
+                    </a>
+            </span>
+            <span>
+                    <a class="breadcrumbs__nav-item" href="/support">
+                        <span>Support Center</span>
+                    </a>
+            </span>
+            <span>
+                    <span class="breadcrumbs__nav-item">
+                        <span>Contact Us</span>
+                    </span>
+            </span>
+    </nav>
+</app-breadcrumbs>
+
+                </div>
+                <h1 class="page-title__heading">Contact Us</h1>
+            </div>
+        </div>
+    </section>
+
+<section class="pagetype-pagewithsections">
+    <div class="section__inner">
+        <div class="composition composition--padded">
+            
+                <div class="app-wysiwyg">
+                    <p>Have a question or request? Are you in need of support or looking to speak with a member of our&nbsp;team? You&#39;ve come to the right place. United&nbsp;is dedicated to you and wants to provide the support and resources you need, when you need them. Contact us today&mdash;we&#39;re ready to help you.</p>
+
+<div><a class="btn btn-primary" href="/support/contact-us#faqs">View&nbsp;Frequently Asked Questions</a></div>
+
+                </div>
+                <br />
+            
+
+
+
+
+
+
+
+<div class="composition  composition--padded-sm ">
+
+
+            <div class="feature-list--grid grid grid--cols-md2 grid--cols-lg3 grid--match-height">
+                    <div class="grid__item">
+                        <app-feature-list class="feature-list ">
+                            <h3 class="feature-list__heading">General Support</h3>
+                                <div class="feature-list__description">
+                                    <app-wysiwyg class="app-wysiwyg"><p>For general questions about United Community products or services.</p><p>1-800-UCBANK1 (1-800-822-2651)</p><p><strong>Hours</strong></p><p>Monday–Friday: 8:00am–6:00pm ET</p><p>Saturday: 9:00am–12:00pm ET&nbsp;</p></app-wysiwyg>
+                                </div>
+                                <a class="feature-list__cta btn btn--ghost" href="#contact" aria-label="" target=_self>Send Us a Message</a>
+                        </app-feature-list>
+                    </div>
+                    <div class="grid__item">
+                        <app-feature-list class="feature-list ">
+                            <h3 class="feature-list__heading">Online Banking Support</h3>
+                                <div class="feature-list__description">
+                                    <app-wysiwyg class="app-wysiwyg"><p>If you are an <strong>existing customer of United Community&nbsp;</strong>and have a question regarding your account, a transaction or your online or mobile banking, please contact us through the following <strong>secure&nbsp;</strong><strong>options</strong> Monday – Friday 8:00am – 6:00pm and Saturday 9:00am – 12:00pm:</p><ol><li><strong>Call&nbsp;</strong><a href="tel:1-800-822-2651">1-800-822-2651</a>.</li><li><strong>Secure Email</strong> by logging into your online banking and selecting "Messages" from the menu.</li><li><strong>Chat&nbsp;</strong>with us by clicking the chat bubble in the bottom right corner within online and mobile banking.</li></ol></app-wysiwyg>
+                                </div>
+                        </app-feature-list>
+                    </div>
+                    <div class="grid__item">
+                        <app-feature-list class="feature-list ">
+                            <h3 class="feature-list__heading">Treasury Management Services and Support</h3>
+                                <div class="feature-list__description">
+                                    <app-wysiwyg class="app-wysiwyg"><p>For assistance with our Treasury Management Services, contact our support team or locate a representative in your area:</p><p><a href="tel:1-866-270-6100">1-866-270-6100</a></p><p><a href="/cdn-cgi/l/email-protection#54202631352721262d39333920142137363d7a373b39">t</a><a href="/cdn-cgi/l/email-protection#3a4e485f5b494f4843575d574e7a4f59585314595557"><span class="__cf_email__" data-cfemail="b4c6d1d5c7c1c6cdd9d3d9c0f4c1d7d6dd9ad7dbd9">[email&#160;protected]</span></a></p><p><strong>Hours</strong></p><p>8:00am - 6:00pm ET</p></app-wysiwyg>
+                                </div>
+                        </app-feature-list>
+                    </div>
+                    <div class="grid__item">
+                        <app-feature-list class="feature-list ">
+                            <h3 class="feature-list__heading">File a Complaint</h3>
+                                <div class="feature-list__description">
+                                    <app-wysiwyg class="app-wysiwyg"><p>If you have a complaint relating to a specific location, employee, product, service, or experience, please file a complaint below. Once received, please allow us time to thoroughly research your claim and provide a response.</p></app-wysiwyg>
+                                </div>
+                                <a class="feature-list__cta btn btn--ghost" href="https://ucbi.kadince.com/external/forms/baf45b72ddac7caa0c171b0eaf76dca7" aria-label="" target=_self>File a Complaint</a>
+                        </app-feature-list>
+                    </div>
+                    <div class="grid__item">
+                        <app-feature-list class="feature-list ">
+                            <h3 class="feature-list__heading">Find a Location</h3>
+                                <div class="feature-list__description">
+                                    <app-wysiwyg class="app-wysiwyg"><p>United offers convenient branches and ATMs across Alabama, Florida, Georgia, North Carolina, South Carolina, and Tennessee. Find a branch or ATM near you.</p></app-wysiwyg>
+                                </div>
+                                <a class="feature-list__cta btn btn--ghost" href="/locations" aria-label="" target=_self>Find a Location</a>
+                        </app-feature-list>
+                    </div>
+                    <div class="grid__item">
+                        <app-feature-list class="feature-list ">
+                            <h3 class="feature-list__heading">Schedule an Appointment</h3>
+                                <div class="feature-list__description">
+                                    <app-wysiwyg class="app-wysiwyg">We&#39;d love to see you in one of our branches! Use our appointment scheduling tool to book your time with a banker today.<br />
+&nbsp;</app-wysiwyg>
+                                </div>
+                                <a class="feature-list__cta btn btn--ghost" href="https://oac.fmsiportal.com/AppointmentWidget/service?urlCode=G1C77CY88ICD2QTW45Q9" aria-label="" target=_blank>Schedule Now</a>
+                        </app-feature-list>
+                    </div>
+                    <div class="grid__item">
+                        <app-feature-list class="feature-list ">
+                            <h3 class="feature-list__heading">Lost or Stolen Cards</h3>
+                                <div class="feature-list__description">
+                                    <app-wysiwyg class="app-wysiwyg">Has your card recently been lost or stolen? We know this can be scary. You&rsquo;ll want to report this immediately so we can help.</app-wysiwyg>
+                                </div>
+                                <a class="feature-list__cta btn btn--ghost" href="/support/report-a-lost-or-stolen-card" aria-label="" target=_self>Take Action</a>
+                        </app-feature-list>
+                    </div>
+                    <div class="grid__item">
+                        <app-feature-list class="feature-list ">
+                            <h3 class="feature-list__heading">Dispute a Transaction</h3>
+                                <div class="feature-list__description">
+                                    <app-wysiwyg class="app-wysiwyg"><p>Found an unauthorized or unexpected transaction on your account? We’re here to help. You can visit your closest United Community banking center or call our dedicated Dispute Intake Team:</p><p>1-800-UCBANK1 (1-800-822-2651)</p><p><strong>Hours&nbsp;</strong></p><p>Monday–Friday: 8:00am–6:00pm ET</p><p>Saturday: 9:00am–12:00pm ET</p></app-wysiwyg>
+                                </div>
+                                <a class="feature-list__cta btn btn--ghost" href="/support/contact-us/how-to-dispute-a-transaction" aria-label="What you Can and Cannot Dispute" target=_self>Read More</a>
+                        </app-feature-list>
+                    </div>
+                    <div class="grid__item">
+                        <app-feature-list class="feature-list ">
+                            <h3 class="feature-list__heading">Mortgage Services</h3>
+                                <div class="feature-list__description">
+                                    <app-wysiwyg class="app-wysiwyg"><p>Looking for support and guidance regarding a current or potential mortgage? Use our convenient search tool to find a Mortgage Loan Originator in your area.</p><p>Have a question about an existing home loan? Call 1-800-UCBANK1 (1-800-822-2651) and <strong>choose Option 6</strong> to connect directly with our loan servicing experts.</p></app-wysiwyg>
+                                </div>
+                                <a class="feature-list__cta btn btn--ghost" href="/personal-banking/mortgage#contact" aria-label="" target=_self>Locate a Mortgage Lender</a>
+                        </app-feature-list>
+                    </div>
+                    <div class="grid__item">
+                        <app-feature-list class="feature-list ">
+                            <h3 class="feature-list__heading">Switch to United</h3>
+                                <div class="feature-list__description">
+                                    <app-wysiwyg class="app-wysiwyg">Thinking of joining the United family? We understand your time is valuable and want to make the process of opening your new account as easy as possible.</app-wysiwyg>
+                                </div>
+                                <a class="feature-list__cta btn btn--ghost" href="/why-united" aria-label="" target=_self>Learn More</a>
+                        </app-feature-list>
+                    </div>
+                    <div class="grid__item">
+                        <app-feature-list class="feature-list ">
+                            <h3 class="feature-list__heading">United Community Wealth</h3>
+                                <div class="feature-list__description">
+                                    <app-wysiwyg class="app-wysiwyg">Looking for support and guidance on wealth management, investing, trustee services, and more? Contact one of our wealth professionals today.</app-wysiwyg>
+                                </div>
+                                <a class="feature-list__cta btn btn--ghost" href="/private-wealth#contact" aria-label="Contact a Wealth Professional" target=_self>Contact a Wealth Professional</a>
+                        </app-feature-list>
+                    </div>
+                    <div class="grid__item">
+                        <app-feature-list class="feature-list ">
+                            <h3 class="feature-list__heading">United Community Advisors</h3>
+                                <div class="feature-list__description">
+                                    <app-wysiwyg class="app-wysiwyg">Find a Financial Advisor in your area.</app-wysiwyg>
+                                </div>
+                                <a class="feature-list__cta btn btn--ghost" href="/wealth-investments/united-community-advisors#contact" aria-label="" target=_self>Contact an Advisor</a>
+                        </app-feature-list>
+                    </div>
+                    <div class="grid__item">
+                        <app-feature-list class="feature-list ">
+                            <h3 class="feature-list__heading">Specialty Business Financing Services</h3>
+                                <div class="feature-list__description">
+                                    <app-wysiwyg class="app-wysiwyg">If you have unique lending needs, we have a specialty lender for your business. Find the perfect lender for your specific industry.<br />
+&nbsp;</app-wysiwyg>
+                                </div>
+                                <a class="feature-list__cta btn btn--ghost" href="/business-banking/lending#contact" aria-label="" target=_self>Contact a Lender</a>
+                        </app-feature-list>
+                    </div>
+                    <div class="grid__item">
+                        <app-feature-list class="feature-list ">
+                            <h3 class="feature-list__heading">Media Inquiries</h3>
+                                <div class="feature-list__description">
+                                    <app-wysiwyg class="app-wysiwyg"><p>If you are a reporter or news station representative seeking an interview, official statement, and/or information related to the bank, please contact us using the email address below.</p><p><a href="/cdn-cgi/l/email-protection#157870717c744a767a7b61747661556076777c3b767a78"><span class="__cf_email__" data-cfemail="442921202d251b272b2a30252730043127262d6a272b29">[email&#160;protected]</span></a><br>Customer support questions received at this inbox will not be addressed. <a href="#form">Please fill out the form below</a>.</p></app-wysiwyg>
+                                </div>
+                        </app-feature-list>
+                    </div>
+            </div>
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+    <div class="pos-relative">
+        <span id="faqs" class="anchor-text"></span>
+    </div>
+
+    
+
+
+
+
+
+
+
+
+
+<div class="composition  composition--padded-sm composition--fill-lightGray">
+        <app-section-header class="section-header section-header--left">
+            <h2 class="section-header__title">Frequently Asked Questions</h2>
+        </app-section-header>
+        <app-accordion class="accordion" component="">
+                    <div class="accordion__item">
+                        <button class="accordion__trigger">How can I check my balance?</button>
+                        <div class="accordion__content">
+                            <div class="accordion__content-inner">
+                                <p>Checking your balance has never been easier with United Community's online banking. <strong><a href="/personal-banking/digital-banking/enroll">Click here to enroll.</a></strong></p><p>Need help with the enrollment process? <strong><a href="https://scribehow.com/o/Ecppu6ZeReO6ZPSaltLgPA/viewer/Enroll_in_Online_Banking__RSOk_C8bQbmG_FL3nnnhAQ" target="_blank" rel="noopener noreferrer">View a step-by-step demo here</a></strong>.&nbsp;</p><p><br></p><p>Download United Community's mobile app and&nbsp;check your balance anytime, anywhere, at your convenience.</p><p><strong><a href="https://www.ucbi.com/support/demos">View step-by-step demos to get started here</a>.</strong></p><ul><li><strong><a href="https://apps.apple.com/us/app/united-community-mobile/id1166683428">Download for iPhone</a></strong></li><li><strong><a href="https://play.google.com/store/apps/details?id=com.unitedcommunitybank3402.mobile&amp;pli=1">Download for Android</a></strong></li></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <button class="accordion__trigger">How can I protect my United Community debit card from fraud?</button>
+                        <div class="accordion__content">
+                            <div class="accordion__content-inner">
+                                <p>Taking the stress out of managing your debit card is within your reach. By enrolling in Card Controls within United's online and mobile banking, you can safely and conveniently control purchases, spending limits and monitor activity. Want to get started? <a href="http://ucbi.com/support/demos#cardcontrols"><strong>View these step-by-step demos to get started with Card Controls.</strong></a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <button class="accordion__trigger">How can I stop a check payment?</button>
+                        <div class="accordion__content">
+                            <div class="accordion__content-inner">
+                                <p>If you are worried about a pending written check, you can request a stop payment to prevent it from being cashed. <strong><a href="https://scribehow.com/o/Ecppu6ZeReO6ZPSaltLgPA/viewer/Stop_Payments__8KBBEj4lTB-ENPjCeN74sQ" target="_blank" rel="noopener noreferrer">View the step-by-step demo</a>&nbsp;</strong>to learn how to stop a payment in United Community's online banking.&nbsp;</p><p><br></p><p>Need to enroll in online banking? <strong><a href="/personal-banking/digital-banking/enroll">Visit our Online Banking Enrollment page</a></strong> to get started.&nbsp;</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <button class="accordion__trigger">I didn&#x2019;t receive my Secure Access Code and my mobile phone number to receive the code is outdated. What should I do?&#x9;</button>
+                        <div class="accordion__content">
+                            <div class="accordion__content-inner">
+                                Please call us at 1-800-822-2651 during business hours so we may assist you.&nbsp;&nbsp; &nbsp;
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <button class="accordion__trigger">I forgot my password for online banking. How can I reset it?</button>
+                        <div class="accordion__content">
+                            <div class="accordion__content-inner">
+                                <p>If you’ve forgotten your online banking account password, select “Forgot Password” on the login screen and fill out the requested information. For the step-by-step process, watch the&nbsp;<a href="https://scribehow.com/o/Ecppu6ZeReO6ZPSaltLgPA/viewer/Forgot_Your_Password__inFrBzrPQva6zP3RbDrgrg" target="_blank" rel="noopener noreferrer"><strong>digital&nbsp;demo</strong></a>.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <button class="accordion__trigger">I forgot my Login ID for online banking. How can I find it?</button>
+                        <div class="accordion__content">
+                            <div class="accordion__content-inner">
+                                <p>If you’ve forgotten your online banking account Login ID or username, select “Forgot Login/Unlock” on the login screen and fill out the requested information. For the step-by-step process, watch the&nbsp;<a href="https://scribehow.com/o/Ecppu6ZeReO6ZPSaltLgPA/viewer/Forgot_your_Login_ID__-ogdPYTFTueeXiq8yOWhWA" target="_blank" rel="noopener noreferrer"><strong>digital&nbsp;demo</strong></a>.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <button class="accordion__trigger">I got locked out of online banking. What should I do?</button>
+                        <div class="accordion__content">
+                            <div class="accordion__content-inner">
+                                <p>If you’ve been locked out of your online banking account, select “Forgot Login/Unlock” on the login screen and fill out the requested information. For the step-by-step process, you can also watch our <a href="https://scribehow.com/o/Ecppu6ZeReO6ZPSaltLgPA/viewer/Unlock_Your_Account__lzC01vs3RYqWbNtW8duADA" target="_blank" rel="noopener noreferrer"><strong>digital&nbsp;demo</strong></a> on account recovery.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <button class="accordion__trigger">How can I view my bank statement?</button>
+                        <div class="accordion__content">
+                            <div class="accordion__content-inner">
+                                <p>Waiting for paper statements to arrive by mail can be frustrating. By enrolling in eStatements, you can save time and view your statement at your convenience! <strong><a href="https://scribehow.com/o/Ecppu6ZeReO6ZPSaltLgPA/viewer/Turn_on_eStatements__T2_8pXDmSCyx2fJZx0aATQ" target="_blank" rel="noopener noreferrer">View this step-by-step demo</a></strong> to learn how to enroll in eStatements.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <button class="accordion__trigger">How can I transfer funds?</button>
+                        <div class="accordion__content">
+                            <div class="accordion__content-inner">
+                                <p>With United Community's online banking, you can save time and money by transfering funds at your convenience.&nbsp;</p><ul><li>Transfer funds from one of your accounts to another. <strong><a href="https://scribehow.com/o/Ecppu6ZeReO6ZPSaltLgPA/viewer/Transfer_Funds_between_Accounts__FFIm5QWiQfWr-7_o2tKiqA" target="_blank" rel="noopener noreferrer">View the demo here.</a></strong></li><li>Transfer funds with <strong><a href="/zelle">Zelle</a></strong> to send and receive money with friends, family and other people you know and trust. (Zelle is available for retail and small business customers only). <strong><a href="http://ucbi.com/support/demos#zelle">View the demo here.</a></strong></li></ul>
+                            </div>
+                        </div>
+                    </div>
+        </app-accordion>
+        <div class="accordion__help">
+            <i class="glyph-help"></i>
+            <p><strong style="padding-right: 0.5em;">Didn&#39;t find what you are looking for?</strong> <a  href="/faqs">View All FAQs</a> <a  href="/contact-us"></a></p>
+        </div>
+</div>
+
+    
+
+
+
+
+
+
+
+
+    <div class="pos-relative">
+        <span id="contact" class="anchor-text"></span>
+    </div>
+
+    
+
+
+
+
+
+
+
+
+    <div class="composition  composition--padded composition--fill-stable">
+        <app-wysiwyg class="app-wysiwyg">
+            <h2><span style="color:#ffffff;">Current United Customers</span></h2>
+
+<p>If you&nbsp;have a question regarding your account, a transaction, or your online or mobile banking, we recommend you contact us through the following&nbsp;<strong>secure</strong>&nbsp;<strong>options</strong>&nbsp;during our hours of operation.</p>
+<br />
+<strong>Call us&nbsp;</strong>at&nbsp;1-800-UCBANK1 (<a href="tel:1-800-822-2651">1-800-822-2651</a>).<br />
+<strong>Chat with us</strong>&nbsp;by&nbsp;<a href="https://secure.ucbi.com/UnitedCommunityBankOnline/UUX.aspx#/login" target="_blank">logging into online banking</a>&nbsp;and clicking the &quot;Chat with us&quot; bubble to start a conversation.<br />
+<strong>Securely email us&nbsp;</strong>by&nbsp;<a href="https://secure.ucbi.com/UnitedCommunityBankOnline/UUX.aspx#/login" target="_blank">logging into online banking</a>&nbsp;and selecting &quot;Message&quot; from the menu bar.
+        </app-wysiwyg>
+    </div>
+
+    
+
+
+
+
+
+
+
+
+    <div class="pos-relative">
+        <span id="form" class="anchor-text"></span>
+    </div>
+
+    
+
+
+
+<div class="grid">
+    <div class="grid__item">
+        
+    </div>
+</div>
+
+            
+            
+
+
+
+
+
+
+
+    <div class="composition composition--spaced-sm composition--padded-sm ">
+        <app-wysiwyg class="app-wysiwyg">
+            <h2>For general product&nbsp;or service questions,&nbsp;please complete the form below.</h2>
+
+<p>If you have a general question about United Community products or services please complete the form below. Messages received during hours of operation (Monday&ndash;Friday&nbsp;8:00am&ndash;6:00pm&nbsp;ET, Saturday 9:00am&ndash;12:00pm&nbsp;ET) should expect a same-day reply. We will respond to emails received after 6:00pm week days and after 12:00pm&nbsp;on Saturday, the next business day.</p>
+
+<p><iframe allowtransparency="true" frameborder="0" scrolling="no" src="https://cloud.mail.ucbi.com/ContactUs" style="border: none; margin: 0; width: 1px; min-width: 100%; height: 700px; overflow: hidden;" title="ContactUs"></iframe></p>
+
+        </app-wysiwyg>
+    </div>
+
+    
+
+
+
+<div class="grid">
+    <div class="grid__item">
+        
+    </div>
+</div>
+
+            
+        </div>
+    </div>
+</section>
+
+
+        </main>
+            <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="application/ld&#x2B;json" nonce="kmh/KiunK/X3Ck7aXG3bJJW3gF/yUzx333LB826FFgE=">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How can I check my balance?","acceptedAnswer":{"@type":"Answer","text":"Checking your balance has never been easier with United Community\u0027s online banking. Click here to enroll. Need help with the enrollment process? View a step-by-step demo here .\u00A0 Download United Community\u0027s mobile app and\u00A0check your balance anytime, anywhere, at your convenience. View step-by-step demos to get started here . Download for iPhone Download for Android"}},{"@type":"Question","name":"How can I protect my United Community debit card from fraud?","acceptedAnswer":{"@type":"Answer","text":"Taking the stress out of managing your debit card is within your reach. By enrolling in Card Controls within United\u0027s online and mobile banking, you can safely and conveniently control purchases, spending limits and monitor activity. Want to get started? View these step-by-step demos to get started with Card Controls."}},{"@type":"Question","name":"How can I stop a check payment?","acceptedAnswer":{"@type":"Answer","text":"If you are worried about a pending written check, you can request a stop payment to prevent it from being cashed. View the step-by-step demo \u00A0 to learn how to stop a payment in United Community\u0027s online banking.\u00A0 Need to enroll in online banking? Visit our Online Banking Enrollment page to get started."}},{"@type":"Question","name":"I didn\u2019t receive my Secure Access Code and my mobile phone number to receive the code is outdated. What should I do?","acceptedAnswer":{"@type":"Answer","text":"Please call us at 1-800-822-2651 during business hours so we may assist you."}},{"@type":"Question","name":"I forgot my password for online banking. How can I reset it?","acceptedAnswer":{"@type":"Answer","text":"If you\u2019ve forgotten your online banking account password, select \u201CForgot Password\u201D on the login screen and fill out the requested information. For the step-by-step process, watch the\u00A0 digital\u00A0demo ."}},{"@type":"Question","name":"I forgot my Login ID for online banking. How can I find it?","acceptedAnswer":{"@type":"Answer","text":"If you\u2019ve forgotten your online banking account Login ID or username, select \u201CForgot Login/Unlock\u201D on the login screen and fill out the requested information. For the step-by-step process, watch the\u00A0 digital\u00A0demo ."}},{"@type":"Question","name":"I got locked out of online banking. What should I do?","acceptedAnswer":{"@type":"Answer","text":"If you\u2019ve been locked out of your online banking account, select \u201CForgot Login/Unlock\u201D on the login screen and fill out the requested information. For the step-by-step process, you can also watch our digital\u00A0demo on account recovery."}},{"@type":"Question","name":"How can I view my bank statement?","acceptedAnswer":{"@type":"Answer","text":"Waiting for paper statements to arrive by mail can be frustrating. By enrolling in eStatements, you can save time and view your statement at your convenience! View this step-by-step demo to learn how to enroll in eStatements."}},{"@type":"Question","name":"How can I transfer funds?","acceptedAnswer":{"@type":"Answer","text":"With United Community\u0027s online banking, you can save time and money by transfering funds at your convenience.\u00A0 Transfer funds from one of your accounts to another. View the demo here. Transfer funds with Zelle to send and receive money with friends, family and other people you know and trust. (Zelle is available for retail and small business customers only). View the demo here."}}]}</script>
+        
+
+    
+    
+    <app-footer class="footer">
+        <footer class="footer__inner">
+            <div class="footer__contact">
+                <div class="footer__logo">
+                        <a class="footer__logo-link" href="/">
+                            <img class="footer__logo-img footer__logo-img--125-68" src="/getContentAsset/282b5e56-8cad-48e6-8791-ce5b12edb8f1/dfc3d011-8f63-43f6-9ed8-4b444333a1d0/United-Community-Logo-footer.webp?language=en-US" alt="United Community logo" height="136" width="250" loading="lazy" />
+                        </a>
+                </div>
+                <nav class="footer__social">
+        <a class="footer__social-link" href="https://www.linkedin.com/company/united-community-bank/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+            <i class="glyph-linkedin" aria-hidden="true"></i>
+            <span class="hide-visually">LinkedIn</span>
+        </a>
+        <a class="footer__social-link" href="https://www.facebook.com/unitedcommunitybank/" aria-label="Facebook">
+            <i class="glyph-facebook" aria-hidden="true"></i>
+            <span class="hide-visually">Facebook</span>
+        </a>
+        <a class="footer__social-link" href="https://www.instagram.com/unitedcommunitybank/" aria-label="instagram">
+            <i class="glyph-instagram" aria-hidden="true"></i>
+            <span class="hide-visually">instagram</span>
+        </a>
+        <a class="footer__social-link" href="https://twitter.com/ucbi" aria-label="Twitter">
+            <i class="glyph-twitter" aria-hidden="true"></i>
+            <span class="hide-visually">Twitter</span>
+        </a>
+        <a class="footer__social-link" href="https://www.youtube.com/channel/UCialrI_WTci-LSccpPvBiSA" aria-label="Youtube">
+            <i class="glyph-youtube" aria-hidden="true"></i>
+            <span class="hide-visually">Youtube</span>
+        </a>
+</nav>
+
+            </div>
+            <div class="footer__main">
+                
+    <nav class="footer__nav">
+            <div class="footer__column">
+                <span class="footer__title">Inside United</span>
+                    <ul class="footer__list">
+                            <li class="footer__item">
+                                    <a class="footer__link" href="/why-united" aria-label="Link to Why United Page">Why United</a>
+                            </li>
+                            <li class="footer__item">
+                                    <a class="footer__link" href="https://ir.ucbi.com/" aria-label="Link to Investor Relations Page">Investor Relations</a>
+                            </li>
+                            <li class="footer__item">
+                                    <a class="footer__link" href="/News-and-Press-Releases" aria-label="Link to News and Press Releases Page">Newsroom and Media Contact</a>
+                            </li>
+                            <li class="footer__item">
+                                    <a class="footer__link" href="/Careers" aria-label="Link to United Careers Page">Careers</a>
+                            </li>
+                            <li class="footer__item">
+                                    <a class="footer__link" href="/Corporate-Impact" aria-label="Link to Corporate Impact Page">Corporate Impact</a>
+                            </li>
+                            <li class="footer__item">
+                                    <a class="footer__link" href="/united-in-our-communities" aria-label="Link to United Our Communities Page">Our Communities</a>
+                            </li>
+                            <li class="footer__item">
+                                    <a class="footer__link" href="/UCB-Foundation" aria-label="Link to United Community Foundation Page">Our Foundation</a>
+                            </li>
+                            <li class="footer__item">
+                                    <a class="footer__link" href="/Customer-Stories" aria-label="Link to Customer Stories Page">Customer Stories</a>
+                            </li>
+                    </ul>
+            </div>
+            <div class="footer__column">
+                <span class="footer__title">Support</span>
+                    <ul class="footer__list">
+                            <li class="footer__item">
+                                    <a class="footer__link" href="/Support" aria-label="Link to Support Page">Help</a>
+                            </li>
+                            <li class="footer__item">
+                                    <a class="footer__link" href="/Locations" aria-label="Link to United Locations Page ">Find a Location</a>
+                            </li>
+                            <li class="footer__item">
+                                    <a class="footer__link" href="/Support/Report-a-Lost-or-Stolen-Card" aria-label="Link to Report Lost/Stolen Card Page">Report Lost/Stolen Card</a>
+                            </li>
+                            <li class="footer__item">
+                                    <a class="footer__link" href="/support/reorder-checks" aria-label="Link to Reorder Checks ">Reorder Checks</a>
+                            </li>
+                            <li class="footer__item">
+                                    <a class="footer__link" href="/Support/Make-a-Loan-Payment" aria-label="Link to Make a Loan Payment Page">Make a Loan Payment</a>
+                            </li>
+                            <li class="footer__item">
+                                    <a class="footer__link" href="/Properties-for-Sale" aria-label="Link to Properties for Sale Page">Properties for Sale</a>
+                            </li>
+                            <li class="footer__item">
+                                    <a class="footer__link" href="/Support/SCRA-Benefits" aria-label="Link to Military Resources Page ">Military Resources</a>
+                            </li>
+                            <li class="footer__item">
+                                    <a class="footer__link" href="/Fraud-Prevention" aria-label="Link to Fraud Prevention Page ">Fraud Prevention Tips</a>
+                            </li>
+                            <li class="footer__item">
+                                    <a class="footer__link" href="/Support/Contact-Us" aria-label="Link to Contact Us Page ">Contact Us</a>
+                            </li>
+                    </ul>
+            </div>
+            <div class="footer__column">
+                <span class="footer__title">Legal</span>
+                    <ul class="footer__list">
+                            <li class="footer__item">
+                                    <a class="footer__link" href="/Accessibility" aria-label="Link to Accessibility Page">Accessibility</a>
+                            </li>
+                            <li class="footer__item">
+                                    <a class="footer__link" href="/Compliance" aria-label="Link to Compliance Page ">Compliance</a>
+                            </li>
+                            <li class="footer__item">
+                                    <a class="footer__link" href="/Terms-and-Conditions" aria-label="Link to Deposit Account Agreement Page">Deposit Account Agreement</a>
+                            </li>
+                            <li class="footer__item">
+                                    <a class="footer__link" href="/Privacy-Policies" aria-label="Link to Privacy Policies page">Privacy Policy</a>
+                            </li>
+                    </ul>
+            </div>
+    </nav>
+
+            </div>
+        </footer>
+        <small class="footer__meta">
+            <div class="footer__legal">
+                    <div class="footer__legal-item">
+                        <img class="footer__legal-img footer__legal-img--1-1" src="/getContentAsset/98d9cf2c-96a1-41d7-8b2b-46e7ef8b3239/dfc3d011-8f63-43f6-9ed8-4b444333a1d0/ehl.webp?language=en-US" alt="FDIC and Equal Housing Lender" height="150" width="150" />
+                    </div>
+            </div>
+            <ul class="footer__info horizontal-list">
+                <li class="footer__info-fdic">
+                        <img class="footer__legal-img footer__legal-img--2-1" src="/getContentAsset/b080aba8-ec70-4c86-bd49-34d9e786125a/dfc3d011-8f63-43f6-9ed8-4b444333a1d0/fdic-logo-navy-small.webp?language=en-US" alt="FDIC" height="25" width="50" />
+                        <span><em>FDIC-Insured - Backed by the full faith and credit of the U.S. Government</em></span>
+                </li>
+                <li class="footer__info-item">&copy; 2026 United Community Bank</li>
+                <li class="footer__info-item">NMLS ID # <b>421841</b></li>
+                <li class="footer__info-item">ABA Routing # <b>061112843</b></li>
+                <li class="footer__info-item first-in-line">200 East Camperdown Way Greenville, SC 29601</li>
+                <li class="footer__info-item">
+                    <a href="tel:1-800-822-2651" aria-label="Phone Number 1-800-822-2651">1-800-822-2651</a>
+                </li>
+            </ul>
+            <div class="footer__app">
+                <a class="footer__app-link" href="https://apps.apple.com/us/app/united-community-bank-new/id1166683428" aria-label="Link to Download United Mobile Banking App on App Store" target="_blank" rel="noopener noreferrer">
+                    <img class="footer__app-img" src="/img/template-images/app-ios.png" alt="Link to Download United Mobile Banking App on App Store logo" height="66" width="200" loading="lazy" />
+                </a>
+                <a class="footer__app-link" href="https://play.google.com/store/apps/details?id=com.unitedcommunitybank3402.mobile" aria-label="Link to Download United Mobile Banking App on Google Play Store" target="_blank" rel="noopener noreferrer">
+                    <img class="footer__app-img" src="/img/template-images/app-android.png" alt="Link to Download United Mobile Banking App on Google Play Store logo" height="66" width="200" loading="lazy" />
+                </a>
+            </div>
+        </small>
+    </app-footer>
+
+
+            
+<app-cookie-notice class="cookie-notice" component="">
+    <aside class="cookie-notice__modal">
+        <div class="is-hidden cookie-notice__modal-header">
+            <h3 class="cookie-notice__modal-title">Cookie Notice</h3>
+            <button class="cookie-notice__modal-close" aria-label="Close cookie notice"></button>
+        </div>
+        <div class="cookie-notice__modal-content">
+            <p class="cookie-notice__modal-copy">We use cookies to improve your browsing experience. By using this site, you accept our use of cookies.</p>
+            <div class="cookie-notice__modal-responses">
+                    <button class="cookie-notice__modal-btn cookie-notice__modal-accept">Accept and Continue</button>
+            </div>
+        </div>
+    </aside>
+</app-cookie-notice>
+
+    </div>
+    
+<app-speed-bump class="speed-bump" component="">
+    <div class="speed-bump__content">
+        <div class="speed-bump__body">
+            <p class="speed-bump__heading">External Link Disclaimer</p>
+                <div class="speed-bump__logo">
+                    <img class="speed-bump__src" src="/getContentAsset/e320ead0-1c60-4061-a844-0e3e24b347f0/dfc3d011-8f63-43f6-9ed8-4b444333a1d0/United-Community-Full-Color.svg?language=en-US" alt="United Community Bank logo" width="300" height="86" />
+                </div>
+            <div class="speed-bump__message"><p>You are leaving United Community and being directed to a third-party site that is not maintained, owned or operated by United Community Bank. United Community does not control and is not responsible for the privacy or security practices of the third-party. By clicking “Accept,” you are requesting to be transferred to the third-party website. If you do not want to visit the page, you can close this page by clicking "Return To Site”.</p></div>
+            <div class="speed-bump__message is-ndfdic-message"><p>You are leaving United Community Bank's website. The link you selected will take you to a website operated by a third-party service provider selected by United Community Bank to support Trust and Wealth Management account services. Non-deposit investment products available through this platform are not insured by the FDIC, are not deposits, and may lose value. By clicking "Accept," you are requesting to be transferred to the third-party website. If you do not wish to proceed, you can close this page by clicking “Return to Site"</p></div>
+            <div class="speed-bump__footer">
+                <button class="speed-bump__decline">Return to Site</button>
+                <a class="btn speed-bump__accept ignore-speed-bump">Accept</a>
+            </div>
+        </div>
+    </div>
+</app-speed-bump>
+
+    
+    <script src="/runtime-df5b2b1884bd0f24412a.js" defer></script>
+    <script src="/vendor-7a0c19fd4b4bfc1dd79c.js" defer></script>
+    <script src="/index-d7a29d0f44d0fc9b8fb5.js" defer></script>
+    <script src="/apps-c6c2ed335bca5bfd2a4c.js" defer></script>
+    <script type="text/javascript" src="https://cds-sdkcfg.onlineaccess1.com/common.js" async nonce="kmh/KiunK/X3Ck7aXG3bJJW3gF/yUzx333LB826FFgE="></script>
+    
+    
+    
+    <script nonce="kmh/KiunK/X3Ck7aXG3bJJW3gF/yUzx333LB826FFgE=" type="text/javascript" src="/Kentico.Resource/Activities/KenticoActivityLogger/LoggerV2.js?webPageIdentifier=0f9134ac-5fd8-42c6-b9b4-e1e4e390b0e5&amp;languageName=en-US&amp;logPageVisit=True&amp;logCustomActivity=True&amp;functionName=kxt" async></script><script nonce="kmh/KiunK/X3Ck7aXG3bJJW3gF/yUzx333LB826FFgE=" type="text/javascript">window['kxt']=window['kxt']||function(){(window['kxt'].q=window['kxt'].q||[]).push(arguments)};</script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"66ec009680a448f79e0fbf07ff576c54","spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,3759 @@
+<!DOCTYPE html>
+<html  lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">
+<head>
+    <!-- New Relic Browser Agent -->
+  <script type="text/javascript">
+    ;window.NREUM||(NREUM={});NREUM.init={distributed_tracing:{enabled:true},performance:{capture_measures:true},browser_consent_mode:{enabled:false},privacy:{cookies_enabled:true},ajax:{deny_list:["bam.nr-data.net"],capture_payloads:'none'}};
+    ;NREUM.loader_config={accountID:"7701213",trustKey:"66686",agentID:"718437237",licenseKey:"NRJS-3d71f490ea6f4929513",applicationID:"718437237"};
+    ;NREUM.info={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",licenseKey:"NRJS-3d71f490ea6f4929513",applicationID:"718437237",sa:1};
+  </script>
+  <script type="text/javascript" src="https://js-agent.newrelic.com/nr-loader-spa-1.322.0.min.js"></script>
+  <!-- End New Relic Browser Agent -->
+    <link rel="preconnect" href="https://connect.facebook.net">
+  <link rel="preconnect" href="https://pi.pardot.com">
+  <link rel="preconnect" href="https://www.facebook.com">
+  <link rel="preconnect" href="https://bat.bing.com">
+  <!-- OneTrust Cookies Consent Notice start for 3dsystems.com -->
+  <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" data-document-language="true" type="text/javascript" charset="UTF-8" data-domain-script="dd4dcbdd-3c71-45ef-aa74-25b4082c909d" ></script>
+  <script type="text/javascript">
+    document.documentElement.classList.add('preload-submenu-hidden');
+    document.addEventListener('DOMContentLoaded', function () {
+      // Delay removal to let TB Mega Menu finish setup
+      setTimeout(() => {
+        document.documentElement.classList.remove('preload-submenu-hidden');
+      }, 50);
+    });
+    function OptanonWrapper() { }
+  </script>
+  <style>
+    .preload-submenu-hidden .tbm .tbm-submenu {
+      display: none !important;
+    }
+    .preload-submenu-hidden .tbm-nav {
+      visibility: hidden;
+    }
+    .tbm {
+      background-color: transparent !important;
+    }
+    #block-ddd-secondarynavigation .tbm {
+      background-color: #000 !important;
+    }
+    #block-ddd-primarynavigation .tbm-link.level-1 {
+      color: #fff !important;
+    }
+    ul.smt-menu ul {
+      display: none;
+    }
+    .node--type-_024-frontpage .highlights .field-name-field-highlight-header-body-text {
+      margin-left: 11rem;
+      margin-right: 11rem;
+      text-align: center;
+    }
+    @media screen and (max-width: 63.75em) {
+      .node--type-_024-frontpage .highlights .field-name-field-highlight-header-body-text {
+        margin-left: 7%;
+        margin-right: 7%;
+      }
+    }
+  </style>
+  <!-- OneTrust Cookies Consent Notice end for 3dsystems.com -->
+    <!-- Qualified chat (testers only: requires ?qualified=1 on each page load) -->
+  <script>
+    (function (w, d) {
+      var flag = new URLSearchParams(w.location.search).get('qualified');
+      if (flag !== '1') {
+        return;
+      }
+      w.QualifiedObject = 'qualified';
+      w.qualified = w.qualified || function () {
+        (w.qualified.q = w.qualified.q || []).push(arguments);
+      };
+      var s = d.createElement('script');
+      s.async = true;
+      s.src = 'https://js.qualified.com/qualified.js?token=odbvG9NjdvopExa7';
+      d.head.appendChild(s);
+    })(window, document);
+  </script>
+  <!-- End Qualified chat -->
+    <!-- Google Data Layer -->
+  <script defer>
+    (function() {
+      'use strict';
+      // Initialize dataLayer
+      window.dataLayer = window.dataLayer || [];
+      // Utility functions
+      const utils = {
+        getCookie(name) {
+          const cookies = document.cookie.split(';').map(cookie => cookie.trim());
+          const foundCookie = cookies.find(cookie => cookie.startsWith(`${name}=`));
+          return foundCookie ? foundCookie.split('=')[1] : null;
+        },
+        async sha256Hex(email) {
+          const encoder = new TextEncoder();
+          const data = encoder.encode(email);
+          const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+          const hashArray = Array.from(new Uint8Array(hashBuffer));
+          return hashArray.map(b => ('00' + b.toString(16)).slice(-2)).join('');
+        },
+        cleanString(str) {
+          return str ? str.trim() : '';
+        },
+        formatArrayToString(arr) {
+          if (!arr) return '';
+          return Array.isArray(arr)
+                  ? arr.join(',').replace(/[\[\]]/g, '')
+                  : arr.replace(/[\[\]]/g, '');
+        },
+        getSubdomain(url) {
+          try {
+            const urlObj = new URL(url);
+            return urlObj.hostname.split('.')[0];
+          } catch (e) {
+            return '';
+          }
+        },
+        getCountryNameFromCode(code) {
+          return typeof getCountryNameFromCode === 'function'
+                  ? getCountryNameFromCode(code)
+                  : code;
+        }
+      };
+      // User data management
+      const userDataManager = {
+        async getUserData() {
+          const visitor_id = utils.getCookie("visitor_id1004");
+          const mktvpd = utils.getCookie("mktvpd");
+          const urlParams = new URLSearchParams(window.location.search);
+          const ind = urlParams.get('ind');
+
+          let user_type = "Guest";
+          let email = null;
+          let hashedEmail = null;
+
+          if (mktvpd) {
+            try {
+              const decodedData = atob(mktvpd);
+              if (decodedData.startsWith("{") && decodedData.endsWith("}")) {
+                const data = JSON.parse(decodedData);
+                email = data.email || null;
+                user_type = email ? "Lead" : "Guest";
+              } else {
+                console.log("Decoded mktvpd data is not valid JSON, setting default values.");
+              }
+            } catch (error) {
+              console.log("Error parsing mktvpd cookie:", error);
+            }
+          }
+
+          if (email) {
+            hashedEmail = await utils.sha256Hex(email);
+          }
+
+          return {
+            visitor_id,
+            user_type,
+            email,
+            hashedEmail,
+            ind
+          };
+        }
+      };
+
+      // Drupal settings helper
+      const drupalHelper = {
+        getNodeType() {
+          return (typeof drupalSettings !== 'undefined' && drupalSettings.nodeType)
+                  ? drupalSettings.nodeType
+                  : null;
+        },
+
+        getFormattedData() {
+          if (typeof drupalSettings === 'undefined') {
+            return {
+              sub_markets: '',
+              industries_markets: '',
+              technology_term: '',
+              page_type_term: '',
+              blog_post_type: ''
+            };
+          }
+
+          return {
+            sub_markets: utils.formatArrayToString(drupalSettings.sub_markets),
+            industries_markets: utils.formatArrayToString(drupalSettings.industries_markets),
+            technology_term: utils.formatArrayToString(drupalSettings.technology_term),
+            page_type_term: drupalSettings.page_type_term || '',
+            blog_post_type: drupalSettings.blog_post_type || ''
+          };
+        }
+      };
+
+      // Event tracking
+      const eventTracker = {
+        pushVirtualPageview(userData, drupalData) {
+          try {
+            window.dataLayer.push({
+              'event': 'virtual_pageview',
+              'page_category': drupalHelper.getNodeType(),
+              'page_industry': drupalData.industries_markets,
+              'page_sub_industry': drupalData.sub_markets,
+              'page_resource_type': drupalData.page_type_term,
+              'blog_technology': drupalData.technology_term,
+              'blog_post_type': drupalData.blog_post_type,
+              'user_type': userData.user_type,
+              'user_id': userData.hashedEmail,
+              'leads_user_data': {
+                'sha256_email_address': userData.hashedEmail
+              },
+              'CRM_lead_id': userData.visitor_id,
+            });
+          } catch (error) {
+            console.error("Error pushing data to dataLayer:", error);
+          }
+        },
+
+        pushDriftMeetingBooked(userData, clientId) {
+          window.dataLayer.push({
+            'event': 'driftMeetingBooked',
+            'user_id': userData.hashedEmail,
+            'leads_user_data': {
+              'sha256_email_address': userData.hashedEmail
+            },
+            'CRM_lead_id': userData.visitor_id,
+            'lead_id': userData.visitor_id,
+            'GA4_client_id': clientId,
+            'form_name': "Chat",
+          });
+        },
+
+        pushNavigationClick(eventLabel, linkText, linkUrl) {
+          window.dataLayer.push({
+            'event': eventLabel,
+            'menu_item': linkText.trim(),
+            'click_url': linkUrl
+          });
+        },
+
+        pushLanguageToggle(subdomain) {
+          window.dataLayer.push({
+            'event': 'language_toggle',
+            'language_selected': subdomain,
+          });
+        },
+
+        pushShareEvent(shareType, nodeType) {
+          window.dataLayer.push({
+            'event': 'share',
+            'content_type': nodeType,
+            'click_text': shareType,
+          });
+        },
+
+        pushAssetDownload(assetType, fileName, fileExtension, linkText, linkUrl) {
+          window.dataLayer.push({
+            'event': 'asset_downloads',
+            'asset_type': assetType,
+            'asset_name': fileName,
+            'file_type': fileExtension,
+            'click_text': linkText,
+            'click_url': linkUrl
+          });
+        }
+      };
+
+      // Click handlers
+      const clickHandlers = {
+        setupNavigationTracking() {
+          const trackingConfigs = [
+            { selector: '#tbm-secondary-navigation', event: 'main-navigation-contact-section' },
+            { selector: '#tbm-primary-navigation', event: 'header_nav_clicks_contents' },
+            { selector: '#lang-selector', event: 'lang_selector' },
+            { selector: '#footer', event: 'footer_nav_clicks' }
+          ];
+
+          trackingConfigs.forEach(config => {
+            this.attachLinkClickListener(config.selector, config.event);
+          });
+        },
+
+        attachLinkClickListener(selector, eventLabel) {
+          const targetDiv = document.querySelector(selector);
+          if (!targetDiv) return;
+
+          targetDiv.addEventListener('click', (event) => {
+            if (event.target.tagName === 'A') {
+              const linkUrl = event.target.href;
+              const linkText = event.target.textContent;
+
+              if (eventLabel === "lang_selector") {
+                const subdomain = utils.getSubdomain(linkUrl);
+                const countryName = utils.getCountryNameFromCode(subdomain);
+                eventTracker.pushLanguageToggle(countryName);
+              } else {
+                eventTracker.pushNavigationClick(eventLabel, linkText, linkUrl);
+              }
+            }
+          });
+        },
+
+        setupShareTracking() {
+          const nodeType = drupalHelper.getNodeType();
+
+          // Use a longer delay to ensure elements are loaded
+          setTimeout(() => {
+            const shareLinks = document.querySelectorAll('.jssocials-share-link');
+            const copyLinkButton = document.querySelector('.copy-link');
+
+            shareLinks.forEach(link => {
+              link.addEventListener('click', function(event) {
+                const shareType = this.closest('.jssocials-share')
+                        .classList[1]
+                        .replace('jssocials-share-', '');
+
+                eventTracker.pushShareEvent(shareType, nodeType);
+
+                setTimeout(() => {
+                  window.location.href = this.href;
+                }, 400);
+              }, { capture: true });
+            });
+
+            if (copyLinkButton) {
+              copyLinkButton.addEventListener('click', () => {
+                eventTracker.pushShareEvent('copy_link', nodeType);
+              });
+            }
+          }, 1000);
+        },
+
+        setupAssetTracking() {
+          const nodeType = drupalHelper.getNodeType();
+          if (nodeType !== "asset_page") return;
+
+          const selectors = [
+            '.paragraph--type--content-button-link',
+            '.paragraph--type--content-document-link'
+          ];
+
+          selectors.forEach(selector => {
+            this.attachAssetClickListener(selector);
+          });
+        },
+
+        attachAssetClickListener(selector) {
+          const targetDiv = document.querySelector(selector);
+          if (!targetDiv) return;
+
+          targetDiv.addEventListener('click', (event) => {
+            if (event.target.tagName === 'A') {
+              const linkUrl = event.target.href;
+              const linkText = utils.cleanString(event.target.textContent);
+
+              const cleanUrl = linkUrl.split('?')[0];
+              const fullFileName = cleanUrl.split('/').pop();
+              const fileExtension = fullFileName.split('.').pop();
+              const fileName = utils.cleanString(fullFileName.replace(`.${fileExtension}`, ''));
+              const assetType = '';
+
+              if (fileExtension) {
+                eventTracker.pushAssetDownload(assetType, fileName, fileExtension, linkText, linkUrl);
+              }
+            }
+          });
+        }
+      };
+
+      // Drift integration
+      const driftIntegration = {
+        initialize(userData) {
+          const waitForDrift = () => {
+            if (typeof window.drift !== 'undefined' && window.drift.on) {
+              window.drift.on('ready', () => {
+                window.drift.on("scheduling:meetingBooked", (data) => {
+                  gtag('get', 'G-363305072', 'client_id', (clientId) => {
+                    console.log('GA4 Client ID:', clientId);
+                    eventTracker.pushDriftMeetingBooked(userData, clientId);
+                  });
+                });
+              });
+            } else {
+              setTimeout(waitForDrift, 250);
+            }
+          };
+          waitForDrift();
+        }
+      };
+
+      // Real-user interaction gate: waits for genuine signs of a human before
+      // resolving. Requires at least two DISTINCT interaction types (e.g.
+      // scroll + mousemove) rather than just one, since some bots/headless
+      // scrapers simulate a single interaction type (commonly scroll) to
+      // appear human. A short fallback timeout still resolves so low-
+      // interaction-but-legitimate sessions (e.g. a quick glance-and-close)
+      // eventually get counted. Scripts/scrapers that never interact at all
+      // are filtered out entirely; those simulating only one interaction
+      // type are also filtered out until the fallback timeout elapses.
+      const waitForRealUser = (timeoutMs = 4000, requiredDistinctTypes = 2) => {
+        return new Promise((resolve) => {
+          const events = ['mousemove', 'scroll', 'keydown', 'touchstart'];
+          const seenTypes = new Set();
+          let settled = false;
+          const finish = () => {
+            if (settled) return;
+            settled = true;
+            events.forEach((evt) => document.removeEventListener(evt, handleEvent, { capture: true }));
+            clearTimeout(timer);
+            resolve();
+          };
+          const handleEvent = (evt) => {
+            seenTypes.add(evt.type);
+            if (seenTypes.size >= requiredDistinctTypes) {
+              finish();
+            }
+          };
+          events.forEach((evt) => document.addEventListener(evt, handleEvent, { capture: true, passive: true }));
+          const timer = setTimeout(finish, timeoutMs);
+        });
+      };
+
+      // Main initialization
+      const init = async () => {
+        try {
+          const userData = await userDataManager.getUserData();
+          const drupalData = drupalHelper.getFormattedData();
+
+          // Setup event tracking
+          clickHandlers.setupNavigationTracking();
+          clickHandlers.setupShareTracking();
+          clickHandlers.setupAssetTracking();
+
+          // Initialize Drift
+          driftIntegration.initialize(userData);
+
+          // Push the pageview only once we've observed some sign of a real
+          // user (or the fallback timeout elapses) - keeps bots that never
+          // interact from inflating GA4 pageview counts.
+          await waitForRealUser();
+          eventTracker.pushVirtualPageview(userData, drupalData);
+
+        } catch (error) {
+          console.error('Error initializing analytics:', error);
+        }
+      };
+
+      // Start initialization when DOM is ready
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
+
+    })();
+  </script>
+  <!-- End Google Data Layer -->
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+              j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+              'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-TXR46B');
+  </script>
+  <!-- End Google Tag Manager -->
+  <!-- UA detector -->
+  <script type="text/javascript">
+    var browser = (function (agent) {
+      switch (true) {
+        case agent.indexOf("edge") > -1:
+          return "edge";
+        case agent.indexOf("edg") > -1:
+          return "edge-chromium";
+        case agent.indexOf("opr") > -1 && !!window.opr:
+          return "opera";
+        case agent.indexOf("chrome") > -1 && !!window.chrome:
+          return "chrome";
+        case agent.indexOf("trident") > -1:
+          return "ie";
+        case agent.indexOf("firefox") > -1:
+          return "firefox";
+        case agent.indexOf("safari") > -1:
+          return "safari";
+        default:
+          return "other";
+      }
+    })(window.navigator.userAgent.toLowerCase());
+    document.documentElement.classList.add("browser-" + browser);
+
+  </script>
+  <!-- End UA detector -->
+  <meta charset="utf-8" />
+<noscript><style>form.antibot > * { display: none !important; } form.antibot noscript { display: block !important; }</style>
+</noscript><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.3dsystems.com/"},{"@type":"ListItem","position":2,"name":"Press Releases","item":"https://www.3dsystems.com/press-releases"},{"@type":"ListItem","position":3,"name":"3D Systems Announces Date of First Quarter 2026 Financial Results","item":"https://www.3dsystems.com/press-releases/3d-systems-announces-date-first-quarter-2026-financial-results"}]}</script>
+<meta property="og:site_name" content="3D Systems" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="3D Systems Announces Date of First Quarter 2026 Financial Results | 3D Systems" />
+<meta property="og:image" content="https://www.3dsystems.com/sites/default/files/styles/thumbnail_social_media_940_x_494_/public/2026-04/3d-systems-press-release-logo-dark-bg.png?itok=-Z12GcH2" />
+<meta property="og:updated_time" content="2026-04-30T10:06:34-0400" />
+<meta property="article:published_time" content="2026-04-30T09:48:39-0400" />
+<meta property="article:modified_time" content="2026-04-30T10:06:34-0400" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="3D Systems Announces Date of First Quarter 2026 Financial Results | 3D Systems" />
+<meta name="twitter:site" content="@3dsystems" />
+<meta name="twitter:image" content="https://www.3dsystems.com/sites/default/files/styles/thumbnail_social_media_940_x_494_/public/2026-04/3d-systems-press-release-logo-dark-bg.png?itok=-Z12GcH2" />
+<meta name="Generator" content="Drupal 11 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="preconnect" href="https://challenges.cloudflare.com" />
+<script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Article",
+            "@id": "https://www.3dsystems.com/press-releases/3d-systems-announces-date-first-quarter-2026-financial-results",
+            "headline": "3D Systems Announces Date of First Quarter 2026 Financial Results",
+            "name": "3D Systems Announces Date of First Quarter 2026 Financial Results",
+            "image": {
+                "@type": "ImageObject",
+                "representativeOfPage": "True",
+                "url": "https://www.3dsystems.com/sites/default/files/styles/thumbnail_large/public/2026-04/3d-systems-press-release-logo-dark-bg.png?itok=8fpDg8Oj",
+                "width": "940",
+                "height": "494"
+            },
+            "datePublished": "2026-04-30T09:48:39-04:00",
+            "dateModified": "2026-04-30T10:06:34-04:00",
+            "author": {
+                "@type": "Corporation",
+                "@id": "https://www.3dsystems.com",
+                "name": "3D Systems",
+                "url": "https://www.3dsystems.com",
+                "logo": {
+                    "@type": "ImageObject",
+                    "representativeOfPage": "True",
+                    "url": "https://www.3dsystems.com/sites/default/files/2020-01/3d-systems-logo-3-color-light-bkgrd-tm.png",
+                    "width": "645",
+                    "height": "101"
+                }
+            },
+            "publisher": {
+                "@type": "Corporation",
+                "@id": "https://www.3dsystems.com",
+                "name": "3D Systems",
+                "url": "https://www.3dsystems.com",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://www.3dsystems.com/sites/default/files/2020-01/3d-systems-logo-3-color-light-bkgrd-tm.png",
+                    "width": "645",
+                    "height": "101"
+                }
+            }
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.3dsystems.com/press-releases/3d-systems-announces-date-first-quarter-2026-financial-results",
+            "description": "3D Systems Announces Date of First Quarter 2026 Financial Results",
+            "author": {
+                "@type": "Corporation",
+                "@id": "https://www.3dsystems.com",
+                "name": "3D Systems",
+                "url": "https://www.3dsystems.com",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://www.3dsystems.com/sites/default/files/2020-01/3d-systems-logo-3-color-light-bkgrd-tm.png",
+                    "width": "645",
+                    "height": "100"
+                }
+            }
+        }
+    ]
+}</script>
+<link rel="icon" href="/sites/default/files/favicon3.ico" type="image/vnd.microsoft.icon" />
+<link rel="alternate" hreflang="en" href="https://www.3dsystems.com/press-releases/3d-systems-announces-date-first-quarter-2026-financial-results" />
+<link rel="canonical" href="https://www.3dsystems.com/press-releases/3d-systems-announces-date-first-quarter-2026-financial-results" />
+<link rel="shortlink" href="https://www.3dsystems.com/node/85733" />
+
+    <title>3D Systems Announces Date of First Quarter 2026 Financial Results | 3D Systems</title>
+
+            <link rel="preload" href="/themes/custom/ddd/fonts/noto-sans/noto-sans-v7-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/themes/custom/ddd/fonts/good-pro/good-pro-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <style>
+            @font-face {
+        font-family: 'Noto Sans';
+        src: url('/themes/custom/ddd/fonts/noto-sans/noto-sans-v7-latin-regular.woff2') format('woff2'),
+        url('/themes/custom/ddd/fonts/noto-sans/noto-sans-v7-latin-regular.woff') format('woff');
+        font-display: swap;
+      }
+
+                  @font-face {
+        font-family: 'Good Pro';
+        src: url('/themes/custom/ddd/fonts/good-pro/good-pro-regular.woff2') format('woff2'),
+        url('/themes/custom/ddd/fonts/good-pro/good-pro-regular.woff') format('woff');
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Good Pro';
+        src: url('/themes/custom/ddd/fonts/good-pro/good-pro-regular.woff2') format('woff2'),
+        url('/themes/custom/ddd/fonts/good-pro/good-pro-regular.woff') format('woff');
+        font-weight: 700;
+        font-display: swap;
+      }
+
+                        @font-face {
+        font-family: 'Good Pro Fallback';
+        src: local('Arial');
+        size-adjust: 101.21%;
+        ascent-override: 80.72%;
+        descent-override: 18.08%;
+        line-gap-override: 0%;
+      }
+
+            @font-face {
+        font-family: 'Noto Sans';
+        src: url('/themes/custom/ddd/fonts/noto-sans/noto-sans-v7-latin-700.woff2') format('woff2'),
+        url('/themes/custom/ddd/fonts/noto-sans/noto-sans-v7-latin-700.woff') format('woff');
+        font-weight: 700;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Noto Sans';
+        src: url('/themes/custom/ddd/fonts/noto-sans/noto-sans-v7-latin-italic.woff2') format('woff2'),
+        url('/themes/custom/ddd/fonts/noto-sans/noto-sans-v7-latin-italic.woff') format('woff');
+        font-style: italic;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Noto Sans';
+        src: url('/themes/custom/ddd/fonts/noto-sans/noto-sans-v7-latin-700italic.woff2') format('woff2'),
+        url('/themes/custom/ddd/fonts/noto-sans/noto-sans-v7-latin-700italic.woff') format('woff');
+        font-weight: 700;
+        font-style: italic;
+        font-display: swap;
+      }
+    </style>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_b_Kxf-5OWefw_Sp2UVZbjZDWZLuNnqgvrDq9Al_W9HM.css?delta=0&amp;language=en&amp;theme=ddd&amp;include=eJxljmsOwyAMgy9Ey5FQaDLKmgAiYWtvv4c6bdL-WPbnSDEietoXHkjh0muxcFWHT5i4RuAfG9QOJnW0G-eyeeyjAc9ndA06pA5t1U_zJfMobUTOuhI6PdRIfAQlZzEIJRAq4x-c_0ySWFie06gYtOzlmCLXZZteB7kkd8t0V__WWSoOpgcER1Ow" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_G5gacGS5BX7ZUZlC6n9YTjhbfsY8kVvpza2lyCTPwc8.css?delta=1&amp;language=en&amp;theme=ddd&amp;include=eJxljmsOwyAMgy9Ey5FQaDLKmgAiYWtvv4c6bdL-WPbnSDEietoXHkjh0muxcFWHT5i4RuAfG9QOJnW0G-eyeeyjAc9ndA06pA5t1U_zJfMobUTOuhI6PdRIfAQlZzEIJRAq4x-c_0ySWFie06gYtOzlmCLXZZteB7kkd8t0V__WWSoOpgcER1Ow" />
+
+      
+
+        </head>
+<body class="lang-en path-node node--type-press-release theme--default" style="opacity: 1;">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXR46B"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<a href="#main-content" class="visually-hidden focusable skip-link">
+  Skip to main content
+</a>
+
+  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<div class="off-canvas-wrap" data-offcanvas >
+    <div class="inner-wrap">
+
+
+        <header class="row" role="banner" aria-label="Site header">
+                                              <div>
+    
+
+    <section id="block-topanchor" class="clearfix">
+    
+    
+        
+
+    
+              
+
+<div class="field field-block-content--field-content field-name-field-content field-type-entity-reference-revisions field-label-hidden">
+                            
+<div data-component-type="custom_anchor" class="paragraph paragraph--type--custom-anchor paragraph--view-mode--default">
+</div>
+<a id="top"></a>
+
+                </div>
+
+      
+      
+      </section>
+   
+
+      <section id="block-ddd-secondarynavigation" class="clearfix">
+              <nav  class="tbm tbm-secondary-navigation tbm-no-arrows" id="5938c8d7-ea49-4aa3-abdc-ce0f453af9a7" data-breakpoint="0" aria-label="secondary-navigation navigation">
+      <button class="tbm-button" type="button" aria-label="Toggle menu">
+      <span class="tbm-button-container">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </button>
+    <div class="tbm-collapse ">
+    <ul  class="tbm-nav level-0 items-4" >
+        <li  class="tbm-item level-1 tbm-item--has-dropdown" aria-level="1" >
+        <div class="tbm-link-container">
+            <a href="/resources"  class="tbm-link level-1 tbm-toggle" aria-expanded="false">
+                Learn <span class="the-arrow">&rsaquo;</span>
+    </a>
+        
+          </div>
+    <div  class="tbm-submenu tbm-item-child">
+      <div  class="tbm-row">
+      <div  class="tbm-column span12">
+  <div class="tbm-column-inner">
+               <ul  class="tbm-subnav level-1 items-7">
+        <li  class="tbm-item level-2" aria-level="2" >
+        <div class="tbm-link-container">
+            <a href="/blog"  class="tbm-link level-2">
+                Blog <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-2" aria-level="2" >
+        <div class="tbm-link-container">
+            <a href="/resources/customer-story"  class="tbm-link level-2">
+                Customer Stories <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-2" aria-level="2" >
+        <div class="tbm-link-container">
+            <a href="/resources/ebook"  class="tbm-link level-2">
+                eBooks <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-2" aria-level="2" >
+        <div class="tbm-link-container">
+            <a href="/resources/webinar"  class="tbm-link level-2">
+                Recorded Webinars <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-2" aria-level="2" >
+        <div class="tbm-link-container">
+            <a href="/upcoming-events"  class="tbm-link level-2">
+                Upcoming Events <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-2" aria-level="2" >
+        <div class="tbm-link-container">
+            <a href="/printer-training-and-knowledge"  class="tbm-link level-2">
+                Training <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+  </ul>
+
+      </div>
+</div>
+
+  </div>
+
+  </div>
+
+</li>
+
+        <li  class="tbm-item level-1" aria-level="1" >
+        <div class="tbm-link-container">
+            <a href="https://support.3dsystems.com/s/"  class="tbm-link level-1">
+                Support <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-1 tbm-item--has-dropdown" aria-level="1" >
+        <div class="tbm-link-container">
+            <a href="/about-us"  class="tbm-link level-1 tbm-toggle" aria-expanded="false">
+                About us <span class="the-arrow">&rsaquo;</span>
+    </a>
+        
+          </div>
+    <div  class="tbm-submenu tbm-item-child">
+      <div  class="tbm-row">
+      <div  class="tbm-column span12">
+  <div class="tbm-column-inner">
+               <ul  class="tbm-subnav level-1 items-6">
+        <li  class="tbm-item level-2" aria-level="2" >
+        <div class="tbm-link-container">
+            <a href="/experts"  class="tbm-link level-2">
+                3D Systems Experts <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-2" aria-level="2" >
+        <div class="tbm-link-container">
+            <a href="/careers"  class="tbm-link level-2">
+                Careers <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-2" aria-level="2" >
+        <div class="tbm-link-container">
+            <a href="/careers/culture"  class="tbm-link level-2">
+                Culture <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-2" aria-level="2" >
+        <div class="tbm-link-container">
+            <a href="https://investor.3dsystems.com/overview/default.aspx"  class="tbm-link level-2">
+                Investor Relations <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-2" aria-level="2" >
+        <div class="tbm-link-container">
+            <a href="/press-releases"  class="tbm-link level-2">
+                Press Releases <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-2" aria-level="2" >
+        <div class="tbm-link-container">
+            <a href="/make-an-impact"  class="tbm-link level-2">
+                Sustainability <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+  </ul>
+
+      </div>
+</div>
+
+  </div>
+
+  </div>
+
+</li>
+
+        <li  class="tbm-item level-1" aria-level="1" >
+        <div class="tbm-link-container">
+            <a href="/contact"  class="tbm-link level-1">
+                How to Buy <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+  </ul>
+
+      </div>
+  </nav>
+
+<script>
+if (window.matchMedia("(max-width: 0px)").matches) {
+  document.getElementById("5938c8d7-ea49-4aa3-abdc-ce0f453af9a7").classList.add('tbm--mobile');
+}
+
+
+</script>
+
+        
+    <div class="nav-right-actions">
+              <div id="online-store">
+          <a href="https://shop.3dsystems.com/s/?language=en_US" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg>
+          </a>
+        </div>
+            <div id="lang-selector"></div>
+    </div>
+          </section>
+  
+
+    <section id="block-ddd-primarynavigation" class="clearfix">
+    
+      <div class="logo-main">
+        <span class="hide"></span>
+        <a href="/">
+          <img alt="3D Systems Logo"
+               src="/themes/custom/ddd/images/logo-3ds-dark.svg"
+               width="300"
+               height="47"/>
+        </a>
+      </div>
+              <nav  class="tbm tbm-primary-navigation tbm-no-arrows" id="f2b2696d-b98d-41da-9f7f-6b22b7764286" data-breakpoint="1020" aria-label="primary-navigation navigation">
+      <button class="tbm-button" type="button" aria-label="Toggle menu">
+      <span class="tbm-button-container">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </button>
+    <div class="tbm-collapse ">
+    <ul  class="tbm-nav level-0 items-5" >
+                    <li  class="tbm-item level-1 tbm-item--has-dropdown" aria-level="1" >
+        <div class="tbm-link-container">
+            <span class="tbm-link level-1 no-link tbm-toggle" tabindex="0" aria-expanded="false" role="button">
+                Industries <span class="the-arrow">&rsaquo;</span>
+    </span>
+        
+          </div>
+    <div  class="tbm-submenu tbm-item-child">
+      <div  class="tbm-row">
+      <div  class="tbm-column span12">
+  <div class="tbm-column-inner">
+               <ul  class="tbm-subnav level-1 items-2">
+                    <li  class="tbm-item level-2 tbm-item--has-flyout" aria-level="2" >
+      <span class="tbm-caption">Industries</span>
+        <div class="tbm-link-container">
+            <span class="tbm-link level-2 no-link tbm-toggle" tabindex="0" aria-expanded="false" role="button">
+                Industrial Solutions <span class="the-arrow">&rsaquo;</span>
+    </span>
+        
+          </div>
+    <div  class="tbm-submenu tbm-item-child">
+      <div  class="tbm-row">
+      <div  class="tbm-column span12">
+  <div class="tbm-column-inner">
+               <ul  class="tbm-subnav level-2 items-5">
+        <li  class="tbm-item level-3 overview" aria-level="3" >
+        <div class="tbm-link-container">
+            <a href="/node/79351"  class="tbm-link level-3">
+                Industrial Solutions Overview <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-3 tbm-item--has-flyout" aria-level="3" >
+      <span class="tbm-caption">Industries</span>
+        <div class="tbm-link-container">
+            <a href="/aerospace-defense"  class="tbm-link level-3 tbm-toggle" aria-expanded="false">
+                Aerospace &amp; Defense <span class="the-arrow">&rsaquo;</span>
+    </a>
+        
+          </div>
+    <div  class="tbm-submenu tbm-item-child">
+      <div  class="tbm-row">
+      <div  class="tbm-column span12">
+  <div class="tbm-column-inner">
+               <ul  class="tbm-subnav level-3 items-6">
+        <li  class="tbm-item level-4" aria-level="4" >
+      <span class="tbm-caption">Applications</span>
+        <div class="tbm-link-container">
+            <a href="/aerospace-defense/lightweight-brackets"  class="tbm-link level-4">
+                Lightweight Brackets <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-4" aria-level="4" >
+        <div class="tbm-link-container">
+            <a href="/aerospace-defense/propulsion"  class="tbm-link level-4">
+                Propulsion &amp; Space Launch <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-4" aria-level="4" >
+        <div class="tbm-link-container">
+            <a href="/aerospace-defense/heat-exchangers"  class="tbm-link level-4">
+                Heat Exchangers <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-4" aria-level="4" >
+        <div class="tbm-link-container">
+            <a href="/aerospace-defense/investment-casting-patterns"  class="tbm-link level-4">
+                Investment Casting Patterns <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-4" aria-level="4" >
+        <div class="tbm-link-container">
+            <a href="/aerospace-defense/electric-engine-components"  class="tbm-link level-4">
+                Electric Engine Components <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-4" aria-level="4" >
+        <div class="tbm-link-container">
+            <a href="/aerospace-defense/radio-frequency-rf-passive-hardware"  class="tbm-link level-4">
+                3D Printed Waveguides, Filters, and Antennas <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+  </ul>
+
+      </div>
+</div>
+
+  </div>
+
+  </div>
+
+</li>
+
+        <li  class="tbm-item level-3" aria-level="3" >
+        <div class="tbm-link-container">
+            <a href="/education-and-research"  class="tbm-link level-3">
+                Education &amp; Research <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+                    <li  class="tbm-item level-3 manufacturing_icon tbm-item--has-flyout" aria-level="3" >
+        <div class="tbm-link-container">
+            <span class="tbm-link level-3 no-link tbm-toggle" tabindex="0" aria-expanded="false" role="button">
+                Manufacturing <span class="the-arrow">&rsaquo;</span>
+    </span>
+        
+          </div>
+    <div  class="tbm-submenu tbm-item-child">
+      <div  class="tbm-row">
+      <div  class="tbm-column span12">
+  <div class="tbm-column-inner">
+               <ul  class="tbm-subnav level-3 items-8">
+        <li  class="tbm-item level-4" aria-level="4" >
+      <span class="tbm-caption">Sub-Industries</span>
+        <div class="tbm-link-container">
+            <a href="/3d-printing-for-carbon-capture"  class="tbm-link level-4">
+                Carbon Capture <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-4 tbm-item--has-flyout" aria-level="4" >
+        <div class="tbm-link-container">
+            <a href="/consumer-technology"  class="tbm-link level-4 tbm-toggle" aria-expanded="false">
+                Consumer Technology <span class="the-arrow">&rsaquo;</span>
+    </a>
+        
+          </div>
+    <div  class="tbm-submenu tbm-item-child">
+      <div  class="tbm-row">
+      <div  class="tbm-column span12">
+  <div class="tbm-column-inner">
+               <ul  class="tbm-subnav level-4 items-3">
+        <li  class="tbm-item level-5" aria-level="5" >
+      <span class="tbm-caption">Applications</span>
+        <div class="tbm-link-container">
+            <a href="/consumer-technology/housings-and-covers"  class="tbm-link level-5">
+                Housings and Covers <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-5" aria-level="5" >
+        <div class="tbm-link-container">
+            <a href="/consumer-technology/seals-and-gaskets"  class="tbm-link level-5">
+                Seals and Gaskets <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-5" aria-level="5" >
+        <div class="tbm-link-container">
+            <a href="/consumer-technology/wearable-components"  class="tbm-link level-5">
+                Wearable Components <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+  </ul>
+
+      </div>
+</div>
+
+  </div>
+
+  </div>
+
+</li>
+
+        <li  class="tbm-item level-4 tbm-item--has-flyout" aria-level="4" >
+        <div class="tbm-link-container">
+            <a href="/foundries"  class="tbm-link level-4 tbm-toggle" aria-expanded="false">
+                Foundries <span class="the-arrow">&rsaquo;</span>
+    </a>
+        
+          </div>
+    <div  class="tbm-submenu tbm-item-child">
+      <div  class="tbm-row">
+      <div  class="tbm-column span12">
+  <div class="tbm-column-inner">
+               <ul  class="tbm-subnav level-4 items-2">
+        <li  class="tbm-item level-5" aria-level="5" >
+      <span class="tbm-caption">Applications</span>
+        <div class="tbm-link-container">
+            <a href="/foundries/patterns-and-cores-sand-casting"  class="tbm-link level-5">
+                Patterns and Core Equipment for Sand Casting <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-5" aria-level="5" >
+        <div class="tbm-link-container">
+            <a href="/foundries/patterns-for-investment-casting"  class="tbm-link level-5">
+                Patterns for Investment Casting <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+  </ul>
+
+      </div>
+</div>
+
+  </div>
+
+  </div>
+
+</li>
+
+        <li  class="tbm-item level-4 tbm-item--has-flyout" aria-level="4" >
+        <div class="tbm-link-container">
+            <a href="/jewelry"  class="tbm-link level-4 tbm-toggle" aria-expanded="false">
+                Jewelry <span class="the-arrow">&rsaquo;</span>
+    </a>
+        
+          </div>
+    <div  class="tbm-submenu tbm-item-child">
+      <div  class="tbm-row">
+      <div  class="tbm-column span12">
+  <div class="tbm-column-inner">
+               <ul  class="tbm-subnav level-4 items-3">
+        <li  class="tbm-item level-5" aria-level="5" >
+      <span class="tbm-caption">Applications</span>
+        <div class="tbm-link-container">
+            <a href="/jewelry/casting"  class="tbm-link level-5">
+                Jewelry Casting <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-5" aria-level="5" >
+        <div class="tbm-link-container">
+            <a href="/jewelry/mold-making"  class="tbm-link level-5">
+                Jewelry Mold Making <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-5" aria-level="5" >
+        <div class="tbm-link-container">
+            <a href="/jewelry/prototyping"  class="tbm-link level-5">
+                Jewelry Prototyping <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+  </ul>
+
+      </div>
+</div>
+
+  </div>
+
+  </div>
+
+</li>
+
+        <li  class="tbm-item level-4 tbm-item--has-flyout" aria-level="4" >
+        <div class="tbm-link-container">
+            <a href="/semiconductor"  class="tbm-link level-4 tbm-toggle" aria-expanded="false">
+                Semiconductor <span class="the-arrow">&rsaquo;</span>
+    </a>
+        
+          </div>
+    <div  class="tbm-submenu tbm-item-child">
+      <div  class="tbm-row">
+      <div  class="tbm-column span12">
+  <div class="tbm-column-inner">
+               <ul  class="tbm-subnav level-4 items-6">
+        <li  class="tbm-item level-5" aria-level="5" >
+      <span class="tbm-caption">Applications</span>
+        <div class="tbm-link-container">
+            <a href="/semiconductor/flexure-structural-optimization"  class="tbm-link level-5">
+                Flexure and Structural Optimization <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-5" aria-level="5" >
+        <div class="tbm-link-container">
+            <a href="/semiconductor/gas-conveyance-mixing"  class="tbm-link level-5">
+                Gas Conveyance and Mixing <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-5" aria-level="5" >
+        <div class="tbm-link-container">
+            <a href="/semiconductor/linear-stage-cooling"  class="tbm-link level-5">
+                Linear Stage Cooling <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-5" aria-level="5" >
+        <div class="tbm-link-container">
+            <a href="/semiconductor/manifold-fluid-flow-optimization"  class="tbm-link level-5">
+                Manifold Fluid Flow Optimization <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-5" aria-level="5" >
+        <div class="tbm-link-container">
+            <a href="/semiconductor/showerhead-optimization"  class="tbm-link level-5">
+                Showerhead Optimization <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-5" aria-level="5" >
+        <div class="tbm-link-container">
+            <a href="/semiconductor/wafer-table-thermal-management"  class="tbm-link level-5">
+                Wafer Table Thermal Management <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+  </ul>
+
+      </div>
+</div>
+
+  </div>
+
+  </div>
+
+</li>
+
+        <li  class="tbm-item level-4" aria-level="4" >
+        <div class="tbm-link-container">
+            <a href="/service-bureaus"  class="tbm-link level-4">
+                Service Bureaus <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-4" aria-level="4" >
+        <div class="tbm-link-container">
+            <a href="/3d-printing-thermoforming-molds"  class="tbm-link level-4">
+                Thermoforming <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-4 tbm-item--has-flyout" aria-level="4" >
+        <div class="tbm-link-container">
+            <a href="/turbomachinery"  class="tbm-link level-4 tbm-toggle" aria-expanded="false">
+                Turbomachinery <span class="the-arrow">&rsaquo;</span>
+    </a>
+        
+          </div>
+    <div  class="tbm-submenu tbm-item-child">
+      <div  class="tbm-row">
+      <div  class="tbm-column span12">
+  <div class="tbm-column-inner">
+               <ul  class="tbm-subnav level-4 items-4">
+        <li  class="tbm-item level-5" aria-level="5" >
+      <span class="tbm-caption">Applications</span>
+        <div class="tbm-link-container">
+            <a href="/turbomachinery/casings-and-ducting"  class="tbm-link level-5">
+                Casings and Ducting <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-5" aria-level="5" >
+        <div class="tbm-link-container">
+            <a href="/turbomachinery/combustor-components"  class="tbm-link level-5">
+                Combustor Components <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-5" aria-level="5" >
+        <div class="tbm-link-container">
+            <a href="/turbomachinery/impellers"  class="tbm-link level-5">
+                Impellers <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-5" aria-level="5" >
+        <div class="tbm-link-container">
+            <a href="/turbomachinery/stator-vanes"  class="tbm-link level-5">
+                Stator Vanes <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+  </ul>
+
+      </div>
+</div>
+
+  </div>
+
+  </div>
+
+</li>
+
+  </ul>
+
+      </div>
+</div>
+
+  </div>
+
+  </div>
+
+</li>
+
+                    <li  class="tbm-item level-3 transportation_icon tbm-item--has-flyout" aria-level="3" >
+        <div class="tbm-link-container">
+            <span class="tbm-link level-3 no-link tbm-toggle" tabindex="0" aria-expanded="false" role="button">
+                Transportation <span class="the-arrow">&rsaquo;</span>
+    </span>
+        
+          </div>
+    <div  class="tbm-submenu tbm-item-child">
+      <div  class="tbm-row">
+      <div  class="tbm-column span12">
+  <div class="tbm-column-inner">
+               <ul  class="tbm-subnav level-3 items-3">
+        <li  class="tbm-item level-4 tbm-item--has-flyout" aria-level="4" >
+      <span class="tbm-caption">Sub-Industries</span>
+        <div class="tbm-link-container">
+            <a href="/automotive"  class="tbm-link level-4 tbm-toggle" aria-expanded="false">
+                Automotive <span class="the-arrow">&rsaquo;</span>
+    </a>
+        
+          </div>
+    <div  class="tbm-submenu tbm-item-child">
+      <div  class="tbm-row">
+      <div  class="tbm-column span12">
+  <div class="tbm-column-inner">
+               <ul  class="tbm-subnav level-4 items-8">
+        <li  class="tbm-item level-5" aria-level="5" >
+      <span class="tbm-caption">Applications</span>
+        <div class="tbm-link-container">
+            <a href="/automotive/air-fluid-handling"  class="tbm-link level-5">
+                Air and Fluid Handling <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-5" aria-level="5" >
+        <div class="tbm-link-container">
+            <a href="/automotive/body-exterior-panel"  class="tbm-link level-5">
+                Body Exterior and Panel <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-5" aria-level="5" >
+        <div class="tbm-link-container">
+            <a href="/automotive/body-interior-trim"  class="tbm-link level-5">
+                Body Interior and Trim <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-5" aria-level="5" >
+        <div class="tbm-link-container">
+            <a href="/automotive/underhood-powertrain"  class="tbm-link level-5">
+                Underhood and Powertrain <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-5" aria-level="5" >
+        <div class="tbm-link-container">
+            <a href="/automotive/metal-structural-components"  class="tbm-link level-5">
+                Metal Structural Components <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-5" aria-level="5" >
+        <div class="tbm-link-container">
+            <a href="/automotive/metal-durable-tooling"  class="tbm-link level-5">
+                Metal Durable Tooling <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-5" aria-level="5" >
+        <div class="tbm-link-container">
+            <a href="/automotive/energy-fluid-management-metals"  class="tbm-link level-5">
+                Energy and Fluid Management (Metals) <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-5" aria-level="5" >
+        <div class="tbm-link-container">
+            <a href="/automotive/manufacturing-aids"  class="tbm-link level-5">
+                Manufacturing Aids <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+  </ul>
+
+      </div>
+</div>
+
+  </div>
+
+  </div>
+
+</li>
+
+        <li  class="tbm-item level-4 tbm-item--has-flyout" aria-level="4" >
+        <div class="tbm-link-container">
+            <a href="/motorsports"  class="tbm-link level-4 tbm-toggle" aria-expanded="false">
+                Motorsports <span class="the-arrow">&rsaquo;</span>
+    </a>
+        
+          </div>
+    <div  class="tbm-submenu tbm-item-child">
+      <div  class="tbm-row">
+      <div  class="tbm-column span12">
+  <div class="tbm-column-inner">
+               <ul  class="tbm-subnav level-4 items-8">
+        <li  class="tbm-item level-5" aria-level="5" >
+      <span class="tbm-caption">Applications</span>
+        <div class="tbm-link-container">
+            <a href="/motorsports/air-fluid-handling"  class="tbm-link level-5">
+                Air and Fluid Handling <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-5" aria-level="5" >
+        <div class="tbm-link-container">
+            <a href="/motorsports/energy-fluid-management-metals"  class="tbm-link level-5">
+                Energy and Fluid Management (Metals) <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-5" aria-level="5" >
+        <div class="tbm-link-container">
+            <a href="/motorsports/exterior-body-surfaces"  class="tbm-link level-5">
+                Exterior Body Surfaces <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-5" aria-level="5" >
+        <div class="tbm-link-container">
+            <a href="/motorsports/manufacturing-aids"  class="tbm-link level-5">
+                Manufacturing Aids <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-5" aria-level="5" >
+        <div class="tbm-link-container">
+            <a href="/motorsports/metal-structural-components"  class="tbm-link level-5">
+                Metal Structural Components <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-5" aria-level="5" >
+        <div class="tbm-link-container">
+            <a href="/motorsports/performance-cast-metal-components"  class="tbm-link level-5">
+                Performance Cast Metal Components <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-5" aria-level="5" >
+        <div class="tbm-link-container">
+            <a href="/motorsports/performance-wind-tunnel-testing"  class="tbm-link level-5">
+                Performance Wind Tunnel Testing <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-5" aria-level="5" >
+        <div class="tbm-link-container">
+            <a href="/motorsports/powertrain-engine-area"  class="tbm-link level-5">
+                Powertrain and Engine Area <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+  </ul>
+
+      </div>
+</div>
+
+  </div>
+
+  </div>
+
+</li>
+
+        <li  class="tbm-item level-4 tbm-item--has-flyout" aria-level="4" >
+        <div class="tbm-link-container">
+            <a href="/truck-bus-rail"  class="tbm-link level-4 tbm-toggle" aria-expanded="false">
+                Truck, Bus &amp; Rail <span class="the-arrow">&rsaquo;</span>
+    </a>
+        
+          </div>
+    <div  class="tbm-submenu tbm-item-child">
+      <div  class="tbm-row">
+      <div  class="tbm-column span12">
+  <div class="tbm-column-inner">
+               <ul  class="tbm-subnav level-4 items-8">
+        <li  class="tbm-item level-5" aria-level="5" >
+      <span class="tbm-caption">Applications</span>
+        <div class="tbm-link-container">
+            <a href="/truck-bus-rail/body-exterior-and-panels"  class="tbm-link level-5">
+                Body Exterior and Panels <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-5" aria-level="5" >
+        <div class="tbm-link-container">
+            <a href="/truck-bus-rail/brake-systems-pneumatic-controls"  class="tbm-link level-5">
+                Brake Systems &amp; Pneumatic Controls <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-5" aria-level="5" >
+        <div class="tbm-link-container">
+            <a href="/truck-bus-rail/electrical-harnesses-and-conduits"  class="tbm-link level-5">
+                Electrical Harnesses and Conduits <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-5" aria-level="5" >
+        <div class="tbm-link-container">
+            <a href="/truck-bus-rail/industrial-seals-and-gaskets"  class="tbm-link level-5">
+                Industrial Seals and Gaskets <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-5" aria-level="5" >
+        <div class="tbm-link-container">
+            <a href="/truck-bus-rail/interior-passenger-comfort"  class="tbm-link level-5">
+                Interior &amp; Passenger Comfort <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-5" aria-level="5" >
+        <div class="tbm-link-container">
+            <a href="/truck-bus-rail/manufacturing-aids-and-production-tooling"  class="tbm-link level-5">
+                Manufacturing Aids and Production Tooling <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-5" aria-level="5" >
+        <div class="tbm-link-container">
+            <a href="/truck-bus-rail/sand-metal-casting"  class="tbm-link level-5">
+                Molds &amp; Patterns for Sand Casting <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-5" aria-level="5" >
+        <div class="tbm-link-container">
+            <a href="/truck-bus-rail/power-electronics-enhancement"  class="tbm-link level-5">
+                Power Electronics Enhancement <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+  </ul>
+
+      </div>
+</div>
+
+  </div>
+
+  </div>
+
+</li>
+
+  </ul>
+
+      </div>
+</div>
+
+  </div>
+
+  </div>
+
+</li>
+
+  </ul>
+
+      </div>
+</div>
+
+  </div>
+
+  </div>
+
+</li>
+
+        <li  class="tbm-item level-2 tbm-item--has-flyout" aria-level="2" >
+        <div class="tbm-link-container">
+            <a href="/healthcare"  class="tbm-link level-2 tbm-toggle" aria-expanded="false">
+                Healthcare <span class="the-arrow">&rsaquo;</span>
+    </a>
+        
+          </div>
+    <div  class="tbm-submenu tbm-item-child">
+      <div  class="tbm-row">
+      <div  class="tbm-column span12">
+  <div class="tbm-column-inner">
+               <ul  class="tbm-subnav level-2 items-4">
+        <li  class="tbm-item level-3 overview" aria-level="3" >
+        <div class="tbm-link-container">
+            <a href="/healthcare"  class="tbm-link level-3">
+                Healthcare Overview <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-3 dental_icon tbm-item--has-flyout" aria-level="3" >
+      <span class="tbm-caption">Healthcare</span>
+        <div class="tbm-link-container">
+            <a href="/dental"  class="tbm-link level-3 tbm-toggle" aria-expanded="false">
+                Dental <span class="the-arrow">&rsaquo;</span>
+    </a>
+        
+          </div>
+    <div  class="tbm-submenu tbm-item-child">
+      <div  class="tbm-row">
+      <div  class="tbm-column span12">
+  <div class="tbm-column-inner">
+               <ul  class="tbm-subnav level-3 items-6">
+        <li  class="tbm-item level-4 overview" aria-level="4" >
+        <div class="tbm-link-container">
+            <a href="/dental"  class="tbm-link level-4">
+                Dental Overview <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-4" aria-level="4" >
+        <div class="tbm-link-container">
+            <a href="/dental/nextdent"  class="tbm-link level-4">
+                NextDent <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-4" aria-level="4" >
+      <span class="tbm-caption">Solutions</span>
+        <div class="tbm-link-container">
+            <a href="/dental/3d-printing-orthodontics"  class="tbm-link level-4">
+                Orthodontics <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-4" aria-level="4" >
+        <div class="tbm-link-container">
+            <a href="/dental/3d-printing-prosthodontics"  class="tbm-link level-4">
+                Prosthodontics <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-4" aria-level="4" >
+        <div class="tbm-link-container">
+            <a href="/dental/3d-printing-implantology"  class="tbm-link level-4">
+                Implantology <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-4" aria-level="4" >
+        <div class="tbm-link-container">
+            <a href="/dental/vertex-dental"  class="tbm-link level-4">
+                Vertex Dental <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+  </ul>
+
+      </div>
+</div>
+
+  </div>
+
+  </div>
+
+</li>
+
+        <li  class="tbm-item level-3 medical_devices_icon tbm-item--has-flyout" aria-level="3" >
+        <div class="tbm-link-container">
+            <a href="/healthcare/medical-devices"  class="tbm-link level-3 tbm-toggle" aria-expanded="false">
+                Medical Devices <span class="the-arrow">&rsaquo;</span>
+    </a>
+        
+          </div>
+    <div  class="tbm-submenu tbm-item-child">
+      <div  class="tbm-row">
+      <div  class="tbm-column span12">
+  <div class="tbm-column-inner">
+               <ul  class="tbm-subnav level-3 items-3">
+        <li  class="tbm-item level-4 overview" aria-level="4" >
+        <div class="tbm-link-container">
+            <a href="/healthcare/medical-devices"  class="tbm-link level-4">
+                Medical Devices Overview <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+                    <li  class="tbm-item level-4 tbm-item--has-flyout" aria-level="4" >
+        <div class="tbm-link-container">
+            <span class="tbm-link level-4 no-link tbm-toggle" tabindex="0" aria-expanded="false" role="button">
+                Medical Solutions <span class="the-arrow">&rsaquo;</span>
+    </span>
+        
+          </div>
+    <div  class="tbm-submenu tbm-item-child">
+      <div  class="tbm-row">
+      <div  class="tbm-column span12">
+  <div class="tbm-column-inner">
+               <ul  class="tbm-subnav level-4 items-5">
+        <li  class="tbm-item level-5" aria-level="5" >
+        <div class="tbm-link-container">
+            <a href="/healthcare/personalized-healthcare-solutions"  class="tbm-link level-5">
+                Personalized Healthcare Solutions <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-5" aria-level="5" >
+        <div class="tbm-link-container">
+            <a href="/medical-device-manufacturing/implants-instruments"  class="tbm-link level-5">
+                Device Design &amp; Manufacturing <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-5" aria-level="5" >
+        <div class="tbm-link-container">
+            <a href="/healthcare/point-of-care"  class="tbm-link level-5">
+                Point-of-Care Solutions <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-5" aria-level="5" >
+        <div class="tbm-link-container">
+            <a href="/healthcare/medical-specialties"  class="tbm-link level-5">
+                Medical Specialities <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-5" aria-level="5" >
+        <div class="tbm-link-container">
+            <a href="/healthcare/radiotherapy-solutions"  class="tbm-link level-5">
+                Radiotherapy <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+  </ul>
+
+      </div>
+</div>
+
+  </div>
+
+  </div>
+
+</li>
+
+                    <li  class="tbm-item level-4 tbm-item--has-flyout" aria-level="4" >
+        <div class="tbm-link-container">
+            <span class="tbm-link level-4 no-link tbm-toggle" tabindex="0" aria-expanded="false" role="button">
+                Specialities <span class="the-arrow">&rsaquo;</span>
+    </span>
+        
+          </div>
+    <div  class="tbm-submenu tbm-item-child">
+      <div  class="tbm-row">
+      <div  class="tbm-column span12">
+  <div class="tbm-column-inner">
+               <ul  class="tbm-subnav level-4 items-4">
+        <li  class="tbm-item level-5 overview" aria-level="5" >
+        <div class="tbm-link-container">
+            <a href="/healthcare/medical-specialties"  class="tbm-link level-5">
+                Specialities Overview <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-5" aria-level="5" >
+        <div class="tbm-link-container">
+            <a href="/healthcare/craniomaxillofacial-solutions"  class="tbm-link level-5">
+                Craniomaxillofacial <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-5" aria-level="5" >
+        <div class="tbm-link-container">
+            <a href="/healthcare/orthopaedic-solutions"  class="tbm-link level-5">
+                Orthopaedics <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-5" aria-level="5" >
+        <div class="tbm-link-container">
+            <a href="/orthotics-and-prosthetics"  class="tbm-link level-5">
+                Orthotics &amp; Prosthetics <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+  </ul>
+
+      </div>
+</div>
+
+  </div>
+
+  </div>
+
+</li>
+
+  </ul>
+
+      </div>
+</div>
+
+  </div>
+
+  </div>
+
+</li>
+
+        <li  class="tbm-item level-3 bioprinting_icon" aria-level="3" >
+        <div class="tbm-link-container">
+            <a href="/bioprinting"  class="tbm-link level-3">
+                Bioprinting <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+  </ul>
+
+      </div>
+</div>
+
+  </div>
+
+  </div>
+
+</li>
+
+  </ul>
+
+      </div>
+</div>
+
+  </div>
+
+  </div>
+
+</li>
+
+                    <li  class="tbm-item level-1 tbm-item--has-dropdown" aria-level="1" >
+        <div class="tbm-link-container">
+            <span class="tbm-link level-1 no-link tbm-toggle" tabindex="0" aria-expanded="false" role="button">
+                Hardware &amp; Software <span class="the-arrow">&rsaquo;</span>
+    </span>
+        
+          </div>
+    <div  class="tbm-submenu tbm-item-child">
+      <div  class="tbm-row">
+      <div  class="tbm-column span12">
+  <div class="tbm-column-inner">
+               <ul  class="tbm-subnav level-1 items-7">
+        <li  class="tbm-item level-2 tbm-item--has-flyout" aria-level="2" >
+      <span class="tbm-caption">Hardware</span>
+        <div class="tbm-link-container">
+            <a href="/3d-printers/plastic"  class="tbm-link level-2 tbm-toggle" aria-expanded="false">
+                Plastic <span class="the-arrow">&rsaquo;</span>
+    </a>
+        
+          </div>
+    <div  class="tbm-submenu tbm-item-child">
+      <div  class="tbm-row">
+      <div  class="tbm-column span12">
+  <div class="tbm-column-inner">
+               <ul  class="tbm-subnav level-2 items-7">
+        <li  class="tbm-item level-3 tbm-item--has-flyout" aria-level="3" >
+      <span class="tbm-caption">3D Printer Technologies</span>
+        <div class="tbm-link-container">
+            <a href="/3d-printers/figure-4"  class="tbm-link level-3 tbm-toggle" aria-expanded="false">
+                Figure 4 <span class="the-arrow">&rsaquo;</span>
+    </a>
+        
+          </div>
+    <div  class="tbm-submenu tbm-item-child">
+      <div  class="tbm-row">
+      <div  class="tbm-column span12">
+  <div class="tbm-column-inner">
+               <ul  class="tbm-subnav level-3 items-5">
+        <li  class="tbm-item level-4 overview" aria-level="4" >
+        <div class="tbm-link-container">
+            <a href="/3d-printers/figure-4"  class="tbm-link level-4">
+                All Figure 4 Printers <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-4" aria-level="4" >
+      <span class="tbm-caption">Printers</span>
+        <div class="tbm-link-container">
+            <a href="/3d-printers/figure-4-135"  class="tbm-link level-4">
+                Figure 4 135 <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-4" aria-level="4" >
+        <div class="tbm-link-container">
+            <a href="/3d-printers/figure-4-modular"  class="tbm-link level-4">
+                Figure 4 Modular <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-4" aria-level="4" >
+        <div class="tbm-link-container">
+            <a href="/3d-printers/figure-4-production"  class="tbm-link level-4">
+                Figure 4 Production <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-4" aria-level="4" >
+        <div class="tbm-link-container">
+            <a href="/3d-printers/figure-4-standalone"  class="tbm-link level-4">
+                Figure 4 Standalone <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+  </ul>
+
+      </div>
+</div>
+
+  </div>
+
+  </div>
+
+</li>
+
+        <li  class="tbm-item level-3 tbm-item--has-flyout" aria-level="3" >
+        <div class="tbm-link-container">
+            <a href="/stereolithography"  class="tbm-link level-3 tbm-toggle" aria-expanded="false">
+                Stereolithography (SLA) <span class="the-arrow">&rsaquo;</span>
+    </a>
+        
+          </div>
+    <div  class="tbm-submenu tbm-item-child">
+      <div  class="tbm-row">
+      <div  class="tbm-column span12">
+  <div class="tbm-column-inner">
+               <ul  class="tbm-subnav level-3 items-4">
+        <li  class="tbm-item level-4 overview" aria-level="4" >
+        <div class="tbm-link-container">
+            <a href="/stereolithography"  class="tbm-link level-4">
+                All Stereolithography Printers <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-4" aria-level="4" >
+      <span class="tbm-caption">Printers</span>
+        <div class="tbm-link-container">
+            <a href="/3d-printers/projet-7000-hd"  class="tbm-link level-4">
+                ProJet 7000 HD <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-4" aria-level="4" >
+        <div class="tbm-link-container">
+            <a href="/3d-printers/sla-750"  class="tbm-link level-4">
+                SLA 750 <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-4" aria-level="4" >
+        <div class="tbm-link-container">
+            <a href="/3d-printers/sla-825-dual"  class="tbm-link level-4">
+                SLA 825 Dual <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+  </ul>
+
+      </div>
+</div>
+
+  </div>
+
+  </div>
+
+</li>
+
+        <li  class="tbm-item level-3 tbm-item--has-flyout" aria-level="3" >
+        <div class="tbm-link-container">
+            <a href="/projector-based-sla"  class="tbm-link level-3 tbm-toggle" aria-expanded="false">
+                Projector-Based Stereolithography (PSLA) <span class="the-arrow">&rsaquo;</span>
+    </a>
+        
+          </div>
+    <div  class="tbm-submenu tbm-item-child">
+      <div  class="tbm-row">
+      <div  class="tbm-column span12">
+  <div class="tbm-column-inner">
+               <ul  class="tbm-subnav level-3 items-1">
+        <li  class="tbm-item level-4" aria-level="4" >
+      <span class="tbm-caption">Printers</span>
+        <div class="tbm-link-container">
+            <a href="/3d-printers/psla-270"  class="tbm-link level-4">
+                PSLA 270 <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+  </ul>
+
+      </div>
+</div>
+
+  </div>
+
+  </div>
+
+</li>
+
+        <li  class="tbm-item level-3 tbm-item--has-flyout" aria-level="3" >
+        <div class="tbm-link-container">
+            <a href="/selective-laser-sintering"  class="tbm-link level-3 tbm-toggle" aria-expanded="false">
+                Selective Laser Sintering (SLS) <span class="the-arrow">&rsaquo;</span>
+    </a>
+        
+          </div>
+    <div  class="tbm-submenu tbm-item-child">
+      <div  class="tbm-row">
+      <div  class="tbm-column span12">
+  <div class="tbm-column-inner">
+               <ul  class="tbm-subnav level-3 items-2">
+        <li  class="tbm-item level-4 overview" aria-level="4" >
+        <div class="tbm-link-container">
+            <a href="/selective-laser-sintering"  class="tbm-link level-4">
+                All Selective Laser Sintering Printers <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-4" aria-level="4" >
+        <div class="tbm-link-container">
+            <a href="/3d-printers/sls-380"  class="tbm-link level-4">
+                SLS 380 <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+  </ul>
+
+      </div>
+</div>
+
+  </div>
+
+  </div>
+
+</li>
+
+        <li  class="tbm-item level-3 tbm-item--has-flyout" aria-level="3" >
+        <div class="tbm-link-container">
+            <a href="/extrusion"  class="tbm-link level-3 tbm-toggle" aria-expanded="false">
+                Pellet Extrusion (EXT) <span class="the-arrow">&rsaquo;</span>
+    </a>
+        
+          </div>
+    <div  class="tbm-submenu tbm-item-child">
+      <div  class="tbm-row">
+      <div  class="tbm-column span12">
+  <div class="tbm-column-inner">
+               <ul  class="tbm-subnav level-3 items-4">
+        <li  class="tbm-item level-4 overview" aria-level="4" >
+        <div class="tbm-link-container">
+            <a href="/extrusion"  class="tbm-link level-4">
+                All Extrusion Printers <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-4" aria-level="4" >
+      <span class="tbm-caption">Printers</span>
+        <div class="tbm-link-container">
+            <a href="/3d-printers/ext-1070-titan-pellet"  class="tbm-link level-4">
+                EXT 1070 Titan Pellet <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-4" aria-level="4" >
+        <div class="tbm-link-container">
+            <a href="/3d-printers/ext-1270-titan-pellet"  class="tbm-link level-4">
+                EXT 1270 Titan Pellet <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-4" aria-level="4" >
+        <div class="tbm-link-container">
+            <a href="/3d-printers/ext-800-titan-pellet"  class="tbm-link level-4">
+                EXT 800 Titan Pellet <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+  </ul>
+
+      </div>
+</div>
+
+  </div>
+
+  </div>
+
+</li>
+
+        <li  class="tbm-item level-3 tbm-item--has-flyout" aria-level="3" >
+        <div class="tbm-link-container">
+            <a href="/extrusion"  class="tbm-link level-3 tbm-toggle" aria-expanded="false">
+                Medical Extrusion (EXT) <span class="the-arrow">&rsaquo;</span>
+    </a>
+        
+          </div>
+    <div  class="tbm-submenu tbm-item-child">
+      <div  class="tbm-row">
+      <div  class="tbm-column span12">
+  <div class="tbm-column-inner">
+               <ul  class="tbm-subnav level-3 items-2">
+        <li  class="tbm-item level-4 overview" aria-level="4" >
+        <div class="tbm-link-container">
+            <a href="/extrusion"  class="tbm-link level-4">
+                All Medical Printers <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-4" aria-level="4" >
+      <span class="tbm-caption">Printers</span>
+        <div class="tbm-link-container">
+            <a href="/3d-printers/ext-220-med"  class="tbm-link level-4">
+                EXT 220 MED <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+  </ul>
+
+      </div>
+</div>
+
+  </div>
+
+  </div>
+
+</li>
+
+        <li  class="tbm-item level-3 tbm-item--has-flyout" aria-level="3" >
+        <div class="tbm-link-container">
+            <a href="/multi-jet-printing"  class="tbm-link level-3 tbm-toggle" aria-expanded="false">
+                Multijet (MJP) <span class="the-arrow">&rsaquo;</span>
+    </a>
+        
+          </div>
+    <div  class="tbm-submenu tbm-item-child">
+      <div  class="tbm-row">
+      <div  class="tbm-column span12">
+  <div class="tbm-column-inner">
+               <ul  class="tbm-subnav level-3 items-6">
+        <li  class="tbm-item level-4 overview" aria-level="4" >
+        <div class="tbm-link-container">
+            <a href="/multi-jet-printing"  class="tbm-link level-4">
+                All MultiJet Printers <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-4" aria-level="4" >
+        <div class="tbm-link-container">
+            <a href="/3d-printers/mjp-300w"  class="tbm-link level-4">
+                MJP 300W <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-4" aria-level="4" >
+        <div class="tbm-link-container">
+            <a href="/3d-printers/mjp-300w-plus"  class="tbm-link level-4">
+                MJP 300W Plus <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-4" aria-level="4" >
+        <div class="tbm-link-container">
+            <a href="/3d-printers/projet-mjp-2500-ic"  class="tbm-link level-4">
+                ProJet MJP 2500 IC <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-4" aria-level="4" >
+        <div class="tbm-link-container">
+            <a href="/3d-printers/projet-mjp-2500-series"  class="tbm-link level-4">
+                ProJet MJP 2500 Plus <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-4" aria-level="4" >
+        <div class="tbm-link-container">
+            <a href="/3d-printers/projet-mjp-5600"  class="tbm-link level-4">
+                ProJet MJP 5600 <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+  </ul>
+
+      </div>
+</div>
+
+  </div>
+
+  </div>
+
+</li>
+
+  </ul>
+
+      </div>
+</div>
+
+  </div>
+
+  </div>
+
+</li>
+
+        <li  class="tbm-item level-2 tbm-item--has-flyout" aria-level="2" >
+        <div class="tbm-link-container">
+            <a href="/3d-printers/metal"  class="tbm-link level-2 tbm-toggle" aria-expanded="false">
+                Metal <span class="the-arrow">&rsaquo;</span>
+    </a>
+        
+          </div>
+    <div  class="tbm-submenu tbm-item-child">
+      <div  class="tbm-row">
+      <div  class="tbm-column span12">
+  <div class="tbm-column-inner">
+               <ul  class="tbm-subnav level-2 items-5">
+        <li  class="tbm-item level-3 overview" aria-level="3" >
+        <div class="tbm-link-container">
+            <a href="/3d-printers/metal"  class="tbm-link level-3">
+                All Direct Metal Printers <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-3" aria-level="3" >
+      <span class="tbm-caption">Printers</span>
+        <div class="tbm-link-container">
+            <a href="/3d-printers/dmp-factory-500"  class="tbm-link level-3">
+                DMP Factory 500 <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+                    <li  class="tbm-item level-3 tbm-item--has-flyout" aria-level="3" >
+        <div class="tbm-link-container">
+            <span class="tbm-link level-3 no-link tbm-toggle" tabindex="0" aria-expanded="false" role="button">
+                DMP Factory 350 Series <span class="the-arrow">&rsaquo;</span>
+    </span>
+        
+          </div>
+    <div  class="tbm-submenu tbm-item-child">
+      <div  class="tbm-row">
+      <div  class="tbm-column span12">
+  <div class="tbm-column-inner">
+               <ul  class="tbm-subnav level-3 items-2">
+        <li  class="tbm-item level-4" aria-level="4" >
+      <span class="tbm-caption">Printers</span>
+        <div class="tbm-link-container">
+            <a href="/3d-printers/dmp-factory-350"  class="tbm-link level-4">
+                DMP Factory 350 <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-4" aria-level="4" >
+        <div class="tbm-link-container">
+            <a href="/3d-printers/dmp-factory-350-dual"  class="tbm-link level-4">
+                DMP Factory 350 Dual <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+  </ul>
+
+      </div>
+</div>
+
+  </div>
+
+  </div>
+
+</li>
+
+                    <li  class="tbm-item level-3 tbm-item--has-flyout" aria-level="3" >
+        <div class="tbm-link-container">
+            <span class="tbm-link level-3 no-link tbm-toggle" tabindex="0" aria-expanded="false" role="button">
+                DMP Flex 350 Series <span class="the-arrow">&rsaquo;</span>
+    </span>
+        
+          </div>
+    <div  class="tbm-submenu tbm-item-child">
+      <div  class="tbm-row">
+      <div  class="tbm-column span12">
+  <div class="tbm-column-inner">
+               <ul  class="tbm-subnav level-3 items-3">
+        <li  class="tbm-item level-4" aria-level="4" >
+      <span class="tbm-caption">Printers</span>
+        <div class="tbm-link-container">
+            <a href="/3d-printers/dmp-flex-350"  class="tbm-link level-4">
+                DMP Flex 350 <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-4" aria-level="4" >
+        <div class="tbm-link-container">
+            <a href="/3d-printers/dmp-flex-350-dual"  class="tbm-link level-4">
+                DMP Flex 350 Dual <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-4" aria-level="4" >
+        <div class="tbm-link-container">
+            <a href="/3d-printers/dmp-flex-350-triple"  class="tbm-link level-4">
+                DMP Flex 350 Triple <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+  </ul>
+
+      </div>
+</div>
+
+  </div>
+
+  </div>
+
+</li>
+
+        <li  class="tbm-item level-3" aria-level="3" >
+        <div class="tbm-link-container">
+            <a href="/3d-printers/dmp-flex-200"  class="tbm-link level-3">
+                DMP Flex 200 <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+  </ul>
+
+      </div>
+</div>
+
+  </div>
+
+  </div>
+
+</li>
+
+        <li  class="tbm-item level-2 tbm-item--has-flyout" aria-level="2" >
+        <div class="tbm-link-container">
+            <a href="/3d-printers/dental"  class="tbm-link level-2 tbm-toggle" aria-expanded="false">
+                Dental <span class="the-arrow">&rsaquo;</span>
+    </a>
+        
+          </div>
+    <div  class="tbm-submenu tbm-item-child">
+      <div  class="tbm-row">
+      <div  class="tbm-column span12">
+  <div class="tbm-column-inner">
+               <ul  class="tbm-subnav level-2 items-7">
+        <li  class="tbm-item level-3 overview" aria-level="3" >
+        <div class="tbm-link-container">
+            <a href="/3d-printers/dental"  class="tbm-link level-3">
+                All Dental Printers <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-3" aria-level="3" >
+        <div class="tbm-link-container">
+            <a href="/3d-printers/printer-sla-825-dual-for-dental"  class="tbm-link level-3">
+                SLA 825 for Dental <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-3" aria-level="3" >
+        <div class="tbm-link-container">
+            <a href="/3d-printers/sla-750-for-dental"  class="tbm-link level-3">
+                SLA 750 for Dental <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-3" aria-level="3" >
+      <span class="tbm-caption">Printers</span>
+        <div class="tbm-link-container">
+            <a href="/3d-printers/dmp-flex-200"  class="tbm-link level-3">
+                DMP Flex 200 <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-3" aria-level="3" >
+        <div class="tbm-link-container">
+            <a href="/3d-printers/nextdent-300-multijet"  class="tbm-link level-3">
+                NextDent 300 <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-3" aria-level="3" >
+        <div class="tbm-link-container">
+            <a href="/3d-printers/nextdent-5100"  class="tbm-link level-3">
+                NextDent 5100 <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-3" aria-level="3" >
+        <div class="tbm-link-container">
+            <a href="/3d-printers/projet-mjp-2500-plus-dental"  class="tbm-link level-3">
+                ProJet MJP 2500 Plus for Dental <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+  </ul>
+
+      </div>
+</div>
+
+  </div>
+
+  </div>
+
+</li>
+
+        <li  class="tbm-item level-2 tbm-item--has-flyout" aria-level="2" >
+        <div class="tbm-link-container">
+            <a href="/3d-printers/jewelry"  class="tbm-link level-2 tbm-toggle" aria-expanded="false">
+                Jewelry <span class="the-arrow">&rsaquo;</span>
+    </a>
+        
+          </div>
+    <div  class="tbm-submenu tbm-item-child">
+      <div  class="tbm-row">
+      <div  class="tbm-column span12">
+  <div class="tbm-column-inner">
+               <ul  class="tbm-subnav level-2 items-2">
+        <li  class="tbm-item level-3 overview" aria-level="3" >
+        <div class="tbm-link-container">
+            <a href="/3d-printers/jewelry"  class="tbm-link level-3">
+                All Jewelry Printers <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-3" aria-level="3" >
+        <div class="tbm-link-container">
+            <a href="/3d-printers/mjp-300w-plus"  class="tbm-link level-3">
+                MJP 300W Plus <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+  </ul>
+
+      </div>
+</div>
+
+  </div>
+
+  </div>
+
+</li>
+
+        <li  class="tbm-item level-2 tbm-item--has-flyout" aria-level="2" >
+        <div class="tbm-link-container">
+            <a href="/3d-printers/metal-casting"  class="tbm-link level-2 tbm-toggle" aria-expanded="false">
+                Metal Casting <span class="the-arrow">&rsaquo;</span>
+    </a>
+        
+          </div>
+    <div  class="tbm-submenu tbm-item-child">
+      <div  class="tbm-row">
+      <div  class="tbm-column span12">
+  <div class="tbm-column-inner">
+               <ul  class="tbm-subnav level-2 items-5">
+        <li  class="tbm-item level-3 overview" aria-level="3" >
+        <div class="tbm-link-container">
+            <a href="/3d-printers/metal-casting"  class="tbm-link level-3">
+                All Metal Casting Printers <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-3" aria-level="3" >
+        <div class="tbm-link-container">
+            <a href="/3d-printers/sla-750"  class="tbm-link level-3">
+                SLA 750 <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-3" aria-level="3" >
+        <div class="tbm-link-container">
+            <a href="/3d-printers/sla-825-dual"  class="tbm-link level-3">
+                SLA 825 Dual <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-3" aria-level="3" >
+      <span class="tbm-caption">Printers</span>
+        <div class="tbm-link-container">
+            <a href="/3d-printers/projet-mjp-2500-ic"  class="tbm-link level-3">
+                ProJet MJP 2500 IC <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-3" aria-level="3" >
+        <div class="tbm-link-container">
+            <a href="/3d-printers/projet-7000-hd"  class="tbm-link level-3">
+                ProJet 7000 HD <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+  </ul>
+
+      </div>
+</div>
+
+  </div>
+
+  </div>
+
+</li>
+
+        <li  class="tbm-item level-2 tbm-item--has-flyout" aria-level="2" >
+        <div class="tbm-link-container">
+            <a href="/haptics"  class="tbm-link level-2 tbm-toggle" aria-expanded="false">
+                Haptic Devices <span class="the-arrow">&rsaquo;</span>
+    </a>
+        
+          </div>
+    <div  class="tbm-submenu tbm-item-child">
+      <div  class="tbm-row">
+      <div  class="tbm-column span12">
+  <div class="tbm-column-inner">
+               <ul  class="tbm-subnav level-2 items-5">
+        <li  class="tbm-item level-3 overview" aria-level="3" >
+        <div class="tbm-link-container">
+            <a href="/haptics"  class="tbm-link level-3">
+                All Haptic Devices <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-3" aria-level="3" >
+      <span class="tbm-caption">Hardware</span>
+        <div class="tbm-link-container">
+            <a href="/haptics-devices/openhaptics"  class="tbm-link level-3">
+                OpenHaptics <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-3" aria-level="3" >
+        <div class="tbm-link-container">
+            <a href="/haptics-devices/3d-systems-phantom-premium"  class="tbm-link level-3">
+                Phantom Premium <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-3" aria-level="3" >
+        <div class="tbm-link-container">
+            <a href="/haptics-devices/touch"  class="tbm-link level-3">
+                Touch <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-3" aria-level="3" >
+        <div class="tbm-link-container">
+            <a href="/haptics-devices/touch-x"  class="tbm-link level-3">
+                Touch X <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+  </ul>
+
+      </div>
+</div>
+
+  </div>
+
+  </div>
+
+</li>
+
+        <li  class="tbm-item level-2 nav-header-with-line tbm-item--has-flyout" aria-level="2" >
+      <span class="tbm-caption">Software</span>
+        <div class="tbm-link-container">
+            <a href="/software"  class="tbm-link level-2 tbm-toggle" aria-expanded="false">
+                Software <span class="the-arrow">&rsaquo;</span>
+    </a>
+        
+          </div>
+    <div  class="tbm-submenu tbm-item-child">
+      <div  class="tbm-row">
+      <div  class="tbm-column span12">
+  <div class="tbm-column-inner">
+               <ul  class="tbm-subnav level-2 items-7">
+        <li  class="tbm-item level-3 overview" aria-level="3" >
+        <div class="tbm-link-container">
+            <a href="/software"  class="tbm-link level-3">
+                All Software <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-3" aria-level="3" >
+      <span class="tbm-caption">3D Systems &amp; Oqton</span>
+        <div class="tbm-link-container">
+            <a href="/software/3d-sprint"  class="tbm-link level-3">
+                3D Sprint <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-3" aria-level="3" >
+        <div class="tbm-link-container">
+            <a href="/software/additrak-fleet-management"  class="tbm-link level-3">
+                AddiTrak™ <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-3" aria-level="3" >
+        <div class="tbm-link-container">
+            <a href="/software/3d-connect"  class="tbm-link level-3">
+                3D Connect <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-3" aria-level="3" >
+        <div class="tbm-link-container">
+            <a href="/haptics-devices/openhaptics"  class="tbm-link level-3">
+                OpenHaptics <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-3" aria-level="3" >
+        <div class="tbm-link-container">
+            <a href="https://oqton.com/manufacturing-os/"  class="tbm-link level-3">
+                Manufacturing OS <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-3" aria-level="3" >
+        <div class="tbm-link-container">
+            <a href="https://oqton.com/3dxpert/"  class="tbm-link level-3">
+                3DXpert <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+  </ul>
+
+      </div>
+</div>
+
+  </div>
+
+  </div>
+
+</li>
+
+  </ul>
+
+      </div>
+</div>
+
+  </div>
+
+  </div>
+
+</li>
+
+        <li  class="tbm-item level-1 tbm-item--has-dropdown" aria-level="1" >
+        <div class="tbm-link-container">
+            <a href="/materials"  class="tbm-link level-1 tbm-toggle" aria-expanded="false">
+                Materials <span class="the-arrow">&rsaquo;</span>
+    </a>
+        
+          </div>
+    <div  class="tbm-submenu tbm-item-child">
+      <div  class="tbm-row">
+      <div  class="tbm-column span12">
+  <div class="tbm-column-inner">
+               <ul  class="tbm-subnav level-1 items-7">
+        <li  class="tbm-item level-2" aria-level="2" >
+      <span class="tbm-caption">Materials</span>
+        <div class="tbm-link-container">
+            <a href="/materials/plastic"  class="tbm-link level-2">
+                Plastic Materials <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-2" aria-level="2" >
+        <div class="tbm-link-container">
+            <a href="/materials/metal"  class="tbm-link level-2">
+                Metal Materials <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-2" aria-level="2" >
+        <div class="tbm-link-container">
+            <a href="/materials/dental"  class="tbm-link level-2">
+                Dental Materials <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-2" aria-level="2" >
+        <div class="tbm-link-container">
+            <a href="/materials/jewelry"  class="tbm-link level-2">
+                Jewelry Materials <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-2" aria-level="2" >
+        <div class="tbm-link-container">
+            <a href="/materials/metal-casting"  class="tbm-link level-2">
+                Metal Casting Materials <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-2 nav-header-with-line" aria-level="2" >
+      <span class="tbm-caption">Find the right material</span>
+        <div class="tbm-link-container">
+            <a href="/material-finder"  class="tbm-link level-2">
+                Material Finder <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+        <li  class="tbm-item level-2" aria-level="2" >
+        <div class="tbm-link-container">
+            <a href="https://shop.3dsystems.com/s/"  class="tbm-link level-2">
+                Purchase Materials <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+  </ul>
+
+      </div>
+</div>
+
+  </div>
+
+  </div>
+
+</li>
+
+                    <li  class="tbm-item level-1 tbm-item--has-dropdown" aria-level="1" >
+        <div class="tbm-link-container">
+            <span class="tbm-link level-1 no-link tbm-toggle" tabindex="0" aria-expanded="false" role="button">
+                Professional Services <span class="the-arrow">&rsaquo;</span>
+    </span>
+        
+          </div>
+    <div  class="tbm-submenu tbm-item-child">
+      <div  class="tbm-row">
+      <div  class="tbm-column span4">
+  <div class="tbm-column-inner">
+                 <div  class="tbm-block">
+    <div class="block-inner">
+      
+
+        <section id="block-block-contentd2174c55-8e63-4f52-81b5-5004531e653e" class="clearfix menu-block">
+    
+    
+        
+
+    
+              
+
+<div class="field field-block-content--field-image field-name-field-image field-type-entity-reference field-label-hidden">
+                                            
+
+
+
+<article class="media media-type--image">
+      
+  
+                    
+  
+          
+    
+      
+  <picture class="responsive-image-container">
+    <source type="image/webp"
+            srcset="/sites/default/files/styles/general_small/public/2024-12/3d-systems-navigation-application-innovation-group.jpg.webp?itok=iDQBm5C4 640w,
+                  /sites/default/files/styles/general_medium/public/2024-12/3d-systems-navigation-application-innovation-group.jpg.webp?itok=vl6doqxc 1024w,
+                  /sites/default/files/styles/general_large/public/2024-12/3d-systems-navigation-application-innovation-group.jpg.webp?itok=U3Qe5ebN 1440w"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw">
+
+    <img srcset="/sites/default/files/styles/general_small/public/2024-12/3d-systems-navigation-application-innovation-group.jpg.webp?itok=iDQBm5C4 640w,
+                  /sites/default/files/styles/general_medium/public/2024-12/3d-systems-navigation-application-innovation-group.jpg.webp?itok=vl6doqxc 1024w,
+                  /sites/default/files/styles/general_large/public/2024-12/3d-systems-navigation-application-innovation-group.jpg.webp?itok=U3Qe5ebN 1440w"
+         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+         src="/sites/default/files/styles/general_medium/public/2024-12/3d-systems-navigation-application-innovation-group.jpg.webp?itok=vl6doqxc"
+         alt="Application Innovation Group"
+         width="940"
+         height="399"
+         loading="eager"
+         >
+  </picture>
+
+
+  </article>
+
+                        </div>
+
+
+<div class="field field-block-content--field-menu-block-title field-name-field-menu-block-title field-type-string field-label-hidden">
+                                            Application Innovation Group
+                        </div>
+
+
+<div class="field field-block-content--field-description field-name-field-description field-type-string field-label-hidden">
+                                            Partner with 3D Systems&#039; Application Innovation Group to transform your ideas into reality with cutting-edge 3D printing and tailored manufacturing solutions.
+                        </div>
+
+
+<div class="field field-block-content--field-link field-name-field-link field-type-link field-label-hidden button">
+                    <a href="/consulting/application-innovation-group">Learn more</a>
+              </div>
+
+      
+      
+      </section>
+  
+    </div>
+  </div>
+
+      </div>
+</div>
+
+      <div  class="tbm-column span4">
+  <div class="tbm-column-inner">
+                 <div  class="tbm-block">
+    <div class="block-inner">
+      
+
+        <section id="block-block-content0dc11bf9-28d0-4d38-96bc-d3922183bfe4" class="clearfix menu-block">
+    
+    
+        
+
+    
+              
+
+<div class="field field-block-content--field-image field-name-field-image field-type-entity-reference field-label-hidden">
+                                            
+
+
+
+<article class="media media-type--image">
+      
+  
+                    
+  
+          
+    
+      
+  <picture class="responsive-image-container">
+    <source type="image/webp"
+            srcset="/sites/default/files/styles/general_small/public/2024-12/3d-systems-navigation-training-and-knowledge.jpg.webp?itok=AqORTvjc 640w,
+                  /sites/default/files/styles/general_medium/public/2024-12/3d-systems-navigation-training-and-knowledge.jpg.webp?itok=nzdY8TuO 1024w,
+                  /sites/default/files/styles/general_large/public/2024-12/3d-systems-navigation-training-and-knowledge.jpg.webp?itok=oANsdy87 1440w"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw">
+
+    <img srcset="/sites/default/files/styles/general_small/public/2024-12/3d-systems-navigation-training-and-knowledge.jpg.webp?itok=AqORTvjc 640w,
+                  /sites/default/files/styles/general_medium/public/2024-12/3d-systems-navigation-training-and-knowledge.jpg.webp?itok=nzdY8TuO 1024w,
+                  /sites/default/files/styles/general_large/public/2024-12/3d-systems-navigation-training-and-knowledge.jpg.webp?itok=oANsdy87 1440w"
+         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+         src="/sites/default/files/styles/general_medium/public/2024-12/3d-systems-navigation-training-and-knowledge.jpg.webp?itok=nzdY8TuO"
+         alt="Training and Knowledge"
+         width="940"
+         height="399"
+         loading="eager"
+         >
+  </picture>
+
+
+  </article>
+
+                        </div>
+
+
+<div class="field field-block-content--field-menu-block-title field-name-field-menu-block-title field-type-string field-label-hidden">
+                                            Training and Knowledge
+                        </div>
+
+
+<div class="field field-block-content--field-description field-name-field-description field-type-string field-label-hidden">
+                                            Unlock the full potential of 3D printing with expert training and resources from 3D Systems.
+                        </div>
+
+
+<div class="field field-block-content--field-link field-name-field-link field-type-link field-label-hidden button">
+                    <a href="/printer-training-and-knowledge">Learn more</a>
+              </div>
+
+      
+      
+      </section>
+  
+    </div>
+  </div>
+
+      </div>
+</div>
+
+      <div  class="tbm-column span4">
+  <div class="tbm-column-inner">
+                 <div  class="tbm-block">
+    <div class="block-inner">
+      
+
+        <section id="block-block-contentd56edf26-3563-4c10-b8e0-44ad6645c915" class="clearfix menu-block">
+    
+    
+        
+
+    
+              
+
+<div class="field field-block-content--field-image field-name-field-image field-type-entity-reference field-label-hidden">
+                                            
+
+
+
+<article class="media media-type--image">
+      
+  
+                    
+  
+          
+    
+      
+  <picture class="responsive-image-container">
+    <source type="image/webp"
+            srcset="/sites/default/files/styles/general_small/public/2025-11/service-1_330x140.gif.webp?itok=DC3RIT1j 640w,
+                  /sites/default/files/styles/general_medium/public/2025-11/service-1_330x140.gif.webp?itok=QtQ_Mufh 1024w,
+                  /sites/default/files/styles/general_large/public/2025-11/service-1_330x140.gif.webp?itok=x_WdaqTe 1440w"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw">
+
+    <img srcset="/sites/default/files/styles/general_small/public/2025-11/service-1_330x140.gif.webp?itok=DC3RIT1j 640w,
+                  /sites/default/files/styles/general_medium/public/2025-11/service-1_330x140.gif.webp?itok=QtQ_Mufh 1024w,
+                  /sites/default/files/styles/general_large/public/2025-11/service-1_330x140.gif.webp?itok=x_WdaqTe 1440w"
+         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+         src="/sites/default/files/styles/general_medium/public/2025-11/service-1_330x140.gif.webp?itok=QtQ_Mufh"
+         alt="Printer Service Plans"
+         width="330"
+         height="140"
+         loading="eager"
+         >
+  </picture>
+
+
+  </article>
+
+                        </div>
+
+
+<div class="field field-block-content--field-menu-block-title field-name-field-menu-block-title field-type-string field-label-hidden">
+                                            Printer Service Plans
+                        </div>
+
+
+<div class="field field-block-content--field-description field-name-field-description field-type-string field-label-hidden">
+                                            Ensure peak performance and longevity for your 3D printer with our expert service plans tailored to meet your needs.
+                        </div>
+
+
+<div class="field field-block-content--field-link field-name-field-link field-type-link field-label-hidden button">
+                    <a href="/support/3d-printers/service-plans">Learn more</a>
+              </div>
+
+      
+      
+      </section>
+  
+    </div>
+  </div>
+
+      </div>
+</div>
+
+  </div>
+
+  </div>
+
+</li>
+
+        <li  class="tbm-item level-1" aria-level="1" >
+        <div class="tbm-link-container">
+            <a href="/contact"  class="tbm-link level-1">
+                Contact Us <span class="the-arrow">&rsaquo;</span>
+    </a>
+            </div>
+    
+</li>
+
+  </ul>
+
+      </div>
+  </nav>
+
+<script>
+if (window.matchMedia("(max-width: 1020px)").matches) {
+  document.getElementById("f2b2696d-b98d-41da-9f7f-6b22b7764286").classList.add('tbm--mobile');
+}
+
+
+</script>
+
+        <div class="nav-right-actions">
+          <div id="search-link" class="menu-search-form">
+            <a href="/search"><img alt="Search" src="/themes/custom/ddd/images/icon-search.svg"></a>
+          </div>
+          <div class="contact-us">
+            <a href="/contact" class="button banner-cta-button horizontal-left orange_white">Contact Us</a>
+          </div>
+        </div>
+      
+      </section>
+  
+  </div>
+
+                            
+                    </header>
+
+                    <div id="region-header" class="row">
+                <div class="large-12 columns">
+                      <div>
+    
+  
+
+  </div>
+
+                </div>
+            </div>
+        
+        <div class="row">
+
+                    <div id="redirectModal" class="reveal-modal-container" data-reveal aria-hidden="true" role="dialog">
+          </div>
+
+                                          </div>
+        <div role="region" aria-label="Page banner">
+                        
+
+
+  
+
+
+
+
+
+
+
+
+
+
+    
+
+                              
+                      <div class="top_banner minimal" >
+      <section class="view-mode-top_banner banner-minimal light has-background">
+        <div class="view-mode-top_banner banner-minimal light has-background">
+          <div class="banner-wrapper theme-ddd-2019">
+            <div class="banner-background   ">
+                            
+          
+            </div>
+            <div class="banner-content-2019">
+              <div class="banner-content-wrapper">
+                                                                      <h1 class="banner-title format-default title-small">3D Systems Announces Date of First Quarter 2026 Financial Results</h1>
+                                                                                  <div class="banner-links">
+                              
+                          </div>
+          </div>
+                  </div>
+
+        
+        
+                  </div>
+      </section>
+    </div>
+  
+                
+                                    <div class="l-help row">
+                                <div class="large-12 columns">
+                          <div>
+    
+  </div>
+
+                    </div>
+                </div>
+                </div>
+
+
+        <div >
+            <main id="main" role="main"  >
+
+                                <a id="main-content"></a>
+                                <section>
+                    <div id="region-tertiary-nav">
+                        
+                    </div>
+
+                    <div id="region-content">
+                          <div>
+    <div data-drupal-messages-fallback class="hidden"></div>
+
+    <section id="block-ddd-content" class="clearfix">
+    
+    
+        
+
+    
+              
+
+<article id="node-85733"  class="row" data-equalizer="node-layout" data-equalizer-mq="large-up">
+
+    <div class="columns small-12 large-8" data-equalizer-watch="node-layout">
+        
+                    
+
+<div class="field field-node--field-paragraphs-content field-name-field-paragraphs-content field-type-entity-reference-revisions field-label-hidden">
+                              <div data-component-type="content_wysiwyg_text" class="paragraph paragraph--type--content-wysiwyg-text paragraph--view-mode--default">
+          
+
+<div class="field field-paragraph--field-text field-name-field-text field-type-text-long field-label-hidden">
+                                            <p><strong>ROCK HILL, South Carolina, April 30, 2026&nbsp;</strong>– <a href="https://www.3dsystems.com/?utm_source=Press%20Release&amp;utm_medium=Press%20Release&amp;utm_campaign=70134000001OH42&amp;utm_content=PRSR_Company%20Press%20Release">3D Systems</a> (NYSE:DDD) announced today it will release its financial results for the first quarter 2026 after the U.S. stock market closes on Monday, May 11, 2026. The company will hold a conference call and simultaneous webcast to discuss these financial results on Tuesday, May 12, 2026, at 8:30 a.m. Eastern Time.&nbsp;</p><p><strong>First Quarter 2026 Financial Results Conference Call</strong></p><p>Date: Tuesday, May 12, 2026<br>Time: 8:30 a.m. Eastern Time<br>Listen via webcast:&nbsp;<a href="http://www.3dsystems.com/investor">www.3dsystems.com/investor</a></p><p>Participate via telephone: 201-689-8345 or 877-407-8291</p><p>The webcast replay will be available approximately two hours after the end of the conference call at&nbsp;<a href="http://www.3dsystems.com/investor">www.3dsystems.com/investor</a>.</p><p><strong>About 3D Systems</strong></p><p>For nearly 40 years, Chuck Hull’s curiosity and desire to improve the way products were designed and manufactured gave birth to 3D printing, 3D Systems, and the additive manufacturing industry. Since then, that same spark continues to ignite the 3D Systems team as we work side-by-side with our customers to change the way industries innovate. As a full-service solutions partner, we deliver industry-leading 3D printing technologies, materials and software to high-value markets such as medical and dental; aerospace, space and defense; transportation and motorsports; AI infrastructure; and durable goods. Each application-specific solution is powered by the expertise and passion of our employees who endeavor to achieve our shared goal of Transforming Manufacturing for a Better Future. More information on the company is available at&nbsp;<a href="http://www.3dsystems.com">www.3dsystems.com</a>.</p><p>Investor Contact: <strong>investor.relations@3dsystems.com</strong></p><p>Media Contact: <strong>press@3dsystems.com</strong></p>
+                        </div>
+
+      </div>
+
+                </div>
+
+            </div>
+
+    <div class="node-sidebar columns small-12 large-4" data-equalizer-watch="node-layout">
+        
+        
+
+
+
+<div class="sidebar sticky-sidebar">
+
+        <div class="sidebar-details with-border">
+                    <div class="sidebar-top">
+                <p class="p-contact">Press contact:<br/><a href="mailto:press@3dsystems.com">press@3dsystems.com</a></p>
+            </div>
+        
+          
+          
+
+
+        
+            </div>
+
+        </div>
+    </div>
+</article>
+<br>
+<br>
+<br>
+
+      
+      
+      </section>
+  
+  </div>
+
+                    </div>
+                </section>
+            </main>
+                                            </div>
+                    <div>
+                <div id="pre-footer">
+                      <div>
+    
+
+    <section id="block-views-block-bottom-ctas-block-1-2" class="clearfix">
+    
+    
+        
+
+    
+              <div class="views-element-container"><div class="js-view-dom-id-d6384f7406b51cfab7124a348d485311819fe0d2d2da5acbd7c3fbb714473b4b">
+  
+  
+  
+
+  
+  
+  
+
+  <div data-equalizer>
+      <div class="item-list">
+  
+  <ul class="small-block-grid-1 medium-block-grid-2 no-spacing">
+
+          <li><div class="views-field views-field-field-bottom-ctas"><div class="field-content"></div></div></li>
+    
+  </ul>
+
+</div>
+
+  </div>
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+      
+      
+      </section>
+  
+
+    <section id="block-ddd-prefooterstickysidebarspacingblock" class="clearfix">
+    
+    
+        
+
+    
+              
+      
+      
+      </section>
+  
+  </div>
+
+                </div>
+            </div>
+                            <footer>
+                <div id="meta-footer">
+                      <div>
+    <nav role="navigation" aria-labelledby="block-ddd-tertiarynavigation-menu" id="block-ddd-tertiarynavigation">
+                      
+    <span  class="visually-hidden" id="block-ddd-tertiarynavigation-menu">Tertiary Navigation</span>
+    
+  
+        
+<div class="footer" id="footer">
+        
+        
+          
+                      <div >
+          
+                      
+              
+                              <div class="top-links">
+                                                  <a href="" target="">top links</a>
+                                                  
+          
+          
+                      
+                              <ul>
+              
+                              <li class="link-contact-us">
+                                                  <a href="/contact" target="" data-drupal-link-system-path="node/44316">Contact us</a>
+                                                              </li>
+                                        
+              
+                              <li class="link-support">
+                                                  <a href="https://support.3dsystems.com/s/" target="">Support</a>
+                                                              </li>
+                                        
+              
+                              <li class="link-material-finder">
+                                                  <a href="/material-finder" data-drupal-link-system-path="node/54656">Material Finder</a>
+                                                              </li>
+                                            </ul>
+                                                      
+                                              </div>
+                                        
+                              <div class="row">
+                  <div class="small-12 columns">
+                    <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-4">
+
+              
+                              <li class="link-what-we-do">
+                                                  <a href="/about-us" target="" data-drupal-link-system-path="node/44266">What we do</a>
+                                                  
+          
+          
+                      
+                              <ul>
+              
+                              <li class="link-about-3d-systems">
+                                                  <a href="/about-us" target="" data-drupal-link-system-path="node/44266">About 3D Systems</a>
+                                                              </li>
+                                        
+              
+                              <li class="link-meet-our-experts">
+                                                  <a href="/experts" data-drupal-link-system-path="node/77001">Meet Our experts</a>
+                                                              </li>
+                                        
+              
+                              <li class="link-sustainability">
+                                                  <a href="/make-an-impact" data-drupal-link-system-path="node/73031">Sustainability</a>
+                                                              </li>
+                                        
+              
+                              <li class="link-careers">
+                                                  <a href="/careers" target="" data-drupal-link-system-path="node/52776">Careers</a>
+                                                              </li>
+                                            </ul>
+                                                      
+                                              </li>
+                                        
+              
+                              <li class="link-newsroom">
+                                                  <a href="/resources/press-room" target="" data-drupal-link-system-path="node/53416">Newsroom</a>
+                                                  
+          
+          
+                      
+                              <ul>
+              
+                              <li class="link-press-releases">
+                                                  <a href="/press-releases" target="" data-drupal-link-system-path="node/35416">Press Releases</a>
+                                                              </li>
+                                        
+              
+                              <li class="link-press-inquiries">
+                                                  <a href="mailto:press@3dsystems.com" target="">Press Inquiries</a>
+                                                              </li>
+                                        
+              
+                              <li class="link-investor-relations">
+                                                  <a href="https://investor.3dsystems.com/overview/default.aspx" target="">Investor Relations</a>
+                                                              </li>
+                                            </ul>
+                                                      
+                                              </li>
+                                        
+              
+                              <li class="link-resources">
+                                                  <a href="/resources" target="" data-drupal-link-system-path="node/73631">Resources</a>
+                                                  
+          
+          
+                      
+                              <ul>
+              
+                              <li class="link-customer-stories">
+                                                  <a href="/resources/customer-story" target="" data-drupal-link-system-path="resources/customer-story">Customer Stories</a>
+                                                              </li>
+                                        
+              
+                              <li class="link-recorded-webinars">
+                                                  <a href="/resources/webinar" target="" data-drupal-link-system-path="resources/webinar">Recorded Webinars</a>
+                                                              </li>
+                                        
+              
+                              <li class="link-upcoming-events">
+                                                  <a href="/upcoming-events" target="" data-drupal-link-system-path="node/76226">Upcoming Events</a>
+                                                              </li>
+                                        
+              
+                              <li class="link-material-finder">
+                                                  <a href="/material-finder">Material Finder</a>
+                                                              </li>
+                                            </ul>
+                                                      
+                                              </li>
+                                        
+              
+                              <li class="link-support">
+                                                  <a href="https://support.3dsystems.com/s/?language=en_US" target="">Support</a>
+                                                  
+          
+          
+                      
+                              <ul>
+              
+                              <li class="link-3d-printers-&amp;amp;-materials">
+                                                  <a href="https://support.3dsystems.com/s/search-knowledge-article-printer?&amp;type=printersupport" target="_blank">3D Printers &amp; Materials</a>
+                                                              </li>
+                                        
+              
+                              <li class="link-software">
+                                                  <a href="https://support.3dsystems.com/s/software-support-3dsystems" target="_blank">Software</a>
+                                                              </li>
+                                        
+              
+                              <li class="link-healthcare">
+                                                  <a href="https://support.3dsystems.com/s/healthcare" target="_blank">Healthcare</a>
+                                                              </li>
+                                        
+              
+                              <li class="link-haptics">
+                                                  <a href="https://support.3dsystems.com/s/article/Haptic-Device-Guides" target="_blank">Haptics</a>
+                                                              </li>
+                                            </ul>
+                                                      
+                                              </li>
+                                                </ul>
+                  </div>
+                  </div>
+                                                          </div>
+                  
+
+        
+        <ul class="social">
+            <li><p class="connect-with-us">Connect with us:</p></li>
+            <li>
+                <a href="https://www.youtube.com/channel/UCsx-A5uSO_gYgi5A4RXFCag" aria-label="YouTube"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     viewBox="0 0 142.8 142.4" enable-background="new 0 0 142.8 142.4" xml:space="preserve">
+<g>
+    <polygon fill="#FFFFFF" points="64.1,80.8 83.8,70.4 64.1,60 	"/>
+    <path fill="#FFFFFF" d="M71.6,0C32.4,0,0.4,31.9,0.4,71.2c0,39.3,31.9,71.2,71.2,71.2s71.2-31.9,71.2-71.2
+		C142.8,31.9,110.9,0,71.6,0z M108.2,74c0,6-0.7,11.9-0.7,11.9s-0.7,5.1-2.9,7.3c-2.8,2.9-5.9,3-7.3,3.1
+		c-10.2,0.7-25.6,0.8-25.6,0.8s-19-0.2-24.9-0.7c-1.6-0.3-5.3-0.2-8.1-3.2c-2.2-2.2-2.9-7.3-2.9-7.3S35,80,35,74v-5.6
+		c0-6,0.7-11.9,0.7-11.9s0.7-5.1,2.9-7.3c2.8-2.9,5.9-3,7.3-3.1c10.2-0.7,25.6-0.7,25.6-0.7h0c0,0,15.4,0,25.6,0.7
+		c1.4,0.2,4.6,0.2,7.3,3.1c2.2,2.2,2.9,7.3,2.9,7.3s0.7,6,0.7,11.9V74z"/>
+</g>
+</svg>
+</a>
+            </li>
+            <li>
+                <a href="https://twitter.com/3dsystems" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256" viewBox="0 0 256 256" xml:space="preserve">
+
+<defs>
+</defs>
+    <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+        <polygon points="24.89,23.01 57.79,66.99 65.24,66.99 32.34,23.01 " style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
+        <path d="M 45 0 L 45 0 C 20.147 0 0 20.147 0 45 v 0 c 0 24.853 20.147 45 45 45 h 0 c 24.853 0 45 -20.147 45 -45 v 0 C 90 20.147 69.853 0 45 0 z M 56.032 70.504 L 41.054 50.477 L 22.516 70.504 h -4.765 L 38.925 47.63 L 17.884 19.496 h 16.217 L 47.895 37.94 l 17.072 -18.444 h 4.765 L 50.024 40.788 l 22.225 29.716 H 56.032 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+    </g>
+</svg></a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/3dsystemscorp" aria-label="Facebook"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     viewBox="0 0 142.8 142.4" enable-background="new 0 0 142.8 142.4" xml:space="preserve">
+<path fill="#FFFFFF" d="M72.4,0C33.2,0,1.2,32,1.2,71.2c0,39.3,31.9,71.2,71.2,71.2s71.2-31.9,71.2-71.2C143.6,32,111.7,0,72.4,0z
+	 M91.3,47l-6.8,0c-5.4,0-6.4,2.5-6.4,6.3v8.2h12.8l-1.7,12.9H78.1v33.1H64.7V74.4H53.6V61.5h11.2V52c0-11.1,6.7-17.1,16.6-17.1
+	c4.7,0,8.8,0.4,10,0.5V47z"/>
+</svg>
+</a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/company/162213" aria-label="LinkedIn"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     viewBox="0 0 142.8 142.4" enable-background="new 0 0 142.8 142.4" xml:space="preserve">
+<path fill="#FFFFFF" d="M72,0C32.8,0,0.9,32,0.9,71.2c0,39.3,31.9,71.2,71.2,71.2c39.3,0,71.2-31.9,71.2-71.2C143.2,32,111.3,0,72,0
+	z M51.7,104.4H37.5V59.4h14.2V104.4z M44.2,53.8h-0.1c-5.1,0-8.5-3.4-8.5-7.8c0-4.4,3.4-7.8,8.7-7.8c5.2,0,8.4,3.4,8.5,7.8
+	C52.9,50.4,49.6,53.8,44.2,53.8z M108.4,104.4H92.3V81.1c0-6.1-2.5-10.2-8-10.2c-4.2,0-6.6,2.8-7.7,5.5c-0.4,1-0.3,2.3-0.3,3.7v24.3
+	H60.3c0,0,0.2-41.2,0-44.9h15.9v7.1c0.9-3.1,6-7.5,14.2-7.5c10.1,0,18,6.5,18,20.4V104.4z"/>
+</svg>
+</a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/3dsystems/" aria-label="Instagram"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     viewBox="0 0 142.8 142.4" enable-background="new 0 0 142.8 142.4" xml:space="preserve">
+<g>
+    <path fill="#FFFFFF" d="M88.8,56.8H95c1.1,0,2.1-0.9,2.1-2.1v-6.2c0-1.1-0.9-2.1-2.1-2.1h-6.2c-1.1,0-2.1,0.9-2.1,2.1v6.2
+		C86.7,55.9,87.6,56.8,88.8,56.8z"/>
+    <path fill="#FFFFFF" d="M92.4,71.3c0,11-9,20-20.1,20c-11.1,0-20.1-9-20.1-20c0-1.8,0.4-4.7,1.4-6.3h-8.2V96c0,1.1,0.9,2.1,2.1,2.1
+		H97c1.1,0,2.1-0.9,2.1-2.1V65h-8.2C92.2,66.6,92.4,69.5,92.4,71.3z"/>
+    <ellipse fill="#FFFFFF" cx="72.3" cy="71.3" rx="12.7" ry="12.7"/>
+    <path fill="#FFFFFF" d="M72.3,0C33,0,1.1,32,1.1,71.2c0,39.3,31.9,71.2,71.2,71.2c39.3,0,71.2-31.9,71.2-71.2
+		C143.5,32,111.5,0,72.3,0z M105.3,96.4c0,4.3-3.5,7.8-7.8,7.8H47.1c-4.3,0-7.8-3.5-7.8-7.8V46c0-4.3,3.5-7.8,7.8-7.8h50.3
+		c4.3,0,7.8,3.5,7.8,7.8V96.4z"/>
+</g>
+</svg>
+</a>
+            </li>
+        </ul>
+
+    <div class="policies-copyright">
+        <span><a href="/privacy-policy">Privacy Policy</a></span>
+        <span><a href="#meta-footer" id="ot-sdk-btn" class="ot-sdk-show-settings">Cookie Settings</a>  & <a href="/cookies" aria-label="Cookie Policy">Policy&nbsp;&nbsp;</span>
+        <span> <a href="/sales-terms-conditions">Sales Terms</a></span>
+        <span><a href="/term-use">Terms and Conditions</a></span>
+        <span class="copyright">Copyright &copy; 2026 3D Systems, Inc. All rights reserved.</span>
+    </div>
+</div>
+
+  </nav>
+
+  </div>
+
+                </div>
+            </footer>
+        
+        <a class="exit-off-canvas"></a>
+
+    </div>
+</div>
+
+  </div>
+
+
+<script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/85733","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"data":{"extlink":{"extTarget":true,"extTargetAppendNewWindowDisplay":true,"extTargetAppendNewWindowLabel":"(opens in a new window)","extTargetNoOverride":false,"extNofollow":false,"extTitleNoOverride":false,"extNoreferrer":true,"extFollowNoOverride":false,"extClass":"ext","extLabel":"(link is external)","extImgClass":false,"extSubdomains":false,"extExclude":"","extInclude":"","extCssExclude":"","extCssInclude":"","extCssExplicit":"","extAlert":false,"extAlertText":"This link will take you to an external web site. We are not responsible for their content.","extHideIcons":false,"mailtoClass":"mailto","telClass":"tel","mailtoLabel":"(link sends email)","telLabel":"(link is a phone number)","extUseFontAwesome":false,"extIconPlacement":"append","extPreventOrphan":false,"extPreventOrphanTextLike":true,"extFaLinkClasses":"fa fa-external-link","extFaMailtoClasses":"fa fa-envelope-o","extUseIcon":false,"extLinkIcon":"","extMailIcon":"","extTelIcon":"","extAdditionalLinkClasses":"","extAdditionalMailtoClasses":"","extAdditionalTelClasses":"","extFaTelClasses":"fa fa-phone","allowedDomains":[],"extExcludeNoreferrer":""}},"cloudflare":{"country":null},"TBMegaMenu":{"TBElementsCounter":{"column":null},"theme":"ddd","f2b2696d-b98d-41da-9f7f-6b22b7764286":{"arrows":""},"5938c8d7-ea49-4aa3-abdc-ce0f453af9a7":{"arrows":""}},"nodeType":"press_release","industries_markets":[],"user":{"uid":0,"permissionsHash":"30dc2428a5aaa6962f6c226f97084895ef8e5eb84b2980d89b7af44a37941020"}}</script>
+<script src="/core/assets/vendor/jquery/jquery.min.js?v=4.0.0"></script>
+<script src="/sites/default/files/js/js_UKYvaYjWVvA356orbRpU7HgcsL4cmcKPygJBjO1ke94.js?scope=footer&amp;delta=1&amp;language=en&amp;theme=ddd&amp;include=eJwtyNENwyAMBcCFoIyEDH5BJI6pjKnS7RtF_bxj5oSrymLkzYZ63mfgO7exlMn70Gj4gORZIW2LGuKEoPqwZ6f3enzj7IxCFnC5dD0S23qTvP4MXvKJRid0pUITP31BL3s"></script>
+
+  </js-bottom-placeholder>
+</body>
+</html>

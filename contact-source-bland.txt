@@ -1,0 +1,1651 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+<script>
+var gform;gform||(document.addEventListener("gform_main_scripts_loaded",function(){gform.scriptsLoaded=!0}),document.addEventListener("gform/theme/scripts_loaded",function(){gform.themeScriptsLoaded=!0}),window.addEventListener("DOMContentLoaded",function(){gform.domLoaded=!0}),gform={domLoaded:!1,scriptsLoaded:!1,themeScriptsLoaded:!1,isFormEditor:()=>"function"==typeof InitializeEditor,callIfLoaded:function(o){return!(!gform.domLoaded||!gform.scriptsLoaded||!gform.themeScriptsLoaded&&!gform.isFormEditor()||(gform.isFormEditor()&&console.warn("The use of gform.initializeOnLoaded() is deprecated in the form editor context and will be removed in Gravity Forms 3.1."),o(),0))},initializeOnLoaded:function(o){gform.callIfLoaded(o)||(document.addEventListener("gform_main_scripts_loaded",()=>{gform.scriptsLoaded=!0,gform.callIfLoaded(o)}),document.addEventListener("gform/theme/scripts_loaded",()=>{gform.themeScriptsLoaded=!0,gform.callIfLoaded(o)}),window.addEventListener("DOMContentLoaded",()=>{gform.domLoaded=!0,gform.callIfLoaded(o)}))},hooks:{action:{},filter:{}},addAction:function(o,r,e,t){gform.addHook("action",o,r,e,t)},addFilter:function(o,r,e,t){gform.addHook("filter",o,r,e,t)},doAction:function(o){gform.doHook("action",o,arguments)},applyFilters:function(o){return gform.doHook("filter",o,arguments)},removeAction:function(o,r){gform.removeHook("action",o,r)},removeFilter:function(o,r,e){gform.removeHook("filter",o,r,e)},addHook:function(o,r,e,t,n){null==gform.hooks[o][r]&&(gform.hooks[o][r]=[]);var d=gform.hooks[o][r];null==n&&(n=r+"_"+d.length),gform.hooks[o][r].push({tag:n,callable:e,priority:t=null==t?10:t})},doHook:function(r,o,e){var t;if(e=Array.prototype.slice.call(e,1),null!=gform.hooks[r][o]&&((o=gform.hooks[r][o]).sort(function(o,r){return o.priority-r.priority}),o.forEach(function(o){"function"!=typeof(t=o.callable)&&(t=window[t]),"action"==r?t.apply(null,e):e[0]=t.apply(null,e)})),"filter"==r)return e[0]},removeHook:function(o,r,t,n){var e;null!=gform.hooks[o][r]&&(e=(e=gform.hooks[o][r]).filter(function(o,r,e){return!!(null!=n&&n!=o.tag||null!=t&&t!=o.priority)}),gform.hooks[o][r]=e)}});
+</script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<meta name='robots' content='noindex, follow' />
+		<script>
+		(function(){
+			window.ecsSchemeConfig={systemAuto:false,darkLogoUrl:""};
+			var m=document.cookie.match(/(?:^|;\s*)ecs_color_scheme=([^;]+)/);
+			if(m&&m[1]==='alt'){
+				document.documentElement.setAttribute('data-ecs-scheme','alt');
+			}else if(!m&&false){
+				if(window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches){
+					document.documentElement.setAttribute('data-ecs-scheme','alt');
+				}
+			}
+		})();
+		</script>
+		
+	<!-- This site is optimized with the Yoast SEO plugin v28.6 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>Contact Us &#8212; Bland Landscaping</title>
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Contact Us &#8212; Bland Landscaping" />
+	<meta property="og:description" content="Call Us Our office hours are 8am-4pm, M-F. If we are unable to take your call, please leave a voicemail with your name, number, and a brief message. Raleigh-Durham(919) 387-0010 Charlotte-Mecklenburg(704) 887-0192 Piedmont Triad(336) 478-8687 Coastal Carolinas(910) 442-4700 Northern Florida(904) 716-0683" />
+	<meta property="og:url" content="https://blandlandscaping.com/contact/" />
+	<meta property="og:site_name" content="Bland Landscaping" />
+	<meta property="article:publisher" content="https://www.facebook.com/BlandLandscaping/" />
+	<meta property="article:modified_time" content="2026-05-19T19:16:42+00:00" />
+	<meta property="og:image" content="https://blandlandscaping.com/wp-content/uploads/2021/02/Bland-Landscaping-Splash-1.png" />
+	<meta property="og:image:width" content="1201" />
+	<meta property="og:image:height" content="631" />
+	<meta property="og:image:type" content="image/png" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@BLC_Landscaping" />
+	<meta name="twitter:label1" content="Est. reading time" />
+	<meta name="twitter:data1" content="1 minute" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"WebPage","@id":"https:\/\/blandlandscaping.com\/contact\/","url":"https:\/\/blandlandscaping.com\/contact\/","name":"Contact Us &#8212; Bland Landscaping","isPartOf":{"@id":"https:\/\/blandlandscaping.com\/#website"},"datePublished":"2021-01-14T15:37:42+00:00","dateModified":"2026-05-19T19:16:42+00:00","breadcrumb":{"@id":"https:\/\/blandlandscaping.com\/contact\/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https:\/\/blandlandscaping.com\/contact\/"]}]},{"@type":"BreadcrumbList","@id":"https:\/\/blandlandscaping.com\/contact\/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/blandlandscaping.com\/"},{"@type":"ListItem","position":2,"name":"Contact Us"}]},{"@type":"WebSite","@id":"https:\/\/blandlandscaping.com\/#website","url":"https:\/\/blandlandscaping.com\/","name":"Bland Landscaping","description":"Expert Commercial Landscaping Services","publisher":{"@id":"https:\/\/blandlandscaping.com\/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/blandlandscaping.com\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https:\/\/blandlandscaping.com\/#organization","name":"Bland Landscaping Co.","url":"https:\/\/blandlandscaping.com\/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https:\/\/blandlandscaping.com\/#\/schema\/logo\/image\/","url":"https:\/\/blandlandscaping.com\/wp-content\/uploads\/2021\/02\/Bland-Landscaping-Logo-Primary-2C.svg","contentUrl":"https:\/\/blandlandscaping.com\/wp-content\/uploads\/2021\/02\/Bland-Landscaping-Logo-Primary-2C.svg","width":198,"height":62,"caption":"Bland Landscaping Co."},"image":{"@id":"https:\/\/blandlandscaping.com\/#\/schema\/logo\/image\/"},"sameAs":["https:\/\/www.facebook.com\/BlandLandscaping\/","https:\/\/x.com\/BLC_Landscaping","https:\/\/www.instagram.com\/blandlandscapingcompany\/","http:\/\/www.linkedin.com\/company\/2712722"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//use.fontawesome.com' />
+<link rel="alternate" type="application/rss+xml" title="Bland Landscaping &raquo; Feed" href="https://blandlandscaping.com/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://blandlandscaping.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fblandlandscaping.com%2Fcontact%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://blandlandscaping.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fblandlandscaping.com%2Fcontact%2F&#038;format=xml" />
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-styles-placeholder-inline-css">
+:root { --wp-internal-comment: "Placeholder for wp_hoist_late_printed_styles() to replace with the block styles printed at wp_footer." }
+/*# sourceURL=wp-block-styles-placeholder-inline-css */
+</style>
+<style id="font-awesome-svg-styles-default-inline-css">
+.svg-inline--fa {
+  display: inline-block;
+  height: 1em;
+  overflow: visible;
+  vertical-align: -.125em;
+}
+/*# sourceURL=font-awesome-svg-styles-default-inline-css */
+</style>
+<link rel='stylesheet' id='font-awesome-svg-styles-css' href='https://blandlandscaping.com/wp-content/uploads/font-awesome/v5.15.1/css/svg-with-js.css' media='all' />
+<style id="font-awesome-svg-styles-inline-css">
+   .wp-block-font-awesome-icon svg::before,
+   .wp-rich-text-font-awesome-icon svg::before {content: unset;}
+/*# sourceURL=font-awesome-svg-styles-inline-css */
+</style>
+<link rel='stylesheet' id='font-awesome-official-css' href='https://use.fontawesome.com/releases/v5.15.1/css/all.css' media='all' integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous" />
+<link rel='stylesheet' id='font-awesome-official-v4shim-css' href='https://use.fontawesome.com/releases/v5.15.1/css/v4-shims.css' media='all' integrity="sha384-WCuYjm/u5NsK4s/NfnJeHuMj6zzN2HFyjhBu/SnZJj7eZ6+ds4zqIM3wYgL59Clf" crossorigin="anonymous" />
+<style id="font-awesome-official-v4shim-inline-css">
+@font-face {
+font-family: "FontAwesome";
+font-display: block;
+src: url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-brands-400.eot"),
+		url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"),
+		url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-brands-400.woff2") format("woff2"),
+		url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-brands-400.woff") format("woff"),
+		url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-brands-400.ttf") format("truetype"),
+		url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-brands-400.svg#fontawesome") format("svg");
+}
+
+@font-face {
+font-family: "FontAwesome";
+font-display: block;
+src: url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-solid-900.eot"),
+		url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"),
+		url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-solid-900.woff2") format("woff2"),
+		url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-solid-900.woff") format("woff"),
+		url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-solid-900.ttf") format("truetype"),
+		url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-solid-900.svg#fontawesome") format("svg");
+}
+
+@font-face {
+font-family: "FontAwesome";
+font-display: block;
+src: url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-regular-400.eot"),
+		url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"),
+		url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-regular-400.woff2") format("woff2"),
+		url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-regular-400.woff") format("woff"),
+		url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-regular-400.ttf") format("truetype"),
+		url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-regular-400.svg#fontawesome") format("svg");
+unicode-range: U+F004-F005,U+F007,U+F017,U+F022,U+F024,U+F02E,U+F03E,U+F044,U+F057-F059,U+F06E,U+F070,U+F075,U+F07B-F07C,U+F080,U+F086,U+F089,U+F094,U+F09D,U+F0A0,U+F0A4-F0A7,U+F0C5,U+F0C7-F0C8,U+F0E0,U+F0EB,U+F0F3,U+F0F8,U+F0FE,U+F111,U+F118-F11A,U+F11C,U+F133,U+F144,U+F146,U+F14A,U+F14D-F14E,U+F150-F152,U+F15B-F15C,U+F164-F165,U+F185-F186,U+F191-F192,U+F1AD,U+F1C1-F1C9,U+F1CD,U+F1D8,U+F1E3,U+F1EA,U+F1F6,U+F1F9,U+F20A,U+F247-F249,U+F24D,U+F254-F25B,U+F25D,U+F267,U+F271-F274,U+F279,U+F28B,U+F28D,U+F2B5-F2B6,U+F2B9,U+F2BB,U+F2BD,U+F2C1-F2C2,U+F2D0,U+F2D2,U+F2DC,U+F2ED,U+F328,U+F358-F35B,U+F3A5,U+F3D1,U+F410,U+F4AD;
+}
+@font-face {
+font-family: "FontAwesome";
+font-display: block;
+src: url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-brands-400.eot"),
+		url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"),
+		url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-brands-400.woff2") format("woff2"),
+		url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-brands-400.woff") format("woff"),
+		url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-brands-400.ttf") format("truetype"),
+		url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-brands-400.svg#fontawesome") format("svg");
+}
+
+@font-face {
+font-family: "FontAwesome";
+font-display: block;
+src: url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-solid-900.eot"),
+		url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"),
+		url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-solid-900.woff2") format("woff2"),
+		url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-solid-900.woff") format("woff"),
+		url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-solid-900.ttf") format("truetype"),
+		url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-solid-900.svg#fontawesome") format("svg");
+}
+
+@font-face {
+font-family: "FontAwesome";
+font-display: block;
+src: url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-regular-400.eot"),
+		url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"),
+		url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-regular-400.woff2") format("woff2"),
+		url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-regular-400.woff") format("woff"),
+		url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-regular-400.ttf") format("truetype"),
+		url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-regular-400.svg#fontawesome") format("svg");
+unicode-range: U+F004-F005,U+F007,U+F017,U+F022,U+F024,U+F02E,U+F03E,U+F044,U+F057-F059,U+F06E,U+F070,U+F075,U+F07B-F07C,U+F080,U+F086,U+F089,U+F094,U+F09D,U+F0A0,U+F0A4-F0A7,U+F0C5,U+F0C7-F0C8,U+F0E0,U+F0EB,U+F0F3,U+F0F8,U+F0FE,U+F111,U+F118-F11A,U+F11C,U+F133,U+F144,U+F146,U+F14A,U+F14D-F14E,U+F150-F152,U+F15B-F15C,U+F164-F165,U+F185-F186,U+F191-F192,U+F1AD,U+F1C1-F1C9,U+F1CD,U+F1D8,U+F1E3,U+F1EA,U+F1F6,U+F1F9,U+F20A,U+F247-F249,U+F24D,U+F254-F25B,U+F25D,U+F267,U+F271-F274,U+F279,U+F28B,U+F28D,U+F2B5-F2B6,U+F2B9,U+F2BB,U+F2BD,U+F2C1-F2C2,U+F2D0,U+F2D2,U+F2DC,U+F2ED,U+F328,U+F358-F35B,U+F3A5,U+F3D1,U+F410,U+F4AD;
+}
+/*# sourceURL=font-awesome-official-v4shim-inline-css */
+</style>
+<style id="wp-global-styles-placeholder-inline-css">
+:root { --wp-internal-comment: "Placeholder for wp_hoist_late_printed_styles() to replace with the global-styles printed at wp_footer." }
+/*# sourceURL=wp-global-styles-placeholder-inline-css */
+</style>
+<link rel='stylesheet' id='cmplz-general-css' href='https://blandlandscaping.com/wp-content/plugins/complianz-gdpr-premium/assets/css/cookieblocker.min.css?ver=1790772087' media='all' />
+<link rel='stylesheet' id='hello-elementor-css' href='https://blandlandscaping.com/wp-content/themes/hello-elementor/assets/css/reset.css?ver=3.5.1' media='all' />
+<link rel='stylesheet' id='hello-elementor-theme-style-css' href='https://blandlandscaping.com/wp-content/themes/hello-elementor/assets/css/theme.css?ver=3.5.1' media='all' />
+<link rel='stylesheet' id='hello-elementor-header-footer-css' href='https://blandlandscaping.com/wp-content/themes/hello-elementor/assets/css/header-footer.css?ver=3.5.1' media='all' />
+<link rel='stylesheet' id='ecs-color-scheme-css' href='https://blandlandscaping.com/wp-content/plugins/ele-custom-skin/modules/color-scheme/assets/css/ecs-color-scheme.min.css?ver=4.3.11' media='all' />
+<link rel='stylesheet' id='ecs-container-layout-css' href='https://blandlandscaping.com/wp-content/plugins/ele-custom-skin/modules/container-layout/assets/css/ecs-container-layout.min.css?ver=4.3.11' media='all' />
+<link rel='stylesheet' id='swiper-css' href='https://blandlandscaping.com/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=8.4.5' media='all' />
+<link rel='stylesheet' id='e-swiper-css' href='https://blandlandscaping.com/wp-content/plugins/elementor/assets/css/conditionals/e-swiper.min.css?ver=4.3.3' media='all' />
+<link rel='stylesheet' id='ecs-mobile-menu-css' href='https://blandlandscaping.com/wp-content/plugins/ele-custom-skin/modules/mobile-menu/assets/css/ecs-mobile-menu.min.css?ver=4.3.11' media='all' />
+<link rel='stylesheet' id='ecs-editorial-text-css' href='https://blandlandscaping.com/wp-content/plugins/ele-custom-skin/modules/editorial-text/assets/css/ecs-editorial-text.min.css?ver=4.3.11' media='all' />
+<link rel='stylesheet' id='elementor-frontend-css' href='https://blandlandscaping.com/wp-content/uploads/elementor/css/custom-frontend.min.css?ver=1791204840' media='all' />
+<link rel='stylesheet' id='widget-alert-css' href='https://blandlandscaping.com/wp-content/uploads/elementor/css/custom-widget-alert.min.css?ver=1791204840' media='all' />
+<link rel='stylesheet' id='e-animation-grow-css' href='https://blandlandscaping.com/wp-content/plugins/elementor/assets/lib/animations/styles/e-animation-grow.min.css?ver=4.3.3' media='all' />
+<link rel='stylesheet' id='widget-image-css' href='https://blandlandscaping.com/wp-content/plugins/elementor/assets/css/widget-image.min.css?ver=4.3.3' media='all' />
+<link rel='stylesheet' id='widget-nav-menu-css' href='https://blandlandscaping.com/wp-content/uploads/elementor/css/custom-pro-widget-nav-menu.min.css?ver=1791204840' media='all' />
+<link rel='stylesheet' id='widget-search-form-css' href='https://blandlandscaping.com/wp-content/plugins/elementor-pro/assets/css/widget-search-form.min.css?ver=4.3.1' media='all' />
+<link rel='stylesheet' id='elementor-icons-shared-0-css' href='https://blandlandscaping.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3' media='all' />
+<link rel='stylesheet' id='elementor-icons-fa-solid-css' href='https://blandlandscaping.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.15.3' media='all' />
+<link rel='stylesheet' id='widget-heading-css' href='https://blandlandscaping.com/wp-content/plugins/elementor/assets/css/widget-heading.min.css?ver=4.3.3' media='all' />
+<link rel='stylesheet' id='widget-social-icons-css' href='https://blandlandscaping.com/wp-content/plugins/elementor/assets/css/widget-social-icons.min.css?ver=4.3.3' media='all' />
+<link rel='stylesheet' id='e-apple-webkit-css' href='https://blandlandscaping.com/wp-content/uploads/elementor/css/custom-apple-webkit.min.css?ver=1791204840' media='all' />
+<link rel='stylesheet' id='e-animation-fadeIn-css' href='https://blandlandscaping.com/wp-content/plugins/elementor/assets/lib/animations/styles/fadeIn.min.css?ver=4.3.3' media='all' />
+<link rel='stylesheet' id='elementor-icons-css' href='https://blandlandscaping.com/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.54.0' media='all' />
+<link rel='stylesheet' id='elementor-post-7-css' href='https://blandlandscaping.com/wp-content/uploads/elementor/css/post-7.css?ver=1791204841' media='all' />
+<link rel='stylesheet' id='widget-spacer-css' href='https://blandlandscaping.com/wp-content/plugins/elementor/assets/css/widget-spacer.min.css?ver=4.3.3' media='all' />
+<link rel='stylesheet' id='widget-divider-css' href='https://blandlandscaping.com/wp-content/plugins/elementor/assets/css/widget-divider.min.css?ver=4.3.3' media='all' />
+<link rel='stylesheet' id='elementor-post-1794-css' href='https://blandlandscaping.com/wp-content/uploads/elementor/css/post-1794.css?ver=1791204863' media='all' />
+<link rel='stylesheet' id='elementor-post-24-css' href='https://blandlandscaping.com/wp-content/uploads/elementor/css/post-24.css?ver=1791204841' media='all' />
+<link rel='stylesheet' id='elementor-post-27-css' href='https://blandlandscaping.com/wp-content/uploads/elementor/css/post-27.css?ver=1791204841' media='all' />
+<link rel='stylesheet' id='elementor-post-1812-css' href='https://blandlandscaping.com/wp-content/uploads/elementor/css/post-1812.css?ver=1791204863' media='all' />
+<link rel='stylesheet' id='gforms_reset_css-css' href='https://blandlandscaping.com/wp-content/plugins/gravityforms/legacy/css/formreset.min.css?ver=3.1.3' media='all' />
+<link rel='stylesheet' id='gforms_formsmain_css-css' href='https://blandlandscaping.com/wp-content/plugins/gravityforms/legacy/css/formsmain.min.css?ver=3.1.3' media='all' />
+<link rel='stylesheet' id='gforms_ready_class_css-css' href='https://blandlandscaping.com/wp-content/plugins/gravityforms/legacy/css/readyclass.min.css?ver=3.1.3' media='all' />
+<link rel='stylesheet' id='gforms_browsers_css-css' href='https://blandlandscaping.com/wp-content/plugins/gravityforms/legacy/css/browsers.min.css?ver=3.1.3' media='all' />
+<link rel='stylesheet' id='ecs-styles-css' href='https://blandlandscaping.com/wp-content/plugins/ele-custom-skin/assets/css/ecs-style.min.css?ver=4.3.11' media='all' />
+<link rel='stylesheet' id='elementor-post-2283-css' href='https://blandlandscaping.com/wp-content/uploads/elementor/css/post-2283.css?ver=1789484149' media='all' />
+<link rel='stylesheet' id='cmplz-banner-1-optout-css' href='https://blandlandscaping.com/wp-content/uploads/complianz/css/banner-1-optout.css?ver=1790772102' media='all' />
+<link rel='stylesheet' id='elementor-gf-local-inter-css' href='https://blandlandscaping.com/wp-content/uploads/elementor/google-fonts/css/inter.css?ver=1742476654' media='all' />
+<link rel='stylesheet' id='elementor-gf-local-merriweather-css' href='https://blandlandscaping.com/wp-content/uploads/elementor/google-fonts/css/merriweather.css?ver=1742476660' media='all' />
+<link rel='stylesheet' id='elementor-icons-fa-brands-css' href='https://blandlandscaping.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=5.15.3' media='all' />
+<script id="jquery-core-js" src="https://blandlandscaping.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script id="jquery-migrate-js" src="https://blandlandscaping.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<script id="ecs-mobile-menu-js" src="https://blandlandscaping.com/wp-content/plugins/ele-custom-skin/modules/mobile-menu/assets/js/ecs-mobile-menu.min.js?ver=4.3.11"></script>
+<script id="gform_json-js" defer='defer' src="https://blandlandscaping.com/wp-content/plugins/gravityforms/js/jquery.json.min.js?ver=3.1.3"></script>
+<script id="gform_gravityforms-js-extra">
+var gf_global = {"gf_currency_config":{"name":"U.S. Dollar","symbol_left":"$","symbol_right":"","symbol_padding":"","thousand_separator":",","decimal_separator":".","decimals":2,"code":"USD"},"base_url":"https://blandlandscaping.com/wp-content/plugins/gravityforms","number_formats":[],"version_hash":"074e74759654db7f799e8ed83988a88f","countries":{"AF":"Afghanistan","AX":"\u00c5land Islands","AL":"Albania","DZ":"Algeria","AS":"American Samoa","AD":"Andorra","AO":"Angola","AI":"Anguilla","AQ":"Antarctica","AG":"Antigua and Barbuda","AR":"Argentina","AM":"Armenia","AW":"Aruba","AU":"Australia","AT":"Austria","AZ":"Azerbaijan","BS":"Bahamas","BH":"Bahrain","BD":"Bangladesh","BB":"Barbados","BY":"Belarus","BE":"Belgium","BZ":"Belize","BJ":"Benin","BM":"Bermuda","BT":"Bhutan","BO":"Bolivia","BQ":"Bonaire, Sint Eustatius and Saba","BA":"Bosnia and Herzegovina","BW":"Botswana","BV":"Bouvet Island","BR":"Brazil","IO":"British Indian Ocean Territory","BN":"Brunei Darussalam","BG":"Bulgaria","BF":"Burkina Faso","BI":"Burundi","CV":"Cabo Verde","KH":"Cambodia","CM":"Cameroon","CA":"Canada","KY":"Cayman Islands","CF":"Central African Republic","TD":"Chad","CL":"Chile","CN":"China","CX":"Christmas Island","CC":"Cocos Islands","CO":"Colombia","KM":"Comoros","CD":"Congo, Democratic Republic of the","CG":"Congo","CK":"Cook Islands","CR":"Costa Rica","CI":"C\u00f4te d'Ivoire","HR":"Croatia","CU":"Cuba","CW":"Cura\u00e7ao","CY":"Cyprus","CZ":"Czechia","DK":"Denmark","DJ":"Djibouti","DM":"Dominica","DO":"Dominican Republic","EC":"Ecuador","EG":"Egypt","SV":"El Salvador","GQ":"Equatorial Guinea","ER":"Eritrea","EE":"Estonia","SZ":"Eswatini","ET":"Ethiopia","FK":"Falkland Islands","FO":"Faroe Islands","FJ":"Fiji","FI":"Finland","FR":"France","GF":"French Guiana","PF":"French Polynesia","TF":"French Southern Territories","GA":"Gabon","GM":"Gambia","GE":"Georgia","DE":"Germany","GH":"Ghana","GI":"Gibraltar","GR":"Greece","GL":"Greenland","GD":"Grenada","GP":"Guadeloupe","GU":"Guam","GT":"Guatemala","GG":"Guernsey","GN":"Guinea","GW":"Guinea-Bissau","GY":"Guyana","HT":"Haiti","HM":"Heard Island and McDonald Islands","VA":"Holy See","HN":"Honduras","HK":"Hong Kong","HU":"Hungary","IS":"Iceland","IN":"India","ID":"Indonesia","IR":"Iran","IQ":"Iraq","IE":"Ireland","IM":"Isle of Man","IL":"Israel","IT":"Italy","JM":"Jamaica","JP":"Japan","JE":"Jersey","JO":"Jordan","KZ":"Kazakhstan","KE":"Kenya","KI":"Kiribati","KP":"Korea, Democratic People's Republic of","KR":"Korea, Republic of","KW":"Kuwait","KG":"Kyrgyzstan","LA":"Lao People's Democratic Republic","LV":"Latvia","LB":"Lebanon","LS":"Lesotho","LR":"Liberia","LY":"Libya","LI":"Liechtenstein","LT":"Lithuania","LU":"Luxembourg","MO":"Macao","MG":"Madagascar","MW":"Malawi","MY":"Malaysia","MV":"Maldives","ML":"Mali","MT":"Malta","MH":"Marshall Islands","MQ":"Martinique","MR":"Mauritania","MU":"Mauritius","YT":"Mayotte","MX":"Mexico","FM":"Micronesia","MD":"Moldova","MC":"Monaco","MN":"Mongolia","ME":"Montenegro","MS":"Montserrat","MA":"Morocco","MZ":"Mozambique","MM":"Myanmar","NA":"Namibia","NR":"Nauru","NP":"Nepal","NL":"Netherlands","NC":"New Caledonia","NZ":"New Zealand","NI":"Nicaragua","NE":"Niger","NG":"Nigeria","NU":"Niue","NF":"Norfolk Island","MK":"North Macedonia","MP":"Northern Mariana Islands","NO":"Norway","OM":"Oman","PK":"Pakistan","PW":"Palau","PS":"Palestine, State of","PA":"Panama","PG":"Papua New Guinea","PY":"Paraguay","PE":"Peru","PH":"Philippines","PN":"Pitcairn","PL":"Poland","PT":"Portugal","PR":"Puerto Rico","QA":"Qatar","RE":"R\u00e9union","RO":"Romania","RU":"Russian Federation","RW":"Rwanda","BL":"Saint Barth\u00e9lemy","SH":"Saint Helena, Ascension and Tristan da Cunha","KN":"Saint Kitts and Nevis","LC":"Saint Lucia","MF":"Saint Martin","PM":"Saint Pierre and Miquelon","VC":"Saint Vincent and the Grenadines","WS":"Samoa","SM":"San Marino","ST":"Sao Tome and Principe","SA":"Saudi Arabia","SN":"Senegal","RS":"Serbia","SC":"Seychelles","SL":"Sierra Leone","SG":"Singapore","SX":"Sint Maarten","SK":"Slovakia","SI":"Slovenia","SB":"Solomon Islands","SO":"Somalia","ZA":"South Africa","GS":"South Georgia and the South Sandwich Islands","SS":"South Sudan","ES":"Spain","LK":"Sri Lanka","SD":"Sudan","SR":"Suriname","SJ":"Svalbard and Jan Mayen","SE":"Sweden","CH":"Switzerland","SY":"Syria Arab Republic","TW":"Taiwan","TJ":"Tajikistan","TZ":"Tanzania, the United Republic of","TH":"Thailand","TL":"Timor-Leste","TG":"Togo","TK":"Tokelau","TO":"Tonga","TT":"Trinidad and Tobago","TN":"Tunisia","TR":"T\u00fcrkiye","TM":"Turkmenistan","TC":"Turks and Caicos Islands","TV":"Tuvalu","UG":"Uganda","UA":"Ukraine","AE":"United Arab Emirates","GB":"United Kingdom","US":"United States","UY":"Uruguay","UM":"US Minor Outlying Islands","UZ":"Uzbekistan","VU":"Vanuatu","VE":"Venezuela","VN":"Viet Nam","VG":"Virgin Islands, British","VI":"Virgin Islands, U.S.","WF":"Wallis and Futuna","EH":"Western Sahara","YE":"Yemen","ZM":"Zambia","ZW":"Zimbabwe"},"strings":{"newRowAdded":"New row added.","rowRemoved":"Row removed","formSaved":"The form has been saved.  The content contains the link to return and complete the form."}};
+var gform_i18n = {"datepicker":{"wdOffset":1,"helpTextShort":"Press F1 for help","helpText":"Press the arrow keys to navigate by day, PageUp and PageDown to navigate by month, Alt+PageUp and Alt+PageDown to navigate by year, or Escape to cancel.","openOnFocusHelpText":"Press Down arrow to browse the calendar, or Escape to close.","tooltipTxt":"Press Escape to cancel","disabledTxt":"Disabled","markedTxt":"Selected","prevTxt":"Previous","nextTxt":"Next","monthTxt":"Month","yearTxt":"Year","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"days":[{"s":"S","l":"Sunday"},{"s":"M","l":"Monday"},{"s":"T","l":"Tuesday"},{"s":"W","l":"Wednesday"},{"s":"T","l":"Thursday"},{"s":"F","l":"Friday"},{"s":"S","l":"Saturday"}]}};
+var gf_legacy_multi = {"1":"1"};
+var gform_gravityforms = {"strings":{"invalid_file_extension":"This type of file is not allowed. Must be one of the following:","file_uploaded":"File uploaded","delete_file":"Delete this file","in_progress":"in progress","file_exceeds_limit":"File exceeds size limit","illegal_extension":"This type of file is not allowed.","max_reached":"Maximum number of files reached","unknown_error":"There was a problem while saving the file on the server","currently_uploading":"Please wait for the uploading to complete","cancel":"Cancel","cancel_upload":"Cancel this upload","cancelled":"Cancelled","error":"Error","message":"Message"},"vars":{"images_url":"https://blandlandscaping.com/wp-content/plugins/gravityforms/images"}};
+//# sourceURL=gform_gravityforms-js-extra
+</script>
+<script id="gform_gravityforms-js-before">
+
+//# sourceURL=gform_gravityforms-js-before
+</script>
+<script id="gform_gravityforms-js" defer='defer' src="https://blandlandscaping.com/wp-content/plugins/gravityforms/js/gravityforms.min.js?ver=3.1.3"></script>
+<script id="gform_conditional_logic-js-extra">
+var gf_legacy = {"is_legacy":"1"};
+//# sourceURL=gform_conditional_logic-js-extra
+</script>
+<script id="gform_conditional_logic-js" defer='defer' src="https://blandlandscaping.com/wp-content/plugins/gravityforms/js/conditional_logic.min.js?ver=3.1.3"></script>
+<script id="gform_gravityforms_utils-js" defer='defer' src="https://blandlandscaping.com/wp-content/plugins/gravityforms/assets/js/dist/utils.min.js?ver=d7e103405223e60d2719f4c330fd11cf"></script>
+<script id="ecs_ajax_load-js-extra">
+var ecs_ajax_params = {"ajaxurl":"https://blandlandscaping.com/wp-admin/admin-ajax.php","posts":"{\"page\":0,\"pagename\":\"contact\",\"error\":\"\",\"m\":\"\",\"p\":0,\"post_parent\":\"\",\"subpost\":\"\",\"subpost_id\":\"\",\"attachment\":\"\",\"attachment_id\":0,\"name\":\"contact\",\"page_id\":0,\"second\":\"\",\"minute\":\"\",\"hour\":\"\",\"day\":0,\"monthnum\":0,\"year\":0,\"w\":0,\"category_name\":\"\",\"tag\":\"\",\"cat\":\"\",\"tag_id\":\"\",\"author\":\"\",\"author_name\":\"\",\"feed\":\"\",\"tb\":\"\",\"paged\":0,\"meta_key\":\"\",\"meta_value\":\"\",\"preview\":\"\",\"s\":\"\",\"sentence\":\"\",\"title\":\"\",\"fields\":\"all\",\"menu_order\":\"\",\"embed\":\"\",\"category__in\":[],\"category__not_in\":[],\"category__and\":[],\"post__in\":[],\"post__not_in\":[],\"post_name__in\":[],\"tag__in\":[],\"tag__not_in\":[],\"tag__and\":[],\"tag_slug__in\":[],\"tag_slug__and\":[],\"post_parent__in\":[],\"post_parent__not_in\":[],\"author__in\":[],\"author__not_in\":[],\"search_columns\":[],\"ignore_sticky_posts\":false,\"suppress_filters\":false,\"cache_results\":true,\"update_post_term_cache\":true,\"update_menu_item_cache\":false,\"lazy_load_term_meta\":true,\"update_post_meta_cache\":true,\"post_type\":\"\",\"posts_per_page\":12,\"nopaging\":false,\"comments_per_page\":\"50\",\"no_found_rows\":false,\"order\":\"DESC\"}","nonce":"79e21c42b4"};
+//# sourceURL=ecs_ajax_load-js-extra
+</script>
+<script id="ecs_ajax_load-js" src="https://blandlandscaping.com/wp-content/plugins/ele-custom-skin/assets/js/ecs_ajax_pagination.min.js?ver=4.3.11"></script>
+<script id="ecs-script-js" src="https://blandlandscaping.com/wp-content/plugins/ele-custom-skin/assets/js/ecs.min.js?ver=4.3.11"></script>
+<link rel="https://api.w.org/" href="https://blandlandscaping.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://blandlandscaping.com/wp-json/wp/v2/pages/1794" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://blandlandscaping.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 7.1.2" />
+<link rel='shortlink' href='https://blandlandscaping.com/?p=1794' />
+			<style>.cmplz-hidden {
+					display: none !important;
+				}</style>
+				<meta name="generator" content="Elementor 4.3.3; features: additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-auto">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0CQEJ9DX25"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0CQEJ9DX25');
+</script>
+			<style>
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+					background-image: none !important;
+				}
+				@media screen and (max-height: 1024px) {
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+				@media screen and (max-height: 640px) {
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+			</style>
+			<link rel="icon" href="https://blandlandscaping.com/wp-content/uploads/2021/01/cropped-Bland-Landscaping-Site-Icon-32x32.jpg" sizes="32x32" />
+<link rel="icon" href="https://blandlandscaping.com/wp-content/uploads/2021/01/cropped-Bland-Landscaping-Site-Icon-192x192.jpg" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://blandlandscaping.com/wp-content/uploads/2021/01/cropped-Bland-Landscaping-Site-Icon-180x180.jpg" />
+<meta name="msapplication-TileImage" content="https://blandlandscaping.com/wp-content/uploads/2021/01/cropped-Bland-Landscaping-Site-Icon-270x270.jpg" />
+<style id="wp-custom-css">
+.hide {
+    display: none;
+}
+
+/*GLOBAL TYPOGRAPHY*/
+
+.elementor hr {
+    margin: 40px 0;
+    background-color: transparent;
+    border: 2px solid #D9D2CB;
+}
+
+a {
+    transition: all .3s;
+}
+
+a:hover {
+    transition: all .3s;
+}
+
+.light-links a {
+    color: #92c957;
+}
+
+.light-links a:hover {
+    color: #caeca6;
+        text-decoration: underline;
+}
+
+.white-link a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.white-link a:hover {
+    color: #caeca6;
+}
+
+strong {
+    font-weight: bold;
+}
+
+figcaption {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.4;
+    font-style: italic;
+    font-weight: normal;
+    padding: 10px 0;
+}
+
+li::marker {
+    color: var( --e-global-color-accent );
+}
+
+blockquote {
+    font-size: 120%;
+    border-left: 5px solid var( --e-global-color-secondary );
+    margin: 25px 0;
+    padding-left: 20px;
+    font-weight: 300;
+    font-style: italic;
+}
+
+/*MAIN NAV*/
+.menu-item-2826 a {
+  border: 3px solid #FFC600;
+  padding: 12px 18px !important;
+}
+
+.menu-item-2826 a:hover {
+  border: 3px solid #FFC600;
+  padding: 12px 18px !important;
+  background-color: #FFC600;
+  color: var( --e-global-color-primary ) !important;
+}
+
+/*.menu-item-2826 ::after {
+  background-color: var( --e-global-color-secondary );
+  height: 0 !important;
+}*/
+
+/*.primary-nav .menu-item.menu-item-type-custom.menu-item-object-custom.menu-item-2826 .elementor-item.elementor-item-active {
+    color: #ffffff;
+}*/
+
+/*.primary-nav .menu-item {
+    padding-top: 8px;
+}*/
+
+/*FOOTER*/
+.footer-menu .elementor-item.elementor-item-active {
+    text-decoration: underline !important;
+}
+
+.footer-menu-topper a:hover {
+    color: #ffffff !important;
+    transition: all .3s;
+}
+
+/*BLOG*/
+
+/*Sidebar*/
+.blog-categories h5 {
+    margin-bottom: 15px;
+}
+
+.recent-posts ul {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.3;
+    letter-spacing: -0.2px;
+}
+
+.recent-posts li {
+    margin-bottom: 13px;
+}
+
+.recent-posts a {
+        text-decoration: none;
+}
+
+.recent-posts h5 {
+    display: none;
+}
+
+.recent-posts li::marker {
+    color: silver;
+    font-size: 19px;
+}
+
+.blog-sidebar .elementor-element.elementor-widget.elementor-widget-heading {
+    margin-bottom: 0;
+}
+
+/*Post Meta Links*/
+.elementor-kit-7 .post-meta a {
+    text-decoration: none;
+}
+
+/*Post Nav*/
+.elementor-post-navigation .elementor-post-navigation__link a {
+    max-width: 88%;
+    text-decoration: none;
+}
+
+/*FLIP BOXES*/
+.customer-box .elementor-flip-box__layer__inner {
+    background-color: rgba(255, 255, 255, .93) !important;
+    padding-top: 7px;
+}
+
+/*YELLOW LINKS*/
+.yellow-links a {
+    color: var( --e-global-color-secondary );
+    transition: all .3s;
+    text-decoration: underline;
+}
+
+.yellow-links a:hover {
+    color: var( --e-global-color-ad50321 );
+    transition: all .3s;
+}
+
+/*TEAM CARDS*/
+.team-role p, 
+.team-name p,
+.team-certs p {
+    margin: 0 !important;
+}
+
+.team-name.elementor-widget:not(:last-child) {
+    margin: 0;
+    padding: 10px 10px 5px;
+}
+
+.team-role.elementor-widget:not(:last-child) {
+    margin: 0;
+    padding: 5px 10px 8px;
+}
+
+.team-certs.elementor-widget:not(:last-child) {
+    margin: 0;
+    padding: 0 0 5px;
+}
+
+/*INLINE IMAGES*/
+
+@media (max-width: 767px) {
+    .alignright, 
+    .wp-caption.alignright,
+    .alignleft, 
+    .wp-caption.alignleft {
+        margin: 0 0 20px;
+            width: 100% !important;
+    }
+    
+    .wp-caption img {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .alignright, .wp-caption.alignright {
+        margin: 10px 0 30px 60px;
+    }
+}
+
+@media (min-width: 768px) {
+    .alignleft, .wp-caption.alignleft {
+        margin: 10px 40px 30px 0;
+    }
+}
+
+/* GRAVITY FORM STYLING*/
+
+.gform_wrapper h2.gsection_title {
+    margin: 0 !important;
+    padding: 0 0 5px !important;
+    letter-spacing: normal !important;
+}
+
+body .gform_wrapper form .gform_body ul,
+body .gform_wrapper form .gform_body ul li {
+    list-style-type: none !important;
+    list-style-image: none !important;
+    list-style: none !important;
+    background-image: none !important;
+    background: none !important;
+    border: none !important
+}
+
+.gform_wrapper.gf_browser_chrome select {
+    padding: 9px 0 9px 3px; 
+}
+.gform_wrapper.gf_browser_chrome .ginput_complex .ginput_right select, 
+.gform_wrapper.gf_browser_chrome .ginput_complex select {
+    text-indent: 2px;
+    line-height: 1.5em;
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+
+.gform_wrapper.gf_browser_gecko select {
+    padding: 9px;
+}
+
+.gform_body ul li.gfield_visibility_visible {
+    margin-top: 20px !important;
+}
+
+#field_1_9 {
+    margin: 0 !important;
+}
+
+.gform_wrapper input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]) {
+    padding: 8px;
+}
+
+.gform_wrapper.gf_browser_chrome .gfield_checkbox li input, 
+.gform_wrapper.gf_browser_chrome .gfield_checkbox li input[type=checkbox], 
+.gform_wrapper.gf_browser_chrome .gfield_radio li input[type=radio] {
+    margin-top: 0;
+}
+
+.gfield_checkbox label {
+    padding-left: 3px !important;
+}
+
+.gform_wrapper ul.gfield_checkbox li, 
+.gform_wrapper ul.gfield_radio li {
+    overflow: visible;
+}
+
+.gf_browser_safari select {
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg height='100pt' viewBox='0 0 100 100' width='100pt' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m88.602 25.891-38.602 48.219-38.602-48.219z'/%3E%3C/svg%3E");
+    background-position: right 4px center;
+    background-repeat: no-repeat;
+    background-size: 16px;
+    padding-right: 20px;
+}
+
+.gform_wrapper.gf_browser_safari .gfield_checkbox li input, 
+.gform_wrapper.gf_browser_safari .gfield_checkbox li input[type=checkbox], 
+.gform_wrapper.gf_browser_safari .gfield_radio li input[type=radio] {
+    margin-top: 0 !important;
+}
+
+.gfield_description {
+    font-style: italic;
+    font-size: 13px !important;
+    line-height: 1.1;
+    padding-bottom: 0 !important;
+}
+
+input[type="date"], 
+input[type="email"], 
+input[type="number"], 
+input[type="password"], 
+input[type="tel"], 
+input[type="text"], 
+input[type="url"], 
+select, 
+textarea {
+    border: 1px solid #372E2C4F;
+    font-size: 16px !important;
+}
+
+.gfield_label {
+    font-family: 'Inter', Helvetica, sans-serif;
+    font-weight: 700 !important;
+    font-size: 16px !important;
+    color: var( --e-global-color-primary);
+    padding: 0;
+}
+
+.gsection_title {
+    color: var( --e-global-color-primary ) !important;
+    font-family: 'Inter', Helvetica, sans-serif;
+    font-weight: 700 !important;
+    font-size: 31px !important;
+    border-bottom: 3px solid var( --e-global-color-secondary ) !important;
+}
+
+.ginput_container_address label,
+.ginput_container_name label {
+  font-size: 14px;
+    padding: 8px 0 0;
+}
+
+body .gform_wrapper .top_label div.ginput_container {
+    margin-top: 2px;
+}
+
+.gform_wrapper .gform_footer [type="submit"] {
+    color: #ffffff;
+    border: 3px solid var( --e-global-color-accent );
+    font-weight: 700;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin-top: 10px !important;
+}
+
+.gform_wrapper .gform_footer [type="submit"]:hover {
+    color: var( --e-global-color-accent ) !important;
+    background-color: #ffffff !important;
+    border: 3px solid var( --e-global-color-accent );
+    transition: all .3s;
+}
+
+#field_1_15,
+#field_1_11, 
+#field_1_10 {
+    padding: 15px 0 0;
+}
+
+/*PRIVACY POLICY FIXES*/
+.page-id-3230 .elementor-widget-theme-post-content {
+    padding: 0 10px 50px;
+}
+
+.page-id-3230 ol li {
+    padding: 3px 0;
+}
+
+/*CALL TO ACTION CARD STYLING*/
+
+.cta-cards a {
+    text-decoration: none;
+        transition: all .4s;
+}
+
+.cta-cards .elementor-cta__title {  
+    color: var( --e-global-color-13b04cc ) !important;
+}
+
+.cta-cards .elementor-cta__title:hover {    
+    color: var( --e-global-color-accent ) !important;
+}
+
+.cta-cards .elementor-cta__button.elementor-button.elementor-size-xs {
+    text-transform: capitalize;
+}
+
+.cta-cards .elementor-cta__button.elementor-button.elementor-size-xs:hover {
+    transform: scale(1.04);
+    transition: all .4s;
+}
+
+.cta-boxless-button .elementor-cta__button.elementor-button.elementor-size-xs {
+    border: 0;
+    text-transform: capitalize;
+}
+
+.cta-boxless-button .elementor-cta__button.elementor-button.elementor-size-xs:hover {
+    transform: scale(1.15);
+    transition: all .4s;
+}
+
+</style>
+</head>
+<body class="wp-singular page-template-default page page-id-1794 wp-custom-logo wp-embed-responsive wp-theme-hello-elementor hello-elementor-default elementor-default elementor-template-full-width elementor-kit-7 elementor-page elementor-page-1794 elementor-page-1812">
+
+
+<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+		<header data-elementor-type="header" data-elementor-id="24" class="elementor elementor-24 elementor-location-header" data-elementor-post-type="elementor_library">
+					<section class="elementor-section elementor-top-section elementor-element elementor-element-bf68ff0 elementor-section-stretched hide elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="bf68ff0" data-element_type="section" data-e-type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-9e64727" data-id="9e64727" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-342407d elementor-widget__width-inherit dark-links elementor-alert-info elementor-widget elementor-widget-alert" data-id="342407d" data-element_type="widget" data-e-type="widget" data-widget_type="alert.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-alert" role="alert">
+
+			
+						<span class="elementor-alert-description">Big News: <a href="https://blandlandscaping.com/2026/08/bland-landscaping-co-expands-in-south-carolina/">We’ve acquired Charleston Grounds Management &amp; Clear Lakes and Wetland Services in South Carolina!</a></span>
+			
+						<button type="button" class="elementor-alert-dismiss" aria-label="Dismiss this alert.">
+									<span aria-hidden="true">&times;</span>
+							</button>
+			
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-22db8432 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="22db8432" data-element_type="section" data-e-type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;none&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-a67e234" data-id="a67e234" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-3e25a81 elementor-widget elementor-widget-theme-site-logo elementor-widget-image" data-id="3e25a81" data-element_type="widget" data-e-type="widget" data-widget_type="theme-site-logo.default">
+				<div class="elementor-widget-container">
+											<a href="https://blandlandscaping.com">
+			<img width="198" height="62" src="https://blandlandscaping.com/wp-content/uploads/2021/01/Bland-Landscaping-Logo-Primary-KO-And-Yellow.svg" class="elementor-animation-grow attachment-full size-full wp-image-1779" alt="Bland Landscaping" />				</a>
+											</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-10ea3b0e" data-id="10ea3b0e" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap">
+							</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-628033b" data-id="628033b" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-1bd42bc ecs-toggle-align-right primary-nav elementor-hidden-tablet elementor-hidden-mobile ecs-nav-layout-dropdown ecs-nav-layout-horizontal ecs-nav-layout-horizontal elementor-nav-menu--dropdown-tablet e--pointer-underline e--animation-fade elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu" data-id="1bd42bc" data-element_type="widget" data-e-type="widget" data-settings="{&quot;layout_mobile&quot;:&quot;dropdown&quot;,&quot;layout_tablet&quot;:&quot;horizontal&quot;,&quot;layout&quot;:&quot;horizontal&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;i class=\&quot;fas fa-caret-down\&quot; aria-hidden=\&quot;true\&quot;&gt;&lt;\/i&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;toggle&quot;:&quot;burger&quot;}" data-aria-label="primary-nav" data-widget_type="nav-menu.default">
+				<div class="elementor-widget-container">
+								<nav aria-label="primary-nav" aria-label="Menu" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-underline e--animation-fade">
+				<ul id="menu-1-1bd42bc" class="elementor-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-255"><a href="https://blandlandscaping.com/landscaping-services/" class="elementor-item">Services</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-256"><a href="https://blandlandscaping.com/company/service-areas/" class="elementor-item">Service Areas</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1933"><a href="https://blandlandscaping.com/company/careers/" class="elementor-item">Careers</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2826"><a href="https://blandlandscaping.com/contact/?request_quote=Request%20a%20Quote" class="elementor-item">Get a Quote</a></li>
+</ul>			</nav>
+					<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false">
+			<i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--open eicon-menu-bar"></i><i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--close eicon-close"></i>		</div>
+					<nav aria-label="primary-nav" class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
+				<ul id="menu-2-1bd42bc" class="elementor-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-255"><a href="https://blandlandscaping.com/landscaping-services/" class="elementor-item" tabindex="-1">Services</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-256"><a href="https://blandlandscaping.com/company/service-areas/" class="elementor-item" tabindex="-1">Service Areas</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1933"><a href="https://blandlandscaping.com/company/careers/" class="elementor-item" tabindex="-1">Careers</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2826"><a href="https://blandlandscaping.com/contact/?request_quote=Request%20a%20Quote" class="elementor-item" tabindex="-1">Get a Quote</a></li>
+</ul>			</nav>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-9c55805 ecs-nav-layout-dropdown ecs-toggle-align-right elementor-hidden-desktop ecs-nav-layout-dropdown elementor-widget__width-initial elementor-hidden-widescreen ecs-nav-layout-horizontal elementor-nav-menu--dropdown-tablet e--pointer-underline e--animation-fade elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu" data-id="9c55805" data-element_type="widget" data-e-type="widget" data-settings="{&quot;layout_mobile&quot;:&quot;dropdown&quot;,&quot;layout_tablet&quot;:&quot;dropdown&quot;,&quot;layout&quot;:&quot;horizontal&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;i class=\&quot;fas fa-caret-down\&quot; aria-hidden=\&quot;true\&quot;&gt;&lt;\/i&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;toggle&quot;:&quot;burger&quot;}" data-widget_type="nav-menu.default">
+				<div class="elementor-widget-container">
+								<nav aria-label="Mobile Nav" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-underline e--animation-fade">
+				<ul id="menu-1-9c55805" class="elementor-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3991"><a href="https://blandlandscaping.com/landscaping-services/" class="elementor-item">Services</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3982"><a href="https://blandlandscaping.com/company/service-areas/" class="elementor-item">Service Areas</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3979"><a href="https://blandlandscaping.com/company/careers/" class="elementor-item">Careers</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3978"><a href="https://blandlandscaping.com/company/" class="elementor-item">Our Company</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3977"><a href="https://blandlandscaping.com/news/" class="elementor-item">News</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4900"><a href="https://blandlandscaping.com/contact/?request_quote=Request%20a%20Quote" class="elementor-item">Get a Quote</a></li>
+</ul>			</nav>
+					<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false">
+			<i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--open eicon-menu-bar"></i><i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--close eicon-close"></i>		</div>
+					<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
+				<ul id="menu-2-9c55805" class="elementor-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3991"><a href="https://blandlandscaping.com/landscaping-services/" class="elementor-item" tabindex="-1">Services</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3982"><a href="https://blandlandscaping.com/company/service-areas/" class="elementor-item" tabindex="-1">Service Areas</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3979"><a href="https://blandlandscaping.com/company/careers/" class="elementor-item" tabindex="-1">Careers</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3978"><a href="https://blandlandscaping.com/company/" class="elementor-item" tabindex="-1">Our Company</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3977"><a href="https://blandlandscaping.com/news/" class="elementor-item" tabindex="-1">News</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4900"><a href="https://blandlandscaping.com/contact/?request_quote=Request%20a%20Quote" class="elementor-item" tabindex="-1">Get a Quote</a></li>
+</ul>			</nav>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-044b67b" data-id="044b67b" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-ad4d2a8 elementor-search-form--skin-full_screen search elementor-widget elementor-widget-search-form" data-id="ad4d2a8" data-element_type="widget" data-e-type="widget" data-settings="{&quot;skin&quot;:&quot;full_screen&quot;}" data-widget_type="search-form.default">
+				<div class="elementor-widget-container">
+							<search role="search">
+			<form class="elementor-search-form" action="https://blandlandscaping.com" method="get">
+												<div class="elementor-search-form__toggle" role="button" tabindex="0" aria-label="Search">
+					<i aria-hidden="true" class="fas fa-search"></i>				</div>
+								<div class="elementor-search-form__container">
+					<label class="elementor-screen-only" for="elementor-search-form-ad4d2a8">Search</label>
+
+					
+					<input id="elementor-search-form-ad4d2a8" placeholder="Search..." class="elementor-search-form__input" id="search-s-ad4d2a8" type="search" name="s" value="">
+					
+					
+										<div class="dialog-lightbox-close-button dialog-close-button" role="button" tabindex="0" aria-label="Close this search box.">
+						<i aria-hidden="true" class="eicon-close"></i>					</div>
+									</div>
+			</form>
+		</search>
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</header>
+				<main data-elementor-type="single-page" data-elementor-id="1812" class="elementor elementor-1812 elementor-location-single post-1794 page type-page status-publish hentry" data-elementor-post-type="elementor_library">
+					<div class="elementor-section elementor-top-section elementor-element elementor-element-ce05924 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible" data-id="ce05924" data-element_type="section" data-e-type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeIn&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-18ce018b" data-id="18ce018b" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-aaefd6f elementor-widget elementor-widget-theme-page-title elementor-page-title elementor-widget-heading" data-id="aaefd6f" data-element_type="widget" data-e-type="widget" data-widget_type="theme-page-title.default">
+				<div class="elementor-widget-container">
+					<h1 class="elementor-heading-title elementor-size-default">Contact Us</h1>				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</div>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-d4070ec elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible" data-id="d4070ec" data-element_type="section" data-e-type="section" data-settings="{&quot;animation&quot;:&quot;fadeIn&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-99190cd" data-id="99190cd" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-6a1ad03 elementor-widget elementor-widget-theme-post-content" data-id="6a1ad03" data-element_type="widget" data-e-type="widget" data-widget_type="theme-post-content.default">
+				<div class="elementor-widget-container">
+							<div data-elementor-type="wp-page" data-elementor-id="1794" class="elementor elementor-1794" data-elementor-post-type="page">
+						<section class="elementor-section elementor-top-section elementor-element elementor-element-234e8855 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="234e8855" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-3aba22b6" data-id="3aba22b6" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-efb00db elementor-widget elementor-widget-shortcode" data-id="efb00db" data-element_type="widget" data-e-type="widget" data-widget_type="shortcode.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-shortcode">
+                <div class='gf_browser_unknown gform_wrapper gform_legacy_markup_wrapper gform-theme--no-framework' data-form-theme='legacy' data-form-index='0' id='gform_wrapper_1' style='display:none'>
+                        <div class='gform_heading'>
+                            <p class='gform_description'>For more information, please complete the form below. A landscaping expert in your area will reach out by phone or email within two business days.</p>
+                        </div><form method='post' enctype='multipart/form-data'  id='gform_1'  action='/contact/?request_quote=Request+a+Quote' data-formid='1' novalidate>
+                        <div class='gform-body gform_body'><ul id='gform_fields_1' class='gform_fields top_label form_sublabel_below description_above validation_below'><li id="field_1_20" class="gfield gfield--type-honeypot gform_validation_container field_sublabel_below gfield--has-description field_description_above field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_1_20'><span class='gform-field-label__text'>Comments</span></label><div class='gfield_description' id='gfield_description_1_20'>This field is for validation purposes and should be left unchanged.</div><div class='ginput_container'><input name='input_20' id='input_1_20' type='text' value='' autocomplete='new-password'/></div></li><li id="field_1_11" class="gfield gfield--type-section gfield--input-type-section gsection field_sublabel_below gfield--no-description field_description_above field_validation_below gfield_visibility_visible"  ><h2 class="gsection_title">How Can We Help?</h2></li><li id="field_1_9" class="gfield gfield--type-radio gfield--type-choice gfield--input-type-radio gfield_contains_required field_sublabel_below gfield--no-description field_description_above field_validation_below gfield_visibility_visible gfield--choice-align-vertical"  ><label class='gfield_label gform-field-label' ><span class='gform-field-label__text'>Why are you contacting us today?</span><span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='ginput_container ginput_container_radio'><ul class='gfield_radio' id='input_1_9'>
+			<li class='gchoice gchoice_1_9_0'>
+				<input name='input_9' type='radio' value='Request a Quote' checked='checked' id='choice_1_9_0'    />
+				<label for='choice_1_9_0' id='label_1_9_0' class='gform-field-label gform-field-label--type-inline'>Request a Quote</label>
+			</li>
+			<li class='gchoice gchoice_1_9_1'>
+				<input name='input_9' type='radio' value='Other'  id='choice_1_9_1'    />
+				<label for='choice_1_9_1' id='label_1_9_1' class='gform-field-label gform-field-label--type-inline'>Other</label>
+			</li></ul></div></li><li id="field_1_14" class="gfield gfield--type-textarea gfield--input-type-textarea gfield_contains_required field_sublabel_below gfield--no-description field_description_above field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_1_14'><span class='gform-field-label__text'>Message</span><span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='ginput_container ginput_container_textarea'><textarea name='input_14' id='input_1_14' class='textarea medium'     aria-required="true" aria-invalid="false"   rows='10' cols='50'></textarea></div></li><li id="field_1_15" class="gfield gfield--type-section gfield--input-type-section gsection field_sublabel_below gfield--no-description field_description_above field_validation_below gfield_visibility_visible"  ><h2 class="gsection_title">Quote Info</h2></li><li id="field_1_8" class="gfield gfield--type-checkbox gfield--type-choice gfield--input-type-checkbox field_sublabel_below gfield--no-description field_description_above field_validation_below gfield_visibility_visible gfield--choice-align-vertical"  ><label class='gfield_label gform-field-label gfield_label_before_complex' ><span class='gform-field-label__text'>What services are you looking for?</span></label><div class='ginput_container ginput_container_checkbox'><ul class='gfield_checkbox' id='input_1_8'><li class='gchoice gchoice_1_8_1'>
+								<input class='gfield-choice-input' name='input_8.1' type='checkbox'  value='Landscape Installation'  id='choice_1_8_1'   />
+								<label for='choice_1_8_1' id='label_1_8_1' class='gform-field-label gform-field-label--type-inline'>Landscape Installation</label>
+							</li><li class='gchoice gchoice_1_8_2'>
+								<input class='gfield-choice-input' name='input_8.2' type='checkbox'  value='Landscape Maintenance'  id='choice_1_8_2'   />
+								<label for='choice_1_8_2' id='label_1_8_2' class='gform-field-label gform-field-label--type-inline'>Landscape Maintenance</label>
+							</li><li class='gchoice gchoice_1_8_3'>
+								<input class='gfield-choice-input' name='input_8.3' type='checkbox'  value='Lake or Pond Maintenance'  id='choice_1_8_3'   />
+								<label for='choice_1_8_3' id='label_1_8_3' class='gform-field-label gform-field-label--type-inline'>Lake or Pond Maintenance</label>
+							</li></ul></div></li><li id="field_1_4" class="gfield gfield--type-text gfield--input-type-text field_sublabel_below gfield--no-description field_description_above field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_1_4'><span class='gform-field-label__text'>Property Name</span></label><div class='ginput_container ginput_container_text'><input name='input_4' id='input_1_4' type='text' value='' class='medium'      aria-invalid="false"   /></div></li><li id="field_1_12" class="gfield gfield--type-address gfield--input-type-address gfield_contains_required field_sublabel_below gfield--no-description field_description_above field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label gfield_label_before_complex' ><span class='gform-field-label__text'>Property Location</span><span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label>    
+                    <div class='ginput_complex ginput_container has_city has_state ginput_container_address gform-grid-row' id='input_1_12' >
+                        <span class='ginput_left address_city ginput_address_city gform-grid-col' id='input_1_12_3_container' >
+                                    <input type='text' name='input_12.3' id='input_1_12_3' value=''    aria-required='true'    />
+                                    <label for='input_1_12_3' id='input_1_12_3_label' class='gform-field-label gform-field-label--type-sub '>City</label>
+                                 </span><span class='ginput_right address_state ginput_address_state gform-grid-col' id='input_1_12_4_container' >
+                                        <select name='input_12.4' id='input_1_12_4'     aria-required='true'    ><option value='' ></option><option value='Alabama' >Alabama</option><option value='Alaska' >Alaska</option><option value='American Samoa' >American Samoa</option><option value='Arizona' >Arizona</option><option value='Arkansas' >Arkansas</option><option value='California' >California</option><option value='Colorado' >Colorado</option><option value='Connecticut' >Connecticut</option><option value='Delaware' >Delaware</option><option value='District of Columbia' >District of Columbia</option><option value='Florida' >Florida</option><option value='Georgia' >Georgia</option><option value='Guam' >Guam</option><option value='Hawaii' >Hawaii</option><option value='Idaho' >Idaho</option><option value='Illinois' >Illinois</option><option value='Indiana' >Indiana</option><option value='Iowa' >Iowa</option><option value='Kansas' >Kansas</option><option value='Kentucky' >Kentucky</option><option value='Louisiana' >Louisiana</option><option value='Maine' >Maine</option><option value='Maryland' >Maryland</option><option value='Massachusetts' >Massachusetts</option><option value='Michigan' >Michigan</option><option value='Minnesota' >Minnesota</option><option value='Mississippi' >Mississippi</option><option value='Missouri' >Missouri</option><option value='Montana' >Montana</option><option value='Nebraska' >Nebraska</option><option value='Nevada' >Nevada</option><option value='New Hampshire' >New Hampshire</option><option value='New Jersey' >New Jersey</option><option value='New Mexico' >New Mexico</option><option value='New York' >New York</option><option value='North Carolina' selected='selected'>North Carolina</option><option value='North Dakota' >North Dakota</option><option value='Northern Mariana Islands' >Northern Mariana Islands</option><option value='Ohio' >Ohio</option><option value='Oklahoma' >Oklahoma</option><option value='Oregon' >Oregon</option><option value='Pennsylvania' >Pennsylvania</option><option value='Puerto Rico' >Puerto Rico</option><option value='Rhode Island' >Rhode Island</option><option value='South Carolina' >South Carolina</option><option value='South Dakota' >South Dakota</option><option value='Tennessee' >Tennessee</option><option value='Texas' >Texas</option><option value='Utah' >Utah</option><option value='U.S. Virgin Islands' >U.S. Virgin Islands</option><option value='Vermont' >Vermont</option><option value='Virginia' >Virginia</option><option value='Washington' >Washington</option><option value='West Virginia' >West Virginia</option><option value='Wisconsin' >Wisconsin</option><option value='Wyoming' >Wyoming</option><option value='Armed Forces Americas' >Armed Forces Americas</option><option value='Armed Forces Europe' >Armed Forces Europe</option><option value='Armed Forces Pacific' >Armed Forces Pacific</option></select>
+                                        <label for='input_1_12_4' id='input_1_12_4_label' class='gform-field-label gform-field-label--type-sub '>State</label>
+                                      </span><input type='hidden' class='gform_hidden' name='input_12.6' id='input_1_12_6' value='US' />
+                    <div class='gf_clear gf_clear_complex'></div>
+                </div></li><li id="field_1_13" class="gfield gfield--type-textarea gfield--input-type-textarea field_sublabel_below gfield--has-description field_description_above field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_1_13'><span class='gform-field-label__text'>Notes</span></label><div class='gfield_description' id='gfield_description_1_13'>Anything else we need to know?</div><div class='ginput_container ginput_container_textarea'><textarea name='input_13' id='input_1_13' class='textarea medium'  aria-describedby="gfield_description_1_13"    aria-invalid="false"   rows='10' cols='50'></textarea></div></li><li id="field_1_10" class="gfield gfield--type-section gfield--input-type-section gsection field_sublabel_below gfield--no-description field_description_above field_validation_below gfield_visibility_visible"  ><h2 class="gsection_title">Your Info</h2></li><li id="field_1_1" class="gfield gfield--type-name gfield--input-type-name gfield_contains_required field_sublabel_below gfield--no-description field_description_above field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label gfield_label_before_complex' ><span class='gform-field-label__text'>Your Name</span><span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='ginput_complex ginput_container ginput_container--name no_prefix has_first_name no_middle_name has_last_name no_suffix gf_name_has_2 ginput_container_name gform-grid-row' id='input_1_1'>
+                            
+                            <span id='input_1_1_3_container' class='name_first gform-grid-col gform-grid-col--size-auto' >
+                                                    <input type='text' name='input_1.3' id='input_1_1_3' value=''   aria-required='true'     />
+                                                    <label for='input_1_1_3' class='gform-field-label gform-field-label--type-sub '>First</label>
+                                                </span>
+                            
+                            <span id='input_1_1_6_container' class='name_last gform-grid-col gform-grid-col--size-auto' >
+                                                    <input type='text' name='input_1.6' id='input_1_1_6' value=''   aria-required='true'     />
+                                                    <label for='input_1_1_6' class='gform-field-label gform-field-label--type-sub '>Last</label>
+                                                </span>
+                            
+                        </div></li><li id="field_1_5" class="gfield gfield--type-text gfield--input-type-text gfield--width-full field_sublabel_below gfield--no-description field_description_above field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_1_5'><span class='gform-field-label__text'>Company or Community Name</span></label><div class='ginput_container ginput_container_text'><input name='input_5' id='input_1_5' type='text' value='' class='medium'      aria-invalid="false"   /></div></li><li id="field_1_6" class="gfield gfield--type-text gfield--input-type-text field_sublabel_below gfield--no-description field_description_above field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_1_6'><span class='gform-field-label__text'>Title/Position</span></label><div class='ginput_container ginput_container_text'><input name='input_6' id='input_1_6' type='text' value='' class='medium'      aria-invalid="false"   /></div></li><li id="field_1_19" class="gfield gfield--type-radio gfield--type-choice gfield--input-type-radio gfield--width-full gfield_contains_required field_sublabel_below gfield--has-description field_description_above field_validation_below gfield_visibility_visible gfield--choice-align-vertical"  ><label class='gfield_label gform-field-label' ><span class='gform-field-label__text'>Let&#039;s get you connected with your local team.</span><span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='gfield_description' id='gfield_description_1_19'>Don't see your city? Select the one closest to your property.</div><div class='ginput_container ginput_container_radio'><ul class='gfield_radio' id='input_1_19'>
+			<li class='gchoice gchoice_1_19_0'>
+				<input name='input_19' type='radio' value='Charleston, SC'  id='choice_1_19_0'    />
+				<label for='choice_1_19_0' id='label_1_19_0' class='gform-field-label gform-field-label--type-inline'>Charleston, SC</label>
+			</li>
+			<li class='gchoice gchoice_1_19_1'>
+				<input name='input_19' type='radio' value='Charlotte-Mecklenburg, NC'  id='choice_1_19_1'    />
+				<label for='choice_1_19_1' id='label_1_19_1' class='gform-field-label gform-field-label--type-inline'>Charlotte-Mecklenburg, NC</label>
+			</li>
+			<li class='gchoice gchoice_1_19_2'>
+				<input name='input_19' type='radio' value='Greensboro, NC'  id='choice_1_19_2'    />
+				<label for='choice_1_19_2' id='label_1_19_2' class='gform-field-label gform-field-label--type-inline'>Greensboro, NC</label>
+			</li>
+			<li class='gchoice gchoice_1_19_3'>
+				<input name='input_19' type='radio' value='Jacksonville, FL'  id='choice_1_19_3'    />
+				<label for='choice_1_19_3' id='label_1_19_3' class='gform-field-label gform-field-label--type-inline'>Jacksonville, FL</label>
+			</li>
+			<li class='gchoice gchoice_1_19_4'>
+				<input name='input_19' type='radio' value='Myrtle Beach, SC'  id='choice_1_19_4'    />
+				<label for='choice_1_19_4' id='label_1_19_4' class='gform-field-label gform-field-label--type-inline'>Myrtle Beach, SC</label>
+			</li>
+			<li class='gchoice gchoice_1_19_5'>
+				<input name='input_19' type='radio' value='Wilmington, NC'  id='choice_1_19_5'    />
+				<label for='choice_1_19_5' id='label_1_19_5' class='gform-field-label gform-field-label--type-inline'>Wilmington, NC</label>
+			</li>
+			<li class='gchoice gchoice_1_19_6'>
+				<input name='input_19' type='radio' value='Winston-Salem, NC'  id='choice_1_19_6'    />
+				<label for='choice_1_19_6' id='label_1_19_6' class='gform-field-label gform-field-label--type-inline'>Winston-Salem, NC</label>
+			</li>
+			<li class='gchoice gchoice_1_19_7'>
+				<input name='input_19' type='radio' value='Raleigh-Durham, NC'  id='choice_1_19_7'    />
+				<label for='choice_1_19_7' id='label_1_19_7' class='gform-field-label gform-field-label--type-inline'>Raleigh-Durham, NC</label>
+			</li></ul></div></li><li id="field_1_17" class="gfield gfield--type-address gfield--input-type-address gfield--width-full gfield_contains_required field_sublabel_below gfield--no-description field_description_above field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label gfield_label_before_complex' ><span class='gform-field-label__text'>Where are you located?</span><span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label>    
+                    <div class='ginput_complex ginput_container has_city has_state ginput_container_address gform-grid-row' id='input_1_17' >
+                        <span class='ginput_left address_city ginput_address_city gform-grid-col' id='input_1_17_3_container' >
+                                    <input type='text' name='input_17.3' id='input_1_17_3' value=''    aria-required='true'    />
+                                    <label for='input_1_17_3' id='input_1_17_3_label' class='gform-field-label gform-field-label--type-sub '>City</label>
+                                 </span><span class='ginput_right address_state ginput_address_state gform-grid-col' id='input_1_17_4_container' >
+                                        <select name='input_17.4' id='input_1_17_4'     aria-required='true'    ><option value='' selected='selected'></option><option value='Alabama' >Alabama</option><option value='Alaska' >Alaska</option><option value='American Samoa' >American Samoa</option><option value='Arizona' >Arizona</option><option value='Arkansas' >Arkansas</option><option value='California' >California</option><option value='Colorado' >Colorado</option><option value='Connecticut' >Connecticut</option><option value='Delaware' >Delaware</option><option value='District of Columbia' >District of Columbia</option><option value='Florida' >Florida</option><option value='Georgia' >Georgia</option><option value='Guam' >Guam</option><option value='Hawaii' >Hawaii</option><option value='Idaho' >Idaho</option><option value='Illinois' >Illinois</option><option value='Indiana' >Indiana</option><option value='Iowa' >Iowa</option><option value='Kansas' >Kansas</option><option value='Kentucky' >Kentucky</option><option value='Louisiana' >Louisiana</option><option value='Maine' >Maine</option><option value='Maryland' >Maryland</option><option value='Massachusetts' >Massachusetts</option><option value='Michigan' >Michigan</option><option value='Minnesota' >Minnesota</option><option value='Mississippi' >Mississippi</option><option value='Missouri' >Missouri</option><option value='Montana' >Montana</option><option value='Nebraska' >Nebraska</option><option value='Nevada' >Nevada</option><option value='New Hampshire' >New Hampshire</option><option value='New Jersey' >New Jersey</option><option value='New Mexico' >New Mexico</option><option value='New York' >New York</option><option value='North Carolina' >North Carolina</option><option value='North Dakota' >North Dakota</option><option value='Northern Mariana Islands' >Northern Mariana Islands</option><option value='Ohio' >Ohio</option><option value='Oklahoma' >Oklahoma</option><option value='Oregon' >Oregon</option><option value='Pennsylvania' >Pennsylvania</option><option value='Puerto Rico' >Puerto Rico</option><option value='Rhode Island' >Rhode Island</option><option value='South Carolina' >South Carolina</option><option value='South Dakota' >South Dakota</option><option value='Tennessee' >Tennessee</option><option value='Texas' >Texas</option><option value='Utah' >Utah</option><option value='U.S. Virgin Islands' >U.S. Virgin Islands</option><option value='Vermont' >Vermont</option><option value='Virginia' >Virginia</option><option value='Washington' >Washington</option><option value='West Virginia' >West Virginia</option><option value='Wisconsin' >Wisconsin</option><option value='Wyoming' >Wyoming</option><option value='Armed Forces Americas' >Armed Forces Americas</option><option value='Armed Forces Europe' >Armed Forces Europe</option><option value='Armed Forces Pacific' >Armed Forces Pacific</option></select>
+                                        <label for='input_1_17_4' id='input_1_17_4_label' class='gform-field-label gform-field-label--type-sub '>State</label>
+                                      </span><input type='hidden' class='gform_hidden' name='input_17.6' id='input_1_17_6' value='US' />
+                    <div class='gf_clear gf_clear_complex'></div>
+                </div></li><li id="field_1_2" class="gfield gfield--type-phone gfield--input-type-phone gfield--phone-format-standard gfield_contains_required field_sublabel_below gfield--no-description field_description_above field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_1_2'><span class='gform-field-label__text'>Phone</span><span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='ginput_container ginput_container_phone'><input name='input_2' id='input_1_2' type='tel' value='' class='medium'  placeholder='(999) 999-9999' aria-required="true" aria-invalid="false"   data-mask="(999) 999-9999" /></div></li><li id="field_1_3" class="gfield gfield--type-email gfield--input-type-email gfield_contains_required field_sublabel_below gfield--no-description field_description_above field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_1_3'><span class='gform-field-label__text'>Email</span><span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='ginput_container ginput_container_email'>
+                            <input name='input_3' id='input_1_3' type='email' value='' class='large'   placeholder='jdoe@email.com' aria-required="true" aria-invalid="false"  />
+                        </div></li><li id="field_1_16" class="gfield gfield--type-radio gfield--type-choice gfield--input-type-radio gfield--width-full field_sublabel_below gfield--no-description field_description_above field_validation_below gfield_visibility_visible gfield--choice-align-vertical"  ><label class='gfield_label gform-field-label' ><span class='gform-field-label__text'>What is your preferred method of contact?</span></label><div class='ginput_container ginput_container_radio'><ul class='gfield_radio' id='input_1_16'>
+			<li class='gchoice gchoice_1_16_0'>
+				<input name='input_16' type='radio' value='Phone'  id='choice_1_16_0'    />
+				<label for='choice_1_16_0' id='label_1_16_0' class='gform-field-label gform-field-label--type-inline'>Phone</label>
+			</li>
+			<li class='gchoice gchoice_1_16_1'>
+				<input name='input_16' type='radio' value='Email'  id='choice_1_16_1'    />
+				<label for='choice_1_16_1' id='label_1_16_1' class='gform-field-label gform-field-label--type-inline'>Email</label>
+			</li></ul></div></li></ul></div>
+        <div class='gform-footer gform_footer top_label'> <button type='submit' id='gform_submit_button_1' class='gform_button button' onclick='gform.submission.handleButtonClick(this);' data-submission-type='submit' >Send It</button> 
+            <input type='hidden' class='gform_hidden' name='gform_submission_method' data-js='gform_submission_method_1' value='postback' />
+            <input type='hidden' class='gform_hidden' name='gform_theme' data-js='gform_theme_1' id='gform_theme_1' value='legacy' />
+            <input type='hidden' class='gform_hidden' name='gform_style_settings' data-js='gform_style_settings_1' id='gform_style_settings_1' value='[]' />
+            <input type='hidden' class='gform_hidden' name='is_submit_1' value='1' />
+            <input type='hidden' class='gform_hidden' name='gform_submit' value='1' />
+            
+            <input type='hidden' class='gform_hidden' name='gform_currency' data-currency='USD' value='dn64e07JW9txXxu/O3DIGpOAXSM3a50dI3C/5LfFpG4vSryz+GGnjwoRBlFco8+Pt+3jiQ4XhBORBWDvtWFwbWYuY5H0EeiFXwwoZJWkn6aLGIc=' />
+            <input type='hidden' class='gform_hidden' name='gform_unique_id' value='' />
+            <input type='hidden' class='gform_hidden' name='state_1' value='WyJ7XCIxOVwiOltcIjRhZGE1YzdkZmYzOGIwOTYzZjA1YzU2MjljODA1MzgxXCIsXCI0YWQ1MGYwYWYyZTUzMjBiMDU4MzlmNjYzMmYzZGUzY1wiLFwiNzNiYTA3MDc1Nzg2MjMzYzEyNTJiNWNhNjkxZjg0ZjRcIixcImQ4Yjk3YzI2NTBmNzI0MmEyYWQzNWU2MGRkZDhkNDIxXCIsXCI3ZGU4Y2U3ZTM3MjZlMDM4ZDJhYjY0MGRmOWE2NTMwMFwiLFwiMWZmMTk5MmJjM2RmN2FhNDhmNDZmZjU2ODFiZTg3NGNcIixcImMxMDVlOTYxZGM5M2MzOGRlYWQ5MmVlNjQyNWExMzY0XCIsXCIzOGNhNzU3MzJiMjU0ZDJlMjk2NWEyYzQwNTkzNjgxNFwiXSxcIjE3LjRcIjpbXCI2ZDY1ZWEwZjllYTA2YTg1Y2Y0ZTY3OTlmZjA3MjdhOFwiLFwiMzgxMDY1OTBkMjJjODEyZTg5NGZkOTZlMTYxOWY2MWVcIixcIjVjOGIxNDhhZjE3YWRjMmU0OWI5MjE1NDVlNTgwY2IzXCIsXCIzYmE0OTRkOWQ5NTAwNzIxMjA5NTFjMWIwOWRmMzUwOVwiLFwiNGE1ZDI5MzZjZjQwOTdhMWI1ZTcyNzVhYzA1NmFlMjRcIixcIjI0YzdiZDVhYmFjMzZjZTgxZGZmMjFhYjRiYmJjOTM5XCIsXCIwYTU1ZTgzM2RiMDdiYWM2OWRhMzg1Njc4YWE5ZDE3OFwiLFwiZWYxNDEwMTQ0NzJhNzYyODQ0MDVmNDljMzAzMGQxYzdcIixcIjg5NjYwMTY4NGY3MzRmMzdhNjIwYTgzNzY1ZTJlOTE5XCIsXCJhZGVkNmNhZDAwZmI3YTk0YjU3YTczNDBmOTcxOGQyY1wiLFwiNThlNTMyZjllNjcyOWFmNzQ1YzU3OTQyYjFhMDdlMTRcIixcImFiMjQxYWE3MWY1NjYzZWQ3ZGZiNjBjYTM1YWRkN2RkXCIsXCI1NTUyMjdjZjkxZGEzM2Q1Y2Q4MzVkYWY1M2FjMDkzMFwiLFwiZWZjN2RiMGUxY2Q1ZDQ0ZTllMDJiMDBkOWVlYjZmYmNcIixcImU5NjQ5NjczMjY2ZTEyYjNiZDMxNGRkMmMzOTdhNTNkXCIsXCIzZGY0M2U5NGI5NjM2MGRlZmUxN2E5NGM1YTE4MTQzNlwiLFwiNTNmMDE5N2NhMzU2Njg3NjdmYzYyY2M5ZTM3NDdkZjVcIixcIjE5YmZlMjc1ZGIwZjllZTJiOTEyNmZkNTk5MTdlNDQzXCIsXCIxNGM3ZDZjZWQ2MDA2NDFjMzQ0NThjZmYyMmE5NjIwNlwiLFwiMWFmODA0ZTg0ZGIyM2NlOGU1MzYyMjJmYzU4MmVjOThcIixcIjA4OWIyYzQ2YzJmMzk4NjgxNmNlMGY1M2IwMTA0MjkwXCIsXCIzZDZmZGMyMTVkOTg0YTkzMWQ0NzMxZTM4YmUyZTgyMVwiLFwiNzQ5NTIyNjkyNWI1MzU3MDIwMTgwOTAwZDlmOGY1YmZcIixcIjdlNWZiMjhhOGNjMzdiNTI1NGYzNmQxYjk4NDExNzQ0XCIsXCI4MTY3NDRlNjFkMDc0ZDE0MzQ2NjYzZmU2YTgzYTQ5MFwiLFwiODFjYTkzMTE1NDlmNWQ3ZGRlMDU2YzZlZWIxZDI2MjhcIixcIjgwYTMyMjY0MDhhM2U3N2NhM2U4ZDIyNDI0NzRiMmI4XCIsXCIxMjAyMmI3ZWE5NGM0MGU5YmI0NTFiZWFlMDhlY2ZkY1wiLFwiMjg2NGQ0ODBhMmRmYTI5ZWUxMWMyZjdjYmZmMDk0MWNcIixcImRhODljMTQ3Y2FkNTBlZDY0MDFiMjkyNjFlYzhmN2I2XCIsXCI2OTllNmI0OTdiY2RhNTk3OTdhN2NiYWJiZDNjMTg0ZVwiLFwiNDEyODRkN2VkYTgwNWU1YjAyODYzMzczNTQ1ODQ0Y2RcIixcIjc4Y2MxY2Q0ZDZjMjlkYjAzYzA2OTMzYWQzZmMwNGEyXCIsXCI1MjIyZjBkNjgzZDEyYzcxZGQzNGQ1MzFmNmFiYjExM1wiLFwiNGM4OWJkNThlZjNlMTFiMjE4N2UxNGU3Zjg5ZmYzYzBcIixcImMwNzhkMjg3YTBhYzhiODJmYTAzZmM2MDY4YzIyYzdjXCIsXCI1MzJkZDhjMjRhMTlhNjNlYjdjYTY4ZWRhM2FiNDIwZVwiLFwiNWMyZGNmNDUxZGJiNmViMjUxNjAwYmZiMDMyOWZjNDFcIixcIjU0MWRhMzE1ZjAwMzdkYzI1NTAwMWY3YWM3MWFiYzNhXCIsXCI3MTA1NGI1ZGIzZTVmYjI0N2U3Mjc1Zjg4YzA3MTFjYVwiLFwiMGQ1NDNkNzc1YjE5M2NhOGMxODRmNmJlNGMzOGJiNzBcIixcIjI1ZDJhZTViZWExZjA5MjFiODk5YTE0N2E1ZGFkYzk4XCIsXCI4ZDJmY2QyNjU1N2MyZmMxZmMxYWY2YjBkMzAzZjQ0ZFwiLFwiNGE5YmRjN2Q5MGM2MGE4ZGIxMGUzMjE0NTdkMDlmMjNcIixcIjcxYjY4ZWIxYzdlYjZlN2UxZDkzMTcwZGU5OWFmMGY3XCIsXCJkN2Q3MTVkZWRiMDFlNjczZjJkZWEwOGYxOTcyMzg5MlwiLFwiNjAzYzcyYjA3YzVjNDU0NzJiOWVhMzU1ZTk2NzRjZDBcIixcImQ0NjgzMzU0MmQ5MmI4NGQ4YWZhMjhjY2YxMzJhOGVlXCIsXCI3MDc5NzZlYzRmZGU0YjNjZTA2NGVjMjYyMzMxNGQ1ZlwiLFwiOTRlZjVhYjVhODI4MjY5NWFlZjY2OWIzYzI5ZDM4ODFcIixcIjc4NzdlYzMzYWI5MGNiMTYwMThjNTNmZWM4YzkzNTUzXCIsXCI0NWQwZDQwY2Q4NjAxZWI5NzBiM2RhYmIxZjI4NzIyN1wiLFwiYjE1ODM1N2ZiZjIwM2JhNWQyNDE5M2NmOTEwN2JhYzBcIixcIjZjZWEzYmQ0NDkxZGE4NDFmMjQ3ODFiMTI0NzQyNzBiXCIsXCIwOWZlMjkzNjdjYjI5YjZiOTg2NTMwYmIyZTNiNDk0Y1wiLFwiZjA4NzhjY2VlZjIzN2I3NTc0MWNhNzlhNDJjNGMzMzNcIixcImFmMDU1ODRjMjk2ZGU1YmI0NTFkOTU0ZmZkMjA1ODAwXCIsXCJmN2ZhYjZhYzc4Nzc2MTUzZDgwYzU4OTMzZmMwZGMxNFwiLFwiMzEzMzk4NmQxYjAyZjJkZWY2OTVmOTllZDYyYmY0ZWFcIixcIjI2ZWRmYzM1NTgzYjU5ZDM4MjRiN2RlYjZiYjMwOGI2XCJdLFwiMTcuNlwiOlwiMWU2Nzc0OGI4NmQyNGRiY2RlMTljOWE5YTQyYTljYTRcIixcImdmb3JtX3N1Ym1pc3Npb25fbWV0aG9kXCI6W1wiNzgyOGI1ZDA4MTI5ZGRjMzE1NjkxNTBmYzE3MTE4NDRcIixcIjJjMWJlNmFiMGExNjE4NWY4NjIwMDMxYWU5MzcwZjNlXCJdLFwiZ2Zvcm1fdGhlbWVcIjpcIjhlMWFlNWE3NTVmOGMwYjZkYTlkNzQzZDk5OTJkM2E5XCIsXCJnZm9ybV9zdHlsZV9zZXR0aW5nc1wiOlwiOTA0MGUxNTYyYTdkMGExNjcxZjU1NzkwYTBmMjgzMzRcIixcImZvcm1faWRcIjpcIjFhOTNhOGUxMzZjOTFlZWE0ODc5ZWQ3MGVkOTYzOTE2XCIsXCJ1cmxcIjpbXCI1OTc0ZTA1N2M3YTBiNGE3Y2E4MDJlNTk0YzY1MzU2YVwiLFwiODU3NWJkOGM2ZGY0NzU0YmU2NzBjNzZhNjMxYjU3YmRcIl0sXCJzdGF0ZV90aW1lc3RhbXBcIjpcIjViNzhlMmNmMjIwYzc3M2EzMWFjMjNjY2JjZjg4NDg1XCJ9IiwiODNlNDdhOWYyNzVhODdjN2EzM2I3OWQ4NDZmYWNhNGEiLDE3OTEyMjMyOTld' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_target_page_number_1' id='gform_target_page_number_1' value='0' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_source_page_number_1' id='gform_source_page_number_1' value='1' />
+            <input type='hidden' name='gform_field_values' value='' />
+            
+        </div>
+                        <p style="display: none !important;" class="akismet-fields-container" data-prefix="ak_"><label>&#916;<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="ak_js" value="106"/><script>
+document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );
+</script>
+</p></form>
+                        </div></div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-079cda5 elementor-widget elementor-widget-spacer" data-id="079cda5" data-element_type="widget" data-e-type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-bb1b829" data-id="bb1b829" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<section class="elementor-section elementor-inner-section elementor-element elementor-element-be11018 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="be11018" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-d75598b" data-id="d75598b" data-element_type="column" data-e-type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-5e109d9 elementor-widget elementor-widget-heading" data-id="5e109d9" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">Call Us</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-9d7354f elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="9d7354f" data-element_type="widget" data-e-type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-016bbab elementor-widget elementor-widget-text-editor" data-id="016bbab" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p>Our office hours are 8am-4pm, M-F.</p><p>If we are unable to take your call, please leave a voicemail with your name, number, and a brief message.</p>								</div>
+				</div>
+				<div class="elementor-element elementor-element-da6fb12 elementor-widget elementor-widget-text-editor" data-id="da6fb12" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p><strong>Raleigh-Durham<br /></strong><a href="tel:919-387-0010">(919) 387-0010</a></p><p><strong>Charlotte-Mecklenburg</strong><br /><a href="tel:704-887-0192">(704) 887-0192</a></p><p><strong>Piedmont Triad<br /></strong><a href="tel:336-478-8687">(336) 478-8687</a></p><p><strong>Coastal Carolinas<br /></strong><a href="tel:910- 442-4700">(910) 442-4700</a></p><p><strong>Northern Florida<br /></strong><a href="tel:904-716-0683">(904) 716-0683</a></p>								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</main>
+				<footer data-elementor-type="footer" data-elementor-id="27" class="elementor elementor-27 elementor-location-footer" data-elementor-post-type="elementor_library">
+					<section class="elementor-section elementor-top-section elementor-element elementor-element-1f1ee8ea elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1f1ee8ea" data-element_type="section" data-e-type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-7288b61f" data-id="7288b61f" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-54bdbefc elementor-widget elementor-widget-image" data-id="54bdbefc" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+																<a href="https://blandlandscaping.com">
+							<img width="800" height="800" src="https://blandlandscaping.com/wp-content/uploads/2020/12/Bland-Landscaping-50th-Anniversary-Logo-Full-Color-1024x1024.png" class="attachment-large size-large wp-image-11153" alt="" srcset="https://blandlandscaping.com/wp-content/uploads/2020/12/Bland-Landscaping-50th-Anniversary-Logo-Full-Color-1024x1024.png 1024w, https://blandlandscaping.com/wp-content/uploads/2020/12/Bland-Landscaping-50th-Anniversary-Logo-Full-Color-300x300.png 300w, https://blandlandscaping.com/wp-content/uploads/2020/12/Bland-Landscaping-50th-Anniversary-Logo-Full-Color-150x150.png 150w, https://blandlandscaping.com/wp-content/uploads/2020/12/Bland-Landscaping-50th-Anniversary-Logo-Full-Color-768x768.png 768w, https://blandlandscaping.com/wp-content/uploads/2020/12/Bland-Landscaping-50th-Anniversary-Logo-Full-Color.png 1525w" sizes="(max-width: 800px) 100vw, 800px" />								</a>
+															</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-e5ebd03 margin-eraser" data-id="e5ebd03" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-9ca105b elementor-widget elementor-widget-text-editor" data-id="9ca105b" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p>Delivering landscaping excellence since 1976. Start your project today.</p>								</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-1d798c7d" data-id="1d798c7d" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-24d6e687 elementor-align-center elementor-mobile-align-justify elementor-widget__width-initial elementor-widget-tablet__width-initial elementor-tablet-align-center elementor-widget-mobile__width-inherit elementor-widget elementor-widget-button" data-id="24d6e687" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-sm" href="http://blandlandscaping.com/contact/?request_quote=Request%20a%20Quote">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">Get a Quote</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-176757a8 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="176757a8" data-element_type="section" data-e-type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-20 elementor-top-column elementor-element elementor-element-3700a758" data-id="3700a758" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-2a27e3aa footer-menu-topper elementor-widget elementor-widget-heading" data-id="2a27e3aa" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default"><a href="http://blandlandscaping.com/services/#maintenance">Maintenance</a></h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-2d6320ca ecs-nav-layout-vertical e--pointer-none elementor-nav-menu--dropdown-none footer-menu elementor-nav-menu--toggle elementor-nav-menu--burger ecs-toggle-align-center elementor-widget elementor-widget-nav-menu" data-id="2d6320ca" data-element_type="widget" data-e-type="widget" data-settings="{&quot;layout&quot;:&quot;vertical&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;i class=\&quot;fas fa-caret-down\&quot; aria-hidden=\&quot;true\&quot;&gt;&lt;\/i&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;toggle&quot;:&quot;burger&quot;}" data-aria-label="service-areas" data-widget_type="nav-menu.default">
+				<div class="elementor-widget-container">
+								<nav aria-label="service-areas" aria-label="Menu" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-vertical e--pointer-none">
+				<ul id="menu-1-2d6320ca" class="elementor-nav-menu sm-vertical"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2218"><a href="https://blandlandscaping.com/landscaping-services/landscape-maintenance/" class="elementor-item">Landscape</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2219"><a href="https://blandlandscaping.com/landscaping-services/floriculture/" class="elementor-item">Floriculture</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2220"><a href="https://blandlandscaping.com/landscaping-services/tree-plant-healthcare/" class="elementor-item">Tree &#038; Plant Health Care</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5750"><a href="https://blandlandscaping.com/landscaping-services/aquatic-maintenance/" class="elementor-item">Lake &#038; Pond Maintenance</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7850"><a href="https://blandlandscaping.com/landscaping-services/stormwater-management/" class="elementor-item">Stormwater Management</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2221"><a href="https://blandlandscaping.com/landscaping-services/snow-ice-removal/" class="elementor-item">Snow &#038; Ice Removal</a></li>
+</ul>			</nav>
+					<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false">
+			<i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--open eicon-menu-bar"></i><i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--close eicon-close"></i>		</div>
+					<nav aria-label="service-areas" class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
+				<ul id="menu-2-2d6320ca" class="elementor-nav-menu sm-vertical"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2218"><a href="https://blandlandscaping.com/landscaping-services/landscape-maintenance/" class="elementor-item" tabindex="-1">Landscape</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2219"><a href="https://blandlandscaping.com/landscaping-services/floriculture/" class="elementor-item" tabindex="-1">Floriculture</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2220"><a href="https://blandlandscaping.com/landscaping-services/tree-plant-healthcare/" class="elementor-item" tabindex="-1">Tree &#038; Plant Health Care</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5750"><a href="https://blandlandscaping.com/landscaping-services/aquatic-maintenance/" class="elementor-item" tabindex="-1">Lake &#038; Pond Maintenance</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7850"><a href="https://blandlandscaping.com/landscaping-services/stormwater-management/" class="elementor-item" tabindex="-1">Stormwater Management</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2221"><a href="https://blandlandscaping.com/landscaping-services/snow-ice-removal/" class="elementor-item" tabindex="-1">Snow &#038; Ice Removal</a></li>
+</ul>			</nav>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-20 elementor-top-column elementor-element elementor-element-787d9099" data-id="787d9099" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-3b2b79b footer-menu-topper elementor-widget elementor-widget-heading" data-id="3b2b79b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default"><a href="http://blandlandscaping.com/services/#projects">Projects</a></h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-18291145 ecs-nav-layout-vertical e--pointer-none elementor-nav-menu--dropdown-none footer-menu elementor-nav-menu--toggle elementor-nav-menu--burger ecs-toggle-align-center elementor-widget elementor-widget-nav-menu" data-id="18291145" data-element_type="widget" data-e-type="widget" data-settings="{&quot;layout&quot;:&quot;vertical&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;i class=\&quot;fas fa-caret-down\&quot; aria-hidden=\&quot;true\&quot;&gt;&lt;\/i&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;toggle&quot;:&quot;burger&quot;}" data-aria-label="service-areas" data-widget_type="nav-menu.default">
+				<div class="elementor-widget-container">
+								<nav aria-label="service-areas" aria-label="Menu" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-vertical e--pointer-none">
+				<ul id="menu-1-18291145" class="elementor-nav-menu sm-vertical"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2233"><a href="https://blandlandscaping.com/landscaping-services/installation/" class="elementor-item">Landscape Installation</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2235"><a href="https://blandlandscaping.com/landscaping-services/renovations-enhancements/" class="elementor-item">Renovations &#038; Enhancements</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2234"><a href="https://blandlandscaping.com/landscaping-services/irrigation/" class="elementor-item">Irrigation</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5752"><a href="https://blandlandscaping.com/landscaping-services/lakes-and-pond/" class="elementor-item">Lakes &#038; Ponds</a></li>
+</ul>			</nav>
+					<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false">
+			<i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--open eicon-menu-bar"></i><i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--close eicon-close"></i>		</div>
+					<nav aria-label="service-areas" class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
+				<ul id="menu-2-18291145" class="elementor-nav-menu sm-vertical"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2233"><a href="https://blandlandscaping.com/landscaping-services/installation/" class="elementor-item" tabindex="-1">Landscape Installation</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2235"><a href="https://blandlandscaping.com/landscaping-services/renovations-enhancements/" class="elementor-item" tabindex="-1">Renovations &#038; Enhancements</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2234"><a href="https://blandlandscaping.com/landscaping-services/irrigation/" class="elementor-item" tabindex="-1">Irrigation</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5752"><a href="https://blandlandscaping.com/landscaping-services/lakes-and-pond/" class="elementor-item" tabindex="-1">Lakes &#038; Ponds</a></li>
+</ul>			</nav>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-20 elementor-top-column elementor-element elementor-element-53afdf32" data-id="53afdf32" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-50ef1262 footer-menu-topper elementor-widget elementor-widget-heading" data-id="50ef1262" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default"><a href="http://blandlandscaping.com/company/service-areas/">Service Areas</a></h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-7dfabc18 ecs-nav-layout-vertical e--pointer-none elementor-nav-menu--dropdown-none footer-menu elementor-nav-menu--toggle elementor-nav-menu--burger ecs-toggle-align-center elementor-widget elementor-widget-nav-menu" data-id="7dfabc18" data-element_type="widget" data-e-type="widget" data-settings="{&quot;layout&quot;:&quot;vertical&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;i class=\&quot;fas fa-caret-down\&quot; aria-hidden=\&quot;true\&quot;&gt;&lt;\/i&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;toggle&quot;:&quot;burger&quot;}" data-aria-label="service-areas" data-widget_type="nav-menu.default">
+				<div class="elementor-widget-container">
+								<nav aria-label="service-areas" aria-label="Menu" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-vertical e--pointer-none">
+				<ul id="menu-1-7dfabc18" class="elementor-nav-menu sm-vertical"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1954"><a href="https://blandlandscaping.com/company/service-areas/raleigh-durham-commercial-landscaping/" class="elementor-item">Raleigh-Durham</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1951"><a href="https://blandlandscaping.com/company/service-areas/charlotte-mecklenburg-commercial-landscaping/" class="elementor-item">Charlotte-Mecklenburg</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5776"><a href="https://blandlandscaping.com/company/service-areas/greensboro-winston-salem-commercial-landscaping/" class="elementor-item">Greensboro &#038; Winston-Salem</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1952"><a href="https://blandlandscaping.com/company/service-areas/wilmington-commercial-landscaping/" class="elementor-item">Wilmington</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11252"><a href="https://blandlandscaping.com/company/service-areas/charleston-commercial-landscaping/" class="elementor-item">Charleston</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6317"><a href="https://blandlandscaping.com/company/service-areas/myrtle-beach-commercial-landscaping/" class="elementor-item">Myrtle Beach</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6836"><a href="https://blandlandscaping.com/company/service-areas/jacksonville-commercial-landscaping/" class="elementor-item">Jacksonville</a></li>
+</ul>			</nav>
+					<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false">
+			<i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--open eicon-menu-bar"></i><i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--close eicon-close"></i>		</div>
+					<nav aria-label="service-areas" class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
+				<ul id="menu-2-7dfabc18" class="elementor-nav-menu sm-vertical"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1954"><a href="https://blandlandscaping.com/company/service-areas/raleigh-durham-commercial-landscaping/" class="elementor-item" tabindex="-1">Raleigh-Durham</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1951"><a href="https://blandlandscaping.com/company/service-areas/charlotte-mecklenburg-commercial-landscaping/" class="elementor-item" tabindex="-1">Charlotte-Mecklenburg</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5776"><a href="https://blandlandscaping.com/company/service-areas/greensboro-winston-salem-commercial-landscaping/" class="elementor-item" tabindex="-1">Greensboro &#038; Winston-Salem</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1952"><a href="https://blandlandscaping.com/company/service-areas/wilmington-commercial-landscaping/" class="elementor-item" tabindex="-1">Wilmington</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11252"><a href="https://blandlandscaping.com/company/service-areas/charleston-commercial-landscaping/" class="elementor-item" tabindex="-1">Charleston</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6317"><a href="https://blandlandscaping.com/company/service-areas/myrtle-beach-commercial-landscaping/" class="elementor-item" tabindex="-1">Myrtle Beach</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6836"><a href="https://blandlandscaping.com/company/service-areas/jacksonville-commercial-landscaping/" class="elementor-item" tabindex="-1">Jacksonville</a></li>
+</ul>			</nav>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-20 elementor-top-column elementor-element elementor-element-347d5d77" data-id="347d5d77" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-4da76402 footer-menu-topper elementor-widget elementor-widget-heading" data-id="4da76402" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default"><a href="http://blandlandscaping.com/company/">Our Company</a></h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-6b7ddb6 ecs-nav-layout-vertical e--pointer-none elementor-nav-menu--dropdown-none footer-menu elementor-nav-menu--toggle elementor-nav-menu--burger ecs-toggle-align-center elementor-widget elementor-widget-nav-menu" data-id="6b7ddb6" data-element_type="widget" data-e-type="widget" data-settings="{&quot;layout&quot;:&quot;vertical&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;i class=\&quot;fas fa-caret-down\&quot; aria-hidden=\&quot;true\&quot;&gt;&lt;\/i&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;toggle&quot;:&quot;burger&quot;}" data-aria-label="service-areas" data-widget_type="nav-menu.default">
+				<div class="elementor-widget-container">
+								<nav aria-label="service-areas" aria-label="Menu" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-vertical e--pointer-none">
+				<ul id="menu-1-6b7ddb6" class="elementor-nav-menu sm-vertical"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1934"><a href="https://blandlandscaping.com/company/careers/" class="elementor-item">Careers</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2615"><a href="https://blandlandscaping.com/company/customers/" class="elementor-item">Our Customers</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10332"><a href="https://blandlandscaping.com/in-the-field/" class="elementor-item">In the Field</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1936"><a href="https://blandlandscaping.com/company/who-we-are/" class="elementor-item">Who We Are</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2237"><a href="https://blandlandscaping.com/company/leadership/" class="elementor-item">Leadership</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2305"><a href="https://blandlandscaping.com/news/" class="elementor-item">News</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5042"><a href="https://blandlandscaping.com/company/mergers-acquisitions/" class="elementor-item">Mergers &amp; Acquisitions</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8178"><a href="https://blandlandscaping.com/resources/" class="elementor-item">Resources</a></li>
+</ul>			</nav>
+					<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false">
+			<i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--open eicon-menu-bar"></i><i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--close eicon-close"></i>		</div>
+					<nav aria-label="service-areas" class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
+				<ul id="menu-2-6b7ddb6" class="elementor-nav-menu sm-vertical"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1934"><a href="https://blandlandscaping.com/company/careers/" class="elementor-item" tabindex="-1">Careers</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2615"><a href="https://blandlandscaping.com/company/customers/" class="elementor-item" tabindex="-1">Our Customers</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10332"><a href="https://blandlandscaping.com/in-the-field/" class="elementor-item" tabindex="-1">In the Field</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1936"><a href="https://blandlandscaping.com/company/who-we-are/" class="elementor-item" tabindex="-1">Who We Are</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2237"><a href="https://blandlandscaping.com/company/leadership/" class="elementor-item" tabindex="-1">Leadership</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2305"><a href="https://blandlandscaping.com/news/" class="elementor-item" tabindex="-1">News</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5042"><a href="https://blandlandscaping.com/company/mergers-acquisitions/" class="elementor-item" tabindex="-1">Mergers &amp; Acquisitions</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8178"><a href="https://blandlandscaping.com/resources/" class="elementor-item" tabindex="-1">Resources</a></li>
+</ul>			</nav>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-20 elementor-top-column elementor-element elementor-element-5ac7af8b" data-id="5ac7af8b" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-714520fe footer-menu-topper elementor-widget elementor-widget-heading" data-id="714520fe" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default"><a href="http://blandlandscaping.com/contact/">Contact</a></h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-5e08aa0a ecs-nav-layout-vertical e--pointer-none elementor-nav-menu--dropdown-none footer-menu elementor-nav-menu--toggle elementor-nav-menu--burger ecs-toggle-align-center elementor-widget elementor-widget-nav-menu" data-id="5e08aa0a" data-element_type="widget" data-e-type="widget" data-settings="{&quot;layout&quot;:&quot;vertical&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;i class=\&quot;fas fa-caret-down\&quot; aria-hidden=\&quot;true\&quot;&gt;&lt;\/i&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;toggle&quot;:&quot;burger&quot;}" data-aria-label="service-areas" data-widget_type="nav-menu.default">
+				<div class="elementor-widget-container">
+								<nav aria-label="service-areas" aria-label="Menu" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-vertical e--pointer-none">
+				<ul id="menu-1-5e08aa0a" class="elementor-nav-menu sm-vertical"><li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1794 current_page_item menu-item-3801"><a href="https://blandlandscaping.com/contact/" aria-current="page" class="elementor-item elementor-item-active">Get in Touch</a></li>
+</ul>			</nav>
+					<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false">
+			<i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--open eicon-menu-bar"></i><i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--close eicon-close"></i>		</div>
+					<nav aria-label="service-areas" class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
+				<ul id="menu-2-5e08aa0a" class="elementor-nav-menu sm-vertical"><li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1794 current_page_item menu-item-3801"><a href="https://blandlandscaping.com/contact/" aria-current="page" class="elementor-item elementor-item-active" tabindex="-1">Get in Touch</a></li>
+</ul>			</nav>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-adf50d0 elementor-shape-circle e-grid-align-left e-grid-align-mobile-left elementor-grid-tablet-2 elementor-grid-0 elementor-widget elementor-widget-social-icons" data-id="adf50d0" data-element_type="widget" data-e-type="widget" data-widget_type="social-icons.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-social-icons-wrapper elementor-grid" role="list">
+							<span class="elementor-grid-item" role="listitem">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin elementor-repeater-item-11339ba" href="http://www.linkedin.com/company/2712722" target="_blank">
+						<span class="elementor-screen-only">Linkedin</span>
+						<i aria-hidden="true" class="fab fa-linkedin"></i>					</a>
+				</span>
+							<span class="elementor-grid-item" role="listitem">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-89065d5" href="https://www.instagram.com/blandlandscapingcompany/" target="_blank">
+						<span class="elementor-screen-only">Instagram</span>
+						<i aria-hidden="true" class="fab fa-instagram"></i>					</a>
+				</span>
+							<span class="elementor-grid-item" role="listitem">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-facebook elementor-repeater-item-eefc7b1" href="https://www.facebook.com/BlandLandscaping/" target="_blank">
+						<span class="elementor-screen-only">Facebook</span>
+						<i aria-hidden="true" class="fab fa-facebook"></i>					</a>
+				</span>
+							<span class="elementor-grid-item" role="listitem">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-youtube elementor-repeater-item-b1605a0" href="https://www.youtube.com/@blandlandscapingcompany" target="_blank">
+						<span class="elementor-screen-only">Youtube</span>
+						<i aria-hidden="true" class="fab fa-youtube"></i>					</a>
+				</span>
+					</div>
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-59c3d322 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="59c3d322" data-element_type="section" data-e-type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-3b65fc78 margin-eraser" data-id="3b65fc78" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-35d9cf74 white-link elementor-widget elementor-widget-text-editor" data-id="35d9cf74" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									&copy; 1999 &#8211; 2026 Bland Landscaping  |  <a href="https://blandlandscaping.com/privacy/">Privacy Policy</a>								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</footer>
+		
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/hello-elementor/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+
+<!-- Consent Management powered by Complianz | GDPR/CCPA Cookie Consent https://wordpress.org/plugins/complianz-gdpr -->
+<div id="cmplz-cookiebanner-container"><div id="cmplz-cookiebanner-1-optout" class="cmplz-cookiebanner cmplz-hidden banner-1 blc-consent-banner optout cmplz-center cmplz-categories-type-view-preferences" aria-modal="true" data-nosnippet="true" role="dialog" aria-live="polite" aria-labelledby="cmplz-header-1-optout" aria-describedby="cmplz-message-1-optout">
+	<div class="cmplz-header">
+		<div class="cmplz-logo"></div>
+		<div class="cmplz-title" id="cmplz-header-1-optout">Manage Consent</div>
+		<div class="cmplz-close" tabindex="0" role="button" aria-label="Close dialog">
+			<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" class="svg-inline--fa fa-times fa-w-11" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>
+		</div>
+	</div>
+
+	<div class="cmplz-divider cmplz-divider-header"></div>
+	<div class="cmplz-body">
+		<div class="cmplz-message" id="cmplz-message-1-optout">To provide the best experiences, we use technologies like cookies to store and/or access device information. Consenting to these technologies will allow us to process data such as browsing behavior or unique IDs on this site. Not consenting or withdrawing consent, may adversely affect certain features and functions.</div>
+		<!-- categories start -->
+		<div class="cmplz-categories">
+			<div class="cmplz-category cmplz-functional">
+				<div class="cmplz-category-header">
+					<span class="cmplz-category-title" id="cmplz-title-functional-1-optout">Functional</span>
+					<span class='cmplz-always-active'>
+						<span class="cmplz-banner-checkbox">
+							<input type="checkbox"
+									id="cmplz-functional-optout"
+									data-category="cmplz_functional"
+									class="cmplz-consent-checkbox cmplz-functional"
+									size="40"
+									value="1"/>
+							<label class="cmplz-label" for="cmplz-functional-optout"><span class="screen-reader-text">Functional</span></label>
+						</span>
+						Always active					</span>
+					<button class="cmplz-category-toggle"
+							aria-expanded="false"
+							aria-controls="cmplz-desc-functional-1-optout"
+							aria-labelledby="cmplz-title-functional-1-optout">
+						<span class="cmplz-icon cmplz-open">
+							<svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="18"><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"/></svg>
+						</span>
+					</button>
+				</div>
+				<div class="cmplz-description" id="cmplz-desc-functional-1-optout" hidden>
+					<span class="cmplz-description-functional">The technical storage or access is strictly necessary for the legitimate purpose of enabling the use of a specific service explicitly requested by the subscriber or user, or for the sole purpose of carrying out the transmission of a communication over an electronic communications network.</span>
+				</div>
+			</div>
+
+			<div class="cmplz-category cmplz-preferences">
+				<div class="cmplz-category-header">
+					<span class="cmplz-category-title" id="cmplz-title-preferences-1-optout">Preferences</span>
+					<span class="cmplz-banner-checkbox">
+						<input type="checkbox"
+								id="cmplz-preferences-optout"
+								data-category="cmplz_preferences"
+								class="cmplz-consent-checkbox cmplz-preferences"
+								size="40"
+								value="1"/>
+						<label class="cmplz-label" for="cmplz-preferences-optout"><span class="screen-reader-text">Preferences</span></label>
+					</span>
+					<button class="cmplz-category-toggle"
+							aria-expanded="false"
+							aria-controls="cmplz-desc-preferences-1-optout"
+							aria-labelledby="cmplz-title-preferences-1-optout">
+						<span class="cmplz-icon cmplz-open">
+							<svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="18"><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"/></svg>
+						</span>
+					</button>
+				</div>
+				<div class="cmplz-description" id="cmplz-desc-preferences-1-optout" hidden>
+					<span class="cmplz-description-preferences">The technical storage or access is necessary for the legitimate purpose of storing preferences that are not requested by the subscriber or user.</span>
+				</div>
+			</div>
+
+			<div class="cmplz-category cmplz-statistics">
+				<div class="cmplz-category-header">
+					<span class="cmplz-category-title" id="cmplz-title-statistics-1-optout">Statistics</span>
+					<span class="cmplz-banner-checkbox">
+						<input type="checkbox"
+								id="cmplz-statistics-optout"
+								data-category="cmplz_statistics"
+								class="cmplz-consent-checkbox cmplz-statistics"
+								size="40"
+								value="1"/>
+						<label class="cmplz-label" for="cmplz-statistics-optout"><span class="screen-reader-text">Statistics</span></label>
+					</span>
+					<button class="cmplz-category-toggle"
+							aria-expanded="false"
+							aria-controls="cmplz-desc-statistics-1-optout"
+							aria-labelledby="cmplz-title-statistics-1-optout">
+						<span class="cmplz-icon cmplz-open">
+							<svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="18"><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"/></svg>
+						</span>
+					</button>
+				</div>
+				<div class="cmplz-description" id="cmplz-desc-statistics-1-optout" hidden>
+					<span class="cmplz-description-statistics">The technical storage or access that is used exclusively for statistical purposes.</span>
+					<span class="cmplz-description-statistics-anonymous">The technical storage or access that is used exclusively for anonymous statistical purposes. Without a subpoena, voluntary compliance on the part of your Internet Service Provider, or additional records from a third party, information stored or retrieved for this purpose alone cannot usually be used to identify you.</span>
+				</div>
+			</div>
+
+			<div class="cmplz-category cmplz-marketing">
+				<div class="cmplz-category-header">
+					<span class="cmplz-category-title" id="cmplz-title-marketing-1-optout">Marketing</span>
+					<span class="cmplz-banner-checkbox">
+						<input type="checkbox"
+								id="cmplz-marketing-optout"
+								data-category="cmplz_marketing"
+								class="cmplz-consent-checkbox cmplz-marketing"
+								size="40"
+								value="1"/>
+						<label class="cmplz-label" for="cmplz-marketing-optout"><span class="screen-reader-text">Marketing</span></label>
+					</span>
+					<button class="cmplz-category-toggle"
+							aria-expanded="false"
+							aria-controls="cmplz-desc-marketing-1-optout"
+							aria-labelledby="cmplz-title-marketing-1-optout">
+						<span class="cmplz-icon cmplz-open">
+							<svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="18"><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"/></svg>
+						</span>
+					</button>
+				</div>
+				<div class="cmplz-description" id="cmplz-desc-marketing-1-optout" hidden>
+					<span class="cmplz-description-marketing">The technical storage or access is required to create user profiles to send advertising, or to track the user on a website or across several websites for similar marketing purposes.</span>
+				</div>
+			</div>
+		</div><!-- categories end -->
+			</div>
+
+	<div class="cmplz-links cmplz-information">
+		<ul>
+			<li><a class="cmplz-link cmplz-manage-options cookie-statement" href="#" data-relative_url="#cmplz-manage-consent-container">Manage options</a></li>
+			<li><a class="cmplz-link cmplz-manage-third-parties cookie-statement" href="#" data-relative_url="#cmplz-cookies-overview">Manage services</a></li>
+			<li><a class="cmplz-link cmplz-manage-vendors tcf cookie-statement" href="#" data-relative_url="#cmplz-tcf-wrapper">Manage {vendor_count} vendors</a></li>
+			<li><a class="cmplz-link cmplz-external cmplz-read-more-purposes tcf" target="_blank" rel="noopener noreferrer nofollow" href="https://cookiedatabase.org/tcf/purposes/" aria-label="Read more about TCF purposes on Cookie Database">Read more about these purposes</a></li>
+		</ul>
+			</div>
+
+	<div class="cmplz-divider cmplz-footer"></div>
+
+	<div class="cmplz-buttons">
+		<button class="cmplz-btn cmplz-accept">Accept</button>
+		<button class="cmplz-btn cmplz-deny">Deny</button>
+		<button class="cmplz-btn cmplz-view-preferences">View preferences</button>
+		<button class="cmplz-btn cmplz-save-preferences">Save preferences</button>
+		<a class="cmplz-btn cmplz-manage-options tcf cookie-statement" href="#" data-relative_url="#cmplz-manage-consent-container">View preferences</a>
+			</div>
+
+
+	<div class="cmplz-documents cmplz-links">
+		<ul>
+			<li><a class="cmplz-link cookie-statement" href="#" data-relative_url="">{title}</a></li>
+			<li><a class="cmplz-link privacy-statement" href="#" data-relative_url="">{title}</a></li>
+			<li><a class="cmplz-link impressum" href="#" data-relative_url="">{title}</a></li>
+		</ul>
+			</div>
+</div>
+</div>
+					<div id="cmplz-manage-consent" data-nosnippet="true"><button class="cmplz-btn cmplz-hidden cmplz-manage-consent manage-consent-1" aria-haspopup="dialog" aria-controls="cmplz-cookiebanner-1-optout">Manage consent</button>
+
+</div>			<script>
+				( () => {
+					const lazyloadRunObserver = () => {
+						const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
+						const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+							entries.forEach( ( entry ) => {
+								if ( entry.isIntersecting ) {
+									let lazyloadBackground = entry.target;
+									if( lazyloadBackground ) {
+										lazyloadBackground.classList.add( 'e-lazyloaded' );
+									}
+									lazyloadBackgroundObserver.unobserve( entry.target );
+								}
+							});
+						}, { rootMargin: '200px 0px 200px 0px' } );
+						lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+							lazyloadBackgroundObserver.observe( lazyloadBackground );
+						} );
+					};
+					const events = [
+						'DOMContentLoaded',
+						'elementor/lazyload/observe',
+					];
+					events.forEach( ( event ) => {
+						document.addEventListener( event, lazyloadRunObserver );
+					} );
+				} )();
+			</script>
+			<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:root { --wp--style--global--content-size: 800px;--wp--style--global--wide-size: 1200px; }:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.wp-site-blocks) > * { margin-block-start: 24px; margin-block-end: 0; }:where(.wp-site-blocks) > :first-child { margin-block-start: 0; }:where(.wp-site-blocks) > :last-child { margin-block-end: 0; }:root { --wp--style--block-gap: 24px; }:root :where(.is-layout-flow) > :first-child{margin-block-start: 0;}:root :where(.is-layout-flow) > :last-child{margin-block-end: 0;}:root :where(.is-layout-flow) > *{margin-block-start: 24px;margin-block-end: 0;}:root :where(.is-layout-constrained) > :first-child{margin-block-start: 0;}:root :where(.is-layout-constrained) > :last-child{margin-block-end: 0;}:root :where(.is-layout-constrained) > *{margin-block-start: 24px;margin-block-end: 0;}:root :where(.is-layout-flex){gap: 24px;}:root :where(.is-layout-grid){gap: 24px;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+<script id="ecs-color-switcher-js" src="https://blandlandscaping.com/wp-content/plugins/ele-custom-skin/modules/color-scheme/assets/js/ecs-color-switcher.min.js?ver=4.3.11"></script>
+<script id="swiper-js" src="https://blandlandscaping.com/wp-content/plugins/elementor/assets/lib/swiper/v8/swiper.min.js?ver=8.4.5"></script>
+<script id="elementor-webpack-runtime-js" src="https://blandlandscaping.com/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=4.3.3"></script>
+<script id="elementor-frontend-modules-js" src="https://blandlandscaping.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=4.3.3"></script>
+<script id="jquery-ui-core-js-before">
+jQuery.uiBackCompat = true;
+//# sourceURL=jquery-ui-core-js-before
+</script>
+<script id="jquery-ui-core-js" src="https://blandlandscaping.com/wp-includes/js/jquery/ui/core.min.js?ver=1.14.2"></script>
+<script id="elementor-frontend-js-before">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnX":"Share on X","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":true}},"hasCustomBreakpoints":true},"version":"4.3.3","is_static":false,"experimentalFeatures":{"additional_custom_breakpoints":true,"theme_builder_v2":true,"import-export-customization":true,"e_pro_atomic_form":true,"e_pro_collection_loop":true},"urls":{"assets":"https:\/\/blandlandscaping.com\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/blandlandscaping.com\/wp-admin\/admin-ajax.php","uploadUrl":"https:\/\/blandlandscaping.com\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"f916685064","atomicFormsSendForm":"f94657a816"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet","viewport_widescreen"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes"},"post":{"id":1794,"title":"Contact%20Us%20%E2%80%94%20Bland%20Landscaping","excerpt":"","featuredImage":false}};
+//# sourceURL=elementor-frontend-js-before
+</script>
+<script id="elementor-frontend-js" src="https://blandlandscaping.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=4.3.3"></script>
+<script id="ecs-slider-js" src="https://blandlandscaping.com/wp-content/plugins/ele-custom-skin/modules/container-layout/assets/js/ecs-slider.min.js?ver=4.3.11"></script>
+<script id="smartmenus-js" src="https://blandlandscaping.com/wp-content/plugins/elementor-pro/assets/lib/smartmenus/jquery.smartmenus.min.js?ver=1.2.1"></script>
+<script id="wp-dom-ready-js" src="https://blandlandscaping.com/wp-includes/js/dist/dom-ready.min.js?ver=3fe927cab37bf38d6a23"></script>
+<script id="wp-hooks-js" src="https://blandlandscaping.com/wp-includes/js/dist/hooks.min.js?ver=f0f188028580e8dc1255"></script>
+<script id="wp-i18n-js" src="https://blandlandscaping.com/wp-includes/js/dist/i18n.min.js?ver=1dfe7db3940c23ea9216"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+</script>
+<script id="wp-a11y-js" src="https://blandlandscaping.com/wp-includes/js/dist/a11y.min.js?ver=31c6cec5a4ff7aff483d"></script>
+<script id="gform_placeholder-js" defer='defer' src="https://blandlandscaping.com/wp-content/plugins/gravityforms/js/placeholders.jquery.min.js?ver=3.1.3"></script>
+<script id="gform_gravityforms_theme_vendors-js" defer='defer' src="https://blandlandscaping.com/wp-content/plugins/gravityforms/assets/js/dist/vendor-theme.min.js?ver=0c901cb641ce64b99c20ea1a4d208cc9"></script>
+<script id="gform_gravityforms_theme-js-extra">
+var gform_theme_config = {"common":{"form":{"honeypot":{"version_hash":"074e74759654db7f799e8ed83988a88f"},"ajax":{"ajaxurl":"https://blandlandscaping.com/wp-admin/admin-ajax.php","ajax_submission_nonce":"e7a550166e","i18n":{"step_announcement":"Step %1$s of %2$s, %3$s","unknown_error":"There was an unknown error processing your request. Please try again.","error_403":"The request was blocked (403 error) for unknown security reasons. Remove any code-like text (scripts or DB queries) and try again."}}}},"hmr_dev":"","public_path":"https://blandlandscaping.com/wp-content/plugins/gravityforms/assets/js/dist/","config_nonce":"d8bd6d4b6a"};
+//# sourceURL=gform_gravityforms_theme-js-extra
+</script>
+<script id="gform_gravityforms_theme-js" defer='defer' src="https://blandlandscaping.com/wp-content/plugins/gravityforms/assets/js/dist/scripts-theme.min.js?ver=373fcf115e257ba62fdd1a205717b981"></script>
+<script id="cmplz-cookiebanner-js-extra">
+var complianz = {"prefix":"cmplz_","debug":"","user_banner_id":"1","set_cookies":[],"block_ajax_content":"","banner_version":"69","version":"7.6.6","store_consent":"","do_not_track_enabled":"1","consenttype":"optout","region":"us","geoip":"1","dismiss_timeout":"","disable_cookiebanner":"1","soft_cookiewall":"","dismiss_on_scroll":"","cookie_expiry":"365","url":"https://blandlandscaping.com/wp-json/complianz/v1/","locale":"lang=en&locale=en_US","set_cookies_on_root":"","cookie_domain":"","current_policy_id":"42","cookie_path":"/","categories":{"statistics":"statistics","marketing":"marketing"},"tcf_active":"","placeholdertext":"Click to accept {category} cookies and enable this content","css_file":"https://blandlandscaping.com/wp-content/uploads/complianz/css/banner-{banner_id}-{type}.css?v=69","page_links":{"us":{"cookie-statement":{"title":"Cookie Policy","url":"https://blandlandscaping.com/cookie-policy/"},"privacy-statement":{"title":"Privacy Policy","url":"https://blandlandscaping.com/privacy/"},"privacy-statement-children":{"title":"","url":"https://blandlandscaping.com/"},"impressum":{"title":"Contact Us","url":"https://blandlandscaping.com/contact/"}},"eu":{"impressum":{"title":"Contact Us","url":"https://blandlandscaping.com/contact/"}},"uk":{"impressum":{"title":"Contact Us","url":"https://blandlandscaping.com/contact/"}},"ca":{"impressum":{"title":"Contact Us","url":"https://blandlandscaping.com/contact/"}},"au":{"impressum":{"title":"Contact Us","url":"https://blandlandscaping.com/contact/"}},"za":{"impressum":{"title":"Contact Us","url":"https://blandlandscaping.com/contact/"}},"br":{"impressum":{"title":"Contact Us","url":"https://blandlandscaping.com/contact/"}}},"tm_categories":"","forceEnableStats":"","preview":"","clean_cookies":"","aria_label":"Click to accept {category} cookies and enable this content","iapi_nav":"fallback","is_cookiepolicy_page":""};
+//# sourceURL=cmplz-cookiebanner-js-extra
+</script>
+<script defer id="cmplz-cookiebanner-js" src="https://blandlandscaping.com/wp-content/plugins/complianz-gdpr-premium/cookiebanner/js/complianz.min.js?ver=1790772087"></script>
+<script id="cmplz-cookiebanner-js-after">
+	
+		if ('undefined' != typeof window.jQuery) {
+			jQuery(document).ready(function ($) {
+				$(document).on('elementor/popup/show', () => {
+					let rev_cats = cmplz_categories.reverse();
+					for (let key in rev_cats) {
+						if (rev_cats.hasOwnProperty(key)) {
+							let category = cmplz_categories[key];
+							if (cmplz_has_consent(category)) {
+								document.querySelectorAll('[data-category="' + category + '"]').forEach(obj => {
+									cmplz_remove_placeholder(obj);
+								});
+							}
+						}
+					}
+
+					let services = cmplz_get_services_on_page();
+					for (let key in services) {
+						if (services.hasOwnProperty(key)) {
+							let service = services[key].service;
+							let category = services[key].category;
+							if (cmplz_has_service_consent(service, category)) {
+								document.querySelectorAll('[data-service="' + service + '"]').forEach(obj => {
+									cmplz_remove_placeholder(obj);
+								});
+							}
+						}
+					}
+				});
+			});
+		}
+	
+	
+		
+			document.addEventListener("cmplz_enable_category", function(consentData) {
+				var category = consentData.detail.category;
+				var services = consentData.detail.services;
+				var blockedContentContainers = [];
+				let selectorVideo = '.cmplz-elementor-widget-video-playlist[data-category="'+category+'"],.elementor-widget-video[data-category="'+category+'"]';
+				let selectorGeneric = '[data-cmplz-elementor-href][data-category="'+category+'"]';
+				for (var skey in services) {
+					if (services.hasOwnProperty(skey)) {
+						let service = skey;
+						selectorVideo +=',.cmplz-elementor-widget-video-playlist[data-service="'+service+'"],.elementor-widget-video[data-service="'+service+'"]';
+						selectorGeneric +=',[data-cmplz-elementor-href][data-service="'+service+'"]';
+					}
+				}
+				document.querySelectorAll(selectorVideo).forEach(obj => {
+					let elementService = obj.getAttribute('data-service');
+					if ( cmplz_is_service_denied(elementService) ) {
+						return;
+					}
+					if (obj.classList.contains('cmplz-elementor-activated')) return;
+					obj.classList.add('cmplz-elementor-activated');
+
+					if ( obj.hasAttribute('data-cmplz_elementor_widget_type') ){
+						let attr = obj.getAttribute('data-cmplz_elementor_widget_type');
+						obj.classList.removeAttribute('data-cmplz_elementor_widget_type');
+						obj.classList.setAttribute('data-widget_type', attr);
+					}
+					if (obj.classList.contains('cmplz-elementor-widget-video-playlist')) {
+						obj.classList.remove('cmplz-elementor-widget-video-playlist');
+						obj.classList.add('elementor-widget-video-playlist');
+					}
+					obj.setAttribute('data-settings', obj.getAttribute('data-cmplz-elementor-settings'));
+					blockedContentContainers.push(obj);
+				});
+
+				document.querySelectorAll(selectorGeneric).forEach(obj => {
+					let elementService = obj.getAttribute('data-service');
+					if ( cmplz_is_service_denied(elementService) ) {
+						return;
+					}
+					if (obj.classList.contains('cmplz-elementor-activated')) return;
+
+					if (obj.classList.contains('cmplz-fb-video')) {
+						obj.classList.remove('cmplz-fb-video');
+						obj.classList.add('fb-video');
+					}
+
+					obj.classList.add('cmplz-elementor-activated');
+					obj.setAttribute('data-href', obj.getAttribute('data-cmplz-elementor-href'));
+					blockedContentContainers.push(obj.closest('.elementor-widget'));
+				});
+
+				/**
+				 * Trigger the widgets in Elementor
+				 */
+				for (var key in blockedContentContainers) {
+					if (blockedContentContainers.hasOwnProperty(key) && blockedContentContainers[key] !== undefined) {
+						let blockedContentContainer = blockedContentContainers[key];
+						if (elementorFrontend.elementsHandler) {
+							elementorFrontend.elementsHandler.runReadyTrigger(blockedContentContainer)
+						}
+						var cssIndex = blockedContentContainer.getAttribute('data-placeholder_class_index');
+						blockedContentContainer.classList.remove('cmplz-blocked-content-container');
+						blockedContentContainer.classList.remove('cmplz-placeholder-' + cssIndex);
+					}
+				}
+
+			});
+		
+		
+//# sourceURL=cmplz-cookiebanner-js-after
+</script>
+<script type='text/javascript'>var gfZeroSpamConfig = {"forms":[{"ajaxUrl":"https:\/\/blandlandscaping.com\/wp-admin\/admin-ajax.php","fallbackToken":"MXwxNzkxMjIzMjk5fDE3OTE4MjgwOTl8YmZmYTkxOTQxOGQzNjE4MWQ5YTNhNDljM2RiZjE4YzN8MQ.N2Q1ZTczMjk1NGZlODYyZmY0MzE3ZWM5MjI1NjMxZmU5ZWUwMmExMDk4ODVhMzEzMmE2MTBmNWQ3MGRhNDA2Yw","formId":1,"timeout":3000}],"debug":false};</script>
+<script id="gf-zero-spam-js" defer='defer' src="https://blandlandscaping.com/wp-content/plugins/gravity-forms-zero-spam/dist/js/gf-zero-spam.js?ver=1787059327"></script>
+<script defer id="akismet-frontend-js" src="https://blandlandscaping.com/wp-content/plugins/akismet/_inc/akismet-frontend.js?ver=1787162011"></script>
+<script id="elementor-pro-frontend-js-before">
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/blandlandscaping.com\/wp-admin\/admin-ajax.php","nonce":"5d6ac5449b","urls":{"assets":"https:\/\/blandlandscaping.com\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"https:\/\/blandlandscaping.com\/wp-json\/"},"settings":{"lazy_load_background_images":true},"popup":{"hasPopUps":false},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"},"x-twitter":{"title":"X"},"threads":{"title":"Threads"}},"facebook_sdk":{"lang":"en_US","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/blandlandscaping.com\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+//# sourceURL=elementor-pro-frontend-js-before
+</script>
+<script id="elementor-pro-frontend-js" src="https://blandlandscaping.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=4.3.1"></script>
+<script id="pro-elements-handlers-js" src="https://blandlandscaping.com/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=4.3.1"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://blandlandscaping.com/wp-includes/js/wp-emoji-release.min.js?ver=7.1.2"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof HTMLScriptElement))throw new Error("Element missing: "+e);const r=JSON.parse(t.text),s=(window._wpemojiSettings=r,"wpEmojiSettingsSupports"),o=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(s,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const r=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===r[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,r){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!r(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,r){let a;const s=(a="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),o=(s.textBaseline="top",s.font="600 32px Arial",{});return e.forEach(e=>{o[e]=t(s,e,n,r)}),o}function a(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}r.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(s));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(o),u.toString(),c.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"});const a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=e=>{i(n=e.data),a.terminate(),t(n)})}catch(e){}i(n=f(o,u,c,p))}t(n)}).then(e=>{for(const n in e)r.supports[n]=e[n],r.supports.everything=r.supports.everything&&r.supports[n],"flag"!==n&&(r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&r.supports[n]);var t;r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&!r.supports.flag,r.supports.everything||((t=r.source||{}).concatemoji?a(t.concatemoji):t.wpemoji&&t.twemoji&&(a(t.twemoji),a(t.wpemoji)))});
+//# sourceURL=https://blandlandscaping.com/wp-includes/js/wp-emoji-loader.min.js
+</script>
+				<script async data-category="functional"
+						src="https://www.googletagmanager.com/gtag/js?id=G-0CQEJ9DX25"></script>
+						<!-- Statistics script Complianz GDPR/CCPA -->
+						<script 							data-category="functional">window['gtag_enable_tcf_support'] = false;
+window.dataLayer = window.dataLayer || [];
+function gtag(){
+	dataLayer.push(arguments);
+}
+
+gtag('set', 'dYWVlZG', true);
+gtag('set', 'ads_data_redaction', true);
+gtag('set', 'url_passthrough', false);
+gtag('consent', 'default', {
+	'security_storage': "granted",
+	'functionality_storage': "granted",
+	'personalization_storage': "denied",
+	'analytics_storage': 'denied',
+	'ad_storage': "denied",
+	'ad_user_data': 'denied',
+	'ad_personalization': 'denied',
+});
+
+
+
+document.addEventListener("cmplz_before_categories_consent", function (e) {
+
+	function gtag(){
+		dataLayer.push(arguments);
+	}
+	let consentedCategories = e.detail.categories;
+	let preferences = 'denied';
+	let statistics = 'denied';
+	let marketing = 'denied';
+
+	if (cmplz_in_array( 'preferences', consentedCategories )) {
+		preferences = 'granted';
+	}
+
+	if (cmplz_in_array( 'statistics', consentedCategories )) {
+		statistics = 'granted';
+	}
+
+	if (cmplz_in_array( 'marketing', consentedCategories )) {
+		marketing = 'granted';
+	}
+	gtag('consent', 'update', {
+		'security_storage': "granted",
+		'functionality_storage': "granted",
+		'personalization_storage': preferences,
+		'analytics_storage': statistics,
+		'ad_storage': marketing,
+		'ad_user_data': marketing,
+		'ad_personalization': marketing,
+	});
+
+	if ( statistics==='granted' ) {
+		gtag('js', new Date());
+		
+		gtag('config', 'G-0CQEJ9DX25', {
+				cookie_flags:'secure;samesite=none',
+			
+		});
+	}
+
+});
+
+
+document.addEventListener("cmplz_revoke", function (e) {
+	gtag('consent', 'update', {
+		'security_storage': "granted",
+		'functionality_storage': "granted",
+		'personalization_storage': "denied",
+		'analytics_storage': 'denied',
+		'ad_storage': "denied",
+		'ad_user_data': 'denied',
+		'ad_personalization': 'denied',
+	});
+});
+</script>
+							<script>
+gform.initializeOnLoaded( function() { jQuery(document).on('gform_post_render', function(event, formId, currentPage){if(formId == 1) {gf_global["number_formats"][1] = {"11":{"price":false,"value":false},"9":{"price":false,"value":false},"14":{"price":false,"value":false},"15":{"price":false,"value":false},"8":{"price":false,"value":false},"4":{"price":false,"value":false},"12":{"price":false,"value":false},"13":{"price":false,"value":false},"10":{"price":false,"value":false},"1":{"price":false,"value":false},"5":{"price":false,"value":false},"6":{"price":false,"value":false},"19":{"price":false,"value":false},"17":{"price":false,"value":false},"2":{"price":false,"value":false},"3":{"price":false,"value":false},"16":{"price":false,"value":false}};if(window['jQuery']){if(!window['gf_form_conditional_logic'])window['gf_form_conditional_logic'] = new Array();window['gf_form_conditional_logic'][1] = { logic: { 14: {"field":{"actionType":"show","logicType":"all","rules":[{"fieldId":"9","operator":"is","value":"Other"}]},"nextButton":null,"section":null},15: {"field":{"actionType":"show","logicType":"all","rules":[{"fieldId":"9","operator":"is","value":"Request a Quote"}]},"nextButton":null,"section":{"actionType":"show","logicType":"all","rules":[{"fieldId":"9","operator":"is","value":"Request a Quote"}]}},8: {"field":{"actionType":"show","logicType":"all","rules":[{"fieldId":"9","operator":"is","value":"Request a Quote"}],"enabled":true},"nextButton":null,"section":{"actionType":"show","logicType":"all","rules":[{"fieldId":"9","operator":"is","value":"Request a Quote"}]}} }, dependents: { 14: [14],15: [15,8,4,12,13],8: [8] }, animation: 1, defaults: {"9":["choice_1_9_0"],"12":{"12.1":"","12.2":"","12.3":"","12.4":"North Carolina","12.5":"","12.6":"US"},"1":{"1.2":"","1.3":"","1.4":"","1.6":"","1.8":""},"17":{"17.1":"","17.2":"","17.3":"","17.4":"","17.5":"","17.6":"US"}}, fields: {"11":[],"9":[14,15,15,8,8],"14":[],"15":[],"8":[],"4":[],"12":[],"13":[],"10":[],"1":[],"5":[],"6":[],"19":[],"17":[],"2":[],"3":[],"16":[]} }; if(!window['gf_number_format'])window['gf_number_format'] = 'decimal_dot';jQuery(document).ready(function(){gform.utils.trigger({ event: 'gform/conditionalLogic/init/start', native: false, data: { formId: 1, fields: null, isInit: true } });gf_apply_rules(1, [14,15,8], true);jQuery('#gform_wrapper_1').show();jQuery('#gform_wrapper_1 form').css('opacity', '');jQuery(document).trigger('gform_post_conditional_logic', [1, null, true]);gform.utils.trigger({ event: 'gform/conditionalLogic/init/end', native: false, data: { formId: 1, fields: null, isInit: true } });} );} if(typeof Placeholders != 'undefined'){
+                        Placeholders.enable();
+                    }} } );jQuery(document).on('gform_post_conditional_logic', function(event, formId, fields, isInit){} ) } );
+</script>
+<script>
+gform.initializeOnLoaded( function() {jQuery(document).trigger("gform_pre_post_render", [{ formId: "1", currentPage: "1", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_1" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_1";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_1" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 1, 1 );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );
+</script>
+
+</body>
+</html>

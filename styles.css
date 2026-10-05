@@ -23,3 +23,6 @@ button,input,select{font:inherit}button,a,input,select{touch-action:manipulation
  .detail{gap:10px;margin-top:12px}.hero{padding:14px;border-radius:10px;gap:8px}.hero h2{font-size:19px}.hero .eyebrow{font-size:10px}.hero p{font-size:13px;line-height:1.5}.bigscore{padding-top:8px;border-top:1px solid var(--line)}.bigscore strong{font-size:34px}.tag{font-size:9px;padding:4px 5px}.row{font-size:12px}.row b{max-width:62%}.trigger-guide .evidence{padding:12px}.trigger-guide .evidence p{font-size:12px}.source{min-height:44px;display:flex;align-items:center}.side,.card,.hero,.metric,.main{min-width:0}.hero,.card,.lead{overflow-wrap:anywhere}#selected,#prospects,#signals,#triggers,#pilot{scroll-margin-top:12px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Public professional contact provenance follows the existing terminal hierarchy. */
+.contact-route h3{font-size:14px;margin:10px 0 4px}.contact-value{font-weight:700;overflow-wrap:anywhere}.contact-route .source{display:inline-flex;align-items:center;min-height:44px;padding:8px 0;margin-right:14px;max-width:100%;overflow-wrap:anywhere}.contact-note{padding:0 20px 15px;line-height:1.6}.contact-route{min-width:0}.contact-route p{overflow-wrap:anywhere}

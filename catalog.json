@@ -1,5 +1,5 @@
 {
-  "version": "project-a-13",
+  "version": "project-a-14",
   "validated_at": "2026-10-05T16:50:45.906843+00:00",
   "coverage_start": "2026-06-01",
   "source": "SEC EDGAR",
@@ -399,7 +399,46 @@
         "FORM144",
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.scansource.com/",
+            "target": "https://www.scansource.com/",
+            "anchor": "Headquarters",
+            "purpose": "Published headquarters number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "ScanSource",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.scansource.com/",
+            "raw_path": "contact-source-scansource.txt",
+            "sha256": "b8a00c746ff5aac23a7cd9008316674f39408a1f836e011e3cc5380f0d4ca3e7"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Headquarters phone",
+            "value": "+1 800 944 2432",
+            "target": "+18009442432",
+            "anchor": "800.944.2432",
+            "purpose": "Published headquarters number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "ScanSource",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.scansource.com/",
+            "raw_path": "contact-source-scansource.txt",
+            "sha256": "b8a00c746ff5aac23a7cd9008316674f39408a1f836e011e3cc5380f0d4ca3e7"
+          }
+        ]
+      }
     },
     {
       "id": "person-1436880-issuer-1653477",
@@ -579,7 +618,46 @@
         "FORM144",
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.ingevity.com/contact/",
+            "target": "https://www.ingevity.com/contact/",
+            "anchor": "Contact Us",
+            "purpose": "Main phone as published in the official contact-page telephone link; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Ingevity",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.ingevity.com/contact/",
+            "raw_path": "contact-source-ingevity.txt",
+            "sha256": "dc3ff681fa36b6d6affbeefefe95c98fb3272271f66d9ecf868aeb097c08d9ec"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Main company phone",
+            "value": "+1 844 643 8489",
+            "target": "+18446438489",
+            "anchor": "8446438489",
+            "purpose": "Main phone as published in the official contact-page telephone link; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Ingevity",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.ingevity.com/contact/",
+            "raw_path": "contact-source-ingevity.txt",
+            "sha256": "dc3ff681fa36b6d6affbeefefe95c98fb3272271f66d9ecf868aeb097c08d9ec"
+          }
+        ]
+      }
     },
     {
       "id": "person-1243370-issuer-1090009",
@@ -835,7 +913,46 @@
         "FORM144",
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://ir.southernfirst.com/overview/default.aspx",
+            "target": "https://ir.southernfirst.com/overview/default.aspx",
+            "anchor": "Contact Us",
+            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Southern First Bancshares",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
+            "raw_path": "contact-source-southernfirst.txt",
+            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Corporate phone",
+            "value": "+1 864 679 9000",
+            "target": "+18646799000",
+            "anchor": "(864) 679-9000",
+            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Southern First Bancshares",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
+            "raw_path": "contact-source-southernfirst.txt",
+            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
+          }
+        ]
+      }
     },
     {
       "id": "person-1601818-issuer-1280058",
@@ -911,7 +1028,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.blackbaud.com/company/contact-us",
+            "target": "https://www.blackbaud.com/company/contact-us",
+            "anchor": "World Headquarters",
+            "purpose": "Corporate headquarters; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Blackbaud",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.blackbaud.com/company/contact-us",
+            "raw_path": "contact-source-blackbaud.txt",
+            "sha256": "2f11b2e0aac4ef09a624af4a390e1c664e2b464159fcd5554bd326326b9767e9"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Headquarters phone",
+            "value": "+1 843 216 6200",
+            "target": "+18432166200",
+            "anchor": "001.843.216.6200",
+            "purpose": "Corporate headquarters; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Blackbaud",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.blackbaud.com/company/contact-us",
+            "raw_path": "contact-source-blackbaud.txt",
+            "sha256": "2f11b2e0aac4ef09a624af4a390e1c664e2b464159fcd5554bd326326b9767e9"
+          }
+        ]
+      }
     },
     {
       "id": "person-1704315-issuer-857855",
@@ -1020,7 +1176,46 @@
         "FORM144",
         "FORM4"
       ],
-      "convergence": 1
+      "convergence": 1,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.ucbi.com/support/contact-us",
+            "target": "https://www.ucbi.com/support/contact-us",
+            "anchor": "Contact Us",
+            "purpose": "Products and services support; not an executive line or a personal solicitation route.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "United Community",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.ucbi.com/support/contact-us",
+            "raw_path": "contact-source-ucbi.txt",
+            "sha256": "d939e72aa0228c37a500299998ea67005587264e0545146f8f998c6377a11e63"
+          },
+          {
+            "kind": "PHONE",
+            "label": "General support phone",
+            "value": "+1 800 822 2651",
+            "target": "+18008222651",
+            "anchor": "1-800-822-2651",
+            "purpose": "Products and services support; not an executive line or a personal solicitation route.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "United Community",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.ucbi.com/support/contact-us",
+            "raw_path": "contact-source-ucbi.txt",
+            "sha256": "d939e72aa0228c37a500299998ea67005587264e0545146f8f998c6377a11e63"
+          }
+        ]
+      }
     },
     {
       "id": "person-1365837-issuer-1280058",
@@ -1072,7 +1267,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.blackbaud.com/company/contact-us",
+            "target": "https://www.blackbaud.com/company/contact-us",
+            "anchor": "World Headquarters",
+            "purpose": "Corporate headquarters; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Blackbaud",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.blackbaud.com/company/contact-us",
+            "raw_path": "contact-source-blackbaud.txt",
+            "sha256": "2f11b2e0aac4ef09a624af4a390e1c664e2b464159fcd5554bd326326b9767e9"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Headquarters phone",
+            "value": "+1 843 216 6200",
+            "target": "+18432166200",
+            "anchor": "001.843.216.6200",
+            "purpose": "Corporate headquarters; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Blackbaud",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.blackbaud.com/company/contact-us",
+            "raw_path": "contact-source-blackbaud.txt",
+            "sha256": "2f11b2e0aac4ef09a624af4a390e1c664e2b464159fcd5554bd326326b9767e9"
+          }
+        ]
+      }
     },
     {
       "id": "person-2105824-issuer-932781",
@@ -1226,7 +1460,46 @@
         "FORM144",
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.firstcommunitybankers.com/contact",
+            "target": "https://www.firstcommunitybankers.com/contact",
+            "anchor": "Customer Service",
+            "purpose": "Bank customer service; not an executive line. Reconfirm current issuer / bank affiliation.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "First Community Bankers",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.firstcommunitybankers.com/contact",
+            "raw_path": "contact-source-firstcommunity.txt",
+            "sha256": "e267e8da90ffbc53119eaf5501516f41e97bd9e8fa6b925dd17daa076296d3e2"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Customer service phone",
+            "value": "+1 800 829 6372",
+            "target": "+18008296372",
+            "anchor": "(800) 829-6372",
+            "purpose": "Bank customer service; not an executive line. Reconfirm current issuer / bank affiliation.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "First Community Bankers",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.firstcommunitybankers.com/contact",
+            "raw_path": "contact-source-firstcommunity.txt",
+            "sha256": "e267e8da90ffbc53119eaf5501516f41e97bd9e8fa6b925dd17daa076296d3e2"
+          }
+        ]
+      }
     },
     {
       "id": "person-1837268-issuer-918965",
@@ -1472,7 +1745,46 @@
         "FORM144",
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.scansource.com/",
+            "target": "https://www.scansource.com/",
+            "anchor": "Headquarters",
+            "purpose": "Published headquarters number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "ScanSource",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.scansource.com/",
+            "raw_path": "contact-source-scansource.txt",
+            "sha256": "b8a00c746ff5aac23a7cd9008316674f39408a1f836e011e3cc5380f0d4ca3e7"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Headquarters phone",
+            "value": "+1 800 944 2432",
+            "target": "+18009442432",
+            "anchor": "800.944.2432",
+            "purpose": "Published headquarters number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "ScanSource",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.scansource.com/",
+            "raw_path": "contact-source-scansource.txt",
+            "sha256": "b8a00c746ff5aac23a7cd9008316674f39408a1f836e011e3cc5380f0d4ca3e7"
+          }
+        ]
+      }
     },
     {
       "id": "person-1251036-issuer-910638",
@@ -1658,7 +1970,46 @@
         "FORM144",
         "FORM4"
       ],
-      "convergence": 1
+      "convergence": 1,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.3dsystems.com/press-releases/3d-systems-announces-date-first-quarter-2026-financial-results",
+            "target": "https://www.3dsystems.com/press-releases/3d-systems-announces-date-first-quarter-2026-financial-results",
+            "anchor": "Investor Contact",
+            "purpose": "For investor-relations research only; not the selected executive\u2019s email or a personal solicitation route.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "3D Systems",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.3dsystems.com/press-releases/3d-systems-announces-date-first-quarter-2026-financial-results",
+            "raw_path": "contact-source-3dsystems.txt",
+            "sha256": "d5aa8917c4248479ff03bfa82229bbe2c0a1df2192a67566d1d742cd1da58bbe"
+          },
+          {
+            "kind": "EMAIL",
+            "label": "Investor relations email",
+            "value": "investor.relations@3dsystems.com",
+            "target": "investor.relations@3dsystems.com",
+            "anchor": "investor.relations@3dsystems.com",
+            "purpose": "For investor-relations research only; not the selected executive\u2019s email or a personal solicitation route.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "3D Systems",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.3dsystems.com/press-releases/3d-systems-announces-date-first-quarter-2026-financial-results",
+            "raw_path": "contact-source-3dsystems.txt",
+            "sha256": "d5aa8917c4248479ff03bfa82229bbe2c0a1df2192a67566d1d742cd1da58bbe"
+          }
+        ]
+      }
     },
     {
       "id": "person-1427814-issuer-932781",
@@ -1763,7 +2114,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.firstcommunitybankers.com/contact",
+            "target": "https://www.firstcommunitybankers.com/contact",
+            "anchor": "Customer Service",
+            "purpose": "Bank customer service; not an executive line. Reconfirm current issuer / bank affiliation.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "First Community Bankers",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.firstcommunitybankers.com/contact",
+            "raw_path": "contact-source-firstcommunity.txt",
+            "sha256": "e267e8da90ffbc53119eaf5501516f41e97bd9e8fa6b925dd17daa076296d3e2"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Customer service phone",
+            "value": "+1 800 829 6372",
+            "target": "+18008296372",
+            "anchor": "(800) 829-6372",
+            "purpose": "Bank customer service; not an executive line. Reconfirm current issuer / bank affiliation.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "First Community Bankers",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.firstcommunitybankers.com/contact",
+            "raw_path": "contact-source-firstcommunity.txt",
+            "sha256": "e267e8da90ffbc53119eaf5501516f41e97bd9e8fa6b925dd17daa076296d3e2"
+          }
+        ]
+      }
     },
     {
       "id": "person-1243366-issuer-1090009",
@@ -1889,7 +2279,46 @@
         "FORM144",
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://ir.southernfirst.com/overview/default.aspx",
+            "target": "https://ir.southernfirst.com/overview/default.aspx",
+            "anchor": "Contact Us",
+            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Southern First Bancshares",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
+            "raw_path": "contact-source-southernfirst.txt",
+            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Corporate phone",
+            "value": "+1 864 679 9000",
+            "target": "+18646799000",
+            "anchor": "(864) 679-9000",
+            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Southern First Bancshares",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
+            "raw_path": "contact-source-southernfirst.txt",
+            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
+          }
+        ]
+      }
     },
     {
       "id": "person-1976915-issuer-918965",
@@ -2113,7 +2542,46 @@
         "FORM144",
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.scansource.com/",
+            "target": "https://www.scansource.com/",
+            "anchor": "Headquarters",
+            "purpose": "Published headquarters number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "ScanSource",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.scansource.com/",
+            "raw_path": "contact-source-scansource.txt",
+            "sha256": "b8a00c746ff5aac23a7cd9008316674f39408a1f836e011e3cc5380f0d4ca3e7"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Headquarters phone",
+            "value": "+1 800 944 2432",
+            "target": "+18009442432",
+            "anchor": "800.944.2432",
+            "purpose": "Published headquarters number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "ScanSource",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.scansource.com/",
+            "raw_path": "contact-source-scansource.txt",
+            "sha256": "b8a00c746ff5aac23a7cd9008316674f39408a1f836e011e3cc5380f0d4ca3e7"
+          }
+        ]
+      }
     },
     {
       "id": "person-1098696-issuer-1090009",
@@ -2385,7 +2853,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://ir.southernfirst.com/overview/default.aspx",
+            "target": "https://ir.southernfirst.com/overview/default.aspx",
+            "anchor": "Contact Us",
+            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Southern First Bancshares",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
+            "raw_path": "contact-source-southernfirst.txt",
+            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Corporate phone",
+            "value": "+1 864 679 9000",
+            "target": "+18646799000",
+            "anchor": "(864) 679-9000",
+            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Southern First Bancshares",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
+            "raw_path": "contact-source-southernfirst.txt",
+            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
+          }
+        ]
+      }
     },
     {
       "id": "person-1492840-issuer-1280058",
@@ -2572,7 +3079,46 @@
         "FORM144",
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.blackbaud.com/company/contact-us",
+            "target": "https://www.blackbaud.com/company/contact-us",
+            "anchor": "World Headquarters",
+            "purpose": "Corporate headquarters; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Blackbaud",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.blackbaud.com/company/contact-us",
+            "raw_path": "contact-source-blackbaud.txt",
+            "sha256": "2f11b2e0aac4ef09a624af4a390e1c664e2b464159fcd5554bd326326b9767e9"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Headquarters phone",
+            "value": "+1 843 216 6200",
+            "target": "+18432166200",
+            "anchor": "001.843.216.6200",
+            "purpose": "Corporate headquarters; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Blackbaud",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.blackbaud.com/company/contact-us",
+            "raw_path": "contact-source-blackbaud.txt",
+            "sha256": "2f11b2e0aac4ef09a624af4a390e1c664e2b464159fcd5554bd326326b9767e9"
+          }
+        ]
+      }
     },
     {
       "id": "person-2017486-issuer-1653477",
@@ -2699,7 +3245,46 @@
         "FORM144",
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.ingevity.com/contact/",
+            "target": "https://www.ingevity.com/contact/",
+            "anchor": "Contact Us",
+            "purpose": "Main phone as published in the official contact-page telephone link; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Ingevity",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.ingevity.com/contact/",
+            "raw_path": "contact-source-ingevity.txt",
+            "sha256": "dc3ff681fa36b6d6affbeefefe95c98fb3272271f66d9ecf868aeb097c08d9ec"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Main company phone",
+            "value": "+1 844 643 8489",
+            "target": "+18446438489",
+            "anchor": "8446438489",
+            "purpose": "Main phone as published in the official contact-page telephone link; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Ingevity",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.ingevity.com/contact/",
+            "raw_path": "contact-source-ingevity.txt",
+            "sha256": "dc3ff681fa36b6d6affbeefefe95c98fb3272271f66d9ecf868aeb097c08d9ec"
+          }
+        ]
+      }
     },
     {
       "id": "person-1438831-issuer-918965",
@@ -2801,7 +3386,46 @@
         "FORM144",
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.scansource.com/",
+            "target": "https://www.scansource.com/",
+            "anchor": "Headquarters",
+            "purpose": "Published headquarters number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "ScanSource",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.scansource.com/",
+            "raw_path": "contact-source-scansource.txt",
+            "sha256": "b8a00c746ff5aac23a7cd9008316674f39408a1f836e011e3cc5380f0d4ca3e7"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Headquarters phone",
+            "value": "+1 800 944 2432",
+            "target": "+18009442432",
+            "anchor": "800.944.2432",
+            "purpose": "Published headquarters number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "ScanSource",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.scansource.com/",
+            "raw_path": "contact-source-scansource.txt",
+            "sha256": "b8a00c746ff5aac23a7cd9008316674f39408a1f836e011e3cc5380f0d4ca3e7"
+          }
+        ]
+      }
     },
     {
       "id": "person-1879982-issuer-910638",
@@ -2931,7 +3555,46 @@
         "FORM144",
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.3dsystems.com/press-releases/3d-systems-announces-date-first-quarter-2026-financial-results",
+            "target": "https://www.3dsystems.com/press-releases/3d-systems-announces-date-first-quarter-2026-financial-results",
+            "anchor": "Investor Contact",
+            "purpose": "For investor-relations research only; not the selected executive\u2019s email or a personal solicitation route.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "3D Systems",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.3dsystems.com/press-releases/3d-systems-announces-date-first-quarter-2026-financial-results",
+            "raw_path": "contact-source-3dsystems.txt",
+            "sha256": "d5aa8917c4248479ff03bfa82229bbe2c0a1df2192a67566d1d742cd1da58bbe"
+          },
+          {
+            "kind": "EMAIL",
+            "label": "Investor relations email",
+            "value": "investor.relations@3dsystems.com",
+            "target": "investor.relations@3dsystems.com",
+            "anchor": "investor.relations@3dsystems.com",
+            "purpose": "For investor-relations research only; not the selected executive\u2019s email or a personal solicitation route.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "3D Systems",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.3dsystems.com/press-releases/3d-systems-announces-date-first-quarter-2026-financial-results",
+            "raw_path": "contact-source-3dsystems.txt",
+            "sha256": "d5aa8917c4248479ff03bfa82229bbe2c0a1df2192a67566d1d742cd1da58bbe"
+          }
+        ]
+      }
     },
     {
       "id": "person-1939343-issuer-1280058",
@@ -2981,7 +3644,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.blackbaud.com/company/contact-us",
+            "target": "https://www.blackbaud.com/company/contact-us",
+            "anchor": "World Headquarters",
+            "purpose": "Corporate headquarters; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Blackbaud",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.blackbaud.com/company/contact-us",
+            "raw_path": "contact-source-blackbaud.txt",
+            "sha256": "2f11b2e0aac4ef09a624af4a390e1c664e2b464159fcd5554bd326326b9767e9"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Headquarters phone",
+            "value": "+1 843 216 6200",
+            "target": "+18432166200",
+            "anchor": "001.843.216.6200",
+            "purpose": "Corporate headquarters; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Blackbaud",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.blackbaud.com/company/contact-us",
+            "raw_path": "contact-source-blackbaud.txt",
+            "sha256": "2f11b2e0aac4ef09a624af4a390e1c664e2b464159fcd5554bd326326b9767e9"
+          }
+        ]
+      }
     },
     {
       "id": "person-2042013-issuer-1090009",
@@ -3061,7 +3763,46 @@
         "FORM144",
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://ir.southernfirst.com/overview/default.aspx",
+            "target": "https://ir.southernfirst.com/overview/default.aspx",
+            "anchor": "Contact Us",
+            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Southern First Bancshares",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
+            "raw_path": "contact-source-southernfirst.txt",
+            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Corporate phone",
+            "value": "+1 864 679 9000",
+            "target": "+18646799000",
+            "anchor": "(864) 679-9000",
+            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Southern First Bancshares",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
+            "raw_path": "contact-source-southernfirst.txt",
+            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
+          }
+        ]
+      }
     },
     {
       "id": "person-1608560-issuer-857855",
@@ -3137,7 +3878,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.ucbi.com/support/contact-us",
+            "target": "https://www.ucbi.com/support/contact-us",
+            "anchor": "Contact Us",
+            "purpose": "Products and services support; not an executive line or a personal solicitation route.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "United Community",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.ucbi.com/support/contact-us",
+            "raw_path": "contact-source-ucbi.txt",
+            "sha256": "d939e72aa0228c37a500299998ea67005587264e0545146f8f998c6377a11e63"
+          },
+          {
+            "kind": "PHONE",
+            "label": "General support phone",
+            "value": "+1 800 822 2651",
+            "target": "+18008222651",
+            "anchor": "1-800-822-2651",
+            "purpose": "Products and services support; not an executive line or a personal solicitation route.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "United Community",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.ucbi.com/support/contact-us",
+            "raw_path": "contact-source-ucbi.txt",
+            "sha256": "d939e72aa0228c37a500299998ea67005587264e0545146f8f998c6377a11e63"
+          }
+        ]
+      }
     },
     {
       "id": "person-1552446-issuer-1653477",
@@ -3231,7 +4011,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.ingevity.com/contact/",
+            "target": "https://www.ingevity.com/contact/",
+            "anchor": "Contact Us",
+            "purpose": "Main phone as published in the official contact-page telephone link; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Ingevity",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.ingevity.com/contact/",
+            "raw_path": "contact-source-ingevity.txt",
+            "sha256": "dc3ff681fa36b6d6affbeefefe95c98fb3272271f66d9ecf868aeb097c08d9ec"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Main company phone",
+            "value": "+1 844 643 8489",
+            "target": "+18446438489",
+            "anchor": "8446438489",
+            "purpose": "Main phone as published in the official contact-page telephone link; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Ingevity",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.ingevity.com/contact/",
+            "raw_path": "contact-source-ingevity.txt",
+            "sha256": "dc3ff681fa36b6d6affbeefefe95c98fb3272271f66d9ecf868aeb097c08d9ec"
+          }
+        ]
+      }
     },
     {
       "id": "person-1866854-issuer-1090009",
@@ -3305,7 +4124,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://ir.southernfirst.com/overview/default.aspx",
+            "target": "https://ir.southernfirst.com/overview/default.aspx",
+            "anchor": "Contact Us",
+            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Southern First Bancshares",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
+            "raw_path": "contact-source-southernfirst.txt",
+            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Corporate phone",
+            "value": "+1 864 679 9000",
+            "target": "+18646799000",
+            "anchor": "(864) 679-9000",
+            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Southern First Bancshares",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
+            "raw_path": "contact-source-southernfirst.txt",
+            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
+          }
+        ]
+      }
     },
     {
       "id": "person-1575329-issuer-1653477",
@@ -3381,7 +4239,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.ingevity.com/contact/",
+            "target": "https://www.ingevity.com/contact/",
+            "anchor": "Contact Us",
+            "purpose": "Main phone as published in the official contact-page telephone link; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Ingevity",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.ingevity.com/contact/",
+            "raw_path": "contact-source-ingevity.txt",
+            "sha256": "dc3ff681fa36b6d6affbeefefe95c98fb3272271f66d9ecf868aeb097c08d9ec"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Main company phone",
+            "value": "+1 844 643 8489",
+            "target": "+18446438489",
+            "anchor": "8446438489",
+            "purpose": "Main phone as published in the official contact-page telephone link; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Ingevity",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.ingevity.com/contact/",
+            "raw_path": "contact-source-ingevity.txt",
+            "sha256": "dc3ff681fa36b6d6affbeefefe95c98fb3272271f66d9ecf868aeb097c08d9ec"
+          }
+        ]
+      }
     },
     {
       "id": "person-2066872-issuer-1653477",
@@ -3457,7 +4354,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.ingevity.com/contact/",
+            "target": "https://www.ingevity.com/contact/",
+            "anchor": "Contact Us",
+            "purpose": "Main phone as published in the official contact-page telephone link; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Ingevity",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.ingevity.com/contact/",
+            "raw_path": "contact-source-ingevity.txt",
+            "sha256": "dc3ff681fa36b6d6affbeefefe95c98fb3272271f66d9ecf868aeb097c08d9ec"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Main company phone",
+            "value": "+1 844 643 8489",
+            "target": "+18446438489",
+            "anchor": "8446438489",
+            "purpose": "Main phone as published in the official contact-page telephone link; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Ingevity",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.ingevity.com/contact/",
+            "raw_path": "contact-source-ingevity.txt",
+            "sha256": "dc3ff681fa36b6d6affbeefefe95c98fb3272271f66d9ecf868aeb097c08d9ec"
+          }
+        ]
+      }
     },
     {
       "id": "person-1668926-issuer-1653477",
@@ -3533,7 +4469,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.ingevity.com/contact/",
+            "target": "https://www.ingevity.com/contact/",
+            "anchor": "Contact Us",
+            "purpose": "Main phone as published in the official contact-page telephone link; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Ingevity",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.ingevity.com/contact/",
+            "raw_path": "contact-source-ingevity.txt",
+            "sha256": "dc3ff681fa36b6d6affbeefefe95c98fb3272271f66d9ecf868aeb097c08d9ec"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Main company phone",
+            "value": "+1 844 643 8489",
+            "target": "+18446438489",
+            "anchor": "8446438489",
+            "purpose": "Main phone as published in the official contact-page telephone link; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Ingevity",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.ingevity.com/contact/",
+            "raw_path": "contact-source-ingevity.txt",
+            "sha256": "dc3ff681fa36b6d6affbeefefe95c98fb3272271f66d9ecf868aeb097c08d9ec"
+          }
+        ]
+      }
     },
     {
       "id": "person-2142185-issuer-1653477",
@@ -3612,7 +4587,46 @@
         "8K",
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.ingevity.com/contact/",
+            "target": "https://www.ingevity.com/contact/",
+            "anchor": "Contact Us",
+            "purpose": "Main phone as published in the official contact-page telephone link; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Ingevity",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.ingevity.com/contact/",
+            "raw_path": "contact-source-ingevity.txt",
+            "sha256": "dc3ff681fa36b6d6affbeefefe95c98fb3272271f66d9ecf868aeb097c08d9ec"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Main company phone",
+            "value": "+1 844 643 8489",
+            "target": "+18446438489",
+            "anchor": "8446438489",
+            "purpose": "Main phone as published in the official contact-page telephone link; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Ingevity",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.ingevity.com/contact/",
+            "raw_path": "contact-source-ingevity.txt",
+            "sha256": "dc3ff681fa36b6d6affbeefefe95c98fb3272271f66d9ecf868aeb097c08d9ec"
+          }
+        ]
+      }
     },
     {
       "id": "person-1777095-issuer-1280058",
@@ -3664,7 +4678,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.blackbaud.com/company/contact-us",
+            "target": "https://www.blackbaud.com/company/contact-us",
+            "anchor": "World Headquarters",
+            "purpose": "Corporate headquarters; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Blackbaud",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.blackbaud.com/company/contact-us",
+            "raw_path": "contact-source-blackbaud.txt",
+            "sha256": "2f11b2e0aac4ef09a624af4a390e1c664e2b464159fcd5554bd326326b9767e9"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Headquarters phone",
+            "value": "+1 843 216 6200",
+            "target": "+18432166200",
+            "anchor": "001.843.216.6200",
+            "purpose": "Corporate headquarters; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Blackbaud",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.blackbaud.com/company/contact-us",
+            "raw_path": "contact-source-blackbaud.txt",
+            "sha256": "2f11b2e0aac4ef09a624af4a390e1c664e2b464159fcd5554bd326326b9767e9"
+          }
+        ]
+      }
     },
     {
       "id": "person-2047652-issuer-1280058",
@@ -3716,7 +4769,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.blackbaud.com/company/contact-us",
+            "target": "https://www.blackbaud.com/company/contact-us",
+            "anchor": "World Headquarters",
+            "purpose": "Corporate headquarters; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Blackbaud",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.blackbaud.com/company/contact-us",
+            "raw_path": "contact-source-blackbaud.txt",
+            "sha256": "2f11b2e0aac4ef09a624af4a390e1c664e2b464159fcd5554bd326326b9767e9"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Headquarters phone",
+            "value": "+1 843 216 6200",
+            "target": "+18432166200",
+            "anchor": "001.843.216.6200",
+            "purpose": "Corporate headquarters; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Blackbaud",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.blackbaud.com/company/contact-us",
+            "raw_path": "contact-source-blackbaud.txt",
+            "sha256": "2f11b2e0aac4ef09a624af4a390e1c664e2b464159fcd5554bd326326b9767e9"
+          }
+        ]
+      }
     },
     {
       "id": "person-1292592-issuer-1280058",
@@ -3768,7 +4860,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.blackbaud.com/company/contact-us",
+            "target": "https://www.blackbaud.com/company/contact-us",
+            "anchor": "World Headquarters",
+            "purpose": "Corporate headquarters; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Blackbaud",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.blackbaud.com/company/contact-us",
+            "raw_path": "contact-source-blackbaud.txt",
+            "sha256": "2f11b2e0aac4ef09a624af4a390e1c664e2b464159fcd5554bd326326b9767e9"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Headquarters phone",
+            "value": "+1 843 216 6200",
+            "target": "+18432166200",
+            "anchor": "001.843.216.6200",
+            "purpose": "Corporate headquarters; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Blackbaud",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.blackbaud.com/company/contact-us",
+            "raw_path": "contact-source-blackbaud.txt",
+            "sha256": "2f11b2e0aac4ef09a624af4a390e1c664e2b464159fcd5554bd326326b9767e9"
+          }
+        ]
+      }
     },
     {
       "id": "person-1941042-issuer-1280058",
@@ -3820,7 +4951,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.blackbaud.com/company/contact-us",
+            "target": "https://www.blackbaud.com/company/contact-us",
+            "anchor": "World Headquarters",
+            "purpose": "Corporate headquarters; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Blackbaud",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.blackbaud.com/company/contact-us",
+            "raw_path": "contact-source-blackbaud.txt",
+            "sha256": "2f11b2e0aac4ef09a624af4a390e1c664e2b464159fcd5554bd326326b9767e9"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Headquarters phone",
+            "value": "+1 843 216 6200",
+            "target": "+18432166200",
+            "anchor": "001.843.216.6200",
+            "purpose": "Corporate headquarters; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Blackbaud",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.blackbaud.com/company/contact-us",
+            "raw_path": "contact-source-blackbaud.txt",
+            "sha256": "2f11b2e0aac4ef09a624af4a390e1c664e2b464159fcd5554bd326326b9767e9"
+          }
+        ]
+      }
     },
     {
       "id": "person-1886374-issuer-1280058",
@@ -3872,7 +5042,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.blackbaud.com/company/contact-us",
+            "target": "https://www.blackbaud.com/company/contact-us",
+            "anchor": "World Headquarters",
+            "purpose": "Corporate headquarters; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Blackbaud",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.blackbaud.com/company/contact-us",
+            "raw_path": "contact-source-blackbaud.txt",
+            "sha256": "2f11b2e0aac4ef09a624af4a390e1c664e2b464159fcd5554bd326326b9767e9"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Headquarters phone",
+            "value": "+1 843 216 6200",
+            "target": "+18432166200",
+            "anchor": "001.843.216.6200",
+            "purpose": "Corporate headquarters; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Blackbaud",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.blackbaud.com/company/contact-us",
+            "raw_path": "contact-source-blackbaud.txt",
+            "sha256": "2f11b2e0aac4ef09a624af4a390e1c664e2b464159fcd5554bd326326b9767e9"
+          }
+        ]
+      }
     },
     {
       "id": "person-2026608-issuer-910638",
@@ -3924,7 +5133,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.3dsystems.com/press-releases/3d-systems-announces-date-first-quarter-2026-financial-results",
+            "target": "https://www.3dsystems.com/press-releases/3d-systems-announces-date-first-quarter-2026-financial-results",
+            "anchor": "Investor Contact",
+            "purpose": "For investor-relations research only; not the selected executive\u2019s email or a personal solicitation route.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "3D Systems",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.3dsystems.com/press-releases/3d-systems-announces-date-first-quarter-2026-financial-results",
+            "raw_path": "contact-source-3dsystems.txt",
+            "sha256": "d5aa8917c4248479ff03bfa82229bbe2c0a1df2192a67566d1d742cd1da58bbe"
+          },
+          {
+            "kind": "EMAIL",
+            "label": "Investor relations email",
+            "value": "investor.relations@3dsystems.com",
+            "target": "investor.relations@3dsystems.com",
+            "anchor": "investor.relations@3dsystems.com",
+            "purpose": "For investor-relations research only; not the selected executive\u2019s email or a personal solicitation route.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "3D Systems",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.3dsystems.com/press-releases/3d-systems-announces-date-first-quarter-2026-financial-results",
+            "raw_path": "contact-source-3dsystems.txt",
+            "sha256": "d5aa8917c4248479ff03bfa82229bbe2c0a1df2192a67566d1d742cd1da58bbe"
+          }
+        ]
+      }
     },
     {
       "id": "person-1957687-issuer-910638",
@@ -3976,7 +5224,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.3dsystems.com/press-releases/3d-systems-announces-date-first-quarter-2026-financial-results",
+            "target": "https://www.3dsystems.com/press-releases/3d-systems-announces-date-first-quarter-2026-financial-results",
+            "anchor": "Investor Contact",
+            "purpose": "For investor-relations research only; not the selected executive\u2019s email or a personal solicitation route.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "3D Systems",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.3dsystems.com/press-releases/3d-systems-announces-date-first-quarter-2026-financial-results",
+            "raw_path": "contact-source-3dsystems.txt",
+            "sha256": "d5aa8917c4248479ff03bfa82229bbe2c0a1df2192a67566d1d742cd1da58bbe"
+          },
+          {
+            "kind": "EMAIL",
+            "label": "Investor relations email",
+            "value": "investor.relations@3dsystems.com",
+            "target": "investor.relations@3dsystems.com",
+            "anchor": "investor.relations@3dsystems.com",
+            "purpose": "For investor-relations research only; not the selected executive\u2019s email or a personal solicitation route.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "3D Systems",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.3dsystems.com/press-releases/3d-systems-announces-date-first-quarter-2026-financial-results",
+            "raw_path": "contact-source-3dsystems.txt",
+            "sha256": "d5aa8917c4248479ff03bfa82229bbe2c0a1df2192a67566d1d742cd1da58bbe"
+          }
+        ]
+      }
     },
     {
       "id": "person-1826896-issuer-910638",
@@ -4028,7 +5315,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.3dsystems.com/press-releases/3d-systems-announces-date-first-quarter-2026-financial-results",
+            "target": "https://www.3dsystems.com/press-releases/3d-systems-announces-date-first-quarter-2026-financial-results",
+            "anchor": "Investor Contact",
+            "purpose": "For investor-relations research only; not the selected executive\u2019s email or a personal solicitation route.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "3D Systems",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.3dsystems.com/press-releases/3d-systems-announces-date-first-quarter-2026-financial-results",
+            "raw_path": "contact-source-3dsystems.txt",
+            "sha256": "d5aa8917c4248479ff03bfa82229bbe2c0a1df2192a67566d1d742cd1da58bbe"
+          },
+          {
+            "kind": "EMAIL",
+            "label": "Investor relations email",
+            "value": "investor.relations@3dsystems.com",
+            "target": "investor.relations@3dsystems.com",
+            "anchor": "investor.relations@3dsystems.com",
+            "purpose": "For investor-relations research only; not the selected executive\u2019s email or a personal solicitation route.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "3D Systems",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.3dsystems.com/press-releases/3d-systems-announces-date-first-quarter-2026-financial-results",
+            "raw_path": "contact-source-3dsystems.txt",
+            "sha256": "d5aa8917c4248479ff03bfa82229bbe2c0a1df2192a67566d1d742cd1da58bbe"
+          }
+        ]
+      }
     },
     {
       "id": "person-1105964-issuer-910638",
@@ -4080,7 +5406,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.3dsystems.com/press-releases/3d-systems-announces-date-first-quarter-2026-financial-results",
+            "target": "https://www.3dsystems.com/press-releases/3d-systems-announces-date-first-quarter-2026-financial-results",
+            "anchor": "Investor Contact",
+            "purpose": "For investor-relations research only; not the selected executive\u2019s email or a personal solicitation route.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "3D Systems",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.3dsystems.com/press-releases/3d-systems-announces-date-first-quarter-2026-financial-results",
+            "raw_path": "contact-source-3dsystems.txt",
+            "sha256": "d5aa8917c4248479ff03bfa82229bbe2c0a1df2192a67566d1d742cd1da58bbe"
+          },
+          {
+            "kind": "EMAIL",
+            "label": "Investor relations email",
+            "value": "investor.relations@3dsystems.com",
+            "target": "investor.relations@3dsystems.com",
+            "anchor": "investor.relations@3dsystems.com",
+            "purpose": "For investor-relations research only; not the selected executive\u2019s email or a personal solicitation route.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "3D Systems",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.3dsystems.com/press-releases/3d-systems-announces-date-first-quarter-2026-financial-results",
+            "raw_path": "contact-source-3dsystems.txt",
+            "sha256": "d5aa8917c4248479ff03bfa82229bbe2c0a1df2192a67566d1d742cd1da58bbe"
+          }
+        ]
+      }
     },
     {
       "id": "person-1827598-issuer-918965",
@@ -4130,7 +5495,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.scansource.com/",
+            "target": "https://www.scansource.com/",
+            "anchor": "Headquarters",
+            "purpose": "Published headquarters number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "ScanSource",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.scansource.com/",
+            "raw_path": "contact-source-scansource.txt",
+            "sha256": "b8a00c746ff5aac23a7cd9008316674f39408a1f836e011e3cc5380f0d4ca3e7"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Headquarters phone",
+            "value": "+1 800 944 2432",
+            "target": "+18009442432",
+            "anchor": "800.944.2432",
+            "purpose": "Published headquarters number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "ScanSource",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.scansource.com/",
+            "raw_path": "contact-source-scansource.txt",
+            "sha256": "b8a00c746ff5aac23a7cd9008316674f39408a1f836e011e3cc5380f0d4ca3e7"
+          }
+        ]
+      }
     },
     {
       "id": "person-1183398-issuer-918965",
@@ -4180,7 +5584,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.scansource.com/",
+            "target": "https://www.scansource.com/",
+            "anchor": "Headquarters",
+            "purpose": "Published headquarters number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "ScanSource",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.scansource.com/",
+            "raw_path": "contact-source-scansource.txt",
+            "sha256": "b8a00c746ff5aac23a7cd9008316674f39408a1f836e011e3cc5380f0d4ca3e7"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Headquarters phone",
+            "value": "+1 800 944 2432",
+            "target": "+18009442432",
+            "anchor": "800.944.2432",
+            "purpose": "Published headquarters number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "ScanSource",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.scansource.com/",
+            "raw_path": "contact-source-scansource.txt",
+            "sha256": "b8a00c746ff5aac23a7cd9008316674f39408a1f836e011e3cc5380f0d4ca3e7"
+          }
+        ]
+      }
     },
     {
       "id": "person-1970916-issuer-918965",
@@ -4230,7 +5673,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.scansource.com/",
+            "target": "https://www.scansource.com/",
+            "anchor": "Headquarters",
+            "purpose": "Published headquarters number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "ScanSource",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.scansource.com/",
+            "raw_path": "contact-source-scansource.txt",
+            "sha256": "b8a00c746ff5aac23a7cd9008316674f39408a1f836e011e3cc5380f0d4ca3e7"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Headquarters phone",
+            "value": "+1 800 944 2432",
+            "target": "+18009442432",
+            "anchor": "800.944.2432",
+            "purpose": "Published headquarters number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "ScanSource",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.scansource.com/",
+            "raw_path": "contact-source-scansource.txt",
+            "sha256": "b8a00c746ff5aac23a7cd9008316674f39408a1f836e011e3cc5380f0d4ca3e7"
+          }
+        ]
+      }
     },
     {
       "id": "person-1599156-issuer-918965",
@@ -4280,7 +5762,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.scansource.com/",
+            "target": "https://www.scansource.com/",
+            "anchor": "Headquarters",
+            "purpose": "Published headquarters number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "ScanSource",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.scansource.com/",
+            "raw_path": "contact-source-scansource.txt",
+            "sha256": "b8a00c746ff5aac23a7cd9008316674f39408a1f836e011e3cc5380f0d4ca3e7"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Headquarters phone",
+            "value": "+1 800 944 2432",
+            "target": "+18009442432",
+            "anchor": "800.944.2432",
+            "purpose": "Published headquarters number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "ScanSource",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.scansource.com/",
+            "raw_path": "contact-source-scansource.txt",
+            "sha256": "b8a00c746ff5aac23a7cd9008316674f39408a1f836e011e3cc5380f0d4ca3e7"
+          }
+        ]
+      }
     },
     {
       "id": "person-1233406-issuer-918965",
@@ -4330,7 +5851,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.scansource.com/",
+            "target": "https://www.scansource.com/",
+            "anchor": "Headquarters",
+            "purpose": "Published headquarters number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "ScanSource",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.scansource.com/",
+            "raw_path": "contact-source-scansource.txt",
+            "sha256": "b8a00c746ff5aac23a7cd9008316674f39408a1f836e011e3cc5380f0d4ca3e7"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Headquarters phone",
+            "value": "+1 800 944 2432",
+            "target": "+18009442432",
+            "anchor": "800.944.2432",
+            "purpose": "Published headquarters number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "ScanSource",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.scansource.com/",
+            "raw_path": "contact-source-scansource.txt",
+            "sha256": "b8a00c746ff5aac23a7cd9008316674f39408a1f836e011e3cc5380f0d4ca3e7"
+          }
+        ]
+      }
     },
     {
       "id": "person-1646468-issuer-918965",
@@ -4498,7 +6058,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.scansource.com/",
+            "target": "https://www.scansource.com/",
+            "anchor": "Headquarters",
+            "purpose": "Published headquarters number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "ScanSource",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.scansource.com/",
+            "raw_path": "contact-source-scansource.txt",
+            "sha256": "b8a00c746ff5aac23a7cd9008316674f39408a1f836e011e3cc5380f0d4ca3e7"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Headquarters phone",
+            "value": "+1 800 944 2432",
+            "target": "+18009442432",
+            "anchor": "800.944.2432",
+            "purpose": "Published headquarters number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "ScanSource",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.scansource.com/",
+            "raw_path": "contact-source-scansource.txt",
+            "sha256": "b8a00c746ff5aac23a7cd9008316674f39408a1f836e011e3cc5380f0d4ca3e7"
+          }
+        ]
+      }
     },
     {
       "id": "person-1715977-issuer-918965",
@@ -4548,7 +6147,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.scansource.com/",
+            "target": "https://www.scansource.com/",
+            "anchor": "Headquarters",
+            "purpose": "Published headquarters number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "ScanSource",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.scansource.com/",
+            "raw_path": "contact-source-scansource.txt",
+            "sha256": "b8a00c746ff5aac23a7cd9008316674f39408a1f836e011e3cc5380f0d4ca3e7"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Headquarters phone",
+            "value": "+1 800 944 2432",
+            "target": "+18009442432",
+            "anchor": "800.944.2432",
+            "purpose": "Published headquarters number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "ScanSource",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.scansource.com/",
+            "raw_path": "contact-source-scansource.txt",
+            "sha256": "b8a00c746ff5aac23a7cd9008316674f39408a1f836e011e3cc5380f0d4ca3e7"
+          }
+        ]
+      }
     },
     {
       "id": "person-2152325-issuer-857855",
@@ -4600,7 +6238,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.ucbi.com/support/contact-us",
+            "target": "https://www.ucbi.com/support/contact-us",
+            "anchor": "Contact Us",
+            "purpose": "Products and services support; not an executive line or a personal solicitation route.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "United Community",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.ucbi.com/support/contact-us",
+            "raw_path": "contact-source-ucbi.txt",
+            "sha256": "d939e72aa0228c37a500299998ea67005587264e0545146f8f998c6377a11e63"
+          },
+          {
+            "kind": "PHONE",
+            "label": "General support phone",
+            "value": "+1 800 822 2651",
+            "target": "+18008222651",
+            "anchor": "1-800-822-2651",
+            "purpose": "Products and services support; not an executive line or a personal solicitation route.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "United Community",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.ucbi.com/support/contact-us",
+            "raw_path": "contact-source-ucbi.txt",
+            "sha256": "d939e72aa0228c37a500299998ea67005587264e0545146f8f998c6377a11e63"
+          }
+        ]
+      }
     },
     {
       "id": "person-1184728-issuer-857855",
@@ -4676,7 +6353,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.ucbi.com/support/contact-us",
+            "target": "https://www.ucbi.com/support/contact-us",
+            "anchor": "Contact Us",
+            "purpose": "Products and services support; not an executive line or a personal solicitation route.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "United Community",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.ucbi.com/support/contact-us",
+            "raw_path": "contact-source-ucbi.txt",
+            "sha256": "d939e72aa0228c37a500299998ea67005587264e0545146f8f998c6377a11e63"
+          },
+          {
+            "kind": "PHONE",
+            "label": "General support phone",
+            "value": "+1 800 822 2651",
+            "target": "+18008222651",
+            "anchor": "1-800-822-2651",
+            "purpose": "Products and services support; not an executive line or a personal solicitation route.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "United Community",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.ucbi.com/support/contact-us",
+            "raw_path": "contact-source-ucbi.txt",
+            "sha256": "d939e72aa0228c37a500299998ea67005587264e0545146f8f998c6377a11e63"
+          }
+        ]
+      }
     },
     {
       "id": "person-2146558-issuer-857855",
@@ -4777,7 +6493,46 @@
         "8K",
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.ucbi.com/support/contact-us",
+            "target": "https://www.ucbi.com/support/contact-us",
+            "anchor": "Contact Us",
+            "purpose": "Products and services support; not an executive line or a personal solicitation route.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "United Community",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.ucbi.com/support/contact-us",
+            "raw_path": "contact-source-ucbi.txt",
+            "sha256": "d939e72aa0228c37a500299998ea67005587264e0545146f8f998c6377a11e63"
+          },
+          {
+            "kind": "PHONE",
+            "label": "General support phone",
+            "value": "+1 800 822 2651",
+            "target": "+18008222651",
+            "anchor": "1-800-822-2651",
+            "purpose": "Products and services support; not an executive line or a personal solicitation route.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "United Community",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.ucbi.com/support/contact-us",
+            "raw_path": "contact-source-ucbi.txt",
+            "sha256": "d939e72aa0228c37a500299998ea67005587264e0545146f8f998c6377a11e63"
+          }
+        ]
+      }
     },
     {
       "id": "person-1443717-issuer-857855",
@@ -4827,7 +6582,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.ucbi.com/support/contact-us",
+            "target": "https://www.ucbi.com/support/contact-us",
+            "anchor": "Contact Us",
+            "purpose": "Products and services support; not an executive line or a personal solicitation route.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "United Community",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.ucbi.com/support/contact-us",
+            "raw_path": "contact-source-ucbi.txt",
+            "sha256": "d939e72aa0228c37a500299998ea67005587264e0545146f8f998c6377a11e63"
+          },
+          {
+            "kind": "PHONE",
+            "label": "General support phone",
+            "value": "+1 800 822 2651",
+            "target": "+18008222651",
+            "anchor": "1-800-822-2651",
+            "purpose": "Products and services support; not an executive line or a personal solicitation route.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "United Community",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.ucbi.com/support/contact-us",
+            "raw_path": "contact-source-ucbi.txt",
+            "sha256": "d939e72aa0228c37a500299998ea67005587264e0545146f8f998c6377a11e63"
+          }
+        ]
+      }
     },
     {
       "id": "person-1875284-issuer-857855",
@@ -4903,7 +6697,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.ucbi.com/support/contact-us",
+            "target": "https://www.ucbi.com/support/contact-us",
+            "anchor": "Contact Us",
+            "purpose": "Products and services support; not an executive line or a personal solicitation route.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "United Community",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.ucbi.com/support/contact-us",
+            "raw_path": "contact-source-ucbi.txt",
+            "sha256": "d939e72aa0228c37a500299998ea67005587264e0545146f8f998c6377a11e63"
+          },
+          {
+            "kind": "PHONE",
+            "label": "General support phone",
+            "value": "+1 800 822 2651",
+            "target": "+18008222651",
+            "anchor": "1-800-822-2651",
+            "purpose": "Products and services support; not an executive line or a personal solicitation route.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "United Community",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.ucbi.com/support/contact-us",
+            "raw_path": "contact-source-ucbi.txt",
+            "sha256": "d939e72aa0228c37a500299998ea67005587264e0545146f8f998c6377a11e63"
+          }
+        ]
+      }
     },
     {
       "id": "person-1657935-issuer-857855",
@@ -4979,7 +6812,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.ucbi.com/support/contact-us",
+            "target": "https://www.ucbi.com/support/contact-us",
+            "anchor": "Contact Us",
+            "purpose": "Products and services support; not an executive line or a personal solicitation route.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "United Community",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.ucbi.com/support/contact-us",
+            "raw_path": "contact-source-ucbi.txt",
+            "sha256": "d939e72aa0228c37a500299998ea67005587264e0545146f8f998c6377a11e63"
+          },
+          {
+            "kind": "PHONE",
+            "label": "General support phone",
+            "value": "+1 800 822 2651",
+            "target": "+18008222651",
+            "anchor": "1-800-822-2651",
+            "purpose": "Products and services support; not an executive line or a personal solicitation route.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "United Community",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.ucbi.com/support/contact-us",
+            "raw_path": "contact-source-ucbi.txt",
+            "sha256": "d939e72aa0228c37a500299998ea67005587264e0545146f8f998c6377a11e63"
+          }
+        ]
+      }
     },
     {
       "id": "person-1181672-issuer-857855",
@@ -5055,7 +6927,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.ucbi.com/support/contact-us",
+            "target": "https://www.ucbi.com/support/contact-us",
+            "anchor": "Contact Us",
+            "purpose": "Products and services support; not an executive line or a personal solicitation route.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "United Community",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.ucbi.com/support/contact-us",
+            "raw_path": "contact-source-ucbi.txt",
+            "sha256": "d939e72aa0228c37a500299998ea67005587264e0545146f8f998c6377a11e63"
+          },
+          {
+            "kind": "PHONE",
+            "label": "General support phone",
+            "value": "+1 800 822 2651",
+            "target": "+18008222651",
+            "anchor": "1-800-822-2651",
+            "purpose": "Products and services support; not an executive line or a personal solicitation route.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "United Community",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.ucbi.com/support/contact-us",
+            "raw_path": "contact-source-ucbi.txt",
+            "sha256": "d939e72aa0228c37a500299998ea67005587264e0545146f8f998c6377a11e63"
+          }
+        ]
+      }
     },
     {
       "id": "person-1998941-issuer-857855",
@@ -5131,7 +7042,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.ucbi.com/support/contact-us",
+            "target": "https://www.ucbi.com/support/contact-us",
+            "anchor": "Contact Us",
+            "purpose": "Products and services support; not an executive line or a personal solicitation route.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "United Community",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.ucbi.com/support/contact-us",
+            "raw_path": "contact-source-ucbi.txt",
+            "sha256": "d939e72aa0228c37a500299998ea67005587264e0545146f8f998c6377a11e63"
+          },
+          {
+            "kind": "PHONE",
+            "label": "General support phone",
+            "value": "+1 800 822 2651",
+            "target": "+18008222651",
+            "anchor": "1-800-822-2651",
+            "purpose": "Products and services support; not an executive line or a personal solicitation route.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "United Community",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.ucbi.com/support/contact-us",
+            "raw_path": "contact-source-ucbi.txt",
+            "sha256": "d939e72aa0228c37a500299998ea67005587264e0545146f8f998c6377a11e63"
+          }
+        ]
+      }
     },
     {
       "id": "person-1760912-issuer-1090009",
@@ -5205,7 +7155,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://ir.southernfirst.com/overview/default.aspx",
+            "target": "https://ir.southernfirst.com/overview/default.aspx",
+            "anchor": "Contact Us",
+            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Southern First Bancshares",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
+            "raw_path": "contact-source-southernfirst.txt",
+            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Corporate phone",
+            "value": "+1 864 679 9000",
+            "target": "+18646799000",
+            "anchor": "(864) 679-9000",
+            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Southern First Bancshares",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
+            "raw_path": "contact-source-southernfirst.txt",
+            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
+          }
+        ]
+      }
     },
     {
       "id": "person-1866768-issuer-1090009",
@@ -5257,7 +7246,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://ir.southernfirst.com/overview/default.aspx",
+            "target": "https://ir.southernfirst.com/overview/default.aspx",
+            "anchor": "Contact Us",
+            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Southern First Bancshares",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
+            "raw_path": "contact-source-southernfirst.txt",
+            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Corporate phone",
+            "value": "+1 864 679 9000",
+            "target": "+18646799000",
+            "anchor": "(864) 679-9000",
+            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Southern First Bancshares",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
+            "raw_path": "contact-source-southernfirst.txt",
+            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
+          }
+        ]
+      }
     },
     {
       "id": "person-2073600-issuer-1090009",
@@ -5309,7 +7337,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://ir.southernfirst.com/overview/default.aspx",
+            "target": "https://ir.southernfirst.com/overview/default.aspx",
+            "anchor": "Contact Us",
+            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Southern First Bancshares",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
+            "raw_path": "contact-source-southernfirst.txt",
+            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Corporate phone",
+            "value": "+1 864 679 9000",
+            "target": "+18646799000",
+            "anchor": "(864) 679-9000",
+            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Southern First Bancshares",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
+            "raw_path": "contact-source-southernfirst.txt",
+            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
+          }
+        ]
+      }
     },
     {
       "id": "person-1243368-issuer-1090009",
@@ -5361,7 +7428,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://ir.southernfirst.com/overview/default.aspx",
+            "target": "https://ir.southernfirst.com/overview/default.aspx",
+            "anchor": "Contact Us",
+            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Southern First Bancshares",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
+            "raw_path": "contact-source-southernfirst.txt",
+            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Corporate phone",
+            "value": "+1 864 679 9000",
+            "target": "+18646799000",
+            "anchor": "(864) 679-9000",
+            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Southern First Bancshares",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
+            "raw_path": "contact-source-southernfirst.txt",
+            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
+          }
+        ]
+      }
     },
     {
       "id": "person-1243362-issuer-1090009",
@@ -5413,7 +7519,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://ir.southernfirst.com/overview/default.aspx",
+            "target": "https://ir.southernfirst.com/overview/default.aspx",
+            "anchor": "Contact Us",
+            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Southern First Bancshares",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
+            "raw_path": "contact-source-southernfirst.txt",
+            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Corporate phone",
+            "value": "+1 864 679 9000",
+            "target": "+18646799000",
+            "anchor": "(864) 679-9000",
+            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Southern First Bancshares",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
+            "raw_path": "contact-source-southernfirst.txt",
+            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
+          }
+        ]
+      }
     },
     {
       "id": "person-2073462-issuer-1090009",
@@ -5465,7 +7610,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://ir.southernfirst.com/overview/default.aspx",
+            "target": "https://ir.southernfirst.com/overview/default.aspx",
+            "anchor": "Contact Us",
+            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Southern First Bancshares",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
+            "raw_path": "contact-source-southernfirst.txt",
+            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Corporate phone",
+            "value": "+1 864 679 9000",
+            "target": "+18646799000",
+            "anchor": "(864) 679-9000",
+            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Southern First Bancshares",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
+            "raw_path": "contact-source-southernfirst.txt",
+            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
+          }
+        ]
+      }
     },
     {
       "id": "person-1243357-issuer-1090009",
@@ -5517,7 +7701,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://ir.southernfirst.com/overview/default.aspx",
+            "target": "https://ir.southernfirst.com/overview/default.aspx",
+            "anchor": "Contact Us",
+            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Southern First Bancshares",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
+            "raw_path": "contact-source-southernfirst.txt",
+            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Corporate phone",
+            "value": "+1 864 679 9000",
+            "target": "+18646799000",
+            "anchor": "(864) 679-9000",
+            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Southern First Bancshares",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
+            "raw_path": "contact-source-southernfirst.txt",
+            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
+          }
+        ]
+      }
     },
     {
       "id": "person-1867557-issuer-1090009",
@@ -5569,7 +7792,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://ir.southernfirst.com/overview/default.aspx",
+            "target": "https://ir.southernfirst.com/overview/default.aspx",
+            "anchor": "Contact Us",
+            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Southern First Bancshares",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
+            "raw_path": "contact-source-southernfirst.txt",
+            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Corporate phone",
+            "value": "+1 864 679 9000",
+            "target": "+18646799000",
+            "anchor": "(864) 679-9000",
+            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Southern First Bancshares",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
+            "raw_path": "contact-source-southernfirst.txt",
+            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
+          }
+        ]
+      }
     },
     {
       "id": "person-1243355-issuer-1090009",
@@ -5621,7 +7883,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://ir.southernfirst.com/overview/default.aspx",
+            "target": "https://ir.southernfirst.com/overview/default.aspx",
+            "anchor": "Contact Us",
+            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Southern First Bancshares",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
+            "raw_path": "contact-source-southernfirst.txt",
+            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Corporate phone",
+            "value": "+1 864 679 9000",
+            "target": "+18646799000",
+            "anchor": "(864) 679-9000",
+            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Southern First Bancshares",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
+            "raw_path": "contact-source-southernfirst.txt",
+            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
+          }
+        ]
+      }
     },
     {
       "id": "person-1243354-issuer-1090009",
@@ -5673,7 +7974,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://ir.southernfirst.com/overview/default.aspx",
+            "target": "https://ir.southernfirst.com/overview/default.aspx",
+            "anchor": "Contact Us",
+            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Southern First Bancshares",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
+            "raw_path": "contact-source-southernfirst.txt",
+            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Corporate phone",
+            "value": "+1 864 679 9000",
+            "target": "+18646799000",
+            "anchor": "(864) 679-9000",
+            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Southern First Bancshares",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
+            "raw_path": "contact-source-southernfirst.txt",
+            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
+          }
+        ]
+      }
     },
     {
       "id": "person-2072043-issuer-1090009",
@@ -5725,7 +8065,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://ir.southernfirst.com/overview/default.aspx",
+            "target": "https://ir.southernfirst.com/overview/default.aspx",
+            "anchor": "Contact Us",
+            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Southern First Bancshares",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
+            "raw_path": "contact-source-southernfirst.txt",
+            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Corporate phone",
+            "value": "+1 864 679 9000",
+            "target": "+18646799000",
+            "anchor": "(864) 679-9000",
+            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Southern First Bancshares",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
+            "raw_path": "contact-source-southernfirst.txt",
+            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
+          }
+        ]
+      }
     },
     {
       "id": "person-1243359-issuer-1090009",
@@ -5777,7 +8156,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://ir.southernfirst.com/overview/default.aspx",
+            "target": "https://ir.southernfirst.com/overview/default.aspx",
+            "anchor": "Contact Us",
+            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Southern First Bancshares",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
+            "raw_path": "contact-source-southernfirst.txt",
+            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Corporate phone",
+            "value": "+1 864 679 9000",
+            "target": "+18646799000",
+            "anchor": "(864) 679-9000",
+            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Southern First Bancshares",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
+            "raw_path": "contact-source-southernfirst.txt",
+            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
+          }
+        ]
+      }
     },
     {
       "id": "person-1471749-issuer-1090009",
@@ -5856,7 +8274,46 @@
         "8K",
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://ir.southernfirst.com/overview/default.aspx",
+            "target": "https://ir.southernfirst.com/overview/default.aspx",
+            "anchor": "Contact Us",
+            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Southern First Bancshares",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
+            "raw_path": "contact-source-southernfirst.txt",
+            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Corporate phone",
+            "value": "+1 864 679 9000",
+            "target": "+18646799000",
+            "anchor": "(864) 679-9000",
+            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Southern First Bancshares",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
+            "raw_path": "contact-source-southernfirst.txt",
+            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
+          }
+        ]
+      }
     },
     {
       "id": "person-1252555-issuer-932781",
@@ -5936,7 +8393,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.firstcommunitybankers.com/contact",
+            "target": "https://www.firstcommunitybankers.com/contact",
+            "anchor": "Customer Service",
+            "purpose": "Bank customer service; not an executive line. Reconfirm current issuer / bank affiliation.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "First Community Bankers",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.firstcommunitybankers.com/contact",
+            "raw_path": "contact-source-firstcommunity.txt",
+            "sha256": "e267e8da90ffbc53119eaf5501516f41e97bd9e8fa6b925dd17daa076296d3e2"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Customer service phone",
+            "value": "+1 800 829 6372",
+            "target": "+18008296372",
+            "anchor": "(800) 829-6372",
+            "purpose": "Bank customer service; not an executive line. Reconfirm current issuer / bank affiliation.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "First Community Bankers",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.firstcommunitybankers.com/contact",
+            "raw_path": "contact-source-firstcommunity.txt",
+            "sha256": "e267e8da90ffbc53119eaf5501516f41e97bd9e8fa6b925dd17daa076296d3e2"
+          }
+        ]
+      }
     },
     {
       "id": "person-1252850-issuer-932781",
@@ -6016,7 +8512,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.firstcommunitybankers.com/contact",
+            "target": "https://www.firstcommunitybankers.com/contact",
+            "anchor": "Customer Service",
+            "purpose": "Bank customer service; not an executive line. Reconfirm current issuer / bank affiliation.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "First Community Bankers",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.firstcommunitybankers.com/contact",
+            "raw_path": "contact-source-firstcommunity.txt",
+            "sha256": "e267e8da90ffbc53119eaf5501516f41e97bd9e8fa6b925dd17daa076296d3e2"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Customer service phone",
+            "value": "+1 800 829 6372",
+            "target": "+18008296372",
+            "anchor": "(800) 829-6372",
+            "purpose": "Bank customer service; not an executive line. Reconfirm current issuer / bank affiliation.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "First Community Bankers",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.firstcommunitybankers.com/contact",
+            "raw_path": "contact-source-firstcommunity.txt",
+            "sha256": "e267e8da90ffbc53119eaf5501516f41e97bd9e8fa6b925dd17daa076296d3e2"
+          }
+        ]
+      }
     },
     {
       "id": "person-1544928-issuer-932781",
@@ -6096,7 +8631,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.firstcommunitybankers.com/contact",
+            "target": "https://www.firstcommunitybankers.com/contact",
+            "anchor": "Customer Service",
+            "purpose": "Bank customer service; not an executive line. Reconfirm current issuer / bank affiliation.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "First Community Bankers",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.firstcommunitybankers.com/contact",
+            "raw_path": "contact-source-firstcommunity.txt",
+            "sha256": "e267e8da90ffbc53119eaf5501516f41e97bd9e8fa6b925dd17daa076296d3e2"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Customer service phone",
+            "value": "+1 800 829 6372",
+            "target": "+18008296372",
+            "anchor": "(800) 829-6372",
+            "purpose": "Bank customer service; not an executive line. Reconfirm current issuer / bank affiliation.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "First Community Bankers",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.firstcommunitybankers.com/contact",
+            "raw_path": "contact-source-firstcommunity.txt",
+            "sha256": "e267e8da90ffbc53119eaf5501516f41e97bd9e8fa6b925dd17daa076296d3e2"
+          }
+        ]
+      }
     },
     {
       "id": "person-1597888-issuer-932781",
@@ -6176,7 +8750,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.firstcommunitybankers.com/contact",
+            "target": "https://www.firstcommunitybankers.com/contact",
+            "anchor": "Customer Service",
+            "purpose": "Bank customer service; not an executive line. Reconfirm current issuer / bank affiliation.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "First Community Bankers",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.firstcommunitybankers.com/contact",
+            "raw_path": "contact-source-firstcommunity.txt",
+            "sha256": "e267e8da90ffbc53119eaf5501516f41e97bd9e8fa6b925dd17daa076296d3e2"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Customer service phone",
+            "value": "+1 800 829 6372",
+            "target": "+18008296372",
+            "anchor": "(800) 829-6372",
+            "purpose": "Bank customer service; not an executive line. Reconfirm current issuer / bank affiliation.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "First Community Bankers",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.firstcommunitybankers.com/contact",
+            "raw_path": "contact-source-firstcommunity.txt",
+            "sha256": "e267e8da90ffbc53119eaf5501516f41e97bd9e8fa6b925dd17daa076296d3e2"
+          }
+        ]
+      }
     },
     {
       "id": "person-1436678-issuer-932781",
@@ -6226,7 +8839,46 @@
       "source_classes": [
         "FORM4"
       ],
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.firstcommunitybankers.com/contact",
+            "target": "https://www.firstcommunitybankers.com/contact",
+            "anchor": "Customer Service",
+            "purpose": "Bank customer service; not an executive line. Reconfirm current issuer / bank affiliation.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "First Community Bankers",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.firstcommunitybankers.com/contact",
+            "raw_path": "contact-source-firstcommunity.txt",
+            "sha256": "e267e8da90ffbc53119eaf5501516f41e97bd9e8fa6b925dd17daa076296d3e2"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Customer service phone",
+            "value": "+1 800 829 6372",
+            "target": "+18008296372",
+            "anchor": "(800) 829-6372",
+            "purpose": "Bank customer service; not an executive line. Reconfirm current issuer / bank affiliation.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "First Community Bankers",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.firstcommunitybankers.com/contact",
+            "raw_path": "contact-source-firstcommunity.txt",
+            "sha256": "e267e8da90ffbc53119eaf5501516f41e97bd9e8fa6b925dd17daa076296d3e2"
+          }
+        ]
+      }
     },
     {
       "id": "reviewed-business-836366ba12448cff90bf1e69",
@@ -6300,7 +8952,46 @@
       ],
       "liquidity_total": 0,
       "signal_type": "Planning",
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://charlestongroundsmanagement.com/",
+            "target": "https://charlestongroundsmanagement.com/",
+            "anchor": "Charleston Grounds Management",
+            "purpose": "Company channel after acquisition; the founder\u2019s current role and reachability through this channel are UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Charleston Grounds Management / Bland",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://charlestongroundsmanagement.com/",
+            "raw_path": "contact-source-cgm.txt",
+            "sha256": "d0b07651060a612678f021bcd2b35f26ec20c4b9a42e851aff56d756347bf52b"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Company phone",
+            "value": "+1 843 779 0217",
+            "target": "+18437790217",
+            "anchor": "843.779.0217",
+            "purpose": "Company channel after acquisition; the founder\u2019s current role and reachability through this channel are UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Charleston Grounds Management / Bland",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://charlestongroundsmanagement.com/",
+            "raw_path": "contact-source-cgm.txt",
+            "sha256": "d0b07651060a612678f021bcd2b35f26ec20c4b9a42e851aff56d756347bf52b"
+          }
+        ]
+      }
     },
     {
       "id": "reviewed-business-c1e19fb63e29b26221697dc7",
@@ -6374,7 +9065,46 @@
       ],
       "liquidity_total": 0,
       "signal_type": "Planning",
-      "convergence": 0
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://blandlandscaping.com/contact/?request_quote=Request+a+Quote",
+            "target": "https://blandlandscaping.com/contact/?request_quote=Request+a+Quote",
+            "anchor": "Contact Us",
+            "purpose": "Acquiring company\u2019s Coastal Carolinas office, not a confirmed Clear Lakes or Ken Robinson direct line. Founder current affiliation and routing UNKNOWN.",
+            "scope": "ACQUIRER_CHANNEL",
+            "organization": "Bland Landscaping (acquirer)",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://blandlandscaping.com/contact/?request_quote=Request+a+Quote",
+            "raw_path": "contact-source-bland.txt",
+            "sha256": "a76e15f42d89f00c085e93515692c0e56083f221eb2f95842aa25fc40ab336b9"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Coastal Carolinas office",
+            "value": "+1 910 442 4700",
+            "target": "+19104424700",
+            "anchor": "(910) 442-4700",
+            "purpose": "Acquiring company\u2019s Coastal Carolinas office, not a confirmed Clear Lakes or Ken Robinson direct line. Founder current affiliation and routing UNKNOWN.",
+            "scope": "ACQUIRER_CHANNEL",
+            "organization": "Bland Landscaping (acquirer)",
+            "classification": "VERIFIED PUBLIC FACT",
+            "confidence": "HIGH \u2014 published company route; person reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://blandlandscaping.com/contact/?request_quote=Request+a+Quote",
+            "raw_path": "contact-source-bland.txt",
+            "sha256": "a76e15f42d89f00c085e93515692c0e56083f221eb2f95842aa25fc40ab336b9"
+          }
+        ]
+      }
     }
   ],
   "transition_filings": 5,
@@ -6412,6 +9142,14 @@
   "business_exits": {
     "validated_people": 2,
     "validated_transactions": 2,
+    "errors": []
+  },
+  "contact_enrichment": {
+    "version": "professional-contacts-v1",
+    "people_with_company_routes": 70,
+    "distinct_published_routes": 18,
+    "direct_contacts": 0,
+    "refresh_window_days": 90,
     "errors": []
   }
 }

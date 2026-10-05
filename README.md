@@ -6,7 +6,7 @@ Live public-data research pilot. Original v2 institutional green/black design pr
 
 GitHub: babcofc-oss/Project-A. Vercel: project-a. Production: https://project-a-jet.vercel.app/
 
-Static catalog and immutable primary evidence are versioned in Git; no ephemeral serverless SQLite. Watchlists persist in localStorage for each browser, with visible session-only fallback if storage is unavailable. Advisor briefs export as visible text with a selection control and primary-source links. Pilot feedback persists per browser and exports with source identifiers for review. No cross-device account sync, centralized feedback collection, billing or contact enrichment is represented as implemented.
+Static catalog and immutable primary evidence are versioned in Git; no ephemeral serverless SQLite. Watchlists persist in localStorage for each browser, with visible session-only fallback if storage is unavailable. Advisor briefs export as visible text with a selection control and primary-source links. Pilot feedback persists per browser and exports with source identifiers for review. No cross-device account sync, centralized feedback collection, billing is represented as implemented. Public business contact enrichment is described below.
 
 ## Evidence coverage
 
@@ -28,7 +28,7 @@ design-reference.html is the original v2 visual reference with explicitly labele
 
 ## Pilot limitations
 
-Data is a reviewed snapshot, not a live stream. Officer roles must be reconfirmed before use. Current advisor relationships, willingness to engage, contact provenance, net proceeds and available funds are UNKNOWN. 22 people have verified sale signals; qualification into high-quality advisor opportunities and recruitment of 3–5 advisor testers remain outstanding.
+Data is a reviewed snapshot, not a live stream. Officer roles must be reconfirmed before use. Current advisor relationships, willingness to engage, direct person contact provenance, net proceeds and available funds are UNKNOWN. 22 people have verified sale signals; qualification into high-quality advisor opportunities and recruitment of 3–5 advisor testers remain outstanding.
 
 
 ## Pilot review collection
@@ -69,3 +69,11 @@ Two named founders are now connected to completed South Carolina acquisitions re
 Company service markets are visibly distinguished from filing mailing cities. City-reference radius may match a company market, never a founder’s address or personal location. Two primary announcements are retained as text to avoid executing archived page scripts. Scoring v5 gives these primary announcements 18/20 evidence points and named company-scoped identities 8/10; no magnitude points for unknown proceeds. Briefs carry business planning themes without claiming SEC evidence for private founders.
 
 Run `python3 -m unittest test_integrity test_transitions test_form144 test_business_exits` and the existing four Node checks before publishing catalog + source ledgers + code together.
+
+## Professional contact intelligence
+
+18 distinct published business routes from nine retained official pages are bound to the 70 reviewed person/company identities. These are company or acquirer routes, never represented as direct person contacts. Published corporate/main phone numbers, purpose-limited customer service channels, official contact pages, and 3D Systems investor-relations email retain review date, SHA-256, source URL, organization, scope and purpose. Direct person email/phone, current affiliation, deliverability and consent remain UNKNOWN. No guesses, private contact data or outreach automation. Contact availability does not change financial opportunity scores.
+
+`contacts.py` validates authority, exact company/issuer or reviewed private-entity identity, source fingerprints and published value anchors. It clears stale routes on refresh and rejects evidence older than 90 days or future dated. The UI and brief also withhold expired contact evidence. Contact data and retained sources are versioned in Git; ingestion and private-business refresh reattach validated routes. Update reviewed source and manifest together after re-review.
+
+Run `python3 -m unittest test_contacts test_integrity test_transitions test_form144 test_business_exits` and `node test_contact_briefs.js` plus the existing Node checks. Contact tests cover stale data, tampering, wrong authorities, unsupported direct-contact claims, exact entity binding and idempotent refresh.
