@@ -6,6 +6,7 @@ const money=n=>n===null||n===undefined?'UNKNOWN':new Intl.NumberFormat('en-US',{
 let feedback=[],reviewerId;
 try{reviewerId=localStorage.getItem('project-a-reviewer-v1');if(!/^[a-zA-Z0-9_-]{8,80}$/.test(reviewerId||'')){reviewerId=crypto.randomUUID();localStorage.setItem('project-a-reviewer-v1',reviewerId);}}catch{reviewerId=crypto.randomUUID();}
 try{const rawFeedback=JSON.parse(localStorage.getItem('project-a-pilot-feedback-v1')||'[]');if(Array.isArray(rawFeedback))feedback=rawFeedback.filter(x=>x&&typeof x.person_id==='string'&&['Useful','Needs evidence','Not useful'].includes(x.rating)&&typeof x.note==='string').slice(-1000);}catch{}
+let territoryData=null,territoryIndex=null,territoryOrigin=null;
 let catalog=null, people=[], selected=null, watchOnly=false, saved=new Set(), storageOK=true;
 try{const raw=JSON.parse(localStorage.getItem('project-a-watchlist-v1')||'[]');if(Array.isArray(raw))saved=new Set(raw.filter(x=>typeof x==='string'));}catch{storageOK=false;}
 function eventMatches(e,type){return type==='all'||(type==='Planning'?['LIQUIDITY','EXECUTIVE_TRANSITION'].includes(e.classification):type==='Transition'?e.classification==='EXECUTIVE_TRANSITION':type==='Liquidity'?e.classification==='LIQUIDITY':e.code===type);}
@@ -13,7 +14,7 @@ function rows(){
   const q=$('search').value.trim().toLowerCase(),territory=$('territory').value,type=$('eventType').value,min=Number($('minimumScore').value);
   return people.filter(p=>{
     const city=p.location||{};
-    if(territory==='SC'&&city.state!=='SC')return false;
+    if(territory==='SC'&&city.state!==territoryOrigin?.state)return false;
     if(!['SC','all'].includes(territory)&&(city.distance_miles===null||city.distance_miles===undefined||city.distance_miles>Number(territory)))return false;
     if(watchOnly&&!saved.has(p.id))return false;
     if(p.computed.value<min)return false;
@@ -27,13 +28,14 @@ function render(){
   if(!catalog)return;
   const visible=rows();
   if(!visible.some(p=>p.id===selected?.id))selected=visible[0]||null;
+  $('territoryStatus').textContent=`Center: ${territoryOrigin.name}, ${territoryOrigin.state}. ${visible.length} matching people in the reviewed ${catalog.issuer_count||7}-issuer snapshot. Territory availability does not imply prospect coverage; empty markets need source discovery and validation.`;
   $('mCount').textContent=visible.length;
   $('mValue').textContent=new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',notation:'compact',maximumFractionDigits:2}).format(visible.reduce((n,p)=>n+p.computed.total,0));
   $('mHigh').textContent=visible.filter(p=>p.computed.value>=70).length;
   $('mFresh').textContent=visible.filter(p=>p.computed.age!==null&&p.computed.age<=30).length;
   $('visibleSummary').textContent=`${visible.length} PEOPLE · ${watchOnly?'WATCHLIST':'PUBLIC EVIDENCE'}`;
   $('allView').classList.toggle('on',!watchOnly);$('watchView').classList.toggle('on',watchOnly);
-  $('leads').innerHTML=visible.map(p=>`<button class="lead ${selected?.id===p.id?'active':''}" data-person="${esc(p.id)}" aria-pressed="${selected?.id===p.id}"><div class="score">${p.computed.value}</div><div><h3>${esc(displayName(p))} ${saved.has(p.id)?'<span class="watchbadge">★</span>':''}</h3><p>${esc(p.role)} · ${esc(p.company)}<br>${p.computed.sales?`${p.computed.sales} sale rows · latest ${p.computed.latest}`:p.computed.transitions?`${p.computed.transitions} reviewed executive transition · ${p.computed.latestTrigger}`:'No planning trigger · monitor only'}<br>${esc(p.location.city||'Location UNKNOWN')}, ${esc(p.location.state||'')} · ${p.location.distance_miles==null?'Radius UNKNOWN':'~'+Math.round(p.location.distance_miles)+' city miles'}</p></div><div class="money">${p.computed.sales?money(p.computed.total):'NO SALE VALUE'}<small>${p.computed.sales?'gross · calculated':p.computed.transitions?'Transition cash UNKNOWN':'F/A/M excluded'}</small></div></button>`).join('')||'<p class="empty">No people match these controls. Try all territories, all event types or reset controls.</p>';
+  $('leads').innerHTML=visible.map(p=>`<button class="lead ${selected?.id===p.id?'active':''}" data-person="${esc(p.id)}" aria-pressed="${selected?.id===p.id}"><div class="score">${p.computed.value}</div><div><h3>${esc(displayName(p))} ${saved.has(p.id)?'<span class="watchbadge">★</span>':''}</h3><p>${esc(p.role)} · ${esc(p.company)}<br>${p.computed.sales?`${p.computed.sales} sale rows · latest ${p.computed.latest}`:p.computed.transitions?`${p.computed.transitions} reviewed executive transition · ${p.computed.latestTrigger}`:'No planning trigger · monitor only'}<br>${esc(p.location.city||'Location UNKNOWN')}, ${esc(p.location.state||'')} · ${p.location.distance_miles==null?'Radius UNKNOWN':'~'+Math.round(p.location.distance_miles)+' city miles'}</p></div><div class="money">${p.computed.sales?money(p.computed.total):'NO SALE VALUE'}<small>${p.computed.sales?'gross · calculated':p.computed.transitions?'Transition cash UNKNOWN':'F/A/M excluded'}</small></div></button>`).join('')||'<p class="empty">No reviewed opportunities match these controls. This market may not have ingested evidence yet. Try all territories or reset controls; no prospects are invented.</p>';
   const selectedType=$('eventType').value;
   const feed=visible.flatMap(p=>p.events.filter(e=>selectedType==='Converged'?eventMatches(e,'Planning'):eventMatches(e,selectedType)).map(e=>({p,e}))).sort((a,b)=>b.e.date.localeCompare(a.e.date)).slice(0,8);
   $('signalFeed').innerHTML=feed.map(({p,e})=>`<button class="signal" data-person="${esc(p.id)}"><i class="dot"></i><div><b>${esc(displayName(p))} · ${esc(e.classification.replaceAll('_',' '))}</b><p>${esc(e.date)} · ${esc(p.company)}<br>${e.code==='S'?money(e.value)+' gross calculated':e.source_class==='8K'?'Form 8-K · '+esc(e.status):'Code '+esc(e.code)+' · no ordinary sale value'}${e.planned?' · 10b5-1':''}</p></div></button>`).join('')||'<p class="empty">No signals in this view.</p>';
@@ -109,7 +111,20 @@ $('exportAllFeedback').onclick=()=>{$('pilotExport').hidden=false;$('pilotExport
 $('selectPilotExport').onclick=()=>{$('pilotExportText').focus();$('pilotExportText').select();$('pilotStatus').textContent='Review export selected. Use Copy or Share in your browser.';};
 document.addEventListener('click',event=>{const b=event.target.closest('[data-review-person]');if(b){watchOnly=false;$('search').value='';$('territory').value='all';$('eventType').value='all';$('minimumScore').value='0';choose(b.dataset.reviewPerson);$('selected').scrollIntoView({behavior:'smooth'});}});
 function save(){if(!selected)return; saved.has(selected.id)?saved.delete(selected.id):saved.add(selected.id);try{localStorage.setItem('project-a-watchlist-v1',JSON.stringify([...saved]));}catch{storageOK=false;}render();}
-function reset(){watchOnly=false;$('search').value='';$('territory').value='50';$('eventType').value='Planning';$('minimumScore').value='0';render();}
+function setCenter(state,placeId){
+  $('centerState').value=state;
+  const places=territoryData.places.filter(p=>p.state===state).sort((a,b)=>a.name.localeCompare(b.name));
+  $('centerPlace').innerHTML=places.map(p=>`<option value="${esc(p.id)}">${esc(p.name)}</option>`).join('');
+  if(places.some(p=>p.id===placeId))$('centerPlace').value=placeId;
+  updateCenter();
+}
+function updateCenter(){
+  territoryOrigin=territoryIndex.ids.get($('centerPlace').value);
+  for(const p of people){const place=ProjectTerritory.resolve(p.location,territoryIndex);p.location.distance_miles=ProjectTerritory.distance(territoryOrigin,place);if(place){p.location.geo_source=territoryData.source;p.location.geo_class='CALCULATED FROM VERIFIED FACT';}}
+}
+$('centerState').onchange=()=>{if(!territoryData)return;setCenter($('centerState').value);render();};
+$('centerPlace').onchange=()=>{if(!territoryData)return;updateCenter();render();};
+function reset(){if(territoryData)setCenter('SC','4513330');watchOnly=false;$('search').value='';$('territory').value='50';$('eventType').value='Planning';$('minimumScore').value='0';render();}
 document.addEventListener('click',event=>{
   const button=event.target.closest('[data-person]');if(button)choose(button.dataset.person,true);
 });
@@ -131,7 +146,9 @@ async function load(){
     if(!response.ok)throw new Error(`Evidence catalog returned HTTP ${response.status}`);
     catalog=await response.json();
     if(!Array.isArray(catalog.records))throw new Error('Evidence catalog has an invalid schema');
+    const geographyResponse=await fetch('territories.json',{cache:'no-cache'});if(!geographyResponse.ok)throw new Error('Territory reference unavailable');territoryData=await geographyResponse.json();if(!Array.isArray(territoryData.places)||!territoryData.places.length)throw new Error('Territory reference has an invalid schema');territoryIndex=ProjectTerritory.index(territoryData.places);
     people=catalog.records.map(p=>({...p,computed:ProjectIntelligence.score(p)}));
+    $('centerState').innerHTML=[...new Set(territoryData.places.map(p=>p.state))].sort().map(state=>`<option value="${esc(state)}">${esc(state)}</option>`).join('');$('centerState').disabled=false;$('centerPlace').disabled=false;setCenter('SC','4513330');
     $('systemStatus').textContent=`Validated SEC snapshot · ${people.length} people`;
     $('coverage').textContent=`${catalog.validated_filings} Form 4 + ${catalog.transition_filings||0} reviewed 8-K filings · filings since ${catalog.coverage_start} · ${people.filter(p=>p.computed.sales).length} people with sale signals · ${catalog.issuer_count||3} issuers`;
     $('feedDate').textContent=`Validated ${new Date(catalog.validated_at).toLocaleString()}. Reviewed snapshot; not a live stream. ${catalog.errors.length+(catalog.transition_errors||[]).length} filing(s) withheld after ingestion errors.`;

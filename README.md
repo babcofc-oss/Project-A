@@ -38,3 +38,10 @@ Generate a prospect brief, rate its usefulness, and export the review text. The 
 Reviewers are anonymous browser IDs, not authenticated advisors. No network collection or cross-device sync exists. Reviews and watchlists use browser storage; users must export reviews for backup or transfer. Avoid private client information. A prospect's shareable link opens its public catalog record with all-territory/audit controls so an existing filter cannot hide it. Unknown person IDs show an explicit notice and the default territory.
 
 Run `node test_pilot.js` to check import validation and merge semantics, alongside `node test_scoring.js` and `python3 -m unittest test_integrity test_transitions`.
+
+
+## Territory expansion
+
+Center state/place controls cover the 2025 Census national places reference (50 states, DC, Puerto Rico). Radius filters recompute city-reference distances from the selected center; selected-state and all-territory modes remain available. Unmatched or ambiguous mailing cities are excluded from radius views, and prospect coverage is explicitly separate from geographic controls. The current catalog remains seven reviewed issuers; selecting an empty market does not discover or fabricate prospects. International and non-place geographies require additional reference/source adapters.
+
+The national reference retains its Census source URL and archive SHA-256. `geo_enrichment.py` uses it for newly ingested professional mailing cities. To expand reviewed issuer coverage, set `PROJECT_A_ISSUERS` to comma-separated SEC CIKs before running the existing ingestion/review/publish workflow. CIK syntax is validated; repeated IDs are deduplicated. No serverless filesystem persistence is introduced.

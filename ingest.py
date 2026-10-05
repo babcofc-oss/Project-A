@@ -12,7 +12,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 INPUTS = ROOT / '.ingestion-cache'
-ISSUERS = ['1653477', '1280058', '910638', '918965', '857855', '1090009', '932781']
+ISSUERS = list(dict.fromkeys(c.strip() for c in os.getenv('PROJECT_A_ISSUERS', '1653477,1280058,910638,918965,857855,1090009,932781').split(',')))
+ISSUERS = [c.strip() for c in ISSUERS]
+if not ISSUERS or any(not c.isdigit() or not 1 <= len(c) <= 10 for c in ISSUERS):
+    raise ValueError('PROJECT_A_ISSUERS must be a comma-separated list of valid SEC issuer CIKs')
 UA = os.getenv('PROJECT_A_USER_AGENT', 'Project A public financial disclosure research Briton Barrett')
 LOCK = threading.Lock()
 LAST = 0
