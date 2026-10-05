@@ -6,7 +6,7 @@ Live public-data research pilot. Original v2 institutional green/black design pr
 
 GitHub: babcofc-oss/Project-A. Vercel: project-a. Production: https://project-a-jet.vercel.app/
 
-Static catalog and immutable primary evidence are versioned in Git; no ephemeral serverless SQLite. Watchlists persist in localStorage for each browser, with visible session-only fallback if storage is unavailable. No cross-device account sync, billing or contact enrichment is represented as implemented.
+Static catalog and immutable primary evidence are versioned in Git; no ephemeral serverless SQLite. Watchlists persist in localStorage for each browser, with visible session-only fallback if storage is unavailable. Advisor briefs download as text. Pilot feedback persists per browser and exports with source identifiers for review. No cross-device account sync, centralized feedback collection, billing or contact enrichment is represented as implemented.
 
 ## Evidence coverage
 
