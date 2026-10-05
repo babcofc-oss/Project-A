@@ -15,7 +15,7 @@ function rows(){
     if(p.computed.value<min)return false;
     if(type==='Liquidity'&&!p.computed.sales)return false;
     if(!['Liquidity','all'].includes(type)&&!p.events.some(e=>e.code===type))return false;
-    return !q||`${p.person_name} ${p.company} ${p.role} ${city.city} ${p.events.map(e=>e.fact+' '+e.classification).join(' ')}`.toLowerCase().includes(q);
+    return !q||`${p.person_name} ${displayName(p)} ${p.company} ${p.role} ${city.city} ${p.events.map(e=>e.fact+' '+e.classification).join(' ')}`.toLowerCase().includes(q);
   }).sort((a,b)=>b.computed.value-a.computed.value||b.computed.total-a.computed.total);
 }
 function choose(id,scroll=false){selected=people.find(p=>p.id===id)||null;render();if(scroll&&selected&&innerWidth<850)$('selected').scrollIntoView({behavior:'smooth',block:'start'});}
