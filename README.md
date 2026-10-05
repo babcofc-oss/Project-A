@@ -1,7 +1,31 @@
-# Project A
+# Project A — Money in Motion
 
-Money-in-motion intelligence for financial advisors.
+Live public-data research pilot. Original v2 institutional green/black design preserved. V9 parsing, evidence ledger, person clustering, watchlist and brief concepts integrated with a deployment-compatible reviewed catalog.
 
-Approved design: project-a-prototype-v2.html. Engineering foundation: project-a-mvp-v9.zip.
+## Production
 
-Transaction values are not net worth or available cash. Public evidence requires independent validation.
+GitHub: babcofc-oss/Project-A. Vercel: project-a. Production: https://project-a-jet.vercel.app/
+
+Static catalog and immutable primary evidence are versioned in Git; no ephemeral serverless SQLite. Watchlists persist in localStorage for each browser, with visible session-only fallback if storage is unavailable. No cross-device account sync, billing or contact enrichment is represented as implemented.
+
+## Evidence coverage
+
+32 SEC Form 4 filings from three issuers, filed June–October 2026, independently fetched and parsed. 22 person/issuer identities; nine people with S-disposition sale events, seven in the Charleston city-radius territory. Other people are monitoring/classification examples, not fabricated leads. No independent-source convergence yet.
+
+Reporting-person CIK and issuer CIK remain separate. Repeated filings cluster by both identifiers. Distinct transaction rows retain accession + row identifiers. F/A/M are excluded from ordinary sale totals. Rule 10b5-1 detected from the checkbox and footnotes. Source XML fingerprints are retained. Gross reported shares × price is not net worth, net proceeds or available funds.
+
+City radius uses Census 2025 place representative coordinates for the disclosed mailing city. This is approximate, not a residence or professional street-address distance. Unresolved geography is excluded from radius views.
+
+## Development / refresh
+
+Serve this directory with python3 -m http.server 8787. Run python3 -m unittest test_integrity.py -v and node test_scoring.js. Run PROJECT_A_USER_AGENT="Project A your-real-contact" python3 ingest.py to refresh the reviewed snapshot. Review catalog.json and primary evidence before committing. Discovery refreshes daily; immutable accession XML is cached. Three workers, globally paced at fewer than two requests per second; no uncontrolled retries.
+
+Commit production files to main to trigger the separate GitHub → Vercel project. The connector's write operation returned 403; authenticated GitHub browser uploads succeeded. Do not change The Indicator.
+
+## Original foundations
+
+design-reference.html is the original v2 visual reference with explicitly labeled synthetic demo content. It is never the production homepage. project-a-mvp-v9.zip preserves the engineering baseline intact. Production index.html contains no synthetic prospect fallback.
+
+## Pilot limitations
+
+Data is a reviewed snapshot, not a live stream. Officer roles must be reconfirmed before use. Current advisor relationships, willingness to engage, contact provenance, net proceeds and available funds are UNKNOWN. The commercial goal of 20–25 qualified opportunities and 3–5 advisor testers is not yet achieved.

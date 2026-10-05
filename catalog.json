@@ -1,0 +1,1602 @@
+{
+  "version": "project-a-10",
+  "validated_at": "2026-10-05T07:13:33.782935+00:00",
+  "coverage_start": "2026-06-01",
+  "source": "SEC EDGAR",
+  "refresh": "Reviewed repository snapshot; not a live stream",
+  "scoring_version": "money-in-motion-v2",
+  "discovered_filings": 32,
+  "validated_filings": 32,
+  "errors": [],
+  "records": [
+    {
+      "id": "person-1436880-issuer-1653477",
+      "person_cik": "0001436880",
+      "issuer_cik": "0001653477",
+      "person_name": "Li David H",
+      "role": "President & CEO",
+      "company": "Ingevity Corp",
+      "location": {
+        "city": "NORTH CHARLESTON",
+        "state": "SC",
+        "kind": "Reporting-person mailing city; residence UNKNOWN",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1653477/000143688026000008/xslF345X06/wk-form4_1787087642.xml",
+        "assertion_class": "VERIFIED PUBLIC FACT",
+        "distance_miles": 8.19,
+        "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
+        "geo_class": "CALCULATED FROM VERIFIED FACT",
+        "geo_method": "Haversine between Census place representative coordinates; mailing city only, not precise location",
+        "place_geoid": "4550875"
+      },
+      "events": [
+        {
+          "id": "0001436880-26-000008:2",
+          "accession": "0001436880-26-000008",
+          "row": 2,
+          "date": "2026-08-18",
+          "filed_date": "2026-08-18",
+          "code": "S",
+          "direction": "D",
+          "classification": "LIQUIDITY",
+          "shares": 92.0,
+          "price": 74.71,
+          "value": 6873.32,
+          "remaining_shares": 120544.0,
+          "planned": true,
+          "fact": "Form 4 reports 92 shares, code S, on 2026-08-18. Reported price $74.71 per share.",
+          "footnotes": [
+            "The price reported in Column 4 is a weighted average price. These shares were sold in multiple transactions at prices ranging from $74.39 to $74.96, inclusive. The reporting person undertakes to provide to the Company, any security holder of the Company, or the staff of the Securities and Exchange Commission, upon request, full information regarding the number of shares sold at each separate price within the range set forth in this footnote."
+          ],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1653477/000143688026000008/xslF345X06/wk-form4_1787087642.xml",
+          "raw_path": "0001436880-26-000008.xml",
+          "sha256": "a974007befccd87fe996dd68641095e032fd9bdd596e9bd7856c724f75540ed6",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        },
+        {
+          "id": "0001436880-26-000008:1",
+          "accession": "0001436880-26-000008",
+          "row": 1,
+          "date": "2026-08-17",
+          "filed_date": "2026-08-18",
+          "code": "S",
+          "direction": "D",
+          "classification": "LIQUIDITY",
+          "shares": 5000.0,
+          "price": 75.83,
+          "value": 379150.0,
+          "remaining_shares": 120636.0,
+          "planned": true,
+          "fact": "Form 4 reports 5,000 shares, code S, on 2026-08-17. Reported price $75.83 per share.",
+          "footnotes": [
+            "The price reported in Column 4 is a weighted average price. These shares were sold in multiple transactions at prices ranging from $75.50 to $76.25, inclusive. The reporting person undertakes to provide to the Company, any security holder of the Company, or the staff of the Securities and Exchange Commission, upon request, full information regarding the number of shares sold at each separate price within the range set forth in this footnote."
+          ],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1653477/000143688026000008/xslF345X06/wk-form4_1787087642.xml",
+          "raw_path": "0001436880-26-000008.xml",
+          "sha256": "a974007befccd87fe996dd68641095e032fd9bdd596e9bd7856c724f75540ed6",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        },
+        {
+          "id": "0001436880-26-000008:0",
+          "accession": "0001436880-26-000008",
+          "row": 0,
+          "date": "2026-08-14",
+          "filed_date": "2026-08-18",
+          "code": "S",
+          "direction": "D",
+          "classification": "LIQUIDITY",
+          "shares": 5000.0,
+          "price": 75.73,
+          "value": 378650.0,
+          "remaining_shares": 125636.0,
+          "planned": true,
+          "fact": "Form 4 reports 5,000 shares, code S, on 2026-08-14. Reported price $75.73 per share.",
+          "footnotes": [
+            "The price reported in Column 4 is a weighted average price. These shares were sold in multiple transactions at prices ranging from $74.82 to $76.53, inclusive. The reporting person undertakes to provide to the Company, any security holder of the Company, or the staff of the Securities and Exchange Commission, upon request, full information regarding the number of shares sold at each separate price within the range set forth in this footnote."
+          ],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1653477/000143688026000008/xslF345X06/wk-form4_1787087642.xml",
+          "raw_path": "0001436880-26-000008.xml",
+          "sha256": "a974007befccd87fe996dd68641095e032fd9bdd596e9bd7856c724f75540ed6",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        },
+        {
+          "id": "0001436880-26-000006:1",
+          "accession": "0001436880-26-000006",
+          "row": 1,
+          "date": "2026-08-13",
+          "filed_date": "2026-08-14",
+          "code": "S",
+          "direction": "D",
+          "classification": "LIQUIDITY",
+          "shares": 5000.0,
+          "price": 75.73,
+          "value": 378650.0,
+          "remaining_shares": 130636.0,
+          "planned": true,
+          "fact": "Form 4 reports 5,000 shares, code S, on 2026-08-13. Reported price $75.73 per share.",
+          "footnotes": [
+            "The price reported in Column 4 is a weighted average price. These shares were sold in multiple transactions at prices ranging from $75.18 to $76.26, inclusive. The reporting person undertakes to provide to the Company, any security holder of the Company, or the staff of the Securities and Exchange Commission, upon request, full information regarding the number of shares sold at each separate price within the range set forth in this footnote."
+          ],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1653477/000143688026000006/xslF345X06/wk-form4_1786741576.xml",
+          "raw_path": "0001436880-26-000006.xml",
+          "sha256": "33e3dc310f69a34af51e2e3a3a623c68b7863a9143f97b2c6b3b3786bbeb0c48",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        },
+        {
+          "id": "0001436880-26-000006:0",
+          "accession": "0001436880-26-000006",
+          "row": 0,
+          "date": "2026-08-12",
+          "filed_date": "2026-08-14",
+          "code": "S",
+          "direction": "D",
+          "classification": "LIQUIDITY",
+          "shares": 5000.0,
+          "price": 76.62,
+          "value": 383100.0,
+          "remaining_shares": 135636.0,
+          "planned": true,
+          "fact": "Form 4 reports 5,000 shares, code S, on 2026-08-12. Reported price $76.62 per share.",
+          "footnotes": [
+            "The price reported in Column 4 is a weighted average price. These shares were sold in multiple transactions at prices ranging from $76.14 to $78.22, inclusive. The reporting person undertakes to provide to the Company, any security holder of the Company, or the staff of the Securities and Exchange Commission, upon request, full information regarding the number of shares sold at each separate price within the range set forth in this footnote."
+          ],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1653477/000143688026000006/xslF345X06/wk-form4_1786741576.xml",
+          "raw_path": "0001436880-26-000006.xml",
+          "sha256": "33e3dc310f69a34af51e2e3a3a623c68b7863a9143f97b2c6b3b3786bbeb0c48",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        }
+      ],
+      "liquidity_total": 1526423.32,
+      "signal_type": "Liquidity",
+      "source_classes": [
+        "FORM4"
+      ],
+      "convergence": 0
+    },
+    {
+      "id": "person-1601818-issuer-1280058",
+      "person_cik": "0001601818",
+      "issuer_cik": "0001280058",
+      "person_name": "Gregoire Kevin P.",
+      "role": "EVP, Chief Operating Officer",
+      "company": "BLACKBAUD INC",
+      "location": {
+        "city": "CHARLESTON",
+        "state": "SC",
+        "kind": "Reporting-person mailing city; residence UNKNOWN",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1280058/000160181826000010/xslF345X06/wk-form4_1786134028.xml",
+        "assertion_class": "VERIFIED PUBLIC FACT",
+        "distance_miles": 0.0,
+        "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
+        "geo_class": "CALCULATED FROM VERIFIED FACT",
+        "geo_method": "Haversine between Census place representative coordinates; mailing city only, not precise location",
+        "place_geoid": "4513330"
+      },
+      "events": [
+        {
+          "id": "0001601818-26-000010:1",
+          "accession": "0001601818-26-000010",
+          "row": 1,
+          "date": "2026-08-06",
+          "filed_date": "2026-08-07",
+          "code": "S",
+          "direction": "D",
+          "classification": "LIQUIDITY",
+          "shares": 5816.0,
+          "price": 45.7231,
+          "value": 265925.55,
+          "remaining_shares": 113194.0,
+          "planned": false,
+          "fact": "Form 4 reports 5,816 shares, code S, on 2026-08-06. Reported price $45.72 per share.",
+          "footnotes": [
+            "This transaction was executed in multiple trades at prices ranging from $45.69 to $45.81. The price reported in Column 4 is a weighted average price. The reporting person hereby undertakes to provide upon request to the SEC staff, the Issuer or a security holder of the Issuer full information regarding the number of shares and prices at which the transactions were effected."
+          ],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1280058/000160181826000010/xslF345X06/wk-form4_1786134028.xml",
+          "raw_path": "0001601818-26-000010.xml",
+          "sha256": "30faaec58061ab2947d602c26263f965c874d033ac74f140cf798a629139aec2",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        },
+        {
+          "id": "0001601818-26-000010:0",
+          "accession": "0001601818-26-000010",
+          "row": 0,
+          "date": "2026-08-06",
+          "filed_date": "2026-08-07",
+          "code": "S",
+          "direction": "D",
+          "classification": "LIQUIDITY",
+          "shares": 16184.0,
+          "price": 45.4255,
+          "value": 735166.29,
+          "remaining_shares": 119010.0,
+          "planned": false,
+          "fact": "Form 4 reports 16,184 shares, code S, on 2026-08-06. Reported price $45.43 per share.",
+          "footnotes": [
+            "This transaction was executed in multiple trades at prices ranging from $44.6996 to $45.68. The price reported in Column 4 is a weighted average price. The reporting person hereby undertakes to provide upon request to the SEC staff, the Issuer or a security holder of the Issuer full information regarding the number of shares and prices at which the transactions were effected."
+          ],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1280058/000160181826000010/xslF345X06/wk-form4_1786134028.xml",
+          "raw_path": "0001601818-26-000010.xml",
+          "sha256": "30faaec58061ab2947d602c26263f965c874d033ac74f140cf798a629139aec2",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        }
+      ],
+      "liquidity_total": 1001091.84,
+      "signal_type": "Liquidity",
+      "source_classes": [
+        "FORM4"
+      ],
+      "convergence": 0
+    },
+    {
+      "id": "person-1365837-issuer-1280058",
+      "person_cik": "0001365837",
+      "issuer_cik": "0001280058",
+      "person_name": "Gianoni Michael P",
+      "role": "President and CEO",
+      "company": "BLACKBAUD INC",
+      "location": {
+        "city": "CHARLESTON",
+        "state": "SC",
+        "kind": "Reporting-person mailing city; residence UNKNOWN",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1280058/000136583726000012/xslF345X06/wk-form4_1787861151.xml",
+        "assertion_class": "VERIFIED PUBLIC FACT",
+        "distance_miles": 0.0,
+        "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
+        "geo_class": "CALCULATED FROM VERIFIED FACT",
+        "geo_method": "Haversine between Census place representative coordinates; mailing city only, not precise location",
+        "place_geoid": "4513330"
+      },
+      "events": [
+        {
+          "id": "0001365837-26-000012:0",
+          "accession": "0001365837-26-000012",
+          "row": 0,
+          "date": "2026-08-25",
+          "filed_date": "2026-08-27",
+          "code": "S",
+          "direction": "D",
+          "classification": "LIQUIDITY",
+          "shares": 17000.0,
+          "price": 47.352,
+          "value": 804984.0,
+          "remaining_shares": 423264.0,
+          "planned": false,
+          "fact": "Form 4 reports 17,000 shares, code S, on 2026-08-25. Reported price $47.35 per share.",
+          "footnotes": [
+            "This transaction was executed in multiple trades at prices ranging from $47.09 to $47.5918. The price reported in Column 4 is a weighted average price. The reporting person hereby undertakes to provide upon request to the SEC staff, the Issuer or a security holder of the Issuer full information regarding the number of shares and prices at which the transactions were effected."
+          ],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1280058/000136583726000012/xslF345X06/wk-form4_1787861151.xml",
+          "raw_path": "0001365837-26-000012.xml",
+          "sha256": "65fe6a45f7a0534f2bc6d6f0c13452091a685705ef8068bd6ff79aa748cbe311",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        }
+      ],
+      "liquidity_total": 804984.0,
+      "signal_type": "Liquidity",
+      "source_classes": [
+        "FORM4"
+      ],
+      "convergence": 0
+    },
+    {
+      "id": "person-1251036-issuer-910638",
+      "person_cik": "0001251036",
+      "issuer_cik": "0000910638",
+      "person_name": "GRAVES JEFFREY A",
+      "role": "President and CEO",
+      "company": "3D SYSTEMS CORP",
+      "location": {
+        "city": "ROCK HILL",
+        "state": "SC",
+        "kind": "Reporting-person mailing city; residence UNKNOWN",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/910638/000162828026062712/xslF345X06/wk-form4_1789761866.xml",
+        "assertion_class": "VERIFIED PUBLIC FACT",
+        "distance_miles": 157.67,
+        "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
+        "geo_class": "CALCULATED FROM VERIFIED FACT",
+        "geo_method": "Haversine between Census place representative coordinates; mailing city only, not precise location",
+        "place_geoid": "4561405"
+      },
+      "events": [
+        {
+          "id": "0001628280-26-062712:0",
+          "accession": "0001628280-26-062712",
+          "row": 0,
+          "date": "2026-09-17",
+          "filed_date": "2026-09-18",
+          "code": "S",
+          "direction": "D",
+          "classification": "LIQUIDITY",
+          "shares": 42686.0,
+          "price": 3.55,
+          "value": 151535.3,
+          "remaining_shares": 1231596.0,
+          "planned": false,
+          "fact": "Form 4 reports 42,686 shares, code S, on 2026-09-17. Reported price $3.55 per share.",
+          "footnotes": [
+            "The price reported in Column 4 is a weighted average price. These shares were sold in multiple transactions at prices ranging from $3.53 to $3.59, inclusive. The reporting person undertakes to provide to the issuer, any security holder of the issuer, or the staff of the Securities and Exchange Commission, upon request, full information regarding the number of shares sold at each separate price within the range set forth in this footnote."
+          ],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/910638/000162828026062712/xslF345X06/wk-form4_1789761866.xml",
+          "raw_path": "0001628280-26-062712.xml",
+          "sha256": "38785fbb727918c03b6383511404fd160164711b84391cea69eaf58e43d9b16d",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        },
+        {
+          "id": "0001628280-26-061401:0",
+          "accession": "0001628280-26-061401",
+          "row": 0,
+          "date": "2026-09-08",
+          "filed_date": "2026-09-10",
+          "code": "F",
+          "direction": "D",
+          "classification": "TAX_WITHHOLDING",
+          "shares": 39959.0,
+          "price": 3.38,
+          "value": 135061.42,
+          "remaining_shares": 1274282.0,
+          "planned": false,
+          "fact": "Form 4 reports 39,959 shares, code F, on 2026-09-08. Reported price $3.38 per share.",
+          "footnotes": [
+            "Shares reported were withheld to satisfy tax withholding obligations with respect to the vesting of a grant of restricted stock originally made on September 5, 2024."
+          ],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/910638/000162828026061401/xslF345X06/wk-form4_1789074136.xml",
+          "raw_path": "0001628280-26-061401.xml",
+          "sha256": "df354ddc339bb5a5514655eb5f6f5b2d1ccb3ed6352cc6363dd937cfbef5e314",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        },
+        {
+          "id": "0001628280-26-058429:0",
+          "accession": "0001628280-26-058429",
+          "row": 0,
+          "date": "2026-08-20",
+          "filed_date": "2026-08-21",
+          "code": "S",
+          "direction": "D",
+          "classification": "LIQUIDITY",
+          "shares": 115500.0,
+          "price": 3.26,
+          "value": 376530.0,
+          "remaining_shares": 1314241.0,
+          "planned": false,
+          "fact": "Form 4 reports 115,500 shares, code S, on 2026-08-20. Reported price $3.26 per share.",
+          "footnotes": [
+            "The price reported in Column 4 is a weighted average price. These shares were sold in multiple transactions at prices ranging from $3.25 to $3.33, inclusive. The reporting person undertakes to provide to the issuer, any security holder of the issuer, or the staff of the Securities and Exchange Commission, upon request, full information regarding the number of shares sold at each separate price within the range set forth in this footnote."
+          ],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/910638/000162828026058429/xslF345X06/wk-form4_1787343225.xml",
+          "raw_path": "0001628280-26-058429.xml",
+          "sha256": "d1c945249512826a1e833e1db918d653e7007ff14a20751260f9615e9bb31b3d",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        }
+      ],
+      "liquidity_total": 528065.3,
+      "signal_type": "Liquidity",
+      "source_classes": [
+        "FORM4"
+      ],
+      "convergence": 0
+    },
+    {
+      "id": "person-1492840-issuer-1280058",
+      "person_cik": "0001492840",
+      "issuer_cik": "0001280058",
+      "person_name": "Anderson Chad",
+      "role": "Executive VP and CFO",
+      "company": "BLACKBAUD INC",
+      "location": {
+        "city": "CHARLESTON",
+        "state": "SC",
+        "kind": "Reporting-person mailing city; residence UNKNOWN",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1280058/000149284026000014/xslF345X06/wk-form4_1788380230.xml",
+        "assertion_class": "VERIFIED PUBLIC FACT",
+        "distance_miles": 0.0,
+        "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
+        "geo_class": "CALCULATED FROM VERIFIED FACT",
+        "geo_method": "Haversine between Census place representative coordinates; mailing city only, not precise location",
+        "place_geoid": "4513330"
+      },
+      "events": [
+        {
+          "id": "0001492840-26-000014:0",
+          "accession": "0001492840-26-000014",
+          "row": 0,
+          "date": "2026-09-01",
+          "filed_date": "2026-09-02",
+          "code": "S",
+          "direction": "D",
+          "classification": "LIQUIDITY",
+          "shares": 2000.0,
+          "price": 47.56,
+          "value": 95120.0,
+          "remaining_shares": 59883.0,
+          "planned": true,
+          "fact": "Form 4 reports 2,000 shares, code S, on 2026-09-01. Reported price $47.56 per share.",
+          "footnotes": [
+            "This sale was effected pursuant to a Rule 10b5-1 trading plan adopted by the Reporting Person on February 27, 2026."
+          ],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1280058/000149284026000014/xslF345X06/wk-form4_1788380230.xml",
+          "raw_path": "0001492840-26-000014.xml",
+          "sha256": "4bcac2c70ac0e464bac2344ca3018c6af0bac093be4111463b83f42fff58ab56",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        },
+        {
+          "id": "0001492840-26-000012:1",
+          "accession": "0001492840-26-000012",
+          "row": 1,
+          "date": "2026-08-14",
+          "filed_date": "2026-08-18",
+          "code": "F",
+          "direction": "D",
+          "classification": "TAX_WITHHOLDING",
+          "shares": 589.0,
+          "price": 46.21,
+          "value": 27217.69,
+          "remaining_shares": 61883.0,
+          "planned": false,
+          "fact": "Form 4 reports 589 shares, code F, on 2026-08-14. Reported price $46.21 per share.",
+          "footnotes": [
+            "Represents shares forfeited to the Issuer in connection with the satisfaction of tax liabilities incurred upon the vesting of restricted stock granted August 13, 2024."
+          ],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1280058/000149284026000012/xslF345X06/wk-form4_1787084533.xml",
+          "raw_path": "0001492840-26-000012.xml",
+          "sha256": "d6279797d796e785cd73130371f294ccf25481b81125966675ee362a66159e51",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        },
+        {
+          "id": "0001492840-26-000010:0",
+          "accession": "0001492840-26-000010",
+          "row": 0,
+          "date": "2026-06-01",
+          "filed_date": "2026-06-03",
+          "code": "S",
+          "direction": "D",
+          "classification": "LIQUIDITY",
+          "shares": 6205.0,
+          "price": 31.31,
+          "value": 194278.55,
+          "remaining_shares": 62869.0,
+          "planned": true,
+          "fact": "Form 4 reports 6,205 shares, code S, on 2026-06-01. Reported price $31.31 per share.",
+          "footnotes": [
+            "This sale was effected pursuant to a Rule 10b5-1 trading plan adopted by the Reporting Person on February 27, 2026."
+          ],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1280058/000149284026000010/xslF345X06/wk-form4_1780519502.xml",
+          "raw_path": "0001492840-26-000010.xml",
+          "sha256": "f365c140c6408c2c54ac21e8ffc47ae23aa3ad3d3e0cebd195894d016f10d35a",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        },
+        {
+          "id": "0001492840-26-000012:0",
+          "accession": "0001492840-26-000012",
+          "row": 0,
+          "date": "2025-08-14",
+          "filed_date": "2026-08-18",
+          "code": "F",
+          "direction": "D",
+          "classification": "TAX_WITHHOLDING",
+          "shares": 397.0,
+          "price": 63.18,
+          "value": 25082.46,
+          "remaining_shares": 62472.0,
+          "planned": false,
+          "fact": "Form 4 reports 397 shares, code F, on 2025-08-14. Reported price $63.18 per share.",
+          "footnotes": [
+            "Represents shares forfeited to the Issuer in connection with the satisfaction of tax liabilities incurred upon the vesting of restricted stock granted August 13, 2024."
+          ],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1280058/000149284026000012/xslF345X06/wk-form4_1787084533.xml",
+          "raw_path": "0001492840-26-000012.xml",
+          "sha256": "d6279797d796e785cd73130371f294ccf25481b81125966675ee362a66159e51",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        }
+      ],
+      "liquidity_total": 289398.55,
+      "signal_type": "Liquidity",
+      "source_classes": [
+        "FORM4"
+      ],
+      "convergence": 0
+    },
+    {
+      "id": "person-2017486-issuer-1653477",
+      "person_cik": "0002017486",
+      "issuer_cik": "0001653477",
+      "person_name": "Fisher Ryan C.",
+      "role": "SVP, Gen. Counsel & Secretary",
+      "company": "Ingevity Corp",
+      "location": {
+        "city": "NORTH CHARLESTON",
+        "state": "SC",
+        "kind": "Reporting-person mailing city; residence UNKNOWN",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1653477/000201748626000005/xslF345X06/wk-form4_1785878067.xml",
+        "assertion_class": "VERIFIED PUBLIC FACT",
+        "distance_miles": 8.19,
+        "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
+        "geo_class": "CALCULATED FROM VERIFIED FACT",
+        "geo_method": "Haversine between Census place representative coordinates; mailing city only, not precise location",
+        "place_geoid": "4550875"
+      },
+      "events": [
+        {
+          "id": "0002017486-26-000005:1",
+          "accession": "0002017486-26-000005",
+          "row": 1,
+          "date": "2026-08-03",
+          "filed_date": "2026-08-04",
+          "code": "S",
+          "direction": "D",
+          "classification": "LIQUIDITY",
+          "shares": 1312.0,
+          "price": 73.67,
+          "value": 96655.04,
+          "remaining_shares": 15722.0,
+          "planned": false,
+          "fact": "Form 4 reports 1,312 shares, code S, on 2026-08-03. Reported price $73.67 per share.",
+          "footnotes": [],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1653477/000201748626000005/xslF345X06/wk-form4_1785878067.xml",
+          "raw_path": "0002017486-26-000005.xml",
+          "sha256": "0cc9b5e9668ee79a660181e6be3fbaea7b94e482f08730a2cef70feeba1746ec",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        },
+        {
+          "id": "0002017486-26-000005:0",
+          "accession": "0002017486-26-000005",
+          "row": 0,
+          "date": "2026-08-03",
+          "filed_date": "2026-08-04",
+          "code": "S",
+          "direction": "D",
+          "classification": "LIQUIDITY",
+          "shares": 1397.0,
+          "price": 73.76,
+          "value": 103042.72,
+          "remaining_shares": 17034.0,
+          "planned": false,
+          "fact": "Form 4 reports 1,397 shares, code S, on 2026-08-03. Reported price $73.76 per share.",
+          "footnotes": [],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1653477/000201748626000005/xslF345X06/wk-form4_1785878067.xml",
+          "raw_path": "0002017486-26-000005.xml",
+          "sha256": "0cc9b5e9668ee79a660181e6be3fbaea7b94e482f08730a2cef70feeba1746ec",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        },
+        {
+          "id": "0001653477-26-000039:0",
+          "accession": "0001653477-26-000039",
+          "row": 0,
+          "date": "2026-07-06",
+          "filed_date": "2026-07-08",
+          "code": "F",
+          "direction": "D",
+          "classification": "TAX_WITHHOLDING",
+          "shares": 168.0,
+          "price": 73.86,
+          "value": 12408.48,
+          "remaining_shares": 18431.0,
+          "planned": false,
+          "fact": "Form 4 reports 168 shares, code F, on 2026-07-06. Reported price $73.86 per share.",
+          "footnotes": [
+            "Shares withheld by the Company to satisfy tax withholding obligations related to the 2024 RSUs that vested.",
+            "Includes (i) 329 shares of Common Stock purchased pursuant to the Amended and Restated 2017 Ingevity Corporation Employee Stock Purchase Plan, as amended (\"ESPP\") for the purchase period of January 1, 2026 to March 31, 2026 (the \"March ESPP Shares\"), and (ii) 76 shares of Common Stock purchased pursuant to the ESPP for the purchase period of April 1, 2026 to June 30, 2026 (the \"June ESPP Shares\"). In accordance with the terms of the ESPP, the March ESPP Shares were purchased at a price equal to 85% of the closing price of Issuer's Common Stock on December 31, 2025 and the June ESPP Shares were purchased at a price equal to 85% of the closing price of the Issuer's Common Stock on April 1, 2026."
+          ],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1653477/000165347726000039/xslF345X06/wk-form4_1783544852.xml",
+          "raw_path": "0001653477-26-000039.xml",
+          "sha256": "2d911442202e3865281888098915270ea0d83b829ec2beb4f9fa54a7c7b3d16d",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        }
+      ],
+      "liquidity_total": 199697.76,
+      "signal_type": "Liquidity",
+      "source_classes": [
+        "FORM4"
+      ],
+      "convergence": 0
+    },
+    {
+      "id": "person-1879982-issuer-910638",
+      "person_cik": "0001879982",
+      "issuer_cik": "0000910638",
+      "person_name": "Nordstrom Phyllis B",
+      "role": "EVP, CFO and CAO",
+      "company": "3D SYSTEMS CORP",
+      "location": {
+        "city": "ROCK HILL",
+        "state": "SC",
+        "kind": "Reporting-person mailing city; residence UNKNOWN",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/910638/000162828026062715/xslF345X06/wk-form4_1789761915.xml",
+        "assertion_class": "VERIFIED PUBLIC FACT",
+        "distance_miles": 157.67,
+        "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
+        "geo_class": "CALCULATED FROM VERIFIED FACT",
+        "geo_method": "Haversine between Census place representative coordinates; mailing city only, not precise location",
+        "place_geoid": "4561405"
+      },
+      "events": [
+        {
+          "id": "0001628280-26-062715:0",
+          "accession": "0001628280-26-062715",
+          "row": 0,
+          "date": "2026-09-17",
+          "filed_date": "2026-09-18",
+          "code": "S",
+          "direction": "D",
+          "classification": "LIQUIDITY",
+          "shares": 30000.0,
+          "price": 3.58,
+          "value": 107400.0,
+          "remaining_shares": 715871.0,
+          "planned": false,
+          "fact": "Form 4 reports 30,000 shares, code S, on 2026-09-17. Reported price $3.58 per share.",
+          "footnotes": [
+            "The price reported in Column 4 is a weighted average price. These shares were sold in multiple transactions at prices ranging from $3.53 to $3.62, inclusive. The reporting person undertakes to provide to the issuer, any security holder of the issuer, or the staff of the Securities and Exchange Commission, upon request, full information regarding the number of shares sold at each separate price within the range set forth in this footnote."
+          ],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/910638/000162828026062715/xslF345X06/wk-form4_1789761915.xml",
+          "raw_path": "0001628280-26-062715.xml",
+          "sha256": "7848e017bddad923853d526c9ea8e02f2fbe776ae5cbfe99312b2f49d74f871f",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        },
+        {
+          "id": "0001628280-26-061404:1",
+          "accession": "0001628280-26-061404",
+          "row": 1,
+          "date": "2026-09-08",
+          "filed_date": "2026-09-10",
+          "code": "F",
+          "direction": "D",
+          "classification": "TAX_WITHHOLDING",
+          "shares": 39517.0,
+          "price": 3.38,
+          "value": 133567.46,
+          "remaining_shares": 745871.0,
+          "planned": false,
+          "fact": "Form 4 reports 39,517 shares, code F, on 2026-09-08. Reported price $3.38 per share.",
+          "footnotes": [
+            "Shares reported were withheld to satisfy tax withholding obligations with respect to the vesting of a grant of restricted stock originally made on September 5, 2025."
+          ],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/910638/000162828026061404/xslF345X06/wk-form4_1789074166.xml",
+          "raw_path": "0001628280-26-061404.xml",
+          "sha256": "a3d9f6b42e8c1eea686dd00694407726abaa08fdb248f7b8647ccb5ee05fe3cf",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        },
+        {
+          "id": "0001628280-26-061404:0",
+          "accession": "0001628280-26-061404",
+          "row": 0,
+          "date": "2026-09-08",
+          "filed_date": "2026-09-10",
+          "code": "F",
+          "direction": "D",
+          "classification": "TAX_WITHHOLDING",
+          "shares": 7879.0,
+          "price": 3.38,
+          "value": 26631.02,
+          "remaining_shares": 785388.0,
+          "planned": false,
+          "fact": "Form 4 reports 7,879 shares, code F, on 2026-09-08. Reported price $3.38 per share.",
+          "footnotes": [
+            "Shares reported were withheld to satisfy tax withholding obligations with respect to the vesting of a grant of restricted stock originally made on September 5, 2024."
+          ],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/910638/000162828026061404/xslF345X06/wk-form4_1789074166.xml",
+          "raw_path": "0001628280-26-061404.xml",
+          "sha256": "a3d9f6b42e8c1eea686dd00694407726abaa08fdb248f7b8647ccb5ee05fe3cf",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        }
+      ],
+      "liquidity_total": 107400.0,
+      "signal_type": "Liquidity",
+      "source_classes": [
+        "FORM4"
+      ],
+      "convergence": 0
+    },
+    {
+      "id": "person-1939343-issuer-1280058",
+      "person_cik": "0001939343",
+      "issuer_cik": "0001280058",
+      "person_name": "Benjamin David J",
+      "role": "EVP, Chief Commercial Officer",
+      "company": "BLACKBAUD INC",
+      "location": {
+        "city": "CHARLESTON",
+        "state": "SC",
+        "kind": "Reporting-person mailing city; residence UNKNOWN",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1280058/000193934326000008/xslF345X06/wk-form4_1788380212.xml",
+        "assertion_class": "VERIFIED PUBLIC FACT",
+        "distance_miles": 0.0,
+        "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
+        "geo_class": "CALCULATED FROM VERIFIED FACT",
+        "geo_method": "Haversine between Census place representative coordinates; mailing city only, not precise location",
+        "place_geoid": "4513330"
+      },
+      "events": [
+        {
+          "id": "0001939343-26-000008:0",
+          "accession": "0001939343-26-000008",
+          "row": 0,
+          "date": "2026-08-31",
+          "filed_date": "2026-09-02",
+          "code": "S",
+          "direction": "D",
+          "classification": "LIQUIDITY",
+          "shares": 2086.0,
+          "price": 48.2736,
+          "value": 100698.73,
+          "remaining_shares": 71038.0,
+          "planned": false,
+          "fact": "Form 4 reports 2,086 shares, code S, on 2026-08-31. Reported price $48.27 per share.",
+          "footnotes": [],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1280058/000193934326000008/xslF345X06/wk-form4_1788380212.xml",
+          "raw_path": "0001939343-26-000008.xml",
+          "sha256": "6527a20b831d2e7885fc3bc0e6c8c3997ff802c1e59aeada4551ed04a44421d3",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        }
+      ],
+      "liquidity_total": 100698.73,
+      "signal_type": "Liquidity",
+      "source_classes": [
+        "FORM4"
+      ],
+      "convergence": 0
+    },
+    {
+      "id": "person-1552446-issuer-1653477",
+      "person_cik": "0001552446",
+      "issuer_cik": "0001653477",
+      "person_name": "DYER TERRANCE M",
+      "role": "SVP, Chief HR Officer",
+      "company": "Ingevity Corp",
+      "location": {
+        "city": "NORTH CHARLESTON",
+        "state": "SC",
+        "kind": "Reporting-person mailing city; residence UNKNOWN",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1653477/000155244626000003/xslF345X06/wk-form4_1780337032.xml",
+        "assertion_class": "VERIFIED PUBLIC FACT",
+        "distance_miles": 8.19,
+        "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
+        "geo_class": "CALCULATED FROM VERIFIED FACT",
+        "geo_method": "Haversine between Census place representative coordinates; mailing city only, not precise location",
+        "place_geoid": "4550875"
+      },
+      "events": [
+        {
+          "id": "0001552446-26-000003:2",
+          "accession": "0001552446-26-000003",
+          "row": 2,
+          "date": "2026-05-28",
+          "filed_date": "2026-06-01",
+          "code": "S",
+          "direction": "D",
+          "classification": "LIQUIDITY",
+          "shares": 200.0,
+          "price": 68.53,
+          "value": 13706.0,
+          "remaining_shares": 7202.0,
+          "planned": false,
+          "fact": "Form 4 reports 200 shares, code S, on 2026-05-28. Reported price $68.53 per share.",
+          "footnotes": [],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1653477/000155244626000003/xslF345X06/wk-form4_1780337032.xml",
+          "raw_path": "0001552446-26-000003.xml",
+          "sha256": "ac4cb685a9c567329a66e4292c78a1c64d28558612eb01122513238d82ce48ff",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        },
+        {
+          "id": "0001552446-26-000003:1",
+          "accession": "0001552446-26-000003",
+          "row": 1,
+          "date": "2026-05-28",
+          "filed_date": "2026-06-01",
+          "code": "S",
+          "direction": "D",
+          "classification": "LIQUIDITY",
+          "shares": 30.0,
+          "price": 68.57,
+          "value": 2057.1,
+          "remaining_shares": 7402.0,
+          "planned": false,
+          "fact": "Form 4 reports 30 shares, code S, on 2026-05-28. Reported price $68.57 per share.",
+          "footnotes": [],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1653477/000155244626000003/xslF345X06/wk-form4_1780337032.xml",
+          "raw_path": "0001552446-26-000003.xml",
+          "sha256": "ac4cb685a9c567329a66e4292c78a1c64d28558612eb01122513238d82ce48ff",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        },
+        {
+          "id": "0001552446-26-000003:0",
+          "accession": "0001552446-26-000003",
+          "row": 0,
+          "date": "2026-05-28",
+          "filed_date": "2026-06-01",
+          "code": "S",
+          "direction": "D",
+          "classification": "LIQUIDITY",
+          "shares": 266.0,
+          "price": 68.45,
+          "value": 18207.7,
+          "remaining_shares": 7432.0,
+          "planned": false,
+          "fact": "Form 4 reports 266 shares, code S, on 2026-05-28. Reported price $68.45 per share.",
+          "footnotes": [],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1653477/000155244626000003/xslF345X06/wk-form4_1780337032.xml",
+          "raw_path": "0001552446-26-000003.xml",
+          "sha256": "ac4cb685a9c567329a66e4292c78a1c64d28558612eb01122513238d82ce48ff",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        }
+      ],
+      "liquidity_total": 33970.8,
+      "signal_type": "Liquidity",
+      "source_classes": [
+        "FORM4"
+      ],
+      "convergence": 0
+    },
+    {
+      "id": "person-1575329-issuer-1653477",
+      "person_cik": "0001575329",
+      "issuer_cik": "0001653477",
+      "person_name": "WILLIS J KEVIN",
+      "role": "Director",
+      "company": "Ingevity Corp",
+      "location": {
+        "city": "NORTH CHARLESTON",
+        "state": "SC",
+        "kind": "Reporting-person mailing city; residence UNKNOWN",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1653477/000157532926000011/xslF345X06/wk-form4_1790981155.xml",
+        "assertion_class": "VERIFIED PUBLIC FACT",
+        "distance_miles": 8.19,
+        "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
+        "geo_class": "CALCULATED FROM VERIFIED FACT",
+        "geo_method": "Haversine between Census place representative coordinates; mailing city only, not precise location",
+        "place_geoid": "4550875"
+      },
+      "events": [
+        {
+          "id": "0001575329-26-000011:0",
+          "accession": "0001575329-26-000011",
+          "row": 0,
+          "date": "2026-10-01",
+          "filed_date": "2026-10-02",
+          "code": "A",
+          "direction": "A",
+          "classification": "AWARD",
+          "shares": 405.0,
+          "price": 71.09,
+          "value": 28791.45,
+          "remaining_shares": 11883.0,
+          "planned": false,
+          "fact": "Form 4 reports 405 shares, code A, on 2026-10-01. Reported price $71.09 per share.",
+          "footnotes": [
+            "Represents vested deferred stock units (\"DSUs\") granted pursuant to the reporting person's election to receive DSUs in lieu of quarterly director fees. These DSUs will settle into an equal number of shares of the Company's Common Stock upon the reporting person's termination of board service pursuant to the Company's Amended and Restated Non-Employee Director Deferred Compensation Plan and 2025 Omnibus Incentive Plan, as amended."
+          ],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1653477/000157532926000011/xslF345X06/wk-form4_1790981155.xml",
+          "raw_path": "0001575329-26-000011.xml",
+          "sha256": "8b6d69f1b0c06f1cded44f8dd6090fdb233d6770af310c700d88f3d38fbbed47",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        },
+        {
+          "id": "0001575329-26-000010:0",
+          "accession": "0001575329-26-000010",
+          "row": 0,
+          "date": "2026-07-01",
+          "filed_date": "2026-07-02",
+          "code": "A",
+          "direction": "A",
+          "classification": "AWARD",
+          "shares": 397.0,
+          "price": 72.58,
+          "value": 28814.26,
+          "remaining_shares": 11478.0,
+          "planned": false,
+          "fact": "Form 4 reports 397 shares, code A, on 2026-07-01. Reported price $72.58 per share.",
+          "footnotes": [
+            "Represents vested deferred stock units (\"DSUs\") granted pursuant to the reporting person's election to receive DSUs in lieu of quarterly director fees. These DSUs will settle into an equal number of shares of the Company's Common Stock upon the reporting person's termination of board service pursuant to the Company's Amended and Restated Non-Employee Director Deferred Compensation Plan and 2025 Omnibus Incentive Plan, as amended."
+          ],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1653477/000157532926000010/xslF345X06/wk-form4_1783023816.xml",
+          "raw_path": "0001575329-26-000010.xml",
+          "sha256": "8371f9819a18839c4e4acb18c9e46424df8a65438f61684e54564712402e314a",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        }
+      ],
+      "liquidity_total": 0,
+      "signal_type": "Monitor",
+      "source_classes": [
+        "FORM4"
+      ],
+      "convergence": 0
+    },
+    {
+      "id": "person-2066872-issuer-1653477",
+      "person_cik": "0002066872",
+      "issuer_cik": "0001653477",
+      "person_name": "Segal Francis David",
+      "role": "Director",
+      "company": "Ingevity Corp",
+      "location": {
+        "city": "NORTH CHARLESTON",
+        "state": "SC",
+        "kind": "Reporting-person mailing city; residence UNKNOWN",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1653477/000206687226000008/xslF345X06/wk-form4_1790981217.xml",
+        "assertion_class": "VERIFIED PUBLIC FACT",
+        "distance_miles": 8.19,
+        "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
+        "geo_class": "CALCULATED FROM VERIFIED FACT",
+        "geo_method": "Haversine between Census place representative coordinates; mailing city only, not precise location",
+        "place_geoid": "4550875"
+      },
+      "events": [
+        {
+          "id": "0002066872-26-000008:0",
+          "accession": "0002066872-26-000008",
+          "row": 0,
+          "date": "2026-10-01",
+          "filed_date": "2026-10-02",
+          "code": "A",
+          "direction": "A",
+          "classification": "AWARD",
+          "shares": 335.0,
+          "price": 71.09,
+          "value": 23815.15,
+          "remaining_shares": 8947.0,
+          "planned": false,
+          "fact": "Form 4 reports 335 shares, code A, on 2026-10-01. Reported price $71.09 per share.",
+          "footnotes": [
+            "Represents vested deferred stock units (\"DSUs\") granted pursuant to the reporting person's election to receive DSUs in lieu of quarterly director fees. These DSUs will settle into an equal number of shares of the Company's Common Stock upon the reporting person's termination of board service pursuant to the Company's Amended and Restated Non-Employee Director Deferred Compensation Plan and 2025 Omnibus Incentive Plan, as amended."
+          ],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1653477/000206687226000008/xslF345X06/wk-form4_1790981217.xml",
+          "raw_path": "0002066872-26-000008.xml",
+          "sha256": "be9a067ea97d7e1d8068adc3c2cc6d7e7a35a6e76d2eb23fc544c30f785c9bc6",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        },
+        {
+          "id": "0002066872-26-000006:0",
+          "accession": "0002066872-26-000006",
+          "row": 0,
+          "date": "2026-07-01",
+          "filed_date": "2026-07-02",
+          "code": "A",
+          "direction": "A",
+          "classification": "AWARD",
+          "shares": 328.0,
+          "price": 72.58,
+          "value": 23806.24,
+          "remaining_shares": 8612.0,
+          "planned": false,
+          "fact": "Form 4 reports 328 shares, code A, on 2026-07-01. Reported price $72.58 per share.",
+          "footnotes": [
+            "Represents vested deferred stock units (\"DSUs\") granted pursuant to the reporting person's election to receive DSUs in lieu of quarterly director fees. These DSUs will settle into an equal number of shares of the Company's Common Stock upon the reporting person's termination of board service pursuant to the Company's Amended and Restated Non-Employee Director Deferred Compensation Plan and 2025 Omnibus Incentive Plan, as amended."
+          ],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1653477/000206687226000006/xslF345X06/wk-form4_1783023670.xml",
+          "raw_path": "0002066872-26-000006.xml",
+          "sha256": "5dd32c94696b7d62d414c429e6d1d4bf941abd5e01527555dffd66b10b0c0c4e",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        }
+      ],
+      "liquidity_total": 0,
+      "signal_type": "Monitor",
+      "source_classes": [
+        "FORM4"
+      ],
+      "convergence": 0
+    },
+    {
+      "id": "person-1668926-issuer-1653477",
+      "person_cik": "0001668926",
+      "issuer_cik": "0001653477",
+      "person_name": "PLATT PHILLIP JOHN",
+      "role": "SVP, Chief Financial Officer",
+      "company": "Ingevity Corp",
+      "location": {
+        "city": "NORTH CHARLESTON",
+        "state": "SC",
+        "kind": "Reporting-person mailing city; residence UNKNOWN",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1653477/000166892626000006/xslF345X06/wk-form4_1786481146.xml",
+        "assertion_class": "VERIFIED PUBLIC FACT",
+        "distance_miles": 8.19,
+        "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
+        "geo_class": "CALCULATED FROM VERIFIED FACT",
+        "geo_method": "Haversine between Census place representative coordinates; mailing city only, not precise location",
+        "place_geoid": "4550875"
+      },
+      "events": [
+        {
+          "id": "0001668926-26-000006:0",
+          "accession": "0001668926-26-000006",
+          "row": 0,
+          "date": "2026-08-10",
+          "filed_date": "2026-08-11",
+          "code": "F",
+          "direction": "D",
+          "classification": "TAX_WITHHOLDING",
+          "shares": 1698.0,
+          "price": 77.04,
+          "value": 130813.92,
+          "remaining_shares": 26641.0,
+          "planned": false,
+          "fact": "Form 4 reports 1,698 shares, code F, on 2026-08-10. Reported price $77.04 per share.",
+          "footnotes": [
+            "Shares withheld by the Company to satisfy tax withholding obligations related to the 2024 restricted stock units that vested."
+          ],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1653477/000166892626000006/xslF345X06/wk-form4_1786481146.xml",
+          "raw_path": "0001668926-26-000006.xml",
+          "sha256": "5a9605e8a3ad1b3d6bd2fa1ec6eb67b60f5a7941660d6e4fc70c8eee7a9a5ec6",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        },
+        {
+          "id": "0001653477-26-000041:0",
+          "accession": "0001653477-26-000041",
+          "row": 0,
+          "date": "2026-07-24",
+          "filed_date": "2026-07-28",
+          "code": "F",
+          "direction": "D",
+          "classification": "TAX_WITHHOLDING",
+          "shares": 3294.0,
+          "price": 73.26,
+          "value": 241318.44,
+          "remaining_shares": 28339.0,
+          "planned": false,
+          "fact": "Form 4 reports 3,294 shares, code F, on 2026-07-24. Reported price $73.26 per share.",
+          "footnotes": [
+            "Shares withheld by the Company to satisfy tax withholding obligations related to the restricted stock units that vested on July 24, 2026."
+          ],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1653477/000165347726000041/xslF345X06/wk-form4_1785271713.xml",
+          "raw_path": "0001653477-26-000041.xml",
+          "sha256": "b58427dc61079acdc2df9a3196c19356f6b37577980dc3b3a80bf0aa0280e882",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        }
+      ],
+      "liquidity_total": 0,
+      "signal_type": "Monitor",
+      "source_classes": [
+        "FORM4"
+      ],
+      "convergence": 0
+    },
+    {
+      "id": "person-2142185-issuer-1653477",
+      "person_cik": "0002142185",
+      "issuer_cik": "0001653477",
+      "person_name": "Cotterman Ryan Joseph",
+      "role": "VP, Chief Accounting Officer",
+      "company": "Ingevity Corp",
+      "location": {
+        "city": "NORTH CHARLESTON",
+        "state": "SC",
+        "kind": "Reporting-person mailing city; residence UNKNOWN",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1653477/000214218526000004/xslF345X06/wk-form4_1782338699.xml",
+        "assertion_class": "VERIFIED PUBLIC FACT",
+        "distance_miles": 8.19,
+        "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
+        "geo_class": "CALCULATED FROM VERIFIED FACT",
+        "geo_method": "Haversine between Census place representative coordinates; mailing city only, not precise location",
+        "place_geoid": "4550875"
+      },
+      "events": [
+        {
+          "id": "0002142185-26-000004:0",
+          "accession": "0002142185-26-000004",
+          "row": 0,
+          "date": "2026-06-22",
+          "filed_date": "2026-06-24",
+          "code": "A",
+          "direction": "A",
+          "classification": "AWARD",
+          "shares": 2063.0,
+          "price": 0.0,
+          "value": 0.0,
+          "remaining_shares": 2063.0,
+          "planned": false,
+          "fact": "Form 4 reports 2,063 shares, code A, on 2026-06-22. Reported price $0.00 per share.",
+          "footnotes": [
+            "Grant of restricted stock units pursuant to the Ingevity Corporation 2025 Omnibus Incentive Plan, as amended, which will vest in three equal installments on June 22, 2027, 2028, and 2029."
+          ],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1653477/000214218526000004/xslF345X06/wk-form4_1782338699.xml",
+          "raw_path": "0002142185-26-000004.xml",
+          "sha256": "eb22266dc8cdf1cde08d545284a8fb1ee0857cb7274b97db4edc7b98d47870fb",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        }
+      ],
+      "liquidity_total": 0,
+      "signal_type": "Monitor",
+      "source_classes": [
+        "FORM4"
+      ],
+      "convergence": 0
+    },
+    {
+      "id": "person-1777095-issuer-1280058",
+      "person_cik": "0001777095",
+      "issuer_cik": "0001280058",
+      "person_name": "Talvitie Kristian",
+      "role": "Director",
+      "company": "BLACKBAUD INC",
+      "location": {
+        "city": "CHARLESTON",
+        "state": "SC",
+        "kind": "Reporting-person mailing city; residence UNKNOWN",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1280058/000177709526000003/xslF345X06/wk-form4_1785962089.xml",
+        "assertion_class": "VERIFIED PUBLIC FACT",
+        "distance_miles": 0.0,
+        "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
+        "geo_class": "CALCULATED FROM VERIFIED FACT",
+        "geo_method": "Haversine between Census place representative coordinates; mailing city only, not precise location",
+        "place_geoid": "4513330"
+      },
+      "events": [
+        {
+          "id": "0001777095-26-000003:0",
+          "accession": "0001777095-26-000003",
+          "row": 0,
+          "date": "2026-08-03",
+          "filed_date": "2026-08-05",
+          "code": "A",
+          "direction": "A",
+          "classification": "AWARD",
+          "shares": 7834.0,
+          "price": 0.0,
+          "value": 0.0,
+          "remaining_shares": 15887.0,
+          "planned": false,
+          "fact": "Form 4 reports 7,834 shares, code A, on 2026-08-03. Reported price $0.00 per share.",
+          "footnotes": [
+            "Represents a restricted stock award, all of which shall vest on August 3, 2027 or, if earlier, immediately prior to the 2027 annual election of directors of the Company, provided that the reporting person is then serving as a director of the Company."
+          ],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1280058/000177709526000003/xslF345X06/wk-form4_1785962089.xml",
+          "raw_path": "0001777095-26-000003.xml",
+          "sha256": "55805b6d90a0d8e0d46a99df88a797e7989517bca351fc4e2f8847f61d250c42",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        }
+      ],
+      "liquidity_total": 0,
+      "signal_type": "Monitor",
+      "source_classes": [
+        "FORM4"
+      ],
+      "convergence": 0
+    },
+    {
+      "id": "person-1292592-issuer-1280058",
+      "person_cik": "0001292592",
+      "issuer_cik": "0001280058",
+      "person_name": "Leitch Andrew M",
+      "role": "Director",
+      "company": "BLACKBAUD INC",
+      "location": {
+        "city": "CHARLESTON",
+        "state": "SC",
+        "kind": "Reporting-person mailing city; residence UNKNOWN",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1280058/000129259226000002/xslF345X06/wk-form4_1785962041.xml",
+        "assertion_class": "VERIFIED PUBLIC FACT",
+        "distance_miles": 0.0,
+        "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
+        "geo_class": "CALCULATED FROM VERIFIED FACT",
+        "geo_method": "Haversine between Census place representative coordinates; mailing city only, not precise location",
+        "place_geoid": "4513330"
+      },
+      "events": [
+        {
+          "id": "0001292592-26-000002:0",
+          "accession": "0001292592-26-000002",
+          "row": 0,
+          "date": "2026-08-03",
+          "filed_date": "2026-08-05",
+          "code": "A",
+          "direction": "A",
+          "classification": "AWARD",
+          "shares": 7834.0,
+          "price": 0.0,
+          "value": 0.0,
+          "remaining_shares": 48035.0,
+          "planned": false,
+          "fact": "Form 4 reports 7,834 shares, code A, on 2026-08-03. Reported price $0.00 per share.",
+          "footnotes": [
+            "Represents a restricted stock award, all of which shall vest on August 3, 2027 or, if earlier, immediately prior to the 2027 annual election of directors of the Company, provided that the reporting person is then serving as a director of the Company."
+          ],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1280058/000129259226000002/xslF345X06/wk-form4_1785962041.xml",
+          "raw_path": "0001292592-26-000002.xml",
+          "sha256": "cc12f9f058c663bf46b2250ad764841c775d9a18713e29317566495f9619c71e",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        }
+      ],
+      "liquidity_total": 0,
+      "signal_type": "Monitor",
+      "source_classes": [
+        "FORM4"
+      ],
+      "convergence": 0
+    },
+    {
+      "id": "person-2047652-issuer-1280058",
+      "person_cik": "0002047652",
+      "issuer_cik": "0001280058",
+      "person_name": "Pyburn Bradley L",
+      "role": "Director",
+      "company": "BLACKBAUD INC",
+      "location": {
+        "city": "CHARLESTON",
+        "state": "SC",
+        "kind": "Reporting-person mailing city; residence UNKNOWN",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1280058/000204765226000002/xslF345X06/wk-form4_1785962071.xml",
+        "assertion_class": "VERIFIED PUBLIC FACT",
+        "distance_miles": 0.0,
+        "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
+        "geo_class": "CALCULATED FROM VERIFIED FACT",
+        "geo_method": "Haversine between Census place representative coordinates; mailing city only, not precise location",
+        "place_geoid": "4513330"
+      },
+      "events": [
+        {
+          "id": "0002047652-26-000002:0",
+          "accession": "0002047652-26-000002",
+          "row": 0,
+          "date": "2026-08-03",
+          "filed_date": "2026-08-05",
+          "code": "A",
+          "direction": "A",
+          "classification": "AWARD",
+          "shares": 7834.0,
+          "price": 0.0,
+          "value": 0.0,
+          "remaining_shares": 13103.0,
+          "planned": false,
+          "fact": "Form 4 reports 7,834 shares, code A, on 2026-08-03. Reported price $0.00 per share.",
+          "footnotes": [
+            "Represents a restricted stock award, all of which shall vest on August 3, 2027 or, if earlier, immediately prior to the 2027 annual election of directors of the Company, provided that the reporting person is then serving as a director of the Company."
+          ],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1280058/000204765226000002/xslF345X06/wk-form4_1785962071.xml",
+          "raw_path": "0002047652-26-000002.xml",
+          "sha256": "7f881580708dc91df1e13316301adb3c06fe89f7fcb7c0860c99fa3a190f8c63",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        }
+      ],
+      "liquidity_total": 0,
+      "signal_type": "Monitor",
+      "source_classes": [
+        "FORM4"
+      ],
+      "convergence": 0
+    },
+    {
+      "id": "person-1886374-issuer-1280058",
+      "person_cik": "0001886374",
+      "issuer_cik": "0001280058",
+      "person_name": "Nanney Don Roger",
+      "role": "Director",
+      "company": "BLACKBAUD INC",
+      "location": {
+        "city": "CHARLESTON",
+        "state": "SC",
+        "kind": "Reporting-person mailing city; residence UNKNOWN",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1280058/000188637426000002/xslF345X06/wk-form4_1785962056.xml",
+        "assertion_class": "VERIFIED PUBLIC FACT",
+        "distance_miles": 0.0,
+        "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
+        "geo_class": "CALCULATED FROM VERIFIED FACT",
+        "geo_method": "Haversine between Census place representative coordinates; mailing city only, not precise location",
+        "place_geoid": "4513330"
+      },
+      "events": [
+        {
+          "id": "0001886374-26-000002:0",
+          "accession": "0001886374-26-000002",
+          "row": 0,
+          "date": "2026-08-03",
+          "filed_date": "2026-08-05",
+          "code": "A",
+          "direction": "A",
+          "classification": "AWARD",
+          "shares": 7834.0,
+          "price": 0.0,
+          "value": 0.0,
+          "remaining_shares": 24453.0,
+          "planned": false,
+          "fact": "Form 4 reports 7,834 shares, code A, on 2026-08-03. Reported price $0.00 per share.",
+          "footnotes": [
+            "Represents a restricted stock award, all of which shall vest on August 3, 2027 or, if earlier, immediately prior to the 2027 annual election of directors of the Company, provided that the reporting person is then serving as a director of the Company."
+          ],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1280058/000188637426000002/xslF345X06/wk-form4_1785962056.xml",
+          "raw_path": "0001886374-26-000002.xml",
+          "sha256": "c850ecbbfac212ae4c7f1c25e80b6a35827391255a49f16828896bee02ea3857",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        }
+      ],
+      "liquidity_total": 0,
+      "signal_type": "Monitor",
+      "source_classes": [
+        "FORM4"
+      ],
+      "convergence": 0
+    },
+    {
+      "id": "person-1941042-issuer-1280058",
+      "person_cik": "0001941042",
+      "issuer_cik": "0001280058",
+      "person_name": "DeFiore Deneen",
+      "role": "Director",
+      "company": "BLACKBAUD INC",
+      "location": {
+        "city": "CHARLESTON",
+        "state": "SC",
+        "kind": "Reporting-person mailing city; residence UNKNOWN",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1280058/000194104226000002/xslF345X06/wk-form4_1785962024.xml",
+        "assertion_class": "VERIFIED PUBLIC FACT",
+        "distance_miles": 0.0,
+        "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
+        "geo_class": "CALCULATED FROM VERIFIED FACT",
+        "geo_method": "Haversine between Census place representative coordinates; mailing city only, not precise location",
+        "place_geoid": "4513330"
+      },
+      "events": [
+        {
+          "id": "0001941042-26-000002:0",
+          "accession": "0001941042-26-000002",
+          "row": 0,
+          "date": "2026-08-03",
+          "filed_date": "2026-08-05",
+          "code": "A",
+          "direction": "A",
+          "classification": "AWARD",
+          "shares": 7834.0,
+          "price": 0.0,
+          "value": 0.0,
+          "remaining_shares": 17903.0,
+          "planned": false,
+          "fact": "Form 4 reports 7,834 shares, code A, on 2026-08-03. Reported price $0.00 per share.",
+          "footnotes": [
+            "Represents a restricted stock award, all of which shall vest on August 3, 2027 or, if earlier, immediately prior to the 2027 annual election of directors of the Company, provided that the reporting person is then serving as a director of the Company."
+          ],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1280058/000194104226000002/xslF345X06/wk-form4_1785962024.xml",
+          "raw_path": "0001941042-26-000002.xml",
+          "sha256": "cca652543d7d83e9e00089bac69a44337f2899376239aeaeea58630e0697f612",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        }
+      ],
+      "liquidity_total": 0,
+      "signal_type": "Monitor",
+      "source_classes": [
+        "FORM4"
+      ],
+      "convergence": 0
+    },
+    {
+      "id": "person-2026608-issuer-910638",
+      "person_cik": "0002026608",
+      "issuer_cik": "0000910638",
+      "person_name": "WRIGHT ANDREW WILLIAM BANASICK",
+      "role": "SVP, GC & Secretary",
+      "company": "3D SYSTEMS CORP",
+      "location": {
+        "city": "ROCK HILL",
+        "state": "SC",
+        "kind": "Reporting-person mailing city; residence UNKNOWN",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/910638/000162828026061407/xslF345X06/wk-form4_1789074204.xml",
+        "assertion_class": "VERIFIED PUBLIC FACT",
+        "distance_miles": 157.67,
+        "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
+        "geo_class": "CALCULATED FROM VERIFIED FACT",
+        "geo_method": "Haversine between Census place representative coordinates; mailing city only, not precise location",
+        "place_geoid": "4561405"
+      },
+      "events": [
+        {
+          "id": "0001628280-26-061407:0",
+          "accession": "0001628280-26-061407",
+          "row": 0,
+          "date": "2026-09-08",
+          "filed_date": "2026-09-10",
+          "code": "F",
+          "direction": "D",
+          "classification": "TAX_WITHHOLDING",
+          "shares": 5818.0,
+          "price": 3.38,
+          "value": 19664.84,
+          "remaining_shares": 136963.0,
+          "planned": false,
+          "fact": "Form 4 reports 5,818 shares, code F, on 2026-09-08. Reported price $3.38 per share.",
+          "footnotes": [
+            "Shares reported were withheld to satisfy tax withholding obligations with respect to vestings of grants of restricted stock originally made on September 5, 2024."
+          ],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/910638/000162828026061407/xslF345X06/wk-form4_1789074204.xml",
+          "raw_path": "0001628280-26-061407.xml",
+          "sha256": "6da78dbabc0881d9ec9050f37231a7e70059bb0b9dc1365978b8ad085fd791d8",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        }
+      ],
+      "liquidity_total": 0,
+      "signal_type": "Monitor",
+      "source_classes": [
+        "FORM4"
+      ],
+      "convergence": 0
+    },
+    {
+      "id": "person-1957687-issuer-910638",
+      "person_cik": "0001957687",
+      "issuer_cik": "0000910638",
+      "person_name": "ZUIKER JOSEPH R.",
+      "role": "EVP, Engineering & Operations",
+      "company": "3D SYSTEMS CORP",
+      "location": {
+        "city": "ROCK HILL",
+        "state": "SC",
+        "kind": "Reporting-person mailing city; residence UNKNOWN",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/910638/000162828026061405/xslF345X06/wk-form4_1789074186.xml",
+        "assertion_class": "VERIFIED PUBLIC FACT",
+        "distance_miles": 157.67,
+        "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
+        "geo_class": "CALCULATED FROM VERIFIED FACT",
+        "geo_method": "Haversine between Census place representative coordinates; mailing city only, not precise location",
+        "place_geoid": "4561405"
+      },
+      "events": [
+        {
+          "id": "0001628280-26-061405:0",
+          "accession": "0001628280-26-061405",
+          "row": 0,
+          "date": "2026-09-08",
+          "filed_date": "2026-09-10",
+          "code": "F",
+          "direction": "D",
+          "classification": "TAX_WITHHOLDING",
+          "shares": 6689.0,
+          "price": 3.38,
+          "value": 22608.82,
+          "remaining_shares": 271362.0,
+          "planned": false,
+          "fact": "Form 4 reports 6,689 shares, code F, on 2026-09-08. Reported price $3.38 per share.",
+          "footnotes": [
+            "Shares reported were withheld to satisfy tax withholding obligations with respect to the vesting of a grant of restricted stock originally made on September 5, 2024."
+          ],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/910638/000162828026061405/xslF345X06/wk-form4_1789074186.xml",
+          "raw_path": "0001628280-26-061405.xml",
+          "sha256": "28efd3b7e6f8b093b191b3a05b4c1d20152e473b4b2440c890bbe0e3f545f7ed",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        }
+      ],
+      "liquidity_total": 0,
+      "signal_type": "Monitor",
+      "source_classes": [
+        "FORM4"
+      ],
+      "convergence": 0
+    },
+    {
+      "id": "person-1826896-issuer-910638",
+      "person_cik": "0001826896",
+      "issuer_cik": "0000910638",
+      "person_name": "Puthenveetil Reji",
+      "role": "EVP, Additive Solutions & CCO",
+      "company": "3D SYSTEMS CORP",
+      "location": {
+        "city": "ROCK HILL",
+        "state": "SC",
+        "kind": "Reporting-person mailing city; residence UNKNOWN",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/910638/000162828026061400/xslF345X06/wk-form4_1789074122.xml",
+        "assertion_class": "VERIFIED PUBLIC FACT",
+        "distance_miles": 157.67,
+        "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
+        "geo_class": "CALCULATED FROM VERIFIED FACT",
+        "geo_method": "Haversine between Census place representative coordinates; mailing city only, not precise location",
+        "place_geoid": "4561405"
+      },
+      "events": [
+        {
+          "id": "0001628280-26-061400:0",
+          "accession": "0001628280-26-061400",
+          "row": 0,
+          "date": "2026-09-08",
+          "filed_date": "2026-09-10",
+          "code": "F",
+          "direction": "D",
+          "classification": "TAX_WITHHOLDING",
+          "shares": 15984.0,
+          "price": 3.38,
+          "value": 54025.92,
+          "remaining_shares": 486144.0,
+          "planned": false,
+          "fact": "Form 4 reports 15,984 shares, code F, on 2026-09-08. Reported price $3.38 per share.",
+          "footnotes": [
+            "Shares reported were withheld to satisfy tax withholding obligations with respect to the vesting of a grant of restricted stock originally made on September 5, 2024."
+          ],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/910638/000162828026061400/xslF345X06/wk-form4_1789074122.xml",
+          "raw_path": "0001628280-26-061400.xml",
+          "sha256": "947afd4b80ac30be58cf4b77ac2f71776b622c325df1453f2277d0a7b7b7a018",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        }
+      ],
+      "liquidity_total": 0,
+      "signal_type": "Monitor",
+      "source_classes": [
+        "FORM4"
+      ],
+      "convergence": 0
+    },
+    {
+      "id": "person-1105964-issuer-910638",
+      "person_cik": "0001105964",
+      "issuer_cik": "0000910638",
+      "person_name": "HULL CHARLES W",
+      "role": "EVP & Chief Technology Officer",
+      "company": "3D SYSTEMS CORP",
+      "location": {
+        "city": "ROCK HILL",
+        "state": "SC",
+        "kind": "Reporting-person mailing city; residence UNKNOWN",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/910638/000162828026061399/xslF345X06/wk-form4_1789074087.xml",
+        "assertion_class": "VERIFIED PUBLIC FACT",
+        "distance_miles": 157.67,
+        "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
+        "geo_class": "CALCULATED FROM VERIFIED FACT",
+        "geo_method": "Haversine between Census place representative coordinates; mailing city only, not precise location",
+        "place_geoid": "4561405"
+      },
+      "events": [
+        {
+          "id": "0001628280-26-061399:0",
+          "accession": "0001628280-26-061399",
+          "row": 0,
+          "date": "2026-09-08",
+          "filed_date": "2026-09-10",
+          "code": "F",
+          "direction": "D",
+          "classification": "TAX_WITHHOLDING",
+          "shares": 4943.0,
+          "price": 3.38,
+          "value": 16707.34,
+          "remaining_shares": 181622.0,
+          "planned": false,
+          "fact": "Form 4 reports 4,943 shares, code F, on 2026-09-08. Reported price $3.38 per share.",
+          "footnotes": [
+            "Shares reported were withheld to satisfy tax withholding obligations with respect to the vesting of a grant of restricted stock originally made on September 5, 2024."
+          ],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/910638/000162828026061399/xslF345X06/wk-form4_1789074087.xml",
+          "raw_path": "0001628280-26-061399.xml",
+          "sha256": "fe37bb1418192fddb0818c36d17480c400fc5e0080f9db1d7e6974d3889d3f8f",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        }
+      ],
+      "liquidity_total": 0,
+      "signal_type": "Monitor",
+      "source_classes": [
+        "FORM4"
+      ],
+      "convergence": 0
+    }
+  ]
+}
