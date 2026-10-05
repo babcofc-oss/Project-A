@@ -29,3 +29,12 @@ design-reference.html is the original v2 visual reference with explicitly labele
 ## Pilot limitations
 
 Data is a reviewed snapshot, not a live stream. Officer roles must be reconfirmed before use. Current advisor relationships, willingness to engage, contact provenance, net proceeds and available funds are UNKNOWN. 22 people have verified sale signals; qualification into high-quality advisor opportunities and recruitment of 3–5 advisor testers remain outstanding.
+
+
+## Pilot review collection
+
+Generate a prospect brief, rate its usefulness, and export the review text. The Pilot Review Desk accepts exported Project A JSON from other browsers. Imports validate the product/schema, person and filing identifiers, rating, date, score and field limits before changing session state. Duplicate reviews from the same anonymous browser/person keep the latest timestamp; different browser IDs remain separate. Imported names and companies are resolved from the catalog, never treated as verified facts supplied by a tester. Notes render as text. Feedback does not change evidence or scoring.
+
+Reviewers are anonymous browser IDs, not authenticated advisors. No network collection or cross-device sync exists. Reviews and watchlists use browser storage; users must export reviews for backup or transfer. Avoid private client information. A prospect's shareable link opens its public catalog record with all-territory/audit controls so an existing filter cannot hide it. Unknown person IDs show an explicit notice and the default territory.
+
+Run `node test_pilot.js` to check import validation and merge semantics, alongside `node test_scoring.js` and `python3 -m unittest test_integrity test_transitions`.

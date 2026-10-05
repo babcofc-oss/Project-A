@@ -3,7 +3,8 @@ const $=id=>document.getElementById(id);
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const displayName=p=>{const words=p.person_name.replaceAll(',',' ').trim().split(/\s+/);if(words.length<2)return p.person_name;const title=w=>/^(ii|iii|iv)$/i.test(w)?w.toUpperCase():w.length===1?w.toUpperCase()+'.':w[0].toUpperCase()+w.slice(1).toLowerCase();const suffixIndex=words.findIndex(w=>/^(jr\.?|sr\.?|ii|iii|iv)$/i.test(w));const suffix=suffixIndex>=0?words.splice(suffixIndex,1)[0]:null;return [...words.slice(1),words[0],...(suffix?[suffix]:[])].map(title).join(' ');};
 const money=n=>n===null||n===undefined?'UNKNOWN':new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',minimumFractionDigits:2,maximumFractionDigits:2}).format(n);
-let feedback=[];
+let feedback=[],reviewerId;
+try{reviewerId=localStorage.getItem('project-a-reviewer-v1');if(!/^[a-zA-Z0-9_-]{8,80}$/.test(reviewerId||'')){reviewerId=crypto.randomUUID();localStorage.setItem('project-a-reviewer-v1',reviewerId);}}catch{reviewerId=crypto.randomUUID();}
 try{const rawFeedback=JSON.parse(localStorage.getItem('project-a-pilot-feedback-v1')||'[]');if(Array.isArray(rawFeedback))feedback=rawFeedback.filter(x=>x&&typeof x.person_id==='string'&&['Useful','Needs evidence','Not useful'].includes(x.rating)&&typeof x.note==='string').slice(-1000);}catch{}
 let catalog=null, people=[], selected=null, watchOnly=false, saved=new Set(), storageOK=true;
 try{const raw=JSON.parse(localStorage.getItem('project-a-watchlist-v1')||'[]');if(Array.isArray(raw))saved=new Set(raw.filter(x=>typeof x==='string'));}catch{storageOK=false;}
@@ -59,15 +60,18 @@ function renderDetail(){
   const b=ProjectIntelligence.brief(p,c);$('nextAction').textContent=b.next;
   $('eventCount').textContent=`${p.events.length} DEDUPLICATED ROWS`;
   $('eventTimeline').innerHTML=p.events.map(e=>`<article><h3>${esc(e.date)} · ${e.source_class==='8K'?'Form 8-K':'Code '+esc(e.code)} · ${esc(e.classification.replaceAll('_',' '))}</h3><p><span class="tag">VERIFIED PUBLIC FACT</span> ${esc(e.fact)}</p><p>${e.classification==='LIQUIDITY'?`CALCULATED FROM VERIFIED FACT · ${money(e.value)} gross transaction value.`:e.source_class==='8K'?esc(e.status)+' '+esc(e.amount_context||''):'Excluded from ordinary sale / liquidity total.'} ${e.planned?'Disclosed 10b5-1 context.':''}</p>${(e.footnotes||[]).map(f=>`<p class="status">Filing footnote: ${esc(f)}</p>`).join('')}<a class="source" href="${esc(e.source_url)}" target="_blank" rel="noopener noreferrer">Primary source · ${esc(e.accession)} ↗</a></article>`).join('');
+  const share=new URL(location.pathname,location.origin);share.searchParams.set('person',p.id);
+  $('saveStatus').innerHTML=esc($('saveStatus').textContent)+` <a class="source" href="${esc(share.href)}" target="_blank" rel="noopener">Open shareable prospect view ↗</a>`;
   $('brief').hidden=true;
 }
 function generateBrief(){
   if(!selected)return;
   const b=ProjectIntelligence.brief(selected,selected.computed);
   $('brief').innerHTML=`<h4>Advisor Brief · ${esc(displayName(selected))}</h4>`+[['Who',b.who],['What / when',b.happened],['Publicly associated amount',b.amount],['Verified',b.verified],['Inference / uncertainty',b.inferred],['Planned-sale context',b.planned],['Planning themes',b.themes.join(' · ')],['Before outreach',b.diligence.join(' ')],['Next research action',b.next]].map(([key,value])=>`<p><b>${esc(key)}:</b> ${esc(value)}</p>`).join('');
-  $('brief').innerHTML+=`<div class="actions"><button class="cta secondary" id="downloadBrief">Export Advisor Brief</button></div><h4>Pilot feedback</h4><p class="note">Does this evidence help you prioritize a legitimate planning conversation? Feedback is saved on this browser; export it to share with Project A.</p><label class="note">Usefulness<select id="feedbackRating" aria-label="Opportunity usefulness"><option>Useful</option><option>Needs evidence</option><option>Not useful</option></select></label><label class="note">What would make this more useful?<textarea id="feedbackNote" aria-label="Pilot feedback note" maxlength="1000" rows="3" placeholder="Evidence gaps, relevance or planning themes…"></textarea></label><div class="actions"><button class="cta secondary" id="saveFeedback">Save feedback</button><button class="cta secondary" id="exportFeedback">Export pilot feedback</button></div><p class="note" id="feedbackStatus" role="status"></p>`;
+  $('brief').innerHTML+=`<div class="actions"><button class="cta secondary" id="downloadBrief">Export Advisor Brief</button></div><h4>Pilot feedback</h4><p class="note">Does this evidence help you prioritize a legitimate planning conversation? Feedback is saved on this browser; export it to share with Project A.</p><label class="note">Usefulness<select id="feedbackRating" aria-label="Opportunity usefulness"><option>Useful</option><option>Needs evidence</option><option>Not useful</option></select></label><label class="note">What would make this more useful? Avoid private client details.<textarea id="feedbackNote" aria-label="Pilot feedback note" maxlength="1000" rows="3" placeholder="Evidence gaps, relevance or planning themes…"></textarea></label><div class="actions"><button class="cta secondary" id="saveFeedback">Save feedback</button><button class="cta secondary" id="exportFeedback">Export pilot feedback</button></div><p class="note" id="feedbackStatus" role="status"></p>`;
   $('downloadBrief').onclick=()=>downloadFile(`project-a-${selected.person_cik}-advisor-brief.txt`,$('brief').innerText.split('Export Advisor Brief')[0]+'\nEvidence\n'+[...new Map(selected.events.map(e=>[e.accession,e.source_url])).values()].join('\n')+'\nScoring version: '+selected.computed.version+'\nGenerated: '+new Date().toISOString()+'\nPublic-data research; gross transaction value is not available cash, net worth or investable assets.','text/plain');
-  $('saveFeedback').onclick=saveFeedback;$('exportFeedback').onclick=()=>downloadFile('project-a-pilot-feedback.json',JSON.stringify({product:'Project A',exported_at:new Date().toISOString(),feedback},null,2),'application/json');
+  $('saveFeedback').onclick=saveFeedback;$('exportFeedback').onclick=()=>downloadFile('project-a-pilot-feedback.json',feedbackExport(),'application/json');
+  const previous=feedback.find(r=>r.person_id===selected.id&&r.reviewer_id===reviewerId);if(previous){$('feedbackRating').value=previous.rating;$('feedbackNote').value=previous.note;$('feedbackStatus').textContent='Your saved review is loaded. Save to update it.';}
   $('brief').hidden=false;$('brief').scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 function downloadFile(name,text,type){
@@ -80,10 +84,30 @@ function downloadFile(name,text,type){
 
 function saveFeedback(){
   if(!selected)return;
-  const item={person_id:selected.id,person_name:displayName(selected),company:selected.company,rating:$('feedbackRating').value,note:$('feedbackNote').value.trim(),recorded_at:new Date().toISOString(),score:selected.computed.value,scoring_version:selected.computed.version,source_accessions:[...new Set(selected.events.map(e=>e.accession))]};
-  feedback=feedback.filter(x=>x.person_id!==selected.id);feedback.push(item);
+  const item={reviewer_id:reviewerId,person_id:selected.id,person_name:displayName(selected),company:selected.company,rating:$('feedbackRating').value,note:$('feedbackNote').value.trim(),recorded_at:new Date().toISOString(),score:selected.computed.value,scoring_version:selected.computed.version,source_accessions:[...new Set(selected.events.map(e=>e.accession))]};
+  try{feedback=ProjectPilot.merge(feedback,[item]);}catch(error){$('feedbackStatus').textContent=error.message;return;}
+  renderPilot();
   try{localStorage.setItem('project-a-pilot-feedback-v1',JSON.stringify(feedback));$('feedbackStatus').textContent='Feedback saved on this browser. Export to share your review.';}catch{$('feedbackStatus').textContent='Browser storage unavailable. Feedback is held for this session; export before closing.';}
 }
+function feedbackExport(){return JSON.stringify({product:'Project A',schema_version:2,exported_at:new Date().toISOString(),feedback},null,2);}
+function renderPilot(){
+  const known=new Set(people.map(p=>p.id));
+  const visible=feedback.filter(r=>known.has(r.person_id));
+  $('pilotSummary').textContent=`${visible.length} reviews · ${new Set(visible.map(r=>r.reviewer_id||'legacy-unknown')).size} anonymous browser IDs · `+ProjectPilot.ratings.map(r=>`${visible.filter(x=>x.rating===r).length} ${r}`).join(' · ')+'. Browser IDs are not verified advisor identities.';
+  $('pilotReviews').innerHTML=visible.map(r=>{const p=people.find(p=>p.id===r.person_id);return `<article class="evidence"><b>${esc(displayName(p))} · ${esc(r.rating)}</b><p>${esc(r.note||'No note provided.')}</p><p class="note">ADVISOR OPINION · ${esc(r.recorded_at)} · reviewer ${esc((r.reviewer_id||'legacy-unknown').slice(0,8))} · score at review ${esc(r.score)} / ${esc(r.scoring_version)}</p><button class="cta secondary" data-review-person="${esc(r.person_id)}">Open reviewed prospect</button></article>`;}).join('')||'<p class="empty">No advisor reviews on this browser yet. Generate an advisor brief to review an opportunity.</p>';
+}
+function importReviews(){
+  try{
+    const text=$('importFeedbackText').value;if(text.length>1500000)throw new Error('Export exceeds the import size limit.');
+    const incoming=ProjectPilot.validate(JSON.parse(text),people),merged=ProjectPilot.merge(feedback,incoming),added=merged.length-feedback.length;
+    feedback=merged;renderPilot();
+    try{localStorage.setItem('project-a-pilot-feedback-v1',JSON.stringify(feedback));$('pilotStatus').textContent=`Import complete: ${incoming.length} valid reviews checked, ${added} new reviews added. Duplicate or older reviews do not overwrite newer reviews. Saved on this browser.`;}catch{$('pilotStatus').textContent='Import complete for this session. Browser storage unavailable; export before closing.';}
+  }catch(error){$('pilotStatus').textContent=`Import rejected: ${error.message}`;}
+}
+$('importFeedback').onclick=importReviews;
+$('exportAllFeedback').onclick=()=>{$('pilotExport').hidden=false;$('pilotExportText').value=feedbackExport();$('pilotStatus').textContent='Export ready. Select the text and copy it to back up or share your reviews.';};
+$('selectPilotExport').onclick=()=>{$('pilotExportText').focus();$('pilotExportText').select();$('pilotStatus').textContent='Review export selected. Use Copy or Share in your browser.';};
+document.addEventListener('click',event=>{const b=event.target.closest('[data-review-person]');if(b){watchOnly=false;$('search').value='';$('territory').value='all';$('eventType').value='all';$('minimumScore').value='0';choose(b.dataset.reviewPerson);$('selected').scrollIntoView({behavior:'smooth'});}});
 function save(){if(!selected)return; saved.has(selected.id)?saved.delete(selected.id):saved.add(selected.id);try{localStorage.setItem('project-a-watchlist-v1',JSON.stringify([...saved]));}catch{storageOK=false;}render();}
 function reset(){watchOnly=false;$('search').value='';$('territory').value='50';$('eventType').value='Planning';$('minimumScore').value='0';render();}
 document.addEventListener('click',event=>{
@@ -111,7 +135,11 @@ async function load(){
     $('systemStatus').textContent=`Validated SEC snapshot · ${people.length} people`;
     $('coverage').textContent=`${catalog.validated_filings} Form 4 + ${catalog.transition_filings||0} reviewed 8-K filings · filings since ${catalog.coverage_start} · ${people.filter(p=>p.computed.sales).length} people with sale signals · ${catalog.issuer_count||3} issuers`;
     $('feedDate').textContent=`Validated ${new Date(catalog.validated_at).toLocaleString()}. Reviewed snapshot; not a live stream. ${catalog.errors.length+(catalog.transition_errors||[]).length} filing(s) withheld after ingestion errors.`;
-    render();
+    try{feedback=ProjectPilot.validate({product:'Project A',feedback},people);}catch{feedback=[];$('pilotStatus').textContent='Saved reviews could not be validated against this catalog. Original browser storage is unchanged; import a valid export to recover reviews.';}
+    const linkedId=new URLSearchParams(location.search).get('person');
+    if(linkedId){const linked=people.find(p=>p.id===linkedId);if(linked){selected=linked;$('territory').value='all';$('eventType').value='all';}else{$('error').hidden=false;$('error').textContent='The linked prospect is unavailable in this evidence snapshot. Showing the current territory instead.';}}
+    render();renderPilot();
+    if(linkedId&&selected?.id===linkedId)$('selected').scrollIntoView({block:'start'});
   }catch(error){catalog=null;people=[];selected=null;$('detail').hidden=true;$('error').hidden=false;$('error').textContent=`Could not load evidence: ${error.message}. No opportunities or scores are asserted. Reload to retry.`;$('leads').innerHTML='<p class="empty">Evidence unavailable. No records released.</p>';$('coverage').textContent='Source coverage unavailable';$('systemStatus').textContent='Evidence unavailable';for(const id of ['mCount','mValue','mHigh','mFresh'])$(id).textContent='UNKNOWN';}
 }
 load();
