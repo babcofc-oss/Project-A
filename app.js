@@ -1,7 +1,7 @@
 'use strict';
 const $=id=>document.getElementById(id);
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const displayName=p=>{const words=p.person_name.replaceAll(',',' ').trim().split(/\s+/);if(words.length<2)return p.person_name;const title=w=>w.length===1?w.toUpperCase()+'.':w[0].toUpperCase()+w.slice(1).toLowerCase();return [...words.slice(1),words[0]].map(title).join(' ');};
+const displayName=p=>{const words=p.person_name.replaceAll(',',' ').trim().split(/\s+/);if(words.length<2)return p.person_name;const title=w=>w.length===1?w.toUpperCase()+'.':w[0].toUpperCase()+w.slice(1).toLowerCase();const suffix=/^(jr\.?|sr\.?|ii|iii|iv)$/i.test(words.at(-1))?words.pop():null;return [...words.slice(1),words[0],...(suffix?[suffix]:[])].map(title).join(' ');};
 const money=n=>n===null||n===undefined?'UNKNOWN':new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',minimumFractionDigits:2,maximumFractionDigits:2}).format(n);
 let catalog=null, people=[], selected=null, watchOnly=false, saved=new Set(), storageOK=true;
 try{const raw=JSON.parse(localStorage.getItem('project-a-watchlist-v1')||'[]');if(Array.isArray(raw))saved=new Set(raw.filter(x=>typeof x==='string'));}catch{storageOK=false;}
@@ -20,6 +20,7 @@ function rows(){
 }
 function choose(id,scroll=false){selected=people.find(p=>p.id===id)||null;render();if(scroll&&selected&&innerWidth<850)$('selected').scrollIntoView({behavior:'smooth',block:'start'});}
 function render(){
+  if(!catalog)return;
   const visible=rows();
   if(!visible.some(p=>p.id===selected?.id))selected=visible[0]||null;
   $('mCount').textContent=visible.length;
@@ -87,9 +88,9 @@ async function load(){
     if(!Array.isArray(catalog.records))throw new Error('Evidence catalog has an invalid schema');
     people=catalog.records.map(p=>({...p,computed:ProjectIntelligence.score(p)}));
     $('systemStatus').textContent=`Validated SEC snapshot · ${people.length} people`;
-    $('coverage').textContent=`${catalog.validated_filings} validated filings · filings since ${catalog.coverage_start} · ${people.filter(p=>p.computed.sales).length} people with sale signals · 3 issuers`;
+    $('coverage').textContent=`${catalog.validated_filings} validated filings · filings since ${catalog.coverage_start} · ${people.filter(p=>p.computed.sales).length} people with sale signals · ${catalog.issuer_count||3} issuers`;
     $('feedDate').textContent=`Validated ${new Date(catalog.validated_at).toLocaleString()}. Reviewed snapshot; not a live stream. ${catalog.errors.length} filing(s) withheld after ingestion errors.`;
     render();
-  }catch(error){people=[];selected=null;$('detail').hidden=true;$('error').hidden=false;$('error').textContent=`Could not load evidence: ${error.message}. No opportunities or scores are asserted. Reload to retry.`;$('leads').innerHTML='<p class="empty">Evidence unavailable. No records released.</p>';$('coverage').textContent='Source coverage unavailable';$('systemStatus').textContent='Evidence unavailable';for(const id of ['mCount','mValue','mHigh','mFresh'])$(id).textContent='UNKNOWN';}
+  }catch(error){catalog=null;people=[];selected=null;$('detail').hidden=true;$('error').hidden=false;$('error').textContent=`Could not load evidence: ${error.message}. No opportunities or scores are asserted. Reload to retry.`;$('leads').innerHTML='<p class="empty">Evidence unavailable. No records released.</p>';$('coverage').textContent='Source coverage unavailable';$('systemStatus').textContent='Evidence unavailable';for(const id of ['mCount','mValue','mHigh','mFresh'])$(id).textContent='UNKNOWN';}
 }
 load();

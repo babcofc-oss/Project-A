@@ -12,7 +12,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 INPUTS = ROOT / '.ingestion-cache'
-ISSUERS = ['1653477', '1280058', '910638']
+ISSUERS = ['1653477', '1280058', '910638', '918965', '857855', '1090009', '932781']
 UA = os.getenv('PROJECT_A_USER_AGENT', 'Project A public financial disclosure research Briton Barrett')
 LOCK = threading.Lock()
 LAST = 0
@@ -141,7 +141,7 @@ def run():
     for person in records: enrich(person['location'], ROOT / 'geography.json')
     records.sort(key=lambda r:r['liquidity_total'], reverse=True)
     result = {'version':'project-a-10', 'validated_at':datetime.now(timezone.utc).isoformat(), 'coverage_start':'2026-06-01',
-              'source':'SEC EDGAR', 'refresh':'Reviewed repository snapshot; not a live stream', 'scoring_version':'money-in-motion-v2',
+              'source':'SEC EDGAR', 'issuer_count':len(ISSUERS), 'refresh':'Reviewed repository snapshot; not a live stream', 'scoring_version':'money-in-motion-v2',
               'discovered_filings':len(rows), 'validated_filings':len(rows)-len(errors), 'errors':errors,
               'records':records}
     if not records: raise RuntimeError('No validated records; retaining previous catalog')

@@ -10,7 +10,7 @@ Static catalog and immutable primary evidence are versioned in Git; no ephemeral
 
 ## Evidence coverage
 
-32 SEC Form 4 filings from three issuers, filed June–October 2026, independently fetched and parsed. 22 person/issuer identities; nine people with S-disposition sale events, seven in the Charleston city-radius territory. Other people are monitoring/classification examples, not fabricated leads. No independent-source convergence yet.
+111 SEC Form 4 filings from seven issuers, filed June–October 2026, independently fetched and parsed. 68 person/issuer identities; 22 people with S-disposition sale events, seven in the Charleston city-radius territory. Other people are monitoring/classification examples, not fabricated leads. No independent-source convergence yet.
 
 Reporting-person CIK and issuer CIK remain separate. Repeated filings cluster by both identifiers. Distinct transaction rows retain accession + row identifiers. F/A/M are excluded from ordinary sale totals. Rule 10b5-1 detected from the checkbox and footnotes. Source XML fingerprints are retained. Gross reported shares × price is not net worth, net proceeds or available funds.
 
@@ -28,4 +28,4 @@ design-reference.html is the original v2 visual reference with explicitly labele
 
 ## Pilot limitations
 
-Data is a reviewed snapshot, not a live stream. Officer roles must be reconfirmed before use. Current advisor relationships, willingness to engage, contact provenance, net proceeds and available funds are UNKNOWN. The commercial goal of 20–25 qualified opportunities and 3–5 advisor testers is not yet achieved.
+Data is a reviewed snapshot, not a live stream. Officer roles must be reconfirmed before use. Current advisor relationships, willingness to engage, contact provenance, net proceeds and available funds are UNKNOWN. 22 people have verified sale signals; qualification into high-quality advisor opportunities and recruitment of 3–5 advisor testers remain outstanding.
