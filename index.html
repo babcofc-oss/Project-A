@@ -1,0 +1,119 @@
+<!doctype html><html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Project A — Wealth Intelligence</title><style>
+:root{--bg:#07110f;--panel:#0d1a17;--panel2:#10221d;--line:#20352f;--text:#edf7f2;--muted:#8ca79d;--green:#57e3a0;--gold:#d6b56c;--red:#ff7d73;--blue:#71a9ff}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 70% -10%,#163329 0,#07110f 42%);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif}.shell{display:grid;grid-template-columns:220px 1fr;min-height:100vh}.side{border-right:1px solid var(--line);padding:24px 16px;background:#08130fdd;position:sticky;top:0;height:100vh}.brand{font-weight:800;letter-spacing:.14em;font-size:15px}.brand span{color:var(--green)}.sub{color:var(--muted);font-size:11px;margin-top:5px}.nav{margin-top:34px;display:grid;gap:7px}.nav button{border:0;text-align:left;background:transparent;color:#9bb0a8;padding:11px 12px;border-radius:9px;font-weight:600}.nav button.active,.nav button:hover{background:#14251f;color:white}.main{padding:28px 30px;max-width:1500px;width:100%;margin:auto}.top{display:flex;justify-content:space-between;gap:18px;align-items:center}.eyebrow{color:var(--green);font-size:11px;font-weight:800;letter-spacing:.16em}.h1{font-size:30px;font-weight:750;margin-top:4px}.search{background:var(--panel);border:1px solid var(--line);padding:11px 14px;border-radius:10px;color:#b9cbc4;min-width:290px;outline:none}.search:focus{border-color:#4b9d78}.lead.active{background:#10231d;box-shadow:inset 3px 0 var(--green)}.signal{cursor:pointer}.signal:hover{background:#0e1d19}.drawer{display:none;margin-top:12px;padding:12px;border:1px solid var(--line);border-radius:9px;background:#08130f}.drawer.open{display:block}.watchbadge{color:var(--gold);font-size:10px;margin-left:7px}.territory{font-size:10px;border:1px solid var(--line);background:#0b1714;color:#9fb4ac;border-radius:8px;padding:7px 9px}.verified{border-left-color:var(--green)}.source a{color:var(--green);text-decoration:none}.source a:hover{text-decoration:underline}.systemline{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:8px}.statusdot{width:7px;height:7px;border-radius:50%;background:var(--green);display:inline-block}.loading{padding:18px;color:#90a79e}.error{color:#f3a7a7}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:24px 0}.metric,.card{background:linear-gradient(180deg,#0e1c18,#0a1613);border:1px solid var(--line);border-radius:13px}.metric{padding:16px}.metric b{font-size:24px}.metric small{display:block;color:var(--muted);margin-top:5px}.grid{display:grid;grid-template-columns:1.3fr .8fr;gap:14px}.card{padding:18px}.cardhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:15px}.cardhead b{font-size:14px}.pill{font-size:10px;border:1px solid #2d5145;border-radius:99px;padding:5px 8px;color:var(--green)}.lead{display:grid;grid-template-columns:58px 1fr auto;gap:13px;padding:14px 4px;border-top:1px solid #182b25;cursor:pointer}.lead:hover{background:#10201b}.score{height:48px;width:48px;border-radius:50%;border:3px solid var(--green);display:grid;place-items:center;font-weight:800}.lead h3{font-size:14px;margin:0 0 5px}.lead p{margin:0;color:var(--muted);font-size:12px;line-height:1.5}.money{font-weight:800;text-align:right}.money small{display:block;color:var(--muted);font-weight:500;margin-top:5px}.signal{display:flex;gap:10px;padding:11px 0;border-top:1px solid #182b25}.dot{width:8px;height:8px;border-radius:50%;background:var(--green);margin-top:5px;box-shadow:0 0 12px var(--green)}.signal b{font-size:12px}.signal p{font-size:11px;color:var(--muted);margin:3px 0 0;line-height:1.4}.detail{margin-top:14px;display:grid;grid-template-columns:1fr 1fr;gap:14px}.hero{grid-column:1/-1;background:linear-gradient(135deg,#10251e,#0b1714);border:1px solid #29453b;border-radius:15px;padding:22px;display:grid;grid-template-columns:1fr auto;gap:18px}.hero h2{margin:5px 0 6px;font-size:22px}.hero p{color:#a5bbb2;max-width:700px;line-height:1.6;font-size:13px}.bigscore{text-align:center}.bigscore strong{font-size:42px;color:var(--green)}.bigscore small{display:block;color:var(--muted)}.tag{display:inline-block;font-size:10px;padding:5px 7px;border-radius:5px;background:#153329;color:#79eab4;margin-right:5px}.rows{display:grid;gap:9px}.row{display:flex;justify-content:space-between;font-size:12px;border-bottom:1px solid #182b25;padding-bottom:9px}.row span{color:var(--muted)}.evidence{border-left:2px solid var(--gold);padding:8px 11px;margin:9px 0;background:#171910}.evidence b{font-size:11px}.evidence p{font-size:11px;color:var(--muted);line-height:1.5;margin:4px 0}.cta{border:0;background:var(--green);color:#052016;font-weight:800;padding:11px 15px;border-radius:9px;cursor:pointer}.cta.secondary{background:transparent;color:var(--text);border:1px solid var(--line);margin-left:7px}.brief{margin-top:14px;padding:14px;border:1px solid var(--line);border-radius:10px;background:#08130f;display:none}.brief h4{margin:0 0 8px}.brief p{font-size:12px;color:#a5bbb2;line-height:1.55}.filters{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 14px}.filter{font-size:10px;border:1px solid var(--line);background:#0b1714;color:#9fb4ac;border-radius:99px;padding:7px 10px;cursor:pointer}.filter.on{border-color:#4b9d78;color:var(--green);background:#10271f}.bar{height:6px;background:#172923;border-radius:9px;overflow:hidden;margin-top:7px}.bar i{display:block;height:100%;background:var(--green)}.note{font-size:10px;color:#718a81;margin-top:18px}@media(max-width:850px){.shell{display:block}.side{height:auto;position:relative;border-right:0;border-bottom:1px solid var(--line);padding:15px}.nav{display:flex;overflow:auto;margin-top:14px}.main{padding:20px 14px}.top{align-items:flex-start}.search{display:none}.metrics{grid-template-columns:1fr 1fr}.grid,.detail{grid-template-columns:1fr}.hero{grid-template-columns:1fr}.money{font-size:12px}.lead{grid-template-columns:52px 1fr}.lead .money{grid-column:2;text-align:left}.h1{font-size:24px}}
+</style></head><body><div class='shell'><aside class='side'><div class='brand'>PROJECT <span>A</span></div><div class='sub'>WEALTH INTELLIGENCE</div><div class='nav'><button class='active'>Radar</button><button>Prospects</button><button>Signals</button><button>Territories</button><button onclick="document.getElementById('saved').scrollIntoView({behavior:'smooth'})">Watchlist</button><button>Evidence</button></div></aside><main class='main'><div class='top'><div><div class='eyebrow'>MONEY IN MOTION</div><div class='h1'>Opportunity Radar</div></div><input id='search' class='search' placeholder='⌕ Search person, company, event, territory…'></div><div class='metrics'><div class='metric'><b id='mCount'>4</b><small>Visible opportunities</small></div><div class='metric'><b id='mValue'>$0.96M</b><small>Disclosed transaction value</small></div><div class='metric'><b id='mHigh'>1</b><small>High-priority signals</small></div><div class='metric'><b id='mFresh'>2</b><small>Recent public events</small></div></div><div class='grid'><section class='card'><div class='cardhead'><b>Highest Priority</b><select id='territory' class='territory'><option value='50'>CHARLESTON • 50 MI</option><option value='25'>CHARLESTON • 25 MI</option><option value='10'>CHARLESTON • 10 MI</option><option value='999'>ALL TERRITORIES</option></select></div><div class='filters'><button class='filter on' data-filter='All'>All</button><button class='filter' data-filter='Liquidity'>Liquidity</button><button class='filter' data-filter='Insider'>Insider</button><button class='filter' data-filter='Succession'>Succession</button><button class='filter' data-filter='Executive'>Executive</button><button class='filter' id='watchFilter' data-filter='Watchlist'>★ Watchlist</button></div><div id='leads'></div></section><section class='card'><div class='cardhead'><b>Live Signal Feed</b><span class='pill'>PUBLIC SOURCES</span></div><div id='signalFeed'></div></section></div><div class='detail'><section class='hero'><div><div class='eyebrow'>SELECTED OPPORTUNITY</div><h2 id='name'>Alex Mercer • Founder, Harbor Industrial</h2><div id='tags'></div><p id='why'>A recent ownership-change event suggests meaningful liquidity and a near-term need for diversification, tax coordination and estate-planning conversations. Project A separates observed public facts from modeled estimates.</p><button class='cta' onclick="generateBrief()">Generate Advisor Brief</button> <button class='cta secondary' onclick="saveLead()">Save Prospect</button></div><div class='bigscore'><strong id='score'>94</strong><small>Opportunity Score</small></div></section><section class='card'><div class='cardhead'><b>Opportunity Intelligence</b></div><div class='rows'><div class='row'><span>Estimated assets in motion</span><b id='range'>$6M–$11M</b></div><div class='row'><span>Signal recency</span><b id='recency'>—</b></div><div class='row'><span>Evidence strength</span><b id='strength'>—</b></div><div class='row'><span>Advisor relevance</span><b id='relevance'>—</b></div><div class='row'><span>Primary need</span><b id='primaryNeed'>—</b></div><div class='row'><span>Secondary need</span><b id='secondaryNeed'>—</b></div></div><div class='brief' id='brief'><h4>Advisor Brief</h4><p><b>Why now:</b> A recent public event indicates a potential change in financial circumstances. Verify suitability and facts before outreach.</p><p><b>Conversation thesis:</b> Lead with post-event planning, diversification and coordination rather than the transaction itself. Do not state estimated wealth as fact.</p><p><b>Required diligence:</b> Confirm event, identity, geography and source dates before use.</p></div></section><section class='card'><div class='cardhead'><b>Evidence Trail</b><span class='pill' id='sourceCount'>0 SOURCES</span></div><div id='evidenceTrail'></div><button class='cta secondary' style='margin-left:0;margin-top:8px' onclick='toggleEvidence()'>Evidence details</button><div class='drawer' id='evidenceDrawer'></div></section><section class='card' id='saved'><div class='cardhead'><b>Score Transparency</b><span class='pill'>EXPLAINABLE</span></div><div class='rows' id='scoreRows'></div><p class='note'>The score ranks prospecting relevance; it does not represent creditworthiness, investment performance, or a verified net worth.</p></section></div><div class='note'>MVP • Opportunities shown here are backed by retained source evidence. Disclosed transaction value is not net worth, investable assets, or proof that proceeds remain available.</div></main></div><script>
+let opportunities=[],selected=null,activeFilter='All',health=null;
+const $=id=>document.getElementById(id);
+
+function money(v){
+ if(v===null||v===undefined)return 'UNKNOWN';
+ if(v>=1000000)return '$'+(v/1000000).toFixed(v%1000000?2:0).replace(/0+$/,'').replace(/\.$/,'')+'M';
+ return '$'+Math.round(v/1000)+'K';
+}
+function esc(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+function visible(){
+ const q=($('search').value||'').toLowerCase(), radius=+$('territory').value;
+ return opportunities.filter(x=>(radius>=999||x.distance_miles==null||x.distance_miles<=radius)
+   && (x.person_name+' '+x.company+' '+x.event_summary+' '+x.category).toLowerCase().includes(q)
+   && (activeFilter==='All'||(activeFilter==='Watchlist'?x.watchlisted:x.category===activeFilter)));
+}
+function renderLeads(){
+ const xs=visible();
+ $('leads').innerHTML=xs.map(x=>`<div class='lead ${selected&&selected.id===x.id?'active':''}' onclick="selectLead(${x.id})">
+  <div class='score'>${x.score}</div>
+  <div><h3>${esc(x.person_name)}${x.watchlisted?"<span class='watchbadge'>★ WATCHING</span>":''}</h3>
+  <p>${esc(x.role||'')} • ${esc(x.company)}<br>${esc(x.event_summary)}${x.distance_miles!=null?' • '+Math.round(x.distance_miles)+' mi':''}</p></div>
+  <div class='money'>${x.disclosed_value?money(x.disclosed_value):'SOURCE EVENT'}<small>${x.disclosed_value?'disclosed/calculated':'no value asserted'}</small></div>
+ </div>`).join('')||"<p class='note'>No opportunities match these controls.</p>";
+ $('mCount').textContent=xs.length;
+ const disclosed=xs.reduce((a,x)=>a+(x.disclosed_value||0),0); $('mValue').textContent=money(disclosed);
+ $('mHigh').textContent=xs.filter(x=>x.score>=80).length;
+ $('mFresh').textContent=xs.filter(x=>x.recency_days!=null&&x.recency_days<=90).length;
+}
+function renderSignals(){
+ const xs=visible().slice().sort((a,b)=>b.score-a.score);
+ $('signalFeed').innerHTML=xs.map(x=>`<div class='signal' onclick="selectLead(${x.id})">
+  <i class='dot'></i><div><b>${esc(x.event_summary)}</b><p>${esc(x.person_name)} • ${esc(x.company)} • ${x.event_count} retained event${x.event_count===1?'':'s'}</p></div></div>`).join('');
+}
+function scoreRows(x){
+ const parts=x.score_components||{};
+ const rows=[
+  ['Event magnitude',parts.event_magnitude||0,25],
+  ['Recency',parts.recency||0,20],
+  ['Evidence quality',parts.evidence_quality||0,20],
+  ['Advisor relevance',parts.advisor_relevance||0,20],
+  ['Identity confidence',parts.identity_confidence||0,10],
+  ['Convergence',parts.convergence||0,5]
+ ];
+ return rows.map(b=>{let pct=Math.min(100,Math.round(b[1]/b[2]*100));return `<div><div class='row'><span>${b[0]}</span><b>${b[1]} / ${b[2]}</b></div><div class='bar'><i style='width:${pct}%'></i></div></div>`}).join('');
+}
+function renderDetail(){
+ if(!selected){$('name').textContent='Select an opportunity';return}
+ const x=selected;
+ $('name').textContent=`${x.person_name} • ${x.role||'Executive'}, ${x.company}`;
+ $('score').textContent=x.score;
+ $('range').textContent=x.disclosed_value?money(x.disclosed_value)+' disclosed':'UNKNOWN / not asserted';
+ $('recency').textContent=x.last_event_date||'UNKNOWN';
+ $('strength').textContent=x.evidence_quality||'UNKNOWN';
+ $('relevance').textContent=x.advisor_relevance||'UNKNOWN';
+ $('primaryNeed').textContent=x.primary_need||'UNKNOWN';
+ $('secondaryNeed').textContent=x.secondary_need||'UNKNOWN';
+ $('why').textContent=x.why_now||'No inference available.';
+ $('tags').innerHTML=(x.tags||[]).map(t=>`<span class='tag'>${esc(t)}</span>`).join('');
+ $('sourceCount').textContent=(x.evidence||[]).length+' SOURCES';
+ $('evidenceTrail').innerHTML=`<div class='evidence verified'><b>VERIFIED / CALCULATED PUBLIC FACT</b><p>${(x.verified_facts||[]).map(esc).join('<br>')}</p></div>
+ <div class='evidence'><b>PROJECT A INFERENCE</b><p>${esc(x.model_inference||'No inference asserted.')}</p></div>`;
+ $('evidenceDrawer').innerHTML=(x.evidence||[]).map(s=>`<div class='source'><b>${esc(s.label)}</b><p class='note' style='margin-top:4px'>${esc(s.summary)}</p>
+ ${s.url?`<a href="${esc(s.url)}" target="_blank" rel="noopener">Open primary source ↗</a>`:''}</div>`).join('');
+ $('scoreRows').innerHTML=scoreRows(x);
+ $('brief').style.display='none';
+}
+function selectLead(id){
+ selected=opportunities.find(x=>x.id===id)||selected;
+ renderAll();
+ if(window.innerWidth<850)$('name').scrollIntoView({behavior:'smooth',block:'center'});
+}
+function renderAll(){renderLeads();renderSignals();renderDetail()}
+async function generateBrief(){
+ if(!selected)return;
+ const r=await fetch(`/api/opportunities/${selected.id}/brief`);
+ const b=await r.json();
+ $('brief').innerHTML=`<h4>Advisor Brief • ${esc(selected.person_name)}</h4>
+ <p><b>Why now:</b> ${esc(b.why_now)}</p>
+ <p><b>Planning themes:</b> ${esc(b.planning_themes.join(', '))}</p>
+ <p><b>Missing diligence:</b> ${esc(b.missing_diligence.join('; '))}</p>
+ <p><b>Next research action:</b> ${esc(b.next_research_action)}</p>`;
+ $('brief').style.display='block';
+}
+async function saveLead(){
+ if(!selected)return;
+ const r=await fetch(`/api/watchlist/${selected.id}`,{method:'POST'});
+ const j=await r.json();
+ selected.watchlisted=j.watchlisted;
+ const o=opportunities.find(x=>x.id===selected.id); if(o)o.watchlisted=j.watchlisted;
+ renderAll();
+}
+function toggleEvidence(){$('evidenceDrawer').classList.toggle('open')}
+async function load(){
+ $('leads').innerHTML="<div class='loading'>Loading verified opportunities…</div>";
+ try{
+  const [r,h]=await Promise.all([fetch('/api/opportunities'),fetch('/api/health')]);
+  if(!r.ok)throw new Error('Opportunity API '+r.status);
+  opportunities=await r.json(); health=await h.json();
+  selected=opportunities[0]||null;
+  renderAll();
+  document.querySelector('.sub').innerHTML=`WEALTH INTELLIGENCE <span class='systemline'><i class='statusdot'></i>${esc(health.status)} • ${health.opportunities} prospects / ${health.events} events</span>`;
+ }catch(e){
+  $('leads').innerHTML=`<div class='loading error'>Could not load the Project A API: ${esc(e.message)}</div>`;
+ }
+}
+$('search').oninput=()=>{renderLeads();renderSignals()};
+$('territory').onchange=()=>{renderLeads();renderSignals()};
+document.querySelectorAll('.filter').forEach(b=>b.onclick=()=>{
+ document.querySelectorAll('.filter').forEach(x=>x.classList.remove('on'));b.classList.add('on');
+ activeFilter=b.dataset.filter;renderLeads();renderSignals()
+});
+document.querySelectorAll('.nav button').forEach(b=>b.addEventListener('click',()=>{
+ document.querySelectorAll('.nav button').forEach(x=>x.classList.remove('active'));b.classList.add('active')
+}));
+load();
+</script></body></html>
