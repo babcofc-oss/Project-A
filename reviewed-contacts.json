@@ -1,5 +1,5 @@
 {
-  "version": "professional-contacts-v1",
+  "version": "professional-contacts-v2",
   "groups": [
     {
       "issuer_cik": "0001280058",
@@ -272,6 +272,112 @@
           "target": "+19104424700",
           "anchor": "(910) 442-4700",
           "purpose": "Acquiring company\u2019s Coastal Carolinas office, not a confirmed Clear Lakes or Ken Robinson direct line. Founder current affiliation and routing UNKNOWN."
+        }
+      ]
+    },
+    {
+      "issuer_cik": "0001090009",
+      "company": "SOUTHERN FIRST BANCSHARES INC",
+      "organization": "SOUTHERN FIRST BANCSHARES INC",
+      "scope": "NAMED_PROFESSIONAL",
+      "person_ids": [
+        "person-1243370-issuer-1090009"
+      ],
+      "subject_name": "SEAVER R ARTHUR JR",
+      "identity_anchors": [
+        "Art Seaver",
+        "Chief Executive Officer",
+        "Southern First Bancshares"
+      ],
+      "reviewed_at": "2026-10-05",
+      "company_anchor": "Southern First Bancshares",
+      "source_url": "https://www.southernfirst.com/contact/find-a-banker/art-seaver",
+      "raw_path": "contact-source-person-seaver.txt",
+      "sha256": "f41bfefeda064f4eeabfb2f9d5a5618243a032ac0777b6de6daef6606f9f9e24",
+      "routes": [
+        {
+          "kind": "WEBSITE",
+          "label": "Official named professional profile",
+          "value": "https://www.southernfirst.com/contact/find-a-banker/art-seaver",
+          "target": "https://www.southernfirst.com/contact/find-a-banker/art-seaver",
+          "anchor": "Art Seaver",
+          "purpose": "Official professional biography for identity / role research. A profile is not a way to contact the person; direct contact and consent UNKNOWN."
+        },
+        {
+          "kind": "PHONE",
+          "label": "Published named business phone",
+          "value": "+1 864 679 9010",
+          "target": "+18646799010",
+          "anchor": "Call Art 864-679-9010",
+          "purpose": "Published for Art Seaver in his banking role. Availability, deliverability, relevance to advisor outreach and consent UNKNOWN."
+        },
+        {
+          "kind": "EMAIL",
+          "label": "Published named business email",
+          "value": "aseaver@southernfirst.com",
+          "target": "aseaver@southernfirst.com",
+          "anchor": "Email Art",
+          "purpose": "Published for Art Seaver in his banking role. Availability, deliverability, relevance to advisor outreach and consent UNKNOWN."
+        }
+      ]
+    },
+    {
+      "issuer_cik": "0001280058",
+      "company": "BLACKBAUD INC",
+      "organization": "BLACKBAUD INC",
+      "scope": "PROFESSIONAL_PROFILE",
+      "person_ids": [
+        "person-1601818-issuer-1280058"
+      ],
+      "subject_name": "Gregoire Kevin P.",
+      "identity_anchors": [
+        "Kevin Gregoire",
+        "Executive Vice President and Chief Operating Officer",
+        "Blackbaud"
+      ],
+      "reviewed_at": "2026-10-05",
+      "company_anchor": "Blackbaud",
+      "source_url": "https://www.blackbaud.com/company/executive-leadership/kevin-gregoire",
+      "raw_path": "contact-source-person-gregoire.txt",
+      "sha256": "8bfde1a5dbd11473a2c5236a1d7e5bb4c2ed84ee56971afc268ebde280d4e460",
+      "routes": [
+        {
+          "kind": "WEBSITE",
+          "label": "Official named professional profile",
+          "value": "https://www.blackbaud.com/company/executive-leadership/kevin-gregoire",
+          "target": "https://www.blackbaud.com/company/executive-leadership/kevin-gregoire",
+          "anchor": "Kevin Gregoire",
+          "purpose": "Official professional biography for identity / role research. A profile is not a way to contact the person; direct contact and consent UNKNOWN."
+        }
+      ]
+    },
+    {
+      "issuer_cik": "0001653477",
+      "company": "Ingevity Corp",
+      "organization": "Ingevity Corp",
+      "scope": "PROFESSIONAL_PROFILE",
+      "person_ids": [
+        "person-2017486-issuer-1653477"
+      ],
+      "subject_name": "Fisher Ryan C.",
+      "identity_anchors": [
+        "Ryan Fisher",
+        "Senior Vice President, General Counsel and Corporate Secretary",
+        "Ingevity"
+      ],
+      "reviewed_at": "2026-10-05",
+      "company_anchor": "Ingevity",
+      "source_url": "https://www.ingevity.com/about/leadership/ryan-fisher/",
+      "raw_path": "contact-source-person-fisher.txt",
+      "sha256": "3b6794a2777ceff8036055fde0e1340636a0983f80a1595a57338ce61144151f",
+      "routes": [
+        {
+          "kind": "WEBSITE",
+          "label": "Official named professional profile",
+          "value": "https://www.ingevity.com/about/leadership/ryan-fisher/",
+          "target": "https://www.ingevity.com/about/leadership/ryan-fisher/",
+          "anchor": "Ryan Fisher",
+          "purpose": "Official professional biography for identity / role research. A profile is not a way to contact the person; direct contact and consent UNKNOWN."
         }
       ]
     }

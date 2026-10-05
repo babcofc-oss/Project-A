@@ -1,6 +1,7 @@
 (function(root){
   'use strict';
   const triggers=typeof module!=='undefined'&&module.exports?require('./triggers.js'):root.ProjectTriggers;
+  const contacts=typeof module!=='undefined'&&module.exports?require('./contacts.js'):root.ProjectContacts;
   const dollars=n=>'$'+n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
   function daysAgo(value,asOf=new Date()){
     const days=Math.floor((Date.parse(asOf.toISOString().slice(0,10))-Date.parse(value))/86400000);
@@ -42,7 +43,7 @@
     themes.push(...definitions.flatMap(d=>d.themes));
     const proposed=context.filter(e=>e.source_class==='FORM144');
     return {
-      contacts:(person.contacts?.routes||[]).filter(r=>{const age=(Date.now()-Date.parse(r.reviewed_at+'T00:00:00Z'))/86400000;return age>=0&&age<91&&r.classification==='VERIFIED PUBLIC FACT';}).map(r=>`${r.organization} — ${r.label}: ${r.value}. ${r.scope}. ${r.purpose} Reviewed ${r.reviewed_at}; source ${r.source_url}.`).join(' ')+' Direct person email / phone, deliverability, current affiliation and consent UNKNOWN. Published company channels are not direct prospect contacts.',
+      contacts:contacts.brief(person),
       triggerWhy:definitions.map(d=>`${d.label}: ${d.why} Evidence limit: ${d.limit}`).join(' ')||'No verified money-in-motion trigger; monitoring only.',
       who:`${person.person_name} · ${person.role}, ${person.company} (role as disclosed; current employment must be reconfirmed).`,
       happened:context.map(e=>`${e.date}: ${e.fact} ${e.status}`).join(' ')+(context.length?' ':'')+(sales.length?`${sales.length} disclosed sale transactions; latest sale ${computed.latest}.`:'No completed stock-sale transaction in retained events.')+(change.length?' '+change.map(e=>`${e.date}: ${e.fact} ${e.status}`).join(' '):''),

@@ -18,6 +18,7 @@ function rows(){
     if(!['SC','all'].includes(territory)&&(city.distance_miles===null||city.distance_miles===undefined||city.distance_miles>Number(territory)))return false;
     if(watchOnly&&!saved.has(p.id))return false;
     if(p.computed.value<min)return false;
+    if(!ProjectContacts.matches(p,$('contactAvailability').value))return false;
     if(type==='Converged'&&!p.computed.converged)return false;
     if(type!=='Converged'&&!p.events.some(e=>eventMatches(e,type)))return false;
     return !q||`${p.person_name} ${displayName(p)} ${p.company} ${p.role} ${city.city} ${p.events.map(e=>e.fact+' '+e.classification).join(' ')}`.toLowerCase().includes(q);
@@ -32,6 +33,7 @@ function render(){
   renderTriggerGuide();
   if(!visible.some(p=>p.id===selected?.id))selected=visible[0]||null;
   $('territoryStatus').textContent=`Center: ${territoryOrigin.name}, ${territoryOrigin.state}. ${visible.length} matching people in the reviewed snapshot (${catalog.issuer_count||7} SEC issuers + ${catalog.business_exits?.validated_people||0} business founders). Territory availability does not imply prospect coverage; empty markets need source discovery and validation.`;
+  $('contactStatus').textContent=`In this view: ${visible.filter(p=>ProjectContacts.status(p)==='named').length} with published named business email / phone; ${visible.filter(p=>ProjectContacts.status(p)==='profile').length} with identity-research profiles; ${visible.filter(p=>ProjectContacts.status(p)==='company').length} with company channels only. Contact evidence does not change financial scores. ${catalog.contact_enrichment?.errors?.length||0} contact source(s) withheld after validation errors.`;
   $('mCount').textContent=visible.length;
   $('mValue').textContent=!visible.length?'—':!visible.some(p=>p.computed.sales)?'UNKNOWN':new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',notation:'compact',maximumFractionDigits:2}).format(visible.reduce((n,p)=>n+p.computed.total,0));
   $('mHigh').textContent=visible.filter(p=>p.computed.value>=70).length;
@@ -48,7 +50,7 @@ function render(){
 function renderTriggerGuide(){
   $('triggerGuide').innerHTML=ProjectTriggers.definitions.map(d=>{const count=people.filter(p=>p.events.some(e=>ProjectTriggers.definition(e)?.id===d.id)).length;return `<article class="evidence"><b>${esc(d.label)} · ${count} people</b><p>${esc(d.why)} <span class="tag">MODEL INFERENCE</span></p><p class="note">Sources: ${esc(d.sources)}. ${esc(d.limit)}</p><button class="cta secondary" data-trigger="${esc(d.id)}">${count?'Open trigger':'Check territory · no validated records'}</button></article>`;}).join('');
 }
-document.addEventListener('click',event=>{const button=event.target.closest('[data-trigger]');if(!button)return;setRadarPanel('prospects');watchOnly=false;$('search').value='';$('minimumScore').value='0';const type=button.dataset.trigger;$('eventType').value=type==='LIQUIDITY'?'Liquidity':type==='EXECUTIVE_TRANSITION'?'Transition':type;render();$('prospects').scrollIntoView({behavior:'smooth'});});
+document.addEventListener('click',event=>{const button=event.target.closest('[data-trigger]');if(!button)return;setRadarPanel('prospects');watchOnly=false;$('search').value='';$('minimumScore').value='0';$('contactAvailability').value='all';const type=button.dataset.trigger;$('eventType').value=type==='LIQUIDITY'?'Liquidity':type==='EXECUTIVE_TRANSITION'?'Transition':type;render();$('prospects').scrollIntoView({behavior:'smooth'});});
 function renderDetail(){
   const p=selected,c=p.computed,sales=p.events.filter(e=>e.classification==='LIQUIDITY'),changes=ProjectIntelligence.transitions(p);
   const privateIdentity=p.identity_kind==='REVIEWED_BUSINESS_PERSON';
@@ -78,16 +80,13 @@ function renderDetail(){
   $('brief').hidden=true;
 }
 function renderContacts(p){
-  const routes=(p.contacts?.routes||[]).filter(r=>contactCurrent(r));
-  $('contactSummary').textContent=routes.length?'COMPANY CHANNELS · DIRECT UNKNOWN':'NO CURRENT VERIFIED ROUTES';
-  $('contactRoutes').innerHTML=routes.length?routes.map(r=>{
-    const href=r.kind==='PHONE'?'tel:'+r.target:r.kind==='EMAIL'?'mailto:'+r.target:r.target;
-    return `<article class="evidence contact-route"><span class="tag">${esc(r.scope.replaceAll('_',' '))} · VERIFIED PUBLIC FACT</span><h3>${esc(r.organization)} · ${esc(r.label)}</h3><a class="source contact-value" href="${esc(href)}" ${r.kind==='WEBSITE'?'target="_blank" rel="noopener noreferrer"':''}>${r.kind==='WEBSITE'?'Open official page ↗':esc(r.value)}</a><p>${esc(r.purpose)}</p><p class="note">Reviewed ${esc(r.reviewed_at)} · Source confirms publication; deliverability and person reachability UNKNOWN. Re-review within 90 days.</p><div class="actions"><a class="source" href="${esc(r.source_url)}" target="_blank" rel="noopener noreferrer">Verify contact source ↗</a><a class="source" href="${esc(r.raw_path)}" target="_blank" rel="noopener">Retained source ↗</a></div></article>`;
-  }).join(''):'<p class="empty">No current verified professional route. Direct email and phone UNKNOWN. Contact evidence may be missing or due for re-review.</p>';
-}
-function contactCurrent(r){
-  const age=(Date.now()-Date.parse(r.reviewed_at+'T00:00:00Z'))/86400000;
-  return age>=0&&age<91&&r.classification==='VERIFIED PUBLIC FACT'&&['COMPANY_CHANNEL','ACQUIRER_CHANNEL'].includes(r.scope)&&/^https:\/\//.test(r.source_url)&&((r.kind==='WEBSITE'&&r.target===r.source_url)||(r.kind==='PHONE'&&/^\+1\d{10}$/.test(r.target))||(r.kind==='EMAIL'&&/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(r.target)));
+  const routes=ProjectContacts.routes(p),state=ProjectContacts.status(p);
+  $('contactSummary').textContent={named:'PUBLISHED NAMED BUSINESS CONTACT',profile:'PROFILE + COMPANY CHANNELS',company:'COMPANY CHANNELS ONLY',unknown:'NO CURRENT VERIFIED ROUTES'}[state];
+  const groups=[...new Map(routes.map(r=>[r.source_url+'|'+r.scope,r])).values()];
+  $('contactRoutes').innerHTML=routes.length?groups.map(g=>{
+    const rs=routes.filter(r=>r.source_url===g.source_url&&r.scope===g.scope);
+    return `<article class="evidence contact-route"><span class="tag">${esc(g.scope.replaceAll('_',' '))} · VERIFIED PUBLIC FACT</span><h3>${esc(g.organization)}</h3>${rs.map(r=>{const href=r.kind==='PHONE'?'tel:'+r.target:r.kind==='EMAIL'?'mailto:'+r.target:r.target;return `<div class="contact-item"><span class="note">${esc(r.label)}</span><a class="source contact-value" href="${esc(href)}" ${r.kind==='WEBSITE'?'target="_blank" rel="noopener noreferrer"':''}>${r.kind==='WEBSITE'?(r.scope==='PROFESSIONAL_PROFILE'||r.scope==='NAMED_PROFESSIONAL'?'Open named professional profile ↗':'Open official company page ↗'):esc(r.value)}</a></div>`;}).join('')}${[...new Set(rs.map(r=>r.purpose))].map(purpose=>`<p>${esc(purpose)}</p>`).join('')}<p class="note">Reviewed ${esc(g.reviewed_at)} · Publication verified; reachability and consent UNKNOWN. Re-review within 90 days.</p><div class="actions"><a class="source" href="${esc(g.source_url)}" target="_blank" rel="noopener noreferrer">Verify contact source ↗</a><a class="source" href="${esc(g.raw_path)}" target="_blank" rel="noopener">Retained source ↗</a></div></article>`;
+  }).join(''):'<p class="empty">No current verified professional route. Contact evidence is missing or due for re-review; email and phone UNKNOWN.</p>';
 }
 function generateBrief(){
   if(!selected)return;
@@ -132,7 +131,7 @@ function importReviews(){
 $('importFeedback').onclick=importReviews;
 $('exportAllFeedback').onclick=()=>{$('pilotExport').hidden=false;$('pilotExportText').value=feedbackExport();$('pilotStatus').textContent='Export ready. Select the text and copy it to back up or share your reviews.';};
 $('selectPilotExport').onclick=()=>{$('pilotExportText').focus();$('pilotExportText').select();$('pilotStatus').textContent='Review export selected. Use Copy or Share in your browser.';};
-document.addEventListener('click',event=>{const b=event.target.closest('[data-review-person]');if(b){setRadarPanel('prospects');watchOnly=false;$('search').value='';$('territory').value='all';$('eventType').value='all';$('minimumScore').value='0';choose(b.dataset.reviewPerson);$('selected').scrollIntoView({behavior:'smooth'});}});
+document.addEventListener('click',event=>{const b=event.target.closest('[data-review-person]');if(b){setRadarPanel('prospects');watchOnly=false;$('search').value='';$('territory').value='all';$('eventType').value='all';$('minimumScore').value='0';$('contactAvailability').value='all';choose(b.dataset.reviewPerson);$('selected').scrollIntoView({behavior:'smooth'});}});
 function save(){if(!selected)return; saved.has(selected.id)?saved.delete(selected.id):saved.add(selected.id);try{localStorage.setItem('project-a-watchlist-v1',JSON.stringify([...saved]));}catch{storageOK=false;}render();}
 function setCenter(state,placeId){
   $('centerState').value=state;
@@ -147,12 +146,13 @@ function updateCenter(){
 }
 $('centerState').onchange=()=>{if(!territoryData)return;setCenter($('centerState').value);render();};
 $('centerPlace').onchange=()=>{if(!territoryData)return;updateCenter();render();};
-function reset(){setRadarPanel('prospects');if(territoryData)setCenter('SC','4513330');watchOnly=false;$('search').value='';$('territory').value='50';$('eventType').value='Planning';$('minimumScore').value='0';render();}
+function reset(){setRadarPanel('prospects');if(territoryData)setCenter('SC','4513330');watchOnly=false;$('search').value='';$('territory').value='50';$('eventType').value='Planning';$('minimumScore').value='0';$('contactAvailability').value='all';render();}
 document.addEventListener('click',event=>{
   const button=event.target.closest('[data-person]');if(button)choose(button.dataset.person,true);
 });
-for(const id of ['search','territory','eventType','minimumScore'])$(id).addEventListener(id==='search'?'input':'change',render);
+for(const id of ['search','territory','eventType','minimumScore','contactAvailability'])$(id).addEventListener(id==='search'?'input':'change',render);
 $('allView').onclick=()=>{watchOnly=false;render();};$('watchView').onclick=()=>{watchOnly=true;render();};$('reset').onclick=reset;
+$('contactButton').onclick=()=>{$('contacts').scrollIntoView({behavior:'smooth',block:'start'});};
 $('briefButton').onclick=generateBrief;$('saveButton').onclick=save;$('backButton').onclick=()=>{setRadarPanel('prospects');$('prospects').scrollIntoView({behavior:'smooth'});};
 $('evidenceButton').onclick=()=>{const open=$('evidenceDrawer').hidden;$('evidenceDrawer').hidden=!open;$('evidenceButton').setAttribute('aria-expanded',String(open));$('evidenceButton').textContent=open?'Close evidence details':'Open evidence details';};
 document.querySelectorAll('[data-nav]').forEach(button=>button.onclick=()=>{

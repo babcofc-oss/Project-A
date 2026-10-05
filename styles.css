@@ -26,3 +26,5 @@ button,input,select{font:inherit}button,a,input,select{touch-action:manipulation
 
 /* Public professional contact provenance follows the existing terminal hierarchy. */
 .contact-route h3{font-size:14px;margin:10px 0 4px}.contact-value{font-weight:700;overflow-wrap:anywhere}.contact-route .source{display:inline-flex;align-items:center;min-height:44px;padding:8px 0;margin-right:14px;max-width:100%;overflow-wrap:anywhere}.contact-note{padding:0 20px 15px;line-height:1.6}.contact-route{min-width:0}.contact-route p{overflow-wrap:anywhere}
+
+.contact-item{border-bottom:1px solid var(--line);padding-top:6px}.contact-item .note{display:block}.contact-item .contact-value{margin-top:0}.contact-route .actions{gap:12px}.contact-route .actions .source{margin-right:0}#contacts{scroll-margin-top:16px}

@@ -153,7 +153,7 @@ def run():
     from contacts import merge as merge_contacts
     contact_enrichment=merge_contacts(records)
     records.sort(key=lambda r:r['liquidity_total'], reverse=True)
-    result = {'version':'project-a-14', 'validated_at':datetime.now(timezone.utc).isoformat(), 'coverage_start':'2026-06-01',
+    result = {'version':'project-a-15', 'validated_at':datetime.now(timezone.utc).isoformat(), 'coverage_start':'2026-06-01',
               'source':'SEC EDGAR', 'issuer_count':len(ISSUERS), 'refresh':'Reviewed repository snapshot; not a live stream', 'scoring_version':'money-in-motion-v5',
               'discovered_filings':len(rows), 'validated_filings':len(rows)-len(errors), 'errors':errors,
               'contact_enrichment':contact_enrichment, 'business_exits':business, 'form144':proposed, 'reviewed_triggers':other, 'transition_filings':len(reviewed), 'transition_errors':transition_errors, 'records':records}
