@@ -82,7 +82,7 @@ def parse_xml(body, accession, source, filed):
         remaining = number(value(tx, 'postTransactionAmounts/sharesOwnedFollowingTransaction/value'))
         linked = [footnotes.get(f.attrib.get('id'), '') for f in tx.findall('.//footnoteId')]
         summary = f'Form 4 reports {shares:,} shares, code {code}, on {when}.' if shares is not None else f'Form 4 code {code} on {when}; shares UNKNOWN.'
-        if price is not None: summary += f' Reported price ${price:,.2f} per share.'
+        if price is not None: summary += f" Reported price ${format(price, 'f')} per share."
         event = {'id': f'{accession}:{i}', 'accession': accession, 'row': i, 'date': when, 'filed_date': filed,
                  'code': code, 'direction': direction, 'classification': classification, 'shares': float(shares) if shares is not None else None,
                  'price': float(price) if price is not None else None, 'value': float(amount) if amount is not None else None,

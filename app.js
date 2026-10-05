@@ -1,6 +1,7 @@
 'use strict';
 const $=id=>document.getElementById(id);
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const displayName=p=>{const words=p.person_name.replaceAll(',',' ').trim().split(/\s+/);if(words.length<2)return p.person_name;const title=w=>w.length===1?w.toUpperCase()+'.':w[0].toUpperCase()+w.slice(1).toLowerCase();return [...words.slice(1),words[0]].map(title).join(' ');};
 const money=n=>n===null||n===undefined?'UNKNOWN':new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',minimumFractionDigits:2,maximumFractionDigits:2}).format(n);
 let catalog=null, people=[], selected=null, watchOnly=false, saved=new Set(), storageOK=true;
 try{const raw=JSON.parse(localStorage.getItem('project-a-watchlist-v1')||'[]');if(Array.isArray(raw))saved=new Set(raw.filter(x=>typeof x==='string'));}catch{storageOK=false;}
@@ -27,16 +28,17 @@ function render(){
   $('mFresh').textContent=visible.filter(p=>p.computed.age!==null&&p.computed.age<=30).length;
   $('visibleSummary').textContent=`${visible.length} PEOPLE · ${watchOnly?'WATCHLIST':'PUBLIC EVIDENCE'}`;
   $('allView').classList.toggle('on',!watchOnly);$('watchView').classList.toggle('on',watchOnly);
-  $('leads').innerHTML=visible.map(p=>`<button class="lead ${selected?.id===p.id?'active':''}" data-person="${esc(p.id)}" aria-pressed="${selected?.id===p.id}"><div class="score">${p.computed.value}</div><div><h3>${esc(p.person_name)} ${saved.has(p.id)?'<span class="watchbadge">★</span>':''}</h3><p>${esc(p.role)} · ${esc(p.company)}<br>${p.computed.sales?`${p.computed.sales} sale rows · latest ${p.computed.latest}`:'No sale trigger · classification audit'}<br>${esc(p.location.city||'Location UNKNOWN')}, ${esc(p.location.state||'')} · ${p.location.distance_miles==null?'Radius UNKNOWN':'~'+Math.round(p.location.distance_miles)+' city miles'}</p></div><div class="money">${p.computed.sales?money(p.computed.total):'NO SALE VALUE'}<small>${p.computed.sales?'gross · calculated':'F/A/M excluded'}</small></div></button>`).join('')||'<p class="empty">No people match these controls. Try all territories, all event types or reset controls.</p>';
-  const feed=visible.flatMap(p=>p.events.map(e=>({p,e}))).sort((a,b)=>b.e.date.localeCompare(a.e.date)).slice(0,8);
-  $('signalFeed').innerHTML=feed.map(({p,e})=>`<button class="signal" data-person="${esc(p.id)}"><i class="dot"></i><div><b>${esc(p.person_name)} · ${esc(e.classification.replaceAll('_',' '))}</b><p>${esc(e.date)} · ${esc(p.company)}<br>${e.code==='S'?money(e.value)+' gross calculated':'Code '+esc(e.code)+' · no ordinary sale value'}${e.planned?' · 10b5-1':''}</p></div></button>`).join('')||'<p class="empty">No signals in this view.</p>';
+  $('leads').innerHTML=visible.map(p=>`<button class="lead ${selected?.id===p.id?'active':''}" data-person="${esc(p.id)}" aria-pressed="${selected?.id===p.id}"><div class="score">${p.computed.value}</div><div><h3>${esc(displayName(p))} ${saved.has(p.id)?'<span class="watchbadge">★</span>':''}</h3><p>${esc(p.role)} · ${esc(p.company)}<br>${p.computed.sales?`${p.computed.sales} sale rows · latest ${p.computed.latest}`:'No sale trigger · classification audit'}<br>${esc(p.location.city||'Location UNKNOWN')}, ${esc(p.location.state||'')} · ${p.location.distance_miles==null?'Radius UNKNOWN':'~'+Math.round(p.location.distance_miles)+' city miles'}</p></div><div class="money">${p.computed.sales?money(p.computed.total):'NO SALE VALUE'}<small>${p.computed.sales?'gross · calculated':'F/A/M excluded'}</small></div></button>`).join('')||'<p class="empty">No people match these controls. Try all territories, all event types or reset controls.</p>';
+  const selectedType=$('eventType').value;
+  const feed=visible.flatMap(p=>p.events.filter(e=>selectedType==='all'||(selectedType==='Liquidity'?e.classification==='LIQUIDITY':e.code===selectedType)).map(e=>({p,e}))).sort((a,b)=>b.e.date.localeCompare(a.e.date)).slice(0,8);
+  $('signalFeed').innerHTML=feed.map(({p,e})=>`<button class="signal" data-person="${esc(p.id)}"><i class="dot"></i><div><b>${esc(displayName(p))} · ${esc(e.classification.replaceAll('_',' '))}</b><p>${esc(e.date)} · ${esc(p.company)}<br>${e.code==='S'?money(e.value)+' gross calculated':'Code '+esc(e.code)+' · no ordinary sale value'}${e.planned?' · 10b5-1':''}</p></div></button>`).join('')||'<p class="empty">No signals in this view.</p>';
   $('detail').hidden=!selected;
   if(selected)renderDetail();
 }
 function renderDetail(){
   const p=selected,c=p.computed,sales=p.events.filter(e=>e.classification==='LIQUIDITY');
   const why=sales.length?`${sales.length} public stock-sale rows create a potential equity-planning research opportunity. ${c.planned?'The disclosed trading-plan context lowers inferred urgency. ':''}The score prioritizes investigation; it does not establish investable assets or an unmet planning need.`:'This record is retained for monitoring and classification QA. Withholding, awards and exercise context do not establish ordinary sale liquidity.';
-  $('name').textContent=`${p.person_name} · ${p.company}`;
+  $('name').textContent=`${displayName(p)} · ${p.company}`;
   $('tags').innerHTML=[sales.length?'STOCK MONETIZATION':'MONITOR ONLY','SEC FORM 4',p.events.some(e=>e.planned)?'10b5-1 CONTEXT':'RETAINED PUBLIC EVIDENCE'].map(x=>`<span class="tag">${esc(x)}</span>`).join('');
   $('why').textContent=why;$('score').textContent=c.value;
   $('saveButton').textContent=saved.has(p.id)?'Remove from Watchlist':'Save Prospect';
@@ -57,7 +59,7 @@ function renderDetail(){
 function generateBrief(){
   if(!selected)return;
   const b=ProjectIntelligence.brief(selected,selected.computed);
-  $('brief').innerHTML=`<h4>Advisor Brief · ${esc(selected.person_name)}</h4>`+[['Who',b.who],['What / when',b.happened],['Publicly associated amount',b.amount],['Verified',b.verified],['Inference / uncertainty',b.inferred],['Planned-sale context',b.planned],['Planning themes',b.themes.join(' · ')],['Before outreach',b.diligence.join(' ')],['Next research action',b.next]].map(([key,value])=>`<p><b>${esc(key)}:</b> ${esc(value)}</p>`).join('');
+  $('brief').innerHTML=`<h4>Advisor Brief · ${esc(displayName(selected))}</h4>`+[['Who',b.who],['What / when',b.happened],['Publicly associated amount',b.amount],['Verified',b.verified],['Inference / uncertainty',b.inferred],['Planned-sale context',b.planned],['Planning themes',b.themes.join(' · ')],['Before outreach',b.diligence.join(' ')],['Next research action',b.next]].map(([key,value])=>`<p><b>${esc(key)}:</b> ${esc(value)}</p>`).join('');
   $('brief').hidden=false;$('brief').scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 function save(){if(!selected)return; saved.has(selected.id)?saved.delete(selected.id):saved.add(selected.id);try{localStorage.setItem('project-a-watchlist-v1',JSON.stringify([...saved]));}catch{storageOK=false;}render();}
@@ -78,13 +80,14 @@ document.querySelectorAll('[data-nav]').forEach(button=>button.onclick=()=>{
 });
 async function load(){
   try{
-    const response=await fetch('catalog.json',{cache:'no-cache'});
+    const catalogPath=new URLSearchParams(location.search).get('qa')==='missing-catalog'?'missing-catalog.json':'catalog.json';
+    const response=await fetch(catalogPath,{cache:'no-cache'});
     if(!response.ok)throw new Error(`Evidence catalog returned HTTP ${response.status}`);
     catalog=await response.json();
     if(!Array.isArray(catalog.records))throw new Error('Evidence catalog has an invalid schema');
     people=catalog.records.map(p=>({...p,computed:ProjectIntelligence.score(p)}));
     $('systemStatus').textContent=`Validated SEC snapshot · ${people.length} people`;
-    $('coverage').textContent=`${catalog.validated_filings} validated filings · ${catalog.coverage_start} onward · ${people.filter(p=>p.computed.sales).length} people with sale signals · 3 issuers`;
+    $('coverage').textContent=`${catalog.validated_filings} validated filings · filings since ${catalog.coverage_start} · ${people.filter(p=>p.computed.sales).length} people with sale signals · 3 issuers`;
     $('feedDate').textContent=`Validated ${new Date(catalog.validated_at).toLocaleString()}. Reviewed snapshot; not a live stream. ${catalog.errors.length} filing(s) withheld after ingestion errors.`;
     render();
   }catch(error){people=[];selected=null;$('detail').hidden=true;$('error').hidden=false;$('error').textContent=`Could not load evidence: ${error.message}. No opportunities or scores are asserted. Reload to retry.`;$('leads').innerHTML='<p class="empty">Evidence unavailable. No records released.</p>';$('coverage').textContent='Source coverage unavailable';$('systemStatus').textContent='Evidence unavailable';for(const id of ['mCount','mValue','mHigh','mFresh'])$(id).textContent='UNKNOWN';}
