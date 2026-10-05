@@ -12,6 +12,7 @@ class IntegrityTests(unittest.TestCase):
             for event in person['events']:
                 raw=(ROOT/event['raw_path']).read_bytes()
                 self.assertEqual(hashlib.sha256(raw).hexdigest(),event['sha256'])
+                if event.get('source_class')=='8K':continue
                 parsed=parse_xml(raw,event['accession'],event['source_url'],event['filed_date'])
                 self.assertEqual(parsed['id'],person['id'])
                 self.assertIn(event['id'],[e['id'] for e in parsed['events']])
