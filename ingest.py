@@ -148,11 +148,13 @@ def run():
     from form144 import merge as merge_form144
     from reviewed_triggers import merge as merge_other
     proposed=merge_form144(records,submissions); other=merge_other(records)
+    from business_exits import merge as merge_business
+    business=merge_business(records)
     records.sort(key=lambda r:r['liquidity_total'], reverse=True)
-    result = {'version':'project-a-12', 'validated_at':datetime.now(timezone.utc).isoformat(), 'coverage_start':'2026-06-01',
-              'source':'SEC EDGAR', 'issuer_count':len(ISSUERS), 'refresh':'Reviewed repository snapshot; not a live stream', 'scoring_version':'money-in-motion-v4',
+    result = {'version':'project-a-13', 'validated_at':datetime.now(timezone.utc).isoformat(), 'coverage_start':'2026-06-01',
+              'source':'SEC EDGAR', 'issuer_count':len(ISSUERS), 'refresh':'Reviewed repository snapshot; not a live stream', 'scoring_version':'money-in-motion-v5',
               'discovered_filings':len(rows), 'validated_filings':len(rows)-len(errors), 'errors':errors,
-              'form144':proposed, 'reviewed_triggers':other, 'transition_filings':len(reviewed), 'transition_errors':transition_errors, 'records':records}
+              'business_exits':business, 'form144':proposed, 'reviewed_triggers':other, 'transition_filings':len(reviewed), 'transition_errors':transition_errors, 'records':records}
     if not records: raise RuntimeError('No validated records; retaining previous catalog')
     (ROOT / 'catalog.json').write_text(json.dumps(result, indent=2))
     print(json.dumps({'people':len(records),'liquidity_opportunities':sum(r['signal_type']=='Liquidity' for r in records),'errors':errors},indent=2))

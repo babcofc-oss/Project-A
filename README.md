@@ -10,7 +10,7 @@ Static catalog and immutable primary evidence are versioned in Git; no ephemeral
 
 ## Evidence coverage
 
-111 SEC Form 4 filings from seven issuers, filed June–October 2026, independently fetched and parsed. 68 person/issuer identities; 22 people with S-disposition sale events, seven in the Charleston city-radius territory. Other people are monitoring/classification examples, not fabricated leads. Five reviewed Form 8-K events enrich existing people. Graves and Harralson have sale-plus-executive-transition convergence; board appointments alone earn no bonus. Different disclosure classes from one issuer are not independent publishers. Future and conditional effective dates never establish completed transitions or received cash.
+111 SEC Form 4 filings from seven issuers, filed June–October 2026, independently fetched and parsed. 68 SEC person/issuer identities plus two reviewed business-founder identities; 22 people with S-disposition sale events, seven in the Charleston city-radius territory. Other people are monitoring/classification examples, not fabricated leads. Five reviewed Form 8-K events enrich existing people. Graves and Harralson have sale-plus-executive-transition convergence; board appointments alone earn no bonus. Different disclosure classes from one issuer are not independent publishers. Future and conditional effective dates never establish completed transitions or received cash.
 
 Reporting-person CIK and issuer CIK remain separate. Repeated filings cluster by both identifiers. Distinct transaction rows retain accession + row identifiers. F/A/M are excluded from ordinary sale totals. Rule 10b5-1 detected from the checkbox and footnotes. Source XML fingerprints are retained. Gross reported shares × price is not net worth, net proceeds or available funds.
 
@@ -48,7 +48,7 @@ The national reference retains its Census source URL and archive SHA-256. `geo_e
 
 ## Additional trigger coverage
 
-The trigger registry adds business exits, IPO / secondary offerings, ownership changes, Form 144 proposed sales, commercial / investment-property sales, officially named lottery awards, and documented inheritance, alongside stock sales and executive transitions. Each filter, guide entry, selected-opportunity explanation and advisor brief carries a short planning-usefulness explanation and evidence limits. Six new categories currently have zero validated records; available controls do not represent connected feeds.
+The trigger registry adds business exits, IPO / secondary offerings, ownership changes, Form 144 proposed sales, commercial / investment-property sales, officially named lottery awards, and documented inheritance, alongside stock sales and executive transitions. Each filter, guide entry, selected-opportunity explanation and advisor brief carries a short planning-usefulness explanation and evidence limits. Five new categories currently have zero validated records; available controls do not represent connected feeds.
 
 17 Form 144 notices were fetched from SEC EDGAR and uniquely matched by exact normalized account-subject name plus issuer to existing Form 4 identities. Four notices were held for insufficient identity matches. Filing-agent CIKs are not assumed to be person identifiers. Proposed market values never enter sale totals, recency, intent or convergence bonuses; proposals stay monitoring context until completed-sale evidence exists. Immutable XML and fingerprints accompany accepted records.
 
@@ -59,3 +59,13 @@ Run `node test_triggers.js`, `node test_scoring.js`, `node test_pilot.js`, `node
 ## Mobile terminal layout
 
 At widths up to 850px, a compact Menu opens the original navigation; the KPI strip stays in two columns. Prospects / Signal Feed buttons switch the two radar panels while selection, shared search, watchlist, and filters keep the same state. Territory / signal controls expand on demand; desktop keeps both panels and open filters. Signal selections open the same opportunity intelligence below; Back to prospects restores the prospect panel. Mobile controls remain touch-sized, and form fields use 16px type.
+
+## Reviewed private-business exits
+
+Two named founders are now connected to completed South Carolina acquisitions reported on August 20, 2026: Lee Hickman / Charleston Grounds Management and Ken Robinson / Clear Lakes and Wetland Services. Vesterra’s primary announcement establishes exact founder relationships and reported company completion; Bland’s buyer announcement corroborates the acquisitions. Same transaction, no independent convergence bonus. August 20 is a publication date and completion upper bound; exact closing dates, individual ownership percentages, sale participation, consideration, retained equity, earn-outs and current roles remain UNKNOWN. Neither record contributes to Form 4 gross-sale totals.
+
+`business_exits.py` validates fingerprinted announcements, person/company relationship anchors, completion, publication date and company-market provenance. Private identities use exact reviewed founder + company + primary authority keys; SEC CIKs remain null. No fuzzy cross-company matching. The adapter runs on ingestion refresh, replaces its own records idempotently and holds invalid entries with explicit errors. Its initial geography/source gate supports reviewed South Carolina exits. Additions elsewhere require an explicit reviewed source/geography gate; nationwide territory controls already work.
+
+Company service markets are visibly distinguished from filing mailing cities. City-reference radius may match a company market, never a founder’s address or personal location. Two primary announcements are retained as text to avoid executing archived page scripts. Scoring v5 gives these primary announcements 18/20 evidence points and named company-scoped identities 8/10; no magnitude points for unknown proceeds. Briefs carry business planning themes without claiming SEC evidence for private founders.
+
+Run `python3 -m unittest test_integrity test_transitions test_form144 test_business_exits` and the existing four Node checks before publishing catalog + source ledgers + code together.

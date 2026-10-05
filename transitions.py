@@ -47,7 +47,7 @@ def merge_reviewed(records, root=ROOT):
     for entry in manifest:
         try:
             person=people[entry['person_id']]
-            matches=[p for p in records if int(p['issuer_cik'])==int(entry['issuer_cik']) and name_tokens(entry['subject_name']).issubset(name_tokens(p['person_name']))]
+            matches=[p for p in records if p.get('issuer_cik') and int(p['issuer_cik'])==int(entry['issuer_cik']) and name_tokens(entry['subject_name']).issubset(name_tokens(p['person_name']))]
             if len(matches)!=1: raise ValueError('Ambiguous named subject; manual resolution required')
             event=reviewed_event(entry,person,(root/entry['raw_path']).read_bytes())
             person['events'].append(event); accepted.add(entry['accession'])

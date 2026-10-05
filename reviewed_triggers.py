@@ -34,7 +34,7 @@ def merge(records,root=ROOT):
     for entry in entries:
         try:
             person=people[entry['person_id']]
-            matches=[p for p in records if int(p['issuer_cik'])==int(entry['issuer_cik']) and name_tokens(entry['subject_name']).issubset(name_tokens(p['person_name']))]
+            matches=[p for p in records if p.get('issuer_cik') and int(p['issuer_cik'])==int(entry['issuer_cik']) and name_tokens(entry['subject_name']).issubset(name_tokens(p['person_name']))]
             if len(matches)!=1:raise ValueError('Ambiguous subject')
             path=(root/entry['raw_path']).resolve()
             if not path.is_relative_to(root.resolve()):raise ValueError('Evidence path outside project')

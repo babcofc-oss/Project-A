@@ -1,11 +1,11 @@
 {
-  "version": "project-a-12",
-  "validated_at": "2026-10-05T15:41:28.264075+00:00",
+  "version": "project-a-13",
+  "validated_at": "2026-10-05T16:50:45.906843+00:00",
   "coverage_start": "2026-06-01",
   "source": "SEC EDGAR",
   "issuer_count": 7,
   "refresh": "Reviewed repository snapshot; not a live stream",
-  "scoring_version": "money-in-motion-v4",
+  "scoring_version": "money-in-motion-v5",
   "discovered_filings": 111,
   "validated_filings": 111,
   "errors": [],
@@ -6227,6 +6227,154 @@
         "FORM4"
       ],
       "convergence": 0
+    },
+    {
+      "id": "reviewed-business-836366ba12448cff90bf1e69",
+      "identity_kind": "REVIEWED_BUSINESS_PERSON",
+      "identity_method": "Exact primary-source named founder + company + authority; no SEC or cross-company identity match",
+      "person_cik": null,
+      "issuer_cik": null,
+      "person_name": "Lee Hickman",
+      "display_name": "Lee Hickman",
+      "role": "Founder as disclosed; current role UNKNOWN",
+      "company": "Charleston Grounds Management",
+      "location": {
+        "city": "Charleston",
+        "state": "SC",
+        "kind": "Company service market; personal location UNKNOWN",
+        "basis": "COMPANY_MARKET",
+        "source_url": "https://vesterracap.com/news/vesterra-capital-partners-portfolio-company-bland-landscaping-acquires-charleston-grounds-management-and-clear-lakes-and-wetland-services-to-expand-presence-in-south-carolina-market/",
+        "assertion_class": "VERIFIED PUBLIC FACT",
+        "distance_miles": 0.0,
+        "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
+        "geo_class": "CALCULATED FROM VERIFIED FACT",
+        "geo_method": "Census city reference for disclosed company service market; not founder location",
+        "place_geoid": "4513330"
+      },
+      "events": [
+        {
+          "id": "reviewed-business-836366ba12448cff90bf1e69:acquisition:2026-08-20",
+          "accession": "bland-sc-20260820-cgm",
+          "date": "2026-08-20",
+          "filed_date": "2026-08-20",
+          "date_kind": "Announcement publication; completion upper bound",
+          "source_class": "COMPANY_ANNOUNCEMENT",
+          "trigger_type": "BUSINESS_EXIT",
+          "classification": "BUSINESS_EXIT",
+          "stage": "COMPLETED",
+          "reviewed_trigger": true,
+          "fact": "Bland Landscaping reported acquiring Charleston Grounds Management; Lee Hickman is identified as its founder.",
+          "status": "Acquisition reported completed by 2026-08-20. Exact closing date, individual sale participation and current role UNKNOWN.",
+          "relationship_evidence": "Named founder relationship verified in the primary announcement; ownership percentage and individual consideration UNKNOWN.",
+          "amount_context": "Deal price and individual proceeds are not disclosed in the retained announcements. Cash received, retained equity, debt and earn-out terms UNKNOWN.",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "UNKNOWN",
+          "value": null,
+          "shares": null,
+          "price": null,
+          "code": null,
+          "planned": false,
+          "cash_received": "UNKNOWN",
+          "footnotes": [],
+          "evidence_sources": [
+            {
+              "source_url": "https://vesterracap.com/news/vesterra-capital-partners-portfolio-company-bland-landscaping-acquires-charleston-grounds-management-and-clear-lakes-and-wetland-services-to-expand-presence-in-south-carolina-market/",
+              "authority_domain": "vesterracap.com",
+              "raw_path": "vesterra-bland-sc-20260820.txt",
+              "sha256": "257d44785273457dab574b47d89d5628b5361a93a05353632ec732a9a3663136"
+            },
+            {
+              "source_url": "https://blandlandscaping.com/2026/08/bland-landscaping-co-expands-in-south-carolina/",
+              "authority_domain": "blandlandscaping.com",
+              "raw_path": "bland-sc-20260820.txt",
+              "sha256": "578a0e8adf5d388b06fcc4660f1bda168d499a43ab5fbd651f5f4ea862966213"
+            }
+          ],
+          "source_url": "https://vesterracap.com/news/vesterra-capital-partners-portfolio-company-bland-landscaping-acquires-charleston-grounds-management-and-clear-lakes-and-wetland-services-to-expand-presence-in-south-carolina-market/",
+          "raw_path": "vesterra-bland-sc-20260820.txt",
+          "sha256": "257d44785273457dab574b47d89d5628b5361a93a05353632ec732a9a3663136"
+        }
+      ],
+      "source_classes": [
+        "COMPANY_ANNOUNCEMENT"
+      ],
+      "liquidity_total": 0,
+      "signal_type": "Planning",
+      "convergence": 0
+    },
+    {
+      "id": "reviewed-business-c1e19fb63e29b26221697dc7",
+      "identity_kind": "REVIEWED_BUSINESS_PERSON",
+      "identity_method": "Exact primary-source named founder + company + authority; no SEC or cross-company identity match",
+      "person_cik": null,
+      "issuer_cik": null,
+      "person_name": "Ken Robinson",
+      "display_name": "Ken Robinson",
+      "role": "Founder as disclosed; current role UNKNOWN",
+      "company": "Clear Lakes and Wetland Services",
+      "location": {
+        "city": "Myrtle Beach",
+        "state": "SC",
+        "kind": "Company service market; personal location UNKNOWN",
+        "basis": "COMPANY_MARKET",
+        "source_url": "https://vesterracap.com/news/vesterra-capital-partners-portfolio-company-bland-landscaping-acquires-charleston-grounds-management-and-clear-lakes-and-wetland-services-to-expand-presence-in-south-carolina-market/",
+        "assertion_class": "VERIFIED PUBLIC FACT",
+        "distance_miles": 87.52,
+        "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
+        "geo_class": "CALCULATED FROM VERIFIED FACT",
+        "geo_method": "Census city reference for disclosed company service market; not founder location",
+        "place_geoid": "4549075"
+      },
+      "events": [
+        {
+          "id": "reviewed-business-c1e19fb63e29b26221697dc7:acquisition:2026-08-20",
+          "accession": "bland-sc-20260820-claws",
+          "date": "2026-08-20",
+          "filed_date": "2026-08-20",
+          "date_kind": "Announcement publication; completion upper bound",
+          "source_class": "COMPANY_ANNOUNCEMENT",
+          "trigger_type": "BUSINESS_EXIT",
+          "classification": "BUSINESS_EXIT",
+          "stage": "COMPLETED",
+          "reviewed_trigger": true,
+          "fact": "Bland Landscaping reported acquiring Clear Lakes and Wetland Services; Ken Robinson is identified as its founder.",
+          "status": "Acquisition reported completed by 2026-08-20. Exact closing date, individual sale participation and current role UNKNOWN.",
+          "relationship_evidence": "Named founder relationship verified in the primary announcement; ownership percentage and individual consideration UNKNOWN.",
+          "amount_context": "Deal price and individual proceeds are not disclosed in the retained announcements. Cash received, retained equity, debt and earn-out terms UNKNOWN.",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "UNKNOWN",
+          "value": null,
+          "shares": null,
+          "price": null,
+          "code": null,
+          "planned": false,
+          "cash_received": "UNKNOWN",
+          "footnotes": [],
+          "evidence_sources": [
+            {
+              "source_url": "https://vesterracap.com/news/vesterra-capital-partners-portfolio-company-bland-landscaping-acquires-charleston-grounds-management-and-clear-lakes-and-wetland-services-to-expand-presence-in-south-carolina-market/",
+              "authority_domain": "vesterracap.com",
+              "raw_path": "vesterra-bland-sc-20260820.txt",
+              "sha256": "257d44785273457dab574b47d89d5628b5361a93a05353632ec732a9a3663136"
+            },
+            {
+              "source_url": "https://blandlandscaping.com/2026/08/bland-landscaping-co-expands-in-south-carolina/",
+              "authority_domain": "blandlandscaping.com",
+              "raw_path": "bland-sc-20260820.txt",
+              "sha256": "578a0e8adf5d388b06fcc4660f1bda168d499a43ab5fbd651f5f4ea862966213"
+            }
+          ],
+          "source_url": "https://vesterracap.com/news/vesterra-capital-partners-portfolio-company-bland-landscaping-acquires-charleston-grounds-management-and-clear-lakes-and-wetland-services-to-expand-presence-in-south-carolina-market/",
+          "raw_path": "vesterra-bland-sc-20260820.txt",
+          "sha256": "257d44785273457dab574b47d89d5628b5361a93a05353632ec732a9a3663136"
+        }
+      ],
+      "source_classes": [
+        "COMPANY_ANNOUNCEMENT"
+      ],
+      "liquidity_total": 0,
+      "signal_type": "Planning",
+      "convergence": 0
     }
   ],
   "transition_filings": 5,
@@ -6259,6 +6407,11 @@
   },
   "reviewed_triggers": {
     "validated": 0,
+    "errors": []
+  },
+  "business_exits": {
+    "validated_people": 2,
+    "validated_transactions": 2,
     "errors": []
   }
 }

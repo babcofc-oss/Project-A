@@ -20,7 +20,7 @@ def parse(body, accession, filed, source, records, expected_issuer):
     issuer=text('formData/issuerInfo/issuerCik')
     if int(issuer)!=int(expected_issuer): raise ValueError('Issuer mismatch')
     name=text('formData/issuerInfo/nameOfPersonForWhoseAccountTheSecuritiesAreToBeSold')
-    candidates=[p for p in records if int(p['issuer_cik'])==int(issuer) and tokens(p['person_name'])==tokens(name)]
+    candidates=[p for p in records if p.get('issuer_cik') and int(p['issuer_cik'])==int(issuer) and tokens(p['person_name'])==tokens(name)]
     if len(candidates)!=1: raise ValueError('No unique exact subject / issuer match; hold for review')
     notice=text('formData/noticeSignature/noticeDate')
     when=date.fromisoformat(filed)

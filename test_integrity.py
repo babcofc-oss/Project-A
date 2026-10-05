@@ -12,6 +12,10 @@ class IntegrityTests(unittest.TestCase):
             for event in person['events']:
                 raw=(ROOT/event['raw_path']).read_bytes()
                 self.assertEqual(hashlib.sha256(raw).hexdigest(),event['sha256'])
+                if event.get('source_class')=='COMPANY_ANNOUNCEMENT':
+                    from business_exits import validate
+                    entry=next(e for e in json.loads((ROOT/'reviewed-business-exits.json').read_text()) if e['source_id']==event['accession'])
+                    parsed=validate(entry);self.assertEqual(parsed['id'],person['id']);self.assertEqual(parsed['events'][0],event);continue
                 if event.get('source_class')=='8K':continue
                 if event.get('source_class')=='FORM144':
                     from form144 import parse
@@ -25,21 +29,21 @@ class IntegrityTests(unittest.TestCase):
         self.assertEqual(classify('S','D'),'LIQUIDITY')
         self.assertNotEqual(classify('S','A'),'LIQUIDITY')
     def test_original_li_example_not_collapsed(self):
-        li=next(p for p in CATALOG['records'] if int(p['person_cik'])==1436880)
+        li=next(p for p in CATALOG['records'] if int(p['person_cik'] or 0)==1436880)
         events=[e for e in li['events'] if e['accession']=='0001436880-26-000006']
         self.assertEqual(len(events),2)
         self.assertEqual(sum(e['value'] for e in events),761750)
         self.assertTrue(all(e['planned'] for e in events))
         self.assertEqual(int(li['issuer_cik']),1653477)
     def test_anderson_cluster_and_arithmetic(self):
-        rows=[p for p in CATALOG['records'] if int(p['person_cik'])==1492840]
+        rows=[p for p in CATALOG['records'] if int(p['person_cik'] or 0)==1492840]
         self.assertEqual(len(rows),1)
         june=next(e for e in rows[0]['events'] if e['date']=='2026-06-01' and e['classification']=='LIQUIDITY')
         self.assertEqual(june['value'],194278.55)
         september=next(e for e in rows[0]['events'] if e['date']=='2026-09-01' and e['classification']=='LIQUIDITY')
         self.assertTrue(september['planned'])
     def test_graves_withholding_excluded_but_sales_retained(self):
-        person=next(p for p in CATALOG['records'] if int(p['person_cik'])==1251036)
+        person=next(p for p in CATALOG['records'] if int(p['person_cik'] or 0)==1251036)
         withholding=next(e for e in person['events'] if e['accession']=='0001628280-26-061401')
         self.assertEqual(withholding['classification'],'TAX_WITHHOLDING')
         self.assertEqual(person['liquidity_total'],528065.3)

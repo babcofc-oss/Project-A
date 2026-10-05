@@ -9,8 +9,8 @@ for(const person of records){
  assert.equal(computed.total,person.events.filter(e=>e.classification==='LIQUIDITY').reduce((n,e)=>n+(e.value||0),0));
  assert.equal(computed.parts.find(p=>p.label==='Distinct-signal convergence').points,computed.converged?5:0);
  const older=score(person,new Date('2027-10-05T12:00:00Z'));assert.ok(older.value<=computed.value);
- const b=brief(person,computed);assert.match(b.verified,/SEC/);assert.ok(b.diligence.length>=4);
- if(!computed.sales&&!computed.transitions)assert.ok(computed.value<=20);
+ const b=brief(person,computed);assert.match(b.verified,person.identity_kind==='REVIEWED_BUSINESS_PERSON'?/Primary company/:/SEC/);assert.ok(b.diligence.length>=4);
+ if(!computed.sales&&!computed.transitions&&!computed.other)assert.ok(computed.value<=20);
 }
 const li=records.find(p=>Number(p.person_cik)===1436880);
 assert.equal(score(li,now).parts.find(p=>p.label==='Planned-sale adjustment').points,-8);
@@ -33,3 +33,14 @@ assert.equal(score(cotterman,now).total,0);
 assert.equal(score(cotterman,now).transitions,1);
 assert.match(brief(cotterman,score(cotterman,now)).amount,/40,000/);
 console.log('Transition conditions, convergence and excluded compensation passed');
+
+for(const p of records.filter(p=>p.identity_kind==='REVIEWED_BUSINESS_PERSON')){
+ const c=score(p,now),b=brief(p,c);
+ assert.equal(c.total,0);assert.equal(c.converged,false);assert.equal(c.latest,undefined);
+ assert.equal(c.parts.find(x=>x.label==='Event magnitude').points,0);
+ assert.equal(c.parts.find(x=>x.label==='Identity confidence').points,8);
+ assert.ok(c.value>20);assert.match(b.amount,/individual proceeds.*not disclosed/);
+ assert.match(b.inferred,/MODEL INFERENCE/);assert.ok(!b.verified.includes('Form 4'));
+ assert.ok(!b.themes.includes('Monitor for an independently verified transition'));
+}
+console.log('Business founders: identity limits, unknown proceeds and planning briefs passed');
