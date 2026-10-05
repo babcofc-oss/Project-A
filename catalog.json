@@ -1,11 +1,11 @@
 {
-  "version": "project-a-11",
-  "validated_at": "2026-10-05T14:32:08.815862+00:00",
+  "version": "project-a-12",
+  "validated_at": "2026-10-05T15:41:28.264075+00:00",
   "coverage_start": "2026-06-01",
   "source": "SEC EDGAR",
   "issuer_count": 7,
   "refresh": "Reviewed repository snapshot; not a live stream",
-  "scoring_version": "money-in-motion-v3",
+  "scoring_version": "money-in-motion-v4",
   "discovered_filings": 111,
   "validated_filings": 111,
   "errors": [],
@@ -30,6 +30,35 @@
         "place_geoid": "4530850"
       },
       "events": [
+        {
+          "id": "0001964306-26-000438:144:0",
+          "accession": "0001964306-26-000438",
+          "date": "2026-09-11",
+          "filed_date": "2026-09-11",
+          "source_class": "FORM144",
+          "code": null,
+          "classification": "PROPOSED_SALE",
+          "trigger_type": "PROPOSED_SALE",
+          "stage": "PROPOSED",
+          "value": null,
+          "value_class": "UNKNOWN",
+          "shares": null,
+          "price": null,
+          "proposed_shares": 57359.0,
+          "proposed_market_value": 3328776.77,
+          "approximate_sale_date": "2026-09-11",
+          "planned": false,
+          "fact": "Form 144 names BAUR MICHAEL L and gives notice of a proposed sale of 57,359 shares. Approximate sale date: 2026-09-11.",
+          "status": "Proposed sale notice; execution is not established by this filing.",
+          "amount_context": "$3,328,776.77 aggregate market value reported for the proposed securities; not completed-sale proceeds or available cash. Do not add to Form 4 sale totals.",
+          "footnotes": [],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/918965/000196430626000438/xsl144X01/primary_doc.xml",
+          "raw_path": "0001964306-26-000438.xml",
+          "sha256": "da251c7cb856c4d4d897822370e3886e0f6f5076ce8a1e9d70a289282d53fd0b",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "cash_received": "UNKNOWN",
+          "identity_method": "Exact normalized named account subject + issuer matched uniquely to retained Form 4 identity; filing-agent CIK ignored"
+        },
         {
           "id": "0001193125-26-390648:6",
           "accession": "0001193125-26-390648",
@@ -123,6 +152,35 @@
           "sha256": "4457a3fdc51fc38cf13321b11ba7e812078987dcaa74a50daf5daa79195bf01e",
           "assertion_class": "VERIFIED PUBLIC FACT",
           "value_class": "CALCULATED FROM VERIFIED FACT"
+        },
+        {
+          "id": "0001964306-26-000436:144:0",
+          "accession": "0001964306-26-000436",
+          "date": "2026-09-10",
+          "filed_date": "2026-09-10",
+          "source_class": "FORM144",
+          "code": null,
+          "classification": "PROPOSED_SALE",
+          "trigger_type": "PROPOSED_SALE",
+          "stage": "PROPOSED",
+          "value": null,
+          "value_class": "UNKNOWN",
+          "shares": null,
+          "price": null,
+          "proposed_shares": 19980.0,
+          "proposed_market_value": 1109823.29,
+          "approximate_sale_date": "2026-09-10",
+          "planned": false,
+          "fact": "Form 144 names BAUR MICHAEL L and gives notice of a proposed sale of 19,980 shares. Approximate sale date: 2026-09-10.",
+          "status": "Proposed sale notice; execution is not established by this filing.",
+          "amount_context": "$1,109,823.29 aggregate market value reported for the proposed securities; not completed-sale proceeds or available cash. Do not add to Form 4 sale totals.",
+          "footnotes": [],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/918965/000196430626000436/xsl144X01/primary_doc.xml",
+          "raw_path": "0001964306-26-000436.xml",
+          "sha256": "2eee0160cbdb95bcebae2f28a80f6a9d085ea3dde7c15cdd14e6bd2fcb8be8fe",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "cash_received": "UNKNOWN",
+          "identity_method": "Exact normalized named account subject + issuer matched uniquely to retained Form 4 identity; filing-agent CIK ignored"
         },
         {
           "id": "0001193125-26-390648:2",
@@ -338,6 +396,7 @@
       "liquidity_total": 4438747.26,
       "signal_type": "Liquidity",
       "source_classes": [
+        "FORM144",
         "FORM4"
       ],
       "convergence": 0
@@ -459,6 +518,37 @@
           "value_class": "CALCULATED FROM VERIFIED FACT"
         },
         {
+          "id": "0001950047-26-008035:144:0",
+          "accession": "0001950047-26-008035",
+          "date": "2026-08-12",
+          "filed_date": "2026-08-12",
+          "source_class": "FORM144",
+          "code": null,
+          "classification": "PROPOSED_SALE",
+          "trigger_type": "PROPOSED_SALE",
+          "stage": "PROPOSED",
+          "value": null,
+          "value_class": "UNKNOWN",
+          "shares": null,
+          "price": null,
+          "proposed_shares": 20092.0,
+          "proposed_market_value": 1562956.68,
+          "approximate_sale_date": "2026-08-12",
+          "planned": true,
+          "fact": "Form 144 names DAVID H LI and gives notice of a proposed sale of 20,092 shares. Approximate sale date: 2026-08-12.",
+          "status": "Proposed sale notice; execution is not established by this filing.",
+          "amount_context": "$1,562,956.68 aggregate market value reported for the proposed securities; not completed-sale proceeds or available cash. Do not add to Form 4 sale totals.",
+          "footnotes": [
+            "Trading-plan adoption date(s): 05/13/2026"
+          ],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1653477/000195004726008035/xsl144X01/primary_doc.xml",
+          "raw_path": "0001950047-26-008035.xml",
+          "sha256": "d9a2e36efcf96a9d83f3b06cb755505c8b198eba15f8894ecdddf144e7cd6ce5",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "cash_received": "UNKNOWN",
+          "identity_method": "Exact normalized named account subject + issuer matched uniquely to retained Form 4 identity; filing-agent CIK ignored"
+        },
+        {
           "id": "0001436880-26-000006:0",
           "accession": "0001436880-26-000006",
           "row": 0,
@@ -486,6 +576,7 @@
       "liquidity_total": 1526423.32,
       "signal_type": "Liquidity",
       "source_classes": [
+        "FORM144",
         "FORM4"
       ],
       "convergence": 0
@@ -510,6 +601,35 @@
         "place_geoid": "4530850"
       },
       "events": [
+        {
+          "id": "0001957799-26-000153:144:0",
+          "accession": "0001957799-26-000153",
+          "date": "2026-08-12",
+          "filed_date": "2026-08-12",
+          "source_class": "FORM144",
+          "code": null,
+          "classification": "PROPOSED_SALE",
+          "trigger_type": "PROPOSED_SALE",
+          "stage": "PROPOSED",
+          "value": null,
+          "value_class": "UNKNOWN",
+          "shares": null,
+          "price": null,
+          "proposed_shares": 21000.0,
+          "proposed_market_value": 1332190.49,
+          "approximate_sale_date": "2026-08-12",
+          "planned": false,
+          "fact": "Form 144 names SEAVER R ARTHUR JR and gives notice of a proposed sale of 21,000 shares. Approximate sale date: 2026-08-12.",
+          "status": "Proposed sale notice; execution is not established by this filing.",
+          "amount_context": "$1,332,190.49 aggregate market value reported for the proposed securities; not completed-sale proceeds or available cash. Do not add to Form 4 sale totals.",
+          "footnotes": [],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1090009/000195779926000153/xsl144X01/primary_doc.xml",
+          "raw_path": "0001957799-26-000153.xml",
+          "sha256": "64deeb2634aff431d4ec1756def7fd1eef88efd748da9734521488a2c9764b35",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "cash_received": "UNKNOWN",
+          "identity_method": "Exact normalized named account subject + issuer matched uniquely to retained Form 4 identity; filing-agent CIK ignored"
+        },
         {
           "id": "0001090009-26-000094:8",
           "accession": "0001090009-26-000094",
@@ -712,6 +832,7 @@
       "liquidity_total": 1335375.0,
       "signal_type": "Liquidity",
       "source_classes": [
+        "FORM144",
         "FORM4"
       ],
       "convergence": 0
@@ -861,12 +982,42 @@
           "sha256": "68c4a8058ba63ebbb90986bf747ff6c71176a7a810be77c6a842bd35ee638d2b",
           "assertion_class": "VERIFIED PUBLIC FACT",
           "value_class": "CALCULATED FROM VERIFIED FACT"
+        },
+        {
+          "id": "0001972481-26-000238:144:0",
+          "accession": "0001972481-26-000238",
+          "date": "2026-07-27",
+          "filed_date": "2026-07-27",
+          "source_class": "FORM144",
+          "code": null,
+          "classification": "PROPOSED_SALE",
+          "trigger_type": "PROPOSED_SALE",
+          "stage": "PROPOSED",
+          "value": null,
+          "value_class": "UNKNOWN",
+          "shares": null,
+          "price": null,
+          "proposed_shares": 25000.0,
+          "proposed_market_value": 885323.0,
+          "approximate_sale_date": "2026-07-27",
+          "planned": false,
+          "fact": "Form 144 names HARRALSON JEFFERSON L and gives notice of a proposed sale of 25,000 shares. Approximate sale date: 2026-07-27.",
+          "status": "Proposed sale notice; execution is not established by this filing.",
+          "amount_context": "$885,323.00 aggregate market value reported for the proposed securities; not completed-sale proceeds or available cash. Do not add to Form 4 sale totals.",
+          "footnotes": [],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/857855/000197248126000238/xsl144X01/primary_doc.xml",
+          "raw_path": "0001972481-26-000238.xml",
+          "sha256": "7216add0d8e1bb6739c02580dbea73eeb0d543e760648aedd95d6550c05b3ff1",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "cash_received": "UNKNOWN",
+          "identity_method": "Exact normalized named account subject + issuer matched uniquely to retained Form 4 identity; filing-agent CIK ignored"
         }
       ],
       "liquidity_total": 885250.0,
       "signal_type": "Liquidity",
       "source_classes": [
         "8K",
+        "FORM144",
         "FORM4"
       ],
       "convergence": 1
@@ -992,6 +1143,35 @@
           "value_class": "CALCULATED FROM VERIFIED FACT"
         },
         {
+          "id": "0001949846-26-000446:144:0",
+          "accession": "0001949846-26-000446",
+          "date": "2026-07-28",
+          "filed_date": "2026-07-28",
+          "source_class": "FORM144",
+          "code": null,
+          "classification": "PROPOSED_SALE",
+          "trigger_type": "PROPOSED_SALE",
+          "stage": "PROPOSED",
+          "value": null,
+          "value_class": "UNKNOWN",
+          "shares": null,
+          "price": null,
+          "proposed_shares": 10000.0,
+          "proposed_market_value": 339300.0,
+          "approximate_sale_date": "2026-07-28",
+          "planned": false,
+          "fact": "Form 144 names Deutsch Fred Joseph and gives notice of a proposed sale of 10,000 shares. Approximate sale date: 2026-07-28.",
+          "status": "Proposed sale notice; execution is not established by this filing.",
+          "amount_context": "$339,300.00 aggregate market value reported for the proposed securities; not completed-sale proceeds or available cash. Do not add to Form 4 sale totals.",
+          "footnotes": [],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/932781/000194984626000446/xsl144X01/primary_doc.xml",
+          "raw_path": "0001949846-26-000446.xml",
+          "sha256": "1fdfac578c0becd1fbb4d02896eee4bad020e71012b8bdcae241a16b7eb2a8cd",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "cash_received": "UNKNOWN",
+          "identity_method": "Exact normalized named account subject + issuer matched uniquely to retained Form 4 identity; filing-agent CIK ignored"
+        },
+        {
           "id": "0000932781-26-000044:1",
           "accession": "0000932781-26-000044",
           "row": 1,
@@ -1043,6 +1223,7 @@
       "liquidity_total": 647716.0,
       "signal_type": "Liquidity",
       "source_classes": [
+        "FORM144",
         "FORM4"
       ],
       "convergence": 0
@@ -1067,6 +1248,35 @@
         "place_geoid": "4530850"
       },
       "events": [
+        {
+          "id": "0001964306-26-000425:144:0",
+          "accession": "0001964306-26-000425",
+          "date": "2026-09-03",
+          "filed_date": "2026-09-03",
+          "source_class": "FORM144",
+          "code": null,
+          "classification": "PROPOSED_SALE",
+          "trigger_type": "PROPOSED_SALE",
+          "stage": "PROPOSED",
+          "value": null,
+          "value_class": "UNKNOWN",
+          "shares": null,
+          "price": null,
+          "proposed_shares": 10000.0,
+          "proposed_market_value": 567591.47,
+          "approximate_sale_date": "2026-09-03",
+          "planned": false,
+          "fact": "Form 144 names Jones Stephen and gives notice of a proposed sale of 10,000 shares. Approximate sale date: 2026-09-03.",
+          "status": "Proposed sale notice; execution is not established by this filing.",
+          "amount_context": "$567,591.47 aggregate market value reported for the proposed securities; not completed-sale proceeds or available cash. Do not add to Form 4 sale totals.",
+          "footnotes": [],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/918965/000196430626000425/xsl144X01/primary_doc.xml",
+          "raw_path": "0001964306-26-000425.xml",
+          "sha256": "80239fd66a9fb53c418cbd29125d5942ae33c3217246ea0531f46491ec117fc2",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "cash_received": "UNKNOWN",
+          "identity_method": "Exact normalized named account subject + issuer matched uniquely to retained Form 4 identity; filing-agent CIK ignored"
+        },
         {
           "id": "0001193125-26-382262:3",
           "accession": "0001193125-26-382262",
@@ -1259,6 +1469,7 @@
       "liquidity_total": 567574.44,
       "signal_type": "Liquidity",
       "source_classes": [
+        "FORM144",
         "FORM4"
       ],
       "convergence": 0
@@ -1283,6 +1494,35 @@
         "place_geoid": "4561405"
       },
       "events": [
+        {
+          "id": "0001973379-26-000340:144:0",
+          "accession": "0001973379-26-000340",
+          "date": "2026-09-17",
+          "filed_date": "2026-09-17",
+          "source_class": "FORM144",
+          "code": null,
+          "classification": "PROPOSED_SALE",
+          "trigger_type": "PROPOSED_SALE",
+          "stage": "PROPOSED",
+          "value": null,
+          "value_class": "UNKNOWN",
+          "shares": null,
+          "price": null,
+          "proposed_shares": 42686.0,
+          "proposed_market_value": 151456.37,
+          "approximate_sale_date": "2026-09-17",
+          "planned": false,
+          "fact": "Form 144 names GRAVES JEFFREY A and gives notice of a proposed sale of 42,686 shares. Approximate sale date: 2026-09-17.",
+          "status": "Proposed sale notice; execution is not established by this filing.",
+          "amount_context": "$151,456.37 aggregate market value reported for the proposed securities; not completed-sale proceeds or available cash. Do not add to Form 4 sale totals.",
+          "footnotes": [],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/910638/000197337926000340/xsl144X01/primary_doc.xml",
+          "raw_path": "0001973379-26-000340.xml",
+          "sha256": "e677bd171cfa1fba4b779e590445ddfa765361526dce000044ea0dbfd52f5b6f",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "cash_received": "UNKNOWN",
+          "identity_method": "Exact normalized named account subject + issuer matched uniquely to retained Form 4 identity; filing-agent CIK ignored"
+        },
         {
           "id": "0001628280-26-062712:0",
           "accession": "0001628280-26-062712",
@@ -1330,6 +1570,35 @@
           "sha256": "df354ddc339bb5a5514655eb5f6f5b2d1ccb3ed6352cc6363dd937cfbef5e314",
           "assertion_class": "VERIFIED PUBLIC FACT",
           "value_class": "CALCULATED FROM VERIFIED FACT"
+        },
+        {
+          "id": "0001959173-26-006268:144:0",
+          "accession": "0001959173-26-006268",
+          "date": "2026-08-20",
+          "filed_date": "2026-08-20",
+          "source_class": "FORM144",
+          "code": null,
+          "classification": "PROPOSED_SALE",
+          "trigger_type": "PROPOSED_SALE",
+          "stage": "PROPOSED",
+          "value": null,
+          "value_class": "UNKNOWN",
+          "shares": null,
+          "price": null,
+          "proposed_shares": 115500.0,
+          "proposed_market_value": 390967.0,
+          "approximate_sale_date": "2026-08-20",
+          "planned": false,
+          "fact": "Form 144 names GRAVES JEFFREY A and gives notice of a proposed sale of 115,500 shares. Approximate sale date: 2026-08-20.",
+          "status": "Proposed sale notice; execution is not established by this filing.",
+          "amount_context": "$390,967.00 aggregate market value reported for the proposed securities; not completed-sale proceeds or available cash. Do not add to Form 4 sale totals.",
+          "footnotes": [],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/910638/000195917326006268/xsl144X01/primary_doc.xml",
+          "raw_path": "0001959173-26-006268.xml",
+          "sha256": "068ddb97eb20b2de4c6fe0ff94a07194ab1d81877a954ddbf804c259a846dadf",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "cash_received": "UNKNOWN",
+          "identity_method": "Exact normalized named account subject + issuer matched uniquely to retained Form 4 identity; filing-agent CIK ignored"
         },
         {
           "id": "0001628280-26-058429:0",
@@ -1386,6 +1655,7 @@
       "signal_type": "Liquidity",
       "source_classes": [
         "8K",
+        "FORM144",
         "FORM4"
       ],
       "convergence": 1
@@ -1516,6 +1786,35 @@
       },
       "events": [
         {
+          "id": "0001243366-26-000001:144:0",
+          "accession": "0001243366-26-000001",
+          "date": "2026-09-18",
+          "filed_date": "2026-09-18",
+          "source_class": "FORM144",
+          "code": null,
+          "classification": "PROPOSED_SALE",
+          "trigger_type": "PROPOSED_SALE",
+          "stage": "PROPOSED",
+          "value": null,
+          "value_class": "UNKNOWN",
+          "shares": null,
+          "price": null,
+          "proposed_shares": 8045.0,
+          "proposed_market_value": 494162.16,
+          "approximate_sale_date": "2026-09-18",
+          "planned": false,
+          "fact": "Form 144 names ORDERS JAMES B III and gives notice of a proposed sale of 8,045 shares. Approximate sale date: 2026-09-18.",
+          "status": "Proposed sale notice; execution is not established by this filing.",
+          "amount_context": "$494,162.16 aggregate market value reported for the proposed securities; not completed-sale proceeds or available cash. Do not add to Form 4 sale totals.",
+          "footnotes": [],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1090009/000124336626000001/xsl144X01/primary_doc.xml",
+          "raw_path": "0001243366-26-000001.xml",
+          "sha256": "1b0055890975edee191ac36aa0fab81a9a2eb38a4e841cff437e36e4c009afa8",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "cash_received": "UNKNOWN",
+          "identity_method": "Exact normalized named account subject + issuer matched uniquely to retained Form 4 identity; filing-agent CIK ignored"
+        },
+        {
           "id": "0001090009-26-000106:0",
           "accession": "0001090009-26-000106",
           "row": 0,
@@ -1587,6 +1886,7 @@
       "liquidity_total": 499171.15,
       "signal_type": "Liquidity",
       "source_classes": [
+        "FORM144",
         "FORM4"
       ],
       "convergence": 0
@@ -1611,6 +1911,35 @@
         "place_geoid": "4530850"
       },
       "events": [
+        {
+          "id": "0001964306-26-000427:144:0",
+          "accession": "0001964306-26-000427",
+          "date": "2026-09-04",
+          "filed_date": "2026-09-04",
+          "source_class": "FORM144",
+          "code": null,
+          "classification": "PROPOSED_SALE",
+          "trigger_type": "PROPOSED_SALE",
+          "stage": "PROPOSED",
+          "value": null,
+          "value_class": "UNKNOWN",
+          "shares": null,
+          "price": null,
+          "proposed_shares": 5293.0,
+          "proposed_market_value": 303986.62,
+          "approximate_sale_date": "2026-09-04",
+          "planned": false,
+          "fact": "Form 144 names Ford Brandy and gives notice of a proposed sale of 5,293 shares. Approximate sale date: 2026-09-04.",
+          "status": "Proposed sale notice; execution is not established by this filing.",
+          "amount_context": "$303,986.62 aggregate market value reported for the proposed securities; not completed-sale proceeds or available cash. Do not add to Form 4 sale totals.",
+          "footnotes": [],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/918965/000196430626000427/xsl144X01/primary_doc.xml",
+          "raw_path": "0001964306-26-000427.xml",
+          "sha256": "08d4a5b1c933b83de97a56fda7f3a83eddd7545b632341bc3b8ae30c09fb9d66",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "cash_received": "UNKNOWN",
+          "identity_method": "Exact normalized named account subject + issuer matched uniquely to retained Form 4 identity; filing-agent CIK ignored"
+        },
         {
           "id": "0001193125-26-383791:1",
           "accession": "0001193125-26-383791",
@@ -1781,6 +2110,7 @@
       "liquidity_total": 303997.73,
       "signal_type": "Liquidity",
       "source_classes": [
+        "FORM144",
         "FORM4"
       ],
       "convergence": 0
@@ -2078,6 +2408,37 @@
       },
       "events": [
         {
+          "id": "0001628280-26-059856:144:0",
+          "accession": "0001628280-26-059856",
+          "date": "2026-09-01",
+          "filed_date": "2026-09-01",
+          "source_class": "FORM144",
+          "code": null,
+          "classification": "PROPOSED_SALE",
+          "trigger_type": "PROPOSED_SALE",
+          "stage": "PROPOSED",
+          "value": null,
+          "value_class": "UNKNOWN",
+          "shares": null,
+          "price": null,
+          "proposed_shares": 2000.0,
+          "proposed_market_value": 95058.04,
+          "approximate_sale_date": "2026-09-01",
+          "planned": true,
+          "fact": "Form 144 names Chad Anderson and gives notice of a proposed sale of 2,000 shares. Approximate sale date: 2026-09-01.",
+          "status": "Proposed sale notice; execution is not established by this filing.",
+          "amount_context": "$95,058.04 aggregate market value reported for the proposed securities; not completed-sale proceeds or available cash. Do not add to Form 4 sale totals.",
+          "footnotes": [
+            "Trading-plan adoption date(s): 02/27/2026"
+          ],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1280058/000162828026059856/xsl144X01/primary_doc.xml",
+          "raw_path": "0001628280-26-059856.xml",
+          "sha256": "4264bda2f0cc99565bb3329fa4b1601efe119924c01a9b1b12c67a5167bfa8cd",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "cash_received": "UNKNOWN",
+          "identity_method": "Exact normalized named account subject + issuer matched uniquely to retained Form 4 identity; filing-agent CIK ignored"
+        },
+        {
           "id": "0001492840-26-000014:0",
           "accession": "0001492840-26-000014",
           "row": 0,
@@ -2124,6 +2485,37 @@
           "sha256": "d6279797d796e785cd73130371f294ccf25481b81125966675ee362a66159e51",
           "assertion_class": "VERIFIED PUBLIC FACT",
           "value_class": "CALCULATED FROM VERIFIED FACT"
+        },
+        {
+          "id": "0001628280-26-039558:144:0",
+          "accession": "0001628280-26-039558",
+          "date": "2026-06-01",
+          "filed_date": "2026-06-01",
+          "source_class": "FORM144",
+          "code": null,
+          "classification": "PROPOSED_SALE",
+          "trigger_type": "PROPOSED_SALE",
+          "stage": "PROPOSED",
+          "value": null,
+          "value_class": "UNKNOWN",
+          "shares": null,
+          "price": null,
+          "proposed_shares": 6205.0,
+          "proposed_market_value": 194088.4,
+          "approximate_sale_date": "2026-06-01",
+          "planned": true,
+          "fact": "Form 144 names Chad Anderson and gives notice of a proposed sale of 6,205 shares. Approximate sale date: 2026-06-01.",
+          "status": "Proposed sale notice; execution is not established by this filing.",
+          "amount_context": "$194,088.40 aggregate market value reported for the proposed securities; not completed-sale proceeds or available cash. Do not add to Form 4 sale totals.",
+          "footnotes": [
+            "Trading-plan adoption date(s): 02/27/2026"
+          ],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1280058/000162828026039558/xsl144X01/primary_doc.xml",
+          "raw_path": "0001628280-26-039558.xml",
+          "sha256": "72d24c1aae2292c189d1e29dc1d263d921d268d500ef666cd97d432bd9ce06da",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "cash_received": "UNKNOWN",
+          "identity_method": "Exact normalized named account subject + issuer matched uniquely to retained Form 4 identity; filing-agent CIK ignored"
         },
         {
           "id": "0001492840-26-000010:0",
@@ -2177,6 +2569,7 @@
       "liquidity_total": 289398.55,
       "signal_type": "Liquidity",
       "source_classes": [
+        "FORM144",
         "FORM4"
       ],
       "convergence": 0
@@ -2246,6 +2639,35 @@
           "value_class": "CALCULATED FROM VERIFIED FACT"
         },
         {
+          "id": "0001950047-26-007505:144:0",
+          "accession": "0001950047-26-007505",
+          "date": "2026-08-03",
+          "filed_date": "2026-08-03",
+          "source_class": "FORM144",
+          "code": null,
+          "classification": "PROPOSED_SALE",
+          "trigger_type": "PROPOSED_SALE",
+          "stage": "PROPOSED",
+          "value": null,
+          "value_class": "UNKNOWN",
+          "shares": null,
+          "price": null,
+          "proposed_shares": 2709.0,
+          "proposed_market_value": 199703.8,
+          "approximate_sale_date": "2026-08-03",
+          "planned": false,
+          "fact": "Form 144 names RYAN C FISHER and gives notice of a proposed sale of 2,709 shares. Approximate sale date: 2026-08-03.",
+          "status": "Proposed sale notice; execution is not established by this filing.",
+          "amount_context": "$199,703.80 aggregate market value reported for the proposed securities; not completed-sale proceeds or available cash. Do not add to Form 4 sale totals.",
+          "footnotes": [],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1653477/000195004726007505/xsl144X01/primary_doc.xml",
+          "raw_path": "0001950047-26-007505.xml",
+          "sha256": "19ba4a2b6ff994e2a3eadb93f59636b54d242dfdc28829e34b5a9c02a1d70624",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "cash_received": "UNKNOWN",
+          "identity_method": "Exact normalized named account subject + issuer matched uniquely to retained Form 4 identity; filing-agent CIK ignored"
+        },
+        {
           "id": "0001653477-26-000039:0",
           "accession": "0001653477-26-000039",
           "row": 0,
@@ -2274,6 +2696,7 @@
       "liquidity_total": 199697.76,
       "signal_type": "Liquidity",
       "source_classes": [
+        "FORM144",
         "FORM4"
       ],
       "convergence": 0
@@ -2298,6 +2721,35 @@
         "place_geoid": "4530850"
       },
       "events": [
+        {
+          "id": "0001964306-26-000437:144:0",
+          "accession": "0001964306-26-000437",
+          "date": "2026-09-11",
+          "filed_date": "2026-09-11",
+          "source_class": "FORM144",
+          "code": null,
+          "classification": "PROPOSED_SALE",
+          "trigger_type": "PROPOSED_SALE",
+          "stage": "PROPOSED",
+          "value": null,
+          "value_class": "UNKNOWN",
+          "shares": null,
+          "price": null,
+          "proposed_shares": 3000.0,
+          "proposed_market_value": 174000.0,
+          "approximate_sale_date": "2026-09-11",
+          "planned": false,
+          "fact": "Form 144 names Mathis Charles Alexander and gives notice of a proposed sale of 3,000 shares. Approximate sale date: 2026-09-11.",
+          "status": "Proposed sale notice; execution is not established by this filing.",
+          "amount_context": "$174,000.00 aggregate market value reported for the proposed securities; not completed-sale proceeds or available cash. Do not add to Form 4 sale totals.",
+          "footnotes": [],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/918965/000196430626000437/xsl144X01/primary_doc.xml",
+          "raw_path": "0001964306-26-000437.xml",
+          "sha256": "2241faad7e0b9996dbad0e240bb6b80a85d97426528d7e519a847b4041e0ef72",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "cash_received": "UNKNOWN",
+          "identity_method": "Exact normalized named account subject + issuer matched uniquely to retained Form 4 identity; filing-agent CIK ignored"
+        },
         {
           "id": "0001193125-26-390649:0",
           "accession": "0001193125-26-390649",
@@ -2346,6 +2798,7 @@
       "liquidity_total": 174000.0,
       "signal_type": "Liquidity",
       "source_classes": [
+        "FORM144",
         "FORM4"
       ],
       "convergence": 0
@@ -2370,6 +2823,35 @@
         "place_geoid": "4561405"
       },
       "events": [
+        {
+          "id": "0001973379-26-000339:144:0",
+          "accession": "0001973379-26-000339",
+          "date": "2026-09-17",
+          "filed_date": "2026-09-17",
+          "source_class": "FORM144",
+          "code": null,
+          "classification": "PROPOSED_SALE",
+          "trigger_type": "PROPOSED_SALE",
+          "stage": "PROPOSED",
+          "value": null,
+          "value_class": "UNKNOWN",
+          "shares": null,
+          "price": null,
+          "proposed_shares": 30000.0,
+          "proposed_market_value": 107351.07,
+          "approximate_sale_date": "2026-09-17",
+          "planned": false,
+          "fact": "Form 144 names Nordstrom Phyllis B and gives notice of a proposed sale of 30,000 shares. Approximate sale date: 2026-09-17.",
+          "status": "Proposed sale notice; execution is not established by this filing.",
+          "amount_context": "$107,351.07 aggregate market value reported for the proposed securities; not completed-sale proceeds or available cash. Do not add to Form 4 sale totals.",
+          "footnotes": [],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/910638/000197337926000339/xsl144X01/primary_doc.xml",
+          "raw_path": "0001973379-26-000339.xml",
+          "sha256": "a027b0ce9d933698b99b035dcc8d44a8b5699aba900f372f999dc364ac6997c2",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "cash_received": "UNKNOWN",
+          "identity_method": "Exact normalized named account subject + issuer matched uniquely to retained Form 4 identity; filing-agent CIK ignored"
+        },
         {
           "id": "0001628280-26-062715:0",
           "accession": "0001628280-26-062715",
@@ -2446,6 +2928,7 @@
       "liquidity_total": 107400.0,
       "signal_type": "Liquidity",
       "source_classes": [
+        "FORM144",
         "FORM4"
       ],
       "convergence": 0
@@ -2521,6 +3004,35 @@
       },
       "events": [
         {
+          "id": "0001974078-26-000285:144:0",
+          "accession": "0001974078-26-000285",
+          "date": "2026-08-03",
+          "filed_date": "2026-08-03",
+          "source_class": "FORM144",
+          "code": null,
+          "classification": "PROPOSED_SALE",
+          "trigger_type": "PROPOSED_SALE",
+          "stage": "PROPOSED",
+          "value": null,
+          "value_class": "UNKNOWN",
+          "shares": null,
+          "price": null,
+          "proposed_shares": 1500.0,
+          "proposed_market_value": 94500.0,
+          "approximate_sale_date": "2026-08-03",
+          "planned": false,
+          "fact": "Form 144 names Fairchild Julie Ann and gives notice of a proposed sale of 1,500 shares. Approximate sale date: 2026-08-03.",
+          "status": "Proposed sale notice; execution is not established by this filing.",
+          "amount_context": "$94,500.00 aggregate market value reported for the proposed securities; not completed-sale proceeds or available cash. Do not add to Form 4 sale totals.",
+          "footnotes": [],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1090009/000197407826000285/xsl144X01/primary_doc.xml",
+          "raw_path": "0001974078-26-000285.xml",
+          "sha256": "a923b5c5c529ab37950145146fc8da7b8118aae9a97a0706ddc0c59355e0ac0b",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "cash_received": "UNKNOWN",
+          "identity_method": "Exact normalized named account subject + issuer matched uniquely to retained Form 4 identity; filing-agent CIK ignored"
+        },
+        {
           "id": "0001090009-26-000090:0",
           "accession": "0001090009-26-000090",
           "row": 0,
@@ -2546,6 +3058,7 @@
       "liquidity_total": 94500.0,
       "signal_type": "Liquidity",
       "source_classes": [
+        "FORM144",
         "FORM4"
       ],
       "convergence": 0
@@ -5717,5 +6230,35 @@
     }
   ],
   "transition_filings": 5,
-  "transition_errors": []
+  "transition_errors": [],
+  "form144": {
+    "discovered": 21,
+    "validated": 17,
+    "errors": [
+      {
+        "accession": "0001628280-26-059603",
+        "error": "No unique exact subject / issuer match; hold for review",
+        "adapter": "form144"
+      },
+      {
+        "accession": "0001628280-26-058919",
+        "error": "No unique exact subject / issuer match; hold for review",
+        "adapter": "form144"
+      },
+      {
+        "accession": "0001628280-26-054402",
+        "error": "No unique exact subject / issuer match; hold for review",
+        "adapter": "form144"
+      },
+      {
+        "accession": "0001176402-26-000003",
+        "error": "No unique exact subject / issuer match; hold for review",
+        "adapter": "form144"
+      }
+    ]
+  },
+  "reviewed_triggers": {
+    "validated": 0,
+    "errors": []
+  }
 }

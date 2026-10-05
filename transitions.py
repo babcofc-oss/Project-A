@@ -41,7 +41,7 @@ def merge_reviewed(records, root=ROOT):
     people = {p['id']:p for p in records}
     # Idempotent refresh: replace only this adapter's reviewed events.
     for p in records:
-        p['events'] = [e for e in p['events'] if e.get('source_class') != '8K']
+        p['events'] = [e for e in p['events'] if not (e.get('source_class') == '8K' and not e.get('reviewed_trigger'))]
     errors=[]
     accepted=set()
     for entry in manifest:

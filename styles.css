@@ -9,3 +9,5 @@ button,input,select{font:inherit}button,a,input,select{touch-action:manipulation
 .pilot{margin-top:18px}.pilot textarea{width:100%;box-sizing:border-box}.pilot .source{overflow-wrap:anywhere}
 
 @media(max-width:850px){.controls select,.brief select,.brief textarea,.pilot textarea{font-size:16px}}
+
+.trigger-guide{margin-top:24px}.trigger-guide .evidence{border-bottom:1px solid var(--line);padding:16px 20px}.trigger-help{padding:12px 20px;color:#b6c7bd;border-bottom:1px solid #233c31;line-height:1.6}

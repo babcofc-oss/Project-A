@@ -13,6 +13,10 @@ class IntegrityTests(unittest.TestCase):
                 raw=(ROOT/event['raw_path']).read_bytes()
                 self.assertEqual(hashlib.sha256(raw).hexdigest(),event['sha256'])
                 if event.get('source_class')=='8K':continue
+                if event.get('source_class')=='FORM144':
+                    from form144 import parse
+                    parsed,events=parse(raw,event['accession'],event['filed_date'],event['source_url'],CATALOG['records'],person['issuer_cik'])
+                    self.assertEqual(parsed['id'],person['id']);self.assertIn(event['id'],[e['id'] for e in events]);self.assertIsNone(event['value']);continue
                 parsed=parse_xml(raw,event['accession'],event['source_url'],event['filed_date'])
                 self.assertEqual(parsed['id'],person['id'])
                 self.assertIn(event['id'],[e['id'] for e in parsed['events']])
@@ -30,9 +34,9 @@ class IntegrityTests(unittest.TestCase):
     def test_anderson_cluster_and_arithmetic(self):
         rows=[p for p in CATALOG['records'] if int(p['person_cik'])==1492840]
         self.assertEqual(len(rows),1)
-        june=next(e for e in rows[0]['events'] if e['date']=='2026-06-01')
+        june=next(e for e in rows[0]['events'] if e['date']=='2026-06-01' and e['classification']=='LIQUIDITY')
         self.assertEqual(june['value'],194278.55)
-        september=next(e for e in rows[0]['events'] if e['date']=='2026-09-01')
+        september=next(e for e in rows[0]['events'] if e['date']=='2026-09-01' and e['classification']=='LIQUIDITY')
         self.assertTrue(september['planned'])
     def test_graves_withholding_excluded_but_sales_retained(self):
         person=next(p for p in CATALOG['records'] if int(p['person_cik'])==1251036)

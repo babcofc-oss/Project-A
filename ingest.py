@@ -107,9 +107,10 @@ def process(row):
     return parse_xml(body, accession, source, filed)
 
 def run():
-    rows = []
+    rows = []; submissions = {}
     for cik in ISSUERS:
         submission = json.loads(fetch(f'https://data.sec.gov/submissions/CIK{int(cik):010d}.json', INPUTS / ('submissions-' + cik + '-' + TODAY.isoformat() + '.json')))
+        submissions[cik]=submission
         recent = submission['filings']['recent']
         for i, form in enumerate(recent['form']):
             if form == '4' and recent['filingDate'][i] >= '2026-06-01':
@@ -144,11 +145,14 @@ def run():
     for person in records: enrich(person['location'], ROOT / 'geography.json')
     from transitions import merge_reviewed
     reviewed, transition_errors = merge_reviewed(records)
+    from form144 import merge as merge_form144
+    from reviewed_triggers import merge as merge_other
+    proposed=merge_form144(records,submissions); other=merge_other(records)
     records.sort(key=lambda r:r['liquidity_total'], reverse=True)
-    result = {'version':'project-a-11', 'validated_at':datetime.now(timezone.utc).isoformat(), 'coverage_start':'2026-06-01',
-              'source':'SEC EDGAR', 'issuer_count':len(ISSUERS), 'refresh':'Reviewed repository snapshot; not a live stream', 'scoring_version':'money-in-motion-v3',
+    result = {'version':'project-a-12', 'validated_at':datetime.now(timezone.utc).isoformat(), 'coverage_start':'2026-06-01',
+              'source':'SEC EDGAR', 'issuer_count':len(ISSUERS), 'refresh':'Reviewed repository snapshot; not a live stream', 'scoring_version':'money-in-motion-v4',
               'discovered_filings':len(rows), 'validated_filings':len(rows)-len(errors), 'errors':errors,
-              'transition_filings':len(reviewed), 'transition_errors':transition_errors, 'records':records}
+              'form144':proposed, 'reviewed_triggers':other, 'transition_filings':len(reviewed), 'transition_errors':transition_errors, 'records':records}
     if not records: raise RuntimeError('No validated records; retaining previous catalog')
     (ROOT / 'catalog.json').write_text(json.dumps(result, indent=2))
     print(json.dumps({'people':len(records),'liquidity_opportunities':sum(r['signal_type']=='Liquidity' for r in records),'errors':errors},indent=2))
