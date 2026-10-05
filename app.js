@@ -72,9 +72,9 @@ function generateBrief(){
 }
 function downloadFile(name,text,type){
   let panel=$('textExport');
-  if(!panel){panel=document.createElement('div');panel.id='textExport';panel.innerHTML='<h4>Text export</h4><p class="note">Copy this export to share it. It includes evidence sources and uncertainty labels.</p><textarea id="exportText" aria-label="Exported text" readonly rows="8"></textarea><button class="cta secondary" id="copyExport">Copy exported text</button><p class="note" id="exportStatus" role="status"></p>';$('brief').appendChild(panel);}
+  if(!panel){panel=document.createElement('div');panel.id='textExport';panel.innerHTML='<h4>Text export</h4><p class="note">Copy this export to share it. It includes evidence sources and uncertainty labels.</p><textarea id="exportText" aria-label="Exported text" readonly rows="8"></textarea><button class="cta secondary" id="copyExport">Select exported text</button><p class="note" id="exportStatus" role="status"></p>';$('brief').appendChild(panel);}
   $('exportText').value=text;
-  $('copyExport').onclick=()=>{$('exportText').focus();$('exportText').select();const copied=document.execCommand('copy');$('exportStatus').textContent=copied?'Export copied.':'Select the text above and copy it with your browser.';};
+  $('copyExport').onclick=()=>{$('exportText').focus();$('exportText').select();$('exportStatus').textContent='Text selected. Use Copy or Share in your browser to send this export.';};
   panel.scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 
