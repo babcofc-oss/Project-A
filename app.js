@@ -68,7 +68,7 @@ function renderDetail(){
   const sources=[...new Map(p.events.flatMap(e=>[{...e},...(e.evidence_sources||[]).map(source=>({...source,accession:e.accession,filed_date:e.filed_date}))]).map(e=>[e.source_url,e])).values()];
   $('sourceCount').textContent=`${sources.length} PRIMARY DISCLOSURES`;
   $('evidenceTrail').innerHTML=`<div class="evidence"><b>VERIFIED PUBLIC FACT</b><p>Disclosed identity and event facts are supported by ${sources.length} retained primary disclosure${sources.length===1?'':'s'}. Role reflects disclosure date; current role must be reconfirmed.</p></div><div class="evidence"><b>CALCULATED FROM VERIFIED FACT</b><p>${sales.length?money(c.total)+' gross sale value. Reported shares × reported prices; prices may be rounded weighted averages.':privateIdentity?'Company acquisition confirmed; price and individual proceeds UNKNOWN. No value added to completed-stock-sale totals.':'No ordinary sale value inferred from non-sale codes.'}</p></div><div class="evidence"><b>MODEL INFERENCE / UNKNOWN</b><p>${esc(why)} Current role, planning needs, existing advisor relationship, net proceeds, available funds and total wealth remain UNKNOWN.</p></div>`;
-  $('evidenceDrawer').innerHTML=sources.map(e=>`<article class="evidence"><b>${esc(e.authority_domain||e.accession)} · VERIFIED PUBLIC FACT</b><p>${privateIdentity?'Published':'Filed'} ${esc(e.filed_date)} · source SHA-256 ${esc(e.sha256)}</p><a class="source" href="${esc(e.source_url)}" target="_blank" rel="noopener noreferrer">Open primary source ↗</a><a class="source" href="${esc(e.raw_path)}" target="_blank" rel="noopener">Inspect retained disclosure ↗</a></article>`).join('')+`<a class="source" href="${esc(p.location.source_url)}" target="_blank" rel="noopener">Geography provenance ↗</a>${p.location.geo_source?`<a class="source" href="${esc(p.location.geo_source)}" target="_blank" rel="noopener">Census geography provenance ↗</a>`:''}`;
+  $('evidenceDrawer').innerHTML=sources.map(e=>`<article class="evidence"><b>${esc(e.authority_domain||e.accession)} · VERIFIED PUBLIC FACT</b><p>${privateIdentity?'Published':'Filed'} ${esc(e.filed_date)} · source SHA-256 ${esc(e.sha256)}</p><a class="source" href="${esc(e.source_url)}" target="_blank" rel="noopener noreferrer">Open primary source ↗</a><button class="source retained-button" data-retained="${esc(e.raw_path)}" data-fingerprint="${esc(e.sha256)}">Inspect retained disclosure</button></article>`).join('')+`<a class="source" href="${esc(p.location.source_url)}" target="_blank" rel="noopener">Geography provenance ↗</a>${p.location.geo_source?`<a class="source" href="${esc(p.location.geo_source)}" target="_blank" rel="noopener">Census geography provenance ↗</a>`:''}`;
   $('evidenceDrawer').hidden=true;$('evidenceButton').setAttribute('aria-expanded','false');$('evidenceButton').textContent='Open evidence details';
   renderContacts(p);
   $('scoreRows').innerHTML=c.parts.map(part=>`<div><div class="row"><span>${esc(part.label)}</span><b>${part.points<0?'−'+Math.abs(part.points):part.points}${part.points<0?' adjustment':' / '+part.max}</b></div>${part.points>0?`<div class="bar"><i style="width:${100*part.points/part.max}%"></i></div>`:''}<p class="note" style="margin:6px 0 12px">${esc(part.reason)}</p></div>`).join('')+`<p class="note">Version ${esc(c.version)} · evaluated ${new Date().toISOString().slice(0,10)} · sum = ${c.value}</p>`;
@@ -85,7 +85,7 @@ function renderContacts(p){
   const groups=[...new Map(routes.map(r=>[r.source_url+'|'+r.scope,r])).values()];
   $('contactRoutes').innerHTML=routes.length?groups.map(g=>{
     const rs=routes.filter(r=>r.source_url===g.source_url&&r.scope===g.scope);
-    return `<article class="evidence contact-route"><span class="tag">${esc(g.scope.replaceAll('_',' '))} · VERIFIED PUBLIC FACT</span><h3>${esc(g.organization)}</h3>${rs.map(r=>{const href=r.kind==='PHONE'?'tel:'+r.target:r.kind==='EMAIL'?'mailto:'+r.target:r.target;return `<div class="contact-item"><span class="note">${esc(r.label)}</span><a class="source contact-value" href="${esc(href)}" ${r.kind==='WEBSITE'?'target="_blank" rel="noopener noreferrer"':''}>${r.kind==='WEBSITE'?(r.scope==='PROFESSIONAL_PROFILE'||r.scope==='NAMED_PROFESSIONAL'?'Open named professional profile ↗':'Open official company page ↗'):esc(r.value)}</a></div>`;}).join('')}${[...new Set(rs.map(r=>r.purpose))].map(purpose=>`<p>${esc(purpose)}</p>`).join('')}<p class="note">Reviewed ${esc(g.reviewed_at)} · Publication verified; reachability and consent UNKNOWN. Re-review within 90 days.</p><div class="actions"><a class="source" href="${esc(g.source_url)}" target="_blank" rel="noopener noreferrer">Verify contact source ↗</a><a class="source" href="${esc(g.raw_path)}" target="_blank" rel="noopener">Retained source ↗</a></div></article>`;
+    return `<article class="evidence contact-route"><span class="tag">${esc(g.scope.replaceAll('_',' '))} · VERIFIED PUBLIC FACT</span><h3>${esc(g.organization)}</h3>${rs.map(r=>{const href=r.kind==='PHONE'?'tel:'+r.target:r.kind==='EMAIL'?'mailto:'+r.target:r.target;return `<div class="contact-item"><span class="note">${esc(r.label)}</span><a class="source contact-value" href="${esc(href)}" ${r.kind==='WEBSITE'?'target="_blank" rel="noopener noreferrer"':''}>${r.kind==='WEBSITE'?(r.scope==='PROFESSIONAL_PROFILE'||r.scope==='NAMED_PROFESSIONAL'?'Open named professional profile ↗':'Open official company page ↗'):esc(r.value)}</a></div>`;}).join('')}${[...new Set(rs.map(r=>r.purpose))].map(purpose=>`<p>${esc(purpose)}</p>`).join('')}<p class="note">Reviewed ${esc(g.reviewed_at)} · Publication verified; reachability and consent UNKNOWN. Re-review within 90 days.</p><div class="actions"><a class="source" href="${esc(g.source_url)}" target="_blank" rel="noopener noreferrer">Verify contact source ↗</a><button class="source retained-button" data-retained="${esc(g.raw_path)}" data-fingerprint="${esc(g.sha256)}">Inspect retained source</button></div></article>`;
   }).join(''):'<p class="empty">No current verified professional route. Contact evidence is missing or due for re-review; email and phone UNKNOWN.</p>';
 }
 function generateBrief(){
@@ -195,3 +195,25 @@ async function load(){
   }catch(error){catalog=null;people=[];selected=null;$('detail').hidden=true;$('error').hidden=false;$('error').textContent=`Could not load evidence: ${error.message}. No opportunities or scores are asserted. Reload to retry.`;$('leads').innerHTML='<p class="empty">Evidence unavailable. No records released.</p>';$('coverage').textContent='Source coverage unavailable';$('systemStatus').textContent='Evidence unavailable';for(const id of ['mCount','mValue','mHigh','mFresh'])$(id).textContent='UNKNOWN';}
 }
 load();
+
+let evidenceRequest=0,evidenceReturnFocus=null;
+document.addEventListener('click',async event=>{
+  const button=event.target.closest('[data-retained]');if(!button)return;
+  const request=++evidenceRequest;evidenceReturnFocus=button;
+  $('sourceViewer').showModal();$('sourceTitle').textContent='Retained evidence · '+button.dataset.retained;
+  $('sourceStatus').textContent='Loading retained source and checking its SHA-256 fingerprint…';
+  $('sourceText').value='';$('selectSourceText').disabled=true;
+  try{
+    const result=await ProjectEvidence.load({path:button.dataset.retained,sha256:button.dataset.fingerprint});
+    if(request!==evidenceRequest)return;
+    $('sourceStatus').textContent='FINGERPRINT MATCH · Retained bytes match the reviewed evidence ledger. This checks archive integrity, not current website content or a new verification of the underlying assertion.';
+    $('sourceText').value=result.text;$('selectSourceText').disabled=false;
+  }catch(error){
+    if(request!==evidenceRequest)return;
+    $('sourceStatus').textContent='Evidence preview unavailable: '+error.message+' Use the official primary-source link to investigate. Unverified archive content is withheld.';
+  }
+});
+function closeSourceViewer(){evidenceRequest++;$('sourceViewer').close();$('sourceText').value='';evidenceReturnFocus?.focus();}
+$('closeSourceViewer').onclick=closeSourceViewer;
+$('sourceViewer').addEventListener('cancel',event=>{event.preventDefault();closeSourceViewer();});
+$('selectSourceText').onclick=()=>{$('sourceText').focus();$('sourceText').select();};
