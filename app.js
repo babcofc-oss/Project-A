@@ -196,18 +196,26 @@ async function load(){
 }
 load();
 
-let evidenceRequest=0,evidenceReturnFocus=null;
+let evidenceRequest=0,evidenceReturnFocus=null,evidenceOriginal="",evidenceReading="";
 document.addEventListener('click',async event=>{
   const button=event.target.closest('[data-retained]');if(!button)return;
   const request=++evidenceRequest;evidenceReturnFocus=button;
   $('sourceViewer').showModal();$('sourceTitle').textContent='Retained evidence · '+button.dataset.retained;
   $('sourceStatus').textContent='Loading retained source and checking its SHA-256 fingerprint…';
-  $('sourceText').value='';$('selectSourceText').disabled=true;
+  $('sourceText').value='';$('selectSourceText').disabled=true;$('toggleSourceView').disabled=true;$('sourceViewLabel').textContent='Original source text';
   try{
     const result=await ProjectEvidence.load({path:button.dataset.retained,sha256:button.dataset.fingerprint});
     if(request!==evidenceRequest)return;
     $('sourceStatus').textContent='FINGERPRINT MATCH · Retained bytes match the reviewed evidence ledger. This checks archive integrity, not current website content or a new verification of the underlying assertion.';
-    $('sourceText').value=result.text;$('selectSourceText').disabled=false;
+    evidenceOriginal=result.text;evidenceReading=result.text;
+    if(/<(?:!doctype html|html)[\s>]/i.test(result.text)){
+      const archive=document.createElement('template');archive.innerHTML=result.text;
+      archive.content.querySelectorAll('script,style,noscript,template,svg,iframe,object,embed,link,meta,img,input,button,nav,header,footer').forEach(node=>node.remove());
+      archive.content.querySelectorAll('p,h1,h2,h3,h4,div,li,section,article,br,tr').forEach(node=>node.appendChild(document.createTextNode('\n')));
+      evidenceReading=archive.content.textContent.replace(/[ \t]+/g,' ').replace(/ *\n */g,'\n').replace(/\n{3,}/g,'\n\n').trim();
+    }
+    $('sourceText').value=evidenceReading;$('sourceText').wrap='soft';$('selectSourceText').disabled=false;$('toggleSourceView').disabled=evidenceReading===evidenceOriginal;
+    $('sourceViewLabel').textContent=evidenceReading===evidenceOriginal?'Original source text':'Reading view · extracted from fingerprint-matched archive';$('toggleSourceView').textContent='Show original markup';
   }catch(error){
     if(request!==evidenceRequest)return;
     $('sourceStatus').textContent='Evidence preview unavailable: '+error.message+' Use the official primary-source link to investigate. Unverified archive content is withheld.';
@@ -217,3 +225,5 @@ function closeSourceViewer(){evidenceRequest++;$('sourceViewer').close();$('sour
 $('closeSourceViewer').onclick=closeSourceViewer;
 $('sourceViewer').addEventListener('cancel',event=>{event.preventDefault();closeSourceViewer();});
 $('selectSourceText').onclick=()=>{$('sourceText').focus();$('sourceText').select();};
+
+$('toggleSourceView').onclick=()=>{const raw=$('toggleSourceView').textContent==='Show original markup';$('sourceText').value=raw?evidenceOriginal:evidenceReading;$('sourceViewLabel').textContent=raw?'Original source text':'Reading view · extracted from fingerprint-matched archive';$('toggleSourceView').textContent=raw?'Show reading view':'Show original markup';};
