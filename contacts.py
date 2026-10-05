@@ -12,6 +12,8 @@ AUTHORITIES={'0001280058':{'www.blackbaud.com'},'0000918965':{'www.scansource.co
 NAMED_AUTHORITIES={
  'person-1243370-issuer-1090009':'https://www.southernfirst.com/contact/find-a-banker/art-seaver',
  'person-1601818-issuer-1280058':'https://www.blackbaud.com/company/executive-leadership/kevin-gregoire',
+ 'person-1492840-issuer-1280058':'https://www.blackbaud.com/company/executive-leadership/chad-anderson',
+ 'person-1436880-issuer-1653477':'https://www.ingevity.com/about/leadership/dave-li/',
  'person-2017486-issuer-1653477':'https://www.ingevity.com/about/leadership/ryan-fisher/'
 }
 def published_email(body,anchor):

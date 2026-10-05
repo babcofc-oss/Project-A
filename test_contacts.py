@@ -8,7 +8,7 @@ class ContactIntegrity(unittest.TestCase):
   self.catalog=json.loads((ROOT/'catalog.json').read_text());self.groups=json.loads((ROOT/'reviewed-contacts.json').read_text())['groups'];self.today=date(2026,10,5)
  def test_all_routes_have_retained_primary_provenance(self):
   report=contacts.merge(self.catalog['records'],today=self.today)
-  self.assertEqual(report['errors'],[]);self.assertEqual(report['people_with_company_routes'],70);self.assertEqual(report['distinct_published_routes'],23);self.assertEqual(report['direct_contacts'],0)
+  self.assertEqual(report['errors'],[]);self.assertEqual(report['people_with_company_routes'],70);self.assertEqual(report['distinct_published_routes'],25);self.assertEqual(report['direct_contacts'],0)
   for p in self.catalog['records']:
    self.assertEqual(p['contacts']['direct_email'],'UNKNOWN')
    self.assertEqual(p['contacts']['direct_phone'],'UNKNOWN')

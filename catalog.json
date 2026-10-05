@@ -663,6 +663,24 @@
             "source_url": "https://www.ingevity.com/contact/",
             "raw_path": "contact-source-ingevity.txt",
             "sha256": "dc3ff681fa36b6d6affbeefefe95c98fb3272271f66d9ecf868aeb097c08d9ec"
+          },
+          {
+            "kind": "WEBSITE",
+            "label": "Official named professional profile",
+            "value": "https://www.ingevity.com/about/leadership/dave-li/",
+            "target": "https://www.ingevity.com/about/leadership/dave-li/",
+            "anchor": "David H. Li (Dave)",
+            "purpose": "Official professional biography for identity / role research. A profile does not publish a named email or phone; reachability and consent UNKNOWN.",
+            "scope": "PROFESSIONAL_PROFILE",
+            "organization": "Ingevity Corp",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": "person-1436880-issuer-1653477",
+            "subject_name": "Li David H",
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.ingevity.com/about/leadership/dave-li/",
+            "raw_path": "contact-source-person-li.txt",
+            "sha256": "dedd5ff6d82126f7a9e9e2bceaeadbfecfd137c2d6bf8701f565d1310546b0ad"
           }
         ]
       }
@@ -3244,6 +3262,24 @@
             "source_url": "https://www.blackbaud.com/company/contact-us",
             "raw_path": "contact-source-blackbaud.txt",
             "sha256": "2f11b2e0aac4ef09a624af4a390e1c664e2b464159fcd5554bd326326b9767e9"
+          },
+          {
+            "kind": "WEBSITE",
+            "label": "Official named professional profile",
+            "value": "https://www.blackbaud.com/company/executive-leadership/chad-anderson",
+            "target": "https://www.blackbaud.com/company/executive-leadership/chad-anderson",
+            "anchor": "Chad Anderson",
+            "purpose": "Official professional biography for identity / role research. A profile does not publish a named email or phone; reachability and consent UNKNOWN.",
+            "scope": "PROFESSIONAL_PROFILE",
+            "organization": "BLACKBAUD INC",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": "person-1492840-issuer-1280058",
+            "subject_name": "Anderson Chad",
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.blackbaud.com/company/executive-leadership/chad-anderson",
+            "raw_path": "contact-source-person-anderson.txt",
+            "sha256": "047eb9b64d0118a1cccbcb101bad80e80b21e63a069d668b3e1f10798a8442db"
           }
         ]
       }
@@ -9517,9 +9553,9 @@
   "contact_enrichment": {
     "version": "professional-contacts-v2",
     "people_with_company_routes": 70,
-    "distinct_published_routes": 23,
+    "distinct_published_routes": 25,
     "people_with_named_contacts": 1,
-    "people_with_named_profiles": 3,
+    "people_with_named_profiles": 5,
     "direct_contacts": 0,
     "refresh_window_days": 90,
     "errors": []

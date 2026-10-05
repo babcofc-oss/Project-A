@@ -380,6 +380,66 @@
           "purpose": "Official professional biography for identity / role research. A profile is not a way to contact the person; direct contact and consent UNKNOWN."
         }
       ]
+    },
+    {
+      "issuer_cik": "0001280058",
+      "company": "BLACKBAUD INC",
+      "organization": "BLACKBAUD INC",
+      "scope": "PROFESSIONAL_PROFILE",
+      "person_ids": [
+        "person-1492840-issuer-1280058"
+      ],
+      "subject_name": "Anderson Chad",
+      "identity_anchors": [
+        "Chad Anderson",
+        "Executive Vice President and Chief Financial Officer",
+        "Blackbaud"
+      ],
+      "reviewed_at": "2026-10-05",
+      "company_anchor": "Blackbaud",
+      "source_url": "https://www.blackbaud.com/company/executive-leadership/chad-anderson",
+      "raw_path": "contact-source-person-anderson.txt",
+      "sha256": "047eb9b64d0118a1cccbcb101bad80e80b21e63a069d668b3e1f10798a8442db",
+      "routes": [
+        {
+          "kind": "WEBSITE",
+          "label": "Official named professional profile",
+          "value": "https://www.blackbaud.com/company/executive-leadership/chad-anderson",
+          "target": "https://www.blackbaud.com/company/executive-leadership/chad-anderson",
+          "anchor": "Chad Anderson",
+          "purpose": "Official professional biography for identity / role research. A profile does not publish a named email or phone; reachability and consent UNKNOWN."
+        }
+      ]
+    },
+    {
+      "issuer_cik": "0001653477",
+      "company": "Ingevity Corp",
+      "organization": "Ingevity Corp",
+      "scope": "PROFESSIONAL_PROFILE",
+      "person_ids": [
+        "person-1436880-issuer-1653477"
+      ],
+      "subject_name": "Li David H",
+      "identity_anchors": [
+        "David H. Li (Dave)",
+        "President and CEO",
+        "Ingevity"
+      ],
+      "reviewed_at": "2026-10-05",
+      "company_anchor": "Ingevity",
+      "source_url": "https://www.ingevity.com/about/leadership/dave-li/",
+      "raw_path": "contact-source-person-li.txt",
+      "sha256": "dedd5ff6d82126f7a9e9e2bceaeadbfecfd137c2d6bf8701f565d1310546b0ad",
+      "routes": [
+        {
+          "kind": "WEBSITE",
+          "label": "Official named professional profile",
+          "value": "https://www.ingevity.com/about/leadership/dave-li/",
+          "target": "https://www.ingevity.com/about/leadership/dave-li/",
+          "anchor": "David H. Li (Dave)",
+          "purpose": "Official professional biography for identity / role research. A profile does not publish a named email or phone; reachability and consent UNKNOWN."
+        }
+      ]
     }
   ]
 }
