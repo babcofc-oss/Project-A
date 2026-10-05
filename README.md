@@ -55,3 +55,7 @@ The trigger registry adds business exits, IPO / secondary offerings, ownership c
 `form144.py` runs within ingestion. `reviewed_triggers.py` provides a release gate for additional manually reviewed evidence on existing identities: primary authority, retained fingerprint, fact anchors, named subject, relationship evidence, permitted stage, and source provenance. Lottery identities must be officially named; estate opening alone is rejected; inheritance needs beneficiary evidence and actionable status requires documented distribution. Property signals are limited to reviewed commercial / investment use. New private-owner / beneficiary identity discovery remains a separate adapter task.
 
 Run `node test_triggers.js`, `node test_scoring.js`, `node test_pilot.js`, `node test_territory.js`, and `python3 -m unittest test_integrity test_transitions test_form144`. Scoring v4 retains sale + reviewed executive-transition convergence only; it does not give unsupported convergence bonuses to new categories.
+
+## Mobile terminal layout
+
+At widths up to 850px, a compact Menu opens the original navigation; the KPI strip stays in two columns. Prospects / Signal Feed buttons switch the two radar panels while selection, shared search, watchlist, and filters keep the same state. Territory / signal controls expand on demand; desktop keeps both panels and open filters. Signal selections open the same opportunity intelligence below; Back to prospects restores the prospect panel. Mobile controls remain touch-sized, and form fields use 16px type.

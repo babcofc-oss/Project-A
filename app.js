@@ -48,7 +48,7 @@ function render(){
 function renderTriggerGuide(){
   $('triggerGuide').innerHTML=ProjectTriggers.definitions.map(d=>{const count=people.filter(p=>p.events.some(e=>ProjectTriggers.definition(e)?.id===d.id)).length;return `<article class="evidence"><b>${esc(d.label)} · ${count} people</b><p>${esc(d.why)} <span class="tag">MODEL INFERENCE</span></p><p class="note">Sources: ${esc(d.sources)}. ${esc(d.limit)}</p><button class="cta secondary" data-trigger="${esc(d.id)}">${count?'Open trigger':'Check territory · no validated records'}</button></article>`;}).join('');
 }
-document.addEventListener('click',event=>{const button=event.target.closest('[data-trigger]');if(!button)return;watchOnly=false;$('search').value='';$('minimumScore').value='0';const type=button.dataset.trigger;$('eventType').value=type==='LIQUIDITY'?'Liquidity':type==='EXECUTIVE_TRANSITION'?'Transition':type;render();$('prospects').scrollIntoView({behavior:'smooth'});});
+document.addEventListener('click',event=>{const button=event.target.closest('[data-trigger]');if(!button)return;setRadarPanel('prospects');watchOnly=false;$('search').value='';$('minimumScore').value='0';const type=button.dataset.trigger;$('eventType').value=type==='LIQUIDITY'?'Liquidity':type==='EXECUTIVE_TRANSITION'?'Transition':type;render();$('prospects').scrollIntoView({behavior:'smooth'});});
 function renderDetail(){
   const p=selected,c=p.computed,sales=p.events.filter(e=>e.classification==='LIQUIDITY'),changes=ProjectIntelligence.transitions(p);
   const context=p.events.filter(e=>e.source_class==='FORM144'||e.reviewed_trigger);
@@ -118,7 +118,7 @@ function importReviews(){
 $('importFeedback').onclick=importReviews;
 $('exportAllFeedback').onclick=()=>{$('pilotExport').hidden=false;$('pilotExportText').value=feedbackExport();$('pilotStatus').textContent='Export ready. Select the text and copy it to back up or share your reviews.';};
 $('selectPilotExport').onclick=()=>{$('pilotExportText').focus();$('pilotExportText').select();$('pilotStatus').textContent='Review export selected. Use Copy or Share in your browser.';};
-document.addEventListener('click',event=>{const b=event.target.closest('[data-review-person]');if(b){watchOnly=false;$('search').value='';$('territory').value='all';$('eventType').value='all';$('minimumScore').value='0';choose(b.dataset.reviewPerson);$('selected').scrollIntoView({behavior:'smooth'});}});
+document.addEventListener('click',event=>{const b=event.target.closest('[data-review-person]');if(b){setRadarPanel('prospects');watchOnly=false;$('search').value='';$('territory').value='all';$('eventType').value='all';$('minimumScore').value='0';choose(b.dataset.reviewPerson);$('selected').scrollIntoView({behavior:'smooth'});}});
 function save(){if(!selected)return; saved.has(selected.id)?saved.delete(selected.id):saved.add(selected.id);try{localStorage.setItem('project-a-watchlist-v1',JSON.stringify([...saved]));}catch{storageOK=false;}render();}
 function setCenter(state,placeId){
   $('centerState').value=state;
@@ -133,21 +133,33 @@ function updateCenter(){
 }
 $('centerState').onchange=()=>{if(!territoryData)return;setCenter($('centerState').value);render();};
 $('centerPlace').onchange=()=>{if(!territoryData)return;updateCenter();render();};
-function reset(){if(territoryData)setCenter('SC','4513330');watchOnly=false;$('search').value='';$('territory').value='50';$('eventType').value='Planning';$('minimumScore').value='0';render();}
+function reset(){setRadarPanel('prospects');if(territoryData)setCenter('SC','4513330');watchOnly=false;$('search').value='';$('territory').value='50';$('eventType').value='Planning';$('minimumScore').value='0';render();}
 document.addEventListener('click',event=>{
   const button=event.target.closest('[data-person]');if(button)choose(button.dataset.person,true);
 });
 for(const id of ['search','territory','eventType','minimumScore'])$(id).addEventListener(id==='search'?'input':'change',render);
 $('allView').onclick=()=>{watchOnly=false;render();};$('watchView').onclick=()=>{watchOnly=true;render();};$('reset').onclick=reset;
-$('briefButton').onclick=generateBrief;$('saveButton').onclick=save;$('backButton').onclick=()=>$('prospects').scrollIntoView({behavior:'smooth'});
+$('briefButton').onclick=generateBrief;$('saveButton').onclick=save;$('backButton').onclick=()=>{setRadarPanel('prospects');$('prospects').scrollIntoView({behavior:'smooth'});};
 $('evidenceButton').onclick=()=>{const open=$('evidenceDrawer').hidden;$('evidenceDrawer').hidden=!open;$('evidenceButton').setAttribute('aria-expanded',String(open));$('evidenceButton').textContent=open?'Close evidence details':'Open evidence details';};
 document.querySelectorAll('[data-nav]').forEach(button=>button.onclick=()=>{
   document.querySelectorAll('[data-nav]').forEach(b=>b.classList.toggle('active',b===button));
   let target=button.dataset.nav;
+  if(target==='signals')setRadarPanel('signals');else if(['radar','prospects','territories','watchlist'].includes(target))setRadarPanel('prospects');
+  if(target==='territories')$('filterDrawer').open=true;
+  document.querySelector('.side').classList.remove('nav-open');$('menuToggle').setAttribute('aria-expanded','false');
   if(target==='watchlist'){watchOnly=true;render();target='prospects';}
   if(target==='evidence'&&selected){$('evidenceDrawer').hidden=false;$('evidenceButton').setAttribute('aria-expanded','true');$('evidenceButton').textContent='Close evidence details';}
   $(target)?.scrollIntoView({behavior:'smooth',block:'start'});
 });
+function setRadarPanel(panel){
+  $('radarGrid').dataset.mobilePanel=panel;
+  for(const [id,value] of [['prospectPanelButton','prospects'],['signalPanelButton','signals']]){$(id).classList.toggle('on',value===panel);$(id).setAttribute('aria-pressed',String(value===panel));}
+}
+$('prospectPanelButton').onclick=()=>setRadarPanel('prospects');$('signalPanelButton').onclick=()=>setRadarPanel('signals');
+$('menuToggle').onclick=()=>{const open=document.querySelector('.side').classList.toggle('nav-open');$('menuToggle').setAttribute('aria-expanded',String(open));};
+const mobileLayout=matchMedia('(max-width:850px)');
+$('filterDrawer').open=!mobileLayout.matches;
+mobileLayout.addEventListener('change',event=>{$('filterDrawer').open=!event.matches;});
 async function load(){
   try{
     const catalogPath=new URLSearchParams(location.search).get('qa')==='missing-catalog'?'missing-catalog.json':'catalog.json';
