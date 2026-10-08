@@ -116,3 +116,6 @@ Executive / board release decisions, private acquisitions and professional conta
 Run nine Node suites plus `python3 -m unittest test_refresh test_leadership test_integrity test_transitions test_form144 test_business_exits test_contacts`. Failure-recovery tests cover retained last-good data and unchanged success dates. Priority tests cover threshold, recency, identity, deduplication, planned/proposed exclusions, amendments, stale/failed refreshes and source event IDs.
 
 Historical regression suites use `fixture-catalog.json`; production evidence and priority checks continue to validate the changing `catalog.json`. New filing volume cannot invalidate historical sale totals or person-count assertions.
+
+## Watchlist portability — October 8, 2026
+Saved prospects now have a manual JSON-text backup/restore workflow beside the prospect controls. Imports validate the product, backup type, schema and bounded IDs, deduplicate, merge without removing existing saves, and skip unavailable catalog identities with explicit counts. Invalid input changes nothing. Storage failures expose session-only status. Backups contain saved IDs, not financial facts or private notes. Automatic account sync remains unconnected. Verify with `node test_watchlist.js` and a browser export/restore round trip, malformed import and reload.

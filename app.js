@@ -65,7 +65,7 @@ function renderDetail(){
   $('tags').innerHTML=[sales.length?'STOCK MONETIZATION':changes.length?'EXECUTIVE TRANSITION':c.other?(privateIdentity?'BUSINESS ACQUISITION':'REVIEWED PLANNING EVENT'):'MONITOR ONLY',c.converged?'CONVERGED SIGNALS':privateIdentity?'PRIMARY COMPANY ANNOUNCEMENTS':leadershipIdentity?'SEC FORM 8-K':changes.length?'FORM 4 + FORM 8-K':p.events.some(e=>e.source_class==='FORM144')?'FORM 4 + FORM 144':'SEC FORM 4',p.events.some(e=>e.planned)?'10b5-1 CONTEXT':'RETAINED PUBLIC EVIDENCE'].map(x=>`<span class="tag">${esc(x)}</span>`).join('');
   $('why').textContent=why;$('score').textContent=c.value;
   $('saveButton').textContent=saved.has(p.id)?'Remove from Watchlist':'Save Prospect';
-  $('saveStatus').textContent=storageOK?'Watchlist saved on this browser only; export/sync is not enabled.':'Browser storage unavailable; watchlist works for this session only.';
+  $('saveStatus').textContent=storageOK?'Watchlist saved on this browser. Use Back up / restore watchlist to move saves between devices.':'Browser storage unavailable; watchlist works for this session only.';
   const fields=[['Role as disclosed',p.role],['Gross stock-sale value',sales.length?money(c.total)+' · CALCULATED FROM VERIFIED FACT':'No completed stock-sale amount; business proceeds UNKNOWN'],['Latest stock sale',c.latest?`${c.latest} · ${c.age} days ago`:'UNKNOWN / no sale'],['Evidence strength','Retained primary disclosures · VERIFIED PUBLIC FACT'],...triggerDefinitions.map(d=>['Why '+d.label+' helps',d.why+' · MODEL INFERENCE']),...triggerDefinitions.map(d=>[d.label+' evidence limit',d.limit]),['Planning themes',[...new Set(triggerDefinitions.flatMap(d=>d.themes))].join(' / ')+' · MODEL INFERENCE'],[privateIdentity?'Company service market':leadershipIdentity?'Company headquarters':'Mailing city',`${p.location.city||'UNKNOWN'}, ${p.location.state||''} · ${privateIdentity?'company market; founder location UNKNOWN':leadershipIdentity?'company headquarters; personal location UNKNOWN':'source-disclosed; residence UNKNOWN'}`],['Radius estimate',p.location.distance_miles==null?'UNKNOWN':`~${Math.round(p.location.distance_miles)} miles · city reference points`],['Signal convergence',c.converged?'Sale + executive transition · distinct disclosure classes, same issuer':`${p.source_classes.length} disclosure class(es) · no convergence bonus`],...(changes.length?[['Transition status',changes.map(e=>e.status).join(' ')],['Transition amount context',changes.map(e=>e.amount_context).filter(Boolean).join(' ')]]:[]),...context.map(e=>[e.source_class+' status / amount',e.status+' '+e.amount_context]),['Available funds / wealth','UNKNOWN']];
   $('intelligence').innerHTML=fields.map(([key,value])=>`<div class="row"><span>${esc(key)}</span><b>${esc(value)}</b></div>`).join('');
   const sources=[...new Map(p.events.flatMap(e=>[{...e},...(e.evidence_sources||[]).map(source=>({...source,accession:e.accession,filed_date:e.filed_date}))]).map(e=>[e.source_url,e])).values()];
@@ -166,6 +166,20 @@ $('importFeedback').onclick=importReviews;
 $('exportAllFeedback').onclick=()=>{$('pilotExport').hidden=false;$('pilotExportText').value=feedbackExport();$('pilotStatus').textContent='Export ready. Select the text and copy it to back up or share your reviews.';};
 $('selectPilotExport').onclick=()=>{$('pilotExportText').focus();$('pilotExportText').select();$('pilotStatus').textContent='Review export selected. Use Copy or Share in your browser.';};
 document.addEventListener('click',event=>{const b=event.target.closest('[data-review-person]');if(b){setRadarPanel('prospects');watchOnly=false;$('search').value='';$('territory').value='all';$('eventType').value='all';$('minimumScore').value='0';$('contactAvailability').value='all';choose(b.dataset.reviewPerson);$('selected').scrollIntoView({behavior:'smooth'});}});
+function watchlistExport(){return ProjectWatchlist.backup(saved);}
+$('exportWatchlist').onclick=()=>{$('watchlistExportText').value=watchlistExport();$('watchlistExport').hidden=false;$('watchlistStatus').textContent=`Backup ready: ${saved.size} saved prospect IDs. Copy and keep this text before switching devices.`;};
+$('selectWatchlistExport').onclick=()=>{$('watchlistExportText').focus();$('watchlistExportText').select();$('watchlistStatus').textContent='Backup selected. Use Copy in your browser.';};
+$('importWatchlist').onclick=()=>{
+  if(!catalog)return;
+  try{
+    const text=$('watchlistImportText').value;if(text.length>250000)throw new Error('Backup exceeds the import size limit.');
+    const result=ProjectWatchlist.validate(JSON.parse(text),people),before=saved.size,next=new Set([...saved,...result.matched]);
+    if(next.size>1000)throw new Error('Watchlist limit is 1,000 people. No saved prospects changed.');
+    let persisted=true;try{localStorage.setItem('project-a-watchlist-v1',JSON.stringify([...next]));storageOK=true;}catch{storageOK=false;persisted=false;}
+    saved=next;render();
+    $('watchlistStatus').textContent=`Restore complete: ${next.size-before} new saves; ${result.matched.length} available IDs checked; ${result.unavailable.length} unavailable IDs skipped. Existing saves preserved. ${persisted?'Saved on this browser.':'Session only: browser storage unavailable. Keep your backup before closing.'}`;
+  }catch(error){$('watchlistStatus').textContent=`Restore rejected: ${error.message} Existing saves preserved.`;}
+};
 function save(){if(!selected)return; saved.has(selected.id)?saved.delete(selected.id):saved.add(selected.id);try{localStorage.setItem('project-a-watchlist-v1',JSON.stringify([...saved]));}catch{storageOK=false;}render();}
 function setCenter(state,placeId){
   cancelZipSearch();
@@ -230,7 +244,7 @@ async function load(){
     try{feedback=ProjectPilot.validate({product:'Project A',feedback},people);}catch{feedback=[];$('pilotStatus').textContent='Saved reviews could not be validated against this catalog. Original browser storage is unchanged; import a valid export to recover reviews.';}
     const linkedId=new URLSearchParams(location.search).get('person');
     if(linkedId){const linked=people.find(p=>p.id===linkedId);if(linked){selected=linked;$('territory').value='all';$('eventType').value='all';}else{$('error').hidden=false;$('error').textContent='The linked prospect is unavailable in this evidence snapshot. Showing the current territory instead.';}}
-    render();renderPilot();
+    $('exportWatchlist').disabled=false;$('importWatchlist').disabled=false;render();renderPilot();
     if(linkedId&&selected?.id===linkedId)$('selected').scrollIntoView({block:'start'});
   }catch(error){catalog=null;people=[];selected=null;$('detail').hidden=true;$('error').hidden=false;$('error').textContent=`Could not load evidence: ${error.message}. No opportunities or scores are asserted. Reload to retry.`;$('leads').innerHTML='<p class="empty">Evidence unavailable. No records released.</p>';$('coverage').textContent='Source coverage unavailable';$('systemStatus').textContent='Evidence unavailable';for(const id of ['mCount','mValue','mHigh','mFresh'])$(id).textContent='UNKNOWN';}
 }
