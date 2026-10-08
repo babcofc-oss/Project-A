@@ -42,3 +42,5 @@ button,input,select{font:inherit}button,a,input,select{touch-action:manipulation
 #integrationExport textarea{min-height:240px;resize:vertical;font:13px/1.5 ui-monospace,monospace}
 #integrationExport :focus-visible{outline:2px solid #79eab4;outline-offset:3px}
 @media(max-width:850px){#integrationExport select,#integrationExport textarea{font-size:16px}}
+
+.market-coverage{padding:18px;margin:16px 0;border:1px solid #355b49;background:#10271e;border-radius:10px}.market-coverage h3{font-size:16px;margin:0}.market-coverage p{line-height:1.6}.market-coverage .actions{flex-wrap:wrap}.market-coverage button:focus-visible{outline:2px solid #79eab4;outline-offset:3px}

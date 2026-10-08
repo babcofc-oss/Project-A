@@ -14,8 +14,7 @@ function rows(){
   const q=$('search').value.trim().toLowerCase(),territory=$('territory').value,type=$('eventType').value,min=Number($('minimumScore').value);
   return people.filter(p=>{
     const city=p.location||{};
-    if(territory==='SC'&&city.state!==territoryOrigin?.state)return false;
-    if(!['SC','all'].includes(territory)&&(city.distance_miles===null||city.distance_miles===undefined||city.distance_miles>Number(territory)))return false;
+    if(!ProjectTerritory.inMarket(p,territoryOrigin,territory,territoryIndex))return false;
     if(watchOnly&&!saved.has(p.id))return false;
     if(p.computed.value<min)return false;
     if(!ProjectContacts.matches(p,$('contactAvailability').value))return false;
@@ -32,6 +31,7 @@ function render(){
   const trigger=ProjectTriggers.byId[$('eventType').value];
   $('triggerHelp').textContent=trigger?`${trigger.label}: ${trigger.why} ${trigger.limit}`:$('eventType').value==='Planning'?'Verified planning triggers only. Proposed sales, ownership changes and registered offerings remain monitoring context until execution is evidenced.':$('eventType').value==='Transition'?ProjectTriggers.byId.EXECUTIVE_TRANSITION.why+' '+ProjectTriggers.byId.EXECUTIVE_TRANSITION.limit:'Audit / monitoring views include events that do not establish liquidity. Check each event’s evidence and stage.';
   renderTriggerGuide();
+  renderMarketCoverage();
   if(!visible.some(p=>p.id===selected?.id))selected=visible[0]||null;
   $('territoryStatus').textContent=`Center: ${territoryOrigin.name}, ${territoryOrigin.state}${territoryOrigin.zip?` · ZIP ${territoryOrigin.zip}`:''}. ${visible.length} matching people in the reviewed snapshot (${catalog.issuer_count||7} stock-filing issuers + ${catalog.business_exits?.validated_people||0} business founders + ${catalog.leadership?.validated_people||0} reviewed leaders). Territory availability does not imply prospect coverage; empty markets need source discovery and validation.`;
   $('contactStatus').textContent=`In this view: ${visible.filter(p=>ProjectContacts.status(p)==='named').length} with published named business email / phone; ${visible.filter(p=>ProjectContacts.status(p)==='profile').length} with identity-research profiles; ${visible.filter(p=>ProjectContacts.status(p)==='company').length} with company channels only. Contact evidence does not change financial scores. ${catalog.contact_enrichment?.errors?.length||0} contact source(s) withheld after validation errors.`;
@@ -48,6 +48,15 @@ function render(){
   $('detail').hidden=!selected;
   if(selected)renderDetail();
 }
+function renderMarketCoverage(){
+  const mode=$('territory').value,c=ProjectTerritory.coverage(people,territoryOrigin,mode,territoryIndex,ProjectTriggers.actionable);
+  const area=mode==='all'?'All reviewed markets':mode==='SC'?territoryOrigin.state:`${mode} miles from ${territoryOrigin.name}, ${territoryOrigin.state}`;
+  $('marketCoverageStatus').textContent=`${area}: ${c.people} reviewed people; ${c.planning} with planning triggers before search, score, contact or watchlist filters. ${c.people===0?'This local market has no reviewed records yet. It is not ready for a local-opportunity pilot.':c.planning===0?'Records here are monitoring context; no reviewed planning triggers are available.':'Research usefulness and current relevance still need advisor evaluation.'} ${c.unknown_geography} records have unresolved city references and are excluded from radius views. International prospect discovery is not connected.`;
+  $('coveredMarkets').innerHTML='<button class="cta secondary" data-market="all">Explore all reviewed markets</button>'+c.states.filter(x=>x.state!=='UNKNOWN').map(x=>`<button class="cta secondary" data-market="${esc(x.state)}">${esc(x.state)} · ${x.planning} planning / ${x.people} people</button>`).join('');
+}
+function persistMarket(){try{localStorage.setItem('project-a-market-v1',JSON.stringify(ProjectTerritory.preference(territoryOrigin,$('territory').value)));$('marketPreferenceStatus').textContent='Market preference saved on this browser. Your office location is not detected or assumed.';}catch{$('marketPreferenceStatus').textContent='Market preference works for this session only; browser storage is unavailable.';}}
+function setRadiusOption(radius,label){let option=$('territory').querySelector('[data-custom-radius]');if(!option){option=document.createElement('option');option.dataset.customRadius='true';$('territory').appendChild(option);}option.value=String(radius);option.textContent=label;$('territory').value=String(radius);}
+document.addEventListener('click',event=>{const b=event.target.closest('[data-market]');if(!b||!catalog)return;if(b.dataset.market==='all')$('territory').value='all';else{setCenter(b.dataset.market);$('territory').value='SC';}watchOnly=false;$('search').value='';$('eventType').value='Planning';$('minimumScore').value='0';$('contactAvailability').value='all';persistMarket();render();});
 function renderTriggerGuide(){
   $('triggerGuide').innerHTML=ProjectTriggers.definitions.map(d=>{const count=people.filter(p=>p.events.some(e=>ProjectTriggers.definition(e)?.id===d.id)).length;return `<article class="evidence"><b>${esc(d.label)} · ${count} people</b><p>${esc(d.why)} <span class="tag">MODEL INFERENCE</span></p><p class="note">Sources: ${esc(d.sources)}. ${esc(d.limit)}</p><button class="cta secondary" data-trigger="${esc(d.id)}">${count?'Open trigger':'Check territory · no validated records'}</button></article>`;}).join('');
 }
@@ -121,7 +130,7 @@ $('copyAiPrompt').onclick=async()=>{
 };
 $('exportResearch').onclick=()=>{if(!researchReport)return;$('researchExportText').value=ProjectResearch.markdown(researchReport);$('researchExport').hidden=false;$('researchExport').scrollIntoView({behavior:'smooth',block:'nearest'});};
 $('selectResearchExport').onclick=()=>{$('researchExportText').focus();$('researchExportText').select();};
-$('demoResearch').onclick=()=>{if(!selected){$('error').hidden=false;$('error').textContent='Choose a territory with a reviewed prospect to try the research workflow.';return;}$('research').scrollIntoView({behavior:'smooth',block:'start'});};
+$('demoResearch').onclick=()=>{if(!selected){$('territory').value='all';$('search').value='';$('eventType').value='Planning';$('minimumScore').value='0';$('contactAvailability').value='all';watchOnly=false;render();$('marketPreferenceStatus').textContent='Research example uses all reviewed markets; it is not a local prospect recommendation. Your saved market is unchanged.';if(!selected)return;}$('research').scrollIntoView({behavior:'smooth',block:'start'});};
 function generateBrief(){
   if(!selected)return;
   const b=ProjectIntelligence.brief(selected,selected.computed);
@@ -206,18 +215,20 @@ function setCenter(state,placeId){
 function updateCenter(){
   cancelZipSearch();
   territoryOrigin=territoryIndex.ids.get($('centerPlace').value);
+  const custom=$('territory').querySelector('[data-custom-radius]');if(custom)custom.textContent=custom.value+' miles from '+territoryOrigin.name;
+  $('zipCode').value='';$('zipStatus').textContent='Census place center selected. ZIP lookup is optional; only reviewed coverage can produce results.';
   applyDistances();
 }
 function applyDistances(){
   for(const p of people){const place=ProjectTerritory.resolve(p.location,territoryIndex);p.location.distance_miles=ProjectTerritory.distance(territoryOrigin,place);if(place){p.location.geo_source=territoryData.source;p.location.geo_class='CALCULATED FROM VERIFIED FACT';}}
 }
-$('centerState').onchange=()=>{if(!territoryData)return;setCenter($('centerState').value);render();};
-$('centerPlace').onchange=()=>{if(!territoryData)return;updateCenter();render();};
-function reset(){$('zipCode').value='';$('zipRadius').value='50';$('zipStatus').textContent='Search a U.S. ZIP code with a 1–3,000 mile radius. Only verified records in our current coverage appear.';setRadarPanel('prospects');if(territoryData)setCenter('SC','4513330');watchOnly=false;$('search').value='';$('territory').value='50';$('eventType').value='Planning';$('minimumScore').value='0';$('contactAvailability').value='all';render();}
+$('centerState').onchange=()=>{if(!territoryData)return;setCenter($('centerState').value);persistMarket();render();};
+$('centerPlace').onchange=()=>{if(!territoryData)return;updateCenter();persistMarket();render();};
+function reset(){$('zipCode').value='';$('zipRadius').value='50';$('zipStatus').textContent='Search a U.S. ZIP code with a 1–3,000 mile radius. Only verified records in our current coverage appear.';setRadarPanel('prospects');if(territoryData)setCenter('SC','4513330');watchOnly=false;$('search').value='';$('territory').value='all';$('eventType').value='Planning';$('minimumScore').value='0';$('contactAvailability').value='all';persistMarket();render();}
 document.addEventListener('click',event=>{
   const button=event.target.closest('[data-person]');if(button)choose(button.dataset.person,true);
 });
-for(const id of ['search','territory','eventType','minimumScore','contactAvailability'])$(id).addEventListener(id==='search'?'input':'change',render);
+for(const id of ['search','territory','eventType','minimumScore','contactAvailability'])$(id).addEventListener(id==='search'?'input':'change',()=>{if(id==='territory')persistMarket();render();});
 $('allView').onclick=()=>{watchOnly=false;render();};$('watchView').onclick=()=>{watchOnly=true;render();};$('reset').onclick=reset;
 $('contactButton').onclick=()=>{$('contacts').scrollIntoView({behavior:'smooth',block:'start'});};
 $('briefButton').onclick=generateBrief;$('saveButton').onclick=save;$('backButton').onclick=()=>{setRadarPanel('prospects');$('prospects').scrollIntoView({behavior:'smooth'});};
@@ -251,6 +262,8 @@ async function load(){
     const geographyResponse=await fetch('territories.json',{cache:'no-cache'});if(!geographyResponse.ok)throw new Error('Territory reference unavailable');territoryData=await geographyResponse.json();if(!Array.isArray(territoryData.places)||!territoryData.places.length)throw new Error('Territory reference has an invalid schema');territoryIndex=ProjectTerritory.index(territoryData.places);
     people=catalog.records.map(p=>({...p,computed:ProjectIntelligence.score(p),priority:ProjectPriority.evaluate(p,catalog)}));
     $('centerState').innerHTML=[...new Set(territoryData.places.map(p=>p.state))].sort().map(state=>`<option value="${esc(state)}">${esc(state)}</option>`).join('');$('centerState').disabled=false;$('centerPlace').disabled=false;$('zipSearch').disabled=false;setCenter('SC','4513330');
+    $('territory').value='all';
+    try{const market=ProjectTerritory.restorePreference(JSON.parse(localStorage.getItem('project-a-market-v1')||'null'),territoryIndex);if(market){if(market.origin.id)setCenter(market.origin.state,market.origin.id);else{territoryOrigin=market.origin;applyDistances();$('zipCode').value=market.origin.zip;$('zipRadius').value=!['all','SC'].includes(market.mode)?market.mode:'50';$('zipStatus').textContent='Restored ZIP reference coordinates from this browser. Search again to refresh the postal lookup.';}if(!['all','SC','10','25','50'].includes(market.mode))setRadiusOption(market.mode,market.mode+' miles from saved center');$('territory').value=market.mode;$('marketPreferenceStatus').textContent='Restored your prospect market from this browser.';}else $('marketPreferenceStatus').textContent='First visit: showing all reviewed markets. Choose your local prospect market above.';}catch{$('marketPreferenceStatus').textContent='Saved market unavailable; showing all reviewed markets.';}
     $('systemStatus').textContent=`Validated public snapshot · ${people.length} people`;
     $('coverage').textContent=`${catalog.validated_filings} Form 4 + ${(catalog.transition_filings||0)+(catalog.leadership?.validated_filings||0)} reviewed 8-K + ${catalog.form144?.validated||0} Form 144 filings · filings since ${catalog.coverage_start} · ${people.filter(p=>p.computed.sales).length} people with sale signals · ${catalog.issuer_count||3} stock-filing issuers + ${catalog.business_exits?.validated_people||0} business founders + ${catalog.leadership?.validated_people||0} reviewed leaders`;
     renderHealth();
@@ -273,18 +286,16 @@ async function searchZip(){
   $('zipStatus').textContent='Looking up ZIP '+zip+'… Previous results remain until the new area is resolved.';
   const timeout=setTimeout(()=>controller.abort(),10000);
   try{
-    const country=/^00[679]/.test(zip)?'pr':/^008/.test(zip)?'vi':zip==='96799'?'as':/^969[123]/.test(zip)?'gu':/^9695/.test(zip)?'mp':'us';
+    const country=ProjectTerritory.zipCountry(zip).toLowerCase();
     const response=await fetch('https://api.zippopotam.us/'+country+'/'+zip,{signal:controller.signal,credentials:'omit',referrerPolicy:'no-referrer'});
     if(response.status===404)throw new Error('ZIP code not found in the postal reference');
     if(!response.ok)throw new Error('ZIP lookup is temporarily unavailable');
-    const data=await response.json(),place=data.places?.[0],lat=Number(place?.latitude),lon=Number(place?.longitude);
-    if(data['post code']!==zip||!['US','PR','VI','AS','GU','MP'].includes(data['country abbreviation'])||!place||!Number.isFinite(lat)||!Number.isFinite(lon)||Math.abs(lat)>90||Math.abs(lon)>180)throw new Error('ZIP lookup returned invalid coordinates');
+    const origin=ProjectTerritory.zipOrigin(zip,await response.json());
     if(request!==zipRequest)return;
-    territoryOrigin={name:String(place['place name']),state:country==='us'?String(place['state abbreviation']):country.toUpperCase(),lat,lon,zip};
+    territoryOrigin=origin;
     applyDistances();
-    let option=$('territory').querySelector('[data-custom-radius]');
-    if(!option){option=document.createElement('option');option.dataset.customRadius='true';$('territory').appendChild(option);}
-    option.value=String(radius);option.textContent=radius+' miles from ZIP '+zip;$('territory').value=String(radius);
+    setRadiusOption(radius,radius+' miles from ZIP '+zip);
+    persistMarket();
     render();
     $('zipStatus').textContent='Searched ZIP '+zip+' within '+radius+' miles. '+rows().length+' matching verified candidates. Zero results means no matching records in our reviewed coverage, not no opportunities in this market. Distances use approximate reference coordinates, not street addresses.';
   }catch(error){if(request===zipRequest)$('zipStatus').textContent=(error.name==='AbortError'?'ZIP lookup timed out. Please retry.':error.message)+'. Previous results are unchanged.';}
