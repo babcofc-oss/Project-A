@@ -1,6 +1,6 @@
 const assert=require('node:assert/strict'),fs=require('node:fs');
 const R=require('./research.js'),I=require('./intelligence.js'),T=require('./triggers.js');
-const catalog=JSON.parse(fs.readFileSync('catalog.json'));
+const catalog=JSON.parse(fs.readFileSync('fixture-catalog.json'));
 const now=new Date('2026-10-08T12:00:00Z');
 for(const p of catalog.records){
  const r=R.build(p,I.score(p,now),catalog,now);

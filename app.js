@@ -299,10 +299,11 @@ $('selectSourceText').onclick=()=>{$('sourceText').focus();$('sourceText').selec
 $('toggleSourceView').onclick=()=>{const raw=$('toggleSourceView').textContent==='Show original markup';$('sourceText').value=raw?evidenceOriginal:evidenceReading;$('sourceViewLabel').textContent=raw?'Original source text':'Reading view · extracted from fingerprint-matched archive';$('toggleSourceView').textContent=raw?'Show reading view':'Show original markup';};
 
 function renderHealth(){
+  $('leadershipQueue').innerHTML=(catalog.leadership_review_queue||[]).slice(0,20).map(e=>`<article class="evidence"><b>${esc(e.company)} · ${esc(e.filed_date)}</b><p class="note">${esc(e.status)}</p><a class="source" href="${esc(e.source_url)}" target="_blank" rel="noopener">${esc(e.accession)} · Item 5.02 ↗</a></article>`).join('')||'<p class="note">No unreviewed Item 5.02 filings in configured issuer discovery.</p>';
   const h=catalog.feed_health||{},state=ProjectPriority.health(catalog);
   $('healthBadge').textContent=state.status+' · SEC DISCOVERY';
   $('healthSummary').textContent=`Last successful SEC discovery: ${h.last_success_at||catalog.validated_at}. Latest attempt: ${h.last_attempt_at||'not monitored'}. Target: check every 6 hours; stale after 48 hours. ${h.errors?.length?'Latest refresh failed; last good records retained. '+h.errors.join(' '):''}`;
-  const rows=[['Form 4 / Form 144',`${state.status} · ${catalog.issuer_count} configured stock-filing issuers · ${catalog.form144?.errors?.length||0} proposals held for identity review · ${catalog.amendment_review?.length||0} amendments awaiting reconciliation`],['Executive / board disclosures',`MANUAL REVIEW · ${catalog.transition_filings+(catalog.leadership?.validated_filings||0)} retained filings; new events need named-person review. Latest leadership review ${catalog.leadership?.reviewed_at||'UNKNOWN'}`],['Private-company acquisitions','MANUAL REVIEW · '+(catalog.business_exits?.validated_people||0)+' named founders; no continuous acquisition feed'],['Professional contacts','MANUAL REVIEW · published routes expire after 90 days; current reachability UNKNOWN'],['Other trigger categories','NOT CONNECTED · IPO / lockup, property, inheritance, lottery and ownership changes'],['Hot combinations',people.filter(p=>p.priority.hot).length+' across current coverage · exact person + issuer, recent sale and distinct leadership event required']];
+  const rows=[['Form 4 / Form 144',`${state.status} · ${catalog.issuer_count} configured stock-filing issuers · ${catalog.form144?.errors?.length||0} proposals held for identity review · ${catalog.amendment_review?.length||0} amendments awaiting reconciliation`],['Executive / board disclosures',`MANUAL REVIEW · ${catalog.transition_filings+(catalog.leadership?.validated_filings||0)} retained filings; ${catalog.leadership_review_queue?.length||0} new filings queued for named-person review. Latest leadership review ${catalog.leadership?.reviewed_at||'UNKNOWN'}`],['Private-company acquisitions','MANUAL REVIEW · '+(catalog.business_exits?.validated_people||0)+' named founders; no continuous acquisition feed'],['Professional contacts','MANUAL REVIEW · published routes expire after 90 days; current reachability UNKNOWN'],['Other trigger categories','NOT CONNECTED · IPO / lockup, property, inheritance, lottery and ownership changes'],['Hot combinations',people.filter(p=>p.priority.hot).length+' across current coverage · exact person + issuer, recent sale and distinct leadership event required']];
   $('feedHealthRows').innerHTML=rows.map(([k,v])=>`<div class="row"><span>${esc(k)}</span><b>${esc(v)}</b></div>`).join('');
 }
 function renderPriority(p){
@@ -312,3 +313,11 @@ function renderPriority(p){
   if(r.blocks.length)$('priorityDetails').innerHTML+='<p class="note">Highest-priority gate: '+r.blocks.map(esc).join('; ')+'.</p>';
   $('priorityDetails').innerHTML+='<p class="note">'+esc(r.limit)+'</p>';
 }
+
+$('checkData').onclick=()=>location.reload();
+setInterval(()=>{
+  if(!catalog)return;
+  let changed=false;
+  for(const p of people){const next=ProjectPriority.evaluate(p,catalog);if(next.hot!==p.priority.hot)changed=true;p.priority=next;}
+  renderHealth();if(changed)render();else if(selected)renderPriority(selected);
+},60000);

@@ -4,7 +4,7 @@ from ingest import classify, parse_xml
 from geo_enrichment import enrich
 
 ROOT=Path(__file__).parent
-CATALOG=json.loads((ROOT/'catalog.json').read_text())
+CATALOG=json.loads((ROOT/'fixture-catalog.json').read_text())
 
 class IntegrityTests(unittest.TestCase):
     def test_all_primary_evidence_hashes_and_identity(self):

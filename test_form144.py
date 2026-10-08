@@ -5,7 +5,7 @@ from reviewed_triggers import validate
 ROOT=Path(__file__).resolve().parent
 class Notices(unittest.TestCase):
  def setUp(self):
-  self.records=json.loads((ROOT/'catalog.json').read_text())['records']
+  self.records=json.loads((ROOT/'fixture-catalog.json').read_text())['records']
   self.body=(ROOT/'0001950047-26-008035.xml').read_bytes()
  def parse(self,body=None,records=None):return parse(body or self.body,'0001950047-26-008035','2026-08-12','https://www.sec.gov/source',records or self.records,'1653477')
  def test_notice(self):

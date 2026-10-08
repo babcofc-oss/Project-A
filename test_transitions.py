@@ -3,7 +3,7 @@ from pathlib import Path
 from transitions import reviewed_event, merge_reviewed
 ROOT=Path(__file__).parent
 MANIFEST=json.loads((ROOT/'reviewed-transitions.json').read_text())
-CATALOG=json.loads((ROOT/'catalog.json').read_text())
+CATALOG=json.loads((ROOT/'fixture-catalog.json').read_text())
 class ReviewedTransitionsTests(unittest.TestCase):
     def test_all_reviewed_relationships_and_no_liquidity(self):
         for entry in MANIFEST:

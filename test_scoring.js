@@ -1,7 +1,7 @@
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const {score,brief,daysAgo}=require('./intelligence.js');
-const records=JSON.parse(fs.readFileSync('catalog.json')).records;
+const records=JSON.parse(fs.readFileSync('fixture-catalog.json')).records;
 const now=new Date('2026-10-05T12:00:00Z');
 for(const person of records){
  const computed=score(person,now);

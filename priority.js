@@ -8,7 +8,7 @@
       status:!h?'UNMONITORED':h.status==='FAILED'?'FAILED':hours<0||!Number.isFinite(hours)?'UNKNOWN':hours>48?'STALE':'CURRENT',hours};
   }
   function evaluate(person,catalog,now=new Date()){
-    const events=person.events||[], pairs=[],blocks=[];
+    const events=[...new Map((person.events||[]).map(e=>[e.id,e])).values()], pairs=[],blocks=[];
     const recent=e=>age(e.date,now)>=0&&age(e.date,now)<=30;
     const sales=events.filter(e=>e.classification==='LIQUIDITY'&&e.code==='S'&&e.direction==='D'&&recent(e)&&Number.isFinite(e.value)&&e.value>0);
     const gross=sales.reduce((n,e)=>n+e.value,0);

@@ -17,6 +17,7 @@ assert.equal(P.evaluate({...person,events:[{...sale,classification:'PROPOSED_SAL
 assert.equal(P.evaluate({...person,events:[sale,{...sale,id:'sale:2'}]},catalog,now).hot,false);
 assert.equal(P.evaluate({...person,events:[sale,{...change,accession:'sale'}]},catalog,now).hot,false);
 assert.equal(P.evaluate({...person,events:[sale,{...change,date:'2026-10-09'}]},catalog,now).hot,false);
+assert.equal(P.evaluate({...person,events:[{...sale,value:60000},{...sale,value:60000},change]},catalog,now).hot,false);
 const retained=JSON.parse(require('node:fs').readFileSync('catalog.json'));
 for(const p of retained.records){const r=P.evaluate(p,retained);for(const pair of r.pairs)for(const id of pair.eventIds)assert(p.events.some(e=>e.id===id));}
 console.log('Priority rules passed: qualifying pairs, stale/failed suppression, planned/proposed exclusions, exact identity, amendments and citation integrity.');

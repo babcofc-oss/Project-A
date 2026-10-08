@@ -31,6 +31,16 @@ def run():
         if any(e.get('kind')=='FETCH_FAILURE' for e in current.get('form144',{}).get('errors',[])):
             raise RuntimeError('Form 144 fetch incomplete; retaining last good catalog')
         validate_archives(current)
+        reviewed={e['accession'] for p in current['records'] for e in p['events'] if e.get('source_class')=='8K'}
+        queue=[]
+        for cik in ingest.ISSUERS:
+            cache=ingest.INPUTS/('submissions-'+cik+'-'+ingest.TODAY.isoformat()+'.json')
+            submission=json.loads(cache.read_text()); recent=submission['filings']['recent']
+            for i,form in enumerate(recent['form']):
+                accession=recent['accessionNumber'][i]
+                if form in ('8-K','8-K/A') and recent['filingDate'][i]>='2026-06-01' and '5.02' in recent['items'][i] and accession not in reviewed:
+                    queue.append(dict(accession=accession,issuer_cik=cik,company=submission['name'],filed_date=recent['filingDate'][i],items=recent['items'][i],source_url=f'https://www.sec.gov/Archives/edgar/data/{int(cik)}/{accession.replace("-", "")}/{recent["primaryDocument"][i]}',status='DISCOVERED — named subject, event and completion require review; not a prospect'))
+        current['leadership_review_queue']=sorted(queue,key=lambda x:x['filed_date'],reverse=True)
         current['feed_health']={
             'last_attempt_at':attempted, 'last_success_at':current['validated_at'],
             'status':'OK', 'freshness_target_hours':48,
@@ -40,7 +50,8 @@ def run():
             'unconnected':['IPO / lockup','Property sales','Inheritance','Lottery awards','Ownership changes'],
             'errors':[],
             'held_form144':len(current.get('form144',{}).get('errors',[])),
-            'amendments_pending':len(current.get('amendment_review',[]))}
+            'amendments_pending':len(current.get('amendment_review',[])),
+            'leadership_pending':len(queue)}
         publish(current)
         print('REFRESH SUCCESS', current['validated_at'])
         return True

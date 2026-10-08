@@ -1,7 +1,7 @@
 'use strict';
 const assert=require('node:assert/strict'), fs=require('node:fs');
 const Pilot=require('./pilot.js');
-const people=JSON.parse(fs.readFileSync('catalog.json')).records,p=people[0];
+const people=JSON.parse(fs.readFileSync('fixture-catalog.json')).records,p=people[0];
 const now=Date.parse('2026-10-05T14:00:00Z');
 const review={person_id:p.id,reviewer_id:'qa-reviewer-one',person_name:'Untrusted name',company:'Untrusted company',rating:'Needs evidence',note:'QA fixture only: <script>unsafe</script>',recorded_at:'2026-10-05T13:00:00Z',score:70,scoring_version:'money-in-motion-v3',source_accessions:[p.events[0].accession]};
 const payload=feedback=>({product:'Project A',schema_version:2,feedback});
