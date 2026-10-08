@@ -6,7 +6,7 @@ const money=n=>n===null||n===undefined?'UNKNOWN':new Intl.NumberFormat('en-US',{
 let feedback=[],reviewerId;
 try{reviewerId=localStorage.getItem('project-a-reviewer-v1');if(!/^[a-zA-Z0-9_-]{8,80}$/.test(reviewerId||'')){reviewerId=crypto.randomUUID();localStorage.setItem('project-a-reviewer-v1',reviewerId);}}catch{reviewerId=crypto.randomUUID();}
 try{const rawFeedback=JSON.parse(localStorage.getItem('project-a-pilot-feedback-v1')||'[]');if(Array.isArray(rawFeedback))feedback=rawFeedback.filter(x=>x&&typeof x.person_id==='string'&&['Useful','Needs evidence','Not useful'].includes(x.rating)&&typeof x.note==='string').slice(-1000);}catch{}
-let territoryData=null,territoryIndex=null,territoryOrigin=null;
+let territoryData=null,territoryIndex=null,territoryOrigin=null,zipRequest=0,zipController=null;
 let catalog=null, people=[], selected=null, watchOnly=false, saved=new Set(), storageOK=true;
 try{const raw=JSON.parse(localStorage.getItem('project-a-watchlist-v1')||'[]');if(Array.isArray(raw))saved=new Set(raw.filter(x=>typeof x==='string'));}catch{storageOK=false;}
 function eventMatches(e,type){return type==='all'||(type==='Planning'?ProjectTriggers.actionable(e):type==='Transition'?e.classification==='EXECUTIVE_TRANSITION':type==='Liquidity'?e.classification==='LIQUIDITY':(e.code===type||e.trigger_type===type||e.classification===type));}
@@ -32,7 +32,7 @@ function render(){
   $('triggerHelp').textContent=trigger?`${trigger.label}: ${trigger.why} ${trigger.limit}`:$('eventType').value==='Planning'?'Verified planning triggers only. Proposed sales, ownership changes and registered offerings remain monitoring context until execution is evidenced.':$('eventType').value==='Transition'?ProjectTriggers.byId.EXECUTIVE_TRANSITION.why+' '+ProjectTriggers.byId.EXECUTIVE_TRANSITION.limit:'Audit / monitoring views include events that do not establish liquidity. Check each event’s evidence and stage.';
   renderTriggerGuide();
   if(!visible.some(p=>p.id===selected?.id))selected=visible[0]||null;
-  $('territoryStatus').textContent=`Center: ${territoryOrigin.name}, ${territoryOrigin.state}. ${visible.length} matching people in the reviewed snapshot (${catalog.issuer_count||7} SEC issuers + ${catalog.business_exits?.validated_people||0} business founders). Territory availability does not imply prospect coverage; empty markets need source discovery and validation.`;
+  $('territoryStatus').textContent=`Center: ${territoryOrigin.name}, ${territoryOrigin.state}${territoryOrigin.zip?` · ZIP ${territoryOrigin.zip}`:''}. ${visible.length} matching people in the reviewed snapshot (${catalog.issuer_count||7} SEC issuers + ${catalog.business_exits?.validated_people||0} business founders). Territory availability does not imply prospect coverage; empty markets need source discovery and validation.`;
   $('contactStatus').textContent=`In this view: ${visible.filter(p=>ProjectContacts.status(p)==='named').length} with published named business email / phone; ${visible.filter(p=>ProjectContacts.status(p)==='profile').length} with identity-research profiles; ${visible.filter(p=>ProjectContacts.status(p)==='company').length} with company channels only. Contact evidence does not change financial scores. ${catalog.contact_enrichment?.errors?.length||0} contact source(s) withheld after validation errors.`;
   $('mCount').textContent=visible.length;
   $('mValue').textContent=!visible.length?'—':!visible.some(p=>p.computed.sales)?'UNKNOWN':new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',notation:'compact',maximumFractionDigits:2}).format(visible.reduce((n,p)=>n+p.computed.total,0));
@@ -134,6 +134,7 @@ $('selectPilotExport').onclick=()=>{$('pilotExportText').focus();$('pilotExportT
 document.addEventListener('click',event=>{const b=event.target.closest('[data-review-person]');if(b){setRadarPanel('prospects');watchOnly=false;$('search').value='';$('territory').value='all';$('eventType').value='all';$('minimumScore').value='0';$('contactAvailability').value='all';choose(b.dataset.reviewPerson);$('selected').scrollIntoView({behavior:'smooth'});}});
 function save(){if(!selected)return; saved.has(selected.id)?saved.delete(selected.id):saved.add(selected.id);try{localStorage.setItem('project-a-watchlist-v1',JSON.stringify([...saved]));}catch{storageOK=false;}render();}
 function setCenter(state,placeId){
+  cancelZipSearch();
   $('centerState').value=state;
   const places=territoryData.places.filter(p=>p.state===state).sort((a,b)=>a.name.localeCompare(b.name));
   $('centerPlace').innerHTML=places.map(p=>`<option value="${esc(p.id)}">${esc(p.name)}</option>`).join('');
@@ -141,12 +142,16 @@ function setCenter(state,placeId){
   updateCenter();
 }
 function updateCenter(){
+  cancelZipSearch();
   territoryOrigin=territoryIndex.ids.get($('centerPlace').value);
+  applyDistances();
+}
+function applyDistances(){
   for(const p of people){const place=ProjectTerritory.resolve(p.location,territoryIndex);p.location.distance_miles=ProjectTerritory.distance(territoryOrigin,place);if(place){p.location.geo_source=territoryData.source;p.location.geo_class='CALCULATED FROM VERIFIED FACT';}}
 }
 $('centerState').onchange=()=>{if(!territoryData)return;setCenter($('centerState').value);render();};
 $('centerPlace').onchange=()=>{if(!territoryData)return;updateCenter();render();};
-function reset(){setRadarPanel('prospects');if(territoryData)setCenter('SC','4513330');watchOnly=false;$('search').value='';$('territory').value='50';$('eventType').value='Planning';$('minimumScore').value='0';$('contactAvailability').value='all';render();}
+function reset(){$('zipCode').value='';$('zipRadius').value='50';$('zipStatus').textContent='Search a U.S. ZIP code with a 1–3,000 mile radius. Only verified records in our current coverage appear.';setRadarPanel('prospects');if(territoryData)setCenter('SC','4513330');watchOnly=false;$('search').value='';$('territory').value='50';$('eventType').value='Planning';$('minimumScore').value='0';$('contactAvailability').value='all';render();}
 document.addEventListener('click',event=>{
   const button=event.target.closest('[data-person]');if(button)choose(button.dataset.person,true);
 });
@@ -183,7 +188,7 @@ async function load(){
     if(!Array.isArray(catalog.records))throw new Error('Evidence catalog has an invalid schema');
     const geographyResponse=await fetch('territories.json',{cache:'no-cache'});if(!geographyResponse.ok)throw new Error('Territory reference unavailable');territoryData=await geographyResponse.json();if(!Array.isArray(territoryData.places)||!territoryData.places.length)throw new Error('Territory reference has an invalid schema');territoryIndex=ProjectTerritory.index(territoryData.places);
     people=catalog.records.map(p=>({...p,computed:ProjectIntelligence.score(p)}));
-    $('centerState').innerHTML=[...new Set(territoryData.places.map(p=>p.state))].sort().map(state=>`<option value="${esc(state)}">${esc(state)}</option>`).join('');$('centerState').disabled=false;$('centerPlace').disabled=false;setCenter('SC','4513330');
+    $('centerState').innerHTML=[...new Set(territoryData.places.map(p=>p.state))].sort().map(state=>`<option value="${esc(state)}">${esc(state)}</option>`).join('');$('centerState').disabled=false;$('centerPlace').disabled=false;$('zipSearch').disabled=false;setCenter('SC','4513330');
     $('systemStatus').textContent=`Validated public snapshot · ${people.length} people`;
     $('coverage').textContent=`${catalog.validated_filings} Form 4 + ${catalog.transition_filings||0} reviewed 8-K + ${catalog.form144?.validated||0} Form 144 filings · filings since ${catalog.coverage_start} · ${people.filter(p=>p.computed.sales).length} people with sale signals · ${catalog.issuer_count||3} SEC issuers + ${catalog.business_exits?.validated_people||0} business founders`;
     $('feedDate').textContent=`Validated ${new Date(catalog.validated_at).toLocaleString()}. Reviewed snapshot; not a live stream. ${catalog.errors.length+(catalog.transition_errors||[]).length+(catalog.form144?.errors||[]).length+(catalog.reviewed_triggers?.errors||[]).length+(catalog.business_exits?.errors||[]).length} filing(s) withheld after ingestion errors.`;
@@ -194,6 +199,36 @@ async function load(){
     if(linkedId&&selected?.id===linkedId)$('selected').scrollIntoView({block:'start'});
   }catch(error){catalog=null;people=[];selected=null;$('detail').hidden=true;$('error').hidden=false;$('error').textContent=`Could not load evidence: ${error.message}. No opportunities or scores are asserted. Reload to retry.`;$('leads').innerHTML='<p class="empty">Evidence unavailable. No records released.</p>';$('coverage').textContent='Source coverage unavailable';$('systemStatus').textContent='Evidence unavailable';for(const id of ['mCount','mValue','mHigh','mFresh'])$(id).textContent='UNKNOWN';}
 }
+function cancelZipSearch(){zipRequest++;zipController?.abort();zipController=null;if($('zipSearch'))$('zipSearch').disabled=!catalog;}
+async function searchZip(){
+  if(!catalog||!territoryIndex)return;
+  cancelZipSearch();
+  const zip=$('zipCode').value.trim(),radius=Number($('zipRadius').value);
+  if(!/^\d{5}$/.test(zip)){ $('zipStatus').textContent='Enter a five-digit U.S. ZIP code, including leading zeros. Previous results are unchanged.';return; }
+  if(!Number.isInteger(radius)||radius<1||radius>3000){$('zipStatus').textContent='Enter a whole-mile radius from 1 to 3,000. Previous results are unchanged.';return;}
+  const request=++zipRequest,controller=new AbortController();zipController=controller;$('zipSearch').disabled=true;
+  $('zipStatus').textContent='Looking up ZIP '+zip+'… Previous results remain until the new area is resolved.';
+  const timeout=setTimeout(()=>controller.abort(),10000);
+  try{
+    const country=/^00[679]/.test(zip)?'pr':/^008/.test(zip)?'vi':zip==='96799'?'as':/^969[123]/.test(zip)?'gu':/^9695/.test(zip)?'mp':'us';
+    const response=await fetch('https://api.zippopotam.us/'+country+'/'+zip,{signal:controller.signal,credentials:'omit',referrerPolicy:'no-referrer'});
+    if(response.status===404)throw new Error('ZIP code not found in the postal reference');
+    if(!response.ok)throw new Error('ZIP lookup is temporarily unavailable');
+    const data=await response.json(),place=data.places?.[0],lat=Number(place?.latitude),lon=Number(place?.longitude);
+    if(data['post code']!==zip||!['US','PR','VI','AS','GU','MP'].includes(data['country abbreviation'])||!place||!Number.isFinite(lat)||!Number.isFinite(lon)||Math.abs(lat)>90||Math.abs(lon)>180)throw new Error('ZIP lookup returned invalid coordinates');
+    if(request!==zipRequest)return;
+    territoryOrigin={name:String(place['place name']),state:country==='us'?String(place['state abbreviation']):country.toUpperCase(),lat,lon,zip};
+    applyDistances();
+    let option=$('territory').querySelector('[data-custom-radius]');
+    if(!option){option=document.createElement('option');option.dataset.customRadius='true';$('territory').appendChild(option);}
+    option.value=String(radius);option.textContent=radius+' miles from ZIP '+zip;$('territory').value=String(radius);
+    render();
+    $('zipStatus').textContent='Searched ZIP '+zip+' within '+radius+' miles. '+rows().length+' matching verified candidates. Zero results means no matching records in our reviewed coverage, not no opportunities in this market. Distances use approximate reference coordinates, not street addresses.';
+  }catch(error){if(request===zipRequest)$('zipStatus').textContent=(error.name==='AbortError'?'ZIP lookup timed out. Please retry.':error.message)+'. Previous results are unchanged.';}
+  finally{clearTimeout(timeout);if(request===zipRequest){$('zipSearch').disabled=false;zipController=null;}}
+}
+$('zipSearch').onclick=searchZip;
+for(const id of ['zipCode','zipRadius'])$(id).addEventListener('keydown',event=>{if(event.key==='Enter'){event.preventDefault();searchZip();}});
 load();
 
 let evidenceRequest=0,evidenceReturnFocus=null,evidenceOriginal="",evidenceReading="";
