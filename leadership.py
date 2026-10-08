@@ -76,7 +76,7 @@ def merge(records, root=ROOT):
         except (ValueError,KeyError,OSError) as error:
             errors.append(dict(accession=entry.get('accession','UNKNOWN'),error=str(error),adapter='leadership'))
     records.extend(accepted.values())
-    return dict(validated_people=len(accepted), validated_filings=len({p['events'][0]['accession'] for p in accepted.values()}), reviewed_at=date.today().isoformat(), errors=errors)
+    return dict(validated_people=len(accepted), validated_filings=len({p['events'][0]['accession'] for p in accepted.values()}), reviewed_at=max((p['events'][0]['reviewed_at'] for p in accepted.values()), default=None), errors=errors)
 
 if __name__=='__main__':
     path=ROOT/'catalog.json'; catalog=json.loads(path.read_text())

@@ -21,9 +21,9 @@ LOCK = threading.Lock()
 LAST = 0
 TODAY = date.today()
 
-def fetch(url, dest):
+def fetch(url, dest, force=False):
     global LAST
-    if dest.exists():
+    if dest.exists() and not force:
         return dest.read_bytes()
     with LOCK:
         delay = .6 - (time.monotonic() - LAST)
@@ -107,12 +107,14 @@ def process(row):
     return parse_xml(body, accession, source, filed)
 
 def run():
-    rows = []; submissions = {}
+    rows = []; submissions = {}; amendments = []
     for cik in ISSUERS:
-        submission = json.loads(fetch(f'https://data.sec.gov/submissions/CIK{int(cik):010d}.json', INPUTS / ('submissions-' + cik + '-' + TODAY.isoformat() + '.json')))
+        submission = json.loads(fetch(f'https://data.sec.gov/submissions/CIK{int(cik):010d}.json', INPUTS / ('submissions-' + cik + '-' + TODAY.isoformat() + '.json'), force=True))
         submissions[cik]=submission
         recent = submission['filings']['recent']
         for i, form in enumerate(recent['form']):
+            if form == '4/A' and recent['filingDate'][i] >= '2026-06-01':
+                amendments.append(dict(issuer_cik=cik, accession=recent['accessionNumber'][i], filed_date=recent['filingDate'][i], status='REVIEW REQUIRED; amended transactions not automatically reconciled'))
             if form == '4' and recent['filingDate'][i] >= '2026-06-01':
                 rows.append((cik, recent['accessionNumber'][i], recent['primaryDocument'][i], recent['filingDate'][i]))
     people, errors = {}, []
@@ -133,6 +135,7 @@ def run():
             except Exception as error:
                 errors.append({'accession': row[1], 'error': str(error)})
                 print('REJECTED', row[1], str(error), flush=True)
+    if errors: raise RuntimeError("Form 4 refresh incomplete; retaining last good catalog: "+json.dumps(errors))
     records = []
     for person in people.values():
         person['events'] = sorted({e['id']: e for e in person['events']}.values(), key=lambda e:(e['date'],e['id']), reverse=True)
@@ -155,12 +158,13 @@ def run():
     from contacts import merge as merge_contacts
     contact_enrichment=merge_contacts(records)
     records.sort(key=lambda r:r['liquidity_total'], reverse=True)
-    result = {'version':'project-a-15', 'validated_at':datetime.now(timezone.utc).isoformat(), 'coverage_start':'2026-06-01',
-              'source':'SEC EDGAR', 'issuer_count':len(ISSUERS), 'refresh':'Reviewed repository snapshot; not a live stream', 'scoring_version':'money-in-motion-v5',
+    result = {'version':'project-a-feed-priority-1', 'validated_at':datetime.now(timezone.utc).isoformat(), 'coverage_start':'2026-06-01',
+              'source':'SEC EDGAR', 'issuer_count':len(ISSUERS), 'refresh':'Reviewed repository snapshot; not a live stream', 'scoring_version':'money-in-motion-v6', 'amendment_review':amendments,
               'discovered_filings':len(rows), 'validated_filings':len(rows)-len(errors), 'errors':errors,
               'leadership':leadership, 'contact_enrichment':contact_enrichment, 'business_exits':business, 'form144':proposed, 'reviewed_triggers':other, 'transition_filings':len(reviewed), 'transition_errors':transition_errors, 'records':records}
     if not records: raise RuntimeError('No validated records; retaining previous catalog')
-    (ROOT / 'catalog.json').write_text(json.dumps(result, indent=2))
+    temporary=ROOT/'catalog.json.tmp'
+    temporary.write_text(json.dumps(result, indent=2)); temporary.replace(ROOT/'catalog.json')
     print(json.dumps({'people':len(records),'liquidity_opportunities':sum(r['signal_type']=='Liquidity' for r in records),'errors':errors},indent=2))
 
 if __name__ == '__main__': run()

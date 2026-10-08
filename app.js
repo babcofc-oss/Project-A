@@ -19,8 +19,9 @@ function rows(){
     if(watchOnly&&!saved.has(p.id))return false;
     if(p.computed.value<min)return false;
     if(!ProjectContacts.matches(p,$('contactAvailability').value))return false;
+    if(type==='Hot'&&!p.priority.hot)return false;
     if(type==='Converged'&&!p.computed.converged)return false;
-    if(type!=='Converged'&&!p.events.some(e=>eventMatches(e,type)))return false;
+    if(!['Converged','Hot'].includes(type)&&!p.events.some(e=>eventMatches(e,type)))return false;
     return !q||`${p.person_name} ${displayName(p)} ${p.company} ${p.role} ${city.city} ${p.events.map(e=>e.fact+' '+e.classification).join(' ')}`.toLowerCase().includes(q);
   }).sort((a,b)=>b.computed.value-a.computed.value||b.computed.total-a.computed.total);
 }
@@ -42,7 +43,7 @@ function render(){
   $('allView').classList.toggle('on',!watchOnly);$('watchView').classList.toggle('on',watchOnly);
   $('leads').innerHTML=visible.map(p=>`<button class="lead ${selected?.id===p.id?'active':''}" data-person="${esc(p.id)}" aria-pressed="${selected?.id===p.id}"><div class="score">${p.computed.value}</div><div><h3>${esc(displayName(p))} ${saved.has(p.id)?'<span class="watchbadge">★</span>':''}</h3><p>${esc(p.role)} · ${esc(p.company)}<br>${p.computed.sales?`${p.computed.sales} sale rows · latest ${p.computed.latest}`:p.computed.transitions?`${p.computed.transitions} reviewed executive transition · ${p.computed.latestTrigger}`:p.computed.other?`${p.identity_kind==='REVIEWED_BUSINESS_PERSON'?'Business acquisition':'Reviewed planning event'} · reported ${p.computed.latestTrigger}`:p.events.some(e=>(e.trigger_type||e.classification)==='BOARD_APPOINTMENT')?'Board appointment · monitor compensation':p.events.some(e=>e.source_class==='FORM144')?'Proposed sale · monitor execution':'No planning trigger · monitor only'}<br>${esc(p.location.city||'Location UNKNOWN')}, ${esc(p.location.state||'')}${p.location.basis==='COMPANY_MARKET'?' · company market':p.location.basis==='COMPANY_HEADQUARTERS'?' · company HQ':''} · ${p.location.distance_miles==null?'Radius UNKNOWN':'~'+Math.round(p.location.distance_miles)+' city miles'}</p></div><div class="money">${p.computed.sales?money(p.computed.total):p.identity_kind==='REVIEWED_BUSINESS_PERSON'?'PROCEEDS UNKNOWN':'NO STOCK SALE VALUE'}<small>${p.computed.sales?'gross · calculated':p.computed.transitions?'Transition cash UNKNOWN':p.computed.other?'Individual proceeds UNKNOWN':'F/A/M excluded'}</small></div></button>`).join('')||'<p class="empty">No reviewed opportunities match these controls. This market may not have ingested evidence yet. Try all territories or reset controls; no prospects are invented.</p>';
   const selectedType=$('eventType').value;
-  const feed=visible.flatMap(p=>p.events.filter(e=>selectedType==='Converged'?eventMatches(e,'Planning'):eventMatches(e,selectedType)).map(e=>({p,e}))).sort((a,b)=>b.e.date.localeCompare(a.e.date)).slice(0,8);
+  const feed=visible.flatMap(p=>p.events.filter(e=>['Converged','Hot'].includes(selectedType)?eventMatches(e,'Planning'):eventMatches(e,selectedType)).map(e=>({p,e}))).sort((a,b)=>b.e.date.localeCompare(a.e.date)).slice(0,8);
   $('signalFeed').innerHTML=feed.map(({p,e})=>`<button class="signal" data-person="${esc(p.id)}"><i class="dot"></i><div><b>${esc(displayName(p))} · ${esc(e.classification.replaceAll('_',' '))}</b><p>${esc(e.date)} · ${esc(p.company)}<br>${e.code==='S'?money(e.value)+' gross calculated':e.status?esc(e.source_class)+' · '+esc(e.status):'Code '+esc(e.code)+' · no ordinary sale value'}${e.planned?' · 10b5-1':''}</p></div></button>`).join('')||'<p class="empty">No signals in this view.</p>';
   $('detail').hidden=!selected;
   if(selected)renderDetail();
@@ -72,6 +73,7 @@ function renderDetail(){
   $('evidenceTrail').innerHTML=`<div class="evidence"><b>VERIFIED PUBLIC FACT</b><p>Disclosed identity and event facts are supported by ${sources.length} retained primary disclosure${sources.length===1?'':'s'}. Role reflects disclosure date; current role must be reconfirmed.</p></div><div class="evidence"><b>CALCULATED FROM VERIFIED FACT</b><p>${sales.length?money(c.total)+' gross sale value. Reported shares × reported prices; prices may be rounded weighted averages.':privateIdentity?'Company acquisition confirmed; price and individual proceeds UNKNOWN. No value added to completed-stock-sale totals.':'No ordinary sale value inferred from non-sale codes.'}</p></div><div class="evidence"><b>MODEL INFERENCE / UNKNOWN</b><p>${esc(why)} Current role, planning needs, existing advisor relationship, net proceeds, available funds and total wealth remain UNKNOWN.</p></div>`;
   $('evidenceDrawer').innerHTML=sources.map(e=>`<article class="evidence"><b>${esc(e.authority_domain||e.accession)} · VERIFIED PUBLIC FACT</b><p>${privateIdentity?'Published':'Filed'} ${esc(e.filed_date)} · source SHA-256 ${esc(e.sha256)}</p><a class="source" href="${esc(e.source_url)}" target="_blank" rel="noopener noreferrer">Open primary source ↗</a><button class="source retained-button" data-retained="${esc(e.raw_path)}" data-fingerprint="${esc(e.sha256)}">Inspect retained disclosure</button></article>`).join('')+`<a class="source" href="${esc(p.location.source_url)}" target="_blank" rel="noopener">Geography provenance ↗</a>${p.location.geo_source?`<a class="source" href="${esc(p.location.geo_source)}" target="_blank" rel="noopener">Census geography provenance ↗</a>`:''}`;
   $('evidenceDrawer').hidden=true;$('evidenceButton').setAttribute('aria-expanded','false');$('evidenceButton').textContent='Open evidence details';
+  renderPriority(p);
   renderContacts(p);
   $('scoreRows').innerHTML=c.parts.map(part=>`<div><div class="row"><span>${esc(part.label)}</span><b>${part.points<0?'−'+Math.abs(part.points):part.points}${part.points<0?' adjustment':' / '+part.max}</b></div>${part.points>0?`<div class="bar"><i style="width:${100*part.points/part.max}%"></i></div>`:''}<p class="note" style="margin:6px 0 12px">${esc(part.reason)}</p></div>`).join('')+`<p class="note">Version ${esc(c.version)} · evaluated ${new Date().toISOString().slice(0,10)} · sum = ${c.value}</p>`;
   const b=ProjectIntelligence.brief(p,c);$('nextAction').textContent=b.next;
@@ -94,7 +96,7 @@ function renderContacts(p){
 let researchTask='brief',researchReport=null;
 function renderResearch(){
   if(!selected)return;
-  researchReport=ProjectResearch.build(selected,selected.computed,catalog);
+  researchReport=ProjectResearch.build({...selected,display_name:displayName(selected)},selected.computed,catalog);
   const r=researchReport;
   $('researchDecision').innerHTML=`<div class="research-decision"><h3>${esc(r.verdict)}</h3><p>${esc(r.person)} · ${esc(r.company)}</p><p class="note">Prepared ${esc(r.asOf)} · source-linked decision support · score ${r.score} is a research heuristic</p></div>`;
   $('researchFacts').innerHTML=r.facts.slice(0,4).map(f=>{const source=r.sources.find(s=>s.id===f.source);return `<article class="research-fact"><span class="tag">VERIFIED PUBLIC FACT · ${esc(f.date)}</span><p>${esc(f.fact)}</p><p class="note">${esc(f.stage)}</p>${source?`<a class="source" href="${esc(source.url)}" target="_blank" rel="noopener noreferrer">[${esc(f.source)}] Open primary disclosure ↗</a>`:''}</article>`;}).join('')+(r.facts.length>4?`<p class="note">Showing 4 of ${r.facts.length} retained events. Full timeline and AI packet include all events.</p>`:'');
@@ -219,10 +221,11 @@ async function load(){
     catalog=await response.json();
     if(!Array.isArray(catalog.records))throw new Error('Evidence catalog has an invalid schema');
     const geographyResponse=await fetch('territories.json',{cache:'no-cache'});if(!geographyResponse.ok)throw new Error('Territory reference unavailable');territoryData=await geographyResponse.json();if(!Array.isArray(territoryData.places)||!territoryData.places.length)throw new Error('Territory reference has an invalid schema');territoryIndex=ProjectTerritory.index(territoryData.places);
-    people=catalog.records.map(p=>({...p,computed:ProjectIntelligence.score(p)}));
+    people=catalog.records.map(p=>({...p,computed:ProjectIntelligence.score(p),priority:ProjectPriority.evaluate(p,catalog)}));
     $('centerState').innerHTML=[...new Set(territoryData.places.map(p=>p.state))].sort().map(state=>`<option value="${esc(state)}">${esc(state)}</option>`).join('');$('centerState').disabled=false;$('centerPlace').disabled=false;$('zipSearch').disabled=false;setCenter('SC','4513330');
     $('systemStatus').textContent=`Validated public snapshot · ${people.length} people`;
     $('coverage').textContent=`${catalog.validated_filings} Form 4 + ${(catalog.transition_filings||0)+(catalog.leadership?.validated_filings||0)} reviewed 8-K + ${catalog.form144?.validated||0} Form 144 filings · filings since ${catalog.coverage_start} · ${people.filter(p=>p.computed.sales).length} people with sale signals · ${catalog.issuer_count||3} stock-filing issuers + ${catalog.business_exits?.validated_people||0} business founders + ${catalog.leadership?.validated_people||0} reviewed leaders`;
+    renderHealth();
     $('feedDate').textContent=`Validated ${new Date(catalog.validated_at).toLocaleString()}. Reviewed snapshot; not a live stream. ${catalog.errors.length+(catalog.transition_errors||[]).length+(catalog.form144?.errors||[]).length+(catalog.reviewed_triggers?.errors||[]).length+(catalog.business_exits?.errors||[]).length} filing(s) withheld after ingestion errors.${catalog.leadership?.reviewed_at?' Leadership evidence separately reviewed '+catalog.leadership.reviewed_at+'; this does not refresh the original stock-sale snapshot.':''}`;
     try{feedback=ProjectPilot.validate({product:'Project A',feedback},people);}catch{feedback=[];$('pilotStatus').textContent='Saved reviews could not be validated against this catalog. Original browser storage is unchanged; import a valid export to recover reviews.';}
     const linkedId=new URLSearchParams(location.search).get('person');
@@ -294,3 +297,18 @@ $('sourceViewer').addEventListener('cancel',event=>{event.preventDefault();close
 $('selectSourceText').onclick=()=>{$('sourceText').focus();$('sourceText').select();};
 
 $('toggleSourceView').onclick=()=>{const raw=$('toggleSourceView').textContent==='Show original markup';$('sourceText').value=raw?evidenceOriginal:evidenceReading;$('sourceViewLabel').textContent=raw?'Original source text':'Reading view · extracted from fingerprint-matched archive';$('toggleSourceView').textContent=raw?'Show reading view':'Show original markup';};
+
+function renderHealth(){
+  const h=catalog.feed_health||{},state=ProjectPriority.health(catalog);
+  $('healthBadge').textContent=state.status+' · SEC DISCOVERY';
+  $('healthSummary').textContent=`Last successful SEC discovery: ${h.last_success_at||catalog.validated_at}. Latest attempt: ${h.last_attempt_at||'not monitored'}. Target: check every 6 hours; stale after 48 hours. ${h.errors?.length?'Latest refresh failed; last good records retained. '+h.errors.join(' '):''}`;
+  const rows=[['Form 4 / Form 144',`${state.status} · ${catalog.issuer_count} configured stock-filing issuers · ${catalog.form144?.errors?.length||0} proposals held for identity review · ${catalog.amendment_review?.length||0} amendments awaiting reconciliation`],['Executive / board disclosures',`MANUAL REVIEW · ${catalog.transition_filings+(catalog.leadership?.validated_filings||0)} retained filings; new events need named-person review. Latest leadership review ${catalog.leadership?.reviewed_at||'UNKNOWN'}`],['Private-company acquisitions','MANUAL REVIEW · '+(catalog.business_exits?.validated_people||0)+' named founders; no continuous acquisition feed'],['Professional contacts','MANUAL REVIEW · published routes expire after 90 days; current reachability UNKNOWN'],['Other trigger categories','NOT CONNECTED · IPO / lockup, property, inheritance, lottery and ownership changes'],['Hot combinations',people.filter(p=>p.priority.hot).length+' across current coverage · exact person + issuer, recent sale and distinct leadership event required']];
+  $('feedHealthRows').innerHTML=rows.map(([k,v])=>`<div class="row"><span>${esc(k)}</span><b>${esc(v)}</b></div>`).join('');
+}
+function renderPriority(p){
+  const r=p.priority;
+  $('priorityBadge').textContent=r.label;
+  $('priorityDetails').innerHTML=r.pairs.map(pair=>`<article class="evidence"><h3>${esc(pair.label)}</h3><p>${esc(pair.reason)}</p><p>${money(pair.gross)} gross calculated · ${pair.accessions.map(esc).join(' + ')}</p>${pair.eventIds.map(id=>p.events.find(e=>e.id===id)).filter(Boolean).map(e=>`<a class="source" href="${esc(e.source_url)}" target="_blank" rel="noopener">${esc(e.date)} · ${esc(e.accession)} ↗</a>`).join('<br>')}</article>`).join('')||'<p>No qualifying same-person combination. No hot label is inferred from a board position, proposed sale or score alone.</p>';
+  if(r.blocks.length)$('priorityDetails').innerHTML+='<p class="note">Highest-priority gate: '+r.blocks.map(esc).join('; ')+'.</p>';
+  $('priorityDetails').innerHTML+='<p class="note">'+esc(r.limit)+'</p>';
+}

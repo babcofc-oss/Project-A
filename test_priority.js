@@ -1,0 +1,22 @@
+'use strict';
+const assert=require('node:assert/strict'),P=require('./priority.js');
+const now=new Date('2026-10-08T12:00:00Z');
+const catalog={feed_health:{status:'OK',last_success_at:'2026-10-08T10:00:00Z'}};
+const sale={id:'sale:1',accession:'sale',date:'2026-10-07',classification:'LIQUIDITY',code:'S',direction:'D',value:150000,planned:false};
+const change={id:'change:1',accession:'change',date:'2026-09-20',classification:'EXECUTIVE_TRANSITION',source_class:'8K'};
+const person={person_cik:'123',issuer_cik:'456',events:[sale,change]};
+assert.equal(P.evaluate(person,catalog,now).hot,true);
+assert.equal(P.evaluate({...person,person_cik:null},catalog,now).hot,false);
+assert.equal(P.evaluate(person,{feed_health:{status:'FAILED',last_success_at:catalog.feed_health.last_success_at}},now).hot,false);
+assert.equal(P.evaluate(person,{feed_health:{status:'OK',last_success_at:'2026-10-01'}},now).hot,false);
+assert.equal(P.evaluate(person,{...catalog,amendment_review:[{issuer_cik:'000456'}]},now).hot,false);
+assert.equal(P.evaluate({...person,events:[{...sale,planned:true},change]},catalog,now).hot,false);
+assert.equal(P.evaluate({...person,events:[{...sale,date:'2026-08-01'},change]},catalog,now).hot,false);
+assert.equal(P.evaluate({...person,events:[{...sale,value:99999},change]},catalog,now).hot,false);
+assert.equal(P.evaluate({...person,events:[{...sale,classification:'PROPOSED_SALE'},change]},catalog,now).hot,false);
+assert.equal(P.evaluate({...person,events:[sale,{...sale,id:'sale:2'}]},catalog,now).hot,false);
+assert.equal(P.evaluate({...person,events:[sale,{...change,accession:'sale'}]},catalog,now).hot,false);
+assert.equal(P.evaluate({...person,events:[sale,{...change,date:'2026-10-09'}]},catalog,now).hot,false);
+const retained=JSON.parse(require('node:fs').readFileSync('catalog.json'));
+for(const p of retained.records){const r=P.evaluate(p,retained);for(const pair of r.pairs)for(const id of pair.eventIds)assert(p.events.some(e=>e.id===id));}
+console.log('Priority rules passed: qualifying pairs, stale/failed suppression, planned/proposed exclusions, exact identity, amendments and citation integrity.');

@@ -58,7 +58,7 @@ def merge(records, submissions):
                 person['events'].extend(events); accepted.add(accession)
                 print('FORM144',accession,person['person_name'],flush=True)
             except (ValueError,InvalidOperation,ET.ParseError,OSError) as error:
-                errors.append({'accession':accession,'error':str(error),'adapter':'form144'})
+                errors.append({'accession':accession,'error':str(error),'adapter':'form144','kind':'FETCH_FAILURE' if isinstance(error,OSError) else 'VALIDATION_HOLD'})
                 print('HELD FORM144',accession,str(error),flush=True)
     for p in records:
         p['events']=sorted({e['id']:e for e in p['events']}.values(),key=lambda e:(e['date'],e['id']),reverse=True)
