@@ -24,16 +24,17 @@ class LeadershipTests(unittest.TestCase):
         records=[]
         for _ in range(2):
             result=merge(records)
-            self.assertFalse(result['errors']);self.assertEqual(len(records),2)
+            self.assertFalse(result['errors']);self.assertEqual(len(records),len(ENTRIES))
         with tempfile.TemporaryDirectory() as folder:
             root=Path(folder)
             (root/'reviewed-leadership.json').write_text(json.dumps(ENTRIES))
             (root/ENTRIES[0]['raw_path']).write_bytes(b'changed source')
             result=merge(records,root)
-            self.assertEqual(records,[]);self.assertEqual(len(result['errors']),2)
+            self.assertEqual(records,[]);self.assertEqual(len(result['errors']),len(ENTRIES))
 
     def test_signatory_not_discovered_as_prospect(self):
         names={validate(e)['person_name'] for e in ENTRIES}
         self.assertNotIn('Sandra T. Lane',names)
+        self.assertNotIn('D. Shawn Jordan',names)
 
 if __name__=='__main__':unittest.main()

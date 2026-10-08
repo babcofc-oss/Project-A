@@ -54,8 +54,8 @@
   "validated_filings": 112,
   "errors": [],
   "leadership": {
-    "validated_people": 2,
-    "validated_filings": 1,
+    "validated_people": 3,
+    "validated_filings": 2,
     "reviewed_at": "2026-10-08",
     "errors": []
   },
@@ -9411,166 +9411,6 @@
       }
     },
     {
-      "id": "reviewed-leadership-7b110901c849930b276eb0e1",
-      "identity_kind": "REVIEWED_LEADERSHIP_PERSON",
-      "identity_method": "Exact named subject + SEC issuer + reviewed event span; company-scoped identity, no cross-company match",
-      "person_cik": null,
-      "issuer_cik": "80424",
-      "person_name": "Jon R. Moeller",
-      "display_name": "Jon R. Moeller",
-      "role": "Executive Chairman as disclosed; retirement announced",
-      "company": "The Procter & Gamble Company",
-      "location": {
-        "city": "Cincinnati",
-        "state": "OH",
-        "kind": "Company headquarters; personal location UNKNOWN",
-        "basis": "COMPANY_HEADQUARTERS",
-        "source_url": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000094/pg-20260729.htm",
-        "assertion_class": "VERIFIED PUBLIC FACT",
-        "distance_miles": 504.24,
-        "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
-        "geo_class": "CALCULATED FROM VERIFIED FACT",
-        "geo_method": "Haversine between Census place representative coordinates; mailing city only, not precise location",
-        "place_geoid": "3915000"
-      },
-      "events": [
-        {
-          "accession": "0000080424-26-000094",
-          "primary_document": "pg-20260729.htm",
-          "source_url": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000094/pg-20260729.htm",
-          "raw_path": "0000080424-26-000094.htm",
-          "sha256": "7dc43aabdd3262035b691f54948713f925684372d4c114acbe7bf8737711fbe7",
-          "date": "2026-07-29",
-          "filed_date": "2026-07-29",
-          "reviewed_at": "2026-10-08",
-          "stage": "ANNOUNCED",
-          "amount_context": "No personal payment, severance amount, equity realization or available funds established by this filing.",
-          "classification": "EXECUTIVE_TRANSITION",
-          "effective_date": "2026-08-14",
-          "fact": "P&G announced that Jon R. Moeller would retire as executive chairman and board member effective July 31, 2026, then retire from the company effective August 14, 2026.",
-          "status": "Retirement schedule announced July 29. Scheduled dates have passed; this retained announcement alone does not independently confirm completion or payment.",
-          "id": "reviewed-leadership-7b110901c849930b276eb0e1:0000080424-26-000094:EXECUTIVE_TRANSITION",
-          "trigger_type": "EXECUTIVE_TRANSITION",
-          "source_class": "8K",
-          "reviewed_leadership": true,
-          "assertion_class": "VERIFIED PUBLIC FACT",
-          "value": null,
-          "value_class": "UNKNOWN",
-          "shares": null,
-          "price": null,
-          "code": null,
-          "planned": false,
-          "cash_received": "UNKNOWN",
-          "footnotes": []
-        }
-      ],
-      "source_classes": [
-        "8K"
-      ],
-      "liquidity_total": 0,
-      "signal_type": "Planning",
-      "convergence": 0,
-      "ai_note": {
-        "prepared_at": "2026-10-08",
-        "source_accessions": [
-          "0000080424-26-000094"
-        ],
-        "summary": "Two distinct dates matter: the board role was scheduled to end before company employment. Treat those as announced milestones and investigate later disclosures before calling the transition completed.",
-        "hypothesis": "Retirement may create decisions about equity, deferred compensation, benefits and cash flow. The filing establishes a career event, not balances, pension eligibility or a need to change advisors.",
-        "questions": [
-          "Did the announced retirement occur on the stated dates?",
-          "Which compensation or benefit terms, if any, are disclosed in later filings?",
-          "Is there a legitimate professional introduction or published contact route?"
-        ]
-      },
-      "contacts": {
-        "direct_email": "UNKNOWN",
-        "direct_phone": "UNKNOWN",
-        "consent": "UNKNOWN",
-        "routes": []
-      }
-    },
-    {
-      "id": "reviewed-leadership-9dd065015c8c2c73a0d574fa",
-      "identity_kind": "REVIEWED_LEADERSHIP_PERSON",
-      "identity_method": "Exact named subject + SEC issuer + reviewed event span; company-scoped identity, no cross-company match",
-      "person_cik": null,
-      "issuer_cik": "80424",
-      "person_name": "Shailesh G. Jejurikar",
-      "display_name": "Shailesh G. Jejurikar",
-      "role": "President and CEO; board chair appointment announced",
-      "company": "The Procter & Gamble Company",
-      "location": {
-        "city": "Cincinnati",
-        "state": "OH",
-        "kind": "Company headquarters; personal location UNKNOWN",
-        "basis": "COMPANY_HEADQUARTERS",
-        "source_url": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000094/pg-20260729.htm",
-        "assertion_class": "VERIFIED PUBLIC FACT",
-        "distance_miles": 504.24,
-        "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
-        "geo_class": "CALCULATED FROM VERIFIED FACT",
-        "geo_method": "Haversine between Census place representative coordinates; mailing city only, not precise location",
-        "place_geoid": "3915000"
-      },
-      "events": [
-        {
-          "accession": "0000080424-26-000094",
-          "primary_document": "pg-20260729.htm",
-          "source_url": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000094/pg-20260729.htm",
-          "raw_path": "0000080424-26-000094.htm",
-          "sha256": "7dc43aabdd3262035b691f54948713f925684372d4c114acbe7bf8737711fbe7",
-          "date": "2026-07-29",
-          "filed_date": "2026-07-29",
-          "reviewed_at": "2026-10-08",
-          "stage": "ANNOUNCED",
-          "amount_context": "No personal payment, severance amount, equity realization or available funds established by this filing.",
-          "classification": "BOARD_APPOINTMENT",
-          "effective_date": "2026-08-01",
-          "fact": "P&G announced that its existing president, CEO and board member Shailesh G. Jejurikar was appointed chairman effective August 1, 2026, in addition to his existing responsibilities.",
-          "status": "Board chair appointment announced; not a new CEO hire or a disclosed stock sale. Compensation changes and current role require separate confirmation.",
-          "id": "reviewed-leadership-9dd065015c8c2c73a0d574fa:0000080424-26-000094:BOARD_APPOINTMENT",
-          "trigger_type": "BOARD_APPOINTMENT",
-          "source_class": "8K",
-          "reviewed_leadership": true,
-          "assertion_class": "VERIFIED PUBLIC FACT",
-          "value": null,
-          "value_class": "UNKNOWN",
-          "shares": null,
-          "price": null,
-          "code": null,
-          "planned": false,
-          "cash_received": "UNKNOWN",
-          "footnotes": []
-        }
-      ],
-      "source_classes": [
-        "8K"
-      ],
-      "liquidity_total": 0,
-      "signal_type": "Monitor",
-      "convergence": 0,
-      "ai_note": {
-        "prepared_at": "2026-10-08",
-        "source_accessions": [
-          "0000080424-26-000094"
-        ],
-        "summary": "This is an added chair responsibility for an existing CEO and director. It should not be marketed as a new CEO appointment or personal liquidity event.",
-        "hypothesis": "A documented change in responsibilities is a reason to monitor compensation and equity disclosures. No additional compensation or personal financial impact is established here.",
-        "questions": [
-          "Did the chair appointment change disclosed compensation or ownership requirements?",
-          "What does the latest proxy establish about equity and director compensation?",
-          "Is there any separate verified financial event that makes planning timely?"
-        ]
-      },
-      "contacts": {
-        "direct_email": "UNKNOWN",
-        "direct_phone": "UNKNOWN",
-        "consent": "UNKNOWN",
-        "routes": []
-      }
-    },
-    {
       "id": "reviewed-business-836366ba12448cff90bf1e69",
       "identity_kind": "REVIEWED_BUSINESS_PERSON",
       "identity_method": "Exact primary-source named founder + company + authority; no SEC or cross-company identity match",
@@ -9803,18 +9643,231 @@
           }
         ]
       }
+    },
+    {
+      "id": "reviewed-leadership-7b110901c849930b276eb0e1",
+      "identity_kind": "REVIEWED_LEADERSHIP_PERSON",
+      "identity_method": "Exact named subject + SEC issuer + reviewed event span; company-scoped identity, no cross-company match",
+      "person_cik": null,
+      "issuer_cik": "80424",
+      "person_name": "Jon R. Moeller",
+      "display_name": "Jon R. Moeller",
+      "role": "Executive Chairman as disclosed; retirement announced",
+      "company": "The Procter & Gamble Company",
+      "location": {
+        "city": "Cincinnati",
+        "state": "OH",
+        "kind": "Company headquarters; personal location UNKNOWN",
+        "basis": "COMPANY_HEADQUARTERS",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000094/pg-20260729.htm",
+        "assertion_class": "VERIFIED PUBLIC FACT",
+        "distance_miles": 504.24,
+        "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
+        "geo_class": "CALCULATED FROM VERIFIED FACT",
+        "geo_method": "Haversine between Census place representative coordinates; mailing city only, not precise location",
+        "place_geoid": "3915000"
+      },
+      "events": [
+        {
+          "accession": "0000080424-26-000094",
+          "primary_document": "pg-20260729.htm",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000094/pg-20260729.htm",
+          "raw_path": "0000080424-26-000094.htm",
+          "sha256": "7dc43aabdd3262035b691f54948713f925684372d4c114acbe7bf8737711fbe7",
+          "date": "2026-07-29",
+          "filed_date": "2026-07-29",
+          "reviewed_at": "2026-10-08",
+          "stage": "ANNOUNCED",
+          "amount_context": "No personal payment, severance amount, equity realization or available funds established by this filing.",
+          "classification": "EXECUTIVE_TRANSITION",
+          "effective_date": "2026-08-14",
+          "fact": "P&G announced that Jon R. Moeller would retire as executive chairman and board member effective July 31, 2026, then retire from the company effective August 14, 2026.",
+          "status": "Retirement schedule announced July 29. Scheduled dates have passed; this retained announcement alone does not independently confirm completion or payment.",
+          "id": "reviewed-leadership-7b110901c849930b276eb0e1:0000080424-26-000094:EXECUTIVE_TRANSITION",
+          "trigger_type": "EXECUTIVE_TRANSITION",
+          "source_class": "8K",
+          "reviewed_leadership": true,
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value": null,
+          "value_class": "UNKNOWN",
+          "shares": null,
+          "price": null,
+          "code": null,
+          "planned": false,
+          "cash_received": "UNKNOWN",
+          "footnotes": []
+        }
+      ],
+      "source_classes": [
+        "8K"
+      ],
+      "liquidity_total": 0,
+      "signal_type": "Planning",
+      "convergence": 0,
+      "ai_note": {
+        "prepared_at": "2026-10-08",
+        "source_accessions": [
+          "0000080424-26-000094"
+        ],
+        "summary": "Two distinct dates matter: the board role was scheduled to end before company employment. Treat those as announced milestones and investigate later disclosures before calling the transition completed.",
+        "hypothesis": "Retirement may create decisions about equity, deferred compensation, benefits and cash flow. The filing establishes a career event, not balances, pension eligibility or a need to change advisors.",
+        "questions": [
+          "Did the announced retirement occur on the stated dates?",
+          "Which compensation or benefit terms, if any, are disclosed in later filings?",
+          "Is there a legitimate professional introduction or published contact route?"
+        ]
+      }
+    },
+    {
+      "id": "reviewed-leadership-9dd065015c8c2c73a0d574fa",
+      "identity_kind": "REVIEWED_LEADERSHIP_PERSON",
+      "identity_method": "Exact named subject + SEC issuer + reviewed event span; company-scoped identity, no cross-company match",
+      "person_cik": null,
+      "issuer_cik": "80424",
+      "person_name": "Shailesh G. Jejurikar",
+      "display_name": "Shailesh G. Jejurikar",
+      "role": "President and CEO; board chair appointment announced",
+      "company": "The Procter & Gamble Company",
+      "location": {
+        "city": "Cincinnati",
+        "state": "OH",
+        "kind": "Company headquarters; personal location UNKNOWN",
+        "basis": "COMPANY_HEADQUARTERS",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000094/pg-20260729.htm",
+        "assertion_class": "VERIFIED PUBLIC FACT",
+        "distance_miles": 504.24,
+        "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
+        "geo_class": "CALCULATED FROM VERIFIED FACT",
+        "geo_method": "Haversine between Census place representative coordinates; mailing city only, not precise location",
+        "place_geoid": "3915000"
+      },
+      "events": [
+        {
+          "accession": "0000080424-26-000094",
+          "primary_document": "pg-20260729.htm",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000094/pg-20260729.htm",
+          "raw_path": "0000080424-26-000094.htm",
+          "sha256": "7dc43aabdd3262035b691f54948713f925684372d4c114acbe7bf8737711fbe7",
+          "date": "2026-07-29",
+          "filed_date": "2026-07-29",
+          "reviewed_at": "2026-10-08",
+          "stage": "ANNOUNCED",
+          "amount_context": "No personal payment, severance amount, equity realization or available funds established by this filing.",
+          "classification": "BOARD_APPOINTMENT",
+          "effective_date": "2026-08-01",
+          "fact": "P&G announced that its existing president, CEO and board member Shailesh G. Jejurikar was appointed chairman effective August 1, 2026, in addition to his existing responsibilities.",
+          "status": "Board chair appointment announced; not a new CEO hire or a disclosed stock sale. Compensation changes and current role require separate confirmation.",
+          "id": "reviewed-leadership-9dd065015c8c2c73a0d574fa:0000080424-26-000094:BOARD_APPOINTMENT",
+          "trigger_type": "BOARD_APPOINTMENT",
+          "source_class": "8K",
+          "reviewed_leadership": true,
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value": null,
+          "value_class": "UNKNOWN",
+          "shares": null,
+          "price": null,
+          "code": null,
+          "planned": false,
+          "cash_received": "UNKNOWN",
+          "footnotes": []
+        }
+      ],
+      "source_classes": [
+        "8K"
+      ],
+      "liquidity_total": 0,
+      "signal_type": "Monitor",
+      "convergence": 0,
+      "ai_note": {
+        "prepared_at": "2026-10-08",
+        "source_accessions": [
+          "0000080424-26-000094"
+        ],
+        "summary": "This is an added chair responsibility for an existing CEO and director. It should not be marketed as a new CEO appointment or personal liquidity event.",
+        "hypothesis": "A documented change in responsibilities is a reason to monitor compensation and equity disclosures. No additional compensation or personal financial impact is established here.",
+        "questions": [
+          "Did the chair appointment change disclosed compensation or ownership requirements?",
+          "What does the latest proxy establish about equity and director compensation?",
+          "Is there any separate verified financial event that makes planning timely?"
+        ]
+      }
+    },
+    {
+      "id": "reviewed-leadership-e0209826f4bc96360a3babeb",
+      "identity_kind": "REVIEWED_LEADERSHIP_PERSON",
+      "identity_method": "Exact named subject + SEC issuer + reviewed event span; company-scoped identity, no cross-company match",
+      "person_cik": null,
+      "issuer_cik": "932781",
+      "person_name": "J. Ted Nissen",
+      "display_name": "J. Ted Nissen",
+      "role": "Company EVP and Chief Banking Officer; bank President and CEO as disclosed; retirement announced",
+      "company": "First Community Corporation",
+      "location": {
+        "city": "Lexington",
+        "state": "SC",
+        "kind": "Company headquarters; personal location UNKNOWN",
+        "basis": "COMPANY_HEADQUARTERS",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/932781/000155278126000507/e26403_fcco-8k.htm",
+        "assertion_class": "VERIFIED PUBLIC FACT",
+        "distance_miles": 108.01,
+        "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
+        "geo_class": "CALCULATED FROM VERIFIED FACT",
+        "geo_method": "Haversine between Census place representative coordinates; mailing city only, not precise location",
+        "place_geoid": "4541335"
+      },
+      "events": [
+        {
+          "accession": "0001552781-26-000507",
+          "primary_document": "e26403_fcco-8k.htm",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/932781/000155278126000507/e26403_fcco-8k.htm",
+          "raw_path": "0001552781-26-000507.htm",
+          "sha256": "fe425d163a8a4632ce85345c9407aa43d2c81733821fd842f3a517cacfd6b13e",
+          "date": "2026-09-30",
+          "filed_date": "2026-10-02",
+          "reviewed_at": "2026-10-08",
+          "stage": "ANNOUNCED",
+          "classification": "EXECUTIVE_TRANSITION",
+          "effective_date": "2026-12-31",
+          "fact": "First Community disclosed a September 30, 2026 consulting agreement for J. Ted Nissen alongside his announced December 31, 2026 retirement from officer and board positions. The agreement schedules $40,000 per month for January\u2013March 2027 and $15,000 per month for April\u2013December 2027, starting January 15, 2027. As an independent contractor he will not participate in bank employee benefit plans.",
+          "status": "Retirement and future consulting arrangements announced. Completion, service performance, payment, net proceeds and available funds UNKNOWN.",
+          "amount_context": "$255,000 scheduled full-year consulting compensation, calculated as 3 \u00d7 $40,000 + 9 \u00d7 $15,000, conditional on services and the agreement remaining in effect. This is future contractual compensation, not a stock sale, cash received or available funds; excluded from liquidity totals.",
+          "id": "reviewed-leadership-e0209826f4bc96360a3babeb:0001552781-26-000507:EXECUTIVE_TRANSITION",
+          "trigger_type": "EXECUTIVE_TRANSITION",
+          "source_class": "8K",
+          "reviewed_leadership": true,
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value": null,
+          "value_class": "UNKNOWN",
+          "shares": null,
+          "price": null,
+          "code": null,
+          "planned": false,
+          "cash_received": "UNKNOWN",
+          "footnotes": []
+        }
+      ],
+      "source_classes": [
+        "8K"
+      ],
+      "liquidity_total": 0,
+      "signal_type": "Planning",
+      "convergence": 0,
+      "ai_note": {
+        "prepared_at": "2026-10-08",
+        "source_accessions": [
+          "0001552781-26-000507"
+        ],
+        "summary": "This filing connects a dated retirement announcement to a future independent-contractor consulting schedule. Use the dates to prepare verification questions; do not infer completed retirement or received compensation.",
+        "hypothesis": "A switch from employee to independent contractor may create benefits, cash-flow and tax-coordination questions. These are planning hypotheses; insurance coverage, pensions, accounts and unmet needs remain unknown.",
+        "questions": [
+          "Did the announced retirement occur on December 31, 2026?",
+          "What does the full consulting agreement and any later amendment establish about conditions and compensation?",
+          "Which benefits and tax-coordination decisions, if any, does the executive want help with?"
+        ]
+      }
     }
   ],
   "leadership_review_queue": [
-    {
-      "accession": "0001552781-26-000507",
-      "issuer_cik": "932781",
-      "company": "FIRST COMMUNITY CORP /SC/",
-      "filed_date": "2026-10-02",
-      "items": "5.02",
-      "source_url": "https://www.sec.gov/Archives/edgar/data/932781/000155278126000507/e26403_fcco-8k.htm",
-      "status": "DISCOVERED \u2014 named subject, event and completion require review; not a prospect"
-    },
     {
       "accession": "0001552781-26-000489",
       "issuer_cik": "932781",
@@ -9887,6 +9940,7 @@
     "errors": [],
     "held_form144": 4,
     "amendments_pending": 7,
-    "leadership_pending": 6
-  }
+    "leadership_pending": 5
+  },
+  "partial_leadership_review_at": "2026-10-08"
 }

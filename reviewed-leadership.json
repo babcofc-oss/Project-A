@@ -80,5 +80,51 @@
         "Is there any separate verified financial event that makes planning timely?"
       ]
     }
+  },
+  {
+    "issuer_cik": "932781",
+    "company": "First Community Corporation",
+    "accession": "0001552781-26-000507",
+    "primary_document": "e26403_fcco-8k.htm",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/932781/000155278126000507/e26403_fcco-8k.htm",
+    "raw_path": "0001552781-26-000507.htm",
+    "sha256": "fe425d163a8a4632ce85345c9407aa43d2c81733821fd842f3a517cacfd6b13e",
+    "date": "2026-09-30",
+    "filed_date": "2026-10-02",
+    "reviewed_at": "2026-10-08",
+    "stage": "ANNOUNCED",
+    "location_city": "Lexington",
+    "location_state": "SC",
+    "location_anchor": "5455 Sunset Blvd ., Lexington , South Carolina 29072",
+    "subject_name": "J. Ted Nissen",
+    "role": "Company EVP and Chief Banking Officer; bank President and CEO as disclosed; retirement announced",
+    "classification": "EXECUTIVE_TRANSITION",
+    "effective_date": "2026-12-31",
+    "relationship_anchor": "J. Ted Nissen, Executive Vice President and Chief Banking Officer of the Company and President and Chief Executive Officer of First Community Bank",
+    "required_terms": [
+      "effective December 31, 2026",
+      "On September 30, 2026",
+      "effective as of January 1, 2027",
+      "$40,000 per month",
+      "$15,000 per month",
+      "January 15, 2027",
+      "will not participate in the Bank\u2019s employee benefit plans"
+    ],
+    "fact": "First Community disclosed a September 30, 2026 consulting agreement for J. Ted Nissen alongside his announced December 31, 2026 retirement from officer and board positions. The agreement schedules $40,000 per month for January\u2013March 2027 and $15,000 per month for April\u2013December 2027, starting January 15, 2027. As an independent contractor he will not participate in bank employee benefit plans.",
+    "status": "Retirement and future consulting arrangements announced. Completion, service performance, payment, net proceeds and available funds UNKNOWN.",
+    "amount_context": "$255,000 scheduled full-year consulting compensation, calculated as 3 \u00d7 $40,000 + 9 \u00d7 $15,000, conditional on services and the agreement remaining in effect. This is future contractual compensation, not a stock sale, cash received or available funds; excluded from liquidity totals.",
+    "ai_note": {
+      "prepared_at": "2026-10-08",
+      "source_accessions": [
+        "0001552781-26-000507"
+      ],
+      "summary": "This filing connects a dated retirement announcement to a future independent-contractor consulting schedule. Use the dates to prepare verification questions; do not infer completed retirement or received compensation.",
+      "hypothesis": "A switch from employee to independent contractor may create benefits, cash-flow and tax-coordination questions. These are planning hypotheses; insurance coverage, pensions, accounts and unmet needs remain unknown.",
+      "questions": [
+        "Did the announced retirement occur on December 31, 2026?",
+        "What does the full consulting agreement and any later amendment establish about conditions and compensation?",
+        "Which benefits and tax-coordination decisions, if any, does the executive want help with?"
+      ]
+    }
   }
 ]

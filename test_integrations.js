@@ -10,3 +10,9 @@ for(const x of ['=SUM(A1)','+1','@HYPERLINK','-1',' \t=evil'])assert.ok(I.cell(x
 assert.equal(I.cell('a"b,c\nline'),'"a""b,c\nline"');const named={...graves,id:'named-leader',person_cik:null};assert.equal(I.packet([named.id],{...c,records:[named]},now).records[0].identity_kind,'REVIEWED_NAMED_PERSON');
 const csv=I.csv(p);assert.ok(csv.includes('151535.3'));assert.ok(csv.includes('UNKNOWN'));assert.ok(csv.includes('0001628280-26-062712'));assert.ok(csv.includes('Last successful SEC discovery'));
 console.log('Integration handoff checks passed: exact IDs, primary evidence, current priority, stale/failed suppression, deduplication, unknowns and CSV formula protection.');
+
+const current=JSON.parse(fs.readFileSync('catalog.json')),n=current.records.find(p=>p.person_name==='J. Ted Nissen');
+assert.ok(n,'Reviewed retirement prospect retained');const nr=I.packet([n.id],current,now).records[0];
+assert.equal(nr.reporting_person_cik,null);assert.equal(nr.research_priority.hot,false);assert.equal(nr.research_priority.unplanned_recent_gross_sales,null);
+assert.equal(nr.research_priority.available_funds,'UNKNOWN');assert.equal(nr.source_events[0].reported_gross_value,null);assert.equal(nr.source_events[0].effective_date,'2026-12-31');assert.equal(nr.source_events[0].cash_received,'UNKNOWN');assert.ok(nr.source_events[0].amount_context.includes('$255,000'));assert.ok(nr.source_events[0].amount_context.includes('conditional'));
+console.log('Retirement compensation exports preserve future dates and conditions without counting scheduled compensation as stock sales or available funds.');
