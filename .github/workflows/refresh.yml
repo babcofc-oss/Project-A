@@ -17,7 +17,7 @@ jobs:
       - name: Validate release rules
         run: |
           python3 -m unittest test_refresh test_leadership test_integrity test_transitions test_form144 test_business_exits test_contacts
-          for test in test_scoring.js test_triggers.js test_contacts.js test_contact_briefs.js test_pilot.js test_territory.js test_evidence.js test_research.js test_priority.js; do node "$test"; done
+          for test in test_*.js; do node "$test"; done
       - name: Refresh configured SEC sources
         id: refresh
         continue-on-error: true
