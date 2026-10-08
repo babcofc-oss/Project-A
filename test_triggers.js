@@ -1,7 +1,7 @@
 const assert=require('node:assert/strict'),fs=require('node:fs');
 const T=require('./triggers.js'),I=require('./intelligence.js');
 const people=JSON.parse(fs.readFileSync('catalog.json')).records;
-assert.equal(T.definitions.length,9);
+assert.equal(T.definitions.length,12);
 for(const d of T.definitions){assert.ok(d.why&&d.limit&&d.sources&&d.themes.length);}
 const now=new Date('2026-10-05T12:00:00Z');
 let notices=0;

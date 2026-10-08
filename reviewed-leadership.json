@@ -1,0 +1,84 @@
+[
+  {
+    "issuer_cik": "80424",
+    "company": "The Procter & Gamble Company",
+    "accession": "0000080424-26-000094",
+    "primary_document": "pg-20260729.htm",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000094/pg-20260729.htm",
+    "raw_path": "0000080424-26-000094.htm",
+    "sha256": "7dc43aabdd3262035b691f54948713f925684372d4c114acbe7bf8737711fbe7",
+    "date": "2026-07-29",
+    "filed_date": "2026-07-29",
+    "reviewed_at": "2026-10-08",
+    "stage": "ANNOUNCED",
+    "location_city": "Cincinnati",
+    "location_state": "OH",
+    "location_anchor": "One Procter & Gamble Plaza Cincinnati , Ohio 45202",
+    "amount_context": "No personal payment, severance amount, equity realization or available funds established by this filing.",
+    "subject_name": "Jon R. Moeller",
+    "role": "Executive Chairman as disclosed; retirement announced",
+    "classification": "EXECUTIVE_TRANSITION",
+    "effective_date": "2026-08-14",
+    "relationship_anchor": "Jon R. Moeller, Executive Chairman of the Board, will retire from his position as Executive Chairman",
+    "required_terms": [
+      "effective July 31, 2026",
+      "August 14, 2026"
+    ],
+    "fact": "P&G announced that Jon R. Moeller would retire as executive chairman and board member effective July 31, 2026, then retire from the company effective August 14, 2026.",
+    "status": "Retirement schedule announced July 29. Scheduled dates have passed; this retained announcement alone does not independently confirm completion or payment.",
+    "ai_note": {
+      "prepared_at": "2026-10-08",
+      "source_accessions": [
+        "0000080424-26-000094"
+      ],
+      "summary": "Two distinct dates matter: the board role was scheduled to end before company employment. Treat those as announced milestones and investigate later disclosures before calling the transition completed.",
+      "hypothesis": "Retirement may create decisions about equity, deferred compensation, benefits and cash flow. The filing establishes a career event, not balances, pension eligibility or a need to change advisors.",
+      "questions": [
+        "Did the announced retirement occur on the stated dates?",
+        "Which compensation or benefit terms, if any, are disclosed in later filings?",
+        "Is there a legitimate professional introduction or published contact route?"
+      ]
+    }
+  },
+  {
+    "issuer_cik": "80424",
+    "company": "The Procter & Gamble Company",
+    "accession": "0000080424-26-000094",
+    "primary_document": "pg-20260729.htm",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000094/pg-20260729.htm",
+    "raw_path": "0000080424-26-000094.htm",
+    "sha256": "7dc43aabdd3262035b691f54948713f925684372d4c114acbe7bf8737711fbe7",
+    "date": "2026-07-29",
+    "filed_date": "2026-07-29",
+    "reviewed_at": "2026-10-08",
+    "stage": "ANNOUNCED",
+    "location_city": "Cincinnati",
+    "location_state": "OH",
+    "location_anchor": "One Procter & Gamble Plaza Cincinnati , Ohio 45202",
+    "amount_context": "No personal payment, severance amount, equity realization or available funds established by this filing.",
+    "subject_name": "Shailesh G. Jejurikar",
+    "role": "President and CEO; board chair appointment announced",
+    "classification": "BOARD_APPOINTMENT",
+    "effective_date": "2026-08-01",
+    "relationship_anchor": "Shailesh G. Jejurikar, currently President and Chief Executive Officer and a member of the Board, has been appointed Chairman of the Board",
+    "required_terms": [
+      "effective August 1, 2026",
+      "in addition to his current responsibilities"
+    ],
+    "fact": "P&G announced that its existing president, CEO and board member Shailesh G. Jejurikar was appointed chairman effective August 1, 2026, in addition to his existing responsibilities.",
+    "status": "Board chair appointment announced; not a new CEO hire or a disclosed stock sale. Compensation changes and current role require separate confirmation.",
+    "ai_note": {
+      "prepared_at": "2026-10-08",
+      "source_accessions": [
+        "0000080424-26-000094"
+      ],
+      "summary": "This is an added chair responsibility for an existing CEO and director. It should not be marketed as a new CEO appointment or personal liquidity event.",
+      "hypothesis": "A documented change in responsibilities is a reason to monitor compensation and equity disclosures. No additional compensation or personal financial impact is established here.",
+      "questions": [
+        "Did the chair appointment change disclosed compensation or ownership requirements?",
+        "What does the latest proxy establish about equity and director compensation?",
+        "Is there any separate verified financial event that makes planning timely?"
+      ]
+    }
+  }
+]

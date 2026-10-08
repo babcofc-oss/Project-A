@@ -4,7 +4,7 @@ const evidence=require('./evidence.js');
 function response(bytes,status=200){return {ok:status===200,status,headers:{get:()=>String(bytes.length)},arrayBuffer:async()=>bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength)};}
 (async()=>{
   const catalog=JSON.parse(fs.readFileSync('catalog.json','utf8'));
-  const sources=[...new Map(catalog.records.flatMap(p=>[...p.contacts.routes,...p.events.flatMap(e=>[e,...(e.evidence_sources||[])])]).filter(s=>s.raw_path&&s.sha256).map(s=>[s.raw_path,s])).values()];
+  const sources=[...new Map(catalog.records.flatMap(p=>[...(p.contacts?.routes||[]),...p.events.flatMap(e=>[e,...(e.evidence_sources||[])])]).filter(s=>s.raw_path&&s.sha256).map(s=>[s.raw_path,s])).values()];
   for(const source of sources){
     const bytes=fs.readFileSync(source.raw_path);
     const result=await evidence.load({path:source.raw_path,sha256:source.sha256},async()=>response(bytes),crypto.webcrypto);

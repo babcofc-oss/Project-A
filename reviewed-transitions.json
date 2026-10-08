@@ -50,7 +50,7 @@
     "source_url": "https://www.sec.gov/Archives/edgar/data/1653477/000165347726000037/ngvt-20260622.htm",
     "raw_path": "0001653477-26-000037.htm",
     "sha256": "3c60a0b2ab3577a8d0f143bf43ef31979fc0060fc33194cc166cf6a3c6a77126",
-    "classification": "EXECUTIVE_TRANSITION",
+    "classification": "EXECUTIVE_APPOINTMENT",
     "fact": "Ingevity appointed Ryan Cotterman as Vice President and Chief Accounting Officer on June 22, 2026. Disclosed compensation includes a $40,000 sign-on cash bonus and restricted stock units with a $150,000 grant-date target value vesting over three years.",
     "required_terms": [
       "Ryan Cotterman",
@@ -61,7 +61,8 @@
     "status": "Appointment disclosed; cash receipt and equity realization UNKNOWN.",
     "effective_date": "2026-06-22",
     "amount_context": "$40,000 sign-on bonus terms; $150,000 restricted-equity target value. Neither is confirmed available cash or included in gross sale totals.",
-    "subject_name": "Ryan Cotterman"
+    "subject_name": "Ryan Cotterman",
+    "trigger_type": "EXECUTIVE_APPOINTMENT"
   },
   {
     "person_id": "person-2146558-issuer-857855",
@@ -82,7 +83,8 @@
     "status": "Board appointment disclosed; monitoring context only.",
     "effective_date": "2026-08-01",
     "amount_context": "No liquidity amount asserted.",
-    "subject_name": "Carl Carande"
+    "subject_name": "Carl Carande",
+    "trigger_type": "BOARD_APPOINTMENT"
   },
   {
     "person_id": "person-1471749-issuer-1090009",
@@ -103,6 +105,7 @@
     "status": "Board appointment disclosed; exact retirement date UNKNOWN.",
     "effective_date": "2026-06-01",
     "amount_context": "No liquidity amount asserted.",
-    "subject_name": "Bryan Kennedy"
+    "subject_name": "Bryan Kennedy",
+    "trigger_type": "BOARD_APPOINTMENT"
   }
 ]
