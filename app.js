@@ -212,9 +212,16 @@ function setCenter(state,placeId){
   if(places.some(p=>p.id===placeId))$('centerPlace').value=placeId;
   updateCenter();
 }
+function showPostalCenter(origin){
+  const places=territoryData.places.filter(p=>p.state===origin.state).sort((a,b)=>a.name.localeCompare(b.name));
+  $('centerState').value=origin.state;
+  const resolved=ProjectTerritory.resolve({state:origin.state,city:origin.name},territoryIndex);
+  $('centerPlace').innerHTML=(resolved?'':`<option value="">${esc(origin.name)} · ZIP reference</option>`)+places.map(p=>`<option value="${esc(p.id)}">${esc(p.name)}</option>`).join('');
+  $('centerPlace').value=resolved?.id||'';
+}
 function updateCenter(){
   cancelZipSearch();
-  territoryOrigin=territoryIndex.ids.get($('centerPlace').value);
+  const nextOrigin=territoryIndex.ids.get($('centerPlace').value);if(!nextOrigin)return;territoryOrigin=nextOrigin;
   const custom=$('territory').querySelector('[data-custom-radius]');if(custom)custom.textContent=custom.value+' miles from '+territoryOrigin.name;
   $('zipCode').value='';$('zipStatus').textContent='Census place center selected. ZIP lookup is optional; only reviewed coverage can produce results.';
   applyDistances();
@@ -263,7 +270,7 @@ async function load(){
     people=catalog.records.map(p=>({...p,computed:ProjectIntelligence.score(p),priority:ProjectPriority.evaluate(p,catalog)}));
     $('centerState').innerHTML=[...new Set(territoryData.places.map(p=>p.state))].sort().map(state=>`<option value="${esc(state)}">${esc(state)}</option>`).join('');$('centerState').disabled=false;$('centerPlace').disabled=false;$('zipSearch').disabled=false;setCenter('SC','4513330');
     $('territory').value='all';
-    try{const market=ProjectTerritory.restorePreference(JSON.parse(localStorage.getItem('project-a-market-v1')||'null'),territoryIndex);if(market){if(market.origin.id)setCenter(market.origin.state,market.origin.id);else{territoryOrigin=market.origin;applyDistances();$('zipCode').value=market.origin.zip;$('zipRadius').value=!['all','SC'].includes(market.mode)?market.mode:'50';$('zipStatus').textContent='Restored ZIP reference coordinates from this browser. Search again to refresh the postal lookup.';}if(!['all','SC','10','25','50'].includes(market.mode))setRadiusOption(market.mode,market.mode+' miles from saved center');$('territory').value=market.mode;$('marketPreferenceStatus').textContent='Restored your prospect market from this browser.';}else $('marketPreferenceStatus').textContent='First visit: showing all reviewed markets. Choose your local prospect market above.';}catch{$('marketPreferenceStatus').textContent='Saved market unavailable; showing all reviewed markets.';}
+    try{const market=ProjectTerritory.restorePreference(JSON.parse(localStorage.getItem('project-a-market-v1')||'null'),territoryIndex);if(market){if(market.origin.id)setCenter(market.origin.state,market.origin.id);else{territoryOrigin=market.origin;showPostalCenter(territoryOrigin);applyDistances();$('zipCode').value=market.origin.zip;$('zipRadius').value=!['all','SC'].includes(market.mode)?market.mode:'50';$('zipStatus').textContent='Restored ZIP reference coordinates from this browser. Search again to refresh the postal lookup.';}if(!['all','SC','10','25','50'].includes(market.mode))setRadiusOption(market.mode,market.mode+' miles from saved center');$('territory').value=market.mode;$('marketPreferenceStatus').textContent='Restored your prospect market from this browser.';}else $('marketPreferenceStatus').textContent='First visit: showing all reviewed markets. Choose your local prospect market above.';}catch{$('marketPreferenceStatus').textContent='Saved market unavailable; showing all reviewed markets.';}
     $('systemStatus').textContent=`Validated public snapshot · ${people.length} people`;
     $('coverage').textContent=`${catalog.validated_filings} Form 4 + ${(catalog.transition_filings||0)+(catalog.leadership?.validated_filings||0)} reviewed 8-K + ${catalog.form144?.validated||0} Form 144 filings · filings since ${catalog.coverage_start} · ${people.filter(p=>p.computed.sales).length} people with sale signals · ${catalog.issuer_count||3} stock-filing issuers + ${catalog.business_exits?.validated_people||0} business founders + ${catalog.leadership?.validated_people||0} reviewed leaders`;
     renderHealth();
@@ -293,6 +300,7 @@ async function searchZip(){
     const origin=ProjectTerritory.zipOrigin(zip,await response.json());
     if(request!==zipRequest)return;
     territoryOrigin=origin;
+    showPostalCenter(origin);
     applyDistances();
     setRadiusOption(radius,radius+' miles from ZIP '+zip);
     persistMarket();
