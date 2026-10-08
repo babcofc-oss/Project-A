@@ -19,3 +19,12 @@ assert.throws(()=>Pilot.validate(payload(Array(1001).fill(review)),people,now));
 const legacy={...review};delete legacy.reviewer_id;
 assert.equal(Pilot.validate({product:'Project A',feedback:[legacy]},people,now)[0].reviewer_id,'legacy-unknown');
 console.log('Pilot import checks passed: provenance validation, atomic rejection, reviewer separation, deduplication and newer-review retention.');
+
+const advisor={...review,review_kind:'ADVISOR_SELF_REPORT',purchase_intent:'YES',rating:'Useful'};
+const qa={...review,reviewer_id:'qa-reviewer-two',review_kind:'INTERNAL_QA',purchase_intent:'YES',rating:'Useful'};
+const current=Pilot.validate({product:'Project A',schema_version:3,feedback:[advisor,qa]},people,now);
+const stats=Pilot.summary([...current,...current,...validated]);
+assert.equal(stats.reviews,1);assert.equal(stats.qa,1);assert.equal(stats.unclassified,0);assert.equal(stats.useful_pct,100);assert.equal(stats.purchase_intent.YES,1);
+assert.equal(Pilot.summary(validated).useful_pct,null);assert.equal(Pilot.summary([]).useful_pct,null);
+for(const change of [{review_kind:'VERIFIED_ADVISOR'},{purchase_intent:'PAID'}])assert.throws(()=>Pilot.validate(payload([{...advisor,...change}]),people,now));
+console.log('Pilot outcome checks passed: QA/legacy exclusion, no duplicate inflation, unknown empty metrics and bounded self-reported demand.');
