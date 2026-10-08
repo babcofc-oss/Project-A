@@ -1,0 +1,49 @@
+name: Refresh public evidence
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 */6 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: project-a-evidence-refresh
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Validate release rules
+        run: |
+          python3 -m unittest test_refresh test_leadership test_integrity test_transitions test_form144 test_business_exits test_contacts
+          for test in test_scoring.js test_triggers.js test_contacts.js test_contact_briefs.js test_pilot.js test_territory.js test_evidence.js test_research.js test_priority.js; do node "$test"; done
+      - name: Refresh configured SEC sources
+        id: refresh
+        continue-on-error: true
+        env:
+          PROJECT_A_USER_AGENT: Project A public disclosure research project-a-jet.vercel.app
+        run: python3 refresh.py
+      - name: Verify retained evidence and priority rules
+        if: steps.refresh.outcome == 'success'
+        run: |
+          node test_evidence.js
+          node test_priority.js
+          node test_research.js
+      - name: Publish snapshot or failure status
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add catalog.json '*.xml' '*.htm'
+          if ! git diff --cached --quiet; then
+            git commit -m 'Refresh SEC evidence and feed health'
+            git push origin HEAD:main
+          fi
+      - name: Check production publication
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 verify_publication.py
+      - name: Report failed refresh
+        if: steps.refresh.outcome != 'success'
+        run: exit 1
