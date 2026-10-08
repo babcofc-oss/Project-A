@@ -1,0 +1,12 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),I=require('./integrations.js');
+const c=JSON.parse(fs.readFileSync('fixture-catalog.json')),now=new Date('2026-10-08T05:00:00Z'),graves=c.records.find(p=>p.person_cik==='0001251036');
+c.feed_health={...(c.feed_health||{}),status:'OK',last_success_at:'2026-10-08T04:46:53Z'};
+const p=I.packet([graves.id,graves.id,'unavailable'],c,now),r=p.records[0];
+assert.equal(p.records.length,1);assert.deepEqual(p.skipped_unavailable_ids,['unavailable']);assert.equal(r.reporting_person_cik,'0001251036');assert.equal(r.issuer_cik,'0000910638');assert.equal(r.research_priority.hot,true);assert.equal(r.research_priority.unplanned_recent_gross_sales,151535.3);assert.equal(r.research_priority.available_funds,'UNKNOWN');assert.ok(r.source_events.every(e=>e.source_url&&e.retained_path&&e.sha256));
+assert.equal(I.packet([graves.id],c,new Date('2026-10-12')).records[0].research_priority.hot,false);
+assert.equal(I.packet([graves.id],{...c,feed_health:{...c.feed_health,status:'FAILED'}},now).records[0].research_priority.hot,false);
+assert.equal(I.packet([],c,now).records.length,0);assert.throws(()=>I.packet([null],c,now));assert.throws(()=>I.packet(Array(1001).fill(graves.id),c,now));
+for(const x of ['=SUM(A1)','+1','@HYPERLINK','-1',' \t=evil'])assert.ok(I.cell(x).startsWith('"\''));
+assert.equal(I.cell('a"b,c\nline'),'"a""b,c\nline"');const named={...graves,id:'named-leader',person_cik:null};assert.equal(I.packet([named.id],{...c,records:[named]},now).records[0].identity_kind,'REVIEWED_NAMED_PERSON');
+const csv=I.csv(p);assert.ok(csv.includes('151535.3'));assert.ok(csv.includes('UNKNOWN'));assert.ok(csv.includes('0001628280-26-062712'));assert.ok(csv.includes('Last successful SEC discovery'));
+console.log('Integration handoff checks passed: exact IDs, primary evidence, current priority, stale/failed suppression, deduplication, unknowns and CSV formula protection.');

@@ -168,6 +168,18 @@ $('importFeedback').onclick=importReviews;
 $('exportAllFeedback').onclick=()=>{$('pilotExport').hidden=false;$('pilotExportText').value=feedbackExport();$('pilotStatus').textContent='Export ready. Select the text and copy it to back up or share your reviews.';};
 $('selectPilotExport').onclick=()=>{$('pilotExportText').focus();$('pilotExportText').select();$('pilotStatus').textContent='Review export selected. Use Copy or Share in your browser.';};
 document.addEventListener('click',event=>{const b=event.target.closest('[data-review-person]');if(b){setRadarPanel('prospects');watchOnly=false;$('search').value='';$('territory').value='all';$('eventType').value='all';$('minimumScore').value='0';$('contactAvailability').value='all';choose(b.dataset.reviewPerson);$('selected').scrollIntoView({behavior:'smooth'});}});
+function integrationExport(ids){
+  if(!catalog)return;
+  try{
+    const packet=ProjectIntegrations.packet(ids,catalog),format=$('integrationFormat').value;
+    $('integrationText').value=format==='CSV'?ProjectIntegrations.csv(packet):JSON.stringify(packet,null,2);
+    $('integrationTextLabel').hidden=false;$('selectIntegrationExport').hidden=false;
+    $('integrationStatus').textContent=`${format} ready: ${packet.records.length} prospects; ${packet.skipped_unavailable_ids.length} unavailable IDs skipped. Copy into a file or your approved import workflow. Research hypotheses and UNKNOWN values remain labeled; no account is connected.`;
+  }catch(error){$('integrationText').value='';$('integrationStatus').textContent=`Export unavailable: ${error.message}`;}
+}
+$('exportSelectedIntegration').onclick=()=>{if(selected)integrationExport([selected.id]);};
+$('exportSavedIntegration').onclick=()=>integrationExport([...saved]);
+$('selectIntegrationExport').onclick=()=>{$('integrationText').focus();$('integrationText').select();$('integrationStatus').textContent+=' Export text selected; use Copy.';};
 function watchlistExport(){return ProjectWatchlist.backup(saved);}
 $('exportWatchlist').onclick=()=>{$('watchlistExportText').value=watchlistExport();$('watchlistExport').hidden=false;$('watchlistStatus').textContent=`Backup ready: ${saved.size} saved prospect IDs. Copy and keep this text before switching devices.`;};
 $('selectWatchlistExport').onclick=()=>{$('watchlistExportText').focus();$('watchlistExportText').select();$('watchlistStatus').textContent='Backup selected. Use Copy in your browser.';};
