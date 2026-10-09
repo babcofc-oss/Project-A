@@ -1,6 +1,6 @@
 {
   "version": "project-a-feed-priority-1",
-  "validated_at": "2026-10-09T12:32:11.131545+00:00",
+  "validated_at": "2026-10-09T18:29:37.442592+00:00",
   "coverage_start": "2026-06-01",
   "source": "SEC EDGAR",
   "issuer_count": 7,
@@ -5084,6 +5084,196 @@
       }
     },
     {
+      "id": "person-2047652-issuer-1280058",
+      "person_cik": "0002047652",
+      "issuer_cik": "0001280058",
+      "person_name": "Pyburn Bradley L",
+      "role": "Director",
+      "company": "BLACKBAUD INC",
+      "location": {
+        "city": "CHARLESTON",
+        "state": "SC",
+        "kind": "Reporting-person mailing city; residence UNKNOWN",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1280058/000204765226000002/xslF345X06/wk-form4_1785962071.xml",
+        "assertion_class": "VERIFIED PUBLIC FACT",
+        "distance_miles": 0.0,
+        "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
+        "geo_class": "CALCULATED FROM VERIFIED FACT",
+        "geo_method": "Haversine between Census place representative coordinates; mailing city only, not precise location",
+        "place_geoid": "4513330"
+      },
+      "events": [
+        {
+          "id": "0002047652-26-000002:0",
+          "accession": "0002047652-26-000002",
+          "row": 0,
+          "date": "2026-08-03",
+          "filed_date": "2026-08-05",
+          "code": "A",
+          "direction": "A",
+          "classification": "AWARD",
+          "shares": 7834.0,
+          "price": 0.0,
+          "value": 0.0,
+          "remaining_shares": 13103.0,
+          "planned": false,
+          "fact": "Form 4 reports 7,834 shares, code A, on 2026-08-03. Reported price $0 per share.",
+          "footnotes": [
+            "Represents a restricted stock award, all of which shall vest on August 3, 2027 or, if earlier, immediately prior to the 2027 annual election of directors of the Company, provided that the reporting person is then serving as a director of the Company."
+          ],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1280058/000204765226000002/xslF345X06/wk-form4_1785962071.xml",
+          "raw_path": "0002047652-26-000002.xml",
+          "sha256": "7f881580708dc91df1e13316301adb3c06fe89f7fcb7c0860c99fa3a190f8c63",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        }
+      ],
+      "liquidity_total": 0,
+      "signal_type": "Monitor",
+      "source_classes": [
+        "FORM4"
+      ],
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.blackbaud.com/company/contact-us",
+            "target": "https://www.blackbaud.com/company/contact-us",
+            "anchor": "World Headquarters",
+            "purpose": "Corporate headquarters; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Blackbaud",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.blackbaud.com/company/contact-us",
+            "raw_path": "contact-source-blackbaud.txt",
+            "sha256": "2f11b2e0aac4ef09a624af4a390e1c664e2b464159fcd5554bd326326b9767e9"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Headquarters phone",
+            "value": "+1 843 216 6200",
+            "target": "+18432166200",
+            "anchor": "001.843.216.6200",
+            "purpose": "Corporate headquarters; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Blackbaud",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.blackbaud.com/company/contact-us",
+            "raw_path": "contact-source-blackbaud.txt",
+            "sha256": "2f11b2e0aac4ef09a624af4a390e1c664e2b464159fcd5554bd326326b9767e9"
+          }
+        ]
+      }
+    },
+    {
+      "id": "person-1941042-issuer-1280058",
+      "person_cik": "0001941042",
+      "issuer_cik": "0001280058",
+      "person_name": "DeFiore Deneen",
+      "role": "Director",
+      "company": "BLACKBAUD INC",
+      "location": {
+        "city": "CHARLESTON",
+        "state": "SC",
+        "kind": "Reporting-person mailing city; residence UNKNOWN",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1280058/000194104226000002/xslF345X06/wk-form4_1785962024.xml",
+        "assertion_class": "VERIFIED PUBLIC FACT",
+        "distance_miles": 0.0,
+        "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
+        "geo_class": "CALCULATED FROM VERIFIED FACT",
+        "geo_method": "Haversine between Census place representative coordinates; mailing city only, not precise location",
+        "place_geoid": "4513330"
+      },
+      "events": [
+        {
+          "id": "0001941042-26-000002:0",
+          "accession": "0001941042-26-000002",
+          "row": 0,
+          "date": "2026-08-03",
+          "filed_date": "2026-08-05",
+          "code": "A",
+          "direction": "A",
+          "classification": "AWARD",
+          "shares": 7834.0,
+          "price": 0.0,
+          "value": 0.0,
+          "remaining_shares": 17903.0,
+          "planned": false,
+          "fact": "Form 4 reports 7,834 shares, code A, on 2026-08-03. Reported price $0 per share.",
+          "footnotes": [
+            "Represents a restricted stock award, all of which shall vest on August 3, 2027 or, if earlier, immediately prior to the 2027 annual election of directors of the Company, provided that the reporting person is then serving as a director of the Company."
+          ],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1280058/000194104226000002/xslF345X06/wk-form4_1785962024.xml",
+          "raw_path": "0001941042-26-000002.xml",
+          "sha256": "cca652543d7d83e9e00089bac69a44337f2899376239aeaeea58630e0697f612",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        }
+      ],
+      "liquidity_total": 0,
+      "signal_type": "Monitor",
+      "source_classes": [
+        "FORM4"
+      ],
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.blackbaud.com/company/contact-us",
+            "target": "https://www.blackbaud.com/company/contact-us",
+            "anchor": "World Headquarters",
+            "purpose": "Corporate headquarters; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Blackbaud",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.blackbaud.com/company/contact-us",
+            "raw_path": "contact-source-blackbaud.txt",
+            "sha256": "2f11b2e0aac4ef09a624af4a390e1c664e2b464159fcd5554bd326326b9767e9"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Headquarters phone",
+            "value": "+1 843 216 6200",
+            "target": "+18432166200",
+            "anchor": "001.843.216.6200",
+            "purpose": "Corporate headquarters; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Blackbaud",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.blackbaud.com/company/contact-us",
+            "raw_path": "contact-source-blackbaud.txt",
+            "sha256": "2f11b2e0aac4ef09a624af4a390e1c664e2b464159fcd5554bd326326b9767e9"
+          }
+        ]
+      }
+    },
+    {
       "id": "person-1292592-issuer-1280058",
       "person_cik": "0001292592",
       "issuer_cik": "0001280058",
@@ -5274,46 +5464,46 @@
       }
     },
     {
-      "id": "person-1941042-issuer-1280058",
-      "person_cik": "0001941042",
-      "issuer_cik": "0001280058",
-      "person_name": "DeFiore Deneen",
-      "role": "Director",
-      "company": "BLACKBAUD INC",
+      "id": "person-2026608-issuer-910638",
+      "person_cik": "0002026608",
+      "issuer_cik": "0000910638",
+      "person_name": "WRIGHT ANDREW WILLIAM BANASICK",
+      "role": "SVP, GC & Secretary",
+      "company": "3D SYSTEMS CORP",
       "location": {
-        "city": "CHARLESTON",
+        "city": "ROCK HILL",
         "state": "SC",
         "kind": "Reporting-person mailing city; residence UNKNOWN",
-        "source_url": "https://www.sec.gov/Archives/edgar/data/1280058/000194104226000002/xslF345X06/wk-form4_1785962024.xml",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/910638/000162828026061407/xslF345X06/wk-form4_1789074204.xml",
         "assertion_class": "VERIFIED PUBLIC FACT",
-        "distance_miles": 0.0,
+        "distance_miles": 157.67,
         "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
         "geo_class": "CALCULATED FROM VERIFIED FACT",
         "geo_method": "Haversine between Census place representative coordinates; mailing city only, not precise location",
-        "place_geoid": "4513330"
+        "place_geoid": "4561405"
       },
       "events": [
         {
-          "id": "0001941042-26-000002:0",
-          "accession": "0001941042-26-000002",
+          "id": "0001628280-26-061407:0",
+          "accession": "0001628280-26-061407",
           "row": 0,
-          "date": "2026-08-03",
-          "filed_date": "2026-08-05",
-          "code": "A",
-          "direction": "A",
-          "classification": "AWARD",
-          "shares": 7834.0,
-          "price": 0.0,
-          "value": 0.0,
-          "remaining_shares": 17903.0,
+          "date": "2026-09-08",
+          "filed_date": "2026-09-10",
+          "code": "F",
+          "direction": "D",
+          "classification": "TAX_WITHHOLDING",
+          "shares": 5818.0,
+          "price": 3.38,
+          "value": 19664.84,
+          "remaining_shares": 136963.0,
           "planned": false,
-          "fact": "Form 4 reports 7,834 shares, code A, on 2026-08-03. Reported price $0 per share.",
+          "fact": "Form 4 reports 5,818 shares, code F, on 2026-09-08. Reported price $3.38 per share.",
           "footnotes": [
-            "Represents a restricted stock award, all of which shall vest on August 3, 2027 or, if earlier, immediately prior to the 2027 annual election of directors of the Company, provided that the reporting person is then serving as a director of the Company."
+            "Shares reported were withheld to satisfy tax withholding obligations with respect to vestings of grants of restricted stock originally made on September 5, 2024."
           ],
-          "source_url": "https://www.sec.gov/Archives/edgar/data/1280058/000194104226000002/xslF345X06/wk-form4_1785962024.xml",
-          "raw_path": "0001941042-26-000002.xml",
-          "sha256": "cca652543d7d83e9e00089bac69a44337f2899376239aeaeea58630e0697f612",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/910638/000162828026061407/xslF345X06/wk-form4_1789074204.xml",
+          "raw_path": "0001628280-26-061407.xml",
+          "sha256": "6da78dbabc0881d9ec9050f37231a7e70059bb0b9dc1365978b8ad085fd791d8",
           "assertion_class": "VERIFIED PUBLIC FACT",
           "value_class": "CALCULATED FROM VERIFIED FACT"
         }
@@ -5332,133 +5522,38 @@
           {
             "kind": "WEBSITE",
             "label": "Official company contact / research page",
-            "value": "https://www.blackbaud.com/company/contact-us",
-            "target": "https://www.blackbaud.com/company/contact-us",
-            "anchor": "World Headquarters",
-            "purpose": "Corporate headquarters; routing to the selected person is UNKNOWN.",
+            "value": "https://www.3dsystems.com/press-releases/3d-systems-announces-date-first-quarter-2026-financial-results",
+            "target": "https://www.3dsystems.com/press-releases/3d-systems-announces-date-first-quarter-2026-financial-results",
+            "anchor": "Investor Contact",
+            "purpose": "For investor-relations research only; not the selected executive\u2019s email or a personal solicitation route.",
             "scope": "COMPANY_CHANNEL",
-            "organization": "Blackbaud",
+            "organization": "3D Systems",
             "classification": "VERIFIED PUBLIC FACT",
             "person_id": null,
             "subject_name": null,
             "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
             "reviewed_at": "2026-10-05",
-            "source_url": "https://www.blackbaud.com/company/contact-us",
-            "raw_path": "contact-source-blackbaud.txt",
-            "sha256": "2f11b2e0aac4ef09a624af4a390e1c664e2b464159fcd5554bd326326b9767e9"
+            "source_url": "https://www.3dsystems.com/press-releases/3d-systems-announces-date-first-quarter-2026-financial-results",
+            "raw_path": "contact-source-3dsystems.txt",
+            "sha256": "d5aa8917c4248479ff03bfa82229bbe2c0a1df2192a67566d1d742cd1da58bbe"
           },
           {
-            "kind": "PHONE",
-            "label": "Headquarters phone",
-            "value": "+1 843 216 6200",
-            "target": "+18432166200",
-            "anchor": "001.843.216.6200",
-            "purpose": "Corporate headquarters; routing to the selected person is UNKNOWN.",
+            "kind": "EMAIL",
+            "label": "Investor relations email",
+            "value": "investor.relations@3dsystems.com",
+            "target": "investor.relations@3dsystems.com",
+            "anchor": "investor.relations@3dsystems.com",
+            "purpose": "For investor-relations research only; not the selected executive\u2019s email or a personal solicitation route.",
             "scope": "COMPANY_CHANNEL",
-            "organization": "Blackbaud",
+            "organization": "3D Systems",
             "classification": "VERIFIED PUBLIC FACT",
             "person_id": null,
             "subject_name": null,
             "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
             "reviewed_at": "2026-10-05",
-            "source_url": "https://www.blackbaud.com/company/contact-us",
-            "raw_path": "contact-source-blackbaud.txt",
-            "sha256": "2f11b2e0aac4ef09a624af4a390e1c664e2b464159fcd5554bd326326b9767e9"
-          }
-        ]
-      }
-    },
-    {
-      "id": "person-2047652-issuer-1280058",
-      "person_cik": "0002047652",
-      "issuer_cik": "0001280058",
-      "person_name": "Pyburn Bradley L",
-      "role": "Director",
-      "company": "BLACKBAUD INC",
-      "location": {
-        "city": "CHARLESTON",
-        "state": "SC",
-        "kind": "Reporting-person mailing city; residence UNKNOWN",
-        "source_url": "https://www.sec.gov/Archives/edgar/data/1280058/000204765226000002/xslF345X06/wk-form4_1785962071.xml",
-        "assertion_class": "VERIFIED PUBLIC FACT",
-        "distance_miles": 0.0,
-        "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
-        "geo_class": "CALCULATED FROM VERIFIED FACT",
-        "geo_method": "Haversine between Census place representative coordinates; mailing city only, not precise location",
-        "place_geoid": "4513330"
-      },
-      "events": [
-        {
-          "id": "0002047652-26-000002:0",
-          "accession": "0002047652-26-000002",
-          "row": 0,
-          "date": "2026-08-03",
-          "filed_date": "2026-08-05",
-          "code": "A",
-          "direction": "A",
-          "classification": "AWARD",
-          "shares": 7834.0,
-          "price": 0.0,
-          "value": 0.0,
-          "remaining_shares": 13103.0,
-          "planned": false,
-          "fact": "Form 4 reports 7,834 shares, code A, on 2026-08-03. Reported price $0 per share.",
-          "footnotes": [
-            "Represents a restricted stock award, all of which shall vest on August 3, 2027 or, if earlier, immediately prior to the 2027 annual election of directors of the Company, provided that the reporting person is then serving as a director of the Company."
-          ],
-          "source_url": "https://www.sec.gov/Archives/edgar/data/1280058/000204765226000002/xslF345X06/wk-form4_1785962071.xml",
-          "raw_path": "0002047652-26-000002.xml",
-          "sha256": "7f881580708dc91df1e13316301adb3c06fe89f7fcb7c0860c99fa3a190f8c63",
-          "assertion_class": "VERIFIED PUBLIC FACT",
-          "value_class": "CALCULATED FROM VERIFIED FACT"
-        }
-      ],
-      "liquidity_total": 0,
-      "signal_type": "Monitor",
-      "source_classes": [
-        "FORM4"
-      ],
-      "convergence": 0,
-      "contacts": {
-        "direct_email": "UNKNOWN",
-        "direct_phone": "UNKNOWN",
-        "consent": "UNKNOWN",
-        "routes": [
-          {
-            "kind": "WEBSITE",
-            "label": "Official company contact / research page",
-            "value": "https://www.blackbaud.com/company/contact-us",
-            "target": "https://www.blackbaud.com/company/contact-us",
-            "anchor": "World Headquarters",
-            "purpose": "Corporate headquarters; routing to the selected person is UNKNOWN.",
-            "scope": "COMPANY_CHANNEL",
-            "organization": "Blackbaud",
-            "classification": "VERIFIED PUBLIC FACT",
-            "person_id": null,
-            "subject_name": null,
-            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
-            "reviewed_at": "2026-10-05",
-            "source_url": "https://www.blackbaud.com/company/contact-us",
-            "raw_path": "contact-source-blackbaud.txt",
-            "sha256": "2f11b2e0aac4ef09a624af4a390e1c664e2b464159fcd5554bd326326b9767e9"
-          },
-          {
-            "kind": "PHONE",
-            "label": "Headquarters phone",
-            "value": "+1 843 216 6200",
-            "target": "+18432166200",
-            "anchor": "001.843.216.6200",
-            "purpose": "Corporate headquarters; routing to the selected person is UNKNOWN.",
-            "scope": "COMPANY_CHANNEL",
-            "organization": "Blackbaud",
-            "classification": "VERIFIED PUBLIC FACT",
-            "person_id": null,
-            "subject_name": null,
-            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
-            "reviewed_at": "2026-10-05",
-            "source_url": "https://www.blackbaud.com/company/contact-us",
-            "raw_path": "contact-source-blackbaud.txt",
-            "sha256": "2f11b2e0aac4ef09a624af4a390e1c664e2b464159fcd5554bd326326b9767e9"
+            "source_url": "https://www.3dsystems.com/press-releases/3d-systems-announces-date-first-quarter-2026-financial-results",
+            "raw_path": "contact-source-3dsystems.txt",
+            "sha256": "d5aa8917c4248479ff03bfa82229bbe2c0a1df2192a67566d1d742cd1da58bbe"
           }
         ]
       }
@@ -5559,17 +5654,17 @@
       }
     },
     {
-      "id": "person-2026608-issuer-910638",
-      "person_cik": "0002026608",
+      "id": "person-1826896-issuer-910638",
+      "person_cik": "0001826896",
       "issuer_cik": "0000910638",
-      "person_name": "WRIGHT ANDREW WILLIAM BANASICK",
-      "role": "SVP, GC & Secretary",
+      "person_name": "Puthenveetil Reji",
+      "role": "EVP, Additive Solutions & CCO",
       "company": "3D SYSTEMS CORP",
       "location": {
         "city": "ROCK HILL",
         "state": "SC",
         "kind": "Reporting-person mailing city; residence UNKNOWN",
-        "source_url": "https://www.sec.gov/Archives/edgar/data/910638/000162828026061407/xslF345X06/wk-form4_1789074204.xml",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/910638/000162828026061400/xslF345X06/wk-form4_1789074122.xml",
         "assertion_class": "VERIFIED PUBLIC FACT",
         "distance_miles": 157.67,
         "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
@@ -5579,26 +5674,26 @@
       },
       "events": [
         {
-          "id": "0001628280-26-061407:0",
-          "accession": "0001628280-26-061407",
+          "id": "0001628280-26-061400:0",
+          "accession": "0001628280-26-061400",
           "row": 0,
           "date": "2026-09-08",
           "filed_date": "2026-09-10",
           "code": "F",
           "direction": "D",
           "classification": "TAX_WITHHOLDING",
-          "shares": 5818.0,
+          "shares": 15984.0,
           "price": 3.38,
-          "value": 19664.84,
-          "remaining_shares": 136963.0,
+          "value": 54025.92,
+          "remaining_shares": 486144.0,
           "planned": false,
-          "fact": "Form 4 reports 5,818 shares, code F, on 2026-09-08. Reported price $3.38 per share.",
+          "fact": "Form 4 reports 15,984 shares, code F, on 2026-09-08. Reported price $3.38 per share.",
           "footnotes": [
-            "Shares reported were withheld to satisfy tax withholding obligations with respect to vestings of grants of restricted stock originally made on September 5, 2024."
+            "Shares reported were withheld to satisfy tax withholding obligations with respect to the vesting of a grant of restricted stock originally made on September 5, 2024."
           ],
-          "source_url": "https://www.sec.gov/Archives/edgar/data/910638/000162828026061407/xslF345X06/wk-form4_1789074204.xml",
-          "raw_path": "0001628280-26-061407.xml",
-          "sha256": "6da78dbabc0881d9ec9050f37231a7e70059bb0b9dc1365978b8ad085fd791d8",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/910638/000162828026061400/xslF345X06/wk-form4_1789074122.xml",
+          "raw_path": "0001628280-26-061400.xml",
+          "sha256": "947afd4b80ac30be58cf4b77ac2f71776b622c325df1453f2277d0a7b7b7a018",
           "assertion_class": "VERIFIED PUBLIC FACT",
           "value_class": "CALCULATED FROM VERIFIED FACT"
         }
@@ -5694,101 +5789,6 @@
           "source_url": "https://www.sec.gov/Archives/edgar/data/910638/000162828026061399/xslF345X06/wk-form4_1789074087.xml",
           "raw_path": "0001628280-26-061399.xml",
           "sha256": "fe37bb1418192fddb0818c36d17480c400fc5e0080f9db1d7e6974d3889d3f8f",
-          "assertion_class": "VERIFIED PUBLIC FACT",
-          "value_class": "CALCULATED FROM VERIFIED FACT"
-        }
-      ],
-      "liquidity_total": 0,
-      "signal_type": "Monitor",
-      "source_classes": [
-        "FORM4"
-      ],
-      "convergence": 0,
-      "contacts": {
-        "direct_email": "UNKNOWN",
-        "direct_phone": "UNKNOWN",
-        "consent": "UNKNOWN",
-        "routes": [
-          {
-            "kind": "WEBSITE",
-            "label": "Official company contact / research page",
-            "value": "https://www.3dsystems.com/press-releases/3d-systems-announces-date-first-quarter-2026-financial-results",
-            "target": "https://www.3dsystems.com/press-releases/3d-systems-announces-date-first-quarter-2026-financial-results",
-            "anchor": "Investor Contact",
-            "purpose": "For investor-relations research only; not the selected executive\u2019s email or a personal solicitation route.",
-            "scope": "COMPANY_CHANNEL",
-            "organization": "3D Systems",
-            "classification": "VERIFIED PUBLIC FACT",
-            "person_id": null,
-            "subject_name": null,
-            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
-            "reviewed_at": "2026-10-05",
-            "source_url": "https://www.3dsystems.com/press-releases/3d-systems-announces-date-first-quarter-2026-financial-results",
-            "raw_path": "contact-source-3dsystems.txt",
-            "sha256": "d5aa8917c4248479ff03bfa82229bbe2c0a1df2192a67566d1d742cd1da58bbe"
-          },
-          {
-            "kind": "EMAIL",
-            "label": "Investor relations email",
-            "value": "investor.relations@3dsystems.com",
-            "target": "investor.relations@3dsystems.com",
-            "anchor": "investor.relations@3dsystems.com",
-            "purpose": "For investor-relations research only; not the selected executive\u2019s email or a personal solicitation route.",
-            "scope": "COMPANY_CHANNEL",
-            "organization": "3D Systems",
-            "classification": "VERIFIED PUBLIC FACT",
-            "person_id": null,
-            "subject_name": null,
-            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
-            "reviewed_at": "2026-10-05",
-            "source_url": "https://www.3dsystems.com/press-releases/3d-systems-announces-date-first-quarter-2026-financial-results",
-            "raw_path": "contact-source-3dsystems.txt",
-            "sha256": "d5aa8917c4248479ff03bfa82229bbe2c0a1df2192a67566d1d742cd1da58bbe"
-          }
-        ]
-      }
-    },
-    {
-      "id": "person-1826896-issuer-910638",
-      "person_cik": "0001826896",
-      "issuer_cik": "0000910638",
-      "person_name": "Puthenveetil Reji",
-      "role": "EVP, Additive Solutions & CCO",
-      "company": "3D SYSTEMS CORP",
-      "location": {
-        "city": "ROCK HILL",
-        "state": "SC",
-        "kind": "Reporting-person mailing city; residence UNKNOWN",
-        "source_url": "https://www.sec.gov/Archives/edgar/data/910638/000162828026061400/xslF345X06/wk-form4_1789074122.xml",
-        "assertion_class": "VERIFIED PUBLIC FACT",
-        "distance_miles": 157.67,
-        "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
-        "geo_class": "CALCULATED FROM VERIFIED FACT",
-        "geo_method": "Haversine between Census place representative coordinates; mailing city only, not precise location",
-        "place_geoid": "4561405"
-      },
-      "events": [
-        {
-          "id": "0001628280-26-061400:0",
-          "accession": "0001628280-26-061400",
-          "row": 0,
-          "date": "2026-09-08",
-          "filed_date": "2026-09-10",
-          "code": "F",
-          "direction": "D",
-          "classification": "TAX_WITHHOLDING",
-          "shares": 15984.0,
-          "price": 3.38,
-          "value": 54025.92,
-          "remaining_shares": 486144.0,
-          "planned": false,
-          "fact": "Form 4 reports 15,984 shares, code F, on 2026-09-08. Reported price $3.38 per share.",
-          "footnotes": [
-            "Shares reported were withheld to satisfy tax withholding obligations with respect to the vesting of a grant of restricted stock originally made on September 5, 2024."
-          ],
-          "source_url": "https://www.sec.gov/Archives/edgar/data/910638/000162828026061400/xslF345X06/wk-form4_1789074122.xml",
-          "raw_path": "0001628280-26-061400.xml",
-          "sha256": "947afd4b80ac30be58cf4b77ac2f71776b622c325df1453f2277d0a7b7b7a018",
           "assertion_class": "VERIFIED PUBLIC FACT",
           "value_class": "CALCULATED FROM VERIFIED FACT"
         }
@@ -6068,99 +6068,6 @@
           "source_url": "https://www.sec.gov/Archives/edgar/data/918965/000119312526382259/xslF345X06/ownership.xml",
           "raw_path": "0001193125-26-382259.xml",
           "sha256": "abdcad47bac93e1a851834a79675d97166ac9be5763299d5e8281bdf4dc07a0b",
-          "assertion_class": "VERIFIED PUBLIC FACT",
-          "value_class": "CALCULATED FROM VERIFIED FACT"
-        }
-      ],
-      "liquidity_total": 0,
-      "signal_type": "Monitor",
-      "source_classes": [
-        "FORM4"
-      ],
-      "convergence": 0,
-      "contacts": {
-        "direct_email": "UNKNOWN",
-        "direct_phone": "UNKNOWN",
-        "consent": "UNKNOWN",
-        "routes": [
-          {
-            "kind": "WEBSITE",
-            "label": "Official company contact / research page",
-            "value": "https://www.scansource.com/",
-            "target": "https://www.scansource.com/",
-            "anchor": "Headquarters",
-            "purpose": "Published headquarters number; routing to the selected person is UNKNOWN.",
-            "scope": "COMPANY_CHANNEL",
-            "organization": "ScanSource",
-            "classification": "VERIFIED PUBLIC FACT",
-            "person_id": null,
-            "subject_name": null,
-            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
-            "reviewed_at": "2026-10-05",
-            "source_url": "https://www.scansource.com/",
-            "raw_path": "contact-source-scansource.txt",
-            "sha256": "b8a00c746ff5aac23a7cd9008316674f39408a1f836e011e3cc5380f0d4ca3e7"
-          },
-          {
-            "kind": "PHONE",
-            "label": "Headquarters phone",
-            "value": "+1 800 944 2432",
-            "target": "+18009442432",
-            "anchor": "800.944.2432",
-            "purpose": "Published headquarters number; routing to the selected person is UNKNOWN.",
-            "scope": "COMPANY_CHANNEL",
-            "organization": "ScanSource",
-            "classification": "VERIFIED PUBLIC FACT",
-            "person_id": null,
-            "subject_name": null,
-            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
-            "reviewed_at": "2026-10-05",
-            "source_url": "https://www.scansource.com/",
-            "raw_path": "contact-source-scansource.txt",
-            "sha256": "b8a00c746ff5aac23a7cd9008316674f39408a1f836e011e3cc5380f0d4ca3e7"
-          }
-        ]
-      }
-    },
-    {
-      "id": "person-1599156-issuer-918965",
-      "person_cik": "0001599156",
-      "issuer_cik": "0000918965",
-      "person_name": "Ramoneda Dorothy F",
-      "role": "Director",
-      "company": "SCANSOURCE, INC.",
-      "location": {
-        "city": "GREENVILLE",
-        "state": "SC",
-        "kind": "Reporting-person mailing city; residence UNKNOWN",
-        "source_url": "https://www.sec.gov/Archives/edgar/data/918965/000119312526382258/xslF345X06/ownership.xml",
-        "assertion_class": "VERIFIED PUBLIC FACT",
-        "distance_miles": 195.14,
-        "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
-        "geo_class": "CALCULATED FROM VERIFIED FACT",
-        "geo_method": "Haversine between Census place representative coordinates; mailing city only, not precise location",
-        "place_geoid": "4530850"
-      },
-      "events": [
-        {
-          "id": "0001193125-26-382258:0",
-          "accession": "0001193125-26-382258",
-          "row": 0,
-          "date": "2026-09-01",
-          "filed_date": "2026-09-03",
-          "code": "A",
-          "direction": "A",
-          "classification": "AWARD",
-          "shares": 3234.0,
-          "price": 0.0,
-          "value": 0.0,
-          "remaining_shares": 33527.0,
-          "planned": false,
-          "fact": "Form 4 reports 3,234 shares, code A, on 2026-09-01. Reported price $0.00 per share.",
-          "footnotes": [],
-          "source_url": "https://www.sec.gov/Archives/edgar/data/918965/000119312526382258/xslF345X06/ownership.xml",
-          "raw_path": "0001193125-26-382258.xml",
-          "sha256": "b95246910ee96fa4fded1e02e6b3976d11bd9d576217803b3b177afff2e21132",
           "assertion_class": "VERIFIED PUBLIC FACT",
           "value_class": "CALCULATED FROM VERIFIED FACT"
         }
@@ -6520,6 +6427,99 @@
       }
     },
     {
+      "id": "person-1599156-issuer-918965",
+      "person_cik": "0001599156",
+      "issuer_cik": "0000918965",
+      "person_name": "Ramoneda Dorothy F",
+      "role": "Director",
+      "company": "SCANSOURCE, INC.",
+      "location": {
+        "city": "GREENVILLE",
+        "state": "SC",
+        "kind": "Reporting-person mailing city; residence UNKNOWN",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/918965/000119312526382258/xslF345X06/ownership.xml",
+        "assertion_class": "VERIFIED PUBLIC FACT",
+        "distance_miles": 195.14,
+        "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
+        "geo_class": "CALCULATED FROM VERIFIED FACT",
+        "geo_method": "Haversine between Census place representative coordinates; mailing city only, not precise location",
+        "place_geoid": "4530850"
+      },
+      "events": [
+        {
+          "id": "0001193125-26-382258:0",
+          "accession": "0001193125-26-382258",
+          "row": 0,
+          "date": "2026-09-01",
+          "filed_date": "2026-09-03",
+          "code": "A",
+          "direction": "A",
+          "classification": "AWARD",
+          "shares": 3234.0,
+          "price": 0.0,
+          "value": 0.0,
+          "remaining_shares": 33527.0,
+          "planned": false,
+          "fact": "Form 4 reports 3,234 shares, code A, on 2026-09-01. Reported price $0.00 per share.",
+          "footnotes": [],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/918965/000119312526382258/xslF345X06/ownership.xml",
+          "raw_path": "0001193125-26-382258.xml",
+          "sha256": "b95246910ee96fa4fded1e02e6b3976d11bd9d576217803b3b177afff2e21132",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        }
+      ],
+      "liquidity_total": 0,
+      "signal_type": "Monitor",
+      "source_classes": [
+        "FORM4"
+      ],
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.scansource.com/",
+            "target": "https://www.scansource.com/",
+            "anchor": "Headquarters",
+            "purpose": "Published headquarters number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "ScanSource",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.scansource.com/",
+            "raw_path": "contact-source-scansource.txt",
+            "sha256": "b8a00c746ff5aac23a7cd9008316674f39408a1f836e011e3cc5380f0d4ca3e7"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Headquarters phone",
+            "value": "+1 800 944 2432",
+            "target": "+18009442432",
+            "anchor": "800.944.2432",
+            "purpose": "Published headquarters number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "ScanSource",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.scansource.com/",
+            "raw_path": "contact-source-scansource.txt",
+            "sha256": "b8a00c746ff5aac23a7cd9008316674f39408a1f836e011e3cc5380f0d4ca3e7"
+          }
+        ]
+      }
+    },
+    {
       "id": "person-1233406-issuer-918965",
       "person_cik": "0001233406",
       "issuer_cik": "0000918965",
@@ -6608,6 +6608,101 @@
             "source_url": "https://www.scansource.com/",
             "raw_path": "contact-source-scansource.txt",
             "sha256": "b8a00c746ff5aac23a7cd9008316674f39408a1f836e011e3cc5380f0d4ca3e7"
+          }
+        ]
+      }
+    },
+    {
+      "id": "person-2152325-issuer-857855",
+      "person_cik": "0002152325",
+      "issuer_cik": "0000857855",
+      "person_name": "Speir Thomas Hardaway",
+      "role": "EVP, CFO",
+      "company": "UNITED COMMUNITY BANKS INC",
+      "location": {
+        "city": "GREENVILLE",
+        "state": "SC",
+        "kind": "Reporting-person mailing city; residence UNKNOWN",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/857855/000215232526000002/xslF345X06/wk-form4_1788984159.xml",
+        "assertion_class": "VERIFIED PUBLIC FACT",
+        "distance_miles": 195.14,
+        "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
+        "geo_class": "CALCULATED FROM VERIFIED FACT",
+        "geo_method": "Haversine between Census place representative coordinates; mailing city only, not precise location",
+        "place_geoid": "4530850"
+      },
+      "events": [
+        {
+          "id": "0002152325-26-000002:0",
+          "accession": "0002152325-26-000002",
+          "row": 0,
+          "date": "2026-09-08",
+          "filed_date": "2026-09-09",
+          "code": "A",
+          "direction": "A",
+          "classification": "AWARD",
+          "shares": 12752.0,
+          "price": 0.0,
+          "value": 0.0,
+          "remaining_shares": 12752.0,
+          "planned": false,
+          "fact": "Form 4 reports 12,752 shares, code A, on 2026-09-08. Reported price $0 per share.",
+          "footnotes": [
+            "Represents grant of time-based restricted stock units, which vest 50% on November 15, 2027 and 50% on November 15, 2028."
+          ],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/857855/000215232526000002/xslF345X06/wk-form4_1788984159.xml",
+          "raw_path": "0002152325-26-000002.xml",
+          "sha256": "aa07d7df5c6c0d844b64d0a52d291828745fe05c481b8d287f8f8e259aaf0aaf",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        }
+      ],
+      "liquidity_total": 0,
+      "signal_type": "Monitor",
+      "source_classes": [
+        "FORM4"
+      ],
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.ucbi.com/support/contact-us",
+            "target": "https://www.ucbi.com/support/contact-us",
+            "anchor": "Contact Us",
+            "purpose": "Products and services support; not an executive line or a personal solicitation route.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "United Community",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.ucbi.com/support/contact-us",
+            "raw_path": "contact-source-ucbi.txt",
+            "sha256": "d939e72aa0228c37a500299998ea67005587264e0545146f8f998c6377a11e63"
+          },
+          {
+            "kind": "PHONE",
+            "label": "General support phone",
+            "value": "+1 800 822 2651",
+            "target": "+18008222651",
+            "anchor": "1-800-822-2651",
+            "purpose": "Products and services support; not an executive line or a personal solicitation route.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "United Community",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.ucbi.com/support/contact-us",
+            "raw_path": "contact-source-ucbi.txt",
+            "sha256": "d939e72aa0228c37a500299998ea67005587264e0545146f8f998c6377a11e63"
           }
         ]
       }
@@ -6877,194 +6972,6 @@
       }
     },
     {
-      "id": "person-2152325-issuer-857855",
-      "person_cik": "0002152325",
-      "issuer_cik": "0000857855",
-      "person_name": "Speir Thomas Hardaway",
-      "role": "EVP, CFO",
-      "company": "UNITED COMMUNITY BANKS INC",
-      "location": {
-        "city": "GREENVILLE",
-        "state": "SC",
-        "kind": "Reporting-person mailing city; residence UNKNOWN",
-        "source_url": "https://www.sec.gov/Archives/edgar/data/857855/000215232526000002/xslF345X06/wk-form4_1788984159.xml",
-        "assertion_class": "VERIFIED PUBLIC FACT",
-        "distance_miles": 195.14,
-        "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
-        "geo_class": "CALCULATED FROM VERIFIED FACT",
-        "geo_method": "Haversine between Census place representative coordinates; mailing city only, not precise location",
-        "place_geoid": "4530850"
-      },
-      "events": [
-        {
-          "id": "0002152325-26-000002:0",
-          "accession": "0002152325-26-000002",
-          "row": 0,
-          "date": "2026-09-08",
-          "filed_date": "2026-09-09",
-          "code": "A",
-          "direction": "A",
-          "classification": "AWARD",
-          "shares": 12752.0,
-          "price": 0.0,
-          "value": 0.0,
-          "remaining_shares": 12752.0,
-          "planned": false,
-          "fact": "Form 4 reports 12,752 shares, code A, on 2026-09-08. Reported price $0 per share.",
-          "footnotes": [
-            "Represents grant of time-based restricted stock units, which vest 50% on November 15, 2027 and 50% on November 15, 2028."
-          ],
-          "source_url": "https://www.sec.gov/Archives/edgar/data/857855/000215232526000002/xslF345X06/wk-form4_1788984159.xml",
-          "raw_path": "0002152325-26-000002.xml",
-          "sha256": "aa07d7df5c6c0d844b64d0a52d291828745fe05c481b8d287f8f8e259aaf0aaf",
-          "assertion_class": "VERIFIED PUBLIC FACT",
-          "value_class": "CALCULATED FROM VERIFIED FACT"
-        }
-      ],
-      "liquidity_total": 0,
-      "signal_type": "Monitor",
-      "source_classes": [
-        "FORM4"
-      ],
-      "convergence": 0,
-      "contacts": {
-        "direct_email": "UNKNOWN",
-        "direct_phone": "UNKNOWN",
-        "consent": "UNKNOWN",
-        "routes": [
-          {
-            "kind": "WEBSITE",
-            "label": "Official company contact / research page",
-            "value": "https://www.ucbi.com/support/contact-us",
-            "target": "https://www.ucbi.com/support/contact-us",
-            "anchor": "Contact Us",
-            "purpose": "Products and services support; not an executive line or a personal solicitation route.",
-            "scope": "COMPANY_CHANNEL",
-            "organization": "United Community",
-            "classification": "VERIFIED PUBLIC FACT",
-            "person_id": null,
-            "subject_name": null,
-            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
-            "reviewed_at": "2026-10-05",
-            "source_url": "https://www.ucbi.com/support/contact-us",
-            "raw_path": "contact-source-ucbi.txt",
-            "sha256": "d939e72aa0228c37a500299998ea67005587264e0545146f8f998c6377a11e63"
-          },
-          {
-            "kind": "PHONE",
-            "label": "General support phone",
-            "value": "+1 800 822 2651",
-            "target": "+18008222651",
-            "anchor": "1-800-822-2651",
-            "purpose": "Products and services support; not an executive line or a personal solicitation route.",
-            "scope": "COMPANY_CHANNEL",
-            "organization": "United Community",
-            "classification": "VERIFIED PUBLIC FACT",
-            "person_id": null,
-            "subject_name": null,
-            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
-            "reviewed_at": "2026-10-05",
-            "source_url": "https://www.ucbi.com/support/contact-us",
-            "raw_path": "contact-source-ucbi.txt",
-            "sha256": "d939e72aa0228c37a500299998ea67005587264e0545146f8f998c6377a11e63"
-          }
-        ]
-      }
-    },
-    {
-      "id": "person-1443717-issuer-857855",
-      "person_cik": "0001443717",
-      "issuer_cik": "0000857855",
-      "person_name": "EDWARDS ROBERT A.",
-      "role": "EVP, Chief Risk Officer",
-      "company": "UNITED COMMUNITY BANKS INC",
-      "location": {
-        "city": "GREENVILLE",
-        "state": "SC",
-        "kind": "Reporting-person mailing city; residence UNKNOWN",
-        "source_url": "https://www.sec.gov/Archives/edgar/data/857855/000144371726000007/xslF345X06/wk-form4_1785443056.xml",
-        "assertion_class": "VERIFIED PUBLIC FACT",
-        "distance_miles": 195.14,
-        "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
-        "geo_class": "CALCULATED FROM VERIFIED FACT",
-        "geo_method": "Haversine between Census place representative coordinates; mailing city only, not precise location",
-        "place_geoid": "4530850"
-      },
-      "events": [
-        {
-          "id": "0001443717-26-000007:0",
-          "accession": "0001443717-26-000007",
-          "row": 0,
-          "date": "2026-07-29",
-          "filed_date": "2026-07-30",
-          "code": "G",
-          "direction": "D",
-          "classification": "OTHER_CONTEXT",
-          "shares": 1500.0,
-          "price": 0.0,
-          "value": 0.0,
-          "remaining_shares": 57877.0,
-          "planned": false,
-          "fact": "Form 4 reports 1,500 shares, code G, on 2026-07-29. Reported price $0 per share.",
-          "footnotes": [],
-          "source_url": "https://www.sec.gov/Archives/edgar/data/857855/000144371726000007/xslF345X06/wk-form4_1785443056.xml",
-          "raw_path": "0001443717-26-000007.xml",
-          "sha256": "d10fc8ccfd944e7e5d11680bfa0ce7ab1c90710689531aceb862aff9ef8a261c",
-          "assertion_class": "VERIFIED PUBLIC FACT",
-          "value_class": "CALCULATED FROM VERIFIED FACT"
-        }
-      ],
-      "liquidity_total": 0,
-      "signal_type": "Monitor",
-      "source_classes": [
-        "FORM4"
-      ],
-      "convergence": 0,
-      "contacts": {
-        "direct_email": "UNKNOWN",
-        "direct_phone": "UNKNOWN",
-        "consent": "UNKNOWN",
-        "routes": [
-          {
-            "kind": "WEBSITE",
-            "label": "Official company contact / research page",
-            "value": "https://www.ucbi.com/support/contact-us",
-            "target": "https://www.ucbi.com/support/contact-us",
-            "anchor": "Contact Us",
-            "purpose": "Products and services support; not an executive line or a personal solicitation route.",
-            "scope": "COMPANY_CHANNEL",
-            "organization": "United Community",
-            "classification": "VERIFIED PUBLIC FACT",
-            "person_id": null,
-            "subject_name": null,
-            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
-            "reviewed_at": "2026-10-05",
-            "source_url": "https://www.ucbi.com/support/contact-us",
-            "raw_path": "contact-source-ucbi.txt",
-            "sha256": "d939e72aa0228c37a500299998ea67005587264e0545146f8f998c6377a11e63"
-          },
-          {
-            "kind": "PHONE",
-            "label": "General support phone",
-            "value": "+1 800 822 2651",
-            "target": "+18008222651",
-            "anchor": "1-800-822-2651",
-            "purpose": "Products and services support; not an executive line or a personal solicitation route.",
-            "scope": "COMPANY_CHANNEL",
-            "organization": "United Community",
-            "classification": "VERIFIED PUBLIC FACT",
-            "person_id": null,
-            "subject_name": null,
-            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
-            "reviewed_at": "2026-10-05",
-            "source_url": "https://www.ucbi.com/support/contact-us",
-            "raw_path": "contact-source-ucbi.txt",
-            "sha256": "d939e72aa0228c37a500299998ea67005587264e0545146f8f998c6377a11e63"
-          }
-        ]
-      }
-    },
-    {
       "id": "person-1657935-issuer-857855",
       "person_cik": "0001657935",
       "issuer_cik": "0000857855",
@@ -7248,6 +7155,99 @@
           "source_url": "https://www.sec.gov/Archives/edgar/data/857855/000187528426000006/xslF345X06/wk-form4_1785269022.xml",
           "raw_path": "0001875284-26-000006.xml",
           "sha256": "1518d1f3e33556ccb841604e9c097566d6954ba6fb0f97e272a0269e3d0ce266",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        }
+      ],
+      "liquidity_total": 0,
+      "signal_type": "Monitor",
+      "source_classes": [
+        "FORM4"
+      ],
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://www.ucbi.com/support/contact-us",
+            "target": "https://www.ucbi.com/support/contact-us",
+            "anchor": "Contact Us",
+            "purpose": "Products and services support; not an executive line or a personal solicitation route.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "United Community",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.ucbi.com/support/contact-us",
+            "raw_path": "contact-source-ucbi.txt",
+            "sha256": "d939e72aa0228c37a500299998ea67005587264e0545146f8f998c6377a11e63"
+          },
+          {
+            "kind": "PHONE",
+            "label": "General support phone",
+            "value": "+1 800 822 2651",
+            "target": "+18008222651",
+            "anchor": "1-800-822-2651",
+            "purpose": "Products and services support; not an executive line or a personal solicitation route.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "United Community",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://www.ucbi.com/support/contact-us",
+            "raw_path": "contact-source-ucbi.txt",
+            "sha256": "d939e72aa0228c37a500299998ea67005587264e0545146f8f998c6377a11e63"
+          }
+        ]
+      }
+    },
+    {
+      "id": "person-1443717-issuer-857855",
+      "person_cik": "0001443717",
+      "issuer_cik": "0000857855",
+      "person_name": "EDWARDS ROBERT A.",
+      "role": "EVP, Chief Risk Officer",
+      "company": "UNITED COMMUNITY BANKS INC",
+      "location": {
+        "city": "GREENVILLE",
+        "state": "SC",
+        "kind": "Reporting-person mailing city; residence UNKNOWN",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/857855/000144371726000007/xslF345X06/wk-form4_1785443056.xml",
+        "assertion_class": "VERIFIED PUBLIC FACT",
+        "distance_miles": 195.14,
+        "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
+        "geo_class": "CALCULATED FROM VERIFIED FACT",
+        "geo_method": "Haversine between Census place representative coordinates; mailing city only, not precise location",
+        "place_geoid": "4530850"
+      },
+      "events": [
+        {
+          "id": "0001443717-26-000007:0",
+          "accession": "0001443717-26-000007",
+          "row": 0,
+          "date": "2026-07-29",
+          "filed_date": "2026-07-30",
+          "code": "G",
+          "direction": "D",
+          "classification": "OTHER_CONTEXT",
+          "shares": 1500.0,
+          "price": 0.0,
+          "value": 0.0,
+          "remaining_shares": 57877.0,
+          "planned": false,
+          "fact": "Form 4 reports 1,500 shares, code G, on 2026-07-29. Reported price $0 per share.",
+          "footnotes": [],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/857855/000144371726000007/xslF345X06/wk-form4_1785443056.xml",
+          "raw_path": "0001443717-26-000007.xml",
+          "sha256": "d10fc8ccfd944e7e5d11680bfa0ce7ab1c90710689531aceb862aff9ef8a261c",
           "assertion_class": "VERIFIED PUBLIC FACT",
           "value_class": "CALCULATED FROM VERIFIED FACT"
         }
@@ -7753,17 +7753,17 @@
       }
     },
     {
-      "id": "person-1243362-issuer-1090009",
-      "person_cik": "0001243362",
+      "id": "person-2073600-issuer-1090009",
+      "person_cik": "0002073600",
       "issuer_cik": "0001090009",
-      "person_name": "JOHNSTONE RUDOLPH G III",
+      "person_name": "McClatchey William M. JR",
       "role": "Director",
       "company": "SOUTHERN FIRST BANCSHARES INC",
       "location": {
         "city": "GREENVILLE",
         "state": "SC",
         "kind": "Reporting-person mailing city; residence UNKNOWN",
-        "source_url": "https://www.sec.gov/Archives/edgar/data/1090009/000109000926000071/xslF345X06/form4.xml",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1090009/000109000926000078/xslF345X06/form4.xml",
         "assertion_class": "VERIFIED PUBLIC FACT",
         "distance_miles": 195.14,
         "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
@@ -7773,8 +7773,8 @@
       },
       "events": [
         {
-          "id": "0001090009-26-000071:0",
-          "accession": "0001090009-26-000071",
+          "id": "0001090009-26-000078:0",
+          "accession": "0001090009-26-000078",
           "row": 0,
           "date": "2026-06-01",
           "filed_date": "2026-06-02",
@@ -7784,15 +7784,15 @@
           "shares": 310.0,
           "price": 0.0,
           "value": 0.0,
-          "remaining_shares": 30676.0,
+          "remaining_shares": 795.0,
           "planned": false,
           "fact": "Form 4 reports 310 shares, code A, on 2026-06-01. Reported price $0 per share.",
           "footnotes": [
             "Represents grant of restricted stock units which will fully vest on June 1, 2027."
           ],
-          "source_url": "https://www.sec.gov/Archives/edgar/data/1090009/000109000926000071/xslF345X06/form4.xml",
-          "raw_path": "0001090009-26-000071.xml",
-          "sha256": "b310b0a7a61de40cd244cd6bd3b9ac5f2be1d3d0c284b0e22f3dcb11d9aa93cc",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1090009/000109000926000078/xslF345X06/form4.xml",
+          "raw_path": "0001090009-26-000078.xml",
+          "sha256": "5d9422ca688771cbd267eca733295ffab94788e069963a0be496db5cb1d8cf6d",
           "assertion_class": "VERIFIED PUBLIC FACT",
           "value_class": "CALCULATED FROM VERIFIED FACT"
         }
@@ -7848,17 +7848,17 @@
       }
     },
     {
-      "id": "person-2073600-issuer-1090009",
-      "person_cik": "0002073600",
+      "id": "person-1243362-issuer-1090009",
+      "person_cik": "0001243362",
       "issuer_cik": "0001090009",
-      "person_name": "McClatchey William M. JR",
+      "person_name": "JOHNSTONE RUDOLPH G III",
       "role": "Director",
       "company": "SOUTHERN FIRST BANCSHARES INC",
       "location": {
         "city": "GREENVILLE",
         "state": "SC",
         "kind": "Reporting-person mailing city; residence UNKNOWN",
-        "source_url": "https://www.sec.gov/Archives/edgar/data/1090009/000109000926000078/xslF345X06/form4.xml",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1090009/000109000926000071/xslF345X06/form4.xml",
         "assertion_class": "VERIFIED PUBLIC FACT",
         "distance_miles": 195.14,
         "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
@@ -7868,8 +7868,8 @@
       },
       "events": [
         {
-          "id": "0001090009-26-000078:0",
-          "accession": "0001090009-26-000078",
+          "id": "0001090009-26-000071:0",
+          "accession": "0001090009-26-000071",
           "row": 0,
           "date": "2026-06-01",
           "filed_date": "2026-06-02",
@@ -7879,15 +7879,15 @@
           "shares": 310.0,
           "price": 0.0,
           "value": 0.0,
-          "remaining_shares": 795.0,
+          "remaining_shares": 30676.0,
           "planned": false,
           "fact": "Form 4 reports 310 shares, code A, on 2026-06-01. Reported price $0 per share.",
           "footnotes": [
             "Represents grant of restricted stock units which will fully vest on June 1, 2027."
           ],
-          "source_url": "https://www.sec.gov/Archives/edgar/data/1090009/000109000926000078/xslF345X06/form4.xml",
-          "raw_path": "0001090009-26-000078.xml",
-          "sha256": "5d9422ca688771cbd267eca733295ffab94788e069963a0be496db5cb1d8cf6d",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1090009/000109000926000071/xslF345X06/form4.xml",
+          "raw_path": "0001090009-26-000071.xml",
+          "sha256": "b310b0a7a61de40cd244cd6bd3b9ac5f2be1d3d0c284b0e22f3dcb11d9aa93cc",
           "assertion_class": "VERIFIED PUBLIC FACT",
           "value_class": "CALCULATED FROM VERIFIED FACT"
         }
@@ -8133,196 +8133,6 @@
       }
     },
     {
-      "id": "person-1243354-issuer-1090009",
-      "person_cik": "0001243354",
-      "issuer_cik": "0001090009",
-      "person_name": "ELLEFSON ANNE S",
-      "role": "Director",
-      "company": "SOUTHERN FIRST BANCSHARES INC",
-      "location": {
-        "city": "GREENVILLE",
-        "state": "SC",
-        "kind": "Reporting-person mailing city; residence UNKNOWN",
-        "source_url": "https://www.sec.gov/Archives/edgar/data/1090009/000109000926000057/xslF345X06/form4.xml",
-        "assertion_class": "VERIFIED PUBLIC FACT",
-        "distance_miles": 195.14,
-        "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
-        "geo_class": "CALCULATED FROM VERIFIED FACT",
-        "geo_method": "Haversine between Census place representative coordinates; mailing city only, not precise location",
-        "place_geoid": "4530850"
-      },
-      "events": [
-        {
-          "id": "0001090009-26-000057:0",
-          "accession": "0001090009-26-000057",
-          "row": 0,
-          "date": "2026-06-01",
-          "filed_date": "2026-06-02",
-          "code": "A",
-          "direction": "A",
-          "classification": "AWARD",
-          "shares": 310.0,
-          "price": 0.0,
-          "value": 0.0,
-          "remaining_shares": 7007.0,
-          "planned": false,
-          "fact": "Form 4 reports 310 shares, code A, on 2026-06-01. Reported price $0 per share.",
-          "footnotes": [
-            "Represents grant of restricted stock units which will fully vest on June 1, 2027."
-          ],
-          "source_url": "https://www.sec.gov/Archives/edgar/data/1090009/000109000926000057/xslF345X06/form4.xml",
-          "raw_path": "0001090009-26-000057.xml",
-          "sha256": "10d1c047ece776786f4e904c179aa291927d03da47f4b611dbef029e2f1aed7c",
-          "assertion_class": "VERIFIED PUBLIC FACT",
-          "value_class": "CALCULATED FROM VERIFIED FACT"
-        }
-      ],
-      "liquidity_total": 0,
-      "signal_type": "Monitor",
-      "source_classes": [
-        "FORM4"
-      ],
-      "convergence": 0,
-      "contacts": {
-        "direct_email": "UNKNOWN",
-        "direct_phone": "UNKNOWN",
-        "consent": "UNKNOWN",
-        "routes": [
-          {
-            "kind": "WEBSITE",
-            "label": "Official company contact / research page",
-            "value": "https://ir.southernfirst.com/overview/default.aspx",
-            "target": "https://ir.southernfirst.com/overview/default.aspx",
-            "anchor": "Contact Us",
-            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
-            "scope": "COMPANY_CHANNEL",
-            "organization": "Southern First Bancshares",
-            "classification": "VERIFIED PUBLIC FACT",
-            "person_id": null,
-            "subject_name": null,
-            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
-            "reviewed_at": "2026-10-05",
-            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
-            "raw_path": "contact-source-southernfirst.txt",
-            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
-          },
-          {
-            "kind": "PHONE",
-            "label": "Corporate phone",
-            "value": "+1 864 679 9000",
-            "target": "+18646799000",
-            "anchor": "(864) 679-9000",
-            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
-            "scope": "COMPANY_CHANNEL",
-            "organization": "Southern First Bancshares",
-            "classification": "VERIFIED PUBLIC FACT",
-            "person_id": null,
-            "subject_name": null,
-            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
-            "reviewed_at": "2026-10-05",
-            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
-            "raw_path": "contact-source-southernfirst.txt",
-            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
-          }
-        ]
-      }
-    },
-    {
-      "id": "person-1243357-issuer-1090009",
-      "person_cik": "0001243357",
-      "issuer_cik": "0001090009",
-      "person_name": "ELLISON DAVID G",
-      "role": "Director",
-      "company": "SOUTHERN FIRST BANCSHARES INC",
-      "location": {
-        "city": "GREENVILLE",
-        "state": "SC",
-        "kind": "Reporting-person mailing city; residence UNKNOWN",
-        "source_url": "https://www.sec.gov/Archives/edgar/data/1090009/000109000926000059/xslF345X06/form4.xml",
-        "assertion_class": "VERIFIED PUBLIC FACT",
-        "distance_miles": 195.14,
-        "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
-        "geo_class": "CALCULATED FROM VERIFIED FACT",
-        "geo_method": "Haversine between Census place representative coordinates; mailing city only, not precise location",
-        "place_geoid": "4530850"
-      },
-      "events": [
-        {
-          "id": "0001090009-26-000059:0",
-          "accession": "0001090009-26-000059",
-          "row": 0,
-          "date": "2026-06-01",
-          "filed_date": "2026-06-02",
-          "code": "A",
-          "direction": "A",
-          "classification": "AWARD",
-          "shares": 310.0,
-          "price": 0.0,
-          "value": 0.0,
-          "remaining_shares": 49971.0,
-          "planned": false,
-          "fact": "Form 4 reports 310 shares, code A, on 2026-06-01. Reported price $0 per share.",
-          "footnotes": [
-            "Represents grant of restricted stock units which will fully vest on June 1, 2027."
-          ],
-          "source_url": "https://www.sec.gov/Archives/edgar/data/1090009/000109000926000059/xslF345X06/form4.xml",
-          "raw_path": "0001090009-26-000059.xml",
-          "sha256": "9f738ceefa9721e3f26160baaa14c548a574a8f6d7d714469aa386fc4ba3364f",
-          "assertion_class": "VERIFIED PUBLIC FACT",
-          "value_class": "CALCULATED FROM VERIFIED FACT"
-        }
-      ],
-      "liquidity_total": 0,
-      "signal_type": "Monitor",
-      "source_classes": [
-        "FORM4"
-      ],
-      "convergence": 0,
-      "contacts": {
-        "direct_email": "UNKNOWN",
-        "direct_phone": "UNKNOWN",
-        "consent": "UNKNOWN",
-        "routes": [
-          {
-            "kind": "WEBSITE",
-            "label": "Official company contact / research page",
-            "value": "https://ir.southernfirst.com/overview/default.aspx",
-            "target": "https://ir.southernfirst.com/overview/default.aspx",
-            "anchor": "Contact Us",
-            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
-            "scope": "COMPANY_CHANNEL",
-            "organization": "Southern First Bancshares",
-            "classification": "VERIFIED PUBLIC FACT",
-            "person_id": null,
-            "subject_name": null,
-            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
-            "reviewed_at": "2026-10-05",
-            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
-            "raw_path": "contact-source-southernfirst.txt",
-            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
-          },
-          {
-            "kind": "PHONE",
-            "label": "Corporate phone",
-            "value": "+1 864 679 9000",
-            "target": "+18646799000",
-            "anchor": "(864) 679-9000",
-            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
-            "scope": "COMPANY_CHANNEL",
-            "organization": "Southern First Bancshares",
-            "classification": "VERIFIED PUBLIC FACT",
-            "person_id": null,
-            "subject_name": null,
-            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
-            "reviewed_at": "2026-10-05",
-            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
-            "raw_path": "contact-source-southernfirst.txt",
-            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
-          }
-        ]
-      }
-    },
-    {
       "id": "person-1867557-issuer-1090009",
       "person_cik": "0001867557",
       "issuer_cik": "0001090009",
@@ -8363,101 +8173,6 @@
           "source_url": "https://www.sec.gov/Archives/edgar/data/1090009/000109000926000066/xslF345X06/form4.xml",
           "raw_path": "0001090009-26-000066.xml",
           "sha256": "d48aa193a7bae20ad074cc24f98ef9890fa5131685d00889d460fb7064dc205d",
-          "assertion_class": "VERIFIED PUBLIC FACT",
-          "value_class": "CALCULATED FROM VERIFIED FACT"
-        }
-      ],
-      "liquidity_total": 0,
-      "signal_type": "Monitor",
-      "source_classes": [
-        "FORM4"
-      ],
-      "convergence": 0,
-      "contacts": {
-        "direct_email": "UNKNOWN",
-        "direct_phone": "UNKNOWN",
-        "consent": "UNKNOWN",
-        "routes": [
-          {
-            "kind": "WEBSITE",
-            "label": "Official company contact / research page",
-            "value": "https://ir.southernfirst.com/overview/default.aspx",
-            "target": "https://ir.southernfirst.com/overview/default.aspx",
-            "anchor": "Contact Us",
-            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
-            "scope": "COMPANY_CHANNEL",
-            "organization": "Southern First Bancshares",
-            "classification": "VERIFIED PUBLIC FACT",
-            "person_id": null,
-            "subject_name": null,
-            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
-            "reviewed_at": "2026-10-05",
-            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
-            "raw_path": "contact-source-southernfirst.txt",
-            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
-          },
-          {
-            "kind": "PHONE",
-            "label": "Corporate phone",
-            "value": "+1 864 679 9000",
-            "target": "+18646799000",
-            "anchor": "(864) 679-9000",
-            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
-            "scope": "COMPANY_CHANNEL",
-            "organization": "Southern First Bancshares",
-            "classification": "VERIFIED PUBLIC FACT",
-            "person_id": null,
-            "subject_name": null,
-            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
-            "reviewed_at": "2026-10-05",
-            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
-            "raw_path": "contact-source-southernfirst.txt",
-            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
-          }
-        ]
-      }
-    },
-    {
-      "id": "person-2072043-issuer-1090009",
-      "person_cik": "0002072043",
-      "issuer_cik": "0001090009",
-      "person_name": "Cluverius Jennifer S",
-      "role": "Director",
-      "company": "SOUTHERN FIRST BANCSHARES INC",
-      "location": {
-        "city": "GREENVILLE",
-        "state": "SC",
-        "kind": "Reporting-person mailing city; residence UNKNOWN",
-        "source_url": "https://www.sec.gov/Archives/edgar/data/1090009/000109000926000047/xslF345X06/form4.xml",
-        "assertion_class": "VERIFIED PUBLIC FACT",
-        "distance_miles": 195.14,
-        "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
-        "geo_class": "CALCULATED FROM VERIFIED FACT",
-        "geo_method": "Haversine between Census place representative coordinates; mailing city only, not precise location",
-        "place_geoid": "4530850"
-      },
-      "events": [
-        {
-          "id": "0001090009-26-000047:0",
-          "accession": "0001090009-26-000047",
-          "row": 0,
-          "date": "2026-06-01",
-          "filed_date": "2026-06-02",
-          "code": "A",
-          "direction": "A",
-          "classification": "AWARD",
-          "shares": 310.0,
-          "price": 0.0,
-          "value": 0.0,
-          "remaining_shares": 795.0,
-          "planned": false,
-          "fact": "Form 4 reports 310 shares, code A, on 2026-06-01. Reported price $0 per share.",
-          "footnotes": [
-            "Represents grant of restricted stock units which will fully vest on June 1, 2027."
-          ],
-          "source_url": "https://www.sec.gov/Archives/edgar/data/1090009/000109000926000047/xslF345X06/form4.xml",
-          "raw_path": "0001090009-26-000047.xml",
-          "sha256": "ecb2543362d8f2c5b9963f10a38beda7da16f9fb347193d2bfb109477c1e8b93",
           "assertion_class": "VERIFIED PUBLIC FACT",
           "value_class": "CALCULATED FROM VERIFIED FACT"
         }
@@ -8608,17 +8323,17 @@
       }
     },
     {
-      "id": "person-1471749-issuer-1090009",
-      "person_cik": "0001471749",
+      "id": "person-1243357-issuer-1090009",
+      "person_cik": "0001243357",
       "issuer_cik": "0001090009",
-      "person_name": "KENNEDY, III BRYAN F",
+      "person_name": "ELLISON DAVID G",
       "role": "Director",
       "company": "SOUTHERN FIRST BANCSHARES INC",
       "location": {
         "city": "GREENVILLE",
         "state": "SC",
         "kind": "Reporting-person mailing city; residence UNKNOWN",
-        "source_url": "https://www.sec.gov/Archives/edgar/data/1090009/000109000926000039/xslF345X06/form4.xml",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1090009/000109000926000059/xslF345X06/form4.xml",
         "assertion_class": "VERIFIED PUBLIC FACT",
         "distance_miles": 195.14,
         "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
@@ -8628,35 +8343,8 @@
       },
       "events": [
         {
-          "accession": "0001206774-26-000308",
-          "date": "2026-06-01",
-          "filed_date": "2026-06-02",
-          "source_url": "https://www.sec.gov/Archives/edgar/data/1090009/000120677426000308/sfst4646481-8k.htm",
-          "raw_path": "0001206774-26-000308.htm",
-          "sha256": "967da1719cddb6a11d79a5e8aa381ba8dadf52f8173194e676f8788d9270b1d8",
-          "classification": "BOARD_CONTEXT",
-          "fact": "Southern First appointed Bryan Kennedy as a director effective June 1, 2026. Its filing describes a recent retirement from a banking career without specifying a retirement date. Board membership and the undated retirement are retained as context.",
-          "status": "Board appointment disclosed; exact retirement date UNKNOWN.",
-          "effective_date": "2026-06-01",
-          "amount_context": "No liquidity amount asserted.",
-          "subject_name": "Bryan Kennedy",
-          "trigger_type": "BOARD_APPOINTMENT",
-          "id": "0001206774-26-000308:person-1471749-issuer-1090009:transition",
-          "source_class": "8K",
-          "code": null,
-          "value": null,
-          "value_class": "UNKNOWN",
-          "shares": null,
-          "price": null,
-          "planned": false,
-          "footnotes": [],
-          "assertion_class": "VERIFIED PUBLIC FACT",
-          "identity_method": "Reviewed named subject + same issuer + unique matching Form 4 reporting person; not a filing signatory match",
-          "cash_received": "UNKNOWN"
-        },
-        {
-          "id": "0001090009-26-000039:0",
-          "accession": "0001090009-26-000039",
+          "id": "0001090009-26-000059:0",
+          "accession": "0001090009-26-000059",
           "row": 0,
           "date": "2026-06-01",
           "filed_date": "2026-06-02",
@@ -8666,15 +8354,15 @@
           "shares": 310.0,
           "price": 0.0,
           "value": 0.0,
-          "remaining_shares": 310.0,
+          "remaining_shares": 49971.0,
           "planned": false,
           "fact": "Form 4 reports 310 shares, code A, on 2026-06-01. Reported price $0 per share.",
           "footnotes": [
             "Represents grant of restricted stock units which will fully vest on June 1, 2027."
           ],
-          "source_url": "https://www.sec.gov/Archives/edgar/data/1090009/000109000926000039/xslF345X06/form4.xml",
-          "raw_path": "0001090009-26-000039.xml",
-          "sha256": "c5576ca92dbbd89466094235f4233d311aedadcd23f5f11cb760c3dcb9f2f08f",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1090009/000109000926000059/xslF345X06/form4.xml",
+          "raw_path": "0001090009-26-000059.xml",
+          "sha256": "9f738ceefa9721e3f26160baaa14c548a574a8f6d7d714469aa386fc4ba3364f",
           "assertion_class": "VERIFIED PUBLIC FACT",
           "value_class": "CALCULATED FROM VERIFIED FACT"
         }
@@ -8682,7 +8370,196 @@
       "liquidity_total": 0,
       "signal_type": "Monitor",
       "source_classes": [
-        "8K",
+        "FORM4"
+      ],
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://ir.southernfirst.com/overview/default.aspx",
+            "target": "https://ir.southernfirst.com/overview/default.aspx",
+            "anchor": "Contact Us",
+            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Southern First Bancshares",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
+            "raw_path": "contact-source-southernfirst.txt",
+            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Corporate phone",
+            "value": "+1 864 679 9000",
+            "target": "+18646799000",
+            "anchor": "(864) 679-9000",
+            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Southern First Bancshares",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
+            "raw_path": "contact-source-southernfirst.txt",
+            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
+          }
+        ]
+      }
+    },
+    {
+      "id": "person-1243354-issuer-1090009",
+      "person_cik": "0001243354",
+      "issuer_cik": "0001090009",
+      "person_name": "ELLEFSON ANNE S",
+      "role": "Director",
+      "company": "SOUTHERN FIRST BANCSHARES INC",
+      "location": {
+        "city": "GREENVILLE",
+        "state": "SC",
+        "kind": "Reporting-person mailing city; residence UNKNOWN",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1090009/000109000926000057/xslF345X06/form4.xml",
+        "assertion_class": "VERIFIED PUBLIC FACT",
+        "distance_miles": 195.14,
+        "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
+        "geo_class": "CALCULATED FROM VERIFIED FACT",
+        "geo_method": "Haversine between Census place representative coordinates; mailing city only, not precise location",
+        "place_geoid": "4530850"
+      },
+      "events": [
+        {
+          "id": "0001090009-26-000057:0",
+          "accession": "0001090009-26-000057",
+          "row": 0,
+          "date": "2026-06-01",
+          "filed_date": "2026-06-02",
+          "code": "A",
+          "direction": "A",
+          "classification": "AWARD",
+          "shares": 310.0,
+          "price": 0.0,
+          "value": 0.0,
+          "remaining_shares": 7007.0,
+          "planned": false,
+          "fact": "Form 4 reports 310 shares, code A, on 2026-06-01. Reported price $0 per share.",
+          "footnotes": [
+            "Represents grant of restricted stock units which will fully vest on June 1, 2027."
+          ],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1090009/000109000926000057/xslF345X06/form4.xml",
+          "raw_path": "0001090009-26-000057.xml",
+          "sha256": "10d1c047ece776786f4e904c179aa291927d03da47f4b611dbef029e2f1aed7c",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        }
+      ],
+      "liquidity_total": 0,
+      "signal_type": "Monitor",
+      "source_classes": [
+        "FORM4"
+      ],
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://ir.southernfirst.com/overview/default.aspx",
+            "target": "https://ir.southernfirst.com/overview/default.aspx",
+            "anchor": "Contact Us",
+            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Southern First Bancshares",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
+            "raw_path": "contact-source-southernfirst.txt",
+            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Corporate phone",
+            "value": "+1 864 679 9000",
+            "target": "+18646799000",
+            "anchor": "(864) 679-9000",
+            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Southern First Bancshares",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
+            "raw_path": "contact-source-southernfirst.txt",
+            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
+          }
+        ]
+      }
+    },
+    {
+      "id": "person-2072043-issuer-1090009",
+      "person_cik": "0002072043",
+      "issuer_cik": "0001090009",
+      "person_name": "Cluverius Jennifer S",
+      "role": "Director",
+      "company": "SOUTHERN FIRST BANCSHARES INC",
+      "location": {
+        "city": "GREENVILLE",
+        "state": "SC",
+        "kind": "Reporting-person mailing city; residence UNKNOWN",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1090009/000109000926000047/xslF345X06/form4.xml",
+        "assertion_class": "VERIFIED PUBLIC FACT",
+        "distance_miles": 195.14,
+        "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
+        "geo_class": "CALCULATED FROM VERIFIED FACT",
+        "geo_method": "Haversine between Census place representative coordinates; mailing city only, not precise location",
+        "place_geoid": "4530850"
+      },
+      "events": [
+        {
+          "id": "0001090009-26-000047:0",
+          "accession": "0001090009-26-000047",
+          "row": 0,
+          "date": "2026-06-01",
+          "filed_date": "2026-06-02",
+          "code": "A",
+          "direction": "A",
+          "classification": "AWARD",
+          "shares": 310.0,
+          "price": 0.0,
+          "value": 0.0,
+          "remaining_shares": 795.0,
+          "planned": false,
+          "fact": "Form 4 reports 310 shares, code A, on 2026-06-01. Reported price $0 per share.",
+          "footnotes": [
+            "Represents grant of restricted stock units which will fully vest on June 1, 2027."
+          ],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1090009/000109000926000047/xslF345X06/form4.xml",
+          "raw_path": "0001090009-26-000047.xml",
+          "sha256": "ecb2543362d8f2c5b9963f10a38beda7da16f9fb347193d2bfb109477c1e8b93",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        }
+      ],
+      "liquidity_total": 0,
+      "signal_type": "Monitor",
+      "source_classes": [
         "FORM4"
       ],
       "convergence": 0,
@@ -8949,17 +8826,140 @@
       }
     },
     {
-      "id": "person-1544928-issuer-932781",
-      "person_cik": "0001544928",
+      "id": "person-1471749-issuer-1090009",
+      "person_cik": "0001471749",
+      "issuer_cik": "0001090009",
+      "person_name": "KENNEDY, III BRYAN F",
+      "role": "Director",
+      "company": "SOUTHERN FIRST BANCSHARES INC",
+      "location": {
+        "city": "GREENVILLE",
+        "state": "SC",
+        "kind": "Reporting-person mailing city; residence UNKNOWN",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1090009/000109000926000039/xslF345X06/form4.xml",
+        "assertion_class": "VERIFIED PUBLIC FACT",
+        "distance_miles": 195.14,
+        "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
+        "geo_class": "CALCULATED FROM VERIFIED FACT",
+        "geo_method": "Haversine between Census place representative coordinates; mailing city only, not precise location",
+        "place_geoid": "4530850"
+      },
+      "events": [
+        {
+          "accession": "0001206774-26-000308",
+          "date": "2026-06-01",
+          "filed_date": "2026-06-02",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1090009/000120677426000308/sfst4646481-8k.htm",
+          "raw_path": "0001206774-26-000308.htm",
+          "sha256": "967da1719cddb6a11d79a5e8aa381ba8dadf52f8173194e676f8788d9270b1d8",
+          "classification": "BOARD_CONTEXT",
+          "fact": "Southern First appointed Bryan Kennedy as a director effective June 1, 2026. Its filing describes a recent retirement from a banking career without specifying a retirement date. Board membership and the undated retirement are retained as context.",
+          "status": "Board appointment disclosed; exact retirement date UNKNOWN.",
+          "effective_date": "2026-06-01",
+          "amount_context": "No liquidity amount asserted.",
+          "subject_name": "Bryan Kennedy",
+          "trigger_type": "BOARD_APPOINTMENT",
+          "id": "0001206774-26-000308:person-1471749-issuer-1090009:transition",
+          "source_class": "8K",
+          "code": null,
+          "value": null,
+          "value_class": "UNKNOWN",
+          "shares": null,
+          "price": null,
+          "planned": false,
+          "footnotes": [],
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "identity_method": "Reviewed named subject + same issuer + unique matching Form 4 reporting person; not a filing signatory match",
+          "cash_received": "UNKNOWN"
+        },
+        {
+          "id": "0001090009-26-000039:0",
+          "accession": "0001090009-26-000039",
+          "row": 0,
+          "date": "2026-06-01",
+          "filed_date": "2026-06-02",
+          "code": "A",
+          "direction": "A",
+          "classification": "AWARD",
+          "shares": 310.0,
+          "price": 0.0,
+          "value": 0.0,
+          "remaining_shares": 310.0,
+          "planned": false,
+          "fact": "Form 4 reports 310 shares, code A, on 2026-06-01. Reported price $0 per share.",
+          "footnotes": [
+            "Represents grant of restricted stock units which will fully vest on June 1, 2027."
+          ],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1090009/000109000926000039/xslF345X06/form4.xml",
+          "raw_path": "0001090009-26-000039.xml",
+          "sha256": "c5576ca92dbbd89466094235f4233d311aedadcd23f5f11cb760c3dcb9f2f08f",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        }
+      ],
+      "liquidity_total": 0,
+      "signal_type": "Monitor",
+      "source_classes": [
+        "8K",
+        "FORM4"
+      ],
+      "convergence": 0,
+      "contacts": {
+        "direct_email": "UNKNOWN",
+        "direct_phone": "UNKNOWN",
+        "consent": "UNKNOWN",
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official company contact / research page",
+            "value": "https://ir.southernfirst.com/overview/default.aspx",
+            "target": "https://ir.southernfirst.com/overview/default.aspx",
+            "anchor": "Contact Us",
+            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Southern First Bancshares",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
+            "raw_path": "contact-source-southernfirst.txt",
+            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Corporate phone",
+            "value": "+1 864 679 9000",
+            "target": "+18646799000",
+            "anchor": "(864) 679-9000",
+            "purpose": "Published corporate number; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Southern First Bancshares",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-05",
+            "source_url": "https://ir.southernfirst.com/overview/default.aspx",
+            "raw_path": "contact-source-southernfirst.txt",
+            "sha256": "7e9e30a3cc0a257996a6c94d7e7209cac67a9d5afe9972906539c8147474cf86"
+          }
+        ]
+      }
+    },
+    {
+      "id": "person-1252850-issuer-932781",
+      "person_cik": "0001252850",
       "issuer_cik": "0000932781",
-      "person_name": "Snipe Alexander JR",
+      "person_name": "BROWN THOMAS CARLTON",
       "role": "Director",
       "company": "FIRST COMMUNITY CORP /SC/",
       "location": {
         "city": "LEXINGTON",
         "state": "SC",
         "kind": "Reporting-person mailing city; residence UNKNOWN",
-        "source_url": "https://www.sec.gov/Archives/edgar/data/932781/000093278126000049/xslF345X06/primary_doc.xml",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/932781/000093278126000050/xslF345X06/primary_doc.xml",
         "assertion_class": "VERIFIED PUBLIC FACT",
         "distance_miles": 108.01,
         "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
@@ -8969,54 +8969,54 @@
       },
       "events": [
         {
-          "id": "0000932781-26-000049:0",
-          "accession": "0000932781-26-000049",
+          "id": "0000932781-26-000050:0",
+          "accession": "0000932781-26-000050",
           "row": 0,
           "date": "2026-09-30",
           "filed_date": "2026-10-01",
           "code": "A",
           "direction": "A",
           "classification": "AWARD",
-          "shares": 255.0,
+          "shares": 134.0,
           "price": 32.09,
-          "value": 8182.95,
-          "remaining_shares": 57936.0,
+          "value": 4300.06,
+          "remaining_shares": 41830.0,
           "planned": false,
-          "fact": "Form 4 reports 255 shares, code A, on 2026-09-30. Reported price $32.09 per share.",
+          "fact": "Form 4 reports 134 shares, code A, on 2026-09-30. Reported price $32.09 per share.",
           "footnotes": [
-            "The reporting person has elected to defer compensation in the form of deferred stock units under the First Community Corporation Amended and Restated Non-Employee Director Deferred Compensation Plan (the \"Plan\"). Pursuant to the terms of the Plan, the reporting person was credited with 255 deferred stock units, based on the amount of compensation deferred by the reporting person under the Plan during the third quarter of 2026 divided by the First Community Corporation common stock consolidated closing bid price of $32.09 on September 30, 2026.",
-            "The reporting person has elected to defer compensation in the form of deferred stock units under the First Community Corporation Amended and Restated Non-Employee Director Deferred Compensation Plan (the \"Plan\"). Pursuant to the terms of the Plan, the reporting person was credited with 255 deferred stock units, based on the amount of compensation deferred by the reporting person under the Plan during the third quarter of 2026 divided by the First Community Corporation common stock consolidated closing bid price of $32.09 on September 30, 2026.",
-            "Includes 48,885 deferred stock units under the First Community Corporation Amended and Restated Non-Employee Director Deferred Compensation Plan (the \"Plan\"), including 239 deferred stock units credited pursuant to the terms of the Plan as dividend equivalents during the third quarter of 2026. Deferred stock units under the Plan receive dividend equivalents in the form of additional deferred stock units, and shares of First Community Corporation common stock will be issued on a one-for-one basis in respect of deferred stock units upon a distribution from the Plan."
+            "The reporting person has elected to defer compensation in the form of deferred stock units under the First Community Corporation Amended and Restated Non-Employee Director Deferred Compensation Plan (the \"Plan\"). Pursuant to the terms of the Plan, the reporting person was credited with 134 deferred stock units, based on the amount of compensation deferred by the reporting person under the Plan during the third quarter of 2026 divided by the First Community Corporation common stock consolidated closing bid price of $32.09 on September 30, 2026.",
+            "The reporting person has elected to defer compensation in the form of deferred stock units under the First Community Corporation Amended and Restated Non-Employee Director Deferred Compensation Plan (the \"Plan\"). Pursuant to the terms of the Plan, the reporting person was credited with 134 deferred stock units, based on the amount of compensation deferred by the reporting person under the Plan during the third quarter of 2026 divided by the First Community Corporation common stock consolidated closing bid price of $32.09 on September 30, 2026.",
+            "Includes 10,235 deferred stock units under the First Community Corporation Amended and Restated Non-Employee Director Deferred Compensation Plan (the \"Plan\"), including 49 deferred stock units credited pursuant to the terms of the Plan as dividend equivalents during the third quarter of 2026. Deferred stock units under the Plan receive dividend equivalents in the form of additional deferred stock units, and shares of First Community Corporation common stock will be issued on a one-for-one basis in respect of deferred stock units upon a distribution from the Plan."
           ],
-          "source_url": "https://www.sec.gov/Archives/edgar/data/932781/000093278126000049/xslF345X06/primary_doc.xml",
-          "raw_path": "0000932781-26-000049.xml",
-          "sha256": "1a77b388c337696e605705464d9fd54f5224ead1b4595900de5727a5f8d9ab32",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/932781/000093278126000050/xslF345X06/primary_doc.xml",
+          "raw_path": "0000932781-26-000050.xml",
+          "sha256": "ab54383b924ade7544f25a2157ef47a02d5d1e0a3201ec8337ba56d2b5d52b58",
           "assertion_class": "VERIFIED PUBLIC FACT",
           "value_class": "CALCULATED FROM VERIFIED FACT"
         },
         {
-          "id": "0000932781-26-000041:0",
-          "accession": "0000932781-26-000041",
+          "id": "0000932781-26-000039:0",
+          "accession": "0000932781-26-000039",
           "row": 0,
           "date": "2026-06-30",
           "filed_date": "2026-07-02",
           "code": "A",
           "direction": "A",
           "classification": "AWARD",
-          "shares": 271.0,
+          "shares": 172.0,
           "price": 32.67,
-          "value": 8853.57,
-          "remaining_shares": 57442.0,
+          "value": 5619.24,
+          "remaining_shares": 41647.0,
           "planned": false,
-          "fact": "Form 4 reports 271 shares, code A, on 2026-06-30. Reported price $32.67 per share.",
+          "fact": "Form 4 reports 172 shares, code A, on 2026-06-30. Reported price $32.67 per share.",
           "footnotes": [
-            "The reporting person has elected to defer compensation in the form of deferred stock units under the First Community Corporation Amended and Restated Non-Employee Director Deferred Compensation Plan (the \"Plan\"). Pursuant to the terms of the Plan, the reporting person was credited with 271 deferred stock units, based on the amount of compensation deferred by the reporting person under the Plan during the second quarter of 2026 divided by the First Community Corporation common stock consolidated closing bid price of $32.67 on June 30, 2026.",
-            "The reporting person has elected to defer compensation in the form of deferred stock units under the First Community Corporation Amended and Restated Non-Employee Director Deferred Compensation Plan (the \"Plan\"). Pursuant to the terms of the Plan, the reporting person was credited with 271 deferred stock units, based on the amount of compensation deferred by the reporting person under the Plan during the second quarter of 2026 divided by the First Community Corporation common stock consolidated closing bid price of $32.67 on June 30, 2026.",
-            "Includes 48,391 deferred stock units under the First Community Corporation Amended and Restated Non-Employee Director Deferred Compensation Plan (the \"Plan\"), including 260 deferred stock units credited pursuant to the terms of the Plan as dividend equivalents during the second quarter of 2026. Deferred stock units under the Plan receive dividend equivalents in the form of additional deferred stock units, and shares of First Community Corporation common stock will be issued on a one-for-one basis in respect of deferred stock units upon a distribution from the Plan."
+            "The reporting person has elected to defer compensation in the form of deferred stock units under the First Community Corporation Amended and Restated Non-Employee Director Deferred Compensation Plan (the \"Plan\"). Pursuant to the terms of the Plan, the reporting person was credited with 172 deferred stock units, based on the amount of compensation deferred by the reporting person under the Plan during the second quarter of 2026 divided by the First Community Corporation common stock consolidated closing bid price of $32.67 on June 30, 2026.",
+            "The reporting person has elected to defer compensation in the form of deferred stock units under the First Community Corporation Amended and Restated Non-Employee Director Deferred Compensation Plan (the \"Plan\"). Pursuant to the terms of the Plan, the reporting person was credited with 172 deferred stock units, based on the amount of compensation deferred by the reporting person under the Plan during the second quarter of 2026 divided by the First Community Corporation common stock consolidated closing bid price of $32.67 on June 30, 2026.",
+            "Includes 10,052 deferred stock units under the First Community Corporation Amended and Restated Non-Employee Director Deferred Compensation Plan (the \"Plan\"), including 53 deferred stock units credited pursuant to the terms of the Plan as dividend equivalents during the second quarter of 2026. Deferred stock units under the Plan receive dividend equivalents in the form of additional deferred stock units, and shares of First Community Corporation common stock will be issued on a one-for-one basis in respect of deferred stock units upon a distribution from the Plan."
           ],
-          "source_url": "https://www.sec.gov/Archives/edgar/data/932781/000093278126000041/xslF345X06/primary_doc.xml",
-          "raw_path": "0000932781-26-000041.xml",
-          "sha256": "1bebd30889306a97832a38a30a5439feb77bfb4fd2301098d490e48fc31970cf",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/932781/000093278126000039/xslF345X06/primary_doc.xml",
+          "raw_path": "0000932781-26-000039.xml",
+          "sha256": "b2f8678147b5952dad2ec43ee8366c02d611ad99ff4ca9e6b64b94ada55ddebe",
           "assertion_class": "VERIFIED PUBLIC FACT",
           "value_class": "CALCULATED FROM VERIFIED FACT"
         }
@@ -9195,17 +9195,17 @@
       }
     },
     {
-      "id": "person-1436678-issuer-932781",
-      "person_cik": "0001436678",
+      "id": "person-1544928-issuer-932781",
+      "person_cik": "0001544928",
       "issuer_cik": "0000932781",
-      "person_name": "Sosebee Jane S",
+      "person_name": "Snipe Alexander JR",
       "role": "Director",
       "company": "FIRST COMMUNITY CORP /SC/",
       "location": {
         "city": "LEXINGTON",
         "state": "SC",
         "kind": "Reporting-person mailing city; residence UNKNOWN",
-        "source_url": "https://www.sec.gov/Archives/edgar/data/932781/000093278126000046/xslF345X06/primary_doc.xml",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/932781/000093278126000049/xslF345X06/primary_doc.xml",
         "assertion_class": "VERIFIED PUBLIC FACT",
         "distance_miles": 108.01,
         "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
@@ -9215,24 +9215,54 @@
       },
       "events": [
         {
-          "id": "0000932781-26-000046:0",
-          "accession": "0000932781-26-000046",
+          "id": "0000932781-26-000049:0",
+          "accession": "0000932781-26-000049",
           "row": 0,
-          "date": "2026-08-25",
-          "filed_date": "2026-08-26",
-          "code": "P",
+          "date": "2026-09-30",
+          "filed_date": "2026-10-01",
+          "code": "A",
           "direction": "A",
-          "classification": "OTHER_CONTEXT",
-          "shares": 1250.0,
-          "price": 33.945,
-          "value": 42431.25,
-          "remaining_shares": 10855.0,
+          "classification": "AWARD",
+          "shares": 255.0,
+          "price": 32.09,
+          "value": 8182.95,
+          "remaining_shares": 57936.0,
           "planned": false,
-          "fact": "Form 4 reports 1,250 shares, code P, on 2026-08-25. Reported price $33.945 per share.",
-          "footnotes": [],
-          "source_url": "https://www.sec.gov/Archives/edgar/data/932781/000093278126000046/xslF345X06/primary_doc.xml",
-          "raw_path": "0000932781-26-000046.xml",
-          "sha256": "b677e470c45112185f1416e581a514bd07606de3a22614168d9a9455acf9e3f9",
+          "fact": "Form 4 reports 255 shares, code A, on 2026-09-30. Reported price $32.09 per share.",
+          "footnotes": [
+            "The reporting person has elected to defer compensation in the form of deferred stock units under the First Community Corporation Amended and Restated Non-Employee Director Deferred Compensation Plan (the \"Plan\"). Pursuant to the terms of the Plan, the reporting person was credited with 255 deferred stock units, based on the amount of compensation deferred by the reporting person under the Plan during the third quarter of 2026 divided by the First Community Corporation common stock consolidated closing bid price of $32.09 on September 30, 2026.",
+            "The reporting person has elected to defer compensation in the form of deferred stock units under the First Community Corporation Amended and Restated Non-Employee Director Deferred Compensation Plan (the \"Plan\"). Pursuant to the terms of the Plan, the reporting person was credited with 255 deferred stock units, based on the amount of compensation deferred by the reporting person under the Plan during the third quarter of 2026 divided by the First Community Corporation common stock consolidated closing bid price of $32.09 on September 30, 2026.",
+            "Includes 48,885 deferred stock units under the First Community Corporation Amended and Restated Non-Employee Director Deferred Compensation Plan (the \"Plan\"), including 239 deferred stock units credited pursuant to the terms of the Plan as dividend equivalents during the third quarter of 2026. Deferred stock units under the Plan receive dividend equivalents in the form of additional deferred stock units, and shares of First Community Corporation common stock will be issued on a one-for-one basis in respect of deferred stock units upon a distribution from the Plan."
+          ],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/932781/000093278126000049/xslF345X06/primary_doc.xml",
+          "raw_path": "0000932781-26-000049.xml",
+          "sha256": "1a77b388c337696e605705464d9fd54f5224ead1b4595900de5727a5f8d9ab32",
+          "assertion_class": "VERIFIED PUBLIC FACT",
+          "value_class": "CALCULATED FROM VERIFIED FACT"
+        },
+        {
+          "id": "0000932781-26-000041:0",
+          "accession": "0000932781-26-000041",
+          "row": 0,
+          "date": "2026-06-30",
+          "filed_date": "2026-07-02",
+          "code": "A",
+          "direction": "A",
+          "classification": "AWARD",
+          "shares": 271.0,
+          "price": 32.67,
+          "value": 8853.57,
+          "remaining_shares": 57442.0,
+          "planned": false,
+          "fact": "Form 4 reports 271 shares, code A, on 2026-06-30. Reported price $32.67 per share.",
+          "footnotes": [
+            "The reporting person has elected to defer compensation in the form of deferred stock units under the First Community Corporation Amended and Restated Non-Employee Director Deferred Compensation Plan (the \"Plan\"). Pursuant to the terms of the Plan, the reporting person was credited with 271 deferred stock units, based on the amount of compensation deferred by the reporting person under the Plan during the second quarter of 2026 divided by the First Community Corporation common stock consolidated closing bid price of $32.67 on June 30, 2026.",
+            "The reporting person has elected to defer compensation in the form of deferred stock units under the First Community Corporation Amended and Restated Non-Employee Director Deferred Compensation Plan (the \"Plan\"). Pursuant to the terms of the Plan, the reporting person was credited with 271 deferred stock units, based on the amount of compensation deferred by the reporting person under the Plan during the second quarter of 2026 divided by the First Community Corporation common stock consolidated closing bid price of $32.67 on June 30, 2026.",
+            "Includes 48,391 deferred stock units under the First Community Corporation Amended and Restated Non-Employee Director Deferred Compensation Plan (the \"Plan\"), including 260 deferred stock units credited pursuant to the terms of the Plan as dividend equivalents during the second quarter of 2026. Deferred stock units under the Plan receive dividend equivalents in the form of additional deferred stock units, and shares of First Community Corporation common stock will be issued on a one-for-one basis in respect of deferred stock units upon a distribution from the Plan."
+          ],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/932781/000093278126000041/xslF345X06/primary_doc.xml",
+          "raw_path": "0000932781-26-000041.xml",
+          "sha256": "1bebd30889306a97832a38a30a5439feb77bfb4fd2301098d490e48fc31970cf",
           "assertion_class": "VERIFIED PUBLIC FACT",
           "value_class": "CALCULATED FROM VERIFIED FACT"
         }
@@ -9288,17 +9318,17 @@
       }
     },
     {
-      "id": "person-1252850-issuer-932781",
-      "person_cik": "0001252850",
+      "id": "person-1436678-issuer-932781",
+      "person_cik": "0001436678",
       "issuer_cik": "0000932781",
-      "person_name": "BROWN THOMAS CARLTON",
+      "person_name": "Sosebee Jane S",
       "role": "Director",
       "company": "FIRST COMMUNITY CORP /SC/",
       "location": {
         "city": "LEXINGTON",
         "state": "SC",
         "kind": "Reporting-person mailing city; residence UNKNOWN",
-        "source_url": "https://www.sec.gov/Archives/edgar/data/932781/000093278126000050/xslF345X06/primary_doc.xml",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/932781/000093278126000046/xslF345X06/primary_doc.xml",
         "assertion_class": "VERIFIED PUBLIC FACT",
         "distance_miles": 108.01,
         "geo_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
@@ -9308,54 +9338,24 @@
       },
       "events": [
         {
-          "id": "0000932781-26-000050:0",
-          "accession": "0000932781-26-000050",
+          "id": "0000932781-26-000046:0",
+          "accession": "0000932781-26-000046",
           "row": 0,
-          "date": "2026-09-30",
-          "filed_date": "2026-10-01",
-          "code": "A",
+          "date": "2026-08-25",
+          "filed_date": "2026-08-26",
+          "code": "P",
           "direction": "A",
-          "classification": "AWARD",
-          "shares": 134.0,
-          "price": 32.09,
-          "value": 4300.06,
-          "remaining_shares": 41830.0,
+          "classification": "OTHER_CONTEXT",
+          "shares": 1250.0,
+          "price": 33.945,
+          "value": 42431.25,
+          "remaining_shares": 10855.0,
           "planned": false,
-          "fact": "Form 4 reports 134 shares, code A, on 2026-09-30. Reported price $32.09 per share.",
-          "footnotes": [
-            "The reporting person has elected to defer compensation in the form of deferred stock units under the First Community Corporation Amended and Restated Non-Employee Director Deferred Compensation Plan (the \"Plan\"). Pursuant to the terms of the Plan, the reporting person was credited with 134 deferred stock units, based on the amount of compensation deferred by the reporting person under the Plan during the third quarter of 2026 divided by the First Community Corporation common stock consolidated closing bid price of $32.09 on September 30, 2026.",
-            "The reporting person has elected to defer compensation in the form of deferred stock units under the First Community Corporation Amended and Restated Non-Employee Director Deferred Compensation Plan (the \"Plan\"). Pursuant to the terms of the Plan, the reporting person was credited with 134 deferred stock units, based on the amount of compensation deferred by the reporting person under the Plan during the third quarter of 2026 divided by the First Community Corporation common stock consolidated closing bid price of $32.09 on September 30, 2026.",
-            "Includes 10,235 deferred stock units under the First Community Corporation Amended and Restated Non-Employee Director Deferred Compensation Plan (the \"Plan\"), including 49 deferred stock units credited pursuant to the terms of the Plan as dividend equivalents during the third quarter of 2026. Deferred stock units under the Plan receive dividend equivalents in the form of additional deferred stock units, and shares of First Community Corporation common stock will be issued on a one-for-one basis in respect of deferred stock units upon a distribution from the Plan."
-          ],
-          "source_url": "https://www.sec.gov/Archives/edgar/data/932781/000093278126000050/xslF345X06/primary_doc.xml",
-          "raw_path": "0000932781-26-000050.xml",
-          "sha256": "ab54383b924ade7544f25a2157ef47a02d5d1e0a3201ec8337ba56d2b5d52b58",
-          "assertion_class": "VERIFIED PUBLIC FACT",
-          "value_class": "CALCULATED FROM VERIFIED FACT"
-        },
-        {
-          "id": "0000932781-26-000039:0",
-          "accession": "0000932781-26-000039",
-          "row": 0,
-          "date": "2026-06-30",
-          "filed_date": "2026-07-02",
-          "code": "A",
-          "direction": "A",
-          "classification": "AWARD",
-          "shares": 172.0,
-          "price": 32.67,
-          "value": 5619.24,
-          "remaining_shares": 41647.0,
-          "planned": false,
-          "fact": "Form 4 reports 172 shares, code A, on 2026-06-30. Reported price $32.67 per share.",
-          "footnotes": [
-            "The reporting person has elected to defer compensation in the form of deferred stock units under the First Community Corporation Amended and Restated Non-Employee Director Deferred Compensation Plan (the \"Plan\"). Pursuant to the terms of the Plan, the reporting person was credited with 172 deferred stock units, based on the amount of compensation deferred by the reporting person under the Plan during the second quarter of 2026 divided by the First Community Corporation common stock consolidated closing bid price of $32.67 on June 30, 2026.",
-            "The reporting person has elected to defer compensation in the form of deferred stock units under the First Community Corporation Amended and Restated Non-Employee Director Deferred Compensation Plan (the \"Plan\"). Pursuant to the terms of the Plan, the reporting person was credited with 172 deferred stock units, based on the amount of compensation deferred by the reporting person under the Plan during the second quarter of 2026 divided by the First Community Corporation common stock consolidated closing bid price of $32.67 on June 30, 2026.",
-            "Includes 10,052 deferred stock units under the First Community Corporation Amended and Restated Non-Employee Director Deferred Compensation Plan (the \"Plan\"), including 53 deferred stock units credited pursuant to the terms of the Plan as dividend equivalents during the second quarter of 2026. Deferred stock units under the Plan receive dividend equivalents in the form of additional deferred stock units, and shares of First Community Corporation common stock will be issued on a one-for-one basis in respect of deferred stock units upon a distribution from the Plan."
-          ],
-          "source_url": "https://www.sec.gov/Archives/edgar/data/932781/000093278126000039/xslF345X06/primary_doc.xml",
-          "raw_path": "0000932781-26-000039.xml",
-          "sha256": "b2f8678147b5952dad2ec43ee8366c02d611ad99ff4ca9e6b64b94ada55ddebe",
+          "fact": "Form 4 reports 1,250 shares, code P, on 2026-08-25. Reported price $33.945 per share.",
+          "footnotes": [],
+          "source_url": "https://www.sec.gov/Archives/edgar/data/932781/000093278126000046/xslF345X06/primary_doc.xml",
+          "raw_path": "0000932781-26-000046.xml",
+          "sha256": "b677e470c45112185f1416e581a514bd07606de3a22614168d9a9455acf9e3f9",
           "assertion_class": "VERIFIED PUBLIC FACT",
           "value_class": "CALCULATED FROM VERIFIED FACT"
         }
@@ -9933,8 +9933,8 @@
     }
   ],
   "feed_health": {
-    "last_attempt_at": "2026-10-09T12:32:04.325480+00:00",
-    "last_success_at": "2026-10-09T12:32:11.131545+00:00",
+    "last_attempt_at": "2026-10-09T18:29:30.878479+00:00",
+    "last_success_at": "2026-10-09T18:29:37.442592+00:00",
     "status": "OK",
     "freshness_target_hours": 48,
     "automatic_scope": "Form 4 and Form 144 discovery for configured issuers only",
