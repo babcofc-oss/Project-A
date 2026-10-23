@@ -9933,9 +9933,9 @@
     }
   ],
   "feed_health": {
-    "last_attempt_at": "2026-10-23T17:02:55.722062+00:00",
+    "last_attempt_at": "2026-10-23T21:21:45.708017+00:00",
     "last_success_at": "2026-10-23T17:03:02.579790+00:00",
-    "status": "OK",
+    "status": "FAILED",
     "freshness_target_hours": 48,
     "automatic_scope": "Form 4 and Form 144 discovery for configured issuers only",
     "issuer_ciks": [
@@ -9955,7 +9955,9 @@
       "Lottery awards",
       "Ownership changes"
     ],
-    "errors": [],
+    "errors": [
+      "Form 144 fetch incomplete; retaining last good catalog"
+    ],
     "held_form144": 4,
     "amendments_pending": 7,
     "leadership_pending": 5
