@@ -1,5 +1,23 @@
 # Project A: buyer-value operating plan
 
+## MOCEAN acquisition objective and execution gates — October 30, 2026
+
+Briton's stated objective is a $5 million product/company sale. This is a target, not an established valuation, buyer offer or forecast. Build toward evidence a buyer can inspect rather than treating additional screens or public filing counts as proof of enterprise value.
+
+| Gate | Current evidence | Next measurable proof |
+| --- | --- | --- |
+| Reliable delivery | The repaired 13-issuer workflow passed ingest, release tests and production publication; retained primary evidence and last-good rollback remain enabled. | Record refresh reliability and recovery over repeated runs. |
+| Useful covered market | Philadelphia ZIP 19103 / 50 miles returns 11 planning-trigger records; 114 records overall. | Three independent advisors each evaluate at least five relevant dossiers and identify the source-backed decisions that help their process. |
+| Professional routing | 41 PA records gain six official issuer-scoped source groups. 111 records have published business routes; direct person email/phone remains UNKNOWN except separately validated named evidence. | Confirm that published routes and current affiliations are useful to pilot firms; document gaps without guessing contacts. |
+| Repeat workflow | Browser evidence-review baseline compares exact person/event identities and facts, including newly observed old filings, changes and removals. | Advisors return and use successive evidence updates; browser state is not proof of unique users or retention. |
+| Commercial entry | A public MOCEAN pilot page explains real coverage and prepares a reviewable paid-pilot email inquiry. | Agree and collect an actual paid pilot, then document renewal and delivery cost. Drafts and stated interest are not sales. |
+| Embeddability | Source-linked CSV/JSON exports and stable entity/event identifiers exist. | One firm uses the handoff in an actual workflow and measures research-time improvement. |
+| Transferable business | Repository, source ledgers and release tests are retained. | Document code/source rights, operating access, security resolution, customer agreements and commercially usable data rights before buyer diligence. |
+
+Unproved today: verified paying customers, recurring revenue, retention, unique-user activity, customer acquisition cost, repeatable firm distribution, buyer interest and a defensible $5 million valuation. Authenticated accounts, centralized outcome collection and billing are not implemented. The next commercial milestone is a paying, returning firm; the next infrastructure milestone is a secure centralized pilot record when a real pilot requires it.
+
+The public pilot page intentionally does not quote an invented subscription price or create a payment obligation. Pricing and scope are agreed directly. Do not contact firms, change account permissions, accept contracts or create paid services without the applicable authorization.
+
 Updated October 8, 2026. Objective: build a repeatably valuable prospect-research capability that a fintech, broker-dealer or bank could embed, partner with, or acquire. No buyer interest, valuation or acquisition probability is established.
 
 ## Positioning

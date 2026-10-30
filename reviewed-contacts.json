@@ -440,6 +440,188 @@
           "purpose": "Official professional biography for identity / role research. A profile does not publish a named email or phone; reachability and consent UNKNOWN."
         }
       ]
+    },
+    {
+      "issuer_cik": "0001140859",
+      "company": "Cencora, Inc.",
+      "organization": "Cencora, Inc.",
+      "scope": "COMPANY_CHANNEL",
+      "person_ids": [],
+      "reviewed_at": "2026-10-30",
+      "company_anchor": "Cencora corporate headquarters",
+      "source_url": "https://www.cencora.com/contact-us",
+      "raw_path": "contact-source-pa-cencora.txt",
+      "sha256": "68f6fbde72ae40771524f6c9456e0d177e5043d511ae2b264793717e6b5b6d92",
+      "routes": [
+        {
+          "kind": "WEBSITE",
+          "label": "Official investor-relations / corporate research page",
+          "value": "https://www.cencora.com/contact-us",
+          "target": "https://www.cencora.com/contact-us",
+          "anchor": "Cencora corporate headquarters",
+          "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose."
+        }
+      ]
+    },
+    {
+      "issuer_cik": "0000890926",
+      "company": "RADIAN GROUP INC",
+      "organization": "RADIAN GROUP INC",
+      "scope": "COMPANY_CHANNEL",
+      "person_ids": [],
+      "reviewed_at": "2026-10-30",
+      "company_anchor": "Investor Relations",
+      "source_url": "https://www.radian.com/for-investors",
+      "raw_path": "contact-source-pa-radian.txt",
+      "sha256": "48f25f82e5e8805595f223711d0fd027dcc641a0ced0f8e545a3b69b6b2de927",
+      "routes": [
+        {
+          "kind": "WEBSITE",
+          "label": "Official investor-relations / corporate research page",
+          "value": "https://www.radian.com/for-investors",
+          "target": "https://www.radian.com/for-investors",
+          "anchor": "Investor Relations",
+          "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose."
+        },
+        {
+          "kind": "EMAIL",
+          "label": "Investor-relations team email",
+          "value": "Daniel.Kobell@radian.com",
+          "target": "Daniel.Kobell@radian.com",
+          "anchor": "Daniel.Kobell@radian.com",
+          "purpose": "Investor-relations inquiries; this is a company channel, not the selected person\u2019s email."
+        }
+      ]
+    },
+    {
+      "issuer_cik": "0000037785",
+      "company": "FMC CORP",
+      "organization": "FMC CORP",
+      "scope": "COMPANY_CHANNEL",
+      "person_ids": [],
+      "reviewed_at": "2026-10-30",
+      "company_anchor": "FMC Corporate Headquarters",
+      "source_url": "https://www.fmc.com/en/contact",
+      "raw_path": "contact-source-pa-fmc.txt",
+      "sha256": "7822652284a25c77742f89e36080a8364949add28f84e851a8a0920601aabc0f",
+      "routes": [
+        {
+          "kind": "WEBSITE",
+          "label": "Official investor-relations / corporate research page",
+          "value": "https://www.fmc.com/en/contact",
+          "target": "https://www.fmc.com/en/contact",
+          "anchor": "FMC Corporate Headquarters",
+          "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose."
+        },
+        {
+          "kind": "PHONE",
+          "label": "Corporate headquarters phone",
+          "value": "+1 215 299 6000",
+          "target": "+12152996000",
+          "anchor": "+1 215 299-6000",
+          "purpose": "Corporate headquarters; routing to the selected person is UNKNOWN."
+        },
+        {
+          "kind": "EMAIL",
+          "label": "Investor-relations contact email",
+          "value": "curt.brooks@fmc.com",
+          "target": "curt.brooks@fmc.com",
+          "anchor": "curt.brooks@fmc.com",
+          "purpose": "Published for investor-relations inquiries to Curt Brooks; not the selected person\u2019s email."
+        }
+      ]
+    },
+    {
+      "issuer_cik": "0001166691",
+      "company": "COMCAST CORP",
+      "organization": "COMCAST CORP",
+      "scope": "COMPANY_CHANNEL",
+      "person_ids": [],
+      "reviewed_at": "2026-10-30",
+      "company_anchor": "Contact Investor Relations",
+      "source_url": "https://www.cmcsa.com/contact-ir",
+      "raw_path": "contact-source-pa-comcast.txt",
+      "sha256": "bd6a42607541a1d23672bf43155ce0899ab4a3f93e8e4502113f79be7ac26e62",
+      "routes": [
+        {
+          "kind": "WEBSITE",
+          "label": "Official investor-relations / corporate research page",
+          "value": "https://www.cmcsa.com/contact-ir",
+          "target": "https://www.cmcsa.com/contact-ir",
+          "anchor": "Contact Investor Relations",
+          "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose."
+        }
+      ]
+    },
+    {
+      "issuer_cik": "0000794170",
+      "company": "Toll Brothers, Inc.",
+      "organization": "Toll Brothers, Inc.",
+      "scope": "COMPANY_CHANNEL",
+      "person_ids": [],
+      "reviewed_at": "2026-10-30",
+      "company_anchor": "Investor & Financial Requests:",
+      "source_url": "https://investors.tollbrothers.com/",
+      "raw_path": "contact-source-pa-toll.txt",
+      "sha256": "5108c808a6d9a5657df713801451fe8036b5fe062bf66b82c614063fa61549e0",
+      "routes": [
+        {
+          "kind": "WEBSITE",
+          "label": "Official investor-relations / corporate research page",
+          "value": "https://investors.tollbrothers.com/",
+          "target": "https://investors.tollbrothers.com/",
+          "anchor": "Investor & Financial Requests:",
+          "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose."
+        },
+        {
+          "kind": "PHONE",
+          "label": "Investor-relations contact phone",
+          "value": "+1 215-938-8365",
+          "target": "+12159388365",
+          "anchor": "215-938-8365",
+          "purpose": "Published for investor and financial requests to Gregg Ziegler; not a direct line to the selected person."
+        }
+      ]
+    },
+    {
+      "issuer_cik": "0000059558",
+      "company": "LINCOLN NATIONAL CORP",
+      "organization": "LINCOLN NATIONAL CORP",
+      "scope": "COMPANY_CHANNEL",
+      "person_ids": [],
+      "reviewed_at": "2026-10-30",
+      "company_anchor": "Lincoln Financial",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/59558/000005955826000058/statsuppdocument2q26.htm",
+      "raw_path": "contact-source-pa-lincoln.txt",
+      "sha256": "26d62c78f58e727139a1ad2313e5dd7f54f3de9455a1538968c90d917f32e712",
+      "routes": [
+        {
+          "kind": "WEBSITE",
+          "label": "Official issuer investor-relations disclosure (SEC; retained text extraction)",
+          "value": "https://www.sec.gov/Archives/edgar/data/59558/000005955826000058/statsuppdocument2q26.htm",
+          "target": "https://www.sec.gov/Archives/edgar/data/59558/000005955826000058/statsuppdocument2q26.htm",
+          "anchor": "Lincoln Financial",
+          "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose."
+        },
+        {
+          "kind": "EMAIL",
+          "label": "Investor-relations team email",
+          "value": "InvestorRelations@lfg.com",
+          "target": "InvestorRelations@lfg.com",
+          "anchor": "InvestorRelations@lfg.com",
+          "purpose": "Published for investor-relations inquiries; not the selected person\u2019s email."
+        },
+        {
+          "kind": "PHONE",
+          "label": "Investor-relations phone",
+          "value": "+1 800-237-2920",
+          "target": "+18002372920",
+          "anchor": "800-237-2920",
+          "purpose": "Published for investor-relations inquiries; not a direct line to the selected person."
+        }
+      ],
+      "source_representation": "Plain-text extraction of the SEC-hosted issuer disclosure",
+      "upstream_sha256": "be17496257704e699a33e8297ace9dae7c30b4ca72ae63663a0ba38103f6a88e"
     }
   ]
 }

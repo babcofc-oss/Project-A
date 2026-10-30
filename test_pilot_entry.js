@@ -1,0 +1,5 @@
+const assert=require('node:assert/strict'),P=require('./pilot-entry');
+const input={name:'QA Example',firm:'QA Firm',email:'qa@example.com',market:'Philadelphia, 50 miles',useCase:'Equity-sale planning research',goal:'Evaluate five sourced dossiers'};
+const d=P.compose(input),url=new URL(d.mailto);assert.equal(url.protocol,'mailto:');assert.equal(url.pathname,'britonabarrett@gmail.com');assert.equal(url.searchParams.get('body'),d.body);assert.match(d.body,/does not create a subscription or payment obligation/);assert.match(d.body,/Evaluate five sourced dossiers/);
+assert.throws(()=>P.compose({...input,email:'qa@example.com\r\nBcc: attacker@example.com'}));assert.throws(()=>P.compose({...input,useCase:'Invented service'}));assert.throws(()=>P.compose({...input,market:''}));assert.throws(()=>P.compose({...input,goal:'x'.repeat(1001)}));assert.match(P.compose({...input,firm:'A&B / <Firm>'}).body,/A&B \/ <Firm>/);
+console.log('Pilot inquiry prepares a reviewable email draft with fixed recipient, bounded fields and no subscription/payment claim.');

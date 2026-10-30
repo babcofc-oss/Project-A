@@ -8,6 +8,7 @@ try{reviewerId=localStorage.getItem('project-a-reviewer-v1');if(!/^[a-zA-Z0-9_-]
 try{const rawFeedback=JSON.parse(localStorage.getItem('project-a-pilot-feedback-v1')||'[]');if(Array.isArray(rawFeedback))feedback=rawFeedback.filter(x=>x&&typeof x.person_id==='string'&&['Useful','Needs evidence','Not useful'].includes(x.rating)&&typeof x.note==='string').slice(-1000);}catch{}
 let territoryData=null,territoryIndex=null,territoryOrigin=null,zipRequest=0,zipController=null;
 let catalog=null, people=[], selected=null, watchOnly=false, saved=new Set(), storageOK=true;
+let reviewBaseline,reviewBaselineMessage='';
 try{const raw=JSON.parse(localStorage.getItem('project-a-watchlist-v1')||'[]');if(Array.isArray(raw))saved=new Set(raw.filter(x=>typeof x==='string'));}catch{storageOK=false;}
 function eventMatches(e,type){return type==='all'||(type==='Planning'?ProjectTriggers.actionable(e):type==='Transition'?e.classification==='EXECUTIVE_TRANSITION':type==='Liquidity'?e.classification==='LIQUIDITY':(e.code===type||e.trigger_type===type||e.classification===type));}
 const ProjectAdvisor={guide(person){
@@ -283,7 +284,7 @@ async function load(){
     $('systemStatus').textContent=`Validated public snapshot · ${people.length} people`;
     $('coverage').textContent=`${catalog.validated_filings} Form 4 + ${(catalog.transition_filings||0)+(catalog.leadership?.validated_filings||0)} reviewed 8-K + ${catalog.form144?.validated||0} Form 144 filings · filings since ${catalog.coverage_start} · ${people.filter(p=>p.computed.sales).length} people with sale signals · ${catalog.issuer_count||3} stock-filing issuers + ${catalog.business_exits?.validated_people||0} business founders + ${catalog.leadership?.validated_people||0} reviewed leaders`;
     renderHealth();
-    $('feedDate').textContent=`Validated ${new Date(catalog.validated_at).toLocaleString()}. Reviewed snapshot; not a live stream. ${catalog.errors.length+(catalog.transition_errors||[]).length+(catalog.form144?.errors||[]).length+(catalog.reviewed_triggers?.errors||[]).length+(catalog.business_exits?.errors||[]).length} filing(s) withheld after ingestion errors.${catalog.leadership?.reviewed_at?' Leadership evidence separately reviewed '+catalog.leadership.reviewed_at+'; this does not refresh the original stock-sale snapshot.':''}`;
+    $('feedDate').textContent=`Validated ${new Date(catalog.validated_at).toLocaleString()}. Reviewed snapshot; not a live stream. ${catalog.errors.length+(catalog.transition_errors||[]).length+(catalog.form144?.errors||[]).length+(catalog.reviewed_triggers?.errors||[]).length+(catalog.business_exits?.errors||[]).length} filing(s) held after fetch or validation checks.${catalog.leadership?.reviewed_at?' Leadership evidence separately reviewed '+catalog.leadership.reviewed_at+'; this does not refresh the original stock-sale snapshot.':''}`;
     try{feedback=ProjectPilot.validate({product:'Project A',feedback},people);}catch{feedback=[];$('pilotStatus').textContent='Saved reviews could not be validated against this catalog. Original browser storage is unchanged; import a valid export to recover reviews.';}
     const linkedId=new URLSearchParams(location.search).get('person');
     if(linkedId){const linked=people.find(p=>p.id===linkedId);if(linked){selected=linked;$('territory').value='all';$('eventType').value='all';}else{$('error').hidden=false;$('error').textContent='The linked prospect is unavailable in this evidence snapshot. Showing the current territory instead.';}}
@@ -364,8 +365,32 @@ function renderHealth(){
   $('healthBadge').textContent=state.status+' · SEC DISCOVERY';
   $('healthSummary').textContent=`Last successful SEC discovery: ${h.last_success_at||catalog.validated_at}. Latest attempt: ${h.last_attempt_at||'not monitored'}. Target: check every 6 hours; stale after 48 hours. ${h.errors?.length?'Latest refresh failed; last good records retained. '+h.errors.join(' '):''}`;
   const rows=[['Form 4 / Form 144',`${state.status} · ${catalog.issuer_count} configured stock-filing issuers · ${catalog.form144?.errors?.length||0} proposals held for identity review · ${catalog.amendment_review?.length||0} amendments awaiting reconciliation`],['Executive / board disclosures',`MANUAL REVIEW · ${catalog.transition_filings+(catalog.leadership?.validated_filings||0)} retained filings; ${catalog.leadership_review_queue?.length||0} new filings queued for named-person review. Latest leadership review ${catalog.leadership?.reviewed_at||'UNKNOWN'}`],['Private-company acquisitions','MANUAL REVIEW · '+(catalog.business_exits?.validated_people||0)+' named founders; no continuous acquisition feed'],['Professional contacts','MANUAL REVIEW · published routes expire after 90 days; current reachability UNKNOWN'],['Other trigger categories','NOT CONNECTED · IPO / lockup, property, inheritance, lottery and ownership changes'],['Hot combinations',people.filter(p=>p.priority.hot).length+' across current coverage · exact person + issuer, recent sale and distinct leadership event required']];
+  renderUpdates();
   $('feedHealthRows').innerHTML=rows.map(([k,v])=>`<div class="row"><span>${esc(k)}</span><b>${esc(v)}</b></div>`).join('');
 }
+function renderUpdates(){
+  if(!catalog)return;
+  if(reviewBaseline===undefined){
+    try{const raw=localStorage.getItem('mocean-evidence-review-v1');reviewBaseline=raw?MoceanUpdates.validate(JSON.parse(raw)):null;}
+    catch{reviewBaseline=null;reviewBaselineMessage='Stored baseline is unavailable. Start a new baseline to track future evidence changes.';}
+  }
+  const fresh=ProjectPriority.health(catalog).current;
+  $('markEvidenceReviewed').disabled=!fresh;
+  $('markEvidenceReviewed').textContent=reviewBaseline?'Mark whole snapshot reviewed':'Start tracking this snapshot';
+  if(!fresh){$('updatesBadge').textContent='REFRESH REQUIRED';$('updatesSummary').textContent='The source refresh is not current. Check the data-health panel before reviewing evidence changes.';$('updatesList').replaceChildren();return;}
+  const d=MoceanUpdates.diff(catalog,reviewBaseline);
+  $('updatesBadge').textContent=d.baseline?`${d.new_events} NEW · ${d.changed_events} CHANGED`:'NO BASELINE YET';
+  $('updatesSummary').textContent=(d.baseline?`Compared with your review baseline from ${new Date(d.reviewed_at).toLocaleString()}: ${d.new_events} newly observed event rows, ${d.changed_events} changed rows and ${d.removed_events} rows no longer present. Changes cover the full catalog; removals require source review.`:'Set a baseline after reviewing this snapshot. Your next visit can identify exact event rows added or changed since then.')+(reviewBaselineMessage?' '+reviewBaselineMessage:'');
+  const items=d.people.filter(x=>!$('updatesWatchOnly').checked||saved.has(x.person_id));
+  $('updatesList').innerHTML=items.slice(0,8).map(x=>{const p=people.find(p=>p.id===x.person_id);return `<article class="research-milestone"><a class="source" href="?person=${encodeURIComponent(p.id)}">${esc(displayName(p))} · ${esc(p.company)} ↗</a><p class="note">${x.events.length} new or changed row(s) · disclosed event date(s): ${esc([...new Set(x.events.map(e=>e.date))].join(', '))}. Open the record to inspect sources and classifications.</p></article>`;}).join('')+(items.length>8?`<p class="note">Showing 8 of ${items.length} changed records.</p>`:'')+(d.baseline&&!items.length?'<p class="note">No new or changed event rows in this view. This does not establish that no real-world events occurred.</p>':'');
+}
+$('updatesWatchOnly').onchange=renderUpdates;
+$('markEvidenceReviewed').onclick=()=>{
+  if(!catalog||!ProjectPriority.health(catalog).current)return;
+  reviewBaseline=MoceanUpdates.snapshot(catalog);reviewBaselineMessage='Review baseline saved on this browser.';
+  try{localStorage.setItem('mocean-evidence-review-v1',JSON.stringify(reviewBaseline));}catch{reviewBaselineMessage='Browser storage is unavailable. This review baseline works for this session only.';}
+  renderUpdates();
+};
 function renderPriority(p){
   const r=p.priority;
   $('priorityBadge').textContent=r.label;

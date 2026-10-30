@@ -16,6 +16,7 @@ NAMED_AUTHORITIES={
  'person-1436880-issuer-1653477':'https://www.ingevity.com/about/leadership/dave-li/',
  'person-2017486-issuer-1653477':'https://www.ingevity.com/about/leadership/ryan-fisher/'
 }
+AUTHORITIES.update({'0001140859':{'www.cencora.com'},'0000890926':{'www.radian.com'},'0000037785':{'www.fmc.com'},'0001166691':{'www.cmcsa.com'},'0000794170':{'investors.tollbrothers.com'},'0000059558':{'www.sec.gov'}})
 def published_email(body,anchor):
  # Decode only an explicitly published email link, never infer a naming pattern.
  raw=body.decode('utf8')
@@ -35,7 +36,8 @@ def validate(g,root=ROOT,today=None):
  named=g['scope'] in ('NAMED_PROFESSIONAL','PROFESSIONAL_PROFILE')
  if named:
   if len(g.get('person_ids',[]))!=1 or NAMED_AUTHORITIES.get(g['person_ids'][0])!=g['source_url']:raise ValueError('Unapproved person / primary profile binding')
- elif url.scheme!='https' or url.username or url.hostname not in AUTHORITIES.get(key,set()):raise ValueError('Wrong contact authority')
+ elif url.scheme!='https' or url.username or url.password or url.hostname not in AUTHORITIES.get(key,set()):raise ValueError('Wrong contact authority')
+ if url.hostname=='www.sec.gov' and not url.path.startswith(f'/Archives/edgar/data/{int(g["issuer_cik"])}/'):raise ValueError('SEC contact disclosure issuer mismatch')
  path=(root/g['raw_path']).resolve()
  if path.parent!=root.resolve() or not path.name.startswith('contact-source-') or path.suffix!='.txt':raise ValueError('Unsafe evidence path')
  body=path.read_bytes()
@@ -71,6 +73,6 @@ def merge(records,root=ROOT,today=None):
   except Exception as e:errors.append({'company':g.get('company'),'error':str(e)})
  return {'version':'professional-contacts-v2','people_with_company_routes':sum(bool(p['contacts']['routes']) for p in records),'distinct_published_routes':routes,'people_with_named_contacts':sum(any(r['scope']=='NAMED_PROFESSIONAL' and r['kind'] in ('EMAIL','PHONE') for r in p['contacts']['routes']) for p in records),'people_with_named_profiles':sum(any(r['scope'] in ('NAMED_PROFESSIONAL','PROFESSIONAL_PROFILE') and r['kind']=='WEBSITE' for r in p['contacts']['routes']) for p in records),'direct_contacts':0,'refresh_window_days':90,'errors':errors}
 if __name__=='__main__':
- c=json.loads((ROOT/'catalog.json').read_text());c['contact_enrichment']=merge(c['records']);c['version']='project-a-15'
+ c=json.loads((ROOT/'catalog.json').read_text());c['contact_enrichment']=merge(c['records'])
  if c['contact_enrichment']['errors']:raise RuntimeError(c['contact_enrichment']['errors'])
  (ROOT/'catalog.json').write_text(json.dumps(c,indent=2));print(json.dumps(c['contact_enrichment']))

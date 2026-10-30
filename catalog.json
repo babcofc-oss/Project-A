@@ -79,8 +79,8 @@
   },
   "contact_enrichment": {
     "version": "professional-contacts-v2",
-    "people_with_company_routes": 70,
-    "distinct_published_routes": 25,
+    "people_with_company_routes": 111,
+    "distinct_published_routes": 37,
     "people_with_named_contacts": 1,
     "people_with_named_profiles": 5,
     "direct_contacts": 0,
@@ -302,7 +302,44 @@
         "direct_email": "UNKNOWN",
         "direct_phone": "UNKNOWN",
         "consent": "UNKNOWN",
-        "routes": []
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official investor-relations / corporate research page",
+            "value": "https://investors.tollbrothers.com/",
+            "target": "https://investors.tollbrothers.com/",
+            "anchor": "Investor & Financial Requests:",
+            "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Toll Brothers, Inc.",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://investors.tollbrothers.com/",
+            "raw_path": "contact-source-pa-toll.txt",
+            "sha256": "5108c808a6d9a5657df713801451fe8036b5fe062bf66b82c614063fa61549e0"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Investor-relations contact phone",
+            "value": "+1 215-938-8365",
+            "target": "+12159388365",
+            "anchor": "215-938-8365",
+            "purpose": "Published for investor and financial requests to Gregg Ziegler; not a direct line to the selected person.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Toll Brothers, Inc.",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://investors.tollbrothers.com/",
+            "raw_path": "contact-source-pa-toll.txt",
+            "sha256": "5108c808a6d9a5657df713801451fe8036b5fe062bf66b82c614063fa61549e0"
+          }
+        ]
       }
     },
     {
@@ -848,7 +885,26 @@
         "direct_email": "UNKNOWN",
         "direct_phone": "UNKNOWN",
         "consent": "UNKNOWN",
-        "routes": []
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official investor-relations / corporate research page",
+            "value": "https://www.cencora.com/contact-us",
+            "target": "https://www.cencora.com/contact-us",
+            "anchor": "Cencora corporate headquarters",
+            "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Cencora, Inc.",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.cencora.com/contact-us",
+            "raw_path": "contact-source-pa-cencora.txt",
+            "sha256": "68f6fbde72ae40771524f6c9456e0d177e5043d511ae2b264793717e6b5b6d92"
+          }
+        ]
       }
     },
     {
@@ -1227,7 +1283,62 @@
         "direct_email": "UNKNOWN",
         "direct_phone": "UNKNOWN",
         "consent": "UNKNOWN",
-        "routes": []
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official issuer investor-relations disclosure (SEC; retained text extraction)",
+            "value": "https://www.sec.gov/Archives/edgar/data/59558/000005955826000058/statsuppdocument2q26.htm",
+            "target": "https://www.sec.gov/Archives/edgar/data/59558/000005955826000058/statsuppdocument2q26.htm",
+            "anchor": "Lincoln Financial",
+            "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "LINCOLN NATIONAL CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59558/000005955826000058/statsuppdocument2q26.htm",
+            "raw_path": "contact-source-pa-lincoln.txt",
+            "sha256": "26d62c78f58e727139a1ad2313e5dd7f54f3de9455a1538968c90d917f32e712"
+          },
+          {
+            "kind": "EMAIL",
+            "label": "Investor-relations team email",
+            "value": "InvestorRelations@lfg.com",
+            "target": "InvestorRelations@lfg.com",
+            "anchor": "InvestorRelations@lfg.com",
+            "purpose": "Published for investor-relations inquiries; not the selected person\u2019s email.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "LINCOLN NATIONAL CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59558/000005955826000058/statsuppdocument2q26.htm",
+            "raw_path": "contact-source-pa-lincoln.txt",
+            "sha256": "26d62c78f58e727139a1ad2313e5dd7f54f3de9455a1538968c90d917f32e712"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Investor-relations phone",
+            "value": "+1 800-237-2920",
+            "target": "+18002372920",
+            "anchor": "800-237-2920",
+            "purpose": "Published for investor-relations inquiries; not a direct line to the selected person.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "LINCOLN NATIONAL CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59558/000005955826000058/statsuppdocument2q26.htm",
+            "raw_path": "contact-source-pa-lincoln.txt",
+            "sha256": "26d62c78f58e727139a1ad2313e5dd7f54f3de9455a1538968c90d917f32e712"
+          }
+        ]
       }
     },
     {
@@ -1638,7 +1749,44 @@
         "direct_email": "UNKNOWN",
         "direct_phone": "UNKNOWN",
         "consent": "UNKNOWN",
-        "routes": []
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official investor-relations / corporate research page",
+            "value": "https://investors.tollbrothers.com/",
+            "target": "https://investors.tollbrothers.com/",
+            "anchor": "Investor & Financial Requests:",
+            "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Toll Brothers, Inc.",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://investors.tollbrothers.com/",
+            "raw_path": "contact-source-pa-toll.txt",
+            "sha256": "5108c808a6d9a5657df713801451fe8036b5fe062bf66b82c614063fa61549e0"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Investor-relations contact phone",
+            "value": "+1 215-938-8365",
+            "target": "+12159388365",
+            "anchor": "215-938-8365",
+            "purpose": "Published for investor and financial requests to Gregg Ziegler; not a direct line to the selected person.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Toll Brothers, Inc.",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://investors.tollbrothers.com/",
+            "raw_path": "contact-source-pa-toll.txt",
+            "sha256": "5108c808a6d9a5657df713801451fe8036b5fe062bf66b82c614063fa61549e0"
+          }
+        ]
       }
     },
     {
@@ -1693,7 +1841,62 @@
         "direct_email": "UNKNOWN",
         "direct_phone": "UNKNOWN",
         "consent": "UNKNOWN",
-        "routes": []
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official issuer investor-relations disclosure (SEC; retained text extraction)",
+            "value": "https://www.sec.gov/Archives/edgar/data/59558/000005955826000058/statsuppdocument2q26.htm",
+            "target": "https://www.sec.gov/Archives/edgar/data/59558/000005955826000058/statsuppdocument2q26.htm",
+            "anchor": "Lincoln Financial",
+            "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "LINCOLN NATIONAL CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59558/000005955826000058/statsuppdocument2q26.htm",
+            "raw_path": "contact-source-pa-lincoln.txt",
+            "sha256": "26d62c78f58e727139a1ad2313e5dd7f54f3de9455a1538968c90d917f32e712"
+          },
+          {
+            "kind": "EMAIL",
+            "label": "Investor-relations team email",
+            "value": "InvestorRelations@lfg.com",
+            "target": "InvestorRelations@lfg.com",
+            "anchor": "InvestorRelations@lfg.com",
+            "purpose": "Published for investor-relations inquiries; not the selected person\u2019s email.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "LINCOLN NATIONAL CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59558/000005955826000058/statsuppdocument2q26.htm",
+            "raw_path": "contact-source-pa-lincoln.txt",
+            "sha256": "26d62c78f58e727139a1ad2313e5dd7f54f3de9455a1538968c90d917f32e712"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Investor-relations phone",
+            "value": "+1 800-237-2920",
+            "target": "+18002372920",
+            "anchor": "800-237-2920",
+            "purpose": "Published for investor-relations inquiries; not a direct line to the selected person.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "LINCOLN NATIONAL CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59558/000005955826000058/statsuppdocument2q26.htm",
+            "raw_path": "contact-source-pa-lincoln.txt",
+            "sha256": "26d62c78f58e727139a1ad2313e5dd7f54f3de9455a1538968c90d917f32e712"
+          }
+        ]
       }
     },
     {
@@ -2196,7 +2399,44 @@
         "direct_email": "UNKNOWN",
         "direct_phone": "UNKNOWN",
         "consent": "UNKNOWN",
-        "routes": []
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official investor-relations / corporate research page",
+            "value": "https://www.radian.com/for-investors",
+            "target": "https://www.radian.com/for-investors",
+            "anchor": "Investor Relations",
+            "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "RADIAN GROUP INC",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.radian.com/for-investors",
+            "raw_path": "contact-source-pa-radian.txt",
+            "sha256": "48f25f82e5e8805595f223711d0fd027dcc641a0ced0f8e545a3b69b6b2de927"
+          },
+          {
+            "kind": "EMAIL",
+            "label": "Investor-relations team email",
+            "value": "Daniel.Kobell@radian.com",
+            "target": "Daniel.Kobell@radian.com",
+            "anchor": "Daniel.Kobell@radian.com",
+            "purpose": "Investor-relations inquiries; this is a company channel, not the selected person\u2019s email.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "RADIAN GROUP INC",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.radian.com/for-investors",
+            "raw_path": "contact-source-pa-radian.txt",
+            "sha256": "48f25f82e5e8805595f223711d0fd027dcc641a0ced0f8e545a3b69b6b2de927"
+          }
+        ]
       }
     },
     {
@@ -2501,7 +2741,26 @@
         "direct_email": "UNKNOWN",
         "direct_phone": "UNKNOWN",
         "consent": "UNKNOWN",
-        "routes": []
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official investor-relations / corporate research page",
+            "value": "https://www.cencora.com/contact-us",
+            "target": "https://www.cencora.com/contact-us",
+            "anchor": "Cencora corporate headquarters",
+            "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Cencora, Inc.",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.cencora.com/contact-us",
+            "raw_path": "contact-source-pa-cencora.txt",
+            "sha256": "68f6fbde72ae40771524f6c9456e0d177e5043d511ae2b264793717e6b5b6d92"
+          }
+        ]
       }
     },
     {
@@ -3392,7 +3651,26 @@
         "direct_email": "UNKNOWN",
         "direct_phone": "UNKNOWN",
         "consent": "UNKNOWN",
-        "routes": []
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official investor-relations / corporate research page",
+            "value": "https://www.cencora.com/contact-us",
+            "target": "https://www.cencora.com/contact-us",
+            "anchor": "Cencora corporate headquarters",
+            "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Cencora, Inc.",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.cencora.com/contact-us",
+            "raw_path": "contact-source-pa-cencora.txt",
+            "sha256": "68f6fbde72ae40771524f6c9456e0d177e5043d511ae2b264793717e6b5b6d92"
+          }
+        ]
       }
     },
     {
@@ -3477,7 +3755,62 @@
         "direct_email": "UNKNOWN",
         "direct_phone": "UNKNOWN",
         "consent": "UNKNOWN",
-        "routes": []
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official issuer investor-relations disclosure (SEC; retained text extraction)",
+            "value": "https://www.sec.gov/Archives/edgar/data/59558/000005955826000058/statsuppdocument2q26.htm",
+            "target": "https://www.sec.gov/Archives/edgar/data/59558/000005955826000058/statsuppdocument2q26.htm",
+            "anchor": "Lincoln Financial",
+            "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "LINCOLN NATIONAL CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59558/000005955826000058/statsuppdocument2q26.htm",
+            "raw_path": "contact-source-pa-lincoln.txt",
+            "sha256": "26d62c78f58e727139a1ad2313e5dd7f54f3de9455a1538968c90d917f32e712"
+          },
+          {
+            "kind": "EMAIL",
+            "label": "Investor-relations team email",
+            "value": "InvestorRelations@lfg.com",
+            "target": "InvestorRelations@lfg.com",
+            "anchor": "InvestorRelations@lfg.com",
+            "purpose": "Published for investor-relations inquiries; not the selected person\u2019s email.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "LINCOLN NATIONAL CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59558/000005955826000058/statsuppdocument2q26.htm",
+            "raw_path": "contact-source-pa-lincoln.txt",
+            "sha256": "26d62c78f58e727139a1ad2313e5dd7f54f3de9455a1538968c90d917f32e712"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Investor-relations phone",
+            "value": "+1 800-237-2920",
+            "target": "+18002372920",
+            "anchor": "800-237-2920",
+            "purpose": "Published for investor-relations inquiries; not a direct line to the selected person.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "LINCOLN NATIONAL CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59558/000005955826000058/statsuppdocument2q26.htm",
+            "raw_path": "contact-source-pa-lincoln.txt",
+            "sha256": "26d62c78f58e727139a1ad2313e5dd7f54f3de9455a1538968c90d917f32e712"
+          }
+        ]
       }
     },
     {
@@ -4422,7 +4755,44 @@
         "direct_email": "UNKNOWN",
         "direct_phone": "UNKNOWN",
         "consent": "UNKNOWN",
-        "routes": []
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official investor-relations / corporate research page",
+            "value": "https://www.radian.com/for-investors",
+            "target": "https://www.radian.com/for-investors",
+            "anchor": "Investor Relations",
+            "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "RADIAN GROUP INC",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.radian.com/for-investors",
+            "raw_path": "contact-source-pa-radian.txt",
+            "sha256": "48f25f82e5e8805595f223711d0fd027dcc641a0ced0f8e545a3b69b6b2de927"
+          },
+          {
+            "kind": "EMAIL",
+            "label": "Investor-relations team email",
+            "value": "Daniel.Kobell@radian.com",
+            "target": "Daniel.Kobell@radian.com",
+            "anchor": "Daniel.Kobell@radian.com",
+            "purpose": "Investor-relations inquiries; this is a company channel, not the selected person\u2019s email.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "RADIAN GROUP INC",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.radian.com/for-investors",
+            "raw_path": "contact-source-pa-radian.txt",
+            "sha256": "48f25f82e5e8805595f223711d0fd027dcc641a0ced0f8e545a3b69b6b2de927"
+          }
+        ]
       }
     },
     {
@@ -4841,7 +5211,44 @@
         "direct_email": "UNKNOWN",
         "direct_phone": "UNKNOWN",
         "consent": "UNKNOWN",
-        "routes": []
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official investor-relations / corporate research page",
+            "value": "https://investors.tollbrothers.com/",
+            "target": "https://investors.tollbrothers.com/",
+            "anchor": "Investor & Financial Requests:",
+            "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Toll Brothers, Inc.",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://investors.tollbrothers.com/",
+            "raw_path": "contact-source-pa-toll.txt",
+            "sha256": "5108c808a6d9a5657df713801451fe8036b5fe062bf66b82c614063fa61549e0"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Investor-relations contact phone",
+            "value": "+1 215-938-8365",
+            "target": "+12159388365",
+            "anchor": "215-938-8365",
+            "purpose": "Published for investor and financial requests to Gregg Ziegler; not a direct line to the selected person.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Toll Brothers, Inc.",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://investors.tollbrothers.com/",
+            "raw_path": "contact-source-pa-toll.txt",
+            "sha256": "5108c808a6d9a5657df713801451fe8036b5fe062bf66b82c614063fa61549e0"
+          }
+        ]
       }
     },
     {
@@ -5477,7 +5884,44 @@
         "direct_email": "UNKNOWN",
         "direct_phone": "UNKNOWN",
         "consent": "UNKNOWN",
-        "routes": []
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official investor-relations / corporate research page",
+            "value": "https://www.radian.com/for-investors",
+            "target": "https://www.radian.com/for-investors",
+            "anchor": "Investor Relations",
+            "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "RADIAN GROUP INC",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.radian.com/for-investors",
+            "raw_path": "contact-source-pa-radian.txt",
+            "sha256": "48f25f82e5e8805595f223711d0fd027dcc641a0ced0f8e545a3b69b6b2de927"
+          },
+          {
+            "kind": "EMAIL",
+            "label": "Investor-relations team email",
+            "value": "Daniel.Kobell@radian.com",
+            "target": "Daniel.Kobell@radian.com",
+            "anchor": "Daniel.Kobell@radian.com",
+            "purpose": "Investor-relations inquiries; this is a company channel, not the selected person\u2019s email.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "RADIAN GROUP INC",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.radian.com/for-investors",
+            "raw_path": "contact-source-pa-radian.txt",
+            "sha256": "48f25f82e5e8805595f223711d0fd027dcc641a0ced0f8e545a3b69b6b2de927"
+          }
+        ]
       }
     },
     {
@@ -5563,7 +6007,44 @@
         "direct_email": "UNKNOWN",
         "direct_phone": "UNKNOWN",
         "consent": "UNKNOWN",
-        "routes": []
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official investor-relations / corporate research page",
+            "value": "https://www.radian.com/for-investors",
+            "target": "https://www.radian.com/for-investors",
+            "anchor": "Investor Relations",
+            "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "RADIAN GROUP INC",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.radian.com/for-investors",
+            "raw_path": "contact-source-pa-radian.txt",
+            "sha256": "48f25f82e5e8805595f223711d0fd027dcc641a0ced0f8e545a3b69b6b2de927"
+          },
+          {
+            "kind": "EMAIL",
+            "label": "Investor-relations team email",
+            "value": "Daniel.Kobell@radian.com",
+            "target": "Daniel.Kobell@radian.com",
+            "anchor": "Daniel.Kobell@radian.com",
+            "purpose": "Investor-relations inquiries; this is a company channel, not the selected person\u2019s email.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "RADIAN GROUP INC",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.radian.com/for-investors",
+            "raw_path": "contact-source-pa-radian.txt",
+            "sha256": "48f25f82e5e8805595f223711d0fd027dcc641a0ced0f8e545a3b69b6b2de927"
+          }
+        ]
       }
     },
     {
@@ -5786,7 +6267,62 @@
         "direct_email": "UNKNOWN",
         "direct_phone": "UNKNOWN",
         "consent": "UNKNOWN",
-        "routes": []
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official investor-relations / corporate research page",
+            "value": "https://www.fmc.com/en/contact",
+            "target": "https://www.fmc.com/en/contact",
+            "anchor": "FMC Corporate Headquarters",
+            "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "FMC CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.fmc.com/en/contact",
+            "raw_path": "contact-source-pa-fmc.txt",
+            "sha256": "7822652284a25c77742f89e36080a8364949add28f84e851a8a0920601aabc0f"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Corporate headquarters phone",
+            "value": "+1 215 299 6000",
+            "target": "+12152996000",
+            "anchor": "+1 215 299-6000",
+            "purpose": "Corporate headquarters; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "FMC CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.fmc.com/en/contact",
+            "raw_path": "contact-source-pa-fmc.txt",
+            "sha256": "7822652284a25c77742f89e36080a8364949add28f84e851a8a0920601aabc0f"
+          },
+          {
+            "kind": "EMAIL",
+            "label": "Investor-relations contact email",
+            "value": "curt.brooks@fmc.com",
+            "target": "curt.brooks@fmc.com",
+            "anchor": "curt.brooks@fmc.com",
+            "purpose": "Published for investor-relations inquiries to Curt Brooks; not the selected person\u2019s email.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "FMC CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.fmc.com/en/contact",
+            "raw_path": "contact-source-pa-fmc.txt",
+            "sha256": "7822652284a25c77742f89e36080a8364949add28f84e851a8a0920601aabc0f"
+          }
+        ]
       }
     },
     {
@@ -10863,7 +11399,26 @@
         "direct_email": "UNKNOWN",
         "direct_phone": "UNKNOWN",
         "consent": "UNKNOWN",
-        "routes": []
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official investor-relations / corporate research page",
+            "value": "https://www.cencora.com/contact-us",
+            "target": "https://www.cencora.com/contact-us",
+            "anchor": "Cencora corporate headquarters",
+            "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Cencora, Inc.",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.cencora.com/contact-us",
+            "raw_path": "contact-source-pa-cencora.txt",
+            "sha256": "68f6fbde72ae40771524f6c9456e0d177e5043d511ae2b264793717e6b5b6d92"
+          }
+        ]
       }
     },
     {
@@ -10921,7 +11476,26 @@
         "direct_email": "UNKNOWN",
         "direct_phone": "UNKNOWN",
         "consent": "UNKNOWN",
-        "routes": []
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official investor-relations / corporate research page",
+            "value": "https://www.cencora.com/contact-us",
+            "target": "https://www.cencora.com/contact-us",
+            "anchor": "Cencora corporate headquarters",
+            "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Cencora, Inc.",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.cencora.com/contact-us",
+            "raw_path": "contact-source-pa-cencora.txt",
+            "sha256": "68f6fbde72ae40771524f6c9456e0d177e5043d511ae2b264793717e6b5b6d92"
+          }
+        ]
       }
     },
     {
@@ -11001,7 +11575,26 @@
         "direct_email": "UNKNOWN",
         "direct_phone": "UNKNOWN",
         "consent": "UNKNOWN",
-        "routes": []
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official investor-relations / corporate research page",
+            "value": "https://www.cencora.com/contact-us",
+            "target": "https://www.cencora.com/contact-us",
+            "anchor": "Cencora corporate headquarters",
+            "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Cencora, Inc.",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.cencora.com/contact-us",
+            "raw_path": "contact-source-pa-cencora.txt",
+            "sha256": "68f6fbde72ae40771524f6c9456e0d177e5043d511ae2b264793717e6b5b6d92"
+          }
+        ]
       }
     },
     {
@@ -11059,7 +11652,26 @@
         "direct_email": "UNKNOWN",
         "direct_phone": "UNKNOWN",
         "consent": "UNKNOWN",
-        "routes": []
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official investor-relations / corporate research page",
+            "value": "https://www.cencora.com/contact-us",
+            "target": "https://www.cencora.com/contact-us",
+            "anchor": "Cencora corporate headquarters",
+            "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Cencora, Inc.",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.cencora.com/contact-us",
+            "raw_path": "contact-source-pa-cencora.txt",
+            "sha256": "68f6fbde72ae40771524f6c9456e0d177e5043d511ae2b264793717e6b5b6d92"
+          }
+        ]
       }
     },
     {
@@ -11176,7 +11788,26 @@
         "direct_email": "UNKNOWN",
         "direct_phone": "UNKNOWN",
         "consent": "UNKNOWN",
-        "routes": []
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official investor-relations / corporate research page",
+            "value": "https://www.cencora.com/contact-us",
+            "target": "https://www.cencora.com/contact-us",
+            "anchor": "Cencora corporate headquarters",
+            "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Cencora, Inc.",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.cencora.com/contact-us",
+            "raw_path": "contact-source-pa-cencora.txt",
+            "sha256": "68f6fbde72ae40771524f6c9456e0d177e5043d511ae2b264793717e6b5b6d92"
+          }
+        ]
       }
     },
     {
@@ -11232,7 +11863,26 @@
         "direct_email": "UNKNOWN",
         "direct_phone": "UNKNOWN",
         "consent": "UNKNOWN",
-        "routes": []
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official investor-relations / corporate research page",
+            "value": "https://www.cencora.com/contact-us",
+            "target": "https://www.cencora.com/contact-us",
+            "anchor": "Cencora corporate headquarters",
+            "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "Cencora, Inc.",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.cencora.com/contact-us",
+            "raw_path": "contact-source-pa-cencora.txt",
+            "sha256": "68f6fbde72ae40771524f6c9456e0d177e5043d511ae2b264793717e6b5b6d92"
+          }
+        ]
       }
     },
     {
@@ -11311,7 +11961,62 @@
         "direct_email": "UNKNOWN",
         "direct_phone": "UNKNOWN",
         "consent": "UNKNOWN",
-        "routes": []
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official issuer investor-relations disclosure (SEC; retained text extraction)",
+            "value": "https://www.sec.gov/Archives/edgar/data/59558/000005955826000058/statsuppdocument2q26.htm",
+            "target": "https://www.sec.gov/Archives/edgar/data/59558/000005955826000058/statsuppdocument2q26.htm",
+            "anchor": "Lincoln Financial",
+            "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "LINCOLN NATIONAL CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59558/000005955826000058/statsuppdocument2q26.htm",
+            "raw_path": "contact-source-pa-lincoln.txt",
+            "sha256": "26d62c78f58e727139a1ad2313e5dd7f54f3de9455a1538968c90d917f32e712"
+          },
+          {
+            "kind": "EMAIL",
+            "label": "Investor-relations team email",
+            "value": "InvestorRelations@lfg.com",
+            "target": "InvestorRelations@lfg.com",
+            "anchor": "InvestorRelations@lfg.com",
+            "purpose": "Published for investor-relations inquiries; not the selected person\u2019s email.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "LINCOLN NATIONAL CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59558/000005955826000058/statsuppdocument2q26.htm",
+            "raw_path": "contact-source-pa-lincoln.txt",
+            "sha256": "26d62c78f58e727139a1ad2313e5dd7f54f3de9455a1538968c90d917f32e712"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Investor-relations phone",
+            "value": "+1 800-237-2920",
+            "target": "+18002372920",
+            "anchor": "800-237-2920",
+            "purpose": "Published for investor-relations inquiries; not a direct line to the selected person.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "LINCOLN NATIONAL CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59558/000005955826000058/statsuppdocument2q26.htm",
+            "raw_path": "contact-source-pa-lincoln.txt",
+            "sha256": "26d62c78f58e727139a1ad2313e5dd7f54f3de9455a1538968c90d917f32e712"
+          }
+        ]
       }
     },
     {
@@ -11366,7 +12071,62 @@
         "direct_email": "UNKNOWN",
         "direct_phone": "UNKNOWN",
         "consent": "UNKNOWN",
-        "routes": []
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official issuer investor-relations disclosure (SEC; retained text extraction)",
+            "value": "https://www.sec.gov/Archives/edgar/data/59558/000005955826000058/statsuppdocument2q26.htm",
+            "target": "https://www.sec.gov/Archives/edgar/data/59558/000005955826000058/statsuppdocument2q26.htm",
+            "anchor": "Lincoln Financial",
+            "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "LINCOLN NATIONAL CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59558/000005955826000058/statsuppdocument2q26.htm",
+            "raw_path": "contact-source-pa-lincoln.txt",
+            "sha256": "26d62c78f58e727139a1ad2313e5dd7f54f3de9455a1538968c90d917f32e712"
+          },
+          {
+            "kind": "EMAIL",
+            "label": "Investor-relations team email",
+            "value": "InvestorRelations@lfg.com",
+            "target": "InvestorRelations@lfg.com",
+            "anchor": "InvestorRelations@lfg.com",
+            "purpose": "Published for investor-relations inquiries; not the selected person\u2019s email.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "LINCOLN NATIONAL CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59558/000005955826000058/statsuppdocument2q26.htm",
+            "raw_path": "contact-source-pa-lincoln.txt",
+            "sha256": "26d62c78f58e727139a1ad2313e5dd7f54f3de9455a1538968c90d917f32e712"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Investor-relations phone",
+            "value": "+1 800-237-2920",
+            "target": "+18002372920",
+            "anchor": "800-237-2920",
+            "purpose": "Published for investor-relations inquiries; not a direct line to the selected person.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "LINCOLN NATIONAL CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59558/000005955826000058/statsuppdocument2q26.htm",
+            "raw_path": "contact-source-pa-lincoln.txt",
+            "sha256": "26d62c78f58e727139a1ad2313e5dd7f54f3de9455a1538968c90d917f32e712"
+          }
+        ]
       }
     },
     {
@@ -11421,7 +12181,62 @@
         "direct_email": "UNKNOWN",
         "direct_phone": "UNKNOWN",
         "consent": "UNKNOWN",
-        "routes": []
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official issuer investor-relations disclosure (SEC; retained text extraction)",
+            "value": "https://www.sec.gov/Archives/edgar/data/59558/000005955826000058/statsuppdocument2q26.htm",
+            "target": "https://www.sec.gov/Archives/edgar/data/59558/000005955826000058/statsuppdocument2q26.htm",
+            "anchor": "Lincoln Financial",
+            "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "LINCOLN NATIONAL CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59558/000005955826000058/statsuppdocument2q26.htm",
+            "raw_path": "contact-source-pa-lincoln.txt",
+            "sha256": "26d62c78f58e727139a1ad2313e5dd7f54f3de9455a1538968c90d917f32e712"
+          },
+          {
+            "kind": "EMAIL",
+            "label": "Investor-relations team email",
+            "value": "InvestorRelations@lfg.com",
+            "target": "InvestorRelations@lfg.com",
+            "anchor": "InvestorRelations@lfg.com",
+            "purpose": "Published for investor-relations inquiries; not the selected person\u2019s email.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "LINCOLN NATIONAL CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59558/000005955826000058/statsuppdocument2q26.htm",
+            "raw_path": "contact-source-pa-lincoln.txt",
+            "sha256": "26d62c78f58e727139a1ad2313e5dd7f54f3de9455a1538968c90d917f32e712"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Investor-relations phone",
+            "value": "+1 800-237-2920",
+            "target": "+18002372920",
+            "anchor": "800-237-2920",
+            "purpose": "Published for investor-relations inquiries; not a direct line to the selected person.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "LINCOLN NATIONAL CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59558/000005955826000058/statsuppdocument2q26.htm",
+            "raw_path": "contact-source-pa-lincoln.txt",
+            "sha256": "26d62c78f58e727139a1ad2313e5dd7f54f3de9455a1538968c90d917f32e712"
+          }
+        ]
       }
     },
     {
@@ -11499,7 +12314,26 @@
         "direct_email": "UNKNOWN",
         "direct_phone": "UNKNOWN",
         "consent": "UNKNOWN",
-        "routes": []
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official investor-relations / corporate research page",
+            "value": "https://www.cmcsa.com/contact-ir",
+            "target": "https://www.cmcsa.com/contact-ir",
+            "anchor": "Contact Investor Relations",
+            "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "COMCAST CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.cmcsa.com/contact-ir",
+            "raw_path": "contact-source-pa-comcast.txt",
+            "sha256": "bd6a42607541a1d23672bf43155ce0899ab4a3f93e8e4502113f79be7ac26e62"
+          }
+        ]
       }
     },
     {
@@ -11577,7 +12411,26 @@
         "direct_email": "UNKNOWN",
         "direct_phone": "UNKNOWN",
         "consent": "UNKNOWN",
-        "routes": []
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official investor-relations / corporate research page",
+            "value": "https://www.cmcsa.com/contact-ir",
+            "target": "https://www.cmcsa.com/contact-ir",
+            "anchor": "Contact Investor Relations",
+            "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "COMCAST CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.cmcsa.com/contact-ir",
+            "raw_path": "contact-source-pa-comcast.txt",
+            "sha256": "bd6a42607541a1d23672bf43155ce0899ab4a3f93e8e4502113f79be7ac26e62"
+          }
+        ]
       }
     },
     {
@@ -11631,7 +12484,62 @@
         "direct_email": "UNKNOWN",
         "direct_phone": "UNKNOWN",
         "consent": "UNKNOWN",
-        "routes": []
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official issuer investor-relations disclosure (SEC; retained text extraction)",
+            "value": "https://www.sec.gov/Archives/edgar/data/59558/000005955826000058/statsuppdocument2q26.htm",
+            "target": "https://www.sec.gov/Archives/edgar/data/59558/000005955826000058/statsuppdocument2q26.htm",
+            "anchor": "Lincoln Financial",
+            "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "LINCOLN NATIONAL CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59558/000005955826000058/statsuppdocument2q26.htm",
+            "raw_path": "contact-source-pa-lincoln.txt",
+            "sha256": "26d62c78f58e727139a1ad2313e5dd7f54f3de9455a1538968c90d917f32e712"
+          },
+          {
+            "kind": "EMAIL",
+            "label": "Investor-relations team email",
+            "value": "InvestorRelations@lfg.com",
+            "target": "InvestorRelations@lfg.com",
+            "anchor": "InvestorRelations@lfg.com",
+            "purpose": "Published for investor-relations inquiries; not the selected person\u2019s email.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "LINCOLN NATIONAL CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59558/000005955826000058/statsuppdocument2q26.htm",
+            "raw_path": "contact-source-pa-lincoln.txt",
+            "sha256": "26d62c78f58e727139a1ad2313e5dd7f54f3de9455a1538968c90d917f32e712"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Investor-relations phone",
+            "value": "+1 800-237-2920",
+            "target": "+18002372920",
+            "anchor": "800-237-2920",
+            "purpose": "Published for investor-relations inquiries; not a direct line to the selected person.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "LINCOLN NATIONAL CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/59558/000005955826000058/statsuppdocument2q26.htm",
+            "raw_path": "contact-source-pa-lincoln.txt",
+            "sha256": "26d62c78f58e727139a1ad2313e5dd7f54f3de9455a1538968c90d917f32e712"
+          }
+        ]
       }
     },
     {
@@ -11709,7 +12617,26 @@
         "direct_email": "UNKNOWN",
         "direct_phone": "UNKNOWN",
         "consent": "UNKNOWN",
-        "routes": []
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official investor-relations / corporate research page",
+            "value": "https://www.cmcsa.com/contact-ir",
+            "target": "https://www.cmcsa.com/contact-ir",
+            "anchor": "Contact Investor Relations",
+            "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "COMCAST CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.cmcsa.com/contact-ir",
+            "raw_path": "contact-source-pa-comcast.txt",
+            "sha256": "bd6a42607541a1d23672bf43155ce0899ab4a3f93e8e4502113f79be7ac26e62"
+          }
+        ]
       }
     },
     {
@@ -11787,7 +12714,26 @@
         "direct_email": "UNKNOWN",
         "direct_phone": "UNKNOWN",
         "consent": "UNKNOWN",
-        "routes": []
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official investor-relations / corporate research page",
+            "value": "https://www.cmcsa.com/contact-ir",
+            "target": "https://www.cmcsa.com/contact-ir",
+            "anchor": "Contact Investor Relations",
+            "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "COMCAST CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.cmcsa.com/contact-ir",
+            "raw_path": "contact-source-pa-comcast.txt",
+            "sha256": "bd6a42607541a1d23672bf43155ce0899ab4a3f93e8e4502113f79be7ac26e62"
+          }
+        ]
       }
     },
     {
@@ -11865,7 +12811,26 @@
         "direct_email": "UNKNOWN",
         "direct_phone": "UNKNOWN",
         "consent": "UNKNOWN",
-        "routes": []
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official investor-relations / corporate research page",
+            "value": "https://www.cmcsa.com/contact-ir",
+            "target": "https://www.cmcsa.com/contact-ir",
+            "anchor": "Contact Investor Relations",
+            "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "COMCAST CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.cmcsa.com/contact-ir",
+            "raw_path": "contact-source-pa-comcast.txt",
+            "sha256": "bd6a42607541a1d23672bf43155ce0899ab4a3f93e8e4502113f79be7ac26e62"
+          }
+        ]
       }
     },
     {
@@ -11967,7 +12932,26 @@
         "direct_email": "UNKNOWN",
         "direct_phone": "UNKNOWN",
         "consent": "UNKNOWN",
-        "routes": []
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official investor-relations / corporate research page",
+            "value": "https://www.cmcsa.com/contact-ir",
+            "target": "https://www.cmcsa.com/contact-ir",
+            "anchor": "Contact Investor Relations",
+            "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "COMCAST CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.cmcsa.com/contact-ir",
+            "raw_path": "contact-source-pa-comcast.txt",
+            "sha256": "bd6a42607541a1d23672bf43155ce0899ab4a3f93e8e4502113f79be7ac26e62"
+          }
+        ]
       }
     },
     {
@@ -12045,7 +13029,44 @@
         "direct_email": "UNKNOWN",
         "direct_phone": "UNKNOWN",
         "consent": "UNKNOWN",
-        "routes": []
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official investor-relations / corporate research page",
+            "value": "https://www.radian.com/for-investors",
+            "target": "https://www.radian.com/for-investors",
+            "anchor": "Investor Relations",
+            "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "RADIAN GROUP INC",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.radian.com/for-investors",
+            "raw_path": "contact-source-pa-radian.txt",
+            "sha256": "48f25f82e5e8805595f223711d0fd027dcc641a0ced0f8e545a3b69b6b2de927"
+          },
+          {
+            "kind": "EMAIL",
+            "label": "Investor-relations team email",
+            "value": "Daniel.Kobell@radian.com",
+            "target": "Daniel.Kobell@radian.com",
+            "anchor": "Daniel.Kobell@radian.com",
+            "purpose": "Investor-relations inquiries; this is a company channel, not the selected person\u2019s email.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "RADIAN GROUP INC",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.radian.com/for-investors",
+            "raw_path": "contact-source-pa-radian.txt",
+            "sha256": "48f25f82e5e8805595f223711d0fd027dcc641a0ced0f8e545a3b69b6b2de927"
+          }
+        ]
       }
     },
     {
@@ -12127,7 +13148,62 @@
         "direct_email": "UNKNOWN",
         "direct_phone": "UNKNOWN",
         "consent": "UNKNOWN",
-        "routes": []
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official investor-relations / corporate research page",
+            "value": "https://www.fmc.com/en/contact",
+            "target": "https://www.fmc.com/en/contact",
+            "anchor": "FMC Corporate Headquarters",
+            "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "FMC CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.fmc.com/en/contact",
+            "raw_path": "contact-source-pa-fmc.txt",
+            "sha256": "7822652284a25c77742f89e36080a8364949add28f84e851a8a0920601aabc0f"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Corporate headquarters phone",
+            "value": "+1 215 299 6000",
+            "target": "+12152996000",
+            "anchor": "+1 215 299-6000",
+            "purpose": "Corporate headquarters; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "FMC CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.fmc.com/en/contact",
+            "raw_path": "contact-source-pa-fmc.txt",
+            "sha256": "7822652284a25c77742f89e36080a8364949add28f84e851a8a0920601aabc0f"
+          },
+          {
+            "kind": "EMAIL",
+            "label": "Investor-relations contact email",
+            "value": "curt.brooks@fmc.com",
+            "target": "curt.brooks@fmc.com",
+            "anchor": "curt.brooks@fmc.com",
+            "purpose": "Published for investor-relations inquiries to Curt Brooks; not the selected person\u2019s email.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "FMC CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.fmc.com/en/contact",
+            "raw_path": "contact-source-pa-fmc.txt",
+            "sha256": "7822652284a25c77742f89e36080a8364949add28f84e851a8a0920601aabc0f"
+          }
+        ]
       }
     },
     {
@@ -12209,7 +13285,62 @@
         "direct_email": "UNKNOWN",
         "direct_phone": "UNKNOWN",
         "consent": "UNKNOWN",
-        "routes": []
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official investor-relations / corporate research page",
+            "value": "https://www.fmc.com/en/contact",
+            "target": "https://www.fmc.com/en/contact",
+            "anchor": "FMC Corporate Headquarters",
+            "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "FMC CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.fmc.com/en/contact",
+            "raw_path": "contact-source-pa-fmc.txt",
+            "sha256": "7822652284a25c77742f89e36080a8364949add28f84e851a8a0920601aabc0f"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Corporate headquarters phone",
+            "value": "+1 215 299 6000",
+            "target": "+12152996000",
+            "anchor": "+1 215 299-6000",
+            "purpose": "Corporate headquarters; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "FMC CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.fmc.com/en/contact",
+            "raw_path": "contact-source-pa-fmc.txt",
+            "sha256": "7822652284a25c77742f89e36080a8364949add28f84e851a8a0920601aabc0f"
+          },
+          {
+            "kind": "EMAIL",
+            "label": "Investor-relations contact email",
+            "value": "curt.brooks@fmc.com",
+            "target": "curt.brooks@fmc.com",
+            "anchor": "curt.brooks@fmc.com",
+            "purpose": "Published for investor-relations inquiries to Curt Brooks; not the selected person\u2019s email.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "FMC CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.fmc.com/en/contact",
+            "raw_path": "contact-source-pa-fmc.txt",
+            "sha256": "7822652284a25c77742f89e36080a8364949add28f84e851a8a0920601aabc0f"
+          }
+        ]
       }
     },
     {
@@ -12291,7 +13422,62 @@
         "direct_email": "UNKNOWN",
         "direct_phone": "UNKNOWN",
         "consent": "UNKNOWN",
-        "routes": []
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official investor-relations / corporate research page",
+            "value": "https://www.fmc.com/en/contact",
+            "target": "https://www.fmc.com/en/contact",
+            "anchor": "FMC Corporate Headquarters",
+            "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "FMC CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.fmc.com/en/contact",
+            "raw_path": "contact-source-pa-fmc.txt",
+            "sha256": "7822652284a25c77742f89e36080a8364949add28f84e851a8a0920601aabc0f"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Corporate headquarters phone",
+            "value": "+1 215 299 6000",
+            "target": "+12152996000",
+            "anchor": "+1 215 299-6000",
+            "purpose": "Corporate headquarters; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "FMC CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.fmc.com/en/contact",
+            "raw_path": "contact-source-pa-fmc.txt",
+            "sha256": "7822652284a25c77742f89e36080a8364949add28f84e851a8a0920601aabc0f"
+          },
+          {
+            "kind": "EMAIL",
+            "label": "Investor-relations contact email",
+            "value": "curt.brooks@fmc.com",
+            "target": "curt.brooks@fmc.com",
+            "anchor": "curt.brooks@fmc.com",
+            "purpose": "Published for investor-relations inquiries to Curt Brooks; not the selected person\u2019s email.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "FMC CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.fmc.com/en/contact",
+            "raw_path": "contact-source-pa-fmc.txt",
+            "sha256": "7822652284a25c77742f89e36080a8364949add28f84e851a8a0920601aabc0f"
+          }
+        ]
       }
     },
     {
@@ -12373,7 +13559,62 @@
         "direct_email": "UNKNOWN",
         "direct_phone": "UNKNOWN",
         "consent": "UNKNOWN",
-        "routes": []
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official investor-relations / corporate research page",
+            "value": "https://www.fmc.com/en/contact",
+            "target": "https://www.fmc.com/en/contact",
+            "anchor": "FMC Corporate Headquarters",
+            "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "FMC CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.fmc.com/en/contact",
+            "raw_path": "contact-source-pa-fmc.txt",
+            "sha256": "7822652284a25c77742f89e36080a8364949add28f84e851a8a0920601aabc0f"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Corporate headquarters phone",
+            "value": "+1 215 299 6000",
+            "target": "+12152996000",
+            "anchor": "+1 215 299-6000",
+            "purpose": "Corporate headquarters; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "FMC CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.fmc.com/en/contact",
+            "raw_path": "contact-source-pa-fmc.txt",
+            "sha256": "7822652284a25c77742f89e36080a8364949add28f84e851a8a0920601aabc0f"
+          },
+          {
+            "kind": "EMAIL",
+            "label": "Investor-relations contact email",
+            "value": "curt.brooks@fmc.com",
+            "target": "curt.brooks@fmc.com",
+            "anchor": "curt.brooks@fmc.com",
+            "purpose": "Published for investor-relations inquiries to Curt Brooks; not the selected person\u2019s email.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "FMC CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.fmc.com/en/contact",
+            "raw_path": "contact-source-pa-fmc.txt",
+            "sha256": "7822652284a25c77742f89e36080a8364949add28f84e851a8a0920601aabc0f"
+          }
+        ]
       }
     },
     {
@@ -12455,7 +13696,62 @@
         "direct_email": "UNKNOWN",
         "direct_phone": "UNKNOWN",
         "consent": "UNKNOWN",
-        "routes": []
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official investor-relations / corporate research page",
+            "value": "https://www.fmc.com/en/contact",
+            "target": "https://www.fmc.com/en/contact",
+            "anchor": "FMC Corporate Headquarters",
+            "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "FMC CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.fmc.com/en/contact",
+            "raw_path": "contact-source-pa-fmc.txt",
+            "sha256": "7822652284a25c77742f89e36080a8364949add28f84e851a8a0920601aabc0f"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Corporate headquarters phone",
+            "value": "+1 215 299 6000",
+            "target": "+12152996000",
+            "anchor": "+1 215 299-6000",
+            "purpose": "Corporate headquarters; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "FMC CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.fmc.com/en/contact",
+            "raw_path": "contact-source-pa-fmc.txt",
+            "sha256": "7822652284a25c77742f89e36080a8364949add28f84e851a8a0920601aabc0f"
+          },
+          {
+            "kind": "EMAIL",
+            "label": "Investor-relations contact email",
+            "value": "curt.brooks@fmc.com",
+            "target": "curt.brooks@fmc.com",
+            "anchor": "curt.brooks@fmc.com",
+            "purpose": "Published for investor-relations inquiries to Curt Brooks; not the selected person\u2019s email.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "FMC CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.fmc.com/en/contact",
+            "raw_path": "contact-source-pa-fmc.txt",
+            "sha256": "7822652284a25c77742f89e36080a8364949add28f84e851a8a0920601aabc0f"
+          }
+        ]
       }
     },
     {
@@ -12537,7 +13833,62 @@
         "direct_email": "UNKNOWN",
         "direct_phone": "UNKNOWN",
         "consent": "UNKNOWN",
-        "routes": []
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official investor-relations / corporate research page",
+            "value": "https://www.fmc.com/en/contact",
+            "target": "https://www.fmc.com/en/contact",
+            "anchor": "FMC Corporate Headquarters",
+            "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "FMC CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.fmc.com/en/contact",
+            "raw_path": "contact-source-pa-fmc.txt",
+            "sha256": "7822652284a25c77742f89e36080a8364949add28f84e851a8a0920601aabc0f"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Corporate headquarters phone",
+            "value": "+1 215 299 6000",
+            "target": "+12152996000",
+            "anchor": "+1 215 299-6000",
+            "purpose": "Corporate headquarters; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "FMC CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.fmc.com/en/contact",
+            "raw_path": "contact-source-pa-fmc.txt",
+            "sha256": "7822652284a25c77742f89e36080a8364949add28f84e851a8a0920601aabc0f"
+          },
+          {
+            "kind": "EMAIL",
+            "label": "Investor-relations contact email",
+            "value": "curt.brooks@fmc.com",
+            "target": "curt.brooks@fmc.com",
+            "anchor": "curt.brooks@fmc.com",
+            "purpose": "Published for investor-relations inquiries to Curt Brooks; not the selected person\u2019s email.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "FMC CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.fmc.com/en/contact",
+            "raw_path": "contact-source-pa-fmc.txt",
+            "sha256": "7822652284a25c77742f89e36080a8364949add28f84e851a8a0920601aabc0f"
+          }
+        ]
       }
     },
     {
@@ -12643,7 +13994,62 @@
         "direct_email": "UNKNOWN",
         "direct_phone": "UNKNOWN",
         "consent": "UNKNOWN",
-        "routes": []
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official investor-relations / corporate research page",
+            "value": "https://www.fmc.com/en/contact",
+            "target": "https://www.fmc.com/en/contact",
+            "anchor": "FMC Corporate Headquarters",
+            "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "FMC CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.fmc.com/en/contact",
+            "raw_path": "contact-source-pa-fmc.txt",
+            "sha256": "7822652284a25c77742f89e36080a8364949add28f84e851a8a0920601aabc0f"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Corporate headquarters phone",
+            "value": "+1 215 299 6000",
+            "target": "+12152996000",
+            "anchor": "+1 215 299-6000",
+            "purpose": "Corporate headquarters; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "FMC CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.fmc.com/en/contact",
+            "raw_path": "contact-source-pa-fmc.txt",
+            "sha256": "7822652284a25c77742f89e36080a8364949add28f84e851a8a0920601aabc0f"
+          },
+          {
+            "kind": "EMAIL",
+            "label": "Investor-relations contact email",
+            "value": "curt.brooks@fmc.com",
+            "target": "curt.brooks@fmc.com",
+            "anchor": "curt.brooks@fmc.com",
+            "purpose": "Published for investor-relations inquiries to Curt Brooks; not the selected person\u2019s email.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "FMC CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.fmc.com/en/contact",
+            "raw_path": "contact-source-pa-fmc.txt",
+            "sha256": "7822652284a25c77742f89e36080a8364949add28f84e851a8a0920601aabc0f"
+          }
+        ]
       }
     },
     {
@@ -12725,7 +14131,62 @@
         "direct_email": "UNKNOWN",
         "direct_phone": "UNKNOWN",
         "consent": "UNKNOWN",
-        "routes": []
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official investor-relations / corporate research page",
+            "value": "https://www.fmc.com/en/contact",
+            "target": "https://www.fmc.com/en/contact",
+            "anchor": "FMC Corporate Headquarters",
+            "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "FMC CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.fmc.com/en/contact",
+            "raw_path": "contact-source-pa-fmc.txt",
+            "sha256": "7822652284a25c77742f89e36080a8364949add28f84e851a8a0920601aabc0f"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Corporate headquarters phone",
+            "value": "+1 215 299 6000",
+            "target": "+12152996000",
+            "anchor": "+1 215 299-6000",
+            "purpose": "Corporate headquarters; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "FMC CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.fmc.com/en/contact",
+            "raw_path": "contact-source-pa-fmc.txt",
+            "sha256": "7822652284a25c77742f89e36080a8364949add28f84e851a8a0920601aabc0f"
+          },
+          {
+            "kind": "EMAIL",
+            "label": "Investor-relations contact email",
+            "value": "curt.brooks@fmc.com",
+            "target": "curt.brooks@fmc.com",
+            "anchor": "curt.brooks@fmc.com",
+            "purpose": "Published for investor-relations inquiries to Curt Brooks; not the selected person\u2019s email.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "FMC CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.fmc.com/en/contact",
+            "raw_path": "contact-source-pa-fmc.txt",
+            "sha256": "7822652284a25c77742f89e36080a8364949add28f84e851a8a0920601aabc0f"
+          }
+        ]
       }
     },
     {
@@ -12781,7 +14242,62 @@
         "direct_email": "UNKNOWN",
         "direct_phone": "UNKNOWN",
         "consent": "UNKNOWN",
-        "routes": []
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official investor-relations / corporate research page",
+            "value": "https://www.fmc.com/en/contact",
+            "target": "https://www.fmc.com/en/contact",
+            "anchor": "FMC Corporate Headquarters",
+            "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "FMC CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.fmc.com/en/contact",
+            "raw_path": "contact-source-pa-fmc.txt",
+            "sha256": "7822652284a25c77742f89e36080a8364949add28f84e851a8a0920601aabc0f"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Corporate headquarters phone",
+            "value": "+1 215 299 6000",
+            "target": "+12152996000",
+            "anchor": "+1 215 299-6000",
+            "purpose": "Corporate headquarters; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "FMC CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.fmc.com/en/contact",
+            "raw_path": "contact-source-pa-fmc.txt",
+            "sha256": "7822652284a25c77742f89e36080a8364949add28f84e851a8a0920601aabc0f"
+          },
+          {
+            "kind": "EMAIL",
+            "label": "Investor-relations contact email",
+            "value": "curt.brooks@fmc.com",
+            "target": "curt.brooks@fmc.com",
+            "anchor": "curt.brooks@fmc.com",
+            "purpose": "Published for investor-relations inquiries to Curt Brooks; not the selected person\u2019s email.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "FMC CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.fmc.com/en/contact",
+            "raw_path": "contact-source-pa-fmc.txt",
+            "sha256": "7822652284a25c77742f89e36080a8364949add28f84e851a8a0920601aabc0f"
+          }
+        ]
       }
     },
     {
@@ -12863,7 +14379,62 @@
         "direct_email": "UNKNOWN",
         "direct_phone": "UNKNOWN",
         "consent": "UNKNOWN",
-        "routes": []
+        "routes": [
+          {
+            "kind": "WEBSITE",
+            "label": "Official investor-relations / corporate research page",
+            "value": "https://www.fmc.com/en/contact",
+            "target": "https://www.fmc.com/en/contact",
+            "anchor": "FMC Corporate Headquarters",
+            "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "FMC CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.fmc.com/en/contact",
+            "raw_path": "contact-source-pa-fmc.txt",
+            "sha256": "7822652284a25c77742f89e36080a8364949add28f84e851a8a0920601aabc0f"
+          },
+          {
+            "kind": "PHONE",
+            "label": "Corporate headquarters phone",
+            "value": "+1 215 299 6000",
+            "target": "+12152996000",
+            "anchor": "+1 215 299-6000",
+            "purpose": "Corporate headquarters; routing to the selected person is UNKNOWN.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "FMC CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.fmc.com/en/contact",
+            "raw_path": "contact-source-pa-fmc.txt",
+            "sha256": "7822652284a25c77742f89e36080a8364949add28f84e851a8a0920601aabc0f"
+          },
+          {
+            "kind": "EMAIL",
+            "label": "Investor-relations contact email",
+            "value": "curt.brooks@fmc.com",
+            "target": "curt.brooks@fmc.com",
+            "anchor": "curt.brooks@fmc.com",
+            "purpose": "Published for investor-relations inquiries to Curt Brooks; not the selected person\u2019s email.",
+            "scope": "COMPANY_CHANNEL",
+            "organization": "FMC CORP",
+            "classification": "VERIFIED PUBLIC FACT",
+            "person_id": null,
+            "subject_name": null,
+            "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+            "reviewed_at": "2026-10-30",
+            "source_url": "https://www.fmc.com/en/contact",
+            "raw_path": "contact-source-pa-fmc.txt",
+            "sha256": "7822652284a25c77742f89e36080a8364949add28f84e851a8a0920601aabc0f"
+          }
+        ]
       }
     },
     {

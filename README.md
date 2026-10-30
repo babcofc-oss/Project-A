@@ -1,5 +1,12 @@
 # Project A — Money in Motion
 
+## MOCEAN pilot usability release — October 30, 2026
+The terminal now uses the approved MOCEAN name while existing export identifiers and browser storage keys remain compatible. `pilot.html` provides a factual product entry page, current catalog coverage and a professional paid-pilot inquiry draft to Briton. It sends no message, collects no payment and creates no account; the visitor reviews and sends using their email app.
+
+Six new official issuer contact source groups cover all 41 PA research records. Published company/IR pages, phones and emails retain purposes and are never relabeled as a selected person's direct channels. Lincoln's source is a plain-text extraction from an SEC-hosted issuer disclosure with both upstream and retained-text fingerprints recorded. Source review dates and the 90-day contact expiry remain separate from SEC discovery freshness. `contacts.py` preserves the feed version and discovery timestamp when updating contact evidence.
+
+`updates.js` records an explicit browser review baseline, then compares exact person/event IDs and source/fact signatures on later loads. New, changed and removed event rows are distinguished; old filing dates remain visible. The UI can restrict changed records to saved prospects. Failed/stale feed states disable baseline review. It is browser-local, with session-only fallback if storage fails, and does not send background notifications or establish customer retention. Tests cover identity separation, changed values, removals, malformed baselines and repeated reviews. Historical contact tests use their historical manifest; current-source tests verify the PA routes and SEC issuer binding.
+
 Live public-data research pilot. Original v2 institutional green/black design preserved. V9 parsing, evidence ledger, person clustering, watchlist and brief concepts integrated with a deployment-compatible reviewed catalog.
 
 ## Production
