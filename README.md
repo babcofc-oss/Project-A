@@ -18,6 +18,8 @@ City radius uses Census 2025 place representative coordinates for the disclosed 
 
 ## Development / refresh
 
+SEC access recovery (October 30, 2026): uncached requests are serialized and temporary HTTP 403, 429 and selected 5xx responses receive at most three total attempts. All workers share a 60/120-second cooldown; numeric Retry-After can extend it to 300 seconds. Persistent failures still reject the refresh and retain last-good evidence. Cached immutable archives require no network request. The scheduled request identity includes the published business contact. Run `python3 -m unittest test_fetch test_refresh` for request recovery and catalog rollback checks.
+
 Serve this directory with python3 -m http.server 8787. Run python3 -m unittest test_integrity.py test_transitions.py -v and node test_scoring.js. Run PROJECT_A_USER_AGENT="Project A your-real-contact" python3 ingest.py to refresh the reviewed snapshot. Review catalog.json and primary evidence before committing. Run python3 transitions.py --discover to create the 8-K review queue. Discovered filings remain unreleased until named subjects, issuer relationships, fact anchors and SHA-256 fingerprints are reviewed in reviewed-transitions.json. Form 4 refresh reattaches validated reviewed 8-K evidence; changed or missing source evidence fails closed. Discovery refreshes daily; immutable accession XML is cached. Three workers, globally paced at fewer than two requests per second; no uncontrolled retries.
 
 Commit production files to main to trigger the separate GitHub → Vercel project. The connector's write operation returned 403; authenticated GitHub browser uploads succeeded. Do not change The Indicator.

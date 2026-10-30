@@ -4,7 +4,7 @@ Adapted from v9 live_ingestion.py: discovery, fetch, XML parsing, entity resolut
 Run locally, review data/catalog.json, then commit snapshot + evidence together.
 Failures retain the last valid catalog; unvalidated inputs never become facts.
 """
-import concurrent.futures, hashlib, json, os, threading, time, urllib.request
+import concurrent.futures, hashlib, json, os, threading, time, urllib.request, urllib.error
 import xml.etree.ElementTree as ET
 from datetime import date, datetime, timezone
 from decimal import Decimal, InvalidOperation
@@ -19,19 +19,33 @@ if not ISSUERS or any(not c.isdigit() or not 1 <= len(c) <= 10 for c in ISSUERS)
 UA = os.getenv('PROJECT_A_USER_AGENT', 'Project A public financial disclosure research Briton Barrett')
 LOCK = threading.Lock()
 LAST = 0
+NOT_BEFORE = 0
 TODAY = date.today()
 
 def fetch(url, dest, force=False):
-    global LAST
+    global LAST, NOT_BEFORE
     if dest.exists() and not force:
         return dest.read_bytes()
-    with LOCK:
-        delay = .6 - (time.monotonic() - LAST)
-        if delay > 0: time.sleep(delay)
-        LAST = time.monotonic()
     req = urllib.request.Request(url, headers={'User-Agent': UA, 'Accept-Encoding': 'identity'})
-    with urllib.request.urlopen(req, timeout=30) as response:
-        body = response.read()
+    for attempt in range(3):
+        # Serialize network requests so all workers honor an SEC cooldown.
+        with LOCK:
+            delay = max(LAST + .6, NOT_BEFORE) - time.monotonic()
+            if delay > 0: time.sleep(delay)
+            LAST = time.monotonic()
+            try:
+                with urllib.request.urlopen(req, timeout=30) as response:
+                    body = response.read()
+                break
+            except urllib.error.HTTPError as error:
+                if error.code not in (403, 429, 500, 502, 503, 504):
+                    raise
+                cooldown = 60 * (attempt + 1)
+                retry_after = error.headers.get('Retry-After', '') if error.headers else ''
+                if retry_after.isdigit(): cooldown = max(cooldown, min(int(retry_after), 300))
+                NOT_BEFORE = time.monotonic() + cooldown
+                if attempt == 2: raise
+                print(f'SEC HTTP {error.code}; shared cooldown {cooldown}s before retry {attempt + 2}/3: {url}', flush=True)
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_bytes(body)
     return body
