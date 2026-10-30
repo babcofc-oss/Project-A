@@ -1,6 +1,6 @@
 (function(root){
   'use strict';
-  const PRODUCT='mocean-evidence-review',MAX_EVENTS=10000;
+  const PRODUCT='mocean-evidence-review',MAX_EVENTS=100000;
   function signature(e){return JSON.stringify([e.sha256,e.date,e.filed_date,e.classification,e.stage,e.code,e.direction,e.shares,e.price,e.value,e.planned]);}
   function snapshot(catalog,at=new Date()){
     if(!Array.isArray(catalog.records))throw new Error('Invalid catalog');

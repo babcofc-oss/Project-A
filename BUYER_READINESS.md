@@ -6,7 +6,7 @@ Briton's stated objective is a $5 million product/company sale. This is a target
 
 | Gate | Current evidence | Next measurable proof |
 | --- | --- | --- |
-| Reliable delivery | The repaired 13-issuer workflow passed ingest, release tests and production publication; retained primary evidence and last-good rollback remain enabled. | Record refresh reliability and recovery over repeated runs. |
+| Reliable delivery | The repaired workflow supports national Form 4 daily-index discovery and 13 configured issuers for other disclosure classes; retained primary evidence and last-good rollback remain enabled. | Record refresh reliability and recovery over repeated runs. |
 | Useful covered market | Philadelphia ZIP 19103 / 50 miles returns 11 planning-trigger records; 114 records overall. | Three independent advisors each evaluate at least five relevant dossiers and identify the source-backed decisions that help their process. |
 | Professional routing | 41 PA records gain six official issuer-scoped source groups. 111 records have published business routes; direct person email/phone remains UNKNOWN except separately validated named evidence. | Confirm that published routes and current affiliations are useful to pilot firms; document gaps without guessing contacts. |
 | Repeat workflow | Browser evidence-review baseline compares exact person/event identities and facts, including newly observed old filings, changes and removals. | Advisors return and use successive evidence updates; browser state is not proof of unique users or retention. |
@@ -37,8 +37,8 @@ Public SEC filings are accessible to others. Differentiation must come from reli
 | 6 | Enterprise pilot | One firm validates review/supervision needs, data freshness and integration; measured productivity and commercial terms before scaling |
 
 ## Current implemented versus unproved
-Implemented: primary evidence retention/fingerprints, exact SEC person/issuer identity, bounded same-person rules, configured-issuer monitored refresh, manual-review labels, source-linked briefs/AI packets, nationwide U.S. ZIP reference search, portable watchlists, purpose-labeled feedback, self-reported demand metrics, and generic CSV/JSON research handoff.
-Unproved or unconnected: broad nationwide prospect coverage, native CRM sync, authenticated user accounts, central outcome collection, production live LLM service, verified advisor testers, paying customers, revenue/retention and buyer interest. Several trigger categories have no connected discovery feed.
+Implemented: primary evidence retention/fingerprints, exact SEC person/issuer identity, bounded same-person rules, nationwide Form 4 daily-index discovery plus configured-issuer monitored refresh, manual-review labels, source-linked briefs/AI packets, nationwide U.S. ZIP reference search, portable watchlists, purpose-labeled feedback, self-reported demand metrics, and generic CSV/JSON research handoff.
+Unproved or unconnected: exhaustive nationwide coverage across all trigger classes, native CRM sync, authenticated user accounts, central outcome collection, production live LLM service, verified advisor testers, paying customers, revenue/retention and buyer interest. Several trigger categories have no connected discovery feed.
 
 ## Integration contract v1
 JSON schema: project-a-research-handoff, schema_version 1. Stable person_id is the idempotency key; person and issuer CIKs remain separate. File timestamp, catalog/scoring versions and evaluated feed freshness accompany all records. source_events preserve event IDs, filing accessions, dates, facts, source URLs and retained SHA-256. research_priority is explicitly inference; matched gross value is not cash available. Private-client information and reviewer notes are excluded. Consumers must map CSV fields, deduplicate by person_id, retain source provenance, honor UNKNOWN and avoid automated solicitation or wealth inference. No vendor-specific import or API has been tested.
@@ -47,4 +47,4 @@ JSON schema: project-a-research-handoff, schema_version 1. Stable person_id is t
 - Broadridge announced its AdvisorTarget acquisition May 30, 2024: https://www.broadridge.com/press-release/2024/advisortarget-is-now-a-part-of-broadridge . Adjacent advisor-targeting data, not the same end-client product.
 - FactSet announced its TIFIN.AI partnership and strategic investment June 29, 2026: https://investor.factset.com/news-releases/news-release-details/factset-expands-wealth-management-workflow-ai-capabilities . Highlights embedded workflows, secure operation and auditable AI.
 
-Next execution: expand fresh primary-source coverage in one promising market, qualify dossiers and get real advisor feedback. Do not inflate counts, pad categories or substitute more dashboard features for demonstrated usefulness.
+Next execution: validate the expanded national Form 4 coverage with substantive advisor research tasks, qualify dossiers and get real advisor feedback. Do not inflate counts, pad categories or substitute more dashboard features for demonstrated usefulness.

@@ -44,7 +44,7 @@ def run():
         current['feed_health']={
             'last_attempt_at':attempted, 'last_success_at':current['validated_at'],
             'status':'OK', 'freshness_target_hours':48,
-            'automatic_scope':'Form 4 and Form 144 discovery for configured issuers only',
+            'automatic_scope':'Nationwide SEC daily-index Form 4 discovery; Form 144 and 8-K metadata for configured issuers',
             'issuer_ciks':ingest.ISSUERS,
             'manual_review':'Executive / board events, private acquisitions and contacts require reviewed primary evidence; a successful SEC fetch does not refresh them.',
             'unconnected':['IPO / lockup','Property sales','Inheritance','Lottery awards','Ownership changes'],

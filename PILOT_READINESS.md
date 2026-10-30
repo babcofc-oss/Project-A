@@ -1,3 +1,6 @@
+## October 30 national discovery update
+The national Form 4 adapter now checks the latest published daily index and validates a recent geographic seed against retained primary ownership XML. ZIP search uses a bundled U.S./Puerto Rico reference and empty areas offer nearest sourced planning triggers. The verified release contains 904 research records across 50 state/territory areas, 687 issuers with Form 4 evidence and 699 people with stock-sale triggers. Of 885 nationally discovered filings, 805 pass release validation and 80 remain held. Current counts are read from `catalog.json`; earlier fixed-issuer counts below describe the preceding release. This expands geographic availability without proving buyer demand, complete trigger coverage, revenue or valuation.
+
 # Project A pilot release gate
 
 ## Coverage repair — October 30, 2026

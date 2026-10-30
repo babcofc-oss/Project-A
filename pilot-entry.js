@@ -29,7 +29,7 @@
   fetch('catalog.json',{cache:'no-cache'}).then(r=>{if(!r.ok)throw new Error('Catalog unavailable');return r.json();}).then(c=>{
     if(!Array.isArray(c.records)||!c.records.length||!Number.isInteger(c.issuer_count))throw new Error('Invalid catalog');
     const routes=c.records.filter(p=>p.contacts?.routes?.some(r=>{const days=(Date.now()-Date.parse(r.reviewed_at))/86400000;return days>=0&&days<=90;})).length;
-    $('pilotCoverage').textContent=`${c.records.length} research records · ${c.issuer_count} configured stock-filing issuers · ${routes} records with published business routes.`;
+    $('pilotCoverage').textContent=`${c.records.length} research records · ${c.issuer_count} issuers with Form 4 evidence · ${routes} records with published business routes.`;
     const states={};for(const p of c.records){const s=p.location?.state;if(s)states[s]=(states[s]||0)+1;}
     for(const [state,count] of Object.entries(states).sort()) {const chip=document.createElement('span');chip.textContent=`${state} · ${count} records`;$('pilotMarkets').appendChild(chip);}
     const health=root.ProjectPriority.health(c);

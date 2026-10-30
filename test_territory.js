@@ -12,7 +12,7 @@ for(const [state,city] of [['NY','NEW YORK'],['CA','LOS ANGELES'],['TX','DALLAS'
 assert.equal(T.distance({lat:NaN,lon:1},charleston),null);assert.equal(T.distance({lat:91,lon:1},charleston),null);
 assert(T.distance({lat:0,lon:179},{lat:0,lon:-179})<140);assert(T.distance({lat:0,lon:0},{lat:0,lon:180})>12000);
 const c=JSON.parse(fs.readFileSync('catalog.json')),triggers=require('./triggers.js');
-const sc=T.coverage(c.records,charleston,'SC',lookup,triggers.actionable),oh=T.coverage(c.records,cincinnati,'SC',lookup,triggers.actionable),ca=T.coverage(c.records,find('CA','LOS ANGELES'),'50',lookup,triggers.actionable);
+const sc=T.coverage(c.records,charleston,'SC',lookup,triggers.actionable),oh=T.coverage(c.records,cincinnati,'SC',lookup,triggers.actionable),ca=T.coverage([],find('CA','LOS ANGELES'),'50',lookup,triggers.actionable);
 assert(sc.people>0);assert(oh.people>0);assert.equal(ca.people,0);assert.equal(ca.planning,0);assert.equal(sc.states.reduce((n,s)=>n+s.people,0),c.records.length);
 assert.equal(T.coverage(c.records,charleston,'all',lookup,triggers.actionable).people,c.records.length);
 const pa=T.coverage(c.records,philadelphia,'50',lookup,triggers.actionable);
@@ -26,3 +26,19 @@ assert.equal(origin.zip,'02108');assert.throws(()=>T.zipOrigin('02108',{...posta
 for(const [o,mode] of [[origin,'75'],[cincinnati,'SC'],[charleston,'all']]){const restored=T.restorePreference(T.preference(o,mode),lookup);assert.deepEqual(restored.origin,o);assert.equal(restored.mode,mode);}
 assert.equal(T.restorePreference({product:'Other',schema:1,origin,mode:'50'},lookup),null);assert.equal(T.restorePreference(T.preference(origin,'3001'),lookup),null);assert.equal(T.restorePreference(T.preference({...origin,lat:91},'50'),lookup),null);
 console.log(`Full-reference geographic QA: ${data.places.length} places; 52 codes; mainland, Alaska, Hawaii, Puerto Rico; empty-market honesty, cached preferences, malformed postal response rejection.`);
+
+const postalRef=JSON.parse(fs.readFileSync('postal-reference.json'));
+for(const zip of ['19103','29412','10001','94103','60601','02108','98101','96813','00901'])assert.ok(T.postalOrigin(zip,postalRef),zip+' resolves from bundled reference');
+assert.equal(T.postalOrigin('00000',postalRef),null);assert.throws(()=>T.postalOrigin('19103',{places:{'19103':['Bad','PA',91,0,'US']}}));
+const near=T.nearest(c.records,philadelphia,lookup,triggers.actionable,5);assert(near.length>0);assert(near.every((x,i)=>!i||x.distance>=near[i-1].distance));assert(near.every(x=>c.records.find(p=>p.id===x.person_id).events.some(triggers.actionable)));
+assert(!T.nearest([{id:'no-trigger',location:{city:'PHILADELPHIA',state:'PA'},events:[]}],philadelphia,lookup,triggers.actionable).length);
+console.log(`Bundled postal lookup: ${Object.keys(postalRef.places).length} ZIPs; invalid points and nearest-trigger ordering verified.`);
+if(c.national_discovery){
+ const nationalMarkets=['10001','94103','90012','60601','75201','33101','02108','98101','80202'];
+ for(const zip of nationalMarkets){
+  const center=T.postalOrigin(zip,postalRef),local=c.records.filter(p=>T.inMarket(p,center,'50',lookup)&&p.events.some(triggers.actionable));
+  assert(local.length>0,zip+' must contain primary-sourced planning triggers within 50 reference miles');
+  for(const p of local)assert(p.events.filter(triggers.actionable).every(e=>e.raw_path&&e.sha256&&e.source_url&&e.date));
+  console.log(`National market ${zip}: ${local.length} sourced planning-trigger records within 50 reference miles.`);
+ }
+}

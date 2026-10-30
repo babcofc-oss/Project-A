@@ -4,7 +4,7 @@ Adapted from v9 live_ingestion.py: discovery, fetch, XML parsing, entity resolut
 Run locally, review data/catalog.json, then commit snapshot + evidence together.
 Failures retain the last valid catalog; unvalidated inputs never become facts.
 """
-import concurrent.futures, hashlib, json, os, threading, time, urllib.request, urllib.error
+import concurrent.futures, hashlib, json, os, re, threading, time, urllib.request, urllib.error
 import xml.etree.ElementTree as ET
 from datetime import date, datetime, timezone
 from decimal import Decimal, InvalidOperation
@@ -28,24 +28,24 @@ def fetch(url, dest, force=False):
         return dest.read_bytes()
     req = urllib.request.Request(url, headers={'User-Agent': UA, 'Accept-Encoding': 'identity'})
     for attempt in range(3):
-        # Serialize network requests so all workers honor an SEC cooldown.
+        # Pace starts globally; network I/O can overlap across three workers.
+        # Every new attempt still honors the shared SEC cooldown.
         with LOCK:
             delay = max(LAST + .6, NOT_BEFORE) - time.monotonic()
             if delay > 0: time.sleep(delay)
             LAST = time.monotonic()
-            try:
-                with urllib.request.urlopen(req, timeout=30) as response:
-                    body = response.read()
-                break
-            except urllib.error.HTTPError as error:
-                if error.code not in (403, 429, 500, 502, 503, 504):
-                    raise
-                cooldown = 60 * (attempt + 1)
-                retry_after = error.headers.get('Retry-After', '') if error.headers else ''
-                if retry_after.isdigit(): cooldown = max(cooldown, min(int(retry_after), 300))
-                NOT_BEFORE = time.monotonic() + cooldown
-                if attempt == 2: raise
-                print(f'SEC HTTP {error.code}; shared cooldown {cooldown}s before retry {attempt + 2}/3: {url}', flush=True)
+        try:
+            with urllib.request.urlopen(req, timeout=30) as response:
+                body = response.read()
+            break
+        except urllib.error.HTTPError as error:
+            if error.code not in (403, 429, 500, 502, 503, 504):raise
+            cooldown = 60 * (attempt + 1)
+            retry_after = error.headers.get('Retry-After', '') if error.headers else ''
+            if retry_after.isdigit():cooldown = max(cooldown, min(int(retry_after), 300))
+            with LOCK:NOT_BEFORE = max(NOT_BEFORE,time.monotonic() + cooldown)
+            if attempt == 2:raise
+            print(f'SEC HTTP {error.code}; shared cooldown {cooldown}s before retry {attempt + 2}/3: {url}', flush=True)
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_bytes(body)
     return body
@@ -63,6 +63,13 @@ def number(text):
 def classify(code, direction):
     if code == 'S' and direction == 'D': return 'LIQUIDITY'
     return {'F': 'TAX_WITHHOLDING', 'A': 'AWARD', 'M': 'EXERCISE_CONTEXT'}.get(code, 'OTHER_CONTEXT')
+
+def xml_date(text):
+    # xs:date permits Z or a numeric timezone after its civil date.
+    match=re.fullmatch(r'(\d{4}-\d{2}-\d{2})(?:Z|([+-])(\d{2}):(\d{2}))?',text or '')
+    if not match:raise ValueError('Invalid XML transaction date')
+    if match[2] and (int(match[3])>14 or int(match[4])>59 or int(match[3])==14 and int(match[4])!=0):raise ValueError('Invalid XML date timezone')
+    return date.fromisoformat(match[1]).isoformat()
 
 def parse_xml(body, accession, source, filed):
     root = ET.fromstring(body)
@@ -83,16 +90,18 @@ def parse_xml(body, accession, source, filed):
     planned = value(root, 'aff10b5One') in ('1','true') or '10b5-1' in all_notes
     city = value(owner, 'reportingOwnerAddress/rptOwnerCity')
     state = value(owner, 'reportingOwnerAddress/rptOwnerState')
-    # Preserve disclosed city only; no street addresses or residential inference.
+    # Preserve disclosed mailing city/state/ZIP; no street addresses or residential inference.
     location = {'city': city, 'state': state, 'kind': 'Reporting-person mailing city; residence UNKNOWN', 'source_url': source,
                 'assertion_class': 'VERIFIED PUBLIC FACT', 'distance_miles': None}
+    postal=value(owner,'reportingOwnerAddress/rptOwnerZipCode') or ''
+    if len(postal)>=5 and postal[:5].isdigit():location['postal_code']=postal[:5]
     events = []
     for i, tx in enumerate(root.findall('nonDerivativeTable/nonDerivativeTransaction')):
         code = value(tx, 'transactionCoding/transactionCode')
         direction = value(tx, 'transactionAmounts/transactionAcquiredDisposedCode/value')
         shares = number(value(tx, 'transactionAmounts/transactionShares/value'))
         price = number(value(tx, 'transactionAmounts/transactionPricePerShare/value'))
-        when = value(tx, 'transactionDate/value')
+        when = xml_date(value(tx, 'transactionDate/value'))
         if not when or date.fromisoformat(when) > TODAY: raise ValueError('Invalid/future transaction date')
         classification = classify(code, direction)
         amount = round(shares * price, 2) if shares is not None and price is not None else None
@@ -180,12 +189,15 @@ def run():
     leadership=merge_leadership(records)
     from business_exits import merge as merge_business
     business=merge_business(records)
+    from national import merge as merge_national
+    national=merge_national(records)
+    amendments=list({(str(int(e['issuer_cik'])),e['accession']):e for e in amendments+national['amendments'] if e.get('issuer_cik')}.values())
     from contacts import merge as merge_contacts
     contact_enrichment=merge_contacts(records)
     records.sort(key=lambda r:r['liquidity_total'], reverse=True)
     result = {'version':'project-a-feed-priority-1', 'validated_at':datetime.now(timezone.utc).isoformat(), 'coverage_start':'2026-06-01',
-              'source':'SEC EDGAR', 'issuer_count':len(ISSUERS), 'refresh':'Reviewed repository snapshot; not a live stream', 'scoring_version':'money-in-motion-v6', 'amendment_review':amendments,
-              'discovered_filings':len(rows), 'validated_filings':len(rows)-len(errors), 'errors':errors,
+              'source':'SEC EDGAR', 'issuer_count':len({int(p['issuer_cik']) for p in records if p.get('issuer_cik') and any(e.get('source_class','FORM4')=='FORM4' for e in p['events'])}), 'configured_issuer_count':len(ISSUERS), 'refresh':'Primary-source validated snapshot; not a live stream', 'scoring_version':'money-in-motion-v6', 'amendment_review':amendments,
+              'discovered_filings':len(set(r[1] for r in rows)|{r['accession'] for r in json.loads((ROOT/'national-discovery.json').read_text())['entries'] if r['form']=='4'}), 'validated_filings':len({e['accession'] for p in records for e in p['events'] if e.get('source_class','FORM4')=='FORM4'}), 'errors':errors, 'national_discovery':national,
               'leadership':leadership, 'contact_enrichment':contact_enrichment, 'business_exits':business, 'form144':proposed, 'reviewed_triggers':other, 'transition_filings':len(reviewed), 'transition_errors':transition_errors, 'records':records}
     if not records: raise RuntimeError('No validated records; retaining previous catalog')
     temporary=ROOT/'catalog.json.tmp'
