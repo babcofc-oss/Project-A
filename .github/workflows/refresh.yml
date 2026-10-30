@@ -16,13 +16,13 @@ jobs:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Validate release rules
         run: |
-          python3 -m unittest test_refresh test_leadership test_integrity test_transitions test_form144 test_business_exits test_contacts
+          python3 -m unittest test_fetch test_refresh test_leadership test_integrity test_transitions test_form144 test_business_exits test_contacts
           for test in test_*.js; do node "$test"; done
       - name: Refresh configured SEC sources
         id: refresh
         continue-on-error: true
         env:
-          PROJECT_A_USER_AGENT: Project A public disclosure research project-a-jet.vercel.app
+          PROJECT_A_USER_AGENT: Project A Briton Barrett britonabarrett@gmail.com
         run: python3 refresh.py
       - name: Verify retained evidence and priority rules
         if: steps.refresh.outcome == 'success'
