@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<ownershipDocument>
+
+    <schemaVersion>X0609</schemaVersion>
+
+    <documentType>4</documentType>
+
+    <periodOfReport>2026-10-27</periodOfReport>
+
+    <issuer>
+        <issuerCik>0001782303</issuerCik>
+        <issuerName>Boundless Bio, Inc.</issuerName>
+        <issuerTradingSymbol>BOLD</issuerTradingSymbol>
+        <issuerForeignTradingSymbol></issuerForeignTradingSymbol>
+    </issuer>
+
+    <reportingOwner>
+        <reportingOwnerId>
+            <rptOwnerCik>0001178579</rptOwnerCik>
+            <rptOwnerName>TANG KEVIN</rptOwnerName>
+        </reportingOwnerId>
+        <reportingOwnerAddress>
+            <rptOwnerNonUSAddressFlag>false</rptOwnerNonUSAddressFlag>
+            <rptOwnerStreet1>4747 EXECUTIVE DRIVE</rptOwnerStreet1>
+            <rptOwnerStreet2>SUITE 210</rptOwnerStreet2>
+            <rptOwnerCity>SAN DIEGO</rptOwnerCity>
+            <rptOwnerState>CA</rptOwnerState>
+            <rptOwnerZipCode>92121</rptOwnerZipCode>
+            <rptOwnerStateDescription></rptOwnerStateDescription>
+        </reportingOwnerAddress>
+        <reportingOwnerRelationship>
+            <isDirector>false</isDirector>
+            <isOfficer>false</isOfficer>
+            <isTenPercentOwner>true</isTenPercentOwner>
+            <isOther>false</isOther>
+            <officerTitle></officerTitle>
+            <otherText></otherText>
+        </reportingOwnerRelationship>
+    </reportingOwner>
+
+    <reportingOwner>
+        <reportingOwnerId>
+            <rptOwnerCik>0001232621</rptOwnerCik>
+            <rptOwnerName>TANG CAPITAL MANAGEMENT LLC</rptOwnerName>
+        </reportingOwnerId>
+        <reportingOwnerAddress>
+            <rptOwnerNonUSAddressFlag>false</rptOwnerNonUSAddressFlag>
+            <rptOwnerStreet1>4747 EXECUTIVE DRIVE</rptOwnerStreet1>
+            <rptOwnerStreet2>SUITE 210</rptOwnerStreet2>
+            <rptOwnerCity>SAN DIEGO</rptOwnerCity>
+            <rptOwnerState>CA</rptOwnerState>
+            <rptOwnerZipCode>92121</rptOwnerZipCode>
+            <rptOwnerStateDescription></rptOwnerStateDescription>
+        </reportingOwnerAddress>
+        <reportingOwnerRelationship>
+            <isDirector>0</isDirector>
+            <isOfficer>0</isOfficer>
+            <isTenPercentOwner>1</isTenPercentOwner>
+            <isOther>0</isOther>
+            <officerTitle></officerTitle>
+            <otherText></otherText>
+        </reportingOwnerRelationship>
+    </reportingOwner>
+
+    <aff10b5One>0</aff10b5One>
+
+    <nonDerivativeTable>
+        <nonDerivativeTransaction>
+            <securityTitle>
+                <value>Common Stock</value>
+            </securityTitle>
+            <transactionDate>
+                <value>2026-10-27</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>P</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+            </transactionCoding>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>10707</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>2.40</value>
+                    <footnoteId id="F1"/>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>A</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>3022456</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>I</value>
+                </directOrIndirectOwnership>
+                <natureOfOwnership>
+                    <value>See Footnote</value>
+                    <footnoteId id="F2"/>
+                </natureOfOwnership>
+            </ownershipNature>
+        </nonDerivativeTransaction>
+    </nonDerivativeTable>
+
+    <derivativeTable></derivativeTable>
+
+    <footnotes>
+        <footnote id="F1">The prices reported are weighted-average prices. These shares were purchased in multiple transactions at prices ranging from $2.38 to $2.40. The Reporting Persons undertake to provide the Issuer, any security holder of the Issuer or the SEC staff, upon request, all information regarding the number of shares purchased at each price within the range set forth in Footnote 1.</footnote>
+        <footnote id="F2">Tang Capital Partners, LP (&quot;TCP&quot;) beneficially owns 691,177 shares, Tang Capital Partners International, LP (&quot;TCPI&quot;) beneficially owns 961,511 shares, Tang Capital Partners III, Inc. (&quot;TCP III&quot;) beneficially owns 691,170 shares, and Tang Capital Partners IV, Inc. (&quot;TCP IV&quot;) beneficially owns 678,598 shares. Kevin Tang is the sole manager of Tang Capital Management, LLC, which is the general partner of TCP and TCPI. Kevin Tang is the sole director and Chief Executive Officer of TCP III and TCP IV, which are indirectly wholly owned by TCP. Mr. Tang has a pecuniary interest in the shares beneficially held by TCP, TCPI, TCP III and TCP IV.</footnote>
+    </footnotes>
+
+    <ownerSignature>
+        <signatureName>Kevin Tang</signatureName>
+        <signatureDate>2026-10-29</signatureDate>
+    </ownerSignature>
+
+    <ownerSignature>
+        <signatureName>Kevin Tang, Manager</signatureName>
+        <signatureDate>2026-10-29</signatureDate>
+    </ownerSignature>
+</ownershipDocument>
