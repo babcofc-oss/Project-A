@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<ownershipDocument>
+
+    <schemaVersion>X0609</schemaVersion>
+
+    <documentType>4</documentType>
+
+    <periodOfReport>2026-09-21</periodOfReport>
+
+    <issuer>
+        <issuerCik>0001877184</issuerCik>
+        <issuerName>KESTRA MEDICAL TECHNOLOGIES, LTD.</issuerName>
+        <issuerTradingSymbol>KMTS</issuerTradingSymbol>
+        <issuerForeignTradingSymbol></issuerForeignTradingSymbol>
+    </issuer>
+
+    <reportingOwner>
+        <reportingOwnerId>
+            <rptOwnerCik>0001820001</rptOwnerCik>
+            <rptOwnerName>Kwo Elizabeth</rptOwnerName>
+        </reportingOwnerId>
+        <reportingOwnerAddress>
+            <rptOwnerNonUSAddressFlag>false</rptOwnerNonUSAddressFlag>
+            <rptOwnerStreet1>C/O KESTRA MEDICAL TECHNOLOGIES, LTD.</rptOwnerStreet1>
+            <rptOwnerStreet2>3933 LAKE WASHINGTON BLVD NE, SUITE 200</rptOwnerStreet2>
+            <rptOwnerCity>KIRKLAND</rptOwnerCity>
+            <rptOwnerState>WA</rptOwnerState>
+            <rptOwnerZipCode>98033</rptOwnerZipCode>
+            <rptOwnerStateDescription></rptOwnerStateDescription>
+        </reportingOwnerAddress>
+        <reportingOwnerRelationship>
+            <isDirector>true</isDirector>
+            <isOfficer>false</isOfficer>
+            <isTenPercentOwner>false</isTenPercentOwner>
+            <isOther>false</isOther>
+        </reportingOwnerRelationship>
+    </reportingOwner>
+
+    <aff10b5One>false</aff10b5One>
+
+    <nonDerivativeTable>
+        <nonDerivativeTransaction>
+            <securityTitle>
+                <value>Common Shares</value>
+            </securityTitle>
+            <transactionDate>
+                <value>2026-09-21</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>S</transactionCode>
+                <equitySwapInvolved>false</equitySwapInvolved>
+                <footnoteId id="F1"/>
+            </transactionCoding>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>4010</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>24.2563</value>
+                    <footnoteId id="F2"/>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>D</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>14116</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </nonDerivativeTransaction>
+    </nonDerivativeTable>
+
+    <footnotes>
+        <footnote id="F1">The sale reported in this Form 4 represents a nondiscretionary sale of shares required to be sold by the reporting person pursuant to sell to cover transactions to satisfy tax withholding obligations in connection with the vesting and settlement of restricted stock units.</footnote>
+        <footnote id="F2">The price in Column 4 is a weighted average price. The prices at which the reported securities were sold ranged from $24.2200 to $24.3200. Upon request, the reporting person will provide to the Issuer, any security holder of the Issuer, or the SEC staff, information regarding the number of shares at each price within the range.</footnote>
+    </footnotes>
+
+    <ownerSignature>
+        <signatureName>/s/ Traci S. Umberger as attorney-in-fact for Elizabeth Kwo</signatureName>
+        <signatureDate>2026-09-23</signatureDate>
+    </ownerSignature>
+</ownershipDocument>
