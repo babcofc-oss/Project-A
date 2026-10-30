@@ -4,9 +4,22 @@ from pathlib import Path
 from unittest.mock import MagicMock, patch
 from urllib.error import HTTPError
 import ingest
+from copy import deepcopy
 
 
 class FetchTests(unittest.TestCase):
+    def test_empty_transaction_filing_and_worker_order_preserve_latest_metadata(self):
+        old = {'id': 'same-owner', 'role': 'Old role', 'location': {'city': 'Old city'}, 'events': [{'id': 'sale', 'value': 100}]}
+        latest = {'id': 'same-owner', 'role': 'New role', 'location': {'city': 'New city'}, 'events': []}
+        rows = [(old, '2026-10-01', 'older'), (latest, '2026-10-29', 'newer')]
+        for ordered in (rows, rows[::-1]):
+            people, filings = {}, {}
+            for person, filed, accession in ordered:
+                ingest.merge_person(people, filings, deepcopy(person), filed, accession)
+            self.assertEqual(people['same-owner']['role'], 'New role')
+            self.assertEqual(people['same-owner']['location'], latest['location'])
+            self.assertEqual(people['same-owner']['events'], old['events'])
+
     def test_temporary_sec_denial_recovers_after_shared_cooldown(self):
         response = MagicMock()
         response.__enter__.return_value.read.return_value = b'verified-source'

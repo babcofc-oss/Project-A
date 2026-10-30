@@ -12,7 +12,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 INPUTS = ROOT / '.ingestion-cache'
-ISSUERS = list(dict.fromkeys(c.strip() for c in os.getenv('PROJECT_A_ISSUERS', '1653477,1280058,910638,918965,857855,1090009,932781').split(',')))
+ISSUERS = list(dict.fromkeys(c.strip() for c in os.getenv('PROJECT_A_ISSUERS', '1653477,1280058,910638,918965,857855,1090009,932781,1140859,59558,1166691,890926,794170,37785').split(',')))
 ISSUERS = [c.strip() for c in ISSUERS]
 if not ISSUERS or any(not c.isdigit() or not 1 <= len(c) <= 10 for c in ISSUERS):
     raise ValueError('PROJECT_A_ISSUERS must be a comma-separated list of valid SEC issuer CIKs')
@@ -120,6 +120,20 @@ def process(row):
     body = fetch(raw_url, ROOT / (accession + '.xml'))
     return parse_xml(body, accession, source, filed)
 
+def merge_person(people, latest_filing, person, filed, accession):
+    key = person['id']
+    filing = (filed, accession)
+    if key not in people:
+        people[key] = person
+    else:
+        old = people[key]
+        old['events'].extend(person['events'])
+        # Filing order is stable across worker completion order, including
+        # derivative-only disclosures with no non-derivative transaction rows.
+        if filing > latest_filing[key]:
+            old['role'], old['location'] = person['role'], person['location']
+    latest_filing[key] = max(filing, latest_filing.get(key, filing))
+
 def run():
     rows = []; submissions = {}; amendments = []
     for cik in ISSUERS:
@@ -131,20 +145,14 @@ def run():
                 amendments.append(dict(issuer_cik=cik, accession=recent['accessionNumber'][i], filed_date=recent['filingDate'][i], status='REVIEW REQUIRED; amended transactions not automatically reconciled'))
             if form == '4' and recent['filingDate'][i] >= '2026-06-01':
                 rows.append((cik, recent['accessionNumber'][i], recent['primaryDocument'][i], recent['filingDate'][i]))
-    people, errors = {}, []
+    people, latest_filing, errors = {}, {}, []
     with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
         futures = {executor.submit(process, row): row for row in rows}
         for future in concurrent.futures.as_completed(futures):
             row = futures[future]
             try:
                 person = future.result()
-                if person['id'] not in people: people[person['id']] = person
-                else:
-                    old = people[person['id']]
-                    old['events'].extend(person['events'])
-                    # Use latest dated record for role and location.
-                    if max(e['date'] for e in person['events']) > max(e['date'] for e in old['events'] if e not in person['events']):
-                        old['role'], old['location'] = person['role'], person['location']
+                merge_person(people, latest_filing, person, row[3], row[1])
                 print(row[1], person['person_name'], len(person['events']), flush=True)
             except Exception as error:
                 errors.append({'accession': row[1], 'error': str(error)})
@@ -152,6 +160,9 @@ def run():
     if errors: raise RuntimeError("Form 4 refresh incomplete; retaining last good catalog: "+json.dumps(errors))
     records = []
     for person in people.values():
+        # This adapter releases non-derivative rows only. Do not publish an
+        # empty dossier or imply that derivative-only filings establish sales.
+        if not person['events']: continue
         person['events'] = sorted({e['id']: e for e in person['events']}.values(), key=lambda e:(e['date'],e['id']), reverse=True)
         person['liquidity_total'] = round(sum(e['value'] or 0 for e in person['events'] if e['classification'] == 'LIQUIDITY'), 2)
         person['signal_type'] = 'Liquidity' if any(e['classification'] == 'LIQUIDITY' for e in person['events']) else 'Monitor'

@@ -15,6 +15,10 @@ const c=JSON.parse(fs.readFileSync('catalog.json')),triggers=require('./triggers
 const sc=T.coverage(c.records,charleston,'SC',lookup,triggers.actionable),oh=T.coverage(c.records,cincinnati,'SC',lookup,triggers.actionable),ca=T.coverage(c.records,find('CA','LOS ANGELES'),'50',lookup,triggers.actionable);
 assert(sc.people>0);assert(oh.people>0);assert.equal(ca.people,0);assert.equal(ca.planning,0);assert.equal(sc.states.reduce((n,s)=>n+s.people,0),c.records.length);
 assert.equal(T.coverage(c.records,charleston,'all',lookup,triggers.actionable).people,c.records.length);
+const pa=T.coverage(c.records,philadelphia,'50',lookup,triggers.actionable);
+assert(pa.people>0,'Philadelphia radius must retain real covered records');
+assert(pa.planning>0,'Philadelphia coverage must include source-backed planning triggers');
+console.log(`Philadelphia 50-mile coverage: ${pa.people} people, ${pa.planning} planning-trigger records.`);
 const unknown={location:{state:'SC',city:'Unknown'},events:[]};assert.equal(T.inMarket(unknown,charleston,'50',lookup),false);assert.equal(T.inMarket(unknown,charleston,'SC',lookup),true);
 for(const [zip,country] of [['10001','US'],['00601','PR'],['00701','PR'],['00901','PR'],['00802','VI'],['96799','AS'],['96910','GU'],['96950','MP']])assert.equal(T.zipCountry(zip),country);
 const postal={'post code':'02108','country abbreviation':'US',places:[{'place name':'Boston','state abbreviation':'MA',latitude:'42.35',longitude:'-71.06'}]},origin=T.zipOrigin('02108',postal);

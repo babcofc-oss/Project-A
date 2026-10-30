@@ -1,5 +1,8 @@
 # Project A pilot release gate
 
+## Coverage repair — October 30, 2026
+The default SEC refresh now includes 13 issuers and successfully validates 201 Form 4 filings and 30 matched Form 144 notices. The released catalog contains 114 people: 71 SC, 41 PA and two OH disclosed filing/company locations. Empty non-derivative dossiers are excluded. These are research records, not qualified prospects. Philadelphia-area source coverage now exists; radius checks still exclude unresolved mailing cities. Source matching, retained fingerprints, last-good rollback and the complete QA suites remain release gates. This repairs the former SC/OH-only scope; it does not establish broad nationwide discovery, tester demand or revenue. The earlier October 8 counts below describe the prior snapshot.
+
 Reviewed October 8, 2026. Decision: suitable for a labeled research demonstration; not yet ready for a broad local-opportunity pilot across arbitrary markets. No audience invitation has been sent.
 
 ## Geographic verification
