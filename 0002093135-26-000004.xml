@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<ownershipDocument>
+
+    <schemaVersion>X0609</schemaVersion>
+
+    <documentType>4</documentType>
+
+    <periodOfReport>2026-09-14</periodOfReport>
+
+    <notSubjectToSection16>0</notSubjectToSection16>
+
+    <issuer>
+        <issuerCik>0001866364</issuerCik>
+        <issuerName>Webull Corp</issuerName>
+        <issuerTradingSymbol>BULL</issuerTradingSymbol>
+    </issuer>
+
+    <reportingOwner>
+        <reportingOwnerId>
+            <rptOwnerCik>0002093135</rptOwnerCik>
+            <rptOwnerName>Wang Haichen</rptOwnerName>
+        </reportingOwnerId>
+        <reportingOwnerAddress>
+            <rptOwnerNonUSAddressFlag>false</rptOwnerNonUSAddressFlag>
+            <rptOwnerStreet1>200 CARILLON PARKWAY</rptOwnerStreet1>
+            <rptOwnerStreet2></rptOwnerStreet2>
+            <rptOwnerCity>SAINT PETERSBURG</rptOwnerCity>
+            <rptOwnerState>FL</rptOwnerState>
+            <rptOwnerZipCode>33716</rptOwnerZipCode>
+            <rptOwnerStateDescription></rptOwnerStateDescription>
+        </reportingOwnerAddress>
+        <reportingOwnerRelationship>
+            <isDirector>1</isDirector>
+            <isOfficer>1</isOfficer>
+            <isTenPercentOwner>0</isTenPercentOwner>
+            <isOther>0</isOther>
+            <officerTitle>Chief Financial Officer</officerTitle>
+        </reportingOwnerRelationship>
+    </reportingOwner>
+
+    <aff10b5One>0</aff10b5One>
+
+    <nonDerivativeTable>
+        <nonDerivativeTransaction>
+            <securityTitle>
+                <value>Class A Ordinary Shares</value>
+            </securityTitle>
+            <transactionDate>
+                <value>2026-09-14</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>S</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+            </transactionCoding>
+            <transactionTimeliness>
+                <value></value>
+            </transactionTimeliness>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>55000</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>8.9772</value>
+                    <footnoteId id="F1"/>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>D</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>772046</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>I</value>
+                </directOrIndirectOwnership>
+                <natureOfOwnership>
+                    <value>By spouse</value>
+                </natureOfOwnership>
+            </ownershipNature>
+        </nonDerivativeTransaction>
+    </nonDerivativeTable>
+
+    <footnotes>
+        <footnote id="F1">The price reported in Column 4 is a weighted average price. These shares were sold in multiple transactions at prices ranging from $8.8700 to $9.0950, inclusive. The Reporting Person undertakes to provide to the Issuer, any security holder of the Issuer, or the staff of the U.S. Securities and Exchange Commission, upon request, full information regarding the number of shares sold at each separate price within the ranges set forth in this footnote.</footnote>
+    </footnotes>
+
+    <ownerSignature>
+        <signatureName>/s/ Liwei Cao, attorney-in-fact</signatureName>
+        <signatureDate>2026-09-16</signatureDate>
+    </ownerSignature>
+</ownershipDocument>

@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<ownershipDocument>
+
+    <schemaVersion>X0609</schemaVersion>
+
+    <documentType>4</documentType>
+
+    <periodOfReport>2026-09-28</periodOfReport>
+
+    <issuer>
+        <issuerCik>0001901279</issuerCik>
+        <issuerName>Nayax Ltd.</issuerName>
+        <issuerTradingSymbol>NYAX</issuerTradingSymbol>
+        <issuerForeignTradingSymbol></issuerForeignTradingSymbol>
+    </issuer>
+
+    <reportingOwner>
+        <reportingOwnerId>
+            <rptOwnerCik>0002081572</rptOwnerCik>
+            <rptOwnerName>Furman Carly Lisanne</rptOwnerName>
+        </reportingOwnerId>
+        <reportingOwnerAddress>
+            <rptOwnerNonUSAddressFlag>false</rptOwnerNonUSAddressFlag>
+            <rptOwnerStreet1>EXECUTIVE PLAZA 1</rptOwnerStreet1>
+            <rptOwnerStreet2>11350 MCCORMICK ROAD, SUITE 1004</rptOwnerStreet2>
+            <rptOwnerCity>HUNT VALLEY</rptOwnerCity>
+            <rptOwnerState>MD</rptOwnerState>
+            <rptOwnerZipCode>21031</rptOwnerZipCode>
+            <rptOwnerStateDescription></rptOwnerStateDescription>
+        </reportingOwnerAddress>
+        <reportingOwnerRelationship>
+            <isDirector>0</isDirector>
+            <isOfficer>1</isOfficer>
+            <isTenPercentOwner>0</isTenPercentOwner>
+            <isOther>0</isOther>
+            <officerTitle>CEO NAYX North America</officerTitle>
+        </reportingOwnerRelationship>
+    </reportingOwner>
+
+    <aff10b5One>0</aff10b5One>
+
+    <nonDerivativeTable>
+        <nonDerivativeTransaction>
+            <securityTitle>
+                <value>Ordinary Shares</value>
+            </securityTitle>
+            <transactionDate>
+                <value>2026-09-28</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>S</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+                <footnoteId id="F1"/>
+            </transactionCoding>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>219</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>45.0107</value>
+                    <footnoteId id="F2"/>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>D</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>20905</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </nonDerivativeTransaction>
+    </nonDerivativeTable>
+
+    <footnotes>
+        <footnote id="F1">The shares sold represent shares withheld and sold by the Issuer to satisfy tax withholding obligations in connection with the vesting of restricted share units</footnote>
+        <footnote id="F2">The price reported is a weighted average price. These shares were sold in multiple transactions ranging from  $44.63 to $45.38. The reporting person undertakes to provide full information regarding the number of shares sold at each separate price upon request</footnote>
+    </footnotes>
+
+    <ownerSignature>
+        <signatureName>/s/ Meirav Shemesh on behalf of Oppenheimer Israel, as Attorney-in-fact</signatureName>
+        <signatureDate>2026-09-29</signatureDate>
+    </ownerSignature>
+</ownershipDocument>

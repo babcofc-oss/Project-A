@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<ownershipDocument>
+
+    <schemaVersion>X0609</schemaVersion>
+
+    <documentType>4</documentType>
+
+    <periodOfReport>2026-08-12</periodOfReport>
+
+    <issuer>
+        <issuerCik>0001822993</issuerCik>
+        <issuerName>Jackson Financial Inc.</issuerName>
+        <issuerTradingSymbol>JXN</issuerTradingSymbol>
+        <issuerForeignTradingSymbol></issuerForeignTradingSymbol>
+    </issuer>
+
+    <reportingOwner>
+        <reportingOwnerId>
+            <rptOwnerCik>0001977482</rptOwnerCik>
+            <rptOwnerName>Raub Christopher</rptOwnerName>
+        </reportingOwnerId>
+        <reportingOwnerAddress>
+            <rptOwnerNonUSAddressFlag>false</rptOwnerNonUSAddressFlag>
+            <rptOwnerStreet1>1 CORPORATE WAY</rptOwnerStreet1>
+            <rptOwnerStreet2></rptOwnerStreet2>
+            <rptOwnerCity>LANSING</rptOwnerCity>
+            <rptOwnerState>MI</rptOwnerState>
+            <rptOwnerZipCode>48951</rptOwnerZipCode>
+            <rptOwnerStateDescription></rptOwnerStateDescription>
+        </reportingOwnerAddress>
+        <reportingOwnerRelationship>
+            <isDirector>0</isDirector>
+            <isOfficer>1</isOfficer>
+            <isTenPercentOwner>0</isTenPercentOwner>
+            <isOther>0</isOther>
+            <officerTitle>EVP JFI; CEO PPM America</officerTitle>
+        </reportingOwnerRelationship>
+    </reportingOwner>
+
+    <aff10b5One>0</aff10b5One>
+
+    <nonDerivativeTable>
+        <nonDerivativeTransaction>
+            <securityTitle>
+                <value>Common Stock</value>
+            </securityTitle>
+            <transactionDate>
+                <value>2026-08-12</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>S</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+            </transactionCoding>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>5000</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>130.69</value>
+                    <footnoteId id="F1"/>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>D</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>42159.80</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </nonDerivativeTransaction>
+    </nonDerivativeTable>
+
+    <footnotes>
+        <footnote id="F1">The price reported in Column 4 is a weighted average price. These shares were sold in multiple transactions at prices ranging from $130.41 to $130.76, inclusive. The reporting person undertakes to provide upon request by Jackson Financial Inc., any security holder of Jackson Financial Inc., or the staff of the U.S. Securities and Exchange Commission, full information regarding the number of shares sold at each separate price within the range set forth in this footnote.</footnote>
+    </footnotes>
+
+    <remarks>Power of Attorney on file.</remarks>
+
+    <ownerSignature>
+        <signatureName>/s/ Kristan L. Richardson, as Attorney-in-Fact</signatureName>
+        <signatureDate>2026-08-13</signatureDate>
+    </ownerSignature>
+</ownershipDocument>

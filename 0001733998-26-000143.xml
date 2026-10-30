@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<ownershipDocument>
+
+    <schemaVersion>X0609</schemaVersion>
+
+    <documentType>4</documentType>
+
+    <periodOfReport>2026-09-18</periodOfReport>
+
+    <issuer>
+        <issuerCik>0001733998</issuerCik>
+        <issuerName>Northwest Natural Holding Co</issuerName>
+        <issuerTradingSymbol>NWN</issuerTradingSymbol>
+        <issuerForeignTradingSymbol></issuerForeignTradingSymbol>
+    </issuer>
+
+    <reportingOwner>
+        <reportingOwnerId>
+            <rptOwnerCik>0001241405</rptOwnerCik>
+            <rptOwnerName>ANDERSON DAVID HUGO</rptOwnerName>
+        </reportingOwnerId>
+        <reportingOwnerAddress>
+            <rptOwnerNonUSAddressFlag>false</rptOwnerNonUSAddressFlag>
+            <rptOwnerStreet1>250 SW TAYLOR ST</rptOwnerStreet1>
+            <rptOwnerStreet2></rptOwnerStreet2>
+            <rptOwnerCity>PORTLAND</rptOwnerCity>
+            <rptOwnerState>OR</rptOwnerState>
+            <rptOwnerZipCode>97204</rptOwnerZipCode>
+            <rptOwnerStateDescription></rptOwnerStateDescription>
+        </reportingOwnerAddress>
+        <reportingOwnerRelationship>
+            <isDirector>true</isDirector>
+            <isOfficer>false</isOfficer>
+            <isTenPercentOwner>false</isTenPercentOwner>
+            <isOther>false</isOther>
+        </reportingOwnerRelationship>
+    </reportingOwner>
+
+    <aff10b5One>true</aff10b5One>
+
+    <nonDerivativeTable>
+        <nonDerivativeTransaction>
+            <securityTitle>
+                <value>Common Stock</value>
+            </securityTitle>
+            <transactionDate>
+                <value>2026-09-18</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>S</transactionCode>
+                <equitySwapInvolved>false</equitySwapInvolved>
+                <footnoteId id="F1"/>
+            </transactionCoding>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>1500</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>48.0259</value>
+                    <footnoteId id="F2"/>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>D</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>49259</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </nonDerivativeTransaction>
+        <nonDerivativeHolding>
+            <securityTitle>
+                <value>Common Stock</value>
+            </securityTitle>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>9064.094</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>I</value>
+                </directOrIndirectOwnership>
+                <natureOfOwnership>
+                    <value>See Footnote</value>
+                    <footnoteId id="F3"/>
+                </natureOfOwnership>
+            </ownershipNature>
+        </nonDerivativeHolding>
+    </nonDerivativeTable>
+
+    <footnotes>
+        <footnote id="F1">Transaction made pursuant to a Rule 10b5-1 trading plan established by the reporting person on March 27, 2026.  As previously disclosed, Mr. Anderson retired from his position as CEO of NW Holdings and NW Natural, effective April 1, 2025.  At the time the 10b5-1 Plan was established, Mr. Anderson held more than 7 times the then-current $450,000 stock ownership requirements for non-management directors.  This trading arrangement allows Mr. Anderson to periodically sell a portion of his NW Holdings common stock to diversify his holdings in connection with his retirement.</footnote>
+        <footnote id="F2">This transaction was executed in multiple trades on reported date with prices ranging from $47.9550 to $48.2100, resulting in a weighted average price of $48.0259.  Northwest Natural Holding Company (Issuer) will provide upon request by the Commission staff or a security holder of the Issuer full information regarding the number of shares sold at each separate price.</footnote>
+        <footnote id="F3">Shares have been credited to reporting person's account under Northwest Natural Gas Company's Deferred Compensation Plan for Directors and Executives.</footnote>
+    </footnotes>
+
+    <ownerSignature>
+        <signatureName>Molly J. Wilcox, Attorney-in-Fact</signatureName>
+        <signatureDate>2026-09-21</signatureDate>
+    </ownerSignature>
+</ownershipDocument>
