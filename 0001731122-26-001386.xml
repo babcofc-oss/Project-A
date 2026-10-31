@@ -1,0 +1,224 @@
+<?xml version="1.0"?>
+<ownershipDocument>
+
+    <schemaVersion>X0609</schemaVersion>
+
+    <documentType>4</documentType>
+
+    <periodOfReport>2026-10-28</periodOfReport>
+
+    <notSubjectToSection16>0</notSubjectToSection16>
+
+    <issuer>
+        <issuerCik>0001680378</issuerCik>
+        <issuerName>SenesTech, Inc.</issuerName>
+        <issuerTradingSymbol>SNES</issuerTradingSymbol>
+        <issuerForeignTradingSymbol></issuerForeignTradingSymbol>
+    </issuer>
+
+    <reportingOwner>
+        <reportingOwnerId>
+            <rptOwnerCik>0001273782</rptOwnerCik>
+            <rptOwnerName>GLENBROOK CAPITAL MANAGEMENT</rptOwnerName>
+        </reportingOwnerId>
+        <reportingOwnerAddress>
+            <rptOwnerNonUSAddressFlag>false</rptOwnerNonUSAddressFlag>
+            <rptOwnerStreet1>2207, SUITE B, BELLANCA ST.</rptOwnerStreet1>
+            <rptOwnerStreet2></rptOwnerStreet2>
+            <rptOwnerCity>MINDEN</rptOwnerCity>
+            <rptOwnerState>NV</rptOwnerState>
+            <rptOwnerZipCode>89423</rptOwnerZipCode>
+            <rptOwnerStateDescription></rptOwnerStateDescription>
+        </reportingOwnerAddress>
+        <reportingOwnerRelationship>
+            <isDirector>0</isDirector>
+            <isOfficer>0</isOfficer>
+            <isTenPercentOwner>1</isTenPercentOwner>
+            <isOther>0</isOther>
+            <officerTitle></officerTitle>
+            <otherText></otherText>
+        </reportingOwnerRelationship>
+    </reportingOwner>
+
+    <aff10b5One>0</aff10b5One>
+
+    <nonDerivativeTable>
+        <nonDerivativeTransaction>
+            <securityTitle>
+                <value>Common Stock, par value $0.001 per share</value>
+            </securityTitle>
+            <transactionDate>
+                <value>2026-10-28</value>
+            </transactionDate>
+            <deemedExecutionDate></deemedExecutionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>P</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+            </transactionCoding>
+            <transactionTimeliness></transactionTimeliness>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>28000</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>0.9651</value>
+                    <footnoteId id="F1"/>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>A</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>2194973</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>I</value>
+                </directOrIndirectOwnership>
+                <natureOfOwnership>
+                    <value>See footnote</value>
+                    <footnoteId id="F2"/>
+                </natureOfOwnership>
+            </ownershipNature>
+        </nonDerivativeTransaction>
+        <nonDerivativeTransaction>
+            <securityTitle>
+                <value>Common Stock</value>
+            </securityTitle>
+            <transactionDate>
+                <value>2026-10-30</value>
+            </transactionDate>
+            <deemedExecutionDate></deemedExecutionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>P</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+            </transactionCoding>
+            <transactionTimeliness></transactionTimeliness>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>2000</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>1.0167</value>
+                    <footnoteId id="F3"/>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>A</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>2196973</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>I</value>
+                </directOrIndirectOwnership>
+                <natureOfOwnership>
+                    <value>See footnote</value>
+                    <footnoteId id="F2"/>
+                </natureOfOwnership>
+            </ownershipNature>
+        </nonDerivativeTransaction>
+    </nonDerivativeTable>
+
+    <derivativeTable>
+        <derivativeHolding>
+            <securityTitle>
+                <value>Series I Common Stock Warrants (right to buy)</value>
+            </securityTitle>
+            <conversionOrExercisePrice>
+                <value>5.25</value>
+            </conversionOrExercisePrice>
+            <exerciseDate>
+                <value>2025-08-13</value>
+            </exerciseDate>
+            <expirationDate>
+                <value>2026-11-22</value>
+                <footnoteId id="F6"/>
+            </expirationDate>
+            <underlyingSecurity>
+                <underlyingSecurityTitle>
+                    <value>Common Stock</value>
+                </underlyingSecurityTitle>
+                <underlyingSecurityShares>
+                    <value>90000</value>
+                </underlyingSecurityShares>
+            </underlyingSecurity>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>90000</value>
+                    <footnoteId id="F4"/>
+                    <footnoteId id="F5"/>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>I</value>
+                </directOrIndirectOwnership>
+                <natureOfOwnership>
+                    <value>I - By PFS Trust</value>
+                    <footnoteId id="F2"/>
+                </natureOfOwnership>
+            </ownershipNature>
+        </derivativeHolding>
+        <derivativeHolding>
+            <securityTitle>
+                <value>Series I Common Stock Warrants (right to buy)</value>
+            </securityTitle>
+            <conversionOrExercisePrice>
+                <value>5.25</value>
+            </conversionOrExercisePrice>
+            <exerciseDate>
+                <value>2025-08-13</value>
+            </exerciseDate>
+            <expirationDate>
+                <value>2026-11-22</value>
+                <footnoteId id="F6"/>
+            </expirationDate>
+            <underlyingSecurity>
+                <underlyingSecurityTitle>
+                    <value>Common Stock</value>
+                </underlyingSecurityTitle>
+                <underlyingSecurityShares>
+                    <value>90000</value>
+                </underlyingSecurityShares>
+            </underlyingSecurity>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>90000</value>
+                    <footnoteId id="F4"/>
+                    <footnoteId id="F5"/>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>I</value>
+                </directOrIndirectOwnership>
+                <natureOfOwnership>
+                    <value>I - By PFS Trust</value>
+                    <footnoteId id="F2"/>
+                </natureOfOwnership>
+            </ownershipNature>
+        </derivativeHolding>
+    </derivativeTable>
+
+    <footnotes>
+        <footnote id="F1">The price reported in Column 4 is a weighted average price. These shares were purchased in multiple transactions at prices ranging from $0.8299 to $1.00, inclusive. The Reporting Person undertakes to provide to the Issuer, any security holder of the Issuer, or the staff of the Securities and Exchange Commission, upon request, full information regarding the number of shares purchased at each separate price within the range set forth in this footnote.</footnote>
+        <footnote id="F2">The securities to which this filing relates are held directly by certain accounts for which Glenbrook Capital Management serves as investment manager. The Reporting Person disclaims beneficial ownership of the securities except to the extent of its pecuniary interest therein, and this report shall not be deemed an admission that the Reporting Person is the beneficial owner of such securities for purposes of Section 16 or for any other purpose.</footnote>
+        <footnote id="F3">The price reported in Column 4 is a weighted average price. These shares were purchased in multiple transactions at prices ranging from $0.9870 to $1.0900, inclusive. The Reporting Person undertakes to provide to the Issuer, any security holder of the Issuer, or the staff of the Securities and Exchange Commission, upon request, full information regarding the number of shares purchased at each separate price within the range set forth in this footnote.</footnote>
+        <footnote id="F4">The Reporting Person's Form 3 filed on February 2, 2026 reported Series I Common Stock Warrants exercisable for 90,000 shares of Common Stock. As of that date, and as of the date of this report, the Reporting Person's indirect holdings of Series I Common Stock Warrants were exercisable for an aggregate of 180,000 shares of Common Stock, consisting of 90,000 shares held by PFS Trust and 90,000 shares held by the Glenbrook Capital Management Inc. Employees Profit-Sharing Plan (&quot;GCM EPSP&quot;). This report reflects the Reporting Person's holdings of Series I Common Stock Warrants as corrected. The Form 3 also reported an expiration date of November 13, 2026; the correct expiration date is set forth in footnote (6). There has been no transaction in the Series I Common Stock Warrants since the filing of the Form 3.</footnote>
+        <footnote id="F5">Pursuant to the terms of the Series I Common Stock Warrants, the Reporting Person cannot exercise any of the warrants to the extent the Reporting Person would beneficially own, after any such exercise, more than 4.99% of the outstanding Common Stock for the warrants held by GCM EPSP, or 9.99% of the outstanding Common Stock for the warrants held by PFS Trust. Consequently, the Reporting Person is not currently able to exercise the warrants reported herein.</footnote>
+        <footnote id="F6">The Series I Common Stock Warrants expire on the fifteen-month anniversary of the effective date of the Issuer's resale registration statement on Form S-3 (File No. 333-289650), which became effective on August 22, 2025. Because November 22, 2026 is not a Trading Day, under the terms of the warrants they may be exercised until 5:00 p.m. (New York City time) on the next succeeding Trading Day, November 23, 2026.</footnote>
+    </footnotes>
+
+    <ownerSignature>
+        <signatureName>/s/ Robert W. Lishman</signatureName>
+        <signatureDate>2026-10-30</signatureDate>
+    </ownerSignature>
+</ownershipDocument>

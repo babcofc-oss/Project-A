@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<ownershipDocument>
+
+    <schemaVersion>X0609</schemaVersion>
+
+    <documentType>4</documentType>
+
+    <periodOfReport>2026-10-28</periodOfReport>
+
+    <notSubjectToSection16>0</notSubjectToSection16>
+
+    <issuer>
+        <issuerCik>0002085091</issuerCik>
+        <issuerName>Robinhood Ventures Fund I</issuerName>
+        <issuerTradingSymbol>RVI</issuerTradingSymbol>
+        <issuerForeignTradingSymbol></issuerForeignTradingSymbol>
+    </issuer>
+
+    <reportingOwner>
+        <reportingOwnerId>
+            <rptOwnerCik>0001783879</rptOwnerCik>
+            <rptOwnerName>Robinhood Markets, Inc.</rptOwnerName>
+        </reportingOwnerId>
+        <reportingOwnerAddress>
+            <rptOwnerNonUSAddressFlag>false</rptOwnerNonUSAddressFlag>
+            <rptOwnerStreet1>85 WILLOW ROAD</rptOwnerStreet1>
+            <rptOwnerStreet2></rptOwnerStreet2>
+            <rptOwnerCity>MENLO PARK</rptOwnerCity>
+            <rptOwnerState>CA</rptOwnerState>
+            <rptOwnerZipCode>94025</rptOwnerZipCode>
+            <rptOwnerStateDescription></rptOwnerStateDescription>
+        </reportingOwnerAddress>
+        <reportingOwnerRelationship>
+            <isDirector>0</isDirector>
+            <isOfficer>0</isOfficer>
+            <isTenPercentOwner>1</isTenPercentOwner>
+            <isOther>0</isOther>
+            <officerTitle></officerTitle>
+            <otherText></otherText>
+        </reportingOwnerRelationship>
+    </reportingOwner>
+
+    <aff10b5One>0</aff10b5One>
+
+    <nonDerivativeTable>
+        <nonDerivativeTransaction>
+            <securityTitle>
+                <value>Common Shares of Beneficial Interest</value>
+            </securityTitle>
+            <transactionDate>
+                <value>2026-10-28</value>
+            </transactionDate>
+            <deemedExecutionDate></deemedExecutionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>S</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+            </transactionCoding>
+            <transactionTimeliness></transactionTimeliness>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>124319</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>24.77</value>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>D</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>12921815</value>
+                    <footnoteId id="F1"/>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                    <footnoteId id="F2"/>
+                    <footnoteId id="F3"/>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </nonDerivativeTransaction>
+    </nonDerivativeTable>
+
+    <footnotes>
+        <footnote id="F1">Total shares held reflects the stock split that was effective immediately before the completion of the initial public offering, which resulted in each share outstanding as of March 5, 2026 being classified into 1.0239 shares of beneficial interest.</footnote>
+        <footnote id="F2">Represents the common shares of beneficial interest held by Robinhood Markets, Inc. and Robinhood Employee Fund, LP. Robinhood Employee Fund GP, LLC is the general partner of Robinhood Employee Fund, LP. Robinhood Employee Fund GP, LLC is wholly-owned by Robinhood Markets, Inc.</footnote>
+        <footnote id="F3">Each of Robinhood Markets, Inc. and Robinhood Employee Fund, LP disclaims beneficial ownership of the common shares of beneficial interest reported herein except to the extent of its pecuniary interest therein, and this report shall not be deemed an admission that any person or entity is the beneficial owner of such securities for purposes of Section 16 of the Securities Exchange Act of 1934, as amended, or for any other purpose.</footnote>
+    </footnotes>
+
+    <ownerSignature>
+        <signatureName>Robinhood Markets, Inc., By: /s/ Manan Shah, Name: Manan Shah, Title: Treasurer</signatureName>
+        <signatureDate>2026-10-30</signatureDate>
+    </ownerSignature>
+</ownershipDocument>

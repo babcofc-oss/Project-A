@@ -1,0 +1,471 @@
+<?xml version="1.0"?>
+<ownershipDocument>
+
+    <schemaVersion>X0609</schemaVersion>
+
+    <documentType>4</documentType>
+
+    <periodOfReport>2026-10-28</periodOfReport>
+
+    <notSubjectToSection16>0</notSubjectToSection16>
+
+    <issuer>
+        <issuerCik>0001513525</issuerCik>
+        <issuerName>ADIAL PHARMACEUTICALS, INC.</issuerName>
+        <issuerTradingSymbol>ADIL</issuerTradingSymbol>
+        <issuerForeignTradingSymbol></issuerForeignTradingSymbol>
+    </issuer>
+
+    <reportingOwner>
+        <reportingOwnerId>
+            <rptOwnerCik>0001741937</rptOwnerCik>
+            <rptOwnerName>Davidson Matt</rptOwnerName>
+        </reportingOwnerId>
+        <reportingOwnerAddress>
+            <rptOwnerNonUSAddressFlag>false</rptOwnerNonUSAddressFlag>
+            <rptOwnerStreet1>C/O AZORA THERAPEUTICS, INC.</rptOwnerStreet1>
+            <rptOwnerStreet2>16501 VENTURA BLVD., SUITE 400</rptOwnerStreet2>
+            <rptOwnerCity>ENCINO</rptOwnerCity>
+            <rptOwnerState>CA</rptOwnerState>
+            <rptOwnerZipCode>91436</rptOwnerZipCode>
+            <rptOwnerStateDescription></rptOwnerStateDescription>
+        </reportingOwnerAddress>
+        <reportingOwnerRelationship>
+            <isDirector>1</isDirector>
+            <isOfficer>1</isOfficer>
+            <isTenPercentOwner>0</isTenPercentOwner>
+            <isOther>0</isOther>
+            <officerTitle>President and CEO</officerTitle>
+            <otherText></otherText>
+        </reportingOwnerRelationship>
+    </reportingOwner>
+
+    <aff10b5One>0</aff10b5One>
+
+    <nonDerivativeTable>
+        <nonDerivativeTransaction>
+            <securityTitle>
+                <value>Common Stock</value>
+            </securityTitle>
+            <transactionDate>
+                <value>2026-10-28</value>
+                <footnoteId id="F1"/>
+                <footnoteId id="F2"/>
+                <footnoteId id="F3"/>
+            </transactionDate>
+            <deemedExecutionDate></deemedExecutionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>A</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+                <footnoteId id="F1"/>
+                <footnoteId id="F2"/>
+                <footnoteId id="F3"/>
+            </transactionCoding>
+            <transactionTimeliness></transactionTimeliness>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>232417</value>
+                    <footnoteId id="F3"/>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>0</value>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>A</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>294064</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </nonDerivativeTransaction>
+        <nonDerivativeHolding>
+            <securityTitle>
+                <value>Common Stock</value>
+            </securityTitle>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>3427</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>I</value>
+                </directOrIndirectOwnership>
+                <natureOfOwnership>
+                    <value>By Matt and Alli Davidson Trust</value>
+                    <footnoteId id="F13"/>
+                </natureOfOwnership>
+            </ownershipNature>
+        </nonDerivativeHolding>
+    </nonDerivativeTable>
+
+    <derivativeTable>
+        <derivativeTransaction>
+            <securityTitle>
+                <value>Series A Preferred Stock</value>
+            </securityTitle>
+            <conversionOrExercisePrice>
+                <footnoteId id="F2"/>
+            </conversionOrExercisePrice>
+            <transactionDate>
+                <value>2026-10-28</value>
+            </transactionDate>
+            <deemedExecutionDate></deemedExecutionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>A</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+                <footnoteId id="F4"/>
+                <footnoteId id="F5"/>
+            </transactionCoding>
+            <transactionTimeliness></transactionTimeliness>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>1822.13</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <footnoteId id="F4"/>
+                    <footnoteId id="F5"/>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>A</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <exerciseDate>
+                <footnoteId id="F5"/>
+            </exerciseDate>
+            <expirationDate>
+                <footnoteId id="F5"/>
+            </expirationDate>
+            <underlyingSecurity>
+                <underlyingSecurityTitle>
+                    <value>Common Stock</value>
+                </underlyingSecurityTitle>
+                <underlyingSecurityShares>
+                    <value>1822130</value>
+                    <footnoteId id="F4"/>
+                </underlyingSecurityShares>
+            </underlyingSecurity>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>1822.13</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </derivativeTransaction>
+        <derivativeTransaction>
+            <securityTitle>
+                <value>Series A Preferred Stock</value>
+            </securityTitle>
+            <conversionOrExercisePrice>
+                <footnoteId id="F2"/>
+            </conversionOrExercisePrice>
+            <transactionDate>
+                <value>2026-10-28</value>
+            </transactionDate>
+            <deemedExecutionDate></deemedExecutionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>A</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+                <footnoteId id="F5"/>
+                <footnoteId id="F6"/>
+            </transactionCoding>
+            <transactionTimeliness></transactionTimeliness>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>101.298</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <footnoteId id="F5"/>
+                    <footnoteId id="F6"/>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>A</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <exerciseDate>
+                <footnoteId id="F5"/>
+            </exerciseDate>
+            <expirationDate>
+                <footnoteId id="F5"/>
+            </expirationDate>
+            <underlyingSecurity>
+                <underlyingSecurityTitle>
+                    <value>Common Stock</value>
+                </underlyingSecurityTitle>
+                <underlyingSecurityShares>
+                    <value>101298</value>
+                    <footnoteId id="F6"/>
+                </underlyingSecurityShares>
+            </underlyingSecurity>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>101.298</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>I</value>
+                </directOrIndirectOwnership>
+                <natureOfOwnership>
+                    <value>By Matt and Alli Davidson Trust</value>
+                    <footnoteId id="F6"/>
+                </natureOfOwnership>
+            </ownershipNature>
+        </derivativeTransaction>
+        <derivativeTransaction>
+            <securityTitle>
+                <value>Stock Option (Right to Buy)</value>
+            </securityTitle>
+            <conversionOrExercisePrice>
+                <value>2.98</value>
+                <footnoteId id="F7"/>
+            </conversionOrExercisePrice>
+            <transactionDate>
+                <value>2026-10-28</value>
+                <footnoteId id="F8"/>
+            </transactionDate>
+            <deemedExecutionDate></deemedExecutionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>A</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+            </transactionCoding>
+            <transactionTimeliness></transactionTimeliness>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>232417</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>0</value>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>A</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <exerciseDate>
+                <footnoteId id="F8"/>
+            </exerciseDate>
+            <expirationDate>
+                <value>2036-06-12</value>
+            </expirationDate>
+            <underlyingSecurity>
+                <underlyingSecurityTitle>
+                    <value>Common Stock</value>
+                </underlyingSecurityTitle>
+                <underlyingSecurityShares>
+                    <value>232417</value>
+                </underlyingSecurityShares>
+            </underlyingSecurity>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>232417</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </derivativeTransaction>
+        <derivativeTransaction>
+            <securityTitle>
+                <value>Stock Option (Right to Buy)</value>
+            </securityTitle>
+            <conversionOrExercisePrice>
+                <value>0.54</value>
+            </conversionOrExercisePrice>
+            <transactionDate>
+                <value>2026-10-28</value>
+                <footnoteId id="F9"/>
+            </transactionDate>
+            <deemedExecutionDate></deemedExecutionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>A</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+                <footnoteId id="F9"/>
+            </transactionCoding>
+            <transactionTimeliness></transactionTimeliness>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>286044</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <footnoteId id="F9"/>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>A</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <exerciseDate>
+                <footnoteId id="F10"/>
+            </exerciseDate>
+            <expirationDate>
+                <value>2031-06-01</value>
+            </expirationDate>
+            <underlyingSecurity>
+                <underlyingSecurityTitle>
+                    <value>Common Stock</value>
+                </underlyingSecurityTitle>
+                <underlyingSecurityShares>
+                    <value>286044</value>
+                </underlyingSecurityShares>
+            </underlyingSecurity>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>286044</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </derivativeTransaction>
+        <derivativeTransaction>
+            <securityTitle>
+                <value>Stock Option (Right to Buy)</value>
+            </securityTitle>
+            <conversionOrExercisePrice>
+                <value>1.57</value>
+            </conversionOrExercisePrice>
+            <transactionDate>
+                <value>2026-10-28</value>
+                <footnoteId id="F11"/>
+            </transactionDate>
+            <deemedExecutionDate></deemedExecutionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>A</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+                <footnoteId id="F11"/>
+            </transactionCoding>
+            <transactionTimeliness></transactionTimeliness>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>31914</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <footnoteId id="F11"/>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>A</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <exerciseDate>
+                <footnoteId id="F10"/>
+            </exerciseDate>
+            <expirationDate>
+                <value>2033-11-21</value>
+            </expirationDate>
+            <underlyingSecurity>
+                <underlyingSecurityTitle>
+                    <value>Common Stock</value>
+                </underlyingSecurityTitle>
+                <underlyingSecurityShares>
+                    <value>31914</value>
+                </underlyingSecurityShares>
+            </underlyingSecurity>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>31914</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </derivativeTransaction>
+        <derivativeTransaction>
+            <securityTitle>
+                <value>Stock Option (Right to Buy)</value>
+            </securityTitle>
+            <conversionOrExercisePrice>
+                <value>0.63</value>
+            </conversionOrExercisePrice>
+            <transactionDate>
+                <value>2026-10-28</value>
+                <footnoteId id="F12"/>
+            </transactionDate>
+            <deemedExecutionDate></deemedExecutionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>A</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+                <footnoteId id="F12"/>
+            </transactionCoding>
+            <transactionTimeliness></transactionTimeliness>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>333830</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <footnoteId id="F12"/>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>A</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <exerciseDate>
+                <footnoteId id="F12"/>
+            </exerciseDate>
+            <expirationDate>
+                <value>2036-04-20</value>
+            </expirationDate>
+            <underlyingSecurity>
+                <underlyingSecurityTitle>
+                    <value>Common Stock</value>
+                </underlyingSecurityTitle>
+                <underlyingSecurityShares>
+                    <value>333830</value>
+                </underlyingSecurityShares>
+            </underlyingSecurity>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>333830</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </derivativeTransaction>
+    </derivativeTable>
+
+    <footnotes>
+        <footnote id="F1">On June 11, 2026, the Issuer acquired the private Delaware corporation which was then known as Azora Therapeutics, Inc. (&quot;Old Azora&quot;) in accordance with the Agreement and Plan of Merger, dated June 11, 2026 (&quot;Merger Agreement&quot;), by and among the Issuer, Adial Merger Sub, Inc., a wholly owned subsidiary of the Issuer (&quot;First Merger Sub&quot;), Adial Second Merger Sub, LLC, a wholly owned subsidiary of the Issuer (&quot;Second Merger Sub&quot;), and Old Azora.</footnote>
+        <footnote id="F2">Under the terms of the Merger Agreement, on June 11, 2026, First Merger Sub merged with and into Old Azora, with Old Azora surviving the first merger as a wholly owned subsidiary of the Issuer, and immediately following the first merger, Old Azora merged with and into Second Merger Sub, with Second Merger Sub surviving the second merger as a wholly owned subsidiary of the Issuer (such mergers, collectively the &quot;Merger&quot;). Upon the closing of the Merger, shares of outstanding common stock, Series A-1 Preferred Stock, Series A-2 Preferred Stock and Series A-3 Preferred Stock of Old Azora were converted into the right to receive shares of the Issuer's common stock (&quot;Common Stock&quot;) and Series A Non-Voting Convertible Preferred Stock (&quot;Series A Preferred Stock&quot;) in accordance with the Merger Agreement.</footnote>
+        <footnote id="F3">As previously reported, represents an award of restricted stock units (&quot;RSUs&quot;). On June 11, 2026, the Issuer's board of directors approved the RSUs to be issued on June 12, 2026, contingent on stockholder approval of the issuance of Common Stock upon conversion of the Series A Preferred Stock (the &quot;Preferred Stock Conversion Proposal&quot;). Stockholders approved the Preferred Stock Conversion Proposal on October 28, 2026 (the &quot;Conversion Proposal Approval Date&quot;). In addition, the RSUs' vesting terms were amended October 28, 2026 to provide that the RSUs vest as to 25% of the shares on the first anniversary of the grant date (June 12, 2026), with the remaining shares vesting in a series of 36 equal monthly installments thereafter, subject to the Reporting Person's continuous service through the applicable vesting date.</footnote>
+        <footnote id="F4">Received, along with 61,647 shares of Common Stock previously reported, in exchange for 5,902,500 shares of Old Azora common stock in connection with the Merger Agreement.</footnote>
+        <footnote id="F5">Subject to certain conditions set forth in the Merger Agreement (including receiving stockholder approval of the Preferred Stock Conversion Proposal) and the Certificate of Designation of the Series A Preferred Stock (which contains certain beneficial ownership and other limits), each share of Series A Preferred Stock is convertible into 1,000 shares of Common Stock and has no expiration date. The Series A Preferred Stock will convert automatically into Common Stock within three business days following the Conversion Proposal Approval Date.</footnote>
+        <footnote id="F6">Received, along with 3,427 shares of Common Stock previously reported, in exchange for 200,000 shares of Series A-1 Preferred Stock and 128,138 shares of Series A-2 Preferred Stock of Old Azora in connection with the Merger Agreement. The Reporting Person serves as co-trustee of the Matt and Alli Davidson Trust.</footnote>
+        <footnote id="F7">The exercise price reported on this item corrects a scrivener's error on the Reporting Person's Form 4 filed on June 16, 2026, which inadvertently stated the exercise price for the option as $2.89. The correct amount is $2.98 as reported herein.</footnote>
+        <footnote id="F8">As previously reported, on June 11, 2026, the Issuer's board of directors approved the option grant issued to the Reporting Person on June 12, 2026, contingent on stockholder approval of the Preferred Stock Conversion Proposal. The Issuer's stockholders approved the Preferred Stock Conversion Proposal on the Conversion Proposal Approval Date. In addition, the option's vesting terms were amended October 28, 2026 to provide that the option vests as to 25% of the shares on the first anniversary of the grant date (June 12, 2026), with the remaining shares vesting in a series of 36 equal monthly installments thereafter, subject to the Reporting Person's continuous service through the applicable vesting date.</footnote>
+        <footnote id="F9">Received in exchange for a stock option to acquire 896,272 shares of Old Azora common stock with an exercise price of $0.17 per share, which grant was subject to stockholder approval of the Preferred Stock Conversion Proposal. The Issuer's stockholders approved the Preferred Stock Conversion Proposal on the Conversion Proposal Approval Date.</footnote>
+        <footnote id="F10">Immediately exercisable.</footnote>
+        <footnote id="F11">Received in exchange for a stock option to acquire 100,000 shares of Old Azora common stock with an exercise price of $0.50 per share pursuant to the Merger Agreement, which grant was subject to stockholder approval of the Preferred Stock Conversion Proposal. The Issuer's stockholders approved the Preferred Stock Conversion Proposal on the Conversion Proposal Approval Date.</footnote>
+        <footnote id="F12">Received in exchange for a stock option to acquire 1,046,000 shares of Old Azora common stock with an exercise price of $0.20 per share pursuant to the Merger Agreement, which grant was subject to stockholder approval of the Preferred Stock Conversion Proposal. The Issuer's stockholders approved the Preferred Stock Conversion Proposal on the Conversion Proposal Approval Date. The option vests as to 25% of the shares on the first anniversary of the vesting commencement date (April 20, 2026), with the remaining shares vesting in a series of 36 equal monthly installments thereafter, subject to the Reporting Person's continuous service through the applicable vesting date.</footnote>
+        <footnote id="F13">The Reporting Person serves as co-trustee of the Matt and Alli Davidson Trust.</footnote>
+    </footnotes>
+
+    <ownerSignature>
+        <signatureName>/s/ Matthew Gene Davidson</signatureName>
+        <signatureDate>2026-10-30</signatureDate>
+    </ownerSignature>
+</ownershipDocument>

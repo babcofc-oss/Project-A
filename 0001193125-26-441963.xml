@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<ownershipDocument>
+
+    <schemaVersion>X0609</schemaVersion>
+
+    <documentType>4</documentType>
+
+    <periodOfReport>2026-10-28</periodOfReport>
+
+    <issuer>
+        <issuerCik>0001493318</issuerCik>
+        <issuerName>eToro Group Ltd.</issuerName>
+        <issuerTradingSymbol>ETOR</issuerTradingSymbol>
+        <issuerForeignTradingSymbol></issuerForeignTradingSymbol>
+    </issuer>
+
+    <reportingOwner>
+        <reportingOwnerId>
+            <rptOwnerCik>0001511711</rptOwnerCik>
+            <rptOwnerName>POLITI SANTO</rptOwnerName>
+        </reportingOwnerId>
+        <reportingOwnerAddress>
+            <rptOwnerNonUSAddressFlag>false</rptOwnerNonUSAddressFlag>
+            <rptOwnerStreet1>C/O SPARK CAPITAL</rptOwnerStreet1>
+            <rptOwnerStreet2>200 CLARENDON STREET, 59TH FLOOR</rptOwnerStreet2>
+            <rptOwnerCity>BOSTON</rptOwnerCity>
+            <rptOwnerState>MA</rptOwnerState>
+            <rptOwnerZipCode>02116</rptOwnerZipCode>
+            <rptOwnerStateDescription></rptOwnerStateDescription>
+        </reportingOwnerAddress>
+        <reportingOwnerRelationship>
+            <isDirector>true</isDirector>
+            <isOfficer>false</isOfficer>
+            <isTenPercentOwner>false</isTenPercentOwner>
+            <isOther>false</isOther>
+        </reportingOwnerRelationship>
+    </reportingOwner>
+
+    <aff10b5One>false</aff10b5One>
+
+    <nonDerivativeTable>
+        <nonDerivativeTransaction>
+            <securityTitle>
+                <value>Class A common shares</value>
+            </securityTitle>
+            <transactionDate>
+                <value>2026-10-28</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>J</transactionCode>
+                <equitySwapInvolved>false</equitySwapInvolved>
+            </transactionCoding>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>1228</value>
+                    <footnoteId id="F1"/>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>0</value>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>A</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>12605</value>
+                    <footnoteId id="F2"/>
+                    <footnoteId id="F3"/>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </nonDerivativeTransaction>
+    </nonDerivativeTable>
+
+    <footnotes>
+        <footnote id="F1">Represents shares received by the Reporting Person, for no consideration, in a pro rata distribution in kind by an investment fund unaffiliated with Spark Capital (the &quot;Fund&quot;) to its partners. The Reporting Person is a passive limited partner of the Fund, does not control the Fund or its general partner, and does not have or share voting or investment power over the Fund's portfolio securities.</footnote>
+        <footnote id="F2">Includes 4,635 Class A common shares underlying restricted stock units (&quot;RSUs&quot;), each of which represents a contingent right to receive one Class A common share. 50% of the RSUs vest on August 28, 2027 with the remaining 50% scheduled to vest on August 28, 2028, subject to the Reporting Person's continued service through each vesting date.</footnote>
+        <footnote id="F3">The amount reported in Column 5 reflects the 9,270 RSUs reported on the Reporting Person's Form 4 filed April 29, 2026, which were inadvertently omitted from the direct holdings reported on the Reporting Person's Form 4 filed September 4, 2026.</footnote>
+    </footnotes>
+
+    <remarks>The box indicating that the Reporting Person is no longer subject to Section 16 was inadvertently checked on the Reporting Person's prior Form 4. The Reporting Person remains subject to Section 16, and there have been no transactions by the Reporting Person or the Spark Capital entities since the filing of that Form 4.</remarks>
+
+    <ownerSignature>
+        <signatureName>Santo Politi by: Alexa Lyons, as Attorney-in-fact</signatureName>
+        <signatureDate>2026-10-30</signatureDate>
+    </ownerSignature>
+</ownershipDocument>
