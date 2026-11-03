@@ -58,13 +58,14 @@ def validate(entry, root=ROOT):
         raise ValueError('Company market not established')
     identity=entity_id(entry)
     source_ledger=[{k:v for k,v in s.items() if k!='required_terms'} for s,_ in evidence]
+    acquired = entry['company'] if legacy_market else entry['completion_anchor'].removeprefix('acquisition of ')
     event={
         'id':identity+':acquisition:'+entry['publication_date'], 'accession':entry['source_id'],
         'date':entry['publication_date'], 'filed_date':entry['publication_date'],
         'date_kind':'Announcement publication; completion upper bound',
         'source_class':'COMPANY_ANNOUNCEMENT','trigger_type':'BUSINESS_EXIT',
         'classification':'BUSINESS_EXIT','stage':'COMPLETED','reviewed_trigger':True,
-        'fact':f"{entry['buyer']} reported a completed acquisition involving {entry['company']}; {entry['subject_name']} is identified as its founder.",
+        'fact':f"{entry['buyer']} reported acquiring {acquired}; {entry['subject_name']} is identified as its founder.",
         'status':'Acquisition reported completed by '+entry['publication_date']+'. Exact closing date, individual sale participation and current role UNKNOWN.',
         'relationship_evidence':'Named founder relationship verified in the primary announcement; ownership percentage and individual consideration UNKNOWN.',
         'amount_context':'Deal price and individual proceeds are not disclosed in the retained announcements. Cash received, retained equity, debt and earn-out terms UNKNOWN.',
