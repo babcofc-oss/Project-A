@@ -339,9 +339,9 @@ async function searchZip(){
     render();
     const matchCount=rows().length;
     const coverageNote=matchCount
-      ?'These are matching records in the reviewed catalog, not proof of complete local coverage.'
-      :'Zero results means no matching records in our reviewed coverage, not no opportunities in this market.';
-    $('zipStatus').textContent='Searched ZIP '+zip+' within '+radius+' miles. '+matchCount+' matching verified candidates. '+coverageNote+' Distances use approximate reference coordinates, not street addresses.';
+      ?'Coverage varies by market.'
+      :'No verified matches in this snapshot. Check nearby results below.';
+    $('zipStatus').textContent='Searched ZIP '+zip+' within '+radius+' miles. '+matchCount+' matching verified candidates. '+coverageNote+' Distances are approximate.';
   }catch(error){if(request===zipRequest)$('zipStatus').textContent=(error.name==='AbortError'?'ZIP lookup timed out. Please retry.':error.message)+'. Previous results are unchanged.';}
   finally{clearTimeout(timeout);if(request===zipRequest){$('zipSearch').disabled=false;zipController=null;}}
 }
