@@ -340,7 +340,7 @@ async function searchZip(){
     const matchCount=rows().length;
     const coverageNote=matchCount
       ?'Coverage varies by market.'
-      :'No verified matches in this snapshot. Check nearby results below.';
+      :(document.querySelector('#nearbyEvidence [data-expand-radius]') ? 'No verified matches in this snapshot. Expand your radius to see nearby prospects.' : 'No verified matches in this snapshot with the current search and filters.');
     $('zipStatus').textContent='Searched ZIP '+zip+' within '+radius+' miles. '+matchCount+' matching verified candidates. '+coverageNote+' Distances are approximate.';
   }catch(error){if(request===zipRequest)$('zipStatus').textContent=(error.name==='AbortError'?'ZIP lookup timed out. Please retry.':error.message)+'. Previous results are unchanged.';}
   finally{clearTimeout(timeout);if(request===zipRequest){$('zipSearch').disabled=false;zipController=null;}}
