@@ -64,7 +64,7 @@ def validate(entry, root=ROOT):
         'date_kind':'Announcement publication; completion upper bound',
         'source_class':'COMPANY_ANNOUNCEMENT','trigger_type':'BUSINESS_EXIT',
         'classification':'BUSINESS_EXIT','stage':'COMPLETED','reviewed_trigger':True,
-        'fact':f"{entry['buyer']} reported acquiring {entry['company']}; {entry['subject_name']} is identified as its founder.",
+        'fact':f"{entry['buyer']} reported a completed acquisition involving {entry['company']}; {entry['subject_name']} is identified as its founder.",
         'status':'Acquisition reported completed by '+entry['publication_date']+'. Exact closing date, individual sale participation and current role UNKNOWN.',
         'relationship_evidence':'Named founder relationship verified in the primary announcement; ownership percentage and individual consideration UNKNOWN.',
         'amount_context':'Deal price and individual proceeds are not disclosed in the retained announcements. Cash received, retained equity, debt and earn-out terms UNKNOWN.',
