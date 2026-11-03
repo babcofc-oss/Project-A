@@ -19,7 +19,7 @@ class BusinessExitIntegrity(unittest.TestCase):
             event=person['events'][0]
             self.assertIsNone(event['value'])
             self.assertEqual(event['cash_received'],'UNKNOWN')
-            self.assertEqual(len(event['evidence_sources']),2)
+            self.assertEqual(len(event['evidence_sources']),len(entry['sources']))
 
     def test_tampered_fingerprint_fails(self):
         entry=copy.deepcopy(self.entries[0]);entry['sources'][0]['sha256']='0'*64
@@ -46,6 +46,6 @@ class BusinessExitIntegrity(unittest.TestCase):
         records=[];first=merge(records);ids=[p['id'] for p in records]
         second=merge(records)
         self.assertEqual(first,second);self.assertEqual(ids,[p['id'] for p in records])
-        self.assertEqual(len(records),2)
+        self.assertEqual(len(records),len({entity_id(entry) for entry in self.entries}))
 
 if __name__=='__main__':unittest.main()
