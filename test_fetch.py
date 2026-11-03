@@ -26,19 +26,22 @@ class FetchTests(unittest.TestCase):
         denied = HTTPError('https://www.sec.gov/test', 403, 'Forbidden', {}, None)
         with tempfile.TemporaryDirectory() as folder:
             dest = Path(folder) / 'source.xml'
-            with patch.object(ingest, 'LAST', 0), patch.object(ingest, 'NOT_BEFORE', 0), patch.object(ingest.time, 'monotonic', return_value=1000), patch.object(ingest.time, 'sleep') as sleep, patch.object(ingest.urllib.request, 'urlopen', side_effect=[denied, response]) as request:
+            with patch.object(ingest, 'LAST', 0), patch.object(ingest, 'NOT_BEFORE', 0), patch.object(ingest, 'REQUEST_INTERVAL', .6), patch.object(ingest.time, 'monotonic', return_value=1000), patch.object(ingest.time, 'sleep') as sleep, patch.object(ingest.urllib.request, 'urlopen', side_effect=[denied, response]) as request:
                 self.assertEqual(ingest.fetch(denied.url, dest), b'verified-source')
                 self.assertEqual(request.call_count, 2)
                 sleep.assert_called_once_with(60)
+                self.assertEqual(ingest.REQUEST_INTERVAL, 1.25)
             self.assertEqual(dest.read_bytes(), b'verified-source')
 
     def test_persistent_denial_is_bounded_and_never_cached(self):
         denied = HTTPError('https://www.sec.gov/test', 403, 'Forbidden', {}, None)
         with tempfile.TemporaryDirectory() as folder:
             dest = Path(folder) / 'source.xml'
-            with patch.object(ingest, 'LAST', 0), patch.object(ingest, 'NOT_BEFORE', 0), patch.object(ingest.time, 'sleep'), patch.object(ingest.urllib.request, 'urlopen', side_effect=denied) as request:
-                with self.assertRaises(HTTPError): ingest.fetch(denied.url, dest)
-                self.assertEqual(request.call_count, 3)
+            with patch.object(ingest, 'LAST', 0), patch.object(ingest, 'NOT_BEFORE', 0), patch.object(ingest, 'REQUEST_INTERVAL', .6), patch.object(ingest.time, 'sleep'), patch.object(ingest.urllib.request, 'urlopen', side_effect=denied) as request:
+                with self.assertRaises(ingest.SECRequestError) as raised: ingest.fetch(denied.url, dest)
+                self.assertEqual(request.call_count, 4)
+                self.assertIn('after 4 attempts', str(raised.exception))
+                self.assertIn(denied.url, str(raised.exception))
             self.assertFalse(dest.exists())
 
     def test_non_retryable_error_fails_immediately(self):

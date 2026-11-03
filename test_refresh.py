@@ -26,4 +26,17 @@ class RefreshTests(unittest.TestCase):
             self.assertEqual(result['records'],[])
             self.assertEqual(result['validated_at'],original['validated_at'])
 
+    def test_failed_sec_request_publishes_actionable_endpoint_without_losing_catalog(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder)
+            original={'validated_at':'2026-11-02T15:42:14Z','records':[{'id':'retained-person'}]}
+            (root/'catalog.json').write_text(json.dumps(original))
+            failure=RuntimeError('SEC request failed after 4 attempts: HTTP 403 Forbidden; url=https://data.sec.gov/submissions/CIK0000037785.json')
+            with patch.object(refresh,'ROOT',root),patch.object(refresh.ingest,'run',side_effect=failure):
+                self.assertFalse(refresh.run())
+            result=json.loads((root/'catalog.json').read_text())
+            self.assertEqual(result['records'],original['records'])
+            self.assertEqual(result['feed_health']['last_success_at'],original['validated_at'])
+            self.assertEqual(result['feed_health']['errors'],[str(failure)])
+
 if __name__=='__main__': unittest.main()

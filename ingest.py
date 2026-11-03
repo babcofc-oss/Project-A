@@ -20,18 +20,29 @@ UA = os.getenv('PROJECT_A_USER_AGENT', 'Project A public financial disclosure re
 LOCK = threading.Lock()
 LAST = 0
 NOT_BEFORE = 0
+REQUEST_INTERVAL = .6
+MAX_FETCH_ATTEMPTS = 4
 TODAY = date.today()
 
+class SECRequestError(urllib.error.HTTPError):
+    """Final SEC denial with enough context to diagnose the failed refresh."""
+    def __init__(self, error, attempts):
+        super().__init__(error.url, error.code, error.reason, error.headers, error.fp)
+        self.attempts = attempts
+
+    def __str__(self):
+        return f'SEC request failed after {self.attempts} attempts: HTTP {self.code} {self.reason}; url={self.url}'
+
 def fetch(url, dest, force=False):
-    global LAST, NOT_BEFORE
+    global LAST, NOT_BEFORE, REQUEST_INTERVAL
     if dest.exists() and not force:
         return dest.read_bytes()
     req = urllib.request.Request(url, headers={'User-Agent': UA, 'Accept-Encoding': 'identity'})
-    for attempt in range(3):
+    for attempt in range(MAX_FETCH_ATTEMPTS):
         # Pace starts globally; network I/O can overlap across three workers.
         # Every new attempt still honors the shared SEC cooldown.
         with LOCK:
-            delay = max(LAST + .6, NOT_BEFORE) - time.monotonic()
+            delay = max(LAST + REQUEST_INTERVAL, NOT_BEFORE) - time.monotonic()
             if delay > 0: time.sleep(delay)
             LAST = time.monotonic()
         try:
@@ -43,9 +54,15 @@ def fetch(url, dest, force=False):
             cooldown = 60 * (attempt + 1)
             retry_after = error.headers.get('Retry-After', '') if error.headers else ''
             if retry_after.isdigit():cooldown = max(cooldown, min(int(retry_after), 300))
-            with LOCK:NOT_BEFORE = max(NOT_BEFORE,time.monotonic() + cooldown)
-            if attempt == 2:raise
-            print(f'SEC HTTP {error.code}; shared cooldown {cooldown}s before retry {attempt + 2}/3: {url}', flush=True)
+            with LOCK:
+                NOT_BEFORE = max(NOT_BEFORE,time.monotonic() + cooldown)
+                # A denial can indicate shared-run pressure even below the SEC's
+                # published ceiling. Slow every worker for the remainder of the
+                # run instead of immediately returning to the original pace.
+                REQUEST_INTERVAL = max(REQUEST_INTERVAL, 1.25)
+            if attempt == MAX_FETCH_ATTEMPTS - 1:
+                raise SECRequestError(error, MAX_FETCH_ATTEMPTS) from error
+            print(f'SEC HTTP {error.code}; shared cooldown {cooldown}s before retry {attempt + 2}/{MAX_FETCH_ATTEMPTS}: {url}', flush=True)
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_bytes(body)
     return body
