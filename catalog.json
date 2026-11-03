@@ -109846,9 +109846,9 @@
     }
   ],
   "feed_health": {
-    "last_attempt_at": "2026-11-02T15:42:04.766654+00:00",
+    "last_attempt_at": "2026-11-03T00:55:19.547145+00:00",
     "last_success_at": "2026-11-02T15:42:14.453967+00:00",
-    "status": "OK",
+    "status": "FAILED",
     "freshness_target_hours": 48,
     "automatic_scope": "Nationwide SEC daily-index Form 4 discovery; Form 144 and 8-K metadata for configured issuers",
     "issuer_ciks": [
@@ -109874,7 +109874,9 @@
       "Lottery awards",
       "Ownership changes"
     ],
-    "errors": [],
+    "errors": [
+      "HTTP Error 403: Forbidden"
+    ],
     "held_form144": 15,
     "amendments_pending": 13,
     "leadership_pending": 12
