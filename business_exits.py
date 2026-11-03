@@ -41,8 +41,12 @@ def validate(entry, root=ROOT):
             raise ValueError('Missing acquisition source anchors')
         evidence.append((source,text))
     # Require the person/company founder relationship in one exact source span.
-    anchors = entry['relationship_anchor'],entry['completion_anchor'],entry['market_anchor'],date.fromisoformat(entry['publication_date']).strftime('%m.%d.%Y')
-    primary = next((s for s,t in evidence if s['authority_domain']==entry['identity_authority'] and all(normalize(a) in t for a in anchors)),None)
+    published = date.fromisoformat(entry['publication_date'])
+    dates = (published.strftime('%m.%d.%Y'), f'{published:%B} {published.day}, {published.year}')
+    anchors = entry['relationship_anchor'],entry['completion_anchor'],entry['market_anchor']
+    if any(not normalize(anchor) for anchor in anchors):
+        raise ValueError('Missing acquisition source anchors')
+    primary = next((s for s,t in evidence if s['authority_domain']==entry['identity_authority'] and all(normalize(a) in t for a in anchors) and any(re.search(r"(?<!\d)" + re.escape(normalize(d)) + r"(?!\d)", t) for d in dates)),None)
     if not primary or normalize(entry['subject_name']) not in normalize(entry['relationship_anchor']) or normalize(entry['company']) not in normalize(entry['completion_anchor']):
         raise ValueError('Named relationship, company completion and geography not established')
     city = normalize(entry['market_city'])
