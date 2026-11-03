@@ -45,7 +45,12 @@ def validate(entry, root=ROOT):
     primary = next((s for s,t in evidence if s['authority_domain']==entry['identity_authority'] and all(normalize(a) in t for a in anchors)),None)
     if not primary or normalize(entry['subject_name']) not in normalize(entry['relationship_anchor']) or normalize(entry['company']) not in normalize(entry['completion_anchor']):
         raise ValueError('Named relationship, company completion and geography not established')
-    if entry['market_state']!='SC' or 'South Carolina' not in entry['completion_anchor'] or normalize(entry['market_city']) not in normalize(entry['market_anchor']):
+    city = normalize(entry['market_city'])
+    state = entry['market_state']
+    market = normalize(entry['market_anchor'])
+    explicit_market = re.search(r'(?<!\w)' + re.escape(city) + r',\s*' + re.escape(state.casefold()) + r'(?!\w)', market)
+    legacy_market = state == 'SC' and 'South Carolina' in entry['completion_anchor'] and city in market
+    if not city or not re.fullmatch(r'[A-Z]{2}', state) or not (explicit_market or legacy_market):
         raise ValueError('Company market not established')
     identity=entity_id(entry)
     source_ledger=[{k:v for k,v in s.items() if k!='required_terms'} for s,_ in evidence]
