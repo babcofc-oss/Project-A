@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<ownershipDocument>
+
+    <schemaVersion>X0609</schemaVersion>
+
+    <documentType>4</documentType>
+
+    <periodOfReport>2026-10-30</periodOfReport>
+
+    <issuer>
+        <issuerCik>0001690820</issuerCik>
+        <issuerName>CARVANA CO.</issuerName>
+        <issuerTradingSymbol>CVNA</issuerTradingSymbol>
+        <issuerForeignTradingSymbol></issuerForeignTradingSymbol>
+    </issuer>
+
+    <reportingOwner>
+        <reportingOwnerId>
+            <rptOwnerCik>0001017608</rptOwnerCik>
+            <rptOwnerName>GARCIA ERNEST C. II</rptOwnerName>
+        </reportingOwnerId>
+        <reportingOwnerAddress>
+            <rptOwnerNonUSAddressFlag>false</rptOwnerNonUSAddressFlag>
+            <rptOwnerStreet1>1720 W. RIO SALADO PARKWAY, SUITE A</rptOwnerStreet1>
+            <rptOwnerStreet2></rptOwnerStreet2>
+            <rptOwnerCity>TEMPE</rptOwnerCity>
+            <rptOwnerState>AZ</rptOwnerState>
+            <rptOwnerZipCode>85281</rptOwnerZipCode>
+            <rptOwnerStateDescription></rptOwnerStateDescription>
+        </reportingOwnerAddress>
+        <reportingOwnerRelationship>
+            <isDirector>false</isDirector>
+            <isOfficer>false</isOfficer>
+            <isTenPercentOwner>true</isTenPercentOwner>
+            <isOther>false</isOther>
+        </reportingOwnerRelationship>
+    </reportingOwner>
+
+    <aff10b5One>false</aff10b5One>
+
+    <derivativeTable>
+        <derivativeTransaction>
+            <securityTitle>
+                <value>Covered Call Option (Obligation to Sell)</value>
+                <footnoteId id="F1"/>
+            </securityTitle>
+            <conversionOrExercisePrice>
+                <value>90.00</value>
+            </conversionOrExercisePrice>
+            <transactionDate>
+                <value>2026-10-30</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>S</transactionCode>
+                <equitySwapInvolved>false</equitySwapInvolved>
+            </transactionCoding>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>10000000</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>8.25</value>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>D</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <exerciseDate>
+                <value>2027-11-19</value>
+                <footnoteId id="F2"/>
+                <footnoteId id="F3"/>
+            </exerciseDate>
+            <expirationDate>
+                <value>2027-11-19</value>
+                <footnoteId id="F2"/>
+                <footnoteId id="F3"/>
+            </expirationDate>
+            <underlyingSecurity>
+                <underlyingSecurityTitle>
+                    <value>Class A Common Stock</value>
+                </underlyingSecurityTitle>
+                <underlyingSecurityShares>
+                    <value>10000000</value>
+                </underlyingSecurityShares>
+            </underlyingSecurity>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>10000000</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>I</value>
+                </directOrIndirectOwnership>
+                <natureOfOwnership>
+                    <value>ECG II SPE II, LLC</value>
+                    <footnoteId id="F1"/>
+                </natureOfOwnership>
+            </ownershipNature>
+        </derivativeTransaction>
+    </derivativeTable>
+
+    <footnotes>
+        <footnote id="F1">The Covered Call Option represents the option holder's right to purchase, and the option seller's obligation to sell, the underlying shares at the specified strike price. The Covered Call Options are held directly by ECG II SPE II, LLC (&quot;E-SPE II&quot;), an entity wholly owned and controlled by Mr. Garcia</footnote>
+        <footnote id="F2">On October 30, 2026, E-SPE II entered into a European-style covered call option transaction with an unaffiliated third-party purchaser. Under the terms of this transaction, E-SPE II sold 10,000,000 covered call options with an exercise price of $90.00, each referencing one share of the Issuer's Class A common stock, with an expiration date of November 19, 2027. In exchange for selling these options, E-SPE II will receive a cash premium of $8.25 per option.</footnote>
+        <footnote id="F3">E-SPE II pledged 10,000,000 shares of the Issuer's Class B common stock and 12,500,000 units of Carvana Group, LLC Class A units (collectively, the &quot;Pledged Shares&quot;) to secure its obligations under the transaction. During the term of the pledge, E-SPE II retains the right to vote the Pledged Shares and retains investment/dispositive power over the Pledged Shares, subject to the terms of the pledge arrangements.</footnote>
+    </footnotes>
+
+    <ownerSignature>
+        <signatureName>/s/ Ernest C. Garcia II</signatureName>
+        <signatureDate>2026-11-03</signatureDate>
+    </ownerSignature>
+</ownershipDocument>
