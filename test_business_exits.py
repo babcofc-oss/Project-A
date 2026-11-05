@@ -57,6 +57,11 @@ class BusinessExitIntegrity(unittest.TestCase):
         entry['relationship_source_url']=entry['sources'][0]['source_url']
         self.assertEqual(validate(entry),expected)
 
+    def test_person_mention_alone_does_not_establish_founder(self):
+        entry=copy.deepcopy(self.entries[-1])
+        entry['relationship_anchor']='Erik Soiferman'
+        with self.assertRaisesRegex(ValueError,'Founder relationship'):validate(entry)
+
     def test_identity_and_refresh_idempotence(self):
         self.assertNotEqual(entity_id(self.entries[0]),entity_id(self.entries[1]))
         records=[];first=merge(records);ids=[p['id'] for p in records]
