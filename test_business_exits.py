@@ -41,6 +41,22 @@ class BusinessExitIntegrity(unittest.TestCase):
         entry=copy.deepcopy(self.entries[0]);entry['stage']='ANNOUNCED'
         with self.assertRaisesRegex(ValueError,'completed'):validate(entry)
 
+    def test_separate_relationship_requires_company_in_anchor(self):
+        entry=copy.deepcopy(self.entries[0])
+        entry['relationship_source_url']=entry['sources'][0]['source_url']
+        with self.assertRaisesRegex(ValueError,'relationship'):validate(entry)
+
+    def test_separate_relationship_requires_retained_source(self):
+        entry=copy.deepcopy(self.entries[-1])
+        entry['relationship_source_url']='https://example.com/missing'
+        with self.assertRaisesRegex(ValueError,'relationship'):validate(entry)
+
+    def test_explicit_relationship_source_preserves_existing_record(self):
+        entry=copy.deepcopy(self.entries[-1])
+        expected=validate(entry)
+        entry['relationship_source_url']=entry['sources'][0]['source_url']
+        self.assertEqual(validate(entry),expected)
+
     def test_identity_and_refresh_idempotence(self):
         self.assertNotEqual(entity_id(self.entries[0]),entity_id(self.entries[1]))
         records=[];first=merge(records);ids=[p['id'] for p in records]
