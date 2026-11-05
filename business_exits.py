@@ -46,6 +46,16 @@ def validate(entry, root=ROOT):
     anchors = entry['relationship_anchor'],entry['completion_anchor'],entry['market_anchor']
     if any(not normalize(anchor) for anchor in anchors):
         raise ValueError('Missing acquisition source anchors')
+    relationship_url = entry.get('relationship_source_url')
+    if relationship_url:
+        relationship = next((source for source, text in evidence
+            if source['source_url'] == relationship_url
+            and normalize(entry['relationship_anchor']) in text
+            and normalize(entry['company']) in normalize(entry['relationship_anchor'])
+            and normalize(entry['subject_name']) in normalize(entry['relationship_anchor'])), None)
+        if not relationship:
+            raise ValueError('Named relationship and company not established')
+        anchors = entry['completion_anchor'], entry['market_anchor']
     primary = next((s for s,t in evidence if s['authority_domain']==entry['identity_authority'] and all(normalize(a) in t for a in anchors) and any(re.search(r"(?<!\d)" + re.escape(normalize(d)) + r"(?!\d)", t) for d in dates)),None)
     if not primary or normalize(entry['subject_name']) not in normalize(entry['relationship_anchor']) or normalize(entry['company']) not in normalize(entry['completion_anchor']):
         raise ValueError('Named relationship, company completion and geography not established')
