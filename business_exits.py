@@ -46,6 +46,8 @@ def validate(entry, root=ROOT):
     anchors = entry['relationship_anchor'],entry['completion_anchor'],entry['market_anchor']
     if any(not normalize(anchor) for anchor in anchors):
         raise ValueError('Missing acquisition source anchors')
+    if not re.search(r'\b(?:founder|co-founder|cofounder|founded by)\b', normalize(entry['relationship_anchor'])):
+        raise ValueError('Founder relationship not established by source anchor')
     relationship_url = entry.get('relationship_source_url')
     if relationship_url:
         relationship = next((source for source, text in evidence
