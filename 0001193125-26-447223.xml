@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<ownershipDocument>
+
+    <schemaVersion>X0609</schemaVersion>
+
+    <documentType>4</documentType>
+
+    <periodOfReport>2026-11-02</periodOfReport>
+
+    <issuer>
+        <issuerCik>0000813298</issuerCik>
+        <issuerName>DESTINATION XL GROUP, INC.</issuerName>
+        <issuerTradingSymbol>DXLG</issuerTradingSymbol>
+        <issuerForeignTradingSymbol></issuerForeignTradingSymbol>
+    </issuer>
+
+    <reportingOwner>
+        <reportingOwnerId>
+            <rptOwnerCik>0001374566</rptOwnerCik>
+            <rptOwnerName>MESDAG WILLEM</rptOwnerName>
+        </reportingOwnerId>
+        <reportingOwnerAddress>
+            <rptOwnerNonUSAddressFlag>false</rptOwnerNonUSAddressFlag>
+            <rptOwnerStreet1>C/O RED MOUNTAIN CAPITAL MANAGEMENT, INC</rptOwnerStreet1>
+            <rptOwnerStreet2>10100 SANTA MONICA BOULEVARD, SUITE 925</rptOwnerStreet2>
+            <rptOwnerCity>LOS ANGELES</rptOwnerCity>
+            <rptOwnerState>CA</rptOwnerState>
+            <rptOwnerZipCode>90067</rptOwnerZipCode>
+            <rptOwnerStateDescription></rptOwnerStateDescription>
+        </reportingOwnerAddress>
+        <reportingOwnerRelationship>
+            <isDirector>true</isDirector>
+            <isOfficer>false</isOfficer>
+            <isTenPercentOwner>true</isTenPercentOwner>
+            <isOther>false</isOther>
+        </reportingOwnerRelationship>
+    </reportingOwner>
+
+    <aff10b5One>false</aff10b5One>
+
+    <nonDerivativeTable>
+        <nonDerivativeHolding>
+            <securityTitle>
+                <value>Common Stock, $0.01 par value</value>
+            </securityTitle>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>2593758</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                    <footnoteId id="F1"/>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </nonDerivativeHolding>
+    </nonDerivativeTable>
+
+    <derivativeTable>
+        <derivativeTransaction>
+            <securityTitle>
+                <value>Deferred Stock Units</value>
+                <footnoteId id="F2"/>
+            </securityTitle>
+            <conversionOrExercisePrice>
+                <value>0.4546</value>
+                <footnoteId id="F3"/>
+            </conversionOrExercisePrice>
+            <transactionDate>
+                <value>2026-11-02</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>A</transactionCode>
+                <equitySwapInvolved>false</equitySwapInvolved>
+            </transactionCoding>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>81684</value>
+                    <footnoteId id="F4"/>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>0</value>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>A</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <exerciseDate>
+                <footnoteId id="F5"/>
+            </exerciseDate>
+            <expirationDate>
+                <footnoteId id="F5"/>
+            </expirationDate>
+            <underlyingSecurity>
+                <underlyingSecurityTitle>
+                    <value>Common Stock</value>
+                </underlyingSecurityTitle>
+                <underlyingSecurityShares>
+                    <value>81684</value>
+                </underlyingSecurityShares>
+            </underlyingSecurity>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>854425</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </derivativeTransaction>
+    </derivativeTable>
+
+    <footnotes>
+        <footnote id="F1">The Reporting Person's ownership includes (i) 420,286 shares held by the Mesdag Family Limited Partnership, (ii) 97,529 shares held by the Mesdag Family Foundation, (iii), 44,746 shares held by the 2012 Mesdag Trust, (iv) 1,763,373 shares held by Red Mountain Capital Partners LLC, and (v) 267,824 shares held by Red Mountain Capital Management, Inc.  The Reporting Person is the president, sole executive officer, sole director and sole shareholder of Red Mountain Capital Management, Inc.  The Reporting Person disclaims beneficial ownership of the reported securities, except to the extent of his pecuniary interest therein.  The filing system would not permit the filer to report his ownership as indirect.</footnote>
+        <footnote id="F2">Deferred Stock Units (DSUs) issued pursuant to the Director's elected form of compensation for quarterly annual retainer and committee chairperson fees.</footnote>
+        <footnote id="F3">The per share value is determined by the closing price of the Company's common stock on October 30, 2026.</footnote>
+        <footnote id="F4">Each DSU is credited to the Reporting Person under the Company's Director Plan (the &quot;Director Plan&quot;).  Each DSU represents ownership equivalent to one share of the Company's common stock.</footnote>
+        <footnote id="F5">The DSUs credited under the Director Plan are payable in the form elected or provided under the Director Plan on the earlier of (i) the Reporting Person's date of separation of service, or (ii) upon death, disability or change in control as defined in the Director Plan.</footnote>
+    </footnotes>
+
+    <ownerSignature>
+        <signatureName>Willem Mesdag (on behalf of himself and the Other Reporting Persons)</signatureName>
+        <signatureDate>2026-11-04</signatureDate>
+    </ownerSignature>
+</ownershipDocument>
