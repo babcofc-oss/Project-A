@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<ownershipDocument>
+
+    <schemaVersion>X0609</schemaVersion>
+
+    <documentType>4</documentType>
+
+    <periodOfReport>2026-11-03</periodOfReport>
+
+    <notSubjectToSection16>false</notSubjectToSection16>
+
+    <issuer>
+        <issuerCik>0000074208</issuerCik>
+        <issuerName>UDR, Inc.</issuerName>
+        <issuerTradingSymbol>UDR</issuerTradingSymbol>
+        <issuerForeignTradingSymbol></issuerForeignTradingSymbol>
+    </issuer>
+
+    <reportingOwner>
+        <reportingOwnerId>
+            <rptOwnerCik>0002026722</rptOwnerCik>
+            <rptOwnerName>McCallum Scott Andrew</rptOwnerName>
+        </reportingOwnerId>
+        <reportingOwnerAddress>
+            <rptOwnerNonUSAddressFlag>false</rptOwnerNonUSAddressFlag>
+            <rptOwnerStreet1>C/O UDR, INC.</rptOwnerStreet1>
+            <rptOwnerStreet2>1745 SHEA CENTER, SUITE 200</rptOwnerStreet2>
+            <rptOwnerCity>HIGHLANDS RANCH</rptOwnerCity>
+            <rptOwnerState>CO</rptOwnerState>
+            <rptOwnerZipCode>80129</rptOwnerZipCode>
+            <rptOwnerStateDescription></rptOwnerStateDescription>
+        </reportingOwnerAddress>
+        <reportingOwnerRelationship>
+            <isDirector>false</isDirector>
+            <isOfficer>true</isOfficer>
+            <isTenPercentOwner>false</isTenPercentOwner>
+            <isOther>false</isOther>
+            <officerTitle>EVP-Chief Investment Officer</officerTitle>
+        </reportingOwnerRelationship>
+    </reportingOwner>
+
+    <aff10b5One>false</aff10b5One>
+
+    <derivativeTable>
+        <derivativeTransaction>
+            <securityTitle>
+                <value>Class 1 LTIP Units</value>
+                <footnoteId id="F1"/>
+            </securityTitle>
+            <conversionOrExercisePrice>
+                <footnoteId id="F2"/>
+                <footnoteId id="F3"/>
+                <footnoteId id="F4"/>
+            </conversionOrExercisePrice>
+            <transactionDate>
+                <value>2026-11-03</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>A</transactionCode>
+                <equitySwapInvolved>false</equitySwapInvolved>
+            </transactionCoding>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>111328.0000</value>
+                    <footnoteId id="F5"/>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>0.0000</value>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>A</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <exerciseDate>
+                <footnoteId id="F2"/>
+                <footnoteId id="F3"/>
+                <footnoteId id="F4"/>
+                <footnoteId id="F5"/>
+            </exerciseDate>
+            <expirationDate>
+                <footnoteId id="F4"/>
+            </expirationDate>
+            <underlyingSecurity>
+                <underlyingSecurityTitle>
+                    <value>Common Stock</value>
+                    <footnoteId id="F2"/>
+                    <footnoteId id="F3"/>
+                    <footnoteId id="F4"/>
+                    <footnoteId id="F5"/>
+                </underlyingSecurityTitle>
+                <underlyingSecurityShares>
+                    <value>111328.0000</value>
+                </underlyingSecurityShares>
+            </underlyingSecurity>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>111328.0000</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </derivativeTransaction>
+    </derivativeTable>
+
+    <footnotes>
+        <footnote id="F1">Represents Class 1 LTIP Units in United Dominion Realty, L.P., a Delaware limited partnership (the &quot;UDR Partnership&quot;). UDR, Inc. (the &quot;Company&quot;) is the parent company and sole general partner of the UDR Partnership.</footnote>
+        <footnote id="F2">Subject to the conditions set forth in the Amended and Restated Agreement of Limited Partnership of the UDR Partnership (the &quot;Partnership Agreement&quot;) and subject to the vesting conditions specified with respect to each Class 1 LTIP Unit (as described in footnote 5 below), each Class 1 LTIP Unit may be converted, at the election of the holder, into a unit of limited partnership of the UDR Partnership (a &quot;Partnership Common Unit&quot;), provided that such Class 1 LTIP Unit has been outstanding for at least two years from the date of grant.</footnote>
+        <footnote id="F3">A holder of Partnership Common Units has the right to require the UDR Partnership to redeem all or a portion of the Partnership Common Units held by the holder in exchange for a cash payment based on the market value of the Company's Common Stock at the time of redemption, as defined in the Partnership Agreement (the &quot;Cash Amount&quot;). However, the UDR Partnership's obligation to pay the Cash Amount is subject the prior right of the Company to acquire such Partnership Common Units in exchange for either the Cash Amount or shares of the Company's Common Stock.</footnote>
+        <footnote id="F4">The Company, as the general partner of the UDR Partnership, may, in its sole discretion, purchase the Partnership Common Units by paying the limited partner either the Cash Amount or the REIT Share Amount (generally one share of the Company's Common Stock for each Partnership Common Unit), as such terms are defined in the Partnership Agreement. The right to convert the Class 1 LTIP Units into Partnership Common Units and the right to receive the Cash Amount or the REIT Share Amount (in the Company's sole discretion) in exchange for Partnership Common Units do not have expiration dates.</footnote>
+        <footnote id="F5">The Class 1 LTIP Units shall vest ratably over a period of five years beginning November 3, 2027.</footnote>
+    </footnotes>
+
+    <ownerSignature>
+        <signatureName>Scott A. McCallum</signatureName>
+        <signatureDate>2026-11-04</signatureDate>
+    </ownerSignature>
+</ownershipDocument>

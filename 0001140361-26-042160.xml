@@ -1,0 +1,291 @@
+<?xml version="1.0"?>
+<ownershipDocument>
+
+    <schemaVersion>X0609</schemaVersion>
+
+    <documentType>4/A</documentType>
+
+    <periodOfReport>2026-10-27</periodOfReport>
+
+    <dateOfOriginalSubmission>2026-10-29</dateOfOriginalSubmission>
+
+    <issuer>
+        <issuerCik>0001129137</issuerCik>
+        <issuerName>AMERICA MOVIL SAB DE CV/</issuerName>
+        <issuerTradingSymbol>AMX</issuerTradingSymbol>
+        <issuerForeignTradingSymbol>BMV: AMXB</issuerForeignTradingSymbol>
+    </issuer>
+
+    <reportingOwner>
+        <reportingOwnerId>
+            <rptOwnerCik>0002122008</rptOwnerCik>
+            <rptOwnerName>Garcia Moreno Elizondo Carlos Jose</rptOwnerName>
+        </reportingOwnerId>
+        <reportingOwnerAddress>
+            <rptOwnerNonUSAddressFlag>true</rptOwnerNonUSAddressFlag>
+            <rptOwnerStreet1>LAGO ZURICH 245, PLAZA CARSO,</rptOwnerStreet1>
+            <rptOwnerStreet2>COLONIA AMPLIACION GRANADA</rptOwnerStreet2>
+            <rptOwnerCity>MEXICO CITY</rptOwnerCity>
+            <rptOwnerNonUSStateTerritory></rptOwnerNonUSStateTerritory>
+            <rptOwnerCountry>O5</rptOwnerCountry>
+            <rptOwnerZipCode>11529</rptOwnerZipCode>
+            <rptOwnerStateDescription>MEXICO</rptOwnerStateDescription>
+        </reportingOwnerAddress>
+        <reportingOwnerRelationship>
+            <isDirector>false</isDirector>
+            <isOfficer>true</isOfficer>
+            <isTenPercentOwner>false</isTenPercentOwner>
+            <isOther>false</isOther>
+            <officerTitle>Chief Financial Officer</officerTitle>
+        </reportingOwnerRelationship>
+    </reportingOwner>
+
+    <aff10b5One>false</aff10b5One>
+
+    <derivativeTable>
+        <derivativeTransaction>
+            <securityTitle>
+                <value>Put (obligation to buy)</value>
+            </securityTitle>
+            <conversionOrExercisePrice>
+                <value>1.00</value>
+                <footnoteId id="F1"/>
+            </conversionOrExercisePrice>
+            <transactionDate>
+                <value>2026-10-27</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>S</transactionCode>
+                <equitySwapInvolved>false</equitySwapInvolved>
+            </transactionCoding>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>250</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>0.68</value>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>D</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <exerciseDate>
+                <value>2027-10-15</value>
+            </exerciseDate>
+            <expirationDate>
+                <value>2027-10-15</value>
+            </expirationDate>
+            <underlyingSecurity>
+                <underlyingSecurityTitle>
+                    <value>Series B Shares</value>
+                </underlyingSecurityTitle>
+                <underlyingSecurityShares>
+                    <value>500000</value>
+                    <footnoteId id="F2"/>
+                </underlyingSecurityShares>
+            </underlyingSecurity>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>250</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>I</value>
+                </directOrIndirectOwnership>
+                <natureOfOwnership>
+                    <value>By Inmobiliaria Evian-Chamonix S.A. de C.V.</value>
+                    <footnoteId id="F6"/>
+                </natureOfOwnership>
+            </ownershipNature>
+        </derivativeTransaction>
+        <derivativeTransaction>
+            <securityTitle>
+                <value>Put (obligation to buy)</value>
+            </securityTitle>
+            <conversionOrExercisePrice>
+                <value>0.90</value>
+                <footnoteId id="F1"/>
+            </conversionOrExercisePrice>
+            <transactionDate>
+                <value>2026-10-27</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>S</transactionCode>
+                <equitySwapInvolved>false</equitySwapInvolved>
+            </transactionCoding>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>330</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>0.33</value>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>D</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <exerciseDate>
+                <value>2027-10-15</value>
+            </exerciseDate>
+            <expirationDate>
+                <value>2027-10-15</value>
+            </expirationDate>
+            <underlyingSecurity>
+                <underlyingSecurityTitle>
+                    <value>Series B Shares</value>
+                </underlyingSecurityTitle>
+                <underlyingSecurityShares>
+                    <value>660000</value>
+                    <footnoteId id="F3"/>
+                </underlyingSecurityShares>
+            </underlyingSecurity>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>330</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>I</value>
+                </directOrIndirectOwnership>
+                <natureOfOwnership>
+                    <value>By Inmobiliaria Evian-Chamonix S.A. de C.V.</value>
+                    <footnoteId id="F6"/>
+                </natureOfOwnership>
+            </ownershipNature>
+        </derivativeTransaction>
+        <derivativeTransaction>
+            <securityTitle>
+                <value>Put (obligation to buy)</value>
+            </securityTitle>
+            <conversionOrExercisePrice>
+                <value>0.90</value>
+                <footnoteId id="F1"/>
+            </conversionOrExercisePrice>
+            <transactionDate>
+                <value>2026-10-28</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>S</transactionCode>
+                <equitySwapInvolved>false</equitySwapInvolved>
+            </transactionCoding>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>503</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>0.42</value>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>D</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <exerciseDate>
+                <value>2027-10-15</value>
+            </exerciseDate>
+            <expirationDate>
+                <value>2027-10-15</value>
+            </expirationDate>
+            <underlyingSecurity>
+                <underlyingSecurityTitle>
+                    <value>Series B Shares</value>
+                </underlyingSecurityTitle>
+                <underlyingSecurityShares>
+                    <value>1006000</value>
+                    <footnoteId id="F4"/>
+                </underlyingSecurityShares>
+            </underlyingSecurity>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>503</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>I</value>
+                </directOrIndirectOwnership>
+                <natureOfOwnership>
+                    <value>By Inmobiliaria Evian-Chamonix S.A. de C.V.</value>
+                    <footnoteId id="F6"/>
+                </natureOfOwnership>
+            </ownershipNature>
+        </derivativeTransaction>
+        <derivativeTransaction>
+            <securityTitle>
+                <value>Put (obligation to buy)</value>
+            </securityTitle>
+            <conversionOrExercisePrice>
+                <value>1.00</value>
+                <footnoteId id="F1"/>
+            </conversionOrExercisePrice>
+            <transactionDate>
+                <value>2026-10-28</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>S</transactionCode>
+                <equitySwapInvolved>false</equitySwapInvolved>
+            </transactionCoding>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>500</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>0.73</value>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>D</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <exerciseDate>
+                <value>2027-10-15</value>
+            </exerciseDate>
+            <expirationDate>
+                <value>2027-10-15</value>
+            </expirationDate>
+            <underlyingSecurity>
+                <underlyingSecurityTitle>
+                    <value>Series B Shares</value>
+                </underlyingSecurityTitle>
+                <underlyingSecurityShares>
+                    <value>1000000</value>
+                    <footnoteId id="F5"/>
+                </underlyingSecurityShares>
+            </underlyingSecurity>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>500</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>I</value>
+                </directOrIndirectOwnership>
+                <natureOfOwnership>
+                    <value>By Inmobiliaria Evian-Chamonix S.A. de C.V.</value>
+                    <footnoteId id="F6"/>
+                </natureOfOwnership>
+            </ownershipNature>
+        </derivativeTransaction>
+    </derivativeTable>
+
+    <footnotes>
+        <footnote id="F1">The price reported herein represents the exercise price per Series B Share.</footnote>
+        <footnote id="F2">The securities reported herein are held in the form of 25,000 American Depository Receipts (&quot;ADRs&quot;). Each ADR represents 20 Series B Shares.</footnote>
+        <footnote id="F3">The securities reported herein are held in the form of 33,000 ADRs. Each ADR represents 20 Series B Shares.</footnote>
+        <footnote id="F4">The securities reported herein are held in the form of 50,300 ADRs. Each ADR represents 20 Series B Shares.</footnote>
+        <footnote id="F5">The securities reported herein are held in the form of 50,000 ADRs. Each ADR represents 20 Series B Shares.</footnote>
+        <footnote id="F6">These securities are held by Inmobiliaria Evian-Chamonix S.A. de C.V, a sociedad anonima de capital variable organized under the laws of Mexico (&quot;Inmobiliaria Evian-Chamonix&quot;). The reporting person is the majority shareholder of Inmobiliaria Evian-Chamonix.</footnote>
+    </footnotes>
+
+    <remarks>This Form 4/A is being filed to amend the Form 4 filed on October 29, 2026, solely to correct the reporting of the put options in Table II. In Column 1, the put options were incorrectly described as a &quot;right to sell&quot; rather than an &quot;obligation to buy&quot;. In addition, the transaction code reported in Column 4 should have been transaction code &quot;S&quot; rather than &quot;P&quot;. The amounts were incorrectly reported in Column 5(A), (Amount Acquired) and should have been reported in Column 5(D) (Amount Disposed). No other information reported in the original Form 4 is being amended.</remarks>
+
+    <ownerSignature>
+        <signatureName>/s/ Ernesto Carlos Leyva Pedrosa, Attorney-in-fact</signatureName>
+        <signatureDate>2026-11-05</signatureDate>
+    </ownerSignature>
+</ownershipDocument>
