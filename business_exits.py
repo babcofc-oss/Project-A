@@ -58,6 +58,15 @@ def validate(entry, root=ROOT):
         if not relationship:
             raise ValueError('Named relationship and company not established')
         anchors = entry['completion_anchor'], entry['market_anchor']
+    market_source = None
+    if market_url := entry.get('market_source_url'):
+        market_source = next((source for source, text in evidence
+            if source['source_url'] == market_url
+            and normalize(entry['company']) in text
+            and normalize(entry['market_anchor']) in text), None)
+        if not market_source:
+            raise ValueError('Company market source not established')
+        anchors = anchors[:-1]
     primary = next((s for s,t in evidence if s['authority_domain']==entry['identity_authority'] and all(normalize(a) in t for a in anchors) and any(re.search(r"(?<!\d)" + re.escape(normalize(d)) + r"(?!\d)", t) for d in dates)),None)
     if not primary or normalize(entry['subject_name']) not in normalize(entry['relationship_anchor']) or normalize(entry['company']) not in normalize(entry['completion_anchor']):
         raise ValueError('Named relationship, company completion and geography not established')
@@ -71,13 +80,16 @@ def validate(entry, root=ROOT):
     identity=entity_id(entry)
     source_ledger=[{k:v for k,v in s.items() if k!='required_terms'} for s,_ in evidence]
     acquired = entry['company'] if legacy_market else entry['completion_anchor'].removeprefix('acquisition of ')
+    acquisition_fact = f"{entry['buyer']} reported acquiring {acquired}"
+    if normalize(entry['completion_anchor']).startswith('has acquired a controlling interest in '):
+        acquisition_fact = f"{entry['buyer']} reported acquiring a controlling interest in {entry['company']}"
     event={
         'id':identity+':acquisition:'+entry['publication_date'], 'accession':entry['source_id'],
         'date':entry['publication_date'], 'filed_date':entry['publication_date'],
         'date_kind':'Announcement publication; completion upper bound',
         'source_class':'COMPANY_ANNOUNCEMENT','trigger_type':'BUSINESS_EXIT',
         'classification':'BUSINESS_EXIT','stage':'COMPLETED','reviewed_trigger':True,
-        'fact':f"{entry['buyer']} reported acquiring {acquired}; {entry['subject_name']} is identified as its founder.",
+        'fact':f"{acquisition_fact}; {entry['subject_name']} is identified as its founder.",
         'status':'Acquisition reported completed by '+entry['publication_date']+'. Exact closing date, individual sale participation and current role UNKNOWN.',
         'relationship_evidence':'Named founder relationship verified in the primary announcement; ownership percentage and individual consideration UNKNOWN.',
         'amount_context':'Deal price and individual proceeds are not disclosed in the retained announcements. Cash received, retained equity, debt and earn-out terms UNKNOWN.',
@@ -88,7 +100,7 @@ def validate(entry, root=ROOT):
     }
     location={'city':entry['market_city'],'state':entry['market_state'],
         'kind':'Company service market; personal location UNKNOWN','basis':'COMPANY_MARKET',
-        'source_url':primary['source_url'],'assertion_class':'VERIFIED PUBLIC FACT','distance_miles':None}
+        'source_url':(market_source or primary)['source_url'],'assertion_class':'VERIFIED PUBLIC FACT','distance_miles':None}
     enrich(location,root/'geography.json')
     location['geo_method']='Census city reference for disclosed company service market; not founder location'
     return {'id':identity,'identity_kind':'REVIEWED_BUSINESS_PERSON',
@@ -112,7 +124,7 @@ def merge(records,root=ROOT):
         except (ValueError,KeyError,OSError) as error:
             errors.append({'accession':entry.get('source_id','UNKNOWN'),'error':str(error),'adapter':'business-exit'})
     records.extend(accepted.values())
-    return {'validated_people':len(accepted),'validated_transactions':len(accepted), 'errors':errors}
+    return {'validated_people':len(accepted),'validated_transactions':len({(person['company'], person['events'][0]['date'], person['events'][0]['source_url']) for person in accepted.values()}), 'errors':errors}
 
 if __name__=='__main__':
     catalog=json.loads((ROOT/'catalog.json').read_text())
