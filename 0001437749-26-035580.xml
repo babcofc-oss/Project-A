@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<ownershipDocument>
+
+    <schemaVersion>X0609</schemaVersion>
+
+    <documentType>4</documentType>
+
+    <periodOfReport>2026-11-04</periodOfReport>
+
+    <issuer>
+        <issuerCik>0001832487</issuerCik>
+        <issuerName>Guerrilla RF, Inc.</issuerName>
+        <issuerTradingSymbol>GUER</issuerTradingSymbol>
+        <issuerForeignTradingSymbol></issuerForeignTradingSymbol>
+    </issuer>
+
+    <reportingOwner>
+        <reportingOwnerId>
+            <rptOwnerCik>0001891890</rptOwnerCik>
+            <rptOwnerName>Bodford Alvin M.</rptOwnerName>
+        </reportingOwnerId>
+        <reportingOwnerAddress>
+            <rptOwnerNonUSAddressFlag>false</rptOwnerNonUSAddressFlag>
+            <rptOwnerStreet1>1501 HIGHWOODS BOULEVARD</rptOwnerStreet1>
+            <rptOwnerStreet2>SUITE 302</rptOwnerStreet2>
+            <rptOwnerCity>GREENSBORO</rptOwnerCity>
+            <rptOwnerState>NC</rptOwnerState>
+            <rptOwnerZipCode>27410</rptOwnerZipCode>
+            <rptOwnerStateDescription></rptOwnerStateDescription>
+        </reportingOwnerAddress>
+        <reportingOwnerRelationship>
+            <isTenPercentOwner>1</isTenPercentOwner>
+            <isOther>1</isOther>
+            <otherText>Beneficial Owner</otherText>
+        </reportingOwnerRelationship>
+    </reportingOwner>
+
+    <aff10b5One>0</aff10b5One>
+
+    <nonDerivativeTable>
+        <nonDerivativeTransaction>
+            <securityTitle>
+                <value>Common Stock</value>
+            </securityTitle>
+            <transactionDate>
+                <value>2026-11-04</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>5</transactionFormType>
+                <transactionCode>J</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+            </transactionCoding>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>74886</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <footnoteId id="F2"/>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>A</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>1945791</value>
+                    <footnoteId id="F2"/>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>I</value>
+                </directOrIndirectOwnership>
+                <natureOfOwnership>
+                    <value>See Footnote 1.</value>
+                    <footnoteId id="F1"/>
+                </natureOfOwnership>
+            </ownershipNature>
+        </nonDerivativeTransaction>
+    </nonDerivativeTable>
+
+    <derivativeTable>
+        <derivativeTransaction>
+            <securityTitle>
+                <value>Warrant</value>
+            </securityTitle>
+            <conversionOrExercisePrice>
+                <value>2.50</value>
+            </conversionOrExercisePrice>
+            <transactionDate>
+                <value>2026-11-04</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>J</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+            </transactionCoding>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>74886</value>
+                    <footnoteId id="F2"/>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <footnoteId id="F2"/>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>A</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <exerciseDate>
+                <value>2024-09-28</value>
+            </exerciseDate>
+            <expirationDate>
+                <value>2029-09-28</value>
+            </expirationDate>
+            <underlyingSecurity>
+                <underlyingSecurityTitle>
+                    <value>Common Stock</value>
+                </underlyingSecurityTitle>
+                <underlyingSecurityShares>
+                    <value>74886</value>
+                </underlyingSecurityShares>
+            </underlyingSecurity>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>114886</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>I</value>
+                </directOrIndirectOwnership>
+                <natureOfOwnership>
+                    <value>See Footnote 1.</value>
+                    <footnoteId id="F1"/>
+                </natureOfOwnership>
+            </ownershipNature>
+        </derivativeTransaction>
+    </derivativeTable>
+
+    <footnotes>
+        <footnote id="F1">The Alvin M. Bodford Revocable Trust is the sole member of AMB Investments. The Reporting Person is a Manager of AMB Investments, and the beneficiary of the Trust.</footnote>
+        <footnote id="F2">The Form 4 filed with the SEC on April 1, 2024, included 500,000 shares of common stock owned by Salem Investment Partners V, Limited Partnership (&quot;Salem&quot;), in which the Reporting Person had a pecuniary interest. On November 4, 2026, Salem transferred a total of 574,886 shares and 74,886 warrants to the Reporting Person. The additional 74,886 shares and 74,886 warrants reflect the Reporting Person's pro rata interest in those additional shares and warrants issued to Salem by the Issuer in exchange for $187,215 of deferred interest due the Reporting Person in connection with its pro rata participation in a loan made by Salem to the Issuer</footnote>
+    </footnotes>
+
+    <ownerSignature>
+        <signatureName>/s/ Charnice Suggs, Attorney-in-Fact</signatureName>
+        <signatureDate>2026-11-06</signatureDate>
+    </ownerSignature>
+</ownershipDocument>

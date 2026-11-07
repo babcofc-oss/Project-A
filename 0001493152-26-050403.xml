@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<ownershipDocument>
+
+    <schemaVersion>X0609</schemaVersion>
+
+    <documentType>4</documentType>
+
+    <periodOfReport>2026-10-28</periodOfReport>
+
+    <notSubjectToSection16>0</notSubjectToSection16>
+
+    <issuer>
+        <issuerCik>0001172178</issuerCik>
+        <issuerName>LIBERTY STAR URANIUM &amp; METALS CORP.</issuerName>
+        <issuerTradingSymbol>LBSR</issuerTradingSymbol>
+        <issuerForeignTradingSymbol></issuerForeignTradingSymbol>
+    </issuer>
+
+    <reportingOwner>
+        <reportingOwnerId>
+            <rptOwnerCik>0001569334</rptOwnerCik>
+            <rptOwnerName>O'HEERON PETE</rptOwnerName>
+        </reportingOwnerId>
+        <reportingOwnerAddress>
+            <rptOwnerNonUSAddressFlag>false</rptOwnerNonUSAddressFlag>
+            <rptOwnerStreet1>17006 EVERGREEN ELM WAY</rptOwnerStreet1>
+            <rptOwnerStreet2></rptOwnerStreet2>
+            <rptOwnerCity>HOUSTON</rptOwnerCity>
+            <rptOwnerState>TX</rptOwnerState>
+            <rptOwnerZipCode>77059</rptOwnerZipCode>
+            <rptOwnerStateDescription></rptOwnerStateDescription>
+        </reportingOwnerAddress>
+        <reportingOwnerRelationship>
+            <isDirector>1</isDirector>
+            <isOfficer>1</isOfficer>
+            <isTenPercentOwner>1</isTenPercentOwner>
+            <isOther>0</isOther>
+            <officerTitle>COB, Secretary, Treasurer</officerTitle>
+            <otherText></otherText>
+        </reportingOwnerRelationship>
+    </reportingOwner>
+
+    <aff10b5One>0</aff10b5One>
+
+    <derivativeTable>
+        <derivativeTransaction>
+            <securityTitle>
+                <value>Options</value>
+                <footnoteId id="F1"/>
+                <footnoteId id="F2"/>
+                <footnoteId id="F3"/>
+            </securityTitle>
+            <conversionOrExercisePrice>
+                <value>0.02</value>
+            </conversionOrExercisePrice>
+            <transactionDate>
+                <value>2026-11-04</value>
+            </transactionDate>
+            <deemedExecutionDate>
+                <value>2026-10-28</value>
+            </deemedExecutionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>A</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+            </transactionCoding>
+            <transactionTimeliness></transactionTimeliness>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>5000000</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>0.02</value>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>A</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <exerciseDate>
+                <value>2026-10-28</value>
+            </exerciseDate>
+            <expirationDate>
+                <value>2036-10-28</value>
+            </expirationDate>
+            <underlyingSecurity>
+                <underlyingSecurityTitle>
+                    <value>Common Stock</value>
+                </underlyingSecurityTitle>
+                <underlyingSecurityShares>
+                    <value>5000000</value>
+                </underlyingSecurityShares>
+            </underlyingSecurity>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>5000000</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </derivativeTransaction>
+    </derivativeTable>
+
+    <footnotes>
+        <footnote id="F1">October 28, 2026, the reporting person was granted 5,000,000 non-qualified stock option units (right to buy), price is set at $.02 per share as approved by our board of directors.</footnote>
+        <footnote id="F2">1,500,000 options vest one third at issuance, one third at first year anniversary and one third at second year anniversary. 3,500,000 options vest in milestone tranches, for example: (a) definitive earn-in, joint venture, or sale agreement on Hay Mountain or the Red Rock Canyon claims; (b) non-dilutive or equity financing of at least $1.5M closed at or above market; (c) 2026 field-work-based resource target publication or drill program funded; (d) uplisting or sustained $0.05 price.</footnote>
+        <footnote id="F3">Options (right to buy) must be exercised within ten years after which they expire.</footnote>
+    </footnotes>
+
+    <ownerSignature>
+        <signatureName>/s/ Pete O'Heeron</signatureName>
+        <signatureDate>2026-11-06</signatureDate>
+    </ownerSignature>
+</ownershipDocument>

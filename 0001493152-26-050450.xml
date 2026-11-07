@@ -1,0 +1,166 @@
+<?xml version="1.0"?>
+<ownershipDocument>
+
+    <schemaVersion>X0609</schemaVersion>
+
+    <documentType>4/A</documentType>
+
+    <periodOfReport>2026-04-06</periodOfReport>
+
+    <dateOfOriginalSubmission>2026-04-07</dateOfOriginalSubmission>
+
+    <notSubjectToSection16>0</notSubjectToSection16>
+
+    <issuer>
+        <issuerCik>0002076163</issuerCik>
+        <issuerName>Silvia, Inc.</issuerName>
+        <issuerTradingSymbol>SVIA</issuerTradingSymbol>
+        <issuerForeignTradingSymbol></issuerForeignTradingSymbol>
+    </issuer>
+
+    <reportingOwner>
+        <reportingOwnerId>
+            <rptOwnerCik>0002091433</rptOwnerCik>
+            <rptOwnerName>Inflection Points Inc.</rptOwnerName>
+        </reportingOwnerId>
+        <reportingOwnerAddress>
+            <rptOwnerNonUSAddressFlag>false</rptOwnerNonUSAddressFlag>
+            <rptOwnerStreet1>600 LEXINGTON AVENUE, FLOOR 2</rptOwnerStreet1>
+            <rptOwnerStreet2></rptOwnerStreet2>
+            <rptOwnerCity>NEW YORK</rptOwnerCity>
+            <rptOwnerState>NY</rptOwnerState>
+            <rptOwnerZipCode>10022</rptOwnerZipCode>
+            <rptOwnerStateDescription></rptOwnerStateDescription>
+        </reportingOwnerAddress>
+        <reportingOwnerRelationship>
+            <isDirector>0</isDirector>
+            <isOfficer>0</isOfficer>
+            <isTenPercentOwner>1</isTenPercentOwner>
+            <isOther>0</isOther>
+            <officerTitle></officerTitle>
+            <otherText></otherText>
+        </reportingOwnerRelationship>
+    </reportingOwner>
+
+    <aff10b5One>0</aff10b5One>
+
+    <nonDerivativeTable>
+        <nonDerivativeTransaction>
+            <securityTitle>
+                <value>Common Stock, par value $0.001</value>
+            </securityTitle>
+            <transactionDate>
+                <value>2026-04-06</value>
+            </transactionDate>
+            <deemedExecutionDate></deemedExecutionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>J</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+                <footnoteId id="F1"/>
+                <footnoteId id="F2"/>
+            </transactionCoding>
+            <transactionTimeliness></transactionTimeliness>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>4240520</value>
+                    <footnoteId id="F2"/>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <footnoteId id="F1"/>
+                    <footnoteId id="F2"/>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>A</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>14803020</value>
+                    <footnoteId id="F2"/>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </nonDerivativeTransaction>
+    </nonDerivativeTable>
+
+    <derivativeTable>
+        <derivativeTransaction>
+            <securityTitle>
+                <value>Contingent Earnout Right</value>
+                <footnoteId id="F3"/>
+            </securityTitle>
+            <conversionOrExercisePrice>
+                <footnoteId id="F3"/>
+            </conversionOrExercisePrice>
+            <transactionDate>
+                <value>2026-04-06</value>
+            </transactionDate>
+            <deemedExecutionDate></deemedExecutionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>J</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+                <footnoteId id="F3"/>
+            </transactionCoding>
+            <transactionTimeliness></transactionTimeliness>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>4534265</value>
+                    <footnoteId id="F3"/>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <footnoteId id="F3"/>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>A</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <exerciseDate>
+                <footnoteId id="F4"/>
+            </exerciseDate>
+            <expirationDate>
+                <value>2031-04-06</value>
+                <footnoteId id="F4"/>
+            </expirationDate>
+            <underlyingSecurity>
+                <underlyingSecurityTitle>
+                    <value>Common Stock, par value $0.001</value>
+                </underlyingSecurityTitle>
+                <underlyingSecurityShares>
+                    <value>4534265</value>
+                    <footnoteId id="F3"/>
+                </underlyingSecurityShares>
+            </underlyingSecurity>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>4534265</value>
+                    <footnoteId id="F3"/>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </derivativeTransaction>
+    </derivativeTable>
+
+    <footnotes>
+        <footnote id="F1">Reference is made to that certain Agreement and Plan of Merger, dated as of February 9, 2026 (the &quot;Merger Agreement&quot;), by and among Silvia, Inc., a Delaware corporation (formerly known as ProCap Financial, Inc.) (the &quot;Issuer&quot;), Silvia Merger Sub, Inc. (&quot;Merger Sub&quot;), CFO Silvia, Inc. (the &quot;Target&quot;), Shain Noor, an individual, Inflection Points Inc d/b/a Professional Capital Management, a Delaware corporation (&quot;Inflection Points&quot;), and Shain Noor, solely in his capacity as stockholder representative. Pursuant to the Merger Agreement, on April 6, 2026, Merger Sub merged with and into the Target, with the Target surviving as a wholly owned subsidiary of the Issuer (the &quot;Merger&quot;).</footnote>
+        <footnote id="F2">Represents shares of common stock, par value $0.001 per share, of the Issuer (&quot;Common Stock&quot;) received by Inflection Points in connection with the Merger, consisting of 3,787,094 shares of Common Stock issued at the closing of the Merger and 453,426 shares of Common Stock deposited into an escrow account with PNC Bank, N.A. (the &quot;Escrow Shares&quot;). The 453,426 Escrow Shares are held in escrow for the benefit of Inflection Points to secure indemnification obligations under the Merger Agreement and may be voted, but may not be transferred, by Inflection Points while held in escrow. The shares of Common Stock issued at the closing of the Merger and the Escrow Shares are subject to transfer restrictions under a lock-up agreement dated April 6, 2026, by and among Inflection Points, the Issuer, and the other parties thereto.</footnote>
+        <footnote id="F3">Represents the contingent earnout right to receive up to 4,534,265 shares of Common Stock (the &quot;Earnout Shares&quot;) that Inflection Points received as additional merger consideration under the Merger Agreement. The amounts reported in Table II represent the maximum number of Earnout Shares issuable under the contingent earnout right, not shares of Common Stock issued on that date. No separate cash exercise payment is required.</footnote>
+        <footnote id="F4">The contingent earnout right is contingent upon the volume-weighted average trading price of the Common Stock over the 10-day period specified in the Merger Agreement equaling or exceeding $9.00 per share of Common Stock, subject to adjustment, during the 5-year period beginning April 6, 2026. The contingent earnout right terminates upon the earlier of the issuance of the Earnout Shares or April 6, 2031, and is subject to the other terms and conditions of the Merger Agreement. Any Earnout Shares issued will be subject to a 6-month lock-up following the Earnout Release Date (as defined in the Merger Agreement).</footnote>
+    </footnotes>
+
+    <remarks>This Form 4/A amends the Form 4 filed on April 7, 2026, to include 453,426 Escrow Shares in the shares of Common Stock acquired in the Merger, and in the shares of Common Stock beneficially owned following the Merger. The corrected acquisition amount is 4,240,520 shares of Common Stock. Table I, Column 5 is also corrected to report 14,803,020 shares of Common Stock held directly by Inflection Points, including the Escrow Shares. This Form 4/A also reports in Table II the contingent earnout right to receive up to 4,534,265 shares of Common Stock acquired by Inflection Points on April 6, 2026, in connection with the Merger, which was inadvertently omitted from the original Form 4.</remarks>
+
+    <ownerSignature>
+        <signatureName>/s/ Anthony Pompliano</signatureName>
+        <signatureDate>2026-11-06</signatureDate>
+    </ownerSignature>
+</ownershipDocument>

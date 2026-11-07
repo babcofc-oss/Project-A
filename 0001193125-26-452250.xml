@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<ownershipDocument>
+
+    <schemaVersion>X0609</schemaVersion>
+
+    <documentType>4</documentType>
+
+    <periodOfReport>2026-11-05</periodOfReport>
+
+    <issuer>
+        <issuerCik>0001626115</issuerCik>
+        <issuerName>PJT Partners Inc.</issuerName>
+        <issuerTradingSymbol>PJT</issuerTradingSymbol>
+        <issuerForeignTradingSymbol></issuerForeignTradingSymbol>
+    </issuer>
+
+    <reportingOwner>
+        <reportingOwnerId>
+            <rptOwnerCik>0001479665</rptOwnerCik>
+            <rptOwnerName>Taubman Paul J</rptOwnerName>
+        </reportingOwnerId>
+        <reportingOwnerAddress>
+            <rptOwnerNonUSAddressFlag>false</rptOwnerNonUSAddressFlag>
+            <rptOwnerStreet1>280 PARK AVENUE</rptOwnerStreet1>
+            <rptOwnerStreet2></rptOwnerStreet2>
+            <rptOwnerCity>NEW YORK</rptOwnerCity>
+            <rptOwnerState>NY</rptOwnerState>
+            <rptOwnerZipCode>10017</rptOwnerZipCode>
+            <rptOwnerStateDescription></rptOwnerStateDescription>
+        </reportingOwnerAddress>
+        <reportingOwnerRelationship>
+            <isDirector>true</isDirector>
+            <isOfficer>true</isOfficer>
+            <isTenPercentOwner>false</isTenPercentOwner>
+            <isOther>false</isOther>
+            <officerTitle>Chairman and CEO</officerTitle>
+        </reportingOwnerRelationship>
+    </reportingOwner>
+
+    <aff10b5One>false</aff10b5One>
+
+    <derivativeTable>
+        <derivativeTransaction>
+            <securityTitle>
+                <value>Partnership Units of PJT Partners Holdings LP</value>
+                <footnoteId id="F1"/>
+            </securityTitle>
+            <conversionOrExercisePrice>
+                <footnoteId id="F2"/>
+            </conversionOrExercisePrice>
+            <transactionDate>
+                <value>2026-11-05</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>M</transactionCode>
+                <equitySwapInvolved>false</equitySwapInvolved>
+            </transactionCoding>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>36000</value>
+                    <footnoteId id="F3"/>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>153.7236</value>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>D</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <exerciseDate>
+                <footnoteId id="F2"/>
+            </exerciseDate>
+            <expirationDate>
+                <footnoteId id="F2"/>
+            </expirationDate>
+            <underlyingSecurity>
+                <underlyingSecurityTitle>
+                    <value>Class A Common Stock</value>
+                </underlyingSecurityTitle>
+                <underlyingSecurityShares>
+                    <value>36000</value>
+                </underlyingSecurityShares>
+            </underlyingSecurity>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>5316000</value>
+                    <footnoteId id="F4"/>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </derivativeTransaction>
+    </derivativeTable>
+
+    <footnotes>
+        <footnote id="F1">In an SEC Form 8-K filed by the Issuer on November 26, 2025, the Issuer previously disclosed that the Reporting Person intended to elect to exchange up to 36,000 Partnership Units of PJT Partners Holdings LP (&quot;Partnership Units&quot;) in future quarterly exchange windows, including the Issuer's current quarterly exchange window.  On August 20, 2026, the Reporting Person submitted an Election to Exchange 36,000 Partnership Units, with such exchange to be settled for either cash or Class A Common Stock, as determined by the Issuer's Board of Directors.</footnote>
+        <footnote id="F2">Subject to the terms of the Issuer's Exchange Agreement, on a quarterly basis, Partnership Units may be exchanged for cash or, at the election of the Issuer, shares of Class A Common Stock of the Issuer on a one-for-one basis.</footnote>
+        <footnote id="F3">Effective November 5, 2026, the Reporting Person's Partnership Units were exchanged for cash.</footnote>
+        <footnote id="F4">Includes Partnership Units that were acquired upon the occurrence of specified vesting events or grants and previously reported as Performance LTIP Units of PJT Partners Holdings LP.  Of the 5,316,000 Partnership Units reported, 200,000 remain subject to previously disclosed time-based vesting conditions through March 1, 2027.</footnote>
+    </footnotes>
+
+    <ownerSignature>
+        <signatureName>David K.F. Gillis, Attorney-in-Fact</signatureName>
+        <signatureDate>2026-11-06</signatureDate>
+    </ownerSignature>
+</ownershipDocument>
