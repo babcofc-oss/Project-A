@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<ownershipDocument>
+
+    <schemaVersion>X0609</schemaVersion>
+
+    <documentType>4</documentType>
+
+    <periodOfReport>2026-11-06</periodOfReport>
+
+    <issuer>
+        <issuerCik>0000912892</issuerCik>
+        <issuerName>GRUPO TELEVISA, S.A.B.</issuerName>
+        <issuerTradingSymbol>TV</issuerTradingSymbol>
+        <issuerForeignTradingSymbol>TLEVISACPO.MX</issuerForeignTradingSymbol>
+    </issuer>
+
+    <reportingOwner>
+        <reportingOwnerId>
+            <rptOwnerCik>0001318285</rptOwnerCik>
+            <rptOwnerName>Zaslav David</rptOwnerName>
+        </reportingOwnerId>
+        <reportingOwnerAddress>
+            <rptOwnerNonUSAddressFlag>true</rptOwnerNonUSAddressFlag>
+            <rptOwnerStreet1>C/O GRUPO TELEVISA, S.A.B.</rptOwnerStreet1>
+            <rptOwnerStreet2>AV. VASCO DE QUIROGA NO. 2000</rptOwnerStreet2>
+            <rptOwnerCity>MEXICO CITY</rptOwnerCity>
+            <rptOwnerNonUSStateTerritory>O5</rptOwnerNonUSStateTerritory>
+            <rptOwnerCountry>O5</rptOwnerCountry>
+            <rptOwnerZipCode>01210</rptOwnerZipCode>
+            <rptOwnerStateDescription>MEXICO</rptOwnerStateDescription>
+        </reportingOwnerAddress>
+        <reportingOwnerRelationship>
+            <isDirector>true</isDirector>
+            <isOfficer>false</isOfficer>
+            <isTenPercentOwner>false</isTenPercentOwner>
+            <isOther>false</isOther>
+        </reportingOwnerRelationship>
+    </reportingOwner>
+
+    <aff10b5One>false</aff10b5One>
+
+    <nonDerivativeTable></nonDerivativeTable>
+
+    <derivativeTable>
+        <derivativeTransaction>
+            <securityTitle>
+                <value>GDSs</value>
+                <footnoteId id="F1"/>
+            </securityTitle>
+            <conversionOrExercisePrice>
+                <footnoteId id="F1"/>
+            </conversionOrExercisePrice>
+            <transactionDate>
+                <value>2026-11-06</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>S</transactionCode>
+                <equitySwapInvolved>false</equitySwapInvolved>
+            </transactionCoding>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>46600</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>2.3228</value>
+                    <footnoteId id="F2"/>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>D</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <exerciseDate>
+                <footnoteId id="F1"/>
+            </exerciseDate>
+            <expirationDate>
+                <footnoteId id="F3"/>
+            </expirationDate>
+            <underlyingSecurity>
+                <underlyingSecurityTitle>
+                    <value>CPOs</value>
+                </underlyingSecurityTitle>
+                <underlyingSecurityShares>
+                    <value>46600</value>
+                </underlyingSecurityShares>
+            </underlyingSecurity>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>0</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </derivativeTransaction>
+    </derivativeTable>
+
+    <footnotes>
+        <footnote id="F1">Each Global Depositary Share (&quot;GDS&quot;) is entitled to a financial interest in and limited voting rights with respect to five Certificados de Participacion Ordinarios (each a &quot;CPO&quot;), each of which represents twenty-five Series &quot;A&quot; Shares, twenty-two Series &quot;B&quot; Shares, thirty-five Series &quot;L&quot; Shares and thirty-five Series &quot;D&quot; Shares of Grupo Televisa, S.A.B.</footnote>
+        <footnote id="F2">Price is the volume weighted average selling price of all sales by the reporting person on the transaction date. Actual prices ranged from $2.2850 to $2.3550 US dollars. The reporting person hereby undertakes to provide upon request of the SEC staff, the issuer, or a security holder of the issuer, full information regarding the number of shares sold at each separate price.</footnote>
+        <footnote id="F3">Not applicable.</footnote>
+    </footnotes>
+
+    <ownerSignature>
+        <signatureName>/s/ Carlos Javier Luevanos Ortiz De Rosas, attorney in fact for David Zaslav</signatureName>
+        <signatureDate>2026-11-10</signatureDate>
+    </ownerSignature>
+</ownershipDocument>
