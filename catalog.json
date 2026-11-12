@@ -367368,9 +367368,9 @@
     }
   ],
   "feed_health": {
-    "last_attempt_at": "2026-11-11T14:12:38.692877+00:00",
+    "last_attempt_at": "2026-11-12T00:37:15.834550+00:00",
     "last_success_at": "2026-11-11T14:12:50.609898+00:00",
-    "status": "OK",
+    "status": "FAILED",
     "freshness_target_hours": 48,
     "automatic_scope": "Nationwide SEC daily-index Form 4 discovery; Form 144 and 8-K metadata for configured issuers",
     "issuer_ciks": [
@@ -367396,7 +367396,9 @@
       "Lottery awards",
       "Ownership changes"
     ],
-    "errors": [],
+    "errors": [
+      "SEC request failed after 4 attempts: HTTP 403 Forbidden; url=https://www.sec.gov/Archives/edgar/daily-index/2026/QTR4/master.20261111.idx"
+    ],
     "held_form144": 20,
     "amendments_pending": 61,
     "leadership_pending": 13
