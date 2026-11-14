@@ -115,20 +115,38 @@ def inspect(row):
         return {**row,'status':'VALIDATED','person_id':person['id'],'issuer_cik':person['issuer_cik']},person
     except ValueError as e:return {**row,'status':'HELD','reason':str(e)},None
 
+def published_index_dates(day, listings):
+    """Only the SEC's own quarterly directory can establish a non-publication day.
+    Never interpret an arbitrary HTTP 403 as a holiday or permission to skip data.
+    """
+    quarter=(day.month-1)//3+1;key=(day.year,quarter)
+    if key not in listings:
+        url=f'https://www.sec.gov/Archives/edgar/daily-index/{day.year}/QTR{quarter}/index.json'
+        raw=ingest.fetch(url,ingest.INPUTS/f'national-directory-{day.year}-q{quarter}.json',force=True)
+        directory=json.loads(raw)['directory']
+        if directory.get('name')!=f'daily-index/{day.year}/QTR{quarter}/':
+            raise ValueError('SEC daily-index directory identity mismatch')
+        names={item['name'] for item in directory['item'] if re.fullmatch(r'master\.\d{8}\.idx',item.get('name',''))}
+        if not names:raise ValueError('SEC daily-index directory has no published master indexes')
+        listings[key]={'url':url,'sha256':hashlib.sha256(raw).hexdigest(),'names':names}
+    return listings[key]
+
 def refresh(today=None):
     today=today or date.today();prior=json.loads(STATE.read_text()) if STATE.exists() else {'entries':[]}
     last=today-timedelta(days=1)
     while last.weekday()>4:last-=timedelta(days=1)
-    last_error=None
+    last_error=None;listings={};unpublished=[]
     for offset in range(7):
         day=last-timedelta(days=offset)
         if day.weekday()>4:continue
+        listing=published_index_dates(day,listings)
+        if f'master.{day:%Y%m%d}.idx' not in listing['names']:
+            unpublished.append(dict(date=day.isoformat(),directory_url=listing['url'],directory_sha256=listing['sha256'],status='NO_PUBLISHED_INDEX'));continue
         url=f'https://www.sec.gov/Archives/edgar/daily-index/{day.year}/QTR{(day.month-1)//3+1}/master.{day:%Y%m%d}.idx'
         try:
             body=ingest.fetch(url,ingest.INPUTS/f'national-index-{day}.txt',force=True);rows=parse_index(body);break
         except urllib.error.HTTPError as e:
-            if e.code!=404:raise
-            last_error=e
+            raise
     else:raise RuntimeError('No published SEC daily index in the latest seven calendar days') from last_error
     # Catch up missed scheduled days within the retained discovery window.
     # Holidays have no published index; other failures still block publication.
@@ -138,13 +156,17 @@ def refresh(today=None):
         cursor=max(date.fromisoformat(previous)+timedelta(days=1),today-timedelta(days=90))
         while cursor<day:
             if cursor.weekday()<5:
+                listing=published_index_dates(cursor,listings)
+                if f'master.{cursor:%Y%m%d}.idx' not in listing['names']:
+                    unpublished.append(dict(date=cursor.isoformat(),directory_url=listing['url'],directory_sha256=listing['sha256'],status='NO_PUBLISHED_INDEX'))
+                    cursor+=timedelta(days=1);continue
                 catch_url=f'https://www.sec.gov/Archives/edgar/daily-index/{cursor.year}/QTR{(cursor.month-1)//3+1}/master.{cursor:%Y%m%d}.idx'
                 try:
                     catch_body=ingest.fetch(catch_url,ingest.INPUTS/f'national-index-{cursor}.txt')
                     rows.extend(parse_index(catch_body))
                     indexes.append(dict(date=cursor.isoformat(),url=catch_url,sha256=hashlib.sha256(catch_body).hexdigest()))
                 except urllib.error.HTTPError as e:
-                    if e.code!=404:raise
+                    raise
             cursor+=timedelta(days=1)
     cutoff=(today-timedelta(days=90)).isoformat()
     entries={r['accession']:r for r in prior['entries'] if r['filed_date']>=cutoff}
@@ -166,7 +188,7 @@ def refresh(today=None):
             except Exception as e:failures.append({'accession':row['accession'],'error':str(e)})
             if i%25==0 or i==len(entries):print('NATIONAL',i,'/',len(entries),'checked;',len(people),'identities;',len(failures),'failures',flush=True)
     if failures:raise RuntimeError('National SEC refresh incomplete; last good catalog retained: '+json.dumps(failures))
-    manifest={'version':'mocean-national-form4-v1','index_date':day.isoformat(),'index_url':url,'index_sha256':hashlib.sha256(body).hexdigest(),'indexes_checked':sorted(indexes,key=lambda r:r['date']),'checked_at':datetime.now(timezone.utc).isoformat(),'retention_days':90,'geographic_seed':seed,'entries':sorted(checked,key=lambda r:r['accession'])}
+    manifest={'version':'mocean-national-form4-v1','index_date':day.isoformat(),'index_url':url,'index_sha256':hashlib.sha256(body).hexdigest(),'indexes_checked':sorted(indexes,key=lambda r:r['date']),'unpublished_dates':sorted(unpublished,key=lambda r:r['date']),'checked_at':datetime.now(timezone.utc).isoformat(),'retention_days':90,'geographic_seed':seed,'entries':sorted(checked,key=lambda r:r['accession'])}
     tmp=STATE.with_suffix('.json.tmp');tmp.write_text(json.dumps(manifest,indent=2));tmp.replace(STATE)
     return manifest,list(people.values())
 
@@ -185,7 +207,7 @@ def merge(records):
         p['events']=sorted({e['id']:e for e in p['events']}.values(),key=lambda e:(e['date'],e['id']),reverse=True)
         p['liquidity_total']=round(sum(e['value'] or 0 for e in p['events'] if e['classification']=='LIQUIDITY'),2)
         p['signal_type']='Liquidity' if any(e['classification']=='LIQUIDITY' for e in p['events']) else 'Monitor'
-    return dict(index_date=manifest['index_date'],index_url=manifest['index_url'],checked_at=manifest['checked_at'],scope='All Form 4 / 4-A accessions in the latest published SEC daily index, plus a primary-validated geographic seed and 90-day discovery retention; not exhaustive historical or non-SEC coverage',geographic_seed=manifest['geographic_seed'],discovered_filings=len(manifest['entries']),validated_filings=sum(r['status']=='VALIDATED' for r in manifest['entries']),held_filings=[r for r in manifest['entries'] if r['status']=='HELD'],amendments=[dict(issuer_cik=r.get('issuer_cik'),accession=r['accession'],filed_date=r['filed_date'],status=r['reason']) for r in manifest['entries'] if r['status']=='AMENDMENT_REVIEW'])
+    return dict(unpublished_dates=manifest.get('unpublished_dates',[]),indexes_checked=manifest.get('indexes_checked',[]),index_date=manifest['index_date'],index_url=manifest['index_url'],checked_at=manifest['checked_at'],scope='All Form 4 / 4-A accessions in the latest published SEC daily index, plus a primary-validated geographic seed and 90-day discovery retention; not exhaustive historical or non-SEC coverage',geographic_seed=manifest['geographic_seed'],discovered_filings=len(manifest['entries']),validated_filings=sum(r['status']=='VALIDATED' for r in manifest['entries']),held_filings=[r for r in manifest['entries'] if r['status']=='HELD'],amendments=[dict(issuer_cik=r.get('issuer_cik'),accession=r['accession'],filed_date=r['filed_date'],status=r['reason']) for r in manifest['entries'] if r['status']=='AMENDMENT_REVIEW'])
 
 if __name__=='__main__':
     manifest,people=refresh();print(json.dumps({'index_date':manifest['index_date'],'filings':len(manifest['entries']),'people':len(people)},indent=2))

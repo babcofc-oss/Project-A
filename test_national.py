@@ -44,7 +44,7 @@ class NationalTests(unittest.TestCase):
   with tempfile.TemporaryDirectory() as d:
    state=Path(d)/'national-discovery.json';original={'entries':[],'geographic_seed':{'quarter':'QA'}};state.write_text(json.dumps(original))
    body=f'1|QA|4|20261001|edgar/data/1/{ACCESSION}.txt'.encode()
-   with patch.object(national,'STATE',state),patch.object(national.ingest,'fetch',return_value=body),patch.object(national,'inspect',side_effect=OSError('QA transport failure')),patch.object(national,'bootstrap',return_value=([],{'quarter':'QA'})):
+   with patch.object(national,'published_index_dates',return_value={'url':'https://www.sec.gov/directory','sha256':'QA','names':{f'master.20261001.idx'}}),patch.object(national,'STATE',state),patch.object(national.ingest,'fetch',return_value=body),patch.object(national,'inspect',side_effect=OSError('QA transport failure')),patch.object(national,'bootstrap',return_value=([],{'quarter':'QA'})):
     with self.assertRaisesRegex(RuntimeError,'incomplete'):national.refresh(date(2026,10,2))
    self.assertEqual(json.loads(state.read_text()),original)
  def test_missed_daily_indexes_are_recovered_before_advancing_manifest(self):
@@ -53,7 +53,7 @@ class NationalTests(unittest.TestCase):
    def fetch(url,*args,**kwargs):
     day=url.rsplit('master.',1)[1][:8];acc=f'0000000001-26-{int(day[-2:]):06d}'
     return f'1|QA|4|{day}|edgar/data/1/{acc}.txt'.encode()
-   with patch.object(national,'STATE',state),patch.object(national.ingest,'fetch',side_effect=fetch),patch.object(national,'bootstrap',return_value=([],{})),patch.object(national,'inspect',side_effect=lambda r:({**r,'status':'HELD','reason':'QA'},None)):
+   with patch.object(national,'published_index_dates',return_value={'url':'https://www.sec.gov/directory','sha256':'QA','names':{f'master.202610{d}.idx' for d in (27,28,29)}}),patch.object(national,'STATE',state),patch.object(national.ingest,'fetch',side_effect=fetch),patch.object(national,'bootstrap',return_value=([],{})),patch.object(national,'inspect',side_effect=lambda r:({**r,'status':'HELD','reason':'QA'},None)):
     manifest,people=national.refresh(date(2026,10,30))
    self.assertEqual([i['date'] for i in manifest['indexes_checked']],['2026-10-27','2026-10-28','2026-10-29'])
    self.assertEqual(len(manifest['entries']),3)
