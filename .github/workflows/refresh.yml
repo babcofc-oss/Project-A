@@ -22,7 +22,7 @@ jobs:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Validate release rules
         run: |
-          python3 -m unittest test_national test_fetch test_refresh test_leadership test_integrity test_transitions test_form144 test_business_exits test_contacts test_release_gates
+          python3 -m unittest discover -p 'test_*.py'
           for test in test_*.js; do node "$test"; done
       - name: Refresh nationwide and configured SEC sources
         id: refresh
