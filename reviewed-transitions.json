@@ -107,5 +107,30 @@
     "amount_context": "No liquidity amount asserted.",
     "subject_name": "Bryan Kennedy",
     "trigger_type": "BOARD_APPOINTMENT"
+  },
+  {
+    "person_id": "person-1989323-issuer-890926",
+    "issuer_cik": "890926",
+    "accession": "0001193125-26-455690",
+    "date": "2026-11-09",
+    "filed_date": "2026-11-10",
+    "reviewed_at": "2026-11-14",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/890926/000119312526455690/d139362d8k.htm",
+    "raw_path": "0001193125-26-455690.htm",
+    "sha256": "96ce82f388fbe25900ea34a194038d2275e9d571413f33092f36bcccef959296",
+    "classification": "BOARD_CONTEXT",
+    "trigger_type": "BOARD_DEPARTURE",
+    "stage": "ANNOUNCED",
+    "effective_date": "2027-01-31",
+    "subject_name": "Anne Leyden",
+    "fact": "On November 9, 2026, Anne Leyden notified Radian of her intention to retire from its board effective January 31, 2027. The company disclosed that the decision did not involve a disagreement and that the board size would become 11 upon her retirement.",
+    "required_terms": [
+      "Anne Leyden",
+      "provided the Company with notice of her intention to retire from the Board effective January 31, 2027",
+      "does not involve a disagreement",
+      "number of directors at 11 effective upon her retirement"
+    ],
+    "status": "Future board retirement announced; not an executive departure. Completion, payment and personal proceeds UNKNOWN.",
+    "amount_context": "No personal payment, severance, stock-sale proceeds or available cash established; excluded from liquidity totals."
   }
 ]

@@ -1,0 +1,98 @@
+{
+  "id": "person-1989323-issuer-890926",
+  "person_cik": "0001989323",
+  "issuer_cik": "0000890926",
+  "person_name": "Leyden Margaret Anne",
+  "role": "Director",
+  "company": "RADIAN GROUP INC",
+  "location": {
+    "city": "WAYNE",
+    "state": "PA",
+    "kind": "Reporting-person mailing city; residence UNKNOWN",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/890926/000089092626000122/xslF345X06/form4.xml",
+    "assertion_class": "VERIFIED PUBLIC FACT",
+    "distance_miles": 560.47,
+    "postal_code": "19087",
+    "reference_lat": 40.0612,
+    "reference_lon": -75.3999,
+    "reference_zip": "19087",
+    "geo_source": "https://download.geonames.org/export/zip/",
+    "geo_class": "CALCULATED FROM VERIFIED FACT",
+    "geo_method": "GeoNames reference point for source-disclosed mailing ZIP; approximate area, not residence or street-address geocoding"
+  },
+  "events": [
+    {
+      "id": "0000890926-26-000122:0",
+      "accession": "0000890926-26-000122",
+      "row": 0,
+      "date": "2026-05-29",
+      "filed_date": "2026-06-01",
+      "code": "S",
+      "direction": "D",
+      "classification": "LIQUIDITY",
+      "shares": 2070.0,
+      "price": 34.59,
+      "value": 71601.3,
+      "remaining_shares": 6864.0,
+      "planned": false,
+      "fact": "Form 4 reports 2,070 shares, code S, on 2026-05-29. Reported price $34.59 per share.",
+      "footnotes": [
+        "Sale of common stock sold to cover tax liability resulting from the May 2026 vesting of restricted stock units."
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/890926/000089092626000122/xslF345X06/form4.xml",
+      "raw_path": "0000890926-26-000122.xml",
+      "sha256": "d7c725357045ed6dcc5c571b21ef8ca7f1cb959e5284adad0a9cd1095d4d0ed7",
+      "assertion_class": "VERIFIED PUBLIC FACT",
+      "value_class": "CALCULATED FROM VERIFIED FACT"
+    }
+  ],
+  "liquidity_total": 71601.3,
+  "signal_type": "Liquidity",
+  "source_classes": [
+    "FORM4"
+  ],
+  "convergence": 0,
+  "contacts": {
+    "direct_email": "UNKNOWN",
+    "direct_phone": "UNKNOWN",
+    "consent": "UNKNOWN",
+    "routes": [
+      {
+        "kind": "WEBSITE",
+        "label": "Official investor-relations / corporate research page",
+        "value": "https://www.radian.com/for-investors",
+        "target": "https://www.radian.com/for-investors",
+        "anchor": "Investor Relations",
+        "purpose": "Official company research channel. Availability of a route to the selected person is UNKNOWN; use only for its published purpose.",
+        "scope": "COMPANY_CHANNEL",
+        "organization": "RADIAN GROUP INC",
+        "classification": "VERIFIED PUBLIC FACT",
+        "person_id": null,
+        "subject_name": null,
+        "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+        "reviewed_at": "2026-10-30",
+        "source_url": "https://www.radian.com/for-investors",
+        "raw_path": "contact-source-pa-radian.txt",
+        "sha256": "48f25f82e5e8805595f223711d0fd027dcc641a0ced0f8e545a3b69b6b2de927"
+      },
+      {
+        "kind": "EMAIL",
+        "label": "Investor-relations team email",
+        "value": "Daniel.Kobell@radian.com",
+        "target": "Daniel.Kobell@radian.com",
+        "anchor": "Daniel.Kobell@radian.com",
+        "purpose": "Investor-relations inquiries; this is a company channel, not the selected person\u2019s email.",
+        "scope": "COMPANY_CHANNEL",
+        "organization": "RADIAN GROUP INC",
+        "classification": "VERIFIED PUBLIC FACT",
+        "person_id": null,
+        "subject_name": null,
+        "confidence": "HIGH \u2014 publication / identity verified; reachability UNKNOWN",
+        "reviewed_at": "2026-10-30",
+        "source_url": "https://www.radian.com/for-investors",
+        "raw_path": "contact-source-pa-radian.txt",
+        "sha256": "48f25f82e5e8805595f223711d0fd027dcc641a0ced0f8e545a3b69b6b2de927"
+      }
+    ]
+  }
+}
