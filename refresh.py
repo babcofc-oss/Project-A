@@ -3,7 +3,7 @@
 Run python refresh.py. Discovery is fetched anew; immutable archives are cached.
 Manual manifests are revalidated, never assigned a new human review date.
 """
-import hashlib, json, sys
+import hashlib, json, sys, os
 from datetime import datetime, timezone
 from pathlib import Path
 import ingest
@@ -16,6 +16,10 @@ def publish(catalog):
     pending.replace(ROOT/'catalog.json')
 
 def validate_archives(catalog):
+    for source in catalog.get('configured_held_filings', []):
+        path=(ROOT/source['raw_path']).resolve()
+        if not path.is_relative_to(ROOT) or hashlib.sha256(path.read_bytes()).hexdigest()!=source['sha256']:
+            raise ValueError('Held evidence fingerprint mismatch')
     for person in catalog['records']:
         for source in [*(person.get('contacts', {}).get('routes', [])), *person['events'], *[s for e in person['events'] for s in e.get('evidence_sources', [])]]:
             path=(ROOT/source['raw_path']).resolve()
@@ -44,6 +48,8 @@ def run():
         current['feed_health']={
             'last_attempt_at':attempted, 'last_success_at':current['validated_at'],
             'status':'OK', 'freshness_target_hours':48,
+            'pipeline_version':'release-gates-v2',
+            'workflow_run_url':('https://github.com/'+os.environ['GITHUB_REPOSITORY']+'/actions/runs/'+os.environ['GITHUB_RUN_ID']) if os.getenv('GITHUB_RUN_ID') and os.getenv('GITHUB_REPOSITORY') else None,
             'automatic_scope':'Nationwide SEC daily-index Form 4 discovery; Form 144 and 8-K metadata for configured issuers',
             'issuer_ciks':ingest.ISSUERS,
             'manual_review':'Executive / board events, private acquisitions and contacts require reviewed primary evidence; a successful SEC fetch does not refresh them.',

@@ -34,6 +34,15 @@ class ReleaseGateTests(unittest.TestCase):
                 with self.assertRaisesRegex(RuntimeError,'last good catalog'):
                     ingest.collect_filings([row])
 
+    def test_held_source_fingerprints_are_validated_before_publication(self):
+        import refresh
+        with tempfile.TemporaryDirectory() as d,patch.object(refresh,'ROOT',Path(d)):
+            raw=Path(d)/'held.xml';raw.write_bytes(b'original')
+            catalog={'records':[], 'configured_held_filings':[{'raw_path':raw.name,'sha256':hashlib.sha256(raw.read_bytes()).hexdigest()}]}
+            refresh.validate_archives(catalog)
+            raw.write_bytes(b'changed')
+            with self.assertRaisesRegex(ValueError,'Held evidence fingerprint'):refresh.validate_archives(catalog)
+
     def test_missing_hold_evidence_cannot_silently_publish(self):
         row=('2','0000000001-26-000001','source.xml','2026-11-12')
         with tempfile.TemporaryDirectory() as d,patch.object(ingest,'ROOT',Path(d)),patch.object(ingest,'process',side_effect=ingest.ManualReviewRequired('review')):
