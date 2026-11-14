@@ -33,6 +33,16 @@ class FetchTests(unittest.TestCase):
                 self.assertEqual(ingest.REQUEST_INTERVAL, 1.25)
             self.assertEqual(dest.read_bytes(), b'verified-source')
 
+    def test_transient_server_failure_retries_without_rate_limit_penalty(self):
+        response = MagicMock()
+        response.__enter__.return_value.read.return_value = b'verified-source'
+        unavailable = HTTPError('https://www.sec.gov/test', 503, 'Service Unavailable', {}, None)
+        with tempfile.TemporaryDirectory() as folder, patch.object(ingest,'LAST',0), patch.object(ingest,'NOT_BEFORE',0), patch.object(ingest,'REQUEST_INTERVAL',.6), patch.object(ingest.time,'monotonic',return_value=1000), patch.object(ingest.time,'sleep') as sleep, patch.object(ingest.urllib.request,'urlopen',side_effect=[unavailable,response]) as request:
+            self.assertEqual(ingest.fetch(unavailable.url,Path(folder)/'source.xml'),b'verified-source')
+            self.assertEqual(request.call_count,2)
+            sleep.assert_called_once_with(2)
+            self.assertEqual(ingest.REQUEST_INTERVAL,.6)
+
     def test_persistent_denial_is_bounded_and_never_cached(self):
         denied = HTTPError('https://www.sec.gov/test', 403, 'Forbidden', {}, None)
         with tempfile.TemporaryDirectory() as folder:

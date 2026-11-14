@@ -54,7 +54,8 @@ def fetch(url, dest, force=False):
             break
         except urllib.error.HTTPError as error:
             if error.code not in (403, 429, 500, 502, 503, 504):raise
-            cooldown = 60 * (attempt + 1)
+            rate_limited = error.code in (403, 429)
+            cooldown = (60 if rate_limited else 2) * (attempt + 1)
             retry_after = error.headers.get('Retry-After', '') if error.headers else ''
             if retry_after.isdigit():cooldown = max(cooldown, min(int(retry_after), 300))
             with LOCK:
@@ -62,7 +63,7 @@ def fetch(url, dest, force=False):
                 # A denial can indicate shared-run pressure even below the SEC's
                 # published ceiling. Slow every worker for the remainder of the
                 # run instead of immediately returning to the original pace.
-                REQUEST_INTERVAL = max(REQUEST_INTERVAL, 1.25)
+                if rate_limited: REQUEST_INTERVAL = max(REQUEST_INTERVAL, 1.25)
             if attempt == MAX_FETCH_ATTEMPTS - 1:
                 raise SECRequestError(error, MAX_FETCH_ATTEMPTS) from error
             print(f'SEC HTTP {error.code}; shared cooldown {cooldown}s before retry {attempt + 2}/{MAX_FETCH_ATTEMPTS}: {url}', flush=True)
