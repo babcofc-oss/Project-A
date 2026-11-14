@@ -1,0 +1,197 @@
+<?xml version="1.0"?>
+<ownershipDocument>
+
+    <schemaVersion>X0609</schemaVersion>
+
+    <documentType>4/A</documentType>
+
+    <periodOfReport>2026-01-31</periodOfReport>
+
+    <dateOfOriginalSubmission>2026-02-03</dateOfOriginalSubmission>
+
+    <notSubjectToSection16>0</notSubjectToSection16>
+
+    <issuer>
+        <issuerCik>0001176948</issuerCik>
+        <issuerName>Ares Management Corp</issuerName>
+        <issuerTradingSymbol>ARES</issuerTradingSymbol>
+        <issuerForeignTradingSymbol></issuerForeignTradingSymbol>
+    </issuer>
+
+    <reportingOwner>
+        <reportingOwnerId>
+            <rptOwnerCik>0001756898</rptOwnerCik>
+            <rptOwnerName>Jacobson Blair</rptOwnerName>
+        </reportingOwnerId>
+        <reportingOwnerAddress>
+            <rptOwnerNonUSAddressFlag>false</rptOwnerNonUSAddressFlag>
+            <rptOwnerStreet1>1800 AVENUE OF THE STARS</rptOwnerStreet1>
+            <rptOwnerStreet2>SUITE 1400</rptOwnerStreet2>
+            <rptOwnerCity>LOS ANGELES</rptOwnerCity>
+            <rptOwnerState>CA</rptOwnerState>
+            <rptOwnerZipCode>90067</rptOwnerZipCode>
+            <rptOwnerStateDescription></rptOwnerStateDescription>
+        </reportingOwnerAddress>
+        <reportingOwnerRelationship>
+            <isDirector>0</isDirector>
+            <isOfficer>1</isOfficer>
+            <isTenPercentOwner>0</isTenPercentOwner>
+            <isOther>0</isOther>
+            <officerTitle>Co-President</officerTitle>
+        </reportingOwnerRelationship>
+    </reportingOwner>
+
+    <aff10b5One>0</aff10b5One>
+
+    <nonDerivativeTable>
+        <nonDerivativeTransaction>
+            <securityTitle>
+                <value>Class A Common Stock</value>
+            </securityTitle>
+            <transactionDate>
+                <value>2026-01-31</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>A</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+            </transactionCoding>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>200000</value>
+                    <footnoteId id="F1"/>
+                    <footnoteId id="F2"/>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>0</value>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>A</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>1058221</value>
+                    <footnoteId id="F1"/>
+                    <footnoteId id="F3"/>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </nonDerivativeTransaction>
+        <nonDerivativeTransaction>
+            <securityTitle>
+                <value>Class A Common Stock</value>
+            </securityTitle>
+            <transactionDate>
+                <value>2026-01-31</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>F</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+            </transactionCoding>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>47000</value>
+                    <footnoteId id="F4"/>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>149.67</value>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>D</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>1011221</value>
+                    <footnoteId id="F1"/>
+                    <footnoteId id="F5"/>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </nonDerivativeTransaction>
+    </nonDerivativeTable>
+
+    <derivativeTable>
+        <derivativeTransaction>
+            <securityTitle>
+                <value>Restricted Units</value>
+                <footnoteId id="F1"/>
+            </securityTitle>
+            <conversionOrExercisePrice>
+                <footnoteId id="F6"/>
+                <footnoteId id="F7"/>
+            </conversionOrExercisePrice>
+            <transactionDate>
+                <value>2026-01-31</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>A</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+            </transactionCoding>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>100000</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>0</value>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>A</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <exerciseDate>
+                <footnoteId id="F6"/>
+                <footnoteId id="F7"/>
+            </exerciseDate>
+            <expirationDate>
+                <value>2034-01-31</value>
+            </expirationDate>
+            <underlyingSecurity>
+                <underlyingSecurityTitle>
+                    <value>Class A Common Stock</value>
+                </underlyingSecurityTitle>
+                <underlyingSecurityShares>
+                    <value>100000</value>
+                </underlyingSecurityShares>
+            </underlyingSecurity>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>100000</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </derivativeTransaction>
+    </derivativeTable>
+
+    <footnotes>
+        <footnote id="F1">The 300,000 restricted units reported on the original Form 4 filed with the Securities and Exchange Commission on February 3, 2026 (the &quot;Original Form 4&quot;) included 100,000 performance-based restricted units that the Issuer's reporting persons have historically reported in Table II. Accordingly, this Statement is being filed to amend the Original Form 4, not to correct any error, but to clarify the reporting person's beneficial ownership and reflect such performance-based restricted units in Table II, consistent with past practice for the Issuer's reporting persons.</footnote>
+        <footnote id="F2">Granted under an equity incentive plan of Ares Management Corporation. Each restricted unit represents the right to receive one share of Class A Common Stock upon vesting. The restrictions on such units are scheduled to lapse in four equal installments on January 31, 2028, 2029, 2030 and 2031.</footnote>
+        <footnote id="F3">Includes 621,860 restricted units granted under an equity incentive plan of Ares Management Corporation. Each restricted unit represents the right to receive one share of Class A Common Stock upon vesting. The restricted units vest in installments in accordance with the applicable restricted unit award agreement.</footnote>
+        <footnote id="F4">Consists of Class A Common Stock withheld by the Issuer in order to satisfy the minimum tax withholding obligations of the reporting person arising in connection with the vesting of restricted units representing the right to receive one share of Class A Common Stock under an equity incentive plan of Ares Management Corporation. Each restricted unit represents the right to receive one share of Class A Common Stock upon vesting.</footnote>
+        <footnote id="F5">Includes 521,860 restricted units granted under an equity incentive plan of Ares Management Corporation. Each restricted unit represents the right to receive one share of Class A Common Stock upon vesting. The restricted units vest in installments in accordance with the applicable restricted unit award agreement.</footnote>
+        <footnote id="F6">The restricted units were granted on January 31, 2026 pursuant to an equity incentive plan of Ares Management Corporation, each of which represents the right to receive one share of Class A Common Stock upon vesting. The restricted units are subject to market price-based vesting conditions as follows: (i) 33,334 units will vest if, over all trading days that occur during any 30 consecutive calendar day period on or prior to January 31, 2034, the volume-weighted average price per share of Class A Common Stock is at least $191.67; (Continued in footnote 7)</footnote>
+        <footnote id="F7">(ii) 33,333 units will vest if, over all trading days that occur during any 30 consecutive calendar day period on or prior to January 31, 2034, the volume-weighted average price per share of Class A Common Stock is at least $221.67; and (iii) 33,333 units will vest if, over all trading days that occur during any 30 consecutive calendar day period on or prior to January 31, 2034, the volume-weighted average price per share of Class A Common Stock is at least $251.67, in each case generally subject to the reporting person's continued service through the applicable vesting date.</footnote>
+    </footnotes>
+
+    <remarks></remarks>
+
+    <ownerSignature>
+        <signatureName>/s/ Anton Feingold, by power of attorney</signatureName>
+        <signatureDate>2026-11-12</signatureDate>
+    </ownerSignature>
+</ownershipDocument>

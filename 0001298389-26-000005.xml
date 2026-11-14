@@ -1,0 +1,181 @@
+<?xml version="1.0"?>
+<ownershipDocument>
+
+    <schemaVersion>X0609</schemaVersion>
+
+    <documentType>4</documentType>
+
+    <periodOfReport>2025-10-01</periodOfReport>
+
+    <notSubjectToSection16>0</notSubjectToSection16>
+
+    <issuer>
+        <issuerCik>0001930087</issuerCik>
+        <issuerName>Golub Capital Private Credit Fund</issuerName>
+        <issuerTradingSymbol>NONE</issuerTradingSymbol>
+        <issuerForeignTradingSymbol></issuerForeignTradingSymbol>
+    </issuer>
+
+    <reportingOwner>
+        <reportingOwnerId>
+            <rptOwnerCik>0001298389</rptOwnerCik>
+            <rptOwnerName>Golub David</rptOwnerName>
+        </reportingOwnerId>
+        <reportingOwnerAddress>
+            <rptOwnerNonUSAddressFlag>false</rptOwnerNonUSAddressFlag>
+            <rptOwnerStreet1>C/O GOLUB CAPITAL PRIVATE CREDIT FUND</rptOwnerStreet1>
+            <rptOwnerStreet2>200 PARK AVENUE, 25TH FLOOR</rptOwnerStreet2>
+            <rptOwnerCity>NEW YORK</rptOwnerCity>
+            <rptOwnerState>NY</rptOwnerState>
+            <rptOwnerZipCode>10166</rptOwnerZipCode>
+            <rptOwnerStateDescription></rptOwnerStateDescription>
+        </reportingOwnerAddress>
+        <reportingOwnerRelationship>
+            <isDirector>1</isDirector>
+            <isOfficer>1</isOfficer>
+            <isTenPercentOwner>0</isTenPercentOwner>
+            <isOther>0</isOther>
+            <officerTitle>CEO and Trustee</officerTitle>
+        </reportingOwnerRelationship>
+    </reportingOwner>
+
+    <aff10b5One>0</aff10b5One>
+
+    <nonDerivativeTable>
+        <nonDerivativeTransaction>
+            <securityTitle>
+                <value>Class I Com. Shares of beneficial interest, $0.01 par value</value>
+            </securityTitle>
+            <transactionDate>
+                <value>2025-10-01</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>P</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+            </transactionCoding>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>3195</value>
+                    <footnoteId id="F1"/>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>25.16</value>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>A</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>264976</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>I</value>
+                </directOrIndirectOwnership>
+                <natureOfOwnership>
+                    <value>By GCRED Canada SE Ltd.</value>
+                    <footnoteId id="F2"/>
+                </natureOfOwnership>
+            </ownershipNature>
+        </nonDerivativeTransaction>
+        <nonDerivativeTransaction>
+            <securityTitle>
+                <value>Class I Com. Shares of beneficial interest, $0.01 par value</value>
+            </securityTitle>
+            <transactionDate>
+                <value>2026-07-29</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>S</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+            </transactionCoding>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>3554</value>
+                    <footnoteId id="F1"/>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>24.17</value>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>D</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>261422</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>I</value>
+                </directOrIndirectOwnership>
+                <natureOfOwnership>
+                    <value>By GCRED Canada SE Ltd.</value>
+                    <footnoteId id="F2"/>
+                </natureOfOwnership>
+            </ownershipNature>
+        </nonDerivativeTransaction>
+        <nonDerivativeHolding>
+            <securityTitle>
+                <value>Class I Com. Shares of beneficial interest, $0.01 par value</value>
+            </securityTitle>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>493523</value>
+                    <footnoteId id="F3"/>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>I</value>
+                </directOrIndirectOwnership>
+                <natureOfOwnership>
+                    <value>By GCI CB LLC</value>
+                    <footnoteId id="F4"/>
+                </natureOfOwnership>
+            </ownershipNature>
+        </nonDerivativeHolding>
+        <nonDerivativeHolding>
+            <securityTitle>
+                <value>Class I Com. Shares of beneficial interest, $0.01 par value</value>
+            </securityTitle>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>2000</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>I</value>
+                </directOrIndirectOwnership>
+                <natureOfOwnership>
+                    <value>By GGP Class B-P, LLC</value>
+                    <footnoteId id="F5"/>
+                </natureOfOwnership>
+            </ownershipNature>
+        </nonDerivativeHolding>
+    </nonDerivativeTable>
+
+    <derivativeTable></derivativeTable>
+
+    <footnotes>
+        <footnote id="F1">Due to administrative oversight, the reporting person inadvertently did not timely file a Form 4 reporting certain transactions by GCRED Canada SE Ltd. (&quot;GCRED Canada&quot;), an entity through which, as described in footnote 2 below, the reporting person may be deemed to beneficially own Class I Common Shares of Beneficial Interest (&quot;Class I Shares&quot;) of the Issuer. On October 1, 2025, GCRED Canada purchased 3,195 Class I Shares to deploy excess operating proceeds, and on July 29, 2026, GCRED Canada tendered 3,554 Class I Shares for purchase by the Issuer pursuant to the Issuer's tender offer to utilize the proceeds for operational purposes. Neither transaction related to a purchase or sale by the reporting person of any interest in GCRED Canada.</footnote>
+        <footnote id="F2">Represents securities indirectly beneficially owned by GCRED Canada SE Ltd. through an investment fund holding Class I Shares of the Issuer. Due to Mr. Golub's control and ownership in GCRED Canada SE Ltd., Mr. Golub has sole investment power over all of the shares indirectly beneficially owned by such
+entity and as such may be deemed the beneficial owner of the Class I Shares indirectly beneficially owned by GCRED Canada SE Ltd.</footnote>
+        <footnote id="F3">Includes Class I Common Shares of Beneficial Interest received pursuant to a distribution reinvestment plan.</footnote>
+        <footnote id="F4">Represents securities indirectly beneficially owned by GCI CB LLC through an investment fund holding Class I Shares of the Issuer. Due to Mr. Golub's control and ownership in GCI CB LLC, Mr. Golub has sole investment power over all of the shares indirectly beneficially owned by such entity and as such may be deemed the beneficial owner of the Class I Shares indirectly beneficially owned by GCI CB LLC.</footnote>
+        <footnote id="F5">Due to Mr. Golub's control and ownership in GGP Class B-P, LLC, Mr. Golub has sole investment power over all of the shares owned by such entity and as such may be deemed the beneficial owner of the Class I Shares held by GGP Class B-P, LLC.</footnote>
+    </footnotes>
+
+    <remarks></remarks>
+
+    <ownerSignature>
+        <signatureName>David B. Golub</signatureName>
+        <signatureDate>2026-11-12</signatureDate>
+    </ownerSignature>
+</ownershipDocument>

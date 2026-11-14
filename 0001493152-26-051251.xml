@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<ownershipDocument>
+
+    <schemaVersion>X0609</schemaVersion>
+
+    <documentType>4</documentType>
+
+    <periodOfReport>2026-11-09</periodOfReport>
+
+    <notSubjectToSection16>0</notSubjectToSection16>
+
+    <issuer>
+        <issuerCik>0001289340</issuerCik>
+        <issuerName>Stereotaxis, Inc.</issuerName>
+        <issuerTradingSymbol>STXS</issuerTradingSymbol>
+        <issuerForeignTradingSymbol></issuerForeignTradingSymbol>
+    </issuer>
+
+    <reportingOwner>
+        <reportingOwnerId>
+            <rptOwnerCik>0001389932</rptOwnerCik>
+            <rptOwnerName>Fischel Nathan</rptOwnerName>
+        </reportingOwnerId>
+        <reportingOwnerAddress>
+            <rptOwnerNonUSAddressFlag>false</rptOwnerNonUSAddressFlag>
+            <rptOwnerStreet1>C/O STEREOTAXIS, INC.</rptOwnerStreet1>
+            <rptOwnerStreet2>710 NORTH TUCKER BOULEVARD, SUITE 110</rptOwnerStreet2>
+            <rptOwnerCity>ST. LOUIS</rptOwnerCity>
+            <rptOwnerState>MO</rptOwnerState>
+            <rptOwnerZipCode>63101</rptOwnerZipCode>
+            <rptOwnerStateDescription></rptOwnerStateDescription>
+        </reportingOwnerAddress>
+        <reportingOwnerRelationship>
+            <isDirector>1</isDirector>
+            <isOfficer>0</isOfficer>
+            <isTenPercentOwner>1</isTenPercentOwner>
+            <isOther>0</isOther>
+            <officerTitle></officerTitle>
+            <otherText></otherText>
+        </reportingOwnerRelationship>
+    </reportingOwner>
+
+    <aff10b5One>0</aff10b5One>
+
+    <derivativeTable>
+        <derivativeTransaction>
+            <securityTitle>
+                <value>Convertible Promissory Notes</value>
+            </securityTitle>
+            <conversionOrExercisePrice>
+                <footnoteId id="F2"/>
+            </conversionOrExercisePrice>
+            <transactionDate>
+                <value>2026-11-09</value>
+            </transactionDate>
+            <deemedExecutionDate></deemedExecutionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>P</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+                <footnoteId id="F1"/>
+            </transactionCoding>
+            <transactionTimeliness></transactionTimeliness>
+            <transactionAmounts>
+                <transactionTotalValue>
+                    <value>2000000</value>
+                </transactionTotalValue>
+                <transactionPricePerShare>
+                    <value>2000000</value>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>A</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <exerciseDate>
+                <value>2026-11-09</value>
+                <footnoteId id="F3"/>
+            </exerciseDate>
+            <expirationDate>
+                <value>2029-11-09</value>
+            </expirationDate>
+            <underlyingSecurity>
+                <underlyingSecurityTitle>
+                    <value>Common Stock</value>
+                </underlyingSecurityTitle>
+                <underlyingSecurityShares>
+                    <value>1652892</value>
+                </underlyingSecurityShares>
+            </underlyingSecurity>
+            <postTransactionAmounts>
+                <valueOwnedFollowingTransaction>
+                    <value>2000000</value>
+                </valueOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>I</value>
+                </directOrIndirectOwnership>
+                <natureOfOwnership>
+                    <value>See Footnote</value>
+                    <footnoteId id="F4"/>
+                </natureOfOwnership>
+            </ownershipNature>
+        </derivativeTransaction>
+    </derivativeTable>
+
+    <footnotes>
+        <footnote id="F1">On November 9, 2026, the Issuer entered into a note purchase agreement (the &quot;Purchase Agreement&quot;) with certain investors, including DAFNA Capital Management, LLC (&quot;DAFNA&quot;), on behalf of funds of which it is the investment manager and general partner, for the purchase of convertible promissory notes (the &quot;Notes&quot;). DAFNA acquired Notes under the Purchase Agreement in the aggregate principal amount, and for a total purchase price, of $2,000,000. The Notes have a maturity date of November 9, 2029 and bear interest at a rate of 10% per annum, which may be paid in cash or in kind be adding the amount of interest to the principal balance.</footnote>
+        <footnote id="F2">The conversion of the Notes will be made based on a conversion rate of $1.21 per share.</footnote>
+        <footnote id="F3">The Notes and accrued interest are convertible into shares of the Issuer's Common Stock at the election of the holders at any time prior to the maturity date or the consummation of a merger, sale, consolidation or reorganization of the Issuer, subject to a 19.9% beneficial ownership blocker. If the Notes cannot be fully converted due to the NYSE American exchange cap, then no portion of the Notes will convert into the Issuer's Common Stock until the Issuer has obtained stockholder approval to the waiver of the exchange cap.</footnote>
+        <footnote id="F4">Held by funds of which DAFNA is the investment manager and general partner. Dr. Fischel is the Chief Executive Officer, of DAFNA Capital Management, LLC.</footnote>
+    </footnotes>
+
+    <ownerSignature>
+        <signatureName>By:/s/ Kimberly R. Peery, Attorney-in-Fact for Nathan Fischel</signatureName>
+        <signatureDate>2026-11-12</signatureDate>
+    </ownerSignature>
+</ownershipDocument>
