@@ -49,6 +49,7 @@ def run():
             'manual_review':'Executive / board events, private acquisitions and contacts require reviewed primary evidence; a successful SEC fetch does not refresh them.',
             'unconnected':['IPO / lockup','Property sales','Inheritance','Lottery awards','Ownership changes'],
             'errors':[],
+            'configured_form4_held':len(current.get('configured_held_filings',[])),
             'held_form144':len(current.get('form144',{}).get('errors',[])),
             'amendments_pending':len(current.get('amendment_review',[])),
             'leadership_pending':len(queue)}

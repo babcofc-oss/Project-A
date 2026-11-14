@@ -24,6 +24,9 @@ REQUEST_INTERVAL = .6
 MAX_FETCH_ATTEMPTS = 4
 TODAY = date.today()
 
+class ManualReviewRequired(ValueError):
+    """Valid source whose reporting identities cannot safely be auto-attributed."""
+
 class SECRequestError(urllib.error.HTTPError):
     """Final SEC denial with enough context to diagnose the failed refresh."""
     def __init__(self, error, attempts):
@@ -94,7 +97,8 @@ def parse_xml(body, accession, source, filed):
     if value(root, 'documentType') != '4': raise ValueError('Unsupported amendment/form')
     issuer = value(root, 'issuer/issuerCik')
     owners = root.findall('reportingOwner')
-    if len(owners) != 1: raise ValueError('Joint filing requires manual resolution')
+    if len(owners) > 1: raise ManualReviewRequired('Joint filing requires manual resolution')
+    if not owners: raise ValueError('Missing reporting owner')
     owner = owners[0]
     person_cik = value(owner, 'reportingOwnerId/rptOwnerCik')
     name = value(owner, 'reportingOwnerId/rptOwnerName')
@@ -144,7 +148,10 @@ def process(row):
     source = base + document
     raw_url = base + document.split('/')[-1]
     body = fetch(raw_url, ROOT / (accession + '.xml'))
-    return parse_xml(body, accession, source, filed)
+    person = parse_xml(body, accession, source, filed)
+    if int(person['issuer_cik']) != int(cik):
+        raise ValueError('Configured issuer identity mismatch')
+    return person
 
 def merge_person(people, latest_filing, person, filed, accession):
     key = person['id']
@@ -160,6 +167,30 @@ def merge_person(people, latest_filing, person, filed, accession):
             old['role'], old['location'] = person['role'], person['location']
     latest_filing[key] = max(filing, latest_filing.get(key, filing))
 
+def collect_filings(rows):
+    people, latest_filing, errors, held = {}, {}, [], []
+    with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
+        futures = {executor.submit(process, row): row for row in rows}
+        for future in concurrent.futures.as_completed(futures):
+            row = futures[future]
+            try:
+                person = future.result()
+                merge_person(people, latest_filing, person, row[3], row[1])
+                print(row[1], person['person_name'], len(person['events']), flush=True)
+            except ManualReviewRequired as error:
+                raw = ROOT / (row[1] + '.xml')
+                source = f'https://www.sec.gov/Archives/edgar/data/{int(row[0])}/{row[1].replace("-", "")}/{row[2]}'
+                held.append({'accession':row[1], 'issuer_cik':row[0], 'filed_date':row[3],
+                    'source_url':source, 'raw_path':raw.name,
+                    'sha256':hashlib.sha256(raw.read_bytes()).hexdigest(),
+                    'status':'HELD', 'kind':'MANUAL_IDENTITY_REVIEW', 'reason':str(error)})
+                print('HELD FOR REVIEW', row[1], str(error), flush=True)
+            except Exception as error:
+                errors.append({'accession': row[1], 'error': str(error)})
+                print('REJECTED', row[1], str(error), flush=True)
+    if errors: raise RuntimeError("Form 4 refresh incomplete; retaining last good catalog: "+json.dumps(errors))
+    return people, sorted(held, key=lambda r:r['accession'])
+
 def run():
     rows = []; submissions = {}; amendments = []
     for cik in ISSUERS:
@@ -171,19 +202,8 @@ def run():
                 amendments.append(dict(issuer_cik=cik, accession=recent['accessionNumber'][i], filed_date=recent['filingDate'][i], status='REVIEW REQUIRED; amended transactions not automatically reconciled'))
             if form == '4' and recent['filingDate'][i] >= '2026-06-01':
                 rows.append((cik, recent['accessionNumber'][i], recent['primaryDocument'][i], recent['filingDate'][i]))
-    people, latest_filing, errors = {}, {}, []
-    with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
-        futures = {executor.submit(process, row): row for row in rows}
-        for future in concurrent.futures.as_completed(futures):
-            row = futures[future]
-            try:
-                person = future.result()
-                merge_person(people, latest_filing, person, row[3], row[1])
-                print(row[1], person['person_name'], len(person['events']), flush=True)
-            except Exception as error:
-                errors.append({'accession': row[1], 'error': str(error)})
-                print('REJECTED', row[1], str(error), flush=True)
-    if errors: raise RuntimeError("Form 4 refresh incomplete; retaining last good catalog: "+json.dumps(errors))
+    people, held = collect_filings(rows)
+    errors = []
     records = []
     for person in people.values():
         # This adapter releases non-derivative rows only. Do not publish an
@@ -214,7 +234,7 @@ def run():
     records.sort(key=lambda r:r['liquidity_total'], reverse=True)
     result = {'version':'project-a-feed-priority-1', 'validated_at':datetime.now(timezone.utc).isoformat(), 'coverage_start':'2026-06-01',
               'source':'SEC EDGAR', 'issuer_count':len({int(p['issuer_cik']) for p in records if p.get('issuer_cik') and any(e.get('source_class','FORM4')=='FORM4' for e in p['events'])}), 'configured_issuer_count':len(ISSUERS), 'refresh':'Primary-source validated snapshot; not a live stream', 'scoring_version':'money-in-motion-v6', 'amendment_review':amendments,
-              'discovered_filings':len(set(r[1] for r in rows)|{r['accession'] for r in json.loads((ROOT/'national-discovery.json').read_text())['entries'] if r['form']=='4'}), 'validated_filings':len({e['accession'] for p in records for e in p['events'] if e.get('source_class','FORM4')=='FORM4'}), 'errors':errors, 'national_discovery':national,
+              'discovered_filings':len(set(r[1] for r in rows)|{r['accession'] for r in json.loads((ROOT/'national-discovery.json').read_text())['entries'] if r['form']=='4'}), 'validated_filings':len({e['accession'] for p in records for e in p['events'] if e.get('source_class','FORM4')=='FORM4'}), 'errors':errors, 'configured_held_filings':held, 'national_discovery':national,
               'leadership':leadership, 'contact_enrichment':contact_enrichment, 'business_exits':business, 'form144':proposed, 'reviewed_triggers':other, 'transition_filings':len(reviewed), 'transition_errors':transition_errors, 'records':records}
     if not records: raise RuntimeError('No validated records; retaining previous catalog')
     temporary=ROOT/'catalog.json.tmp'
