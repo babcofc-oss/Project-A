@@ -4,7 +4,7 @@ Adapted from v9 live_ingestion.py: discovery, fetch, XML parsing, entity resolut
 Run locally, review data/catalog.json, then commit snapshot + evidence together.
 Failures retain the last valid catalog; unvalidated inputs never become facts.
 """
-import concurrent.futures, hashlib, json, os, re, threading, time, urllib.request, urllib.error
+import concurrent.futures, hashlib, json, os, re, threading, time, urllib.request, urllib.error, http.client
 import xml.etree.ElementTree as ET
 from datetime import date, datetime, timezone
 from decimal import Decimal, InvalidOperation
@@ -35,6 +35,12 @@ class SECRequestError(urllib.error.HTTPError):
 
     def __str__(self):
         return f'SEC request failed after {self.attempts} attempts: HTTP {self.code} {self.reason}; url={self.url}'
+
+class SECTransportError(OSError):
+    """Bounded connection/read failure; never a validation hold."""
+    def __init__(self, url, error, attempts):
+        super().__init__(f'SEC transport request failed after {attempts} attempts: {type(error).__name__}; url={url}')
+        self.url, self.attempts = url, attempts
 
 def fetch(url, dest, force=False):
     global LAST, NOT_BEFORE, REQUEST_INTERVAL
@@ -67,6 +73,13 @@ def fetch(url, dest, force=False):
             if attempt == MAX_FETCH_ATTEMPTS - 1:
                 raise SECRequestError(error, MAX_FETCH_ATTEMPTS) from error
             print(f'SEC HTTP {error.code}; shared cooldown {cooldown}s before retry {attempt + 2}/{MAX_FETCH_ATTEMPTS}: {url}', flush=True)
+        except (OSError, http.client.IncompleteRead) as error:
+            if attempt == MAX_FETCH_ATTEMPTS - 1:
+                raise SECTransportError(url, error, MAX_FETCH_ATTEMPTS) from error
+            cooldown = 2 * (attempt + 1)
+            with LOCK:
+                NOT_BEFORE = max(NOT_BEFORE, time.monotonic() + cooldown)
+            print(f'SEC transport {type(error).__name__}; shared cooldown {cooldown}s before retry {attempt + 2}/{MAX_FETCH_ATTEMPTS}: {url}', flush=True)
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_bytes(body)
     return body

@@ -43,6 +43,22 @@ class FetchTests(unittest.TestCase):
             sleep.assert_called_once_with(2)
             self.assertEqual(ingest.REQUEST_INTERVAL,.6)
 
+    def test_temporary_connection_failure_recovers_without_caching_failure(self):
+        response=MagicMock();response.__enter__.return_value.read.return_value=b'primary source'
+        failure=ingest.urllib.error.URLError('temporary connection reset')
+        with tempfile.TemporaryDirectory() as folder, patch.object(ingest,'LAST',0), patch.object(ingest,'NOT_BEFORE',0), patch.object(ingest.time,'monotonic',return_value=1000), patch.object(ingest.time,'sleep') as sleep, patch.object(ingest.urllib.request,'urlopen',side_effect=[failure,response]) as request:
+            path=Path(folder)/'source.xml'
+            self.assertEqual(ingest.fetch('https://www.sec.gov/source',path),b'primary source')
+            self.assertEqual(request.call_count,2);sleep.assert_called_once_with(2)
+            self.assertEqual(path.read_bytes(),b'primary source')
+
+    def test_persistent_connection_failure_is_bounded_and_not_cached(self):
+        with tempfile.TemporaryDirectory() as folder, patch.object(ingest,'LAST',0), patch.object(ingest,'NOT_BEFORE',0), patch.object(ingest.time,'sleep'), patch.object(ingest.urllib.request,'urlopen',side_effect=TimeoutError('timed out')) as request:
+            path=Path(folder)/'source.xml'
+            with self.assertRaises(ingest.SECTransportError) as error:ingest.fetch('https://www.sec.gov/source',path)
+            self.assertEqual(request.call_count,4);self.assertFalse(path.exists())
+            self.assertIn('https://www.sec.gov/source',str(error.exception))
+
     def test_persistent_denial_is_bounded_and_never_cached(self):
         denied = HTTPError('https://www.sec.gov/test', 403, 'Forbidden', {}, None)
         with tempfile.TemporaryDirectory() as folder:

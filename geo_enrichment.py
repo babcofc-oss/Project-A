@@ -8,6 +8,8 @@ def read_reference(path,mtime):
 
 def enrich(location, source_path):
     location['distance_miles'] = None
+    for key in ('reference_lat','reference_lon','reference_zip','geo_source','geo_class','geo_method','place_geoid'):
+        location.pop(key,None)
     if not source_path.exists(): return
     data = dict(read_reference(str(source_path),source_path.stat().st_mtime_ns))
     postal_path=source_path.with_name('postal-reference.json')
@@ -35,5 +37,6 @@ def enrich(location, source_path):
     lon = math.radians(float(matched['INTPTLONG'])-float(origin['INTPTLONG']))
     a = math.sin((lat2-lat1)/2)**2+math.cos(lat1)*math.cos(lat2)*math.sin(lon/2)**2
     distance = 3958.7613*2*math.atan2(math.sqrt(a),math.sqrt(1-a))
-    location.update(distance_miles=round(distance,2),geo_source=data['source'],geo_class='CALCULATED FROM VERIFIED FACT',
-                    geo_method='Haversine between Census place representative coordinates; mailing city only, not precise location',place_geoid=matched['GEOID'])
+    scope='company headquarters' if location.get('basis')=='COMPANY_HEADQUARTERS' else 'company service market' if 'service market' in location.get('kind','').lower() else 'reporting-person mailing city'
+    location.update(reference_lat=float(matched['INTPTLAT']),reference_lon=float(matched['INTPTLONG']),distance_miles=round(distance,2),geo_source=data['source'],geo_class='CALCULATED FROM VERIFIED FACT',
+                    geo_method=f'Haversine between Census representative coordinates for source-disclosed {scope}; approximate area, personal residence UNKNOWN',place_geoid=matched['GEOID'])
