@@ -469653,9 +469653,9 @@
     }
   ],
   "feed_health": {
-    "last_attempt_at": "2026-11-16T06:20:38.123041+00:00",
+    "last_attempt_at": "2026-11-18T20:26:52.769102+00:00",
     "last_success_at": "2026-11-16T06:20:50.450632+00:00",
-    "status": "OK",
+    "status": "FAILED",
     "freshness_target_hours": 48,
     "pipeline_version": "release-gates-v2",
     "workflow_run_url": "https://github.com/babcofc-oss/Project-A/actions/runs/43816060183",
@@ -469683,7 +469683,9 @@
       "Lottery awards",
       "Ownership changes"
     ],
-    "errors": [],
+    "errors": [
+      "National SEC refresh incomplete; last good catalog retained: [{\"accession\": \"0000891839-26-000488\", \"error\": \"SEC request failed after 4 attempts: HTTP 504 Gateway Time-out; url=https://www.sec.gov/Archives/edgar/data/1579836/0000891839-26-000488.txt\"}]"
+    ],
     "configured_form4_held": 1,
     "held_form144": 21,
     "amendments_pending": 77,
